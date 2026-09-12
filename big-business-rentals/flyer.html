@@ -1,0 +1,150 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf');font-weight:900}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair700.ttf');font-weight:700}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ivory:#F4EFE4; --ink:#141210; --gold:#B08D3E; --gold2:#D6B25E; --gold3:#8C6D2advance;
+}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{background:var(--ivory);font-family:'Montserrat';position:relative;color:var(--ink)}
+
+/* subtle paper grain */
+.grain{position:absolute;inset:0;opacity:.05;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");}
+
+/* double frame */
+.frame{position:absolute;inset:26px;border:2px solid var(--gold);pointer-events:none;z-index:6}
+.frame:after{content:'';position:absolute;inset:6px;border:1px solid rgba(20,18,16,.85)}
+
+/* ghost word */
+.ghost{position:absolute;left:50%;top:236px;transform:translateX(-50%);
+  font-family:'Archivo Black';font-size:252px;letter-spacing:10px;color:transparent;
+  -webkit-text-stroke:1.5px rgba(176,141,62,.22);white-space:nowrap;z-index:0}
+/* corner diamonds on the frame */
+.cdia{position:absolute;width:11px;height:11px;background:var(--gold);transform:rotate(45deg);z-index:7}
+
+.wrap{position:absolute;inset:26px;display:flex;flex-direction:column;z-index:2}
+
+/* header */
+.head{text-align:center;padding-top:54px}
+.kicker{display:flex;align-items:center;justify-content:center;gap:14px;
+  font-family:'Oswald';font-weight:500;font-size:17px;letter-spacing:7px;color:var(--gold)}
+.kicker .rule{width:64px;height:1px;background:var(--gold)}
+.kicker .dia{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.brand{font-family:'Archivo Black';font-size:97px;line-height:.96;letter-spacing:1px;margin-top:14px}
+.brand .shadowed{position:relative;display:inline-block}
+.sub{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.sub .rule{flex:0 0 110px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.sub .rule.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.sub span{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:9px;color:var(--gold);white-space:nowrap}
+
+/* hero */
+.hero{text-align:center;margin-top:44px;position:relative}
+.hero h1{font-family:'Playfair';font-weight:900;font-size:96px;line-height:1;letter-spacing:1px}
+.hero h1 .amp{font-weight:700;font-style:italic;color:var(--gold);font-size:104px;padding:0 6px}
+.hero p{margin-top:14px;font-weight:600;font-size:19px;letter-spacing:3.4px;color:#3c3730}
+
+/* cards */
+.cards{display:flex;gap:22px;justify-content:center;margin-top:40px;padding:0 64px}
+.card{flex:1;background:#fbf8f0;border:1.5px solid #17140f;position:relative;padding:26px 14px 22px;text-align:center;
+  box-shadow:7px 7px 0 rgba(20,18,16,.9)}
+.card:after{content:'';position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.card svg{display:block;margin:2px auto 14px}
+.card h3{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:2.6px}
+.card p{margin-top:8px;font-size:14.5px;font-weight:500;color:#4a443b;letter-spacing:.4px;line-height:1.45}
+
+/* marquee band */
+.band{margin-top:44px;background:var(--ink);padding:15px 0;position:relative;overflow:hidden}
+.band .inner{display:flex;justify-content:center;gap:26px;align-items:center;
+  font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:5px;color:var(--ivory);white-space:nowrap}
+.band .d{color:var(--gold2);font-size:15px}
+.band:before,.band:after{content:'';position:absolute;left:0;right:0;height:1px;background:var(--gold)}
+.band:before{top:4px}.band:after{bottom:4px}
+
+/* footer */
+.foot{flex:1;background:var(--ink);color:var(--ivory);margin-top:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:12px;padding-bottom:8px}
+.book{font-family:'Oswald';font-weight:600;font-size:21px;letter-spacing:8px;color:var(--gold2)}
+.phone{font-family:'Archivo Black';font-size:66px;letter-spacing:2px;
+  background:linear-gradient(180deg,#E8C878,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.crow{display:flex;gap:30px;align-items:center;font-weight:600;font-size:17.5px;letter-spacing:.6px;color:#d9d2c2}
+.crow .d{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.serve{font-weight:500;font-size:14px;letter-spacing:4.5px;color:#9a917e}
+</style></head>
+<body>
+  <div class="grain"></div>
+  <div class="ghost">VEGAS</div>
+  <div class="frame"></div>
+  <div class="cdia" style="left:21px;top:21px"></div>
+  <div class="cdia" style="right:21px;top:21px"></div>
+  <div class="cdia" style="left:21px;bottom:21px"></div>
+  <div class="cdia" style="right:21px;bottom:21px"></div>
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span class="rule"></span><span class="dia"></span>LAS VEGAS · NEVADA<span class="dia"></span><span class="rule"></span></div>
+      <div class="brand">BIG BUSINESS</div>
+      <div class="sub"><span class="rule r"></span><span>PARTY RENTALS &amp; EVENTS</span><span class="rule"></span></div>
+    </div>
+
+    <div class="hero">
+      <h1>Tables <span class="amp">&amp;</span> Chairs</h1>
+      <p>PREMIUM EVENT SEATING — DELIVERED TO YOUR VENUE</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <svg width="84" height="64" viewBox="0 0 84 64" fill="none" stroke="#B08D3E" stroke-width="3">
+          <ellipse cx="42" cy="14" rx="34" ry="10"/>
+          <path d="M42 24v22" stroke="#17140f"/>
+          <path d="M26 58c6-8 26-8 32 0" stroke="#17140f"/>
+        </svg>
+        <h3>ROUND TABLES</h3>
+        <p>Elegant rounds for banquets,<br>weddings &amp; receptions</p>
+      </div>
+      <div class="card">
+        <svg width="94" height="64" viewBox="0 0 94 64" fill="none" stroke="#B08D3E" stroke-width="3">
+          <path d="M8 18h78l-8 10H16z" fill="none"/>
+          <path d="M18 28v28M76 28v28" stroke="#17140f"/>
+          <path d="M12 56h12M70 56h12" stroke="#17140f"/>
+        </svg>
+        <h3>6FT TABLES</h3>
+        <p>Classic 6-foot banquet longs<br>for dining &amp; buffets</p>
+      </div>
+      <div class="card">
+        <svg width="56" height="64" viewBox="0 0 56 64" fill="none" stroke="#B08D3E" stroke-width="3">
+          <path d="M15 4c-2 12-2 20 0 28M41 4c2 12 2 20 0 28M15 4h26"/>
+          <path d="M22 10v20M34 10v20" stroke-width="2.4"/>
+          <path d="M12 32h32l-2 7H14z" stroke="#17140f"/>
+          <path d="M15 39l-3 21M41 39l3 21" stroke="#17140f"/>
+        </svg>
+        <h3>CHAIRS</h3>
+        <p>As many as your event needs —<br>no order too big</p>
+      </div>
+    </div>
+
+    <div class="band"><div class="inner">
+      <span>PARTIES</span><span class="d">◆</span><span>EVENTS</span><span class="d">◆</span><span>VENUES</span><span class="d">◆</span><span>ANY OCCASION</span>
+    </div></div>
+
+    <div class="foot">
+      <div class="book">BOOK YOUR DATE</div>
+      <div class="phone">703-786-8369</div>
+      <div class="crow">
+        <span>@bigbusiness_rentals_events</span><span class="d"></span>
+        <span>booking@bigbusinesspartyrentals.com</span>
+      </div>
+      <div class="crow" style="font-size:16px;color:#c8c0ae">
+        <span>bigbusinesspartyrentals.com</span>
+      </div>
+      <div class="serve">SERVING ALL OF LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>
