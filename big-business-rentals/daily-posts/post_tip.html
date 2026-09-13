@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 38%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 8deg at 50% 40%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:52px 70px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:8px;color:#D6B25E;display:flex;align-items:center;gap:16px}
+.kick .r{width:60px;height:1px;background:#B08D3E}
+h1{font-family:'Archivo Black';font-size:74px;line-height:1.06;margin-top:26px;color:#f6f1e4}
+h1 em{font-style:normal;color:#E5B84B}
+.formula{display:flex;align-items:center;gap:22px;margin-top:52px}
+.box{background:rgba(229,184,75,.10);border:2px solid #B08D3E;padding:26px 34px;border-radius:14px}
+.box .n{font-family:'Archivo Black';font-size:56px;color:#E5B84B}
+.box .l{font-family:'Oswald';font-weight:500;font-size:20px;letter-spacing:3px;color:#d9cdb2;margin-top:6px}
+.op{font-family:'Archivo Black';font-size:56px;color:#f2ecdd}
+.eq .n{color:#fff}
+.eq{background:linear-gradient(180deg,#EFCB7C,#B08D3E);border-color:#EFCB7C}
+.eq .n{color:#241a35}
+.eq .l{color:#3a2d18}
+.ex{margin-top:34px;font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:2px;color:#E5B84B}
+.why{margin-top:26px;font-weight:600;font-size:25px;line-height:1.55;color:#cfc4ad;max-width:780px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:26px}
+.foot img{width:110px;height:110px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:38px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:22px;color:#d9cdb2;margin-top:4px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick"><span class="r"></span>PARTY MATH · TIP No.1<span class="r"></span></div>
+    <h1>HOW MANY CHAIRS<br>DO YOU <em>REALLY</em> NEED?</h1>
+    <div class="formula">
+      <div class="box"><div class="n">GUESTS</div><div class="l">YOUR HEADCOUNT</div></div>
+      <div class="op">+</div>
+      <div class="box"><div class="n">10%</div><div class="l">EXTRA SEATS</div></div>
+      <div class="op">=</div>
+      <div class="box eq"><div class="n">CHAIRS</div><div class="l">ORDER THIS</div></div>
+    </div>
+    <div class="ex">100 GUESTS&nbsp;&nbsp;➜&nbsp;&nbsp;ORDER 110 CHAIRS</div>
+    <div class="why">Surprise plus-ones, kids, and the cousin who never RSVPs — the extra 10% keeps everybody off their feet.</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">703-786-8369</div>
+        <div class="s">@bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

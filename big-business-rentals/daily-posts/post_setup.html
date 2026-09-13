@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 36%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 38%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 64px 40px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:88px;line-height:.98;margin-top:12px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-family:'Oswald';font-weight:500;font-size:28px;letter-spacing:5px;color:#d9cdb2;margin-top:16px}
+.items{display:flex;gap:26px;margin-top:40px;width:100%}
+.it{flex:1;border:2px solid #B08D3E;border-radius:16px;background:rgba(229,184,75,.08);padding:30px 16px 26px}
+.it svg{display:block;margin:0 auto 16px}
+.it h3{font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:2.5px;color:#f6f1e4}
+.it p{margin-top:8px;font-size:19px;font-weight:600;color:#c9bda4;line-height:1.4}
+.steps{display:flex;align-items:center;gap:18px;margin-top:36px;font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:3px;color:#E5B84B}
+.steps .d{width:8px;height:8px;background:#D6B25E;transform:rotate(45deg)}
+.cta{margin-top:30px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#241a35;
+  font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:4px;padding:18px 52px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:84px;height:84px}
+.foot .p{font-family:'Archivo Black';font-size:36px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:21px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; SETUP SUNDAY &nbsp;◆</div>
+    <h1>THIS WEEK’S<br>EVENTS: COVERED.</h1>
+    <div class="sub">EVERYTHING YOUR PARTY NEEDS TO SIT PRETTY</div>
+    <div class="items">
+      <div class="it">
+        <svg width="96" height="74" viewBox="0 0 96 74" fill="none" stroke="#E5B84B" stroke-width="3.5">
+          <ellipse cx="48" cy="18" rx="40" ry="12"/>
+          <path d="M48 30v26"/><path d="M30 70c8-10 28-10 36 0"/>
+        </svg>
+        <h3>ROUND TABLES</h3>
+        <p>Weddings, banquets<br>&amp; receptions</p>
+      </div>
+      <div class="it">
+        <svg width="104" height="74" viewBox="0 0 104 74" fill="none" stroke="#E5B84B" stroke-width="3.5">
+          <path d="M8 22h88l-9 12H17z"/>
+          <path d="M20 34v32M84 34v32"/><path d="M13 66h14M77 66h14"/>
+        </svg>
+        <h3>6FT TABLES</h3>
+        <p>Buffets, dining<br>&amp; long banquets</p>
+      </div>
+      <div class="it">
+        <svg width="64" height="74" viewBox="0 0 64 74" fill="none" stroke="#E5B84B" stroke-width="3.5">
+          <path d="M18 4c-2 14-2 22 0 30M46 4c2 14 2 22 0 30M18 4h28"/>
+          <path d="M14 34h36l-2 8H16z"/><path d="M17 42l-3 26M47 42l3 26"/>
+        </svg>
+        <h3>CHAIRS</h3>
+        <p>Any quantity —<br>no order too big</p>
+      </div>
+    </div>
+    <div class="steps"><span>WE DELIVER</span><span class="d"></span><span>WE SET UP</span><span class="d"></span><span>WE PICK UP</span></div>
+    <div class="cta">BOOKING THIS WEEK — DM OR CALL</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">703-786-8369</div>
+        <div class="s">@bigbusiness_rentals_events &nbsp;·&nbsp; SERVING ALL OF LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
