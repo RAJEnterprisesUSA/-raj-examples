@@ -1,0 +1,798 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+html,body{margin:0;padding:0;width:540px;height:960px;overflow:hidden;background:#000}
+canvas{width:540px;height:960px;display:block}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const W=1080,H=1920, FLOOR=1560;
+
+const logo = new Image(); logo.src='bb_logo.png';
+let logoReady=false; logo.onload=()=>logoReady=true;
+
+// ---------- helpers ----------
+const rad = d=>d*Math.PI/180;
+const lerp=(a,b,t)=>a+(b-a)*Math.max(0,Math.min(1,t));
+const ease=t=>t<0?0:t>1?1:t*t*(3-2*t);
+const easeOutBack=t=>{t=Math.max(0,Math.min(1,t));const c=1.70158;return 1+ (c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2);};
+function seg(x,y,ang,len){return [x+Math.sin(rad(ang))*len, y+Math.cos(rad(ang))*len];}
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+
+const INK='#241a10', SKIN='#a06a42', SKIN2='#7a4e33', TEE='#f2ede2', PANT='#c9a55a', SHOE='#fdfdfd',
+      PURPLE='#2c1247', PURPLE2='#3a1a5e', GOLD='#e5b84b', GOLD2='#B08D3E', PINK='#ff2ea6';
+
+// ---------- chair (side view, backrest on right) ----------
+function drawChair(cx, wob, broken, dropT, col){
+  const C = Object.assign({a:'#eef0f2', b:'#e3e6ea', c:'#f7f8fa'}, col||{});
+  // cx: x of seat center at floor; wob: rock angle deg; broken: 0..1 splay; dropT: seat fall 0..1
+  const seatY0 = FLOOR-200, seatW=230, legLen=185;
+  ctx.save();
+  ctx.translate(cx, FLOOR);
+  ctx.rotate(rad(wob));
+  ctx.lineWidth=16; ctx.strokeStyle=INK; ctx.lineCap='round';
+  const splay = broken*38;             // legs splay out
+  const drop  = dropT*(legLen-55);     // seat falls
+  // rear legs (right, holds backrest)
+  ctx.save();
+  ctx.translate(seatW/2-20, 0);
+  ctx.rotate(rad(14+splay));
+  ctx.fillStyle=C.a;
+  rr(-14,-legLen,28,legLen,12); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // front legs (left)
+  ctx.save();
+  ctx.translate(-seatW/2+20, 0);
+  ctx.rotate(rad(-14-splay));
+  ctx.fillStyle=C.b;
+  rr(-14,-legLen,28,legLen,12); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  const seatY = -legLen+30+drop;
+  // seat
+  ctx.save();
+  ctx.translate(0, seatY);
+  ctx.rotate(rad(broken*10));
+  ctx.fillStyle=C.c;
+  rr(-seatW/2-14, -16, seatW+28, 40, 14); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // backrest (attached to rear legs top)
+  ctx.save();
+  const bx = (seatW/2-20)+Math.sin(rad(14+splay))*(-legLen), by = Math.cos(rad(14+splay))*(-legLen);
+  ctx.translate(bx,by+drop*0.9);
+  ctx.rotate(rad(-(14+splay)*0.4 + broken*22));
+  ctx.fillStyle=C.c;
+  rr(-22,-150,44,150,15); ctx.fill(); ctx.stroke();
+  rr(-92,-162,184,58,17); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  ctx.restore();
+}
+
+// ---------- man ----------
+// pose: x,y(hip), face(1 right,-1 left), lean (torso deg, + = lean back),
+// legs [{hip,knee}...] angles: hip 0=down, + forward; walkT for bob; rot: whole-body rotation (fall)
+function drawMan(p){
+  const S = Object.assign({tee:TEE, teeShade:'#e4ddc9', cap:'#4b2377', skin:SKIN, pant:PANT, pantBack:'#a8874a', capless:false}, p.style||{});
+  ctx.save();
+  ctx.translate(p.x,p.y);
+  ctx.rotate(rad(p.rot||0));
+  ctx.scale(p.face,1);
+  ctx.lineWidth=12; ctx.strokeStyle=INK; ctx.lineCap='round'; ctx.lineJoin='round';
+  const thigh=118, shin=116;
+  // legs
+  [1,0].forEach((i,ord)=>{
+    const L=p.legs[i];
+    const back=(ord===0);
+    const [kx,ky]=seg(0,6, L.hip, thigh);
+    const [fx,fy]=seg(kx,ky, L.hip+L.knee, shin);
+    ctx.lineWidth=54; ctx.strokeStyle=back?S.pantBack:S.pant;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.lineWidth=11; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.save();
+    ctx.translate(fx,fy); ctx.rotate(rad(-(L.hip+L.knee)*0.2));
+    ctx.fillStyle=back?'#dedede':SHOE;
+    rr(-26,-14,102,42,19); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#b9bec4'; rr(-26,16,102,12,6); ctx.fill();
+    ctx.restore();
+  });
+  // torso
+  ctx.save();
+  ctx.rotate(rad(-(p.lean||0)));
+  ctx.fillStyle=S.tee;
+  ctx.beginPath();
+  ctx.moveTo(-58,14);
+  ctx.bezierCurveTo(-108,-66,-98,-196,-42,-232);
+  ctx.bezierCurveTo(8,-258,78,-242,94,-188);
+  ctx.bezierCurveTo(150,-116,156,-36,120,10);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=S.teeShade;
+  ctx.beginPath(); ctx.ellipse(72,-56,56,82,rad(-14),0,7); ctx.fill();
+  ctx.strokeStyle=INK; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.moveTo(-54,8); ctx.quadraticCurveTo(38,30,116,4); ctx.stroke();
+  // gold chain
+  ctx.strokeStyle=GOLD; ctx.lineWidth=10;
+  ctx.beginPath(); ctx.moveTo(2,-220); ctx.quadraticCurveTo(58,-164,92,-192); ctx.stroke();
+  // back arm (optional)
+  if(p.arm2){
+    const B=p.arm2;
+    ctx.save();
+    ctx.translate(-6,-202);
+    const [ex2,ey2]=seg(0,0, B.sh, 100);
+    const [hx2,hy2]=seg(ex2,ey2, B.sh+B.el, 96);
+    ctx.lineWidth=46; ctx.strokeStyle='#d8d2c2';
+    ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex2,ey2);ctx.stroke();
+    ctx.lineWidth=34; ctx.strokeStyle=SKIN2;
+    ctx.beginPath();ctx.moveTo(ex2,ey2);ctx.lineTo(hx2,hy2);ctx.stroke();
+    ctx.lineWidth=11; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex2,ey2);ctx.lineTo(hx2,hy2);ctx.stroke();
+    ctx.fillStyle=SKIN2; ctx.beginPath(); ctx.arc(hx2,hy2,23,0,7); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+  // arm
+  const A=p.arm||{sh:35, el:40};
+  ctx.save();
+  ctx.translate(30,-198);
+  const [ex,ey]=seg(0,0, A.sh, 100);
+  const [hx,hy]=seg(ex,ey, A.sh+A.el, 96);
+  ctx.lineWidth=46; ctx.strokeStyle=S.tee;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.stroke();
+  ctx.lineWidth=34; ctx.strokeStyle=SKIN;
+  ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.lineWidth=11; ctx.strokeStyle=INK;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.fillStyle=SKIN; ctx.beginPath(); ctx.arc(hx,hy,23,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // head (drawn AFTER arm so it overlaps)
+  ctx.save();
+  ctx.translate(30,-252); ctx.rotate(rad(p.headTilt||0));
+  ctx.lineWidth=11;
+  ctx.fillStyle=S.skin;
+  ctx.beginPath(); ctx.arc(0,-56,72,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(-52,-52,15,0,7); ctx.fill(); ctx.stroke(); // ear
+  // backwards cap: dome on top + strap at back
+  if(!S.capless){
+  ctx.fillStyle=S.cap;
+  ctx.beginPath(); ctx.arc(0,-62,74,rad(175),rad(355)); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-70,-84); ctx.quadraticCurveTo(-128,-76,-124,-56);
+  ctx.quadraticCurveTo(-90,-56,-66,-62); ctx.closePath(); ctx.fill(); ctx.stroke();  // back brim
+  ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(6,-96,10,0,7); ctx.fill();  // cap button
+  } else {
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.arc(0,-70,68,rad(180),rad(360)); ctx.closePath(); ctx.fill(); ctx.stroke(); // short hair
+  }
+  // eyes (front = +x)
+  if(p.eyes==='x'){
+    ctx.lineWidth=8; ctx.strokeStyle=INK;
+    [[26,-56],[54,-50]].forEach(([x,y])=>{
+      ctx.beginPath();ctx.moveTo(x-9,y-9);ctx.lineTo(x+9,y+9);ctx.moveTo(x+9,y-9);ctx.lineTo(x-9,y+9);ctx.stroke();
+    });
+  } else if(p.eyes==='wide'){
+    ctx.fillStyle='#fff'; ctx.lineWidth=6;
+    ctx.beginPath();ctx.arc(28,-56,15,0,7);ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.arc(56,-50,13,0,7);ctx.fill();ctx.stroke();
+    ctx.fillStyle=INK;
+    ctx.beginPath();ctx.arc(31,-54,6,0,7);ctx.fill();
+    ctx.beginPath();ctx.arc(58,-48,5.5,0,7);ctx.fill();
+  } else {
+    ctx.fillStyle=INK;
+    ctx.beginPath();ctx.arc(28,-56,7,0,7);ctx.fill();
+    ctx.beginPath();ctx.arc(56,-50,6.5,0,7);ctx.fill();
+  }
+  // brows
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.beginPath();ctx.moveTo(18,-76);ctx.lineTo(38,-72);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(48,-68);ctx.lineTo(64,-64);ctx.stroke();
+  // mouth + chin beard line
+  if(p.mouth==='o'){ctx.fillStyle='#5a2c22';ctx.beginPath();ctx.ellipse(46,-16,13,18,0,0,7);ctx.fill();ctx.stroke();}
+  else if(p.mouth==='sad'){ctx.beginPath();ctx.arc(44,0,15,rad(200),rad(340));ctx.stroke();}
+  else {ctx.beginPath();ctx.arc(40,-26,16,rad(30),rad(140));ctx.stroke();}
+  // goatee
+  ctx.fillStyle='#241a10';
+  ctx.beginPath(); ctx.ellipse(46,4,14,10,0,0,7); ctx.fill();
+  ctx.restore();
+  ctx.restore();
+  ctx.restore();
+}
+// ---------- fx ----------
+function starburst(x,y,s,label){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(-8)); ctx.scale(s,s);
+  ctx.beginPath();
+  const spikes=14;
+  for(let i=0;i<spikes*2;i++){
+    const a=i*Math.PI/spikes, r=i%2? 118:205+(i%4)*24;
+    ctx.lineTo(Math.cos(a)*r, Math.sin(a)*r*0.82);
+  }
+  ctx.closePath();
+  ctx.fillStyle='#ffd94d'; ctx.fill();
+  ctx.lineWidth=12; ctx.strokeStyle=INK; ctx.stroke();
+  ctx.fillStyle=INK;
+  ctx.font='66px "Archivo Black"'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(label,0,6);
+  ctx.restore();
+}
+function dust(x,y,t){ // t 0..1
+  if(t<=0||t>=1)return;
+  ctx.save(); ctx.globalAlpha=(1-t)*0.8;
+  for(let i=0;i<7;i++){
+    const a=i/7*Math.PI, r=40+t*150+(i%3)*22;
+    ctx.fillStyle='#cfc8bb';
+    ctx.beginPath(); ctx.arc(x+Math.cos(a+2)*r*1.3, y-Math.abs(Math.sin(a))*r*0.5, 26+18*(1-t),0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function dizzyStars(x,y,t){
+  ctx.save();
+  for(let i=0;i<3;i++){
+    const a=t*4+i*2.09;
+    const sx=x+Math.cos(a)*95, sy=y+Math.sin(a)*26 - 8;
+    ctx.save(); ctx.translate(sx,sy); ctx.rotate(a); ctx.fillStyle=GOLD;
+    ctx.beginPath();
+    for(let k=0;k<10;k++){const r=k%2?7:17, aa=k*Math.PI/5;ctx.lineTo(Math.cos(aa)*r,Math.sin(aa)*r);}
+    ctx.closePath(); ctx.fill(); ctx.strokeStyle=INK; ctx.lineWidth=3; ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function caption(lines,y,popT,size){
+  const s=size||64;
+  const sc=easeOutBack(popT);
+  if(sc<=0)return;
+  ctx.save(); ctx.translate(W/2,y); ctx.scale(sc,sc);
+  ctx.font=s+'px "Archivo Black"'; ctx.textAlign='center';
+  lines.forEach((ln,i)=>{
+    ctx.lineWidth=16; ctx.strokeStyle=INK; ctx.strokeText(ln,0,i*(s*1.18));
+    ctx.fillStyle='#fff'; ctx.fillText(ln,0,i*(s*1.18));
+  });
+  ctx.restore();
+}
+
+// ---------- scene bg ----------
+function drawRoom(){
+  // purple wall (brand), floor, spotlight
+  const g=ctx.createLinearGradient(0,0,0,FLOOR);
+  g.addColorStop(0,'#1c0b30'); g.addColorStop(1,PURPLE2);
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,FLOOR);
+  // string lights
+  ctx.strokeStyle='rgba(229,184,75,.5)'; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(0,140); ctx.quadraticCurveTo(W/2,260,W,120); ctx.stroke();
+  for(let i=1;i<9;i++){
+    const x=i/9*W, y=140+Math.sin(i/9*Math.PI)*112;
+    ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(x,y+10,9,0,7); ctx.fill();
+    ctx.fillStyle='rgba(229,184,75,.18)'; ctx.beginPath(); ctx.arc(x,y+10,26,0,7); ctx.fill();
+  }
+  // spotlight cone
+  ctx.fillStyle='rgba(255,240,200,.07)';
+  ctx.beginPath(); ctx.moveTo(430,0); ctx.lineTo(780,0); ctx.lineTo(1010,FLOOR); ctx.lineTo(180,FLOOR); ctx.closePath(); ctx.fill();
+  // floor
+  const fg=ctx.createLinearGradient(0,FLOOR,0,H);
+  fg.addColorStop(0,'#6a5138'); fg.addColorStop(1,'#4a3826');
+  ctx.fillStyle=fg; ctx.fillRect(0,FLOOR,W,H-FLOOR);
+  ctx.strokeStyle='rgba(36,26,16,.35)'; ctx.lineWidth=5;
+  for(let i=0;i<6;i++){ctx.beginPath();ctx.moveTo(0,FLOOR+40+i*60);ctx.lineTo(W,FLOOR+40+i*60);ctx.stroke();}
+  ctx.fillStyle='rgba(0,0,0,.28)';
+  ctx.beginPath(); ctx.ellipse(620,FLOOR+18,330,40,0,0,7); ctx.fill();
+}
+
+// ---------- end card ----------
+function drawEndCard(t){ // t seconds since card start
+  const g=ctx.createRadialGradient(W/2,760,80,W/2,900,1200);
+  g.addColorStop(0,PURPLE2); g.addColorStop(1,'#190a2c');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  // rotating rays
+  ctx.save(); ctx.translate(W/2,700); ctx.rotate(t*0.12);
+  ctx.strokeStyle='rgba(229,184,75,.20)'; ctx.lineWidth=3;
+  for(let i=0;i<18;i++){ctx.rotate(Math.PI/9);ctx.beginPath();ctx.moveTo(0,90);ctx.lineTo(0,760);ctx.stroke();}
+  ctx.restore();
+  // logo bounce
+  const sc=easeOutBack(Math.min(1,t/0.7))*1;
+  if(logoReady&&sc>0){
+    const size=640*sc;
+    ctx.save();
+    ctx.shadowColor='rgba(0,0,0,.55)'; ctx.shadowBlur=60; ctx.shadowOffsetY=22;
+    ctx.drawImage(logo, W/2-size/2, 700-size/2, size, size);
+    ctx.restore();
+  }
+  const a1=ease((t-0.7)/0.4), a2=ease((t-1.0)/0.4), a3=ease((t-1.3)/0.4);
+  ctx.textAlign='center';
+  ctx.save(); ctx.globalAlpha=a1;
+  ctx.font='600 46px Oswald'; ctx.fillStyle=GOLD;
+  ctx.fillText('S T R O N G  C H A I R S .  N O  S U R P R I S E S .', W/2, 1180);
+  ctx.restore();
+  ctx.save(); ctx.globalAlpha=a2;
+  ctx.font='96px "Archivo Black"';
+  const gg=ctx.createLinearGradient(0,1260,0,1360);
+  gg.addColorStop(0,'#EFCB7C'); gg.addColorStop(1,GOLD2);
+  ctx.fillStyle=gg;
+  ctx.fillText('703-786-8369', W/2, 1345);
+  ctx.restore();
+  ctx.save(); ctx.globalAlpha=a3;
+  ctx.font='700 46px Montserrat'; ctx.fillStyle='#efe9dc';
+  ctx.fillText('IG  @bigbusiness_rentals_events', W/2, 1445);
+  ctx.font='600 38px Oswald'; ctx.fillStyle='rgba(229,184,75,.85)';
+  ctx.fillText('L A S   V E G A S ,  N V', W/2, 1530);
+  ctx.restore();
+  // book now pill
+  const a4=ease((t-1.6)/0.5);
+  if(a4>0){
+    ctx.save(); ctx.globalAlpha=a4;
+    const pw=430,ph=92,px=W/2-pw/2,py=1600;
+    const pg=ctx.createLinearGradient(0,py,0,py+ph);
+    pg.addColorStop(0,'#EFCB7C');pg.addColorStop(1,GOLD2);
+    ctx.fillStyle=pg; rr(px,py,pw,ph,46); ctx.fill();
+    ctx.fillStyle='#1c0b30'; ctx.font='600 46px Oswald';
+    ctx.fillText('BOOK YOUR DATE', W/2, py+60);
+    ctx.restore();
+  }
+}
+
+
+// ---------- extra props ----------
+function drawTable(cx, wob, collapseT){
+  ctx.save(); ctx.translate(cx, FLOOR); ctx.rotate(rad(wob));
+  ctx.lineWidth=15; ctx.strokeStyle=INK; ctx.lineCap='round';
+  const topW=620, legLen=250, splay=collapseT*62, drop=collapseT*(legLen-46);
+  [[-1,'#dfe2e6'],[1,'#eef0f2']].forEach(([s,c])=>{
+    ctx.save(); ctx.translate(s*(topW/2-70),0); ctx.rotate(rad(s*(10+splay)));
+    ctx.fillStyle=c; rr(-13,-legLen,26,legLen,11); ctx.fill(); ctx.stroke(); ctx.restore();
+  });
+  ctx.save(); ctx.translate(0,-legLen+18+drop); ctx.rotate(rad(collapseT*7));
+  ctx.fillStyle='#f7f8fa'; rr(-topW/2,-17,topW,38,13); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e8eaee'; rr(-topW/2,-17,topW,12,6); ctx.fill();
+  ctx.restore(); ctx.restore();
+}
+function drawCake(x,y,s,tilt){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(tilt||0)); ctx.scale(s,s);
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#e9ecf0'; ctx.beginPath(); ctx.ellipse(0,4,95,16,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#f6d7e3'; rr(-70,-58,140,60,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.beginPath();
+  ctx.moveTo(-70,-58); ctx.quadraticCurveTo(-52,-30,-38,-52); ctx.quadraticCurveTo(-22,-26,-6,-52);
+  ctx.quadraticCurveTo(8,-28,24,-52); ctx.quadraticCurveTo(40,-26,56,-52); ctx.quadraticCurveTo(64,-40,70,-58);
+  ctx.lineTo(70,-58); ctx.lineTo(-70,-58); ctx.fill();
+  ctx.fillStyle='#c22b45'; ctx.beginPath(); ctx.arc(0,-70,12,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function drawFoldedStack(x,y,n,sway){
+  ctx.save(); ctx.translate(x,y);
+  for(let i=0;i<n;i++){
+    ctx.save();
+    ctx.rotate(rad(sway*(i+1)*0.35));
+    ctx.translate(0,-i*40);
+    ctx.lineWidth=10; ctx.strokeStyle=INK;
+    ctx.fillStyle=i%2?'#f7f8fa':'#e8eaee';
+    rr(-105,-34,210,34,12); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function drawMiniChair(x,y,s,col){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle=col||'#f2f4f6';
+  rr(-46,-160,20,96,8); ctx.fill(); ctx.stroke();
+  rr(-52,-176,80,30,9); ctx.fill(); ctx.stroke();
+  rr(-58,-70,116,24,9); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-46,-48); ctx.lineTo(-58,0); ctx.moveTo(46,-48); ctx.lineTo(58,0); ctx.stroke();
+  ctx.restore();
+}
+function notes(t, cx, cy){
+  ctx.save(); ctx.font='64px Montserrat'; ctx.fillStyle=GOLD;
+  for(let i=0;i<3;i++){
+    const ph=(t*0.9+i*0.37)%1;
+    const x=cx+Math.sin((t+i)*2.2)*70+i*90-90, y=cy-ph*220;
+    ctx.globalAlpha=Math.min(1,(1-ph)*1.6)*0.9;
+    ctx.fillText(i%2?'♪':'♫', x, y);
+  }
+  ctx.restore();
+}
+function sweat(x,y,t){
+  ctx.save(); ctx.fillStyle='#8fd7ff'; ctx.strokeStyle=INK; ctx.lineWidth=4;
+  for(let i=0;i<3;i++){
+    const ph=(t*1.4+i*0.33)%1;
+    const sx=x+(i-1)*46, sy=y-10+ph*70;
+    ctx.globalAlpha=(1-ph);
+    ctx.beginPath(); ctx.ellipse(sx,sy,9,14,0,0,7); ctx.fill(); ctx.stroke();
+  }
+  ctx.restore();
+}
+function sparkle(x,y,t){
+  ctx.save();
+  for(let i=0;i<4;i++){
+    const a=t*3+i*1.57, r=60+12*Math.sin(t*5+i);
+    const sx=x+Math.cos(a)*r, sy=y+Math.sin(a)*r*0.5;
+    ctx.fillStyle='#ffe9a8'; ctx.globalAlpha=0.85;
+    ctx.beginPath();
+    for(let k=0;k<8;k++){const rr2=k%2?4:13, aa=k*Math.PI/4;ctx.lineTo(sx+Math.cos(aa)*rr2, sy+Math.sin(aa)*rr2);}
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+const SEAT_TOP = FLOOR-185+30-16;
+const HIP_SEAT = SEAT_TOP-30;
+const HIP_STAND = FLOOR-238;
+function walkPose(x, t, face, style){
+  const step=Math.sin(t*11);
+  return {x:x, y:HIP_STAND-Math.abs(step)*14, face:face, lean:4, style:style,
+    legs:[{hip:20*step,knee:26+16*Math.max(0,-step)},{hip:-20*step,knee:26+16*Math.max(0,step)}],
+    arm:{sh:24+14*step,el:30}, mouth:'smile'};
+}
+function sitPose(x, style, extra){
+  return Object.assign({x:x, y:HIP_SEAT, face:-1, lean:-14, style:style,
+    legs:[{hip:84,knee:-86},{hip:78,knee:-80}], arm:{sh:58,el:44}, mouth:'smile'}, extra||{});
+}
+
+// ---------- 7 timelines ----------
+const CHX=620;
+const STYLE2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
+
+let REEL=1;
+window.setReel=(n)=>{REEL=n;};
+
+function shakeAt(t, t0, dur, amp){
+  if(t>t0&&t<t0+dur){const k=(t0+dur-t)/dur;return [(Math.random()-0.5)*amp*k,(Math.random()-0.5)*amp*k];}
+  return [0,0];
+}
+
+// --- Reel 1: SUNDAY — musical chairs, chair survives ---
+function reel1(t){
+  drawRoom();
+  drawChair(CHX,0,0,0);
+  if(t<4.1) notes(t, CHX, 700);
+  // two players orbit the chair
+  const stopT=4.1;
+  function orbit(phase, style){
+    const tt=Math.min(t,stopT);
+    const a=tt*2.0+phase;
+    const ox=CHX+Math.cos(a)*300, depth=Math.sin(a);
+    const face=Math.cos(a+Math.PI/2)>0?1:-1;
+    const step=Math.sin(tt*12+phase);
+    return {x:ox, y:HIP_STAND+depth*26-Math.abs(step)*12, face:face, lean:6, style:style,
+      legs:[{hip:22*step,knee:26+16*Math.max(0,-step)},{hip:-22*step,knee:26+16*Math.max(0,step)}],
+      arm:{sh:26+16*step,el:28}, mouth:'smile', depth:depth};
+  }
+  let p1=orbit(0,null), p2=orbit(Math.PI,STYLE2);
+  if(t>=stopT&&t<4.7){ // freeze, wide eyes
+    p1=Object.assign(p1,{mouth:'o',eyes:'wide',legs:[{hip:6,knee:8},{hip:-4,knee:8}]});
+    p2=Object.assign(p2,{mouth:'o',eyes:'wide',legs:[{hip:6,knee:8},{hip:-4,knee:8}]});
+  }
+  if(t<4.7){
+    const order=[p1,p2].sort((a,b)=>a.depth-b.depth);
+    order.forEach(p=>drawMan(p));
+  } else {
+    // big guy dives to seat; rival slides past on floor
+    const k=ease((t-4.7)/0.5);
+    const land=t>=5.2;
+    const p={x:lerp(p1.x??CHX-300,CHX-24,k), y:land?HIP_SEAT:lerp(HIP_STAND,HIP_SEAT-80,k)+Math.sin(k*Math.PI)*-90,
+      face:-1, lean:land?-14:20, rot:land?0:-30+k*30, style:null,
+      legs:land?[{hip:84,knee:-86},{hip:78,knee:-80}]:[{hip:40,knee:-20},{hip:-30,knee:30}],
+      arm:{sh:land?58:130,el:land?44:10}, mouth:land?'smile':'o', eyes:land?undefined:'wide'};
+    // rival overshoots, slides on belly
+    const k2=Math.min(1,(t-4.75)/0.7);
+    const p2b={x:lerp(CHX+300,CHX-430,ease(k2)), y:FLOOR-92, face:-1, rot:-88, lean:-6, style:STYLE2,
+      legs:[{hip:30,knee:-16},{hip:46,knee:-30}], arm:{sh:150,el:6}, mouth:'sad', eyes:t>5.6?'x':'wide'};
+    drawMan(p2b);
+    drawMan(p);
+    if(land){
+      const wob=Math.exp(-(t-5.2)*3)*Math.sin((t-5.2)*26)*4;
+      // redraw chair wobble slightly under him? chair already drawn; add motion lines
+      if(t>5.5) sparkle(CHX+40, SEAT_TOP-160, t);
+    }
+  }
+  if(t>=0.3&&t<3.9) caption(['MUSICAL CHAIRS','AT THE FUNCTION…'],240,(t-0.3)/0.35);
+  if(t>=5.6&&t<8.9){caption(['OUR CHAIRS','SURVIVE THE DIVE.'],240,(t-5.6)/0.35);}
+}
+
+// --- Reel 2: MONDAY — chair thief ---
+function reel2(t){
+  drawRoom();
+  // chair position: slides away 4.6-5.8
+  let chx=CHX;
+  const thiefIn=3.4;
+  if(t>4.6) chx=CHX+lerp(0,-900,ease((t-4.6)/1.3));
+  if(t<6.0) drawChair(chx,0,0,0);
+  // man1: seated eating (0-2.2), walks off right (2.2-3.4), returns (5.8-6.8), sits into air (6.8-7.6)
+  if(t<2.2){
+    const chew=Math.sin(t*9);
+    drawMan(sitPose(CHX-24,null,{arm:{sh:104+chew*14,el:78+chew*10}, mouth: (chew>0?'o':'smile')}));
+  } else if(t<3.4){
+    const k=(t-2.2)/1.2;
+    const p=walkPose(lerp(CHX-24,W+220,ease(k)), t, 1, null);
+    drawMan(p);
+  } else if(t>=5.8){
+    if(t<6.9){
+      const k=(t-5.8)/1.1;
+      drawMan(walkPose(lerp(W+220,CHX+90,ease(k)), t, -1, null));
+    } else if(t<7.5){
+      const k=ease((t-6.9)/0.6);  // sitting into nothing
+      const hy=lerp(HIP_STAND, HIP_SEAT, k);
+      drawMan({x:lerp(CHX+90,CHX-10,k), y:hy, face:-1, lean:-12,
+        legs:[{hip:lerp(6,80,k),knee:lerp(8,-82,k)},{hip:lerp(-4,74,k),knee:lerp(6,-76,k)}],
+        arm:{sh:52,el:44}, mouth:'smile', eyes: t>7.3?'wide':undefined});
+    } else {
+      const k=Math.min(1,(t-7.5)/0.3);
+      const settle=t>7.8?Math.exp(-(t-7.8)*4)*Math.sin((t-7.8)*22)*5:0;
+      drawMan({x:CHX-30, y:lerp(HIP_SEAT,FLOOR-66,k)+settle, face:-1, lean:-24, rot:-14,
+        legs:[{hip:64,knee:-8},{hip:76,knee:-20}], arm:{sh:120,el:8}, mouth:'sad', eyes: t>7.8?'x':'wide'});
+      if(t>7.55) dust(CHX-30, FLOOR, (t-7.55)/0.9);
+      if(t>7.6&&t<8.5){const kk=easeOutBack((t-7.6)/0.3);starburst(CHX+170,FLOOR-520,kk*0.85,'THUD!');}
+    }
+  }
+  // thief: tiptoes in (3.4-4.6), grabs chair, drags off (4.6-6.0)
+  if(t>=thiefIn&&t<6.05){
+    let tx;
+    if(t<4.6) tx=lerp(-200,CHX-190,ease((t-thiefIn)/1.2));
+    else tx=chx-190+16;
+    const sneak=Math.sin(t*10);
+    drawMan({x:tx, y:HIP_STAND+8-Math.abs(sneak)*6, face:1, lean:16, style:STYLE2,
+      legs:[{hip:26*sneak,knee:40+14*Math.max(0,-sneak)},{hip:-26*sneak,knee:40+14*Math.max(0,sneak)}],
+      arm:{sh:t<4.6?36:96,el:t<4.6?30:-18}, mouth:'smile'});
+  }
+  if(t>=0.3&&t<2.1) caption(['HE LEFT HIS SEAT','FOR 30 SECONDS…'],240,(t-0.3)/0.35);
+  if(t>=4.0&&t<5.9) caption(['CHAIR GONE.','GONE.'],240,(t-4.0)/0.35);
+  if(t>=7.7&&t<8.9) caption(['NEVER RUN OUT OF CHAIRS.','WE BRING EXTRAS.'],240,(t-7.7)/0.35,56);
+}
+
+// --- Reel 3: TUESDAY — wobbly table vs cake ---
+function reel3(t){
+  drawRoom();
+  const TX=560;
+  let wob=0, col=0;
+  if(t>1.6&&t<5.1){const k=(t-1.6)/3.5;wob=Math.sin(t*9)*(0.8+4.5*k*k);}
+  if(t>=5.55){col=Math.min(1,(t-5.55)/0.3);wob=0;}
+  drawTable(TX,wob,col);
+  // cake slides with wobble, launches at 5.1, caught at 5.5
+  const tableTopY=FLOOR-250+18-17-16;
+  if(t<5.1){
+    const k=t<1.6?0:(t-1.6)/3.5;
+    const slide=Math.sin(t*9+1.2)*(10+150*k*k);
+    drawCake(TX+slide, tableTopY+Math.sin(rad(wob))*slide, 1, wob*1.4+slide*0.06);
+  } else if(t<5.55){
+    const k=(t-5.1)/0.45; // airborne arc to catch point
+    const cx2=lerp(TX+170, TX+420, k), cy2=tableTopY - Math.sin(k*Math.PI)*160 + k*300;
+    drawCake(cx2, cy2, 1, 40*k);
+  } else {
+    drawCake(TX+420, FLOOR-150, 1, 8+Math.exp(-(t-5.55)*5)*Math.sin((t-5.55)*30)*6);
+  }
+  // man: admires (walk in 0-1.4), watches nervous, dives at 5.0, lying catch
+  if(t<1.4){
+    drawMan(walkPose(lerp(-220,TX+330,ease(t/1.4)), t, 1, null));
+  } else if(t<5.0){
+    const nerv=t>2.6;
+    const track=Math.sin(t*9+1.2);
+    drawMan({x:TX+330, y:HIP_STAND, face:-1, lean:2,
+      legs:[{hip:5,knee:8},{hip:-3,knee:8}],
+      arm:{sh:nerv?150:30,el:nerv?-30:34},
+      mouth:nerv?'o':'smile', eyes:nerv?'wide':undefined, headTilt:track*6});
+    if(t>3.4) sweat(TX+390, FLOOR-560, t);
+  } else {
+    // dive: lying toward table, arms out; cake lands on hands
+    const k=ease((t-5.0)/0.4);
+    drawMan({x:TX+430-k*40, y:lerp(HIP_STAND,FLOOR-86,k), face:-1, rot:lerp(0,-86,k), lean:-4,
+      legs:[{hip:26,knee:-8},{hip:44,knee:-26}], arm:{sh:158,el:4}, arm2:{sh:150,el:8},
+      mouth: t>5.6?'smile':'o', eyes: t>5.6?undefined:'wide'});
+    if(t>5.55&&t<6.4) sparkle(TX+430, FLOOR-190, t);
+    if(t>=5.62) dust(TX, FLOOR, (t-5.62)/1.0);
+    if(t>=5.66&&t<6.6){const kk=easeOutBack((t-5.66)/0.3);starburst(TX-210,FLOOR-560,kk*0.9,'CRASH!');}
+  }
+  if(t>=0.3&&t<2.4) caption(['THE CAKE TABLE','THEY RENTED CHEAP…'],240,(t-0.3)/0.35);
+  if(t>=3.0&&t<5.0) caption(['HOLD UP—','IT’S MOVING'],240,(t-3.0)/0.35);
+  if(t>=6.6&&t<8.9) caption(['HE SAVED THE CAKE.','OUR TABLES SAVE YOU.'],240,(t-6.6)/0.35,58);
+}
+
+// --- Reel 4: WEDNESDAY — lean-back uncle tips over ---
+function reel4(t){
+  drawRoom();
+  const pivotX=CHX+95; // rear foot
+  let ang=0;
+  if(t>=2.6&&t<5.2){const k=ease((t-2.6)/0.8);ang=-14*k + Math.sin(t*3.2)*2*(t>3.4?1:0);}
+  else if(t>=5.2&&t<5.75){const k=(t-5.2)/0.55;ang=-16-k*k*74;}
+  else if(t>=5.75) ang=-90;
+  drawChair(CHX,ang,0,0);
+  // man attached to chair when tipping: rotate seat point about pivot
+  function rotPt(px,py,a){
+    const dx=px-pivotX, dy=py-FLOOR, c=Math.cos(rad(a)), s=Math.sin(rad(a));
+    return [pivotX+dx*c-dy*s, FLOOR+dx*s+dy*c];
+  }
+  if(t<1.5){
+    drawMan(walkPose(lerp(-220,CHX-60,ease(t/1.5)), t, -1, null));
+  } else if(t<2.6){
+    const k=ease((t-1.5)/0.9);
+    drawMan({x:lerp(CHX-60,CHX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-6,-14,k),
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(20,58,k),el:lerp(36,44,k)}, mouth:'smile'});
+  } else if(t<5.75){
+    const [mx,my]=rotPt(CHX-24, HIP_SEAT, ang);
+    const smug=t<5.0;
+    drawMan({x:mx,y:my,face:-1,rot:ang,lean:-20,
+      legs:[{hip:70,knee:-30},{hip:62,knee:-24}],   // legs kicked forward, feet off floor
+      arm:{sh:62,el:76},
+      mouth:smug?'smile':'o', eyes:smug?undefined:'wide'});
+  } else {
+    const settle=Math.exp(-(t-5.75)*4)*Math.sin((t-5.75)*24)*6;
+    const [mx,my]=rotPt(CHX-24, HIP_SEAT, -90);
+    drawMan({x:mx-24,y:my-16+settle,face:-1,rot:-96,lean:-14,
+      legs:[{hip:44,knee:-30},{hip:60,knee:-44}], arm:{sh:150,el:8}, mouth:'sad', eyes:'x'});
+    if(t<7.4) dizzyStars(mx-120, my-190, t);
+    if(t>=5.75) dust(pivotX-160, FLOOR, (t-5.75)/1.0);
+    if(t>=5.8&&t<6.7){const kk=easeOutBack((t-5.8)/0.3);starburst(CHX+230,FLOOR-540,kk*0.9,'BONK!');}
+  }
+  if(t>=0.3&&t<2.4) caption(['EVERY COOKOUT HAS','A LEAN-BACK UNCLE…'],240,(t-0.3)/0.35);
+  if(t>=3.2&&t<5.1) caption(['“I’M FINE,','I DO THIS ALL THE TIME”'],240,(t-3.2)/0.35,56);
+  if(t>=6.8&&t<8.9) caption(['STURDY CHAIRS FOR','STUBBORN UNCLES.'],240,(t-6.8)/0.35);
+}
+
+// --- Reel 5: THURSDAY — DIY chair stack crash ---
+function reel5(t){
+  drawRoom();
+  // falling chairs after 4.4
+  const drops=[[CHX-260,-0.05,90],[CHX-60,0.05,140],[CHX+140,0.12,60],[CHX-160,0.2,200],[CHX+40,0.28,110]];
+  if(t<4.4){
+    // man carrying swaying stack
+    const k=Math.min(1,t/3.0);
+    const x=lerp(-240, CHX-40, ease(Math.min(1,t/3.4)));
+    const sway=Math.sin(t*3.4)*(2+9*k*k);
+    const step=Math.sin(t*7);
+    drawMan({x:x, y:HIP_STAND-Math.abs(step)*8, face:1, lean:-10+sway*0.5,
+      legs:[{hip:14*step,knee:22+12*Math.max(0,-step)},{hip:-14*step,knee:22+12*Math.max(0,step)}],
+      arm:{sh:96,el:-26}, arm2:{sh:104,el:-30},
+      mouth:t>2.4?'o':'smile', eyes:t>2.4?'wide':undefined, headTilt:sway*0.8});
+    drawFoldedStack(x+195, FLOOR-345-Math.abs(step)*8, 5, sway);
+    if(t>2.8) sweat(x+40, FLOOR-600, t);
+  } else {
+    // chairs scattered on floor / bouncing in
+    drops.forEach(([dx,dly,rot],i)=>{
+      const k=Math.min(1,Math.max(0,(t-4.4-dly)/0.5));
+      const bounce=Math.abs(Math.sin(k*Math.PI*1.5))*(1-k)*120;
+      const y=FLOOR-24-bounce;
+      ctx.save(); ctx.translate(dx, y); ctx.rotate(rad(lerp(rot,(i%2?8:-6),k)));
+      ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle=i%2?'#f7f8fa':'#e8eaee';
+      rr(-105,-17,210,34,12); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    });
+    if(t<5.4) dust(CHX-60, FLOOR, (t-4.4)/1.0);
+    if(t>=4.45&&t<5.4){const kk=easeOutBack((t-4.45)/0.3);starburst(CHX+240,FLOOR-620,kk,'CRASH!');}
+    // man sits on the pile defeated
+    const k=ease((t-4.5)/0.6);
+    drawMan({x:CHX-70, y:lerp(HIP_STAND, FLOOR-112, k), face:-1, lean:-18,
+      legs:[{hip:lerp(10,70,k),knee:lerp(6,-50,k)},{hip:lerp(-6,62,k),knee:lerp(8,-44,k)}],
+      arm:{sh:70,el:80}, mouth:'sad', eyes:t>5.2?'x':'wide'});
+  }
+  if(t>=0.3&&t<2.6) caption(['DIY PARTY SETUP','SPEEDRUN'],240,(t-0.3)/0.35);
+  if(t>=3.0&&t<4.3) caption(['HE’S GOT IT…','HE’S GOT IT…'],240,(t-3.0)/0.35);
+  if(t>=5.8&&t<8.9) caption(['HE DID NOT HAVE IT.','WE DELIVER & SET UP.'],240,(t-5.8)/0.35,56);
+}
+
+// --- Reel 6: FRIDAY — the split ---
+function reel6(t){
+  drawRoom();
+  if(t<4.6) notes(t, 560, 640);
+  if(t<4.6){
+    // dancing: bounce + alternating arms
+    const b=Math.sin(t*8);
+    const gettinLow=Math.max(0,(t-3.2)/1.4);
+    drawMan({x:560, y:HIP_STAND+Math.abs(b)*10+gettinLow*90, face:-1, lean:b*6,
+      legs:[{hip:16+14*b,knee:24+gettinLow*40},{hip:-16-10*b,knee:26+gettinLow*40}],
+      arm:{sh:b>0?165:120, el:-20}, arm2:{sh:b>0?110:160, el:-16},
+      mouth:'smile', headTilt:b*7});
+  } else if(t<5.0){
+    const k=ease((t-4.6)/0.4); // drop to split
+    drawMan({x:560, y:lerp(HIP_STAND+90, FLOOR-64, k), face:-1, lean:0,
+      legs:[{hip:lerp(30,88,k),knee:lerp(60,-4,k)*(1-k)},{hip:lerp(-26,-86,k),knee:lerp(60,4,k)*(1-k)}],
+      arm:{sh:165,el:-6}, arm2:{sh:160,el:-2}, mouth:'o', eyes:'wide'});
+  } else {
+    // stuck in split; tries to push up; chair slides in at 7.0; relief at 7.6
+    const strain=Math.sin(t*14)*4*(t<7.0?1:0);
+    const saved=t>=7.6;
+    drawMan({x:560, y:FLOOR-64-Math.max(0,strain), face:-1, lean:strain*0.6,
+      legs:[{hip:88,knee:-4},{hip:-86,knee:4}],
+      arm:saved?{sh:58,el:44}:{sh:120,el:60}, arm2:saved?undefined:{sh:-118,el:-60},
+      mouth:saved?'smile':(t>5.6?'sad':'o'), eyes:saved?undefined:'wide'});
+    if(!saved&&t>5.3) sweat(600, FLOOR-460, t);
+    if(t>=7.0){
+      const k=ease((t-7.0)/0.6);
+      drawChair(lerp(W+240, 820, k), 0, 0, 0);
+      if(t>7.7) sparkle(820, SEAT_TOP-140, t);
+    }
+  }
+  if(t>=0.3&&t<3.0) caption(['WHEN THE DJ PLAYS','YOUR SONG…'],240,(t-0.3)/0.35);
+  if(t>=5.3&&t<7.0) caption(['KNEES: “WE OUT.”'],240,(t-5.3)/0.35);
+  if(t>=7.6&&t<8.9) caption(['ALWAYS HAVE A CHAIR','READY. WE GOT YOU.'],240,(t-7.6)/0.35,56);
+}
+
+// --- Reel 7: SATURDAY — 99 chairs + 1 cheap one ---
+function reel7(t){
+  drawRoom();
+  // rows of mini chairs pop in
+  const rows=[[FLOOR-330,0.50,5],[FLOOR-262,0.62,5],[FLOOR-168,0.76,5],[FLOOR-38,0.92,4]];
+  let idx=0;
+  rows.forEach(([ry,s,cnt],r)=>{
+    for(let i=0;i<cnt;i++){
+      const born=0.25+idx*0.115;
+      idx++;
+      if(t>born){
+        const k=easeOutBack(Math.min(1,(t-born)/0.3));
+        const x=140+i*(600/(cnt-1))+(r%2?36:0);
+        ctx.save(); ctx.translate(x,ry); ctx.scale(k*s,k*s); ctx.translate(-0,-0);
+        drawMiniChair(0,0,1);
+        ctx.restore();
+      }
+    }
+  });
+  // counter caption
+  if(t>0.25&&t<3.3){
+    const count=Math.min(99, Math.floor(ease((t-0.25)/2.6)*99));
+    ctx.save(); ctx.font='110px "Archivo Black"'; ctx.textAlign='center';
+    ctx.lineWidth=18; ctx.strokeStyle=INK; ctx.strokeText(count+' CHAIRS', W/2, 330);
+    ctx.fillStyle='#fff'; ctx.fillText(count+' CHAIRS', W/2, 330);
+    ctx.restore();
+  }
+  // the 100th chair: red, front right
+  const HCX=870;
+  let wob=0,broken=0,drop=0;
+  if(t>=5.5&&t<6.1){wob=Math.sin(t*26)*5;}
+  if(t>=6.1){broken=Math.min(1,(t-6.1)/0.2);drop=Math.min(1,(t-6.12)/0.2);wob=0;}
+  if(t>3.4){
+    const k=easeOutBack(Math.min(1,(t-3.4)/0.35));
+    ctx.save(); ctx.translate(HCX,FLOOR); ctx.scale(k,k); ctx.translate(-HCX,-FLOOR);
+    drawChair(HCX,wob,broken,drop,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  }
+  // man: walks in 3.6-4.6, sits on red chair 4.6-5.4, break at 6.1, floor after
+  if(t>=3.6&&t<4.7){
+    drawMan(walkPose(lerp(-220,HCX-60,ease((t-3.6)/1.1)), t, -1, null));
+  } else if(t>=4.7&&t<5.5){
+    const k=ease((t-4.7)/0.8);
+    drawMan({x:lerp(HCX-60,HCX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-6,-14,k),
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(20,58,k),el:lerp(36,44,k)}, mouth:'smile'});
+  } else if(t>=5.5&&t<6.1){
+    const wobm=Math.sin(t*26)*3;
+    drawMan(sitPose(HCX-24,null,{x:HCX-24+wobm, mouth:'o', eyes:'wide', headTilt:wobm}));
+  } else if(t>=6.1){
+    const k=ease(Math.min(1,(t-6.1)/0.45));
+    if(k<1){
+      drawMan({x:HCX-24-k*66, y:lerp(HIP_SEAT,FLOOR-96,k), face:-1, rot:-k*84, lean:-10,
+        legs:[{hip:lerp(84,52,k),knee:lerp(-86,-30,k)},{hip:lerp(78,64,k),knee:lerp(-80,-46,k)}],
+        arm:{sh:lerp(58,120,k),el:20}, mouth:'o', eyes:'wide'});
+    } else {
+      const settle=Math.exp(-(t-6.55)*3)*Math.sin((t-6.55)*18)*6;
+      drawMan({x:HCX-100, y:FLOOR-96+settle, face:-1, rot:-84, lean:-10,
+        legs:[{hip:38,knee:-24},{hip:52,knee:-40}], arm:{sh:128,el:14}, mouth:'sad', eyes:'x'});
+      dizzyStars(HCX-190, FLOOR-300, t);
+    }
+    if(t>=6.1) dust(HCX, FLOOR, (t-6.1)/1.0);
+    if(t>=6.16&&t<7.0){const kk=easeOutBack((t-6.16)/0.3);starburst(HCX-330,FLOOR-600,kk*0.95,'CRACK!');}
+  }
+  if(t>=3.5&&t<5.4) caption(['…PLUS ONE CHAIR FROM','“SOMEWHERE ELSE”'],240,(t-3.5)/0.35,56);
+  if(t>=7.1&&t<8.9) caption(['RENT ALL 100','FROM US. 😤'],240,(t-7.1)/0.35);
+}
+
+const REELS={1:reel1,2:reel2,3:reel3,4:reel4,5:reel5,6:reel6,7:reel7};
+const SHAKES={1:[5.15,0.4,30],2:[7.55,0.4,34],3:[5.6,0.5,42],4:[5.75,0.5,44],5:[4.42,0.55,44],6:[4.95,0.3,22],7:[6.12,0.5,44]};
+window.drawFrame=function(t){
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,W,H);
+  if(t<9.25){
+    const [t0,d,amp]=SHAKES[REEL];
+    let sx=0,sy=0;
+    if(t>t0&&t<t0+d){const k=(t0+d-t)/d;sx=(Math.random()-0.5)*amp*k;sy=(Math.random()-0.5)*amp*k;}
+    ctx.save(); ctx.translate(sx,sy);
+    REELS[REEL](t);
+    ctx.restore();
+  }
+  if(t>=8.9){
+    const a=ease((t-8.9)/0.35);
+    ctx.save(); ctx.globalAlpha=a;
+    drawEndCard(Math.max(0,t-9.0));
+    ctx.restore();
+  }
+};
+</script>
+</body></html>
