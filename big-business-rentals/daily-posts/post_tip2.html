@@ -1,0 +1,86 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 38%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 8deg at 50% 40%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 64px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:8px;color:#D6B25E;display:flex;align-items:center;gap:16px}
+.kick .r{width:60px;height:1px;background:#B08D3E}
+h1{font-family:'Archivo Black';font-size:62px;line-height:1.05;margin-top:22px;color:#f6f1e4}
+h1 em{font-style:normal;color:#E5B84B}
+.cols{display:flex;gap:26px;margin-top:34px;width:100%}
+.col{flex:1;border:2px solid #B08D3E;border-radius:18px;background:rgba(229,184,75,.08);padding:30px 24px 26px}
+.col svg{display:block;margin:0 auto 14px}
+.col h3{font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:3px;color:#E5B84B}
+.col ul{list-style:none;margin-top:18px;text-align:left}
+.col li{font-weight:600;font-size:21px;color:#ded4bd;line-height:1.5;padding-left:28px;position:relative;margin-top:8px}
+.col li:before{content:'';position:absolute;left:4px;top:12px;width:8px;height:8px;background:#D6B25E;transform:rotate(45deg)}
+.vs{align-self:center;font-family:'Archivo Black';font-size:44px;color:#B08D3E}
+.rule30{margin-top:28px;background:rgba(229,184,75,.10);border:2px solid #B08D3E;border-radius:14px;
+  padding:16px 32px;font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:2px;color:#f2ecdd}
+.rule30 b{color:#E5B84B}
+.foot{margin-top:auto;display:flex;align-items:center;gap:26px}
+.foot img{width:86px;height:86px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:36px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:21px;color:#d9cdb2;margin-top:4px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick"><span class="r"></span>PARTY MATH · TIP No.2<span class="r"></span></div>
+    <h1>ROUND OR 6FT?<br><em>PICK THE RIGHT TABLE.</em></h1>
+    <div class="cols">
+      <div class="col">
+        <svg width="110" height="80" viewBox="0 0 96 74" fill="none" stroke="#E5B84B" stroke-width="3.5">
+          <ellipse cx="48" cy="18" rx="40" ry="12"/>
+          <path d="M48 30v26"/><path d="M30 70c8-10 28-10 36 0"/>
+        </svg>
+        <h3>ROUND</h3>
+        <ul>
+          <li>Seats 8–10 facing each other</li>
+          <li>Best for conversation</li>
+          <li>Weddings &amp; dinners</li>
+          <li>Elegant room look</li>
+        </ul>
+      </div>
+      <div class="vs">VS</div>
+      <div class="col">
+        <svg width="118" height="80" viewBox="0 0 104 74" fill="none" stroke="#E5B84B" stroke-width="3.5">
+          <path d="M8 22h88l-9 12H17z"/>
+          <path d="M20 34v32M84 34v32"/><path d="M13 66h14M77 66h14"/>
+        </svg>
+        <h3>6FT LONG</h3>
+        <ul>
+          <li>Seats 8 in less space</li>
+          <li>Best for buffets &amp; food</li>
+          <li>Cookouts &amp; banquets</li>
+          <li>Easy rows &amp; lines</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule30">PRO MOVE: <b>MIX BOTH</b> — ROUNDS FOR GUESTS, 6FT FOR THE FOOD &amp; GIFTS</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">703-786-8369</div>
+        <div class="s">@bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
