@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{font-family:'Montserrat';position:relative}
+
+body{background:radial-gradient(circle at 50% 42%, #35175a 0%, #1d0d33 60%, #120722 100%);color:#f2ecdd}
+.frame{position:absolute;inset:34px;border:3px solid #B08D3E;border-radius:26px}
+.bulbs{position:absolute;inset:16px;border-radius:34px;pointer-events:none}
+.bulb{position:absolute;width:14px;height:14px;border-radius:50%;background:#F3D88F;box-shadow:0 0 14px 3px rgba(243,216,143,.65)}
+.wrap{position:absolute;inset:34px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:58px 70px 46px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#D6B25E}
+.money{margin-top:16px;font-family:'Archivo Black';font-size:230px;line-height:1;color:#F3D88F;
+ text-shadow:0 0 24px rgba(243,216,143,.8),0 0 70px rgba(229,184,75,.55),0 0 130px rgba(229,184,75,.35)}
+.upto{font-family:'Oswald';font-weight:600;font-size:32px;letter-spacing:7px;color:#f6f1e4;margin-top:10px;
+ text-shadow:0 0 18px rgba(243,216,143,.4)}
+.msg{margin-top:22px;font-weight:600;font-size:24px;color:#cfc4ad;line-height:1.55;max-width:820px}
+.strip{font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:4px;color:#E5B84B;margin-top:28px}
+.fine{margin-top:20px;font-weight:600;font-size:16px;color:#8a816e}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px}
+.foot .p{font-family:'Archivo Black';font-size:35px;text-align:left}
+.foot .s{font-weight:600;font-size:20px;margin-top:3px;text-align:left}
+</style></head><body>
+<div class="frame"></div>
+<div class="bulbs" id="bl"></div>
+<div class="wrap">
+  <div class="kick">◆ &nbsp;REFERRAL PROGRAM&nbsp; ◆</div>
+  <div class="money">$100</div>
+  <div class="upto">EARN UP TO $100 PER REFERRAL</div>
+  <div class="msg">Your word is worth money in this town. Refer a friend, planner or venue — when they book with Big Business and mention your name, you cash in.</div>
+  <div class="strip">REFER &nbsp;◆&nbsp; THEY BOOK &nbsp;◆&nbsp; YOU EARN</div>
+  <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+  <div class="foot"><img src="bb_logo.png">
+    <div><div class="p" style="color:#E5B84B">703-786-8369</div>
+    <div class="s" style="color:#d9cdb2">@bigbusiness_rentals_events &nbsp;·&nbsp; SERVING ALL OF LAS VEGAS, NV</div></div></div>
+</div>
+<script>
+const bl=document.getElementById('bl');
+function bulb(x,y){const b=document.createElement('div');b.className='bulb';b.style.left=x+'px';b.style.top=y+'px';bl.appendChild(b);}
+const W=1080-32, H=1080-32, n=17;
+for(let i=0;i<=n;i++){bulb(20+i*(W-54)/n, 6); bulb(20+i*(W-54)/n, H-22);}
+for(let i=1;i<n;i++){bulb(6, 20+i*(H-56)/n); bulb(W-20, 20+i*(H-56)/n);}
+</script>
+</body></html>
