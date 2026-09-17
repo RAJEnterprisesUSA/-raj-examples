@@ -1,0 +1,79 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 36%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 38%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 66px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:76px;line-height:1;margin-top:14px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cols{display:flex;gap:24px;margin-top:38px;width:100%}
+.col{flex:1;border-radius:18px;padding:28px 26px;text-align:left}
+.col.diy{border:2px solid #8a4a3a;background:rgba(200,80,60,.10)}
+.col.us{border:2px solid #B08D3E;background:rgba(229,184,75,.10)}
+.col h3{font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:2.5px;text-align:center}
+.col.diy h3{color:#e08a70}
+.col.us h3{color:#E5B84B}
+.col ul{list-style:none;margin-top:18px}
+.col li{font-weight:600;font-size:21.5px;line-height:1.5;margin-top:12px;padding-left:34px;position:relative;color:#ded4bd}
+.col.diy li:before{content:'✗';position:absolute;left:2px;color:#e08a70;font-weight:700}
+.col.us li:before{content:'✓';position:absolute;left:2px;color:#E5B84B;font-weight:700}
+.cta{margin-top:34px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#241a35;
+  font-family:'Oswald';font-weight:600;font-size:29px;letter-spacing:4px;padding:17px 50px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:20px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; THE HEAVY LIFTING &nbsp;◆</div>
+    <h1>DIY SETUP VS.<br>BOOKING US.</h1>
+    <div class="cols">
+      <div class="col diy">
+        <h3>DOING IT YOURSELF</h3>
+        <ul>
+          <li>Borrow somebody's truck</li>
+          <li>Load 60 chairs. Twice.</li>
+          <li>Set up sweating in the heat</li>
+          <li>Fold &amp; haul it all back at midnight</li>
+          <li>Sore back Monday</li>
+        </ul>
+      </div>
+      <div class="col us">
+        <h3>BOOKING US</h3>
+        <ul>
+          <li>One call or DM</li>
+          <li>We deliver &amp; set up</li>
+          <li>You greet your guests</li>
+          <li>We pick it all up after</li>
+          <li>You take the credit 😌</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta">SKIP THE HEAVY LIFTING — 703-786-8369</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">703-786-8369</div>
+        <div class="s">@bigbusiness_rentals_events &nbsp;·&nbsp; SERVING ALL OF LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
