@@ -315,24 +315,26 @@ function drawEndCard(t){ // t seconds since card start
   const gg=ctx.createLinearGradient(0,1260,0,1360);
   gg.addColorStop(0,'#EFCB7C'); gg.addColorStop(1,GOLD2);
   ctx.fillStyle=gg;
-  ctx.fillText('703-786-8369', W/2, 1345);
+  ctx.fillText('702-706-8287', W/2, 1338);
   ctx.restore();
   ctx.save(); ctx.globalAlpha=a3;
-  ctx.font='700 46px Montserrat'; ctx.fillStyle='#efe9dc';
-  ctx.fillText('IG  @bigbusiness_rentals_events', W/2, 1445);
-  ctx.font='600 38px Oswald'; ctx.fillStyle='rgba(229,184,75,.85)';
-  ctx.fillText('L A S   V E G A S ,  N V', W/2, 1530);
+  ctx.font='700 44px Montserrat'; ctx.fillStyle='#F3D88F';
+  ctx.fillText('bigbusinesspartyrentals.com', W/2, 1424);
+  ctx.font='700 40px Montserrat'; ctx.fillStyle='#efe9dc';
+  ctx.fillText('IG  @bigbusiness_rentals_events', W/2, 1492);
+  ctx.font='600 34px Oswald'; ctx.fillStyle='rgba(229,184,75,.85)';
+  ctx.fillText('L A S   V E G A S ,  N V', W/2, 1552);
   ctx.restore();
   // book now pill
   const a4=ease((t-1.6)/0.5);
   if(a4>0){
     ctx.save(); ctx.globalAlpha=a4;
-    const pw=430,ph=92,px=W/2-pw/2,py=1600;
+    const pw=430,ph=90,px=W/2-pw/2,py=1608;
     const pg=ctx.createLinearGradient(0,py,0,py+ph);
     pg.addColorStop(0,'#EFCB7C');pg.addColorStop(1,GOLD2);
     ctx.fillStyle=pg; rr(px,py,pw,ph,46); ctx.fill();
     ctx.fillStyle='#1c0b30'; ctx.font='600 46px Oswald';
-    ctx.fillText('BOOK YOUR DATE', W/2, py+60);
+    ctx.fillText('BOOK YOUR DATE', W/2, py+59);
     ctx.restore();
   }
 }
