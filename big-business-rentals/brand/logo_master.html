@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;background:transparent;overflow:hidden}
+.badge{position:absolute;left:20px;top:20px;width:1040px;height:1040px;border-radius:50%;
+  background:radial-gradient(circle at 50% 42%, #201a33 0%, #171226 46%, #0d0a18 100%);
+  overflow:hidden}
+body.purple .badge{background:radial-gradient(circle at 50% 42%, #45216b 0%, #321552 46%, #1c0c33 100%)}
+svg.geo{position:absolute;inset:0}
+.b{position:absolute;font-family:'Playfair';font-weight:900;font-size:300px;line-height:1;
+  background:linear-gradient(168deg,#f7e3a4 8%,#e8c266 34%,#a97c2e 62%,#f0d488 88%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(240,206,110,.38)) drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+.b1{left:262px;top:312px}
+.b2{left:566px;top:312px}
+.rule{position:absolute;left:190px;top:642px;width:700px;height:9px;border-radius:5px;
+  background:linear-gradient(90deg,rgba(255,46,166,0) 0%,#ff2ea6 14%,#a24ee0 50%,#2e7bff 86%,rgba(46,123,255,0) 100%);
+  filter:drop-shadow(0 0 14px rgba(162,78,224,.6))}
+.t1{position:absolute;left:0;width:1080px;top:684px;text-align:center;font-family:'Archivo Black';
+  font-size:56px;color:#ffffff;letter-spacing:16px;text-indent:16px;
+  text-shadow:0 3px 12px rgba(0,0,0,.6)}
+.t2{position:absolute;left:0;width:1080px;top:788px;text-align:center;font-family:'Montserrat';font-weight:700;
+  font-size:40px;color:#e5b84b;letter-spacing:15px;text-indent:15px}
+.t3{position:absolute;left:0;width:1080px;top:872px;text-align:center;font-family:'Montserrat';font-weight:600;
+  font-size:26px;color:#9a94a8;letter-spacing:12px;text-indent:12px}
+</style></head>
+<body>
+<div class="badge">
+  <svg class="geo" width="1040" height="1040" viewBox="0 0 1040 1040" fill="none">
+    <!-- faint rays -->
+    <g stroke="#e5b84b" stroke-opacity="0.10" stroke-width="1.6">
+      <g id="rays"></g>
+    </g>
+    <!-- dashed accent circles -->
+    <circle cx="520" cy="500" r="330" stroke="#cfc4ad" stroke-opacity="0.28" stroke-width="2.4"
+      stroke-dasharray="14 18"/>
+    <!-- outer double ring -->
+    <circle cx="520" cy="520" r="496" stroke="#B08D3E" stroke-width="3.4"/>
+    <circle cx="520" cy="520" r="481" stroke="#E5B84B" stroke-opacity="0.55" stroke-width="1.8"/>
+    <!-- diamond behind monogram -->
+    <g transform="translate(520 452) rotate(45)">
+      <rect x="-140" y="-140" width="280" height="280" rx="24" stroke="#E9C464" stroke-width="5"
+        filter="url(#glow)"/>
+      <rect x="-106" y="-106" width="212" height="212" rx="16" stroke="#E9C464" stroke-opacity="0.28" stroke-width="2"/>
+    </g>
+    <!-- gold dots flanking -->
+    <circle cx="330" cy="756" r="7" fill="#E5B84B"/>
+    <circle cx="750" cy="756" r="7" fill="#E5B84B"/>
+    <!-- sparkles -->
+    <g fill="#EFCB7C" filter="url(#glow)">
+      <path d="M262 806 l7 18 18 7 -18 7 -7 18 -7-18 -18-7 18-7z"/>
+      <path d="M796 806 l7 18 18 7 -18 7 -7 18 -7-18 -18-7 18-7z"/>
+    </g>
+    <defs>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="6" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+  <div class="b b1">B</div>
+  <div class="b b2">B</div>
+  <div class="rule"></div>
+  <div class="t1">BIG BUSINESS</div>
+  <div class="t2">EVENT RENTALS</div>
+  <div class="t3">LAS VEGAS</div>
+</div>
+<script>
+const g=document.getElementById('rays');
+for(let i=0;i<24;i++){
+  const a=i*15*Math.PI/180;
+  const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',520+Math.cos(a)*120); l.setAttribute('y1',500+Math.sin(a)*120);
+  l.setAttribute('x2',520+Math.cos(a)*470); l.setAttribute('y2',500+Math.sin(a)*470);
+  g.appendChild(l);
+}
+</script>
+</body></html>
