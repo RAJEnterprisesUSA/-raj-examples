@@ -1,0 +1,1042 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+html,body{margin:0;padding:0;width:540px;height:960px;overflow:hidden;background:#000}
+canvas{width:540px;height:960px;display:block}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const W=1080,H=1920, FLOOR=1560;
+
+const logo = new Image(); logo.src='bb_logo.png';
+let logoReady=false; logo.onload=()=>logoReady=true;
+
+// ---------- helpers ----------
+const rad = d=>d*Math.PI/180;
+const lerp=(a,b,t)=>a+(b-a)*Math.max(0,Math.min(1,t));
+const ease=t=>t<0?0:t>1?1:t*t*(3-2*t);
+const easeOutBack=t=>{t=Math.max(0,Math.min(1,t));const c=1.70158;return 1+ (c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2);};
+function seg(x,y,ang,len){return [x+Math.sin(rad(ang))*len, y+Math.cos(rad(ang))*len];}
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+
+const INK='#241a10', SKIN='#a06a42', SKIN2='#7a4e33', TEE='#f2ede2', PANT='#c9a55a', SHOE='#fdfdfd',
+      PURPLE='#2c1247', PURPLE2='#3a1a5e', GOLD='#e5b84b', GOLD2='#B08D3E', PINK='#ff2ea6';
+
+// ---------- chair (side view, backrest on right) ----------
+function drawChair(cx, wob, broken, dropT, col){
+  const C = Object.assign({a:'#eef0f2', b:'#e3e6ea', c:'#f7f8fa'}, col||{});
+  // cx: x of seat center at floor; wob: rock angle deg; broken: 0..1 splay; dropT: seat fall 0..1
+  const seatY0 = FLOOR-200, seatW=230, legLen=185;
+  ctx.save();
+  ctx.translate(cx, FLOOR);
+  ctx.rotate(rad(wob));
+  ctx.lineWidth=16; ctx.strokeStyle=INK; ctx.lineCap='round';
+  const splay = broken*38;             // legs splay out
+  const drop  = dropT*(legLen-55);     // seat falls
+  // rear legs (right, holds backrest)
+  ctx.save();
+  ctx.translate(seatW/2-20, 0);
+  ctx.rotate(rad(14+splay));
+  ctx.fillStyle=C.a;
+  rr(-14,-legLen,28,legLen,12); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // front legs (left)
+  ctx.save();
+  ctx.translate(-seatW/2+20, 0);
+  ctx.rotate(rad(-14-splay));
+  ctx.fillStyle=C.b;
+  rr(-14,-legLen,28,legLen,12); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  const seatY = -legLen+30+drop;
+  // seat
+  ctx.save();
+  ctx.translate(0, seatY);
+  ctx.rotate(rad(broken*10));
+  ctx.fillStyle=C.c;
+  rr(-seatW/2-14, -16, seatW+28, 40, 14); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // backrest (attached to rear legs top)
+  ctx.save();
+  const bx = (seatW/2-20)+Math.sin(rad(14+splay))*(-legLen), by = Math.cos(rad(14+splay))*(-legLen);
+  ctx.translate(bx,by+drop*0.9);
+  ctx.rotate(rad(-(14+splay)*0.4 + broken*22));
+  ctx.fillStyle=C.c;
+  rr(-22,-150,44,150,15); ctx.fill(); ctx.stroke();
+  rr(-92,-162,184,58,17); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  ctx.restore();
+}
+
+// ---------- man ----------
+// pose: x,y(hip), face(1 right,-1 left), lean (torso deg, + = lean back),
+// legs [{hip,knee}...] angles: hip 0=down, + forward; walkT for bob; rot: whole-body rotation (fall)
+function drawMan(p){
+  const S = Object.assign({tee:TEE, teeShade:'#e4ddc9', cap:'#4b2377', skin:SKIN, pant:PANT, pantBack:'#a8874a', capless:false, fem:false}, p.style||{});
+  ctx.save();
+  ctx.translate(p.x,p.y);
+  ctx.rotate(rad(p.rot||0));
+  ctx.scale(p.face,1);
+  ctx.lineWidth=12; ctx.strokeStyle=INK; ctx.lineCap='round'; ctx.lineJoin='round';
+  const thigh=118, shin=116;
+  // legs
+  [1,0].forEach((i,ord)=>{
+    const L=p.legs[i];
+    const back=(ord===0);
+    const [kx,ky]=seg(0,6, L.hip, thigh);
+    const [fx,fy]=seg(kx,ky, L.hip+L.knee, shin);
+    ctx.lineWidth=54; ctx.strokeStyle=back?S.pantBack:S.pant;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.lineWidth=11; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.save();
+    ctx.translate(fx,fy); ctx.rotate(rad(-(L.hip+L.knee)*0.2));
+    ctx.fillStyle=back?'#dedede':SHOE;
+    rr(-26,-14,102,42,19); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#b9bec4'; rr(-26,16,102,12,6); ctx.fill();
+    ctx.restore();
+  });
+  // torso
+  ctx.save();
+  ctx.rotate(rad(-(p.lean||0)));
+  ctx.fillStyle=S.tee;
+  ctx.beginPath();
+  ctx.moveTo(-58,14);
+  ctx.bezierCurveTo(-108,-66,-98,-196,-42,-232);
+  ctx.bezierCurveTo(8,-258,78,-242,94,-188);
+  ctx.bezierCurveTo(150,-116,156,-36,120,10);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=S.teeShade;
+  ctx.beginPath(); ctx.ellipse(72,-56,56,82,rad(-14),0,7); ctx.fill();
+  ctx.strokeStyle=INK; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.moveTo(-54,8); ctx.quadraticCurveTo(38,30,116,4); ctx.stroke();
+  // gold chain
+  ctx.strokeStyle=GOLD; ctx.lineWidth=10;
+  ctx.beginPath(); ctx.moveTo(2,-220); ctx.quadraticCurveTo(58,-164,92,-192); ctx.stroke();
+  // back arm (optional)
+  if(p.arm2){
+    const B=p.arm2;
+    ctx.save();
+    ctx.translate(-6,-202);
+    const [ex2,ey2]=seg(0,0, B.sh, 100);
+    const [hx2,hy2]=seg(ex2,ey2, B.sh+B.el, 96);
+    ctx.lineWidth=46; ctx.strokeStyle='#d8d2c2';
+    ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex2,ey2);ctx.stroke();
+    ctx.lineWidth=34; ctx.strokeStyle=SKIN2;
+    ctx.beginPath();ctx.moveTo(ex2,ey2);ctx.lineTo(hx2,hy2);ctx.stroke();
+    ctx.lineWidth=11; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex2,ey2);ctx.lineTo(hx2,hy2);ctx.stroke();
+    ctx.fillStyle=SKIN2; ctx.beginPath(); ctx.arc(hx2,hy2,23,0,7); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+  // arm
+  const A=p.arm||{sh:35, el:40};
+  ctx.save();
+  ctx.translate(30,-198);
+  const [ex,ey]=seg(0,0, A.sh, 100);
+  const [hx,hy]=seg(ex,ey, A.sh+A.el, 96);
+  ctx.lineWidth=46; ctx.strokeStyle=S.tee;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.stroke();
+  ctx.lineWidth=34; ctx.strokeStyle=SKIN;
+  ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.lineWidth=11; ctx.strokeStyle=INK;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.fillStyle=SKIN; ctx.beginPath(); ctx.arc(hx,hy,23,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // head (drawn AFTER arm so it overlaps)
+  ctx.save();
+  ctx.translate(30,-252); ctx.rotate(rad(p.headTilt||0));
+  ctx.lineWidth=11;
+  ctx.fillStyle=S.skin;
+  ctx.beginPath(); ctx.arc(0,-56,72,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(-52,-52,15,0,7); ctx.fill(); ctx.stroke(); // ear
+  // backwards cap: dome on top + strap at back
+  if(S.fem){
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.arc(0,-64,76,rad(168),rad(372)); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(-44,-136,36,0,7); ctx.fill(); ctx.stroke();   // bun
+    ctx.strokeStyle=GOLD; ctx.lineWidth=8;
+    ctx.beginPath(); ctx.arc(-44,-136,44,rad(120),rad(300)); ctx.stroke(); // scrunchie glint
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+    // gold hoop earring
+    ctx.strokeStyle=GOLD; ctx.lineWidth=7;
+    ctx.beginPath(); ctx.arc(-52,-18,17,rad(-30),rad(210)); ctx.stroke();
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  } else if(!S.capless){
+  ctx.fillStyle=S.cap;
+  ctx.beginPath(); ctx.arc(0,-62,74,rad(175),rad(355)); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-70,-84); ctx.quadraticCurveTo(-128,-76,-124,-56);
+  ctx.quadraticCurveTo(-90,-56,-66,-62); ctx.closePath(); ctx.fill(); ctx.stroke();  // back brim
+  ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(6,-96,10,0,7); ctx.fill();  // cap button
+  } else {
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.arc(0,-70,68,rad(180),rad(360)); ctx.closePath(); ctx.fill(); ctx.stroke(); // short hair
+  }
+  // eyes (front = +x)
+  if(p.eyes==='x'){
+    ctx.lineWidth=8; ctx.strokeStyle=INK;
+    [[26,-56],[54,-50]].forEach(([x,y])=>{
+      ctx.beginPath();ctx.moveTo(x-9,y-9);ctx.lineTo(x+9,y+9);ctx.moveTo(x+9,y-9);ctx.lineTo(x-9,y+9);ctx.stroke();
+    });
+  } else if(p.eyes==='wide'){
+    ctx.fillStyle='#fff'; ctx.lineWidth=6;
+    ctx.beginPath();ctx.arc(28,-56,15,0,7);ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.arc(56,-50,13,0,7);ctx.fill();ctx.stroke();
+    ctx.fillStyle=INK;
+    ctx.beginPath();ctx.arc(31,-54,6,0,7);ctx.fill();
+    ctx.beginPath();ctx.arc(58,-48,5.5,0,7);ctx.fill();
+  } else {
+    ctx.fillStyle=INK;
+    ctx.beginPath();ctx.arc(28,-56,7,0,7);ctx.fill();
+    ctx.beginPath();ctx.arc(56,-50,6.5,0,7);ctx.fill();
+  }
+  // brows
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.beginPath();ctx.moveTo(18,-76);ctx.lineTo(38,-72);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(48,-68);ctx.lineTo(64,-64);ctx.stroke();
+  // mouth + chin beard line
+  if(p.mouth==='o'){ctx.fillStyle='#5a2c22';ctx.beginPath();ctx.ellipse(46,-16,13,18,0,0,7);ctx.fill();ctx.stroke();}
+  else if(p.mouth==='sad'){ctx.beginPath();ctx.arc(44,0,15,rad(200),rad(340));ctx.stroke();}
+  else {ctx.beginPath();ctx.arc(40,-26,16,rad(30),rad(140));ctx.stroke();}
+  // goatee (men) / lashes (women)
+  if(!S.fem){
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.ellipse(46,4,14,10,0,0,7); ctx.fill();
+  } else {
+    ctx.lineWidth=5; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(20,-68);ctx.lineTo(12,-74);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(50,-62);ctx.lineTo(44,-69);ctx.stroke();
+  }
+  ctx.restore();
+  ctx.restore();
+  ctx.restore();
+}
+// ---------- fx ----------
+function starburst(x,y,s,label){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(-8)); ctx.scale(s,s);
+  ctx.beginPath();
+  const spikes=14;
+  for(let i=0;i<spikes*2;i++){
+    const a=i*Math.PI/spikes, r=i%2? 118:205+(i%4)*24;
+    ctx.lineTo(Math.cos(a)*r, Math.sin(a)*r*0.82);
+  }
+  ctx.closePath();
+  ctx.fillStyle='#ffd94d'; ctx.fill();
+  ctx.lineWidth=12; ctx.strokeStyle=INK; ctx.stroke();
+  ctx.fillStyle=INK;
+  ctx.font='66px "Archivo Black"'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(label,0,6);
+  ctx.restore();
+}
+function dust(x,y,t){ // t 0..1
+  if(t<=0||t>=1)return;
+  ctx.save(); ctx.globalAlpha=(1-t)*0.8;
+  for(let i=0;i<7;i++){
+    const a=i/7*Math.PI, r=40+t*150+(i%3)*22;
+    ctx.fillStyle='#cfc8bb';
+    ctx.beginPath(); ctx.arc(x+Math.cos(a+2)*r*1.3, y-Math.abs(Math.sin(a))*r*0.5, 26+18*(1-t),0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function dizzyStars(x,y,t){
+  ctx.save();
+  for(let i=0;i<3;i++){
+    const a=t*4+i*2.09;
+    const sx=x+Math.cos(a)*95, sy=y+Math.sin(a)*26 - 8;
+    ctx.save(); ctx.translate(sx,sy); ctx.rotate(a); ctx.fillStyle=GOLD;
+    ctx.beginPath();
+    for(let k=0;k<10;k++){const r=k%2?7:17, aa=k*Math.PI/5;ctx.lineTo(Math.cos(aa)*r,Math.sin(aa)*r);}
+    ctx.closePath(); ctx.fill(); ctx.strokeStyle=INK; ctx.lineWidth=3; ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function caption(lines,y,popT,size){
+  const s=size||64;
+  const sc=easeOutBack(popT);
+  if(sc<=0)return;
+  ctx.save(); ctx.translate(W/2,y); ctx.scale(sc,sc);
+  ctx.font=s+'px "Archivo Black"'; ctx.textAlign='center';
+  lines.forEach((ln,i)=>{
+    ctx.lineWidth=16; ctx.strokeStyle=INK; ctx.strokeText(ln,0,i*(s*1.18));
+    ctx.fillStyle='#fff'; ctx.fillText(ln,0,i*(s*1.18));
+  });
+  ctx.restore();
+}
+
+// ---------- scene bg ----------
+function drawRoom(){
+  // purple wall (brand), floor, spotlight
+  const g=ctx.createLinearGradient(0,0,0,FLOOR);
+  g.addColorStop(0,'#1c0b30'); g.addColorStop(1,PURPLE2);
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,FLOOR);
+  // string lights
+  ctx.strokeStyle='rgba(229,184,75,.5)'; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(0,140); ctx.quadraticCurveTo(W/2,260,W,120); ctx.stroke();
+  for(let i=1;i<9;i++){
+    const x=i/9*W, y=140+Math.sin(i/9*Math.PI)*112;
+    ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(x,y+10,9,0,7); ctx.fill();
+    ctx.fillStyle='rgba(229,184,75,.18)'; ctx.beginPath(); ctx.arc(x,y+10,26,0,7); ctx.fill();
+  }
+  // spotlight cone
+  ctx.fillStyle='rgba(255,240,200,.07)';
+  ctx.beginPath(); ctx.moveTo(430,0); ctx.lineTo(780,0); ctx.lineTo(1010,FLOOR); ctx.lineTo(180,FLOOR); ctx.closePath(); ctx.fill();
+  // floor
+  const fg=ctx.createLinearGradient(0,FLOOR,0,H);
+  fg.addColorStop(0,'#6a5138'); fg.addColorStop(1,'#4a3826');
+  ctx.fillStyle=fg; ctx.fillRect(0,FLOOR,W,H-FLOOR);
+  ctx.strokeStyle='rgba(36,26,16,.35)'; ctx.lineWidth=5;
+  for(let i=0;i<6;i++){ctx.beginPath();ctx.moveTo(0,FLOOR+40+i*60);ctx.lineTo(W,FLOOR+40+i*60);ctx.stroke();}
+  ctx.fillStyle='rgba(0,0,0,.28)';
+  ctx.beginPath(); ctx.ellipse(620,FLOOR+18,330,40,0,0,7); ctx.fill();
+}
+
+// ---------- end card ----------
+function drawEndCard(t){ // t seconds since card start
+  const g=ctx.createRadialGradient(W/2,760,80,W/2,900,1200);
+  g.addColorStop(0,PURPLE2); g.addColorStop(1,'#190a2c');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  // rotating rays
+  ctx.save(); ctx.translate(W/2,700); ctx.rotate(t*0.12);
+  ctx.strokeStyle='rgba(229,184,75,.20)'; ctx.lineWidth=3;
+  for(let i=0;i<18;i++){ctx.rotate(Math.PI/9);ctx.beginPath();ctx.moveTo(0,90);ctx.lineTo(0,760);ctx.stroke();}
+  ctx.restore();
+  // logo bounce
+  const sc=easeOutBack(Math.min(1,t/0.7))*1;
+  if(logoReady&&sc>0){
+    const size=640*sc;
+    ctx.save();
+    ctx.shadowColor='rgba(0,0,0,.55)'; ctx.shadowBlur=60; ctx.shadowOffsetY=22;
+    ctx.drawImage(logo, W/2-size/2, 700-size/2, size, size);
+    ctx.restore();
+  }
+  const a1=ease((t-0.7)/0.4), a2=ease((t-1.0)/0.4), a3=ease((t-1.3)/0.4);
+  ctx.textAlign='center';
+  ctx.save(); ctx.globalAlpha=a1;
+  const tag = (window.TAGLINES&&TAGLINES[REEL]) || 'STRONG CHAIRS. NO SURPRISES.';
+  let fs=46; ctx.letterSpacing='10px';
+  ctx.font='600 '+fs+'px Oswald';
+  while(ctx.measureText(tag).width>950 && fs>32){fs-=2;ctx.font='600 '+fs+'px Oswald';}
+  ctx.fillStyle=GOLD;
+  ctx.fillText(tag, W/2, 1180);
+  ctx.letterSpacing='0px';
+  ctx.restore();
+  ctx.save(); ctx.globalAlpha=a2;
+  ctx.font='96px "Archivo Black"';
+  const gg=ctx.createLinearGradient(0,1260,0,1360);
+  gg.addColorStop(0,'#EFCB7C'); gg.addColorStop(1,GOLD2);
+  ctx.fillStyle=gg;
+  ctx.fillText('702-706-8287', W/2, 1338);
+  ctx.restore();
+  ctx.save(); ctx.globalAlpha=a3;
+  ctx.font='700 44px Montserrat'; ctx.fillStyle='#F3D88F';
+  ctx.fillText('bigbusinesspartyrentals.com', W/2, 1424);
+  ctx.font='700 40px Montserrat'; ctx.fillStyle='#efe9dc';
+  ctx.fillText('IG  @bigbusiness_rentals_events', W/2, 1492);
+  ctx.font='600 34px Oswald'; ctx.fillStyle='rgba(229,184,75,.85)';
+  ctx.fillText('L A S   V E G A S ,  N V', W/2, 1552);
+  ctx.restore();
+  // book now pill
+  const a4=ease((t-1.6)/0.5);
+  if(a4>0){
+    ctx.save(); ctx.globalAlpha=a4;
+    const pw=430,ph=90,px=W/2-pw/2,py=1608;
+    const pg=ctx.createLinearGradient(0,py,0,py+ph);
+    pg.addColorStop(0,'#EFCB7C');pg.addColorStop(1,GOLD2);
+    ctx.fillStyle=pg; rr(px,py,pw,ph,46); ctx.fill();
+    ctx.fillStyle='#1c0b30'; ctx.font='600 46px Oswald';
+    ctx.fillText('BOOK YOUR DATE', W/2, py+59);
+    ctx.restore();
+  }
+}
+
+
+// ---------- extra props ----------
+function drawTable(cx, wob, collapseT){
+  ctx.save(); ctx.translate(cx, FLOOR); ctx.rotate(rad(wob));
+  ctx.lineWidth=15; ctx.strokeStyle=INK; ctx.lineCap='round';
+  const topW=620, legLen=250, splay=collapseT*62, drop=collapseT*(legLen-46);
+  [[-1,'#dfe2e6'],[1,'#eef0f2']].forEach(([s,c])=>{
+    ctx.save(); ctx.translate(s*(topW/2-70),0); ctx.rotate(rad(s*(10+splay)));
+    ctx.fillStyle=c; rr(-13,-legLen,26,legLen,11); ctx.fill(); ctx.stroke(); ctx.restore();
+  });
+  ctx.save(); ctx.translate(0,-legLen+18+drop); ctx.rotate(rad(collapseT*7));
+  ctx.fillStyle='#f7f8fa'; rr(-topW/2,-17,topW,38,13); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e8eaee'; rr(-topW/2,-17,topW,12,6); ctx.fill();
+  ctx.restore(); ctx.restore();
+}
+function drawCake(x,y,s,tilt){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(tilt||0)); ctx.scale(s,s);
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#e9ecf0'; ctx.beginPath(); ctx.ellipse(0,4,95,16,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#f6d7e3'; rr(-70,-58,140,60,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.beginPath();
+  ctx.moveTo(-70,-58); ctx.quadraticCurveTo(-52,-30,-38,-52); ctx.quadraticCurveTo(-22,-26,-6,-52);
+  ctx.quadraticCurveTo(8,-28,24,-52); ctx.quadraticCurveTo(40,-26,56,-52); ctx.quadraticCurveTo(64,-40,70,-58);
+  ctx.lineTo(70,-58); ctx.lineTo(-70,-58); ctx.fill();
+  ctx.fillStyle='#c22b45'; ctx.beginPath(); ctx.arc(0,-70,12,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function drawFoldedStack(x,y,n,sway){
+  ctx.save(); ctx.translate(x,y);
+  for(let i=0;i<n;i++){
+    ctx.save();
+    ctx.rotate(rad(sway*(i+1)*0.35));
+    ctx.translate(0,-i*40);
+    ctx.lineWidth=10; ctx.strokeStyle=INK;
+    ctx.fillStyle=i%2?'#f7f8fa':'#e8eaee';
+    rr(-105,-34,210,34,12); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function drawMiniChair(x,y,s,col){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle=col||'#f2f4f6';
+  rr(-46,-160,20,96,8); ctx.fill(); ctx.stroke();
+  rr(-52,-176,80,30,9); ctx.fill(); ctx.stroke();
+  rr(-58,-70,116,24,9); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-46,-48); ctx.lineTo(-58,0); ctx.moveTo(46,-48); ctx.lineTo(58,0); ctx.stroke();
+  ctx.restore();
+}
+function notes(t, cx, cy){
+  ctx.save(); ctx.font='64px Montserrat'; ctx.fillStyle=GOLD;
+  for(let i=0;i<3;i++){
+    const ph=(t*0.9+i*0.37)%1;
+    const x=cx+Math.sin((t+i)*2.2)*70+i*90-90, y=cy-ph*220;
+    ctx.globalAlpha=Math.min(1,(1-ph)*1.6)*0.9;
+    ctx.fillText(i%2?'♪':'♫', x, y);
+  }
+  ctx.restore();
+}
+function sweat(x,y,t){
+  ctx.save(); ctx.fillStyle='#8fd7ff'; ctx.strokeStyle=INK; ctx.lineWidth=4;
+  for(let i=0;i<3;i++){
+    const ph=(t*1.4+i*0.33)%1;
+    const sx=x+(i-1)*46, sy=y-10+ph*70;
+    ctx.globalAlpha=(1-ph);
+    ctx.beginPath(); ctx.ellipse(sx,sy,9,14,0,0,7); ctx.fill(); ctx.stroke();
+  }
+  ctx.restore();
+}
+function sparkle(x,y,t){
+  ctx.save();
+  for(let i=0;i<4;i++){
+    const a=t*3+i*1.57, r=60+12*Math.sin(t*5+i);
+    const sx=x+Math.cos(a)*r, sy=y+Math.sin(a)*r*0.5;
+    ctx.fillStyle='#ffe9a8'; ctx.globalAlpha=0.85;
+    ctx.beginPath();
+    for(let k=0;k<8;k++){const rr2=k%2?4:13, aa=k*Math.PI/4;ctx.lineTo(sx+Math.cos(aa)*rr2, sy+Math.sin(aa)*rr2);}
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+const SEAT_TOP = FLOOR-185+30-16;
+const HIP_SEAT = SEAT_TOP-30;
+const HIP_STAND = FLOOR-238;
+function walkPose(x, t, face, style){
+  const step=Math.sin(t*11);
+  return {x:x, y:HIP_STAND-Math.abs(step)*14, face:face, lean:4, style:style,
+    legs:[{hip:20*step,knee:26+16*Math.max(0,-step)},{hip:-20*step,knee:26+16*Math.max(0,step)}],
+    arm:{sh:24+14*step,el:30}, mouth:'smile'};
+}
+function sitPose(x, style, extra){
+  return Object.assign({x:x, y:HIP_SEAT, face:-1, lean:-14, style:style,
+    legs:[{hip:84,knee:-86},{hip:78,knee:-80}], arm:{sh:58,el:44}, mouth:'smile'}, extra||{});
+}
+
+
+// ---------- WEEK 2 timelines ----------
+const CHX=620;
+const STYLE2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
+const STYLEW={fem:true, tee:'#e88bb3', teeShade:'#d377a0', skin:'#8a5a38', pant:'#5a3f7a', pantBack:'#4a3168'};
+const TTOP=FLOOR-262;
+
+let REEL=1;
+window.TAGLINES={1:'STRONG CHAIRS. NO SURPRISES.',2:'STURDY TABLES. ZERO DRAMA.',
+ 3:'WE DELIVER. WE SET UP. YOU PARTY.',4:'STRONG CHAIRS. NO SURPRISES.',
+ 5:'ALWAYS HAVE A SEAT READY.',6:"RENTALS THAT DON'T BLOW AWAY.",
+ 7:'AS MANY CHAIRS AS YOU NEED.'};
+window.setReel=(n)=>{REEL=n;};
+
+// ---- week-2 props ----
+function drawTowerItem(i){
+  ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#f2f4f6';
+  ctx.beginPath(); ctx.ellipse(0,0,70,14,0,0,7); ctx.fill(); ctx.stroke();
+  const cols=['#d98f3e','#b5533c','#7fae5a','#e3c25b','#c96f8e','#8d6b4f'];
+  ctx.fillStyle=cols[i%6];
+  ctx.beginPath(); ctx.ellipse(0,-16,54-(i%3)*7,22,0,0,7); ctx.fill(); ctx.stroke();
+}
+function drawTower(x,y,n,sway,popT){
+  ctx.save(); ctx.translate(x,y);
+  for(let i=0;i<n;i++){
+    ctx.save();
+    ctx.rotate(rad(sway*(i+1)*0.5));
+    ctx.translate(0,-i*44);
+    const k=(i===n-1&&popT!==undefined)?easeOutBack(Math.min(1,Math.max(0,popT))):1;
+    ctx.scale(k,k);
+    drawTowerItem(i);
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function drawCup(x,y){
+  ctx.save(); ctx.translate(x,y);
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#c94444';
+  ctx.beginPath(); ctx.moveTo(-22,-48); ctx.lineTo(22,-48); ctx.lineTo(15,0); ctx.lineTo(-15,0); ctx.closePath();
+  ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function drawCar(x, sag, lidAng, sagWob){
+  ctx.save(); ctx.translate(x, FLOOR+sag+(sagWob||0));
+  ctx.lineWidth=12; ctx.strokeStyle=INK;
+  ctx.fillStyle='#7fb1d8';
+  ctx.beginPath();
+  ctx.moveTo(-260,-40); ctx.lineTo(-260,-120); ctx.quadraticCurveTo(-250,-150,-210,-152);
+  ctx.lineTo(-90,-158); ctx.quadraticCurveTo(-40,-238,60,-240); ctx.lineTo(150,-238);
+  ctx.quadraticCurveTo(230,-230,262,-160); ctx.quadraticCurveTo(300,-150,302,-110);
+  ctx.lineTo(302,-40); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#dbeaf5'; ctx.beginPath();
+  ctx.moveTo(-60,-160); ctx.quadraticCurveTo(-24,-224,60,-226); ctx.lineTo(140,-224);
+  ctx.quadraticCurveTo(196,-218,222,-162); ctx.closePath(); ctx.fill(); ctx.stroke();
+  [[-170],[210]].forEach(([wx])=>{
+    ctx.fillStyle='#2b2b30'; ctx.beginPath(); ctx.arc(wx,-6,52,0,7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#cfd4da'; ctx.beginPath(); ctx.arc(wx,-6,24,0,7); ctx.fill(); ctx.stroke();
+  });
+  ctx.save(); ctx.translate(-90,-158); ctx.rotate(rad(-(lidAng||0)));
+  ctx.fillStyle='#6da3cc'; rr(-176,-16,176,20,9); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  ctx.restore();
+}
+function drawTick(x,y,k){
+  if(k<=0)return;
+  const s=easeOutBack(Math.min(1,k));
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.lineWidth=18; ctx.strokeStyle=INK; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(-36,2); ctx.lineTo(-6,32); ctx.lineTo(46,-36); ctx.stroke();
+  ctx.lineWidth=10; ctx.strokeStyle=GOLD;
+  ctx.beginPath(); ctx.moveTo(-36,2); ctx.lineTo(-6,32); ctx.lineTo(46,-36); ctx.stroke();
+  ctx.restore();
+}
+function windFx(t, str){
+  if(str<=0)return;
+  ctx.save(); ctx.globalAlpha=0.5*str; ctx.strokeStyle='#cfd8ea'; ctx.lineWidth=7; ctx.lineCap='round';
+  for(let i=0;i<6;i++){
+    const y=240+i*200+(i%2)*60;
+    const x=((t*(900+i*140)+i*370)%(W+700))-350;
+    ctx.beginPath(); ctx.moveTo(x,y); ctx.quadraticCurveTo(x+130,y-24,x+280,y); ctx.stroke();
+  }
+  ctx.restore();
+}
+function debris(t, str){
+  if(str<=0)return;
+  ctx.save(); ctx.globalAlpha=Math.min(1,str);
+  for(let i=0;i<5;i++){
+    const sp=760+i*180;
+    const x=((t*sp+i*430)%(W+800))-400;
+    const y=280+i*180+Math.sin(t*4+i)*60;
+    ctx.save(); ctx.translate(x,y); ctx.rotate(t*(4+i));
+    ctx.lineWidth=7; ctx.strokeStyle=INK;
+    if(i%3===0){ctx.fillStyle='#f2f4f6';ctx.beginPath();ctx.ellipse(0,0,42,14,0,0,7);ctx.fill();ctx.stroke();}
+    else if(i%3===1){ctx.fillStyle='#c94444';rr(-20,-28,40,56,8);ctx.fill();ctx.stroke();}
+    else {ctx.fillStyle=PINK;ctx.beginPath();ctx.arc(0,0,30,0,7);ctx.fill();ctx.stroke();
+      ctx.beginPath();ctx.moveTo(0,30);ctx.quadraticCurveTo(14,60,-6,86);ctx.stroke();}
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function drawFlyCap(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot);
+  ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#4b2377';
+  ctx.beginPath(); ctx.arc(0,0,52,rad(175),rad(355)); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(4,-24,8,0,7); ctx.fill();
+  ctx.restore();
+}
+function drawPhone(x,y,ang,buzzT){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(ang||0));
+  if(buzzT!==undefined){ctx.translate(Math.sin(buzzT*70)*4,Math.cos(buzzT*90)*3);}
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#2b2b30';
+  rr(-26,-46,52,92,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#9fd8ff'; rr(-20,-38,40,60,6); ctx.fill();
+  ctx.restore();
+}
+function shakeAt(t, t0, dur, amp){
+  if(t>t0&&t<t0+dur){const k=(t0+dur-t)/dur;return [(Math.random()-0.5)*amp*k,(Math.random()-0.5)*amp*k];}
+  return [0,0];
+}
+
+// --- Reel 1: MONDAY - the bounce test ---
+function reel1(t){
+  drawRoom();
+  const RX=560, NX=830;
+  if(t>0.15){
+    const k=easeOutBack(Math.min(1,(t-0.15)/0.35));
+    let wob=0,broken=0,drop=0;
+    if(t>1.75&&t<2.15) wob=Math.sin(t*24)*3;
+    if(t>=4.62){broken=Math.min(1,(t-4.62)/0.18);drop=Math.min(1,(t-4.64)/0.18);}
+    ctx.save(); ctx.translate(RX,FLOOR); ctx.scale(k,k); ctx.translate(-RX,-FLOOR);
+    drawChair(RX,wob,broken,drop,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  }
+  if(t>=5.9){
+    const k=ease((t-5.9)/0.6);
+    drawChair(lerp(W+240,NX,k),0,0,0);
+    if(t>7.7) sparkle(NX+40, SEAT_TOP-150, t);
+  }
+  if(t<1.1){
+    drawMan(walkPose(lerp(-220,RX-165,ease(t/1.1)), t, 1, null));
+  } else if(t<2.3){
+    const poke=t>1.4?Math.max(0, Math.sin((t-1.4)*10)):0;
+    drawMan({x:RX-165, y:HIP_STAND, face:1, lean:-16,
+      legs:[{hip:10,knee:10},{hip:-6,knee:10}],
+      arm:{sh:96+poke*16, el:-14-poke*18}, mouth:'o', eyes:'wide', headTilt:6});
+  } else if(t<3.1){
+    const k=ease((t-2.3)/0.8);
+    drawMan({x:lerp(RX-165,RX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k),
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(24,58,k),el:lerp(30,44,k)}, mouth:'o'});
+  } else if(t<4.25){
+    drawMan(sitPose(RX-24,null,{mouth:'smile'}));
+  } else if(t<4.62){
+    const b=Math.sin((t-4.25)*17)*26;
+    drawMan(sitPose(RX-24,null,{y:HIP_SEAT-Math.abs(b), mouth:'smile'}));
+  } else if(t<5.9){
+    const k=ease(Math.min(1,(t-4.62)/0.4));
+    if(k<1){
+      drawMan({x:RX-24-k*60, y:lerp(HIP_SEAT,FLOOR-96,k), face:-1, rot:-k*80, lean:-10,
+        legs:[{hip:lerp(84,52,k),knee:lerp(-86,-30,k)},{hip:lerp(78,64,k),knee:lerp(-80,-46,k)}],
+        arm:{sh:lerp(58,120,k),el:20}, mouth:'o', eyes:'wide'});
+    } else {
+      drawMan({x:RX-84, y:FLOOR-96, face:-1, rot:-80, lean:-10,
+        legs:[{hip:38,knee:-24},{hip:52,knee:-40}], arm:{sh:128,el:14}, mouth:'sad', eyes:'x'});
+      dizzyStars(RX-170, FLOOR-300, t);
+    }
+    if(t>=4.62) dust(RX,FLOOR,(t-4.62)/1.0);
+    if(t>=4.68&&t<5.6){const kk=easeOutBack((t-4.68)/0.3);starburst(RX-300,FLOOR-600,kk*0.95,'CRACK!');}
+  } else if(t<6.6){
+    const k=ease((t-5.9)/0.7);
+    drawMan({x:lerp(RX-84,NX-280,k), y:lerp(FLOOR-96,HIP_STAND,k), face:1, rot:lerp(-80,0,k), lean:0,
+      legs:[{hip:lerp(38,10,k),knee:lerp(-24,10,k)},{hip:lerp(52,-6,k),knee:lerp(-40,10,k)}],
+      arm:{sh:30,el:30}, mouth:'smile'});
+  } else if(t<7.15){
+    const k=ease((t-6.6)/0.55);
+    const arc=Math.sin(k*Math.PI)*-230;
+    drawMan({x:lerp(NX-280,NX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k)+arc, face:-1, lean:8-k*24, rot:10-k*10,
+      legs:[{hip:lerp(20,84,k),knee:lerp(20,-86,k)},{hip:lerp(-10,78,k),knee:lerp(16,-80,k)}],
+      arm:{sh:130-k*72,el:10+k*34}, mouth:'o', eyes:'wide'});
+  } else {
+    const settle=Math.exp(-(t-7.15)*4)*Math.sin((t-7.15)*24)*7;
+    drawMan(sitPose(NX-24,null,{y:HIP_SEAT+settle, mouth:'smile', arm:{sh:165,el:-30}}));
+    if(t>7.15&&t<7.9) dust(NX,FLOOR,(t-7.15)/0.75);
+  }
+  if(t>=0.3&&t<2.2) caption(['THE BOUNCE TEST.'],240,(t-0.3)/0.35);
+  if(t>=3.3&&t<4.5) caption(['SO FAR SO GOOD…'],240,(t-3.3)/0.35);
+  if(t>=7.35&&t<8.9) caption(['OURS? BOUNCE','ALL YOU WANT.'],240,(t-7.35)/0.35);
+}
+
+// --- Reel 2: TUESDAY - the plate tower ---
+function reel2(t){
+  drawRoom();
+  const TX=430, MX=TX+330;
+  drawTable(TX,0,0);
+  drawCake(TX-170, TTOP, 0.7, 0);
+  ctx.save(); ctx.translate(TX-10,TTOP); drawTowerItem(2); ctx.restore();
+  // tower
+  const grow=t>=1.4&&t<4.4;
+  let n=0;
+  if(t>=1.4) n=Math.min(7, 1+Math.floor((t-1.4)/0.42));
+  const born=1.4+(n-1)*0.42;
+  if(t<4.4&&n>0){
+    const sway=Math.sin(t*5)*Math.max(0,n-4)*0.9;
+    drawTower(TX+170, TTOP, n, sway, (t-born)/0.25);
+  } else if(t>=4.4&&t<5.55){
+    const k=ease((t-4.4)/0.5);
+    const hx=lerp(TX+170,MX-175,k), hy=lerp(TTOP,HIP_STAND-140,k);
+    const sway=Math.sin(t*6)*(2+Math.max(0,t-4.7)*9);
+    drawTower(hx,hy,7,sway);
+  } else if(t>=5.55){
+    // items rain to the left + on the man
+    for(let i=0;i<7;i++){
+      const dly=i*0.06;
+      const k=Math.min(1,Math.max(0,(t-5.55-dly)/0.55));
+      const sx=MX-175, sy=HIP_STAND-140-i*44;
+      const exx=MX-60-((i*67)%180)-i*14, eyy=FLOOR-22-(i%3)*10;
+      const px=lerp(sx,exx,k), py=lerp(sy,eyy,ease(k))-Math.sin(k*Math.PI)*120;
+      ctx.save(); ctx.translate(px,py); ctx.rotate(rad(lerp(0,(i%2?160:-140),k)));
+      drawTowerItem(i); ctx.restore();
+    }
+    if(t>7.0) sparkle(TX+40, TTOP-60, t);
+  }
+  // man
+  if(t<1.2){
+    drawMan(walkPose(lerp(W+220,MX,ease(t/1.2)), t, -1, null));
+  } else if(t<4.4){
+    const scoop=Math.sin(t*7);
+    drawMan({x:MX, y:HIP_STAND, face:-1, lean:6,
+      legs:[{hip:8,knee:8},{hip:-4,knee:8}],
+      arm:{sh:110+scoop*34,el:-30+scoop*18}, mouth:(scoop>0.3?'o':'smile'), headTilt:-4});
+  } else if(t<5.55){
+    const k=ease((t-4.4)/0.5);
+    const wob=Math.sin(t*6)*Math.max(0,t-4.7)*3;
+    drawMan({x:MX+wob*4, y:HIP_STAND, face:-1, lean:-8+wob,
+      legs:[{hip:10,knee:10},{hip:-6,knee:10}],
+      arm:{sh:100,el:-30}, arm2:{sh:108,el:-34},
+      mouth:t>4.9?'o':'smile', eyes:t>4.9?'wide':undefined, headTilt:wob*2});
+    if(t>4.8) sweat(MX+40, HIP_STAND-360, t);
+  } else {
+    const k=ease(Math.min(1,(t-5.55)/0.4));
+    if(k<1){
+      drawMan({x:MX+k*90, y:lerp(HIP_STAND,FLOOR-96,k), face:-1, rot:k*80, lean:-10,
+        legs:[{hip:lerp(10,44,k),knee:lerp(10,-26,k)},{hip:lerp(-6,58,k),knee:lerp(10,-42,k)}],
+        arm:{sh:130,el:10}, mouth:'o', eyes:'wide'});
+    } else {
+      drawMan({x:MX+90, y:FLOOR-96, face:-1, rot:80, lean:-10,
+        legs:[{hip:44,knee:-26},{hip:58,knee:-42}], arm:{sh:130,el:10}, mouth:'sad', eyes:'x'});
+      ctx.save(); ctx.translate(MX+40,FLOOR-160); ctx.rotate(rad(24)); drawTowerItem(1); ctx.restore();
+      dizzyStars(MX+170, FLOOR-300, t);
+    }
+    if(t>=5.55) dust(MX+60,FLOOR,(t-5.55)/1.0);
+    if(t>=5.62&&t<6.5){const kk=easeOutBack((t-5.62)/0.3);starburst(MX-330,FLOOR-620,kk*0.95,'SPLAT!');}
+  }
+  if(t>=0.3&&t<2.4) caption(['“I’M JUST MAKING','ONE PLATE.”'],240,(t-0.3)/0.35,58);
+  if(t>=4.85&&t<5.5) caption(['WHY IS IT LEANING.'],240,(t-4.85)/0.35,56);
+  if(t>=6.6&&t<8.9) caption(['THE TABLE HELD.','HE DIDN’T.'],240,(t-6.6)/0.35);
+}
+
+// --- Reel 3: WEDNESDAY - trunk tetris ---
+function reel3(t){
+  drawRoom();
+  const CARX=790;
+  const jDone=Math.min(5, Math.max(0, Math.floor((t-1.2)/0.75)+ (t>1.2 && ((t-1.2)%0.75)>0.4 ? 1:0)));
+  let sag=Math.min(30, jDone*6);
+  let lid=80;
+  if(t>=4.95&&t<5.6) lid=lerp(80,4,ease((t-4.95)/0.65));
+  else if(t>=5.6&&t<6.15) lid=4;
+  else if(t>=6.15) lid=lerp(4,105,easeOutBack(Math.min(1,(t-6.15)/0.3)));
+  let sagWob=0;
+  if(t>1.2){const ph=(t-1.2)%0.75; if(ph>0.4) sagWob=Math.exp(-(ph-0.4)*9)*Math.sin((ph-0.4)*40)*6;}
+  drawCar(CARX, sag, lid, sagWob);
+  // chairs piled in trunk mouth
+  const inTrunk=t<6.15?jDone:0;
+  if(inTrunk>0) drawFoldedStack(CARX-180, FLOOR-140+sag, Math.min(inTrunk,4), 2);
+  // remaining stack on ground
+  const nLeft=Math.max(0,5-Math.max(0,Math.floor((t-1.2)/0.75)+(t>1.2?1:0)));
+  if(t<5.5&&nLeft>0) drawFoldedStack(190, FLOOR-10, nLeft, 0);
+  // flying chair (one at a time)
+  if(t>=1.2&&t<4.95){
+    const j=Math.floor((t-1.2)/0.75), ph=(t-1.2)%0.75;
+    if(j<5&&ph<0.4){
+      const k=ph/0.4;
+      const px=lerp(250,CARX-180,k), py=lerp(FLOOR-120,FLOOR-200+sag,k)-Math.sin(k*Math.PI)*260;
+      ctx.save(); ctx.translate(px,py); ctx.rotate(rad(k*300));
+      ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle='#f7f8fa';
+      rr(-105,-17,210,34,12); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    }
+  }
+  // eruption
+  if(t>=6.15){
+    const spots=[[300,-90,240],[430,-40,160],[520,-140,300],[240,-30,80],[380,-190,200],[470,-70,120]];
+    spots.forEach(([exx,ry,rot],i)=>{
+      const k=Math.min(1,Math.max(0,(t-6.15-i*0.05)/0.55));
+      const px=lerp(CARX-180,exx,k), py=lerp(FLOOR-200,FLOOR-24-(i%2)*8,ease(k))-Math.sin(k*Math.PI)*(260-ry);
+      ctx.save(); ctx.translate(px,py); ctx.rotate(rad(lerp(0,rot,k)));
+      ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle=i%2?'#f7f8fa':'#e8eaee';
+      rr(-105,-17,210,34,12); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    });
+    if(t<7.2) dust(430,FLOOR,(t-6.15)/1.0);
+    if(t>=6.2&&t<7.1){const kk=easeOutBack((t-6.2)/0.3);starburst(CARX-420,FLOOR-660,kk*0.95,'POP!');}
+  }
+  // man
+  const MX=430;
+  if(t<1.1){
+    drawMan(walkPose(lerp(-220,MX,ease(t/1.1)), t, 1, null));
+  } else if(t<4.95){
+    const ph=(t-1.2)%0.75, k=ph<0.4?Math.sin(ph/0.4*Math.PI):0;
+    drawMan({x:MX, y:HIP_STAND, face:1, lean:-(10+k*22),
+      legs:[{hip:14,knee:14},{hip:-8,knee:12}],
+      arm:{sh:70+k*70,el:-20-k*10}, arm2:{sh:60+k*80,el:-24},
+      mouth:t>3.6?'o':'smile', eyes:t>3.6?'wide':undefined});
+    if(t>3.0) sweat(MX+60, HIP_STAND-360, t);
+  } else if(t<5.6){
+    const k=ease((t-4.95)/0.65);
+    drawMan({x:lerp(MX,CARX-300,k), y:HIP_STAND, face:1, lean:-26,
+      legs:[{hip:16,knee:14},{hip:-10,knee:12}],
+      arm:{sh:130-k*30,el:-30}, arm2:{sh:120-k*24,el:-26}, mouth:'o'});
+  } else if(t<6.15){
+    const dustOff=Math.sin(t*12);
+    drawMan({x:CARX-320, y:HIP_STAND, face:1, lean:2,
+      legs:[{hip:8,knee:8},{hip:-4,knee:8}],
+      arm:{sh:60+dustOff*14,el:30}, mouth:'smile'});
+  } else {
+    const k=ease(Math.min(1,(t-6.15)/0.4));
+    if(k<1){
+      drawMan({x:CARX-320-k*110, y:lerp(HIP_STAND,FLOOR-96,k), face:1, rot:-k*80, lean:-8,
+        legs:[{hip:lerp(8,44,k),knee:lerp(8,-26,k)},{hip:lerp(-4,58,k),knee:lerp(8,-42,k)}],
+        arm:{sh:130,el:8}, mouth:'o', eyes:'wide'});
+    } else {
+      drawMan({x:CARX-430, y:FLOOR-96, face:1, rot:-80, lean:-8,
+        legs:[{hip:44,knee:-26},{hip:58,knee:-42}], arm:{sh:130,el:8}, mouth:'sad', eyes:'x'});
+      ctx.save(); ctx.translate(CARX-470,FLOOR-170); ctx.rotate(rad(-14));
+      ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle='#e8eaee';
+      rr(-105,-17,210,34,12); ctx.fill(); ctx.stroke(); ctx.restore();
+      dizzyStars(CARX-520, FLOOR-300, t);
+    }
+  }
+  if(t>=0.3&&t<2.4) caption(['40 CHAIRS.','ONE SEDAN.'],240,(t-0.3)/0.35);
+  if(t>=5.65&&t<6.1) caption(['…HE GOT IT?'],240,(t-5.65)/0.35);
+  if(t>=6.95&&t<8.9) caption(['SKIP THE TRUNK TETRIS.','WE DELIVER & SET UP.'],240,(t-6.95)/0.35,54);
+}
+
+// --- Reel 4: THURSDAY - the chair inspector ---
+function reel4(t){
+  drawRoom();
+  const CS=[300,620,940];
+  let wob2=0;
+  if(t>=5.75){wob2=Math.exp(-(t-5.75)*4)*Math.sin((t-5.75)*22)*4;}
+  drawChair(CS[0],0,0,0);
+  drawChair(CS[1],wob2,0,0);
+  drawChair(CS[2],0,0,0);
+  const ticks=[[1.25,CS[0]],[2.5,CS[1]],[3.65,CS[2]]];
+  ticks.forEach(([tt,cx])=>drawTick(cx, FLOOR-520, (t-tt)/0.3));
+  // man schedule
+  function quickSit(cx,k){
+    return {x:cx-24, y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k),
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:58,el:44}, mouth:'smile'};
+  }
+  if(t<0.7){ drawMan(walkPose(lerp(-220,CS[0]-24,ease(t/0.7)), t, 1, null)); }
+  else if(t<1.4){ const k=t<1.0?ease((t-0.7)/0.3):(t<1.25?1:1); drawMan(quickSit(CS[0],Math.min(1,(t-0.7)/0.3))); }
+  else if(t<2.0){ drawMan(walkPose(lerp(CS[0]-24,CS[1]-24,ease((t-1.4)/0.6)), t*1.4, 1, null)); }
+  else if(t<2.65){ drawMan(quickSit(CS[1],Math.min(1,(t-2.0)/0.25))); }
+  else if(t<3.2){ drawMan(walkPose(lerp(CS[1]-24,CS[2]-24,ease((t-2.65)/0.55)), t*1.7, 1, null)); }
+  else if(t<3.8){ drawMan(quickSit(CS[2],Math.min(1,(t-3.2)/0.2))); }
+  else if(t<4.7){ drawMan(walkPose(lerp(CS[2]-24,CS[1]-70,ease((t-3.8)/0.9)), t, -1, null)); }
+  else if(t<5.3){
+    // arms out T pose, back to chair2
+    drawMan({x:CS[1]-70, y:HIP_STAND, face:-1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:95,el:0}, arm2:{sh:-95,el:0}, mouth:'smile', eyes:undefined});
+  }
+  else if(t<5.75){
+    const k=ease((t-5.3)/0.45);
+    drawMan({x:lerp(CS[1]-70,CS[1]-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:2, rot:k*16-16*k*k,
+      legs:[{hip:lerp(6,84,k),knee:lerp(8,-86,k)},{hip:lerp(-4,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(95,58,k),el:lerp(0,44,k)}, arm2:k<0.6?{sh:-95,el:0}:undefined,
+      mouth:'o', eyes:'wide'});
+  }
+  else {
+    drawMan(sitPose(CS[1]-24,null,{y:HIP_SEAT+wob2, lean:-18, mouth:'smile'}));
+    if(t>6.1) sparkle(CS[1]+40, SEAT_TOP-150, t);
+    if(t>5.75&&t<6.4) dust(CS[1],FLOOR,(t-5.75)/0.65);
+  }
+  if(t>=0.3&&t<2.2) caption(['CHAIR QUALITY','CHECK.'],240,(t-0.3)/0.35);
+  if(t>=4.0&&t<5.3) caption(['FINAL TEST:','THE TRUST FALL.'],240,(t-4.0)/0.35,58);
+  if(t>=6.5&&t<8.9) caption(['PASSED.','AS ALWAYS.'],240,(t-6.5)/0.35);
+}
+
+// --- Reel 5: FRIDAY - wrong way derrick ---
+function reel5(t){
+  drawRoom();
+  if(t<4.3) notes(t, 560, 620);
+  function dancer(x0, t2, style){
+    const off=140*Math.sin(t2*2.6);
+    const face=Math.cos(t2*2.6)>=0?1:-1;
+    const b=Math.sin(t2*7.8);
+    return {x:x0+off, y:HIP_STAND+Math.abs(b)*10, face:face, lean:b*5,
+      legs:[{hip:18*b,knee:24+14*Math.max(0,-b)},{hip:-18*b,knee:24+14*Math.max(0,b)}],
+      arm:{sh:b>0?150:110, el:-18}, arm2:{sh:b>0?100:150, el:-14},
+      mouth:'smile', style:style, headTilt:b*6};
+  }
+  if(t<3.0){
+    drawMan(dancer(340,t,null));
+    drawMan(dancer(800,t,STYLEW));
+  } else if(t<4.3){
+    const k=ease((t-3.0)/1.3);
+    const b=Math.sin(t*7.8);
+    // A slides right (correct), derrick slides left (wrong)
+    drawMan({x:lerp(340+140*Math.sin(3.0*2.6),452,k), y:HIP_STAND+Math.abs(b)*10, face:1, lean:b*5,
+      legs:[{hip:18*b,knee:24+14*Math.max(0,-b)},{hip:-18*b,knee:24+14*Math.max(0,b)}],
+      arm:{sh:b>0?150:110,el:-18}, arm2:{sh:b>0?100:150,el:-14}, mouth:'smile', headTilt:b*6});
+    drawMan({x:lerp(800+140*Math.sin(3.0*2.6),704,k), y:HIP_STAND+Math.abs(b)*10, face:-1, lean:b*5,
+      legs:[{hip:18*b,knee:24+14*Math.max(0,-b)},{hip:-18*b,knee:24+14*Math.max(0,b)}],
+      arm:{sh:b>0?150:110,el:-18}, arm2:{sh:b>0?100:150,el:-14}, mouth:'smile', style:STYLEW, headTilt:b*6});
+  } else {
+    // collision aftermath
+    const k=ease(Math.min(1,(t-4.3)/0.45));
+    const settledA=t>4.75, settledB=t>4.75;
+    drawMan({x:lerp(452,360,k), y:lerp(HIP_STAND,FLOOR-96,k), face:1, rot:lerp(0,-78,k), lean:-8,
+      legs:[{hip:44,knee:-26},{hip:58,knee:-42}], arm:{sh:130,el:8},
+      mouth:settledA?'sad':'o', eyes:settledA?'x':'wide'});
+    drawMan({x:lerp(704,798,k), y:lerp(HIP_STAND,FLOOR-96,k), face:-1, rot:lerp(0,78,k), lean:-8,
+      legs:[{hip:44,knee:-26},{hip:58,knee:-42}], arm:{sh:130,el:8}, style:STYLEW,
+      mouth:settledB?'sad':'o', eyes:settledB?'x':'wide'});
+    if(t<5.4) dust(578,FLOOR,(t-4.3)/1.0);
+    if(t>=4.32&&t<5.2){const kk=easeOutBack((t-4.32)/0.3);starburst(575,FLOOR-640,kk*0.95,'BUMP!');}
+    if(t>4.9&&t<6.6){dizzyStars(360,FLOOR-300,t);dizzyStars(798,FLOOR-300,t);}
+  }
+  // rescue chairs
+  if(t>=6.0){
+    const k=ease((t-6.0)/0.6);
+    drawChair(lerp(-260,320,k),0,0,0);
+    drawChair(lerp(W+260,880,k),0,0,0);
+  }
+  if(t>=6.7){
+    const k=ease(Math.min(1,(t-6.7)/0.7));
+    drawMan({x:lerp(360,320-24,k), y:lerp(FLOOR-96,HIP_SEAT,k), face:-1, rot:lerp(-78,0,k), lean:lerp(-8,-14,k),
+      legs:[{hip:lerp(44,84,k),knee:lerp(-26,-86,k)},{hip:lerp(58,78,k),knee:lerp(-42,-80,k)}],
+      arm:{sh:58,el:44}, mouth:k>0.8?'smile':'o'});
+    drawMan({x:lerp(798,880-24,k), y:lerp(FLOOR-96,HIP_SEAT,k), face:-1, rot:lerp(78,0,k), lean:lerp(-8,-14,k),
+      legs:[{hip:lerp(44,84,k),knee:lerp(-26,-86,k)},{hip:lerp(58,78,k),knee:lerp(-42,-80,k)}],
+      arm:{sh:58,el:44}, style:STYLEW, mouth:k>0.8?'smile':'o'});
+    if(t>7.6){sparkle(320+40,SEAT_TOP-150,t);sparkle(880+40,SEAT_TOP-150,t);}
+  }
+  if(t>=0.3&&t<2.6) caption(['ELECTRIC SLIDE','NIGHT.'],240,(t-0.3)/0.35);
+  if(t>=4.55&&t<6.2) caption(['WRONG WAY,','DERRICK.'],240,(t-4.55)/0.35);
+  if(t>=7.7&&t<8.9) caption(['FALL BACK.','WE GOT CHAIRS.'],240,(t-7.7)/0.35);
+}
+
+// --- Reel 6: SATURDAY - vegas wind ---
+function reel6(t){
+  drawRoom();
+  const str = t<7.0?1:Math.max(0,1-(t-7.0)/0.5);
+  const TX=380;
+  drawTable(TX,0,0);
+  drawCup(TX-190,TTOP); drawCup(TX-90,TTOP);
+  drawChair(890,0,0,0);
+  windFx(t,str); debris(t,str);
+  // flying cap
+  if(t>=1.35&&t<2.7){
+    const k=(t-1.35)/1.35;
+    drawFlyCap(lerp(600,W+140,k), HIP_STAND-380-Math.sin(k*Math.PI)*160+k*90, k*9);
+  }
+  const capless={capless:true};
+  if(t<1.0){
+    drawMan(walkPose(lerp(-220,560,ease(t/1.0)), t, 1, null));
+  } else if(t<1.35){
+    drawMan({x:560, y:HIP_STAND, face:1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}], arm:{sh:30,el:30}, mouth:'smile'});
+  } else if(t<4.6){
+    // leaning into wind, drifting back
+    const step=Math.sin(t*13);
+    const drift=Math.min(1,(t-1.35)/3.25);
+    drawMan({x:560+drift*120+Math.sin(t*2)*8, y:HIP_STAND-Math.abs(step)*10, face:-1, lean:-30, style:capless,
+      legs:[{hip:26*step,knee:30+16*Math.max(0,-step)},{hip:-26*step,knee:30+16*Math.max(0,step)}],
+      arm:{sh:110,el:-30}, mouth:'o', eyes:'wide', headTilt:-6});
+  } else if(t<5.1){
+    // lunge to table
+    const k=ease((t-4.6)/0.5);
+    drawMan({x:lerp(690,TX+380,k), y:lerp(HIP_STAND,TTOP-46,k), face:-1, lean:-20, rot:lerp(0,-78,k), style:capless,
+      legs:[{hip:30,knee:-10},{hip:46,knee:-24}], arm:{sh:150,el:6}, arm2:{sh:144,el:10},
+      mouth:'o', eyes:'wide'});
+  } else if(t<7.1){
+    // horizontal flag
+    const flap=Math.sin(t*11);
+    drawMan({x:TX+380, y:TTOP-46+flap*7, face:-1, lean:-6, rot:-84+flap*3, style:capless,
+      legs:[{hip:34+flap*30,knee:-16-flap*16},{hip:54-flap*26,knee:-30+flap*14}],
+      arm:{sh:152,el:4}, arm2:{sh:146,el:8}, mouth:'o', eyes:'wide'});
+  } else {
+    // wind dies, plop down
+    const k=ease(Math.min(1,(t-7.1)/0.4));
+    drawMan({x:TX+380+k*140, y:lerp(TTOP-46,FLOOR-96,k), face:-1, rot:-84+k*4, lean:-6, style:capless,
+      legs:[{hip:38,knee:-24},{hip:52,knee:-40}], arm:{sh:130,el:12},
+      mouth:k>0.9?'smile':'o', eyes:undefined});
+    if(t>7.3&&t<8.0) dust(TX+520,FLOOR,(t-7.3)/0.7);
+    if(t>7.7){sparkle(TX-140,TTOP-90,t);}
+  }
+  if(t>=0.3&&t<2.4) caption(['VEGAS WIND','WARNING.'],240,(t-0.3)/0.35);
+  if(t>=2.9&&t<4.4) caption(['DECORATIONS:','GONE.'],240,(t-2.9)/0.35);
+  if(t>=5.4&&t<7.0) caption(['THE RENTALS?','UNBOTHERED.'],240,(t-5.4)/0.35);
+  if(t>=7.9&&t<8.9) caption(['THE TABLE DIDN’T','EVEN FLINCH.'],240,(t-7.9)/0.35,56);
+}
+
+// --- Reel 7: SUNDAY - 150 said yes ---
+function reel7(t){
+  drawRoom();
+  // man position: center until 4.2, then left
+  let mx=540;
+  if(t>=4.2&&t<4.7) mx=lerp(540,210,ease((t-4.2)/0.5));
+  else if(t>=4.7) mx=210;
+  const buzzing = t>=0.5&&t<1.5;
+  const panicked = t>=1.6&&t<3.4;
+  const calling = t>=3.4&&t<4.2;
+  const happy = t>=7.0;
+  if(t<4.2){
+    drawMan({x:mx, y:HIP_STAND, face:1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:calling?{sh:112,el:-158}:{sh:118,el:-116},
+      mouth:panicked?'o':'smile', eyes:panicked?'wide':undefined,
+      headTilt:panicked?Math.sin(t*20)*3:0});
+    if(!calling) drawPhone(mx+128, HIP_STAND-322, 10, buzzing?t:undefined);
+    if(panicked) sweat(mx+40, HIP_STAND-380, t);
+    if(t>=0.5&&t<1.1){const kk=easeOutBack((t-0.5)/0.25);starburst(mx+300,HIP_STAND-480,kk*0.45,'DING!');}
+  } else if(t<4.7){
+    drawMan(walkPose(mx, t, -1, null));
+  } else {
+    drawMan({x:210, y:HIP_STAND, face:1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:happy?{sh:168,el:-8}:{sh:112,el:-158},
+      mouth:happy?'smile':'o'});
+    if(happy&&t<8.6) sparkle(300, HIP_STAND-430, t);
+  }
+  // chair avalanche
+  if(t>=4.5){
+    const rows=[[FLOOR-330,.50,5],[FLOOR-262,.62,5],[FLOOR-168,.76,5],[FLOOR-38,.92,4]];
+    let idx=0;
+    rows.forEach(([ry,s,cnt],r)=>{
+      for(let i=0;i<cnt;i++){
+        const bornT=4.5+idx*0.12; idx++;
+        if(t>bornT){
+          const k=easeOutBack(Math.min(1,(t-bornT)/0.3));
+          const x=430+i*(560/(cnt-1))+(r%2?30:0);
+          ctx.save(); ctx.translate(x,ry); ctx.scale(k*s,k*s);
+          drawMiniChair(0,0,1);
+          ctx.restore();
+        }
+      }
+    });
+    if(t>4.5&&t<7.2){
+      const count=50+Math.min(100, Math.floor(ease((t-4.5)/2.3)*100));
+      ctx.save(); ctx.font='104px "Archivo Black"'; ctx.textAlign='center';
+      ctx.lineWidth=18; ctx.strokeStyle=INK; ctx.strokeText(count+' CHAIRS', W/2, 350);
+      ctx.fillStyle='#fff'; ctx.fillText(count+' CHAIRS', W/2, 350);
+      ctx.restore();
+    }
+  }
+  if(t>=0.3&&t<1.5) caption(['YOU INVITED 50…'],240,(t-0.3)/0.35);
+  if(t>=1.7&&t<3.2) caption(['…150 SAID YES.'],240,(t-1.7)/0.35);
+  if(t>=3.5&&t<4.4) caption(['ONE CALL.'],240,(t-3.5)/0.35);
+  if(t>=7.3&&t<8.9) caption(['UNLIMITED CHAIRS.','PROBLEM SOLVED.'],240,(t-7.3)/0.35,58);
+}
+
+const REELS={1:reel1,2:reel2,3:reel3,4:reel4,5:reel5,6:reel6,7:reel7};
+const SHAKES={1:[4.66,0.5,44],2:[5.6,0.5,40],3:[6.2,0.5,44],4:[5.78,0.35,22],5:[4.32,0.45,38],6:[7.35,0.3,20],7:[1.55,0.3,14]};
+window.drawFrame=function(t){
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,W,H);
+  if(t<9.25){
+    const [t0,d,amp]=SHAKES[REEL];
+    let sx=0,sy=0;
+    if(t>t0&&t<t0+d){const k=(t0+d-t)/d;sx=(Math.random()-0.5)*amp*k;sy=(Math.random()-0.5)*amp*k;}
+    ctx.save(); ctx.translate(sx,sy);
+    REELS[REEL](t);
+    ctx.restore();
+  }
+  if(t>=8.9){
+    const a=ease((t-8.9)/0.35);
+    ctx.save(); ctx.globalAlpha=a;
+    drawEndCard(Math.max(0,t-9.0));
+    ctx.restore();
+  }
+};
+</script>
+</body></html>

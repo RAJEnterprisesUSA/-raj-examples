@@ -44,3 +44,43 @@ Get a quote anytime: https://www.bigbusinesspartyrentals.com/
 - Reply to every comment in the first hour — the algorithm rewards it.
 - Pin the funniest comment.
 - Re-share each reel to your story with a "Book your date 📲" sticker.
+
+---
+
+# WEEK 2 — Fresh Reels (all-new gags)
+Every end card: 702-706-8287 · bigbusinesspartyrentals.com · IG @bigbusiness_rentals_events · Las Vegas, NV
+
+## Monday — The Bounce Test (BB2_Reel_Mon_BounceTest.mp4)
+Caption: He gave it ONE bounce 💀 Cheap chairs fold. Ours take the whole slam. Test us.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#ChairRentals #PartyFail #LasVegasEvents #BigBusinessRentals #FunnyReels #EventRentals
+
+## Tuesday — The Plate Tower (BB2_Reel_Tue_PlateTower.mp4)
+Caption: "I'm just making one plate." — the biggest lie at every cookout 😂 The table held. He didn't.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#CookoutSeason #BuffetLife #TableRentals #LasVegasNV #PartyProblems #FoodTok
+
+## Wednesday — Trunk Tetris (BB2_Reel_Wed_TrunkTetris.mp4)
+Caption: 40 chairs. One sedan. You already know how this ends 💀 Skip the trunk Tetris — we deliver AND set up.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#PartyPlanning #DIYFail #EventSetup #LasVegasEvents #WeDeliver #PartyRentalsLasVegas
+
+## Thursday — The Chair Inspector (BB2_Reel_Thu_ChairInspector.mp4)
+Caption: Every chair gets tested. Personally. Including the trust fall 😌 That's the Big Business guarantee.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#QualityCheck #ChairRentals #TrustFall #VegasEvents #BigBusinessRentals #EventPros
+
+## Friday — Wrong Way, Derrick (BB2_Reel_Fri_ElectricSlide.mp4)
+Caption: Every family has a Derrick 😭 When the electric slide goes LEFT and he goes RIGHT… fall back, we got chairs.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#ElectricSlide #FamilyFunction #DanceFloorFail #FridayVibes #PartyRentalsVegas #WrongWayDerrick
+
+## Saturday — Vegas Wind (BB2_Reel_Sat_VegasWind.mp4)
+Caption: Vegas wind took the decorations, the plates AND his hat 🌪️ The rentals? Didn't even flinch.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#VegasWeather #OutdoorEvents #LasVegasNV #PartyRentals #DesertLife #EventFail
+
+## Sunday — 150 Said Yes (BB2_Reel_Sun_150Guests.mp4)
+Caption: Invited 50. 150 said yes 😱 One call = unlimited chairs. Never panic over a plus-one again.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#PartyProblems #GuestList #ChairRentals #LasVegasEvents #UnlimitedChairs #EventPlanning
