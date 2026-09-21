@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 36%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 4deg at 50% 38%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 64px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:8px;color:#D6B25E;display:flex;align-items:center;gap:16px}
+.kick .r{width:60px;height:1px;background:#B08D3E}
+h1{font-family:'Archivo Black';font-size:60px;line-height:1.05;margin-top:20px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rows{display:flex;flex-direction:column;gap:18px;margin-top:32px;width:100%}
+.row{display:flex;align-items:center;gap:26px;border:2px solid #B08D3E;border-radius:16px;
+  background:rgba(229,184,75,.08);padding:20px 30px;text-align:left}
+.num{flex:0 0 70px;height:70px;border-radius:50%;background:linear-gradient(180deg,#EFCB7C,#B08D3E);
+  display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:36px;color:#241a35}
+.row h3{font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:2px;color:#f6f1e4}
+.row h3 span{color:#e08a70}
+.row p{margin-top:6px;font-weight:600;font-size:20px;color:#c9bda4;line-height:1.4}
+.row p b{color:#E5B84B;font-weight:700}
+.punch{margin-top:26px;background:rgba(229,184,75,.10);border:2px solid #B08D3E;border-radius:14px;
+  padding:15px 34px;font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:2px;color:#f2ecdd}
+.punch b{color:#E5B84B}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick"><span class="r"></span>PARTY MATH · TIP No.8<span class="r"></span></div>
+    <h1>3 LAYOUT MISTAKES<br>THAT KILL THE VIBE</h1>
+    <div class="rows">
+      <div class="row">
+        <div class="num">1</div>
+        <div><h3>TRAPPING THE FOOD <span>✗</span></h3>
+        <p>Buffet shoved in a corner = one long line through the seats. <b>Pull the 6ft table off the wall</b> so the line moves down both sides.</p></div>
+      </div>
+      <div class="row">
+        <div class="num">2</div>
+        <div><h3>NO WALKING LANES <span>✗</span></h3>
+        <p>Guests shouldn't squeeze past chairs all night. <b>Leave 5 ft between round tables</b> — chairs pull out, people flow.</p></div>
+      </div>
+      <div class="row">
+        <div class="num">3</div>
+        <div><h3>DANCE FLOOR LAST <span>✗</span></h3>
+        <p>Place it FIRST, next to the DJ — then seat around it. <b>Nobody dances in a hallway</b> between tables.</p></div>
+      </div>
+    </div>
+    <div class="punch">PRO MOVE: <b>TELL US THE ROOM — WE'LL MAP THE LAYOUT FOR YOU. FREE.</b></div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
