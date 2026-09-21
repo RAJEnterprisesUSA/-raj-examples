@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 6deg at 50% 34%,
+  rgba(229,184,75,.06) 0deg 1deg, transparent 1deg 18deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 70px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:76px;line-height:1.04;margin-top:16px;
+  background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
+.sub{font-family:'Oswald';font-weight:500;font-size:27px;letter-spacing:4px;color:#cfc4ad;margin-top:16px}
+.rows{display:flex;flex-direction:column;gap:18px;margin-top:38px;width:100%}
+.row{display:flex;align-items:center;gap:26px;border:2px solid #6b5628;border-radius:16px;
+  background:linear-gradient(180deg,rgba(229,184,75,.10),rgba(229,184,75,.04));padding:22px 32px;text-align:left}
+.day{flex:0 0 168px;font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:3px;color:#E5B84B}
+.row p{font-weight:600;font-size:22px;color:#d8ceb6;line-height:1.4}
+.row p b{color:#F3D88F}
+.cta{margin-top:36px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#141310;
+  font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:3px;padding:18px 54px;border-radius:60px;
+  box-shadow:0 10px 30px rgba(229,184,75,.25)}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:18px;color:#cbc0a6;margin-top:3px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; THE MONDAY MOVE &nbsp;◆</div>
+    <h1>THE WEEKEND<br>BOOKS UP FAST.</h1>
+    <div class="sub">HERE&rsquo;S HOW THE WEEK REALLY GOES:</div>
+    <div class="rows">
+      <div class="row"><div class="day">MONDAY</div><p>You think about it. <b>Smart people call today.</b></p></div>
+      <div class="row"><div class="day">WEDNESDAY</div><p>Half the weekend delivery slots are <b>already gone.</b></p></div>
+      <div class="row"><div class="day">FRIDAY</div><p>You&rsquo;re calling everybody in town for 60 chairs. <b>Don&rsquo;t be that person.</b></p></div>
+    </div>
+    <div class="cta">LOCK YOUR DATE TODAY — 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
