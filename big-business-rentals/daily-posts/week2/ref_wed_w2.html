@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 28%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 18deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 66px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:78px;line-height:1.04;margin-top:12px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge{margin-top:26px;width:290px;height:290px;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 50% 36%,#2a2415,#171208);border:3px solid #B08D3E;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 14px 44px rgba(0,0,0,.5), inset 0 0 40px rgba(229,184,75,.12)}
+.badge:before{content:'';position:absolute;inset:10px;border-radius:50%;border:1.5px solid rgba(229,184,75,.5)}
+.badge .m{font-family:'Archivo Black';font-size:110px;line-height:1;
+  background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge .u{font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:4px;color:#cfc4ad;margin-top:6px}
+.steps{display:flex;align-items:center;gap:16px;margin-top:32px}
+.pill{border:2px solid #6b5628;border-radius:50px;background:linear-gradient(180deg,rgba(229,184,75,.12),rgba(229,184,75,.04));
+  font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:2px;color:#F3D88F;padding:14px 34px}
+.plus{font-family:'Archivo Black';font-size:34px;color:#B08D3E}
+.fine{margin-top:26px;font-weight:600;font-size:16.5px;color:#8f8672;letter-spacing:.4px;line-height:1.5}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#cbc0a6;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; REFERRAL PROGRAM &nbsp;◆</div>
+    <h1>YOUR NETWORK IS<br><em>WORTH MONEY.</em></h1>
+    <div class="badge">
+      <div class="m">$100</div>
+      <div class="u">PER REFERRAL</div>
+    </div>
+    <div class="steps">
+      <div class="pill">REFER</div><div class="plus">›</div>
+      <div class="pill">THEY BOOK</div><div class="plus">›</div>
+      <div class="pill">YOU GET PAID</div>
+    </div>
+    <div class="fine">They mention your name when they book · Reward based on booking size, up to $100<br>No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
