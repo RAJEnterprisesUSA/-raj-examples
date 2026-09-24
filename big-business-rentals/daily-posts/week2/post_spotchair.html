@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 36%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 36%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 70px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:84px;line-height:1;margin-top:12px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.icon{margin-top:24px}
+.chips{display:flex;gap:18px;margin-top:26px}
+.chip{border:2px solid #B08D3E;border-radius:50px;background:rgba(229,184,75,.10);
+  font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:2px;color:#f2ecdd;padding:12px 30px}
+.chip b{color:#E5B84B}
+.bul{margin-top:30px;display:flex;flex-direction:column;gap:14px}
+.bul div{font-weight:600;font-size:24px;color:#ded4bd;position:relative;padding-left:34px;text-align:left}
+.bul div:before{content:'';position:absolute;left:6px;top:11px;width:9px;height:9px;background:#D6B25E;transform:rotate(45deg)}
+.cta{margin-top:32px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#241a35;
+  font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:3px;padding:16px 48px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; RENTAL SPOTLIGHT &nbsp;◆</div>
+    <h1>THE CHAIR.</h1>
+    <div class="icon">
+      <svg width="150" height="160" viewBox="0 0 100 108" fill="none" stroke="#E5B84B" stroke-width="4.5">
+        <rect x="30" y="6" width="14" height="52" rx="5"/>
+        <rect x="24" y="0" width="42" height="16" rx="6"/>
+        <rect x="20" y="52" width="58" height="13" rx="6"/>
+        <path d="M26 65l-10 40M72 65l12 40M34 65l-4 40M64 65l6 40"/>
+      </svg>
+    </div>
+    <div class="chips">
+      <div class="chip"><b>UNLIMITED</b> QTY</div>
+      <div class="chip">INDOOR + <b>OUTDOOR</b></div>
+      <div class="chip"><b>UNCLE</b>-TESTED</div>
+    </div>
+    <div class="bul">
+      <div>Clean white folding chairs — crisp in every photo</div>
+      <div>Handles the lean-back uncle AND the dance floor dive</div>
+      <div>Delivered, set up &amp; picked up by us</div>
+    </div>
+    <div class="cta">AS MANY AS YOU NEED — ONE CALL</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

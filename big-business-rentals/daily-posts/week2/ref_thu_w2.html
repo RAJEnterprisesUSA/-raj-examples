@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.08) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 70px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:56px;line-height:1.1;margin-top:12px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ticket{margin-top:32px;width:100%;border-radius:22px;position:relative;
+  background:linear-gradient(120deg,#efcb7c 0%,#d6ab52 45%,#b08d3e 100%);color:#241a35;
+  padding:38px 46px 34px;box-shadow:0 16px 48px rgba(0,0,0,.5)}
+.ticket:before{content:'';position:absolute;inset:9px;border:2px dashed rgba(36,26,16,.5);border-radius:15px}
+.ticket .lab{font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:6px}
+.ticket .amt{font-family:'Archivo Black';font-size:132px;line-height:1;margin-top:2px;text-shadow:0 3px 0 rgba(255,255,255,.35)}
+.ticket .sub{font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:3px;margin-top:6px}
+.how{margin-top:30px;font-weight:600;font-size:24px;color:#ded4bd;line-height:1.6;max-width:860px}
+.how b{color:#E5B84B}
+.fine{margin-top:20px;font-weight:600;font-size:16.5px;color:#9a917e;letter-spacing:.4px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; REFERRAL PROGRAM &nbsp;◆</div>
+    <h1>THE EASIEST <em>$100</em><br>YOU'LL MAKE THIS WEEK.</h1>
+    <div class="ticket">
+      <div class="lab">◆ &nbsp;REFERRAL REWARD&nbsp; ◆</div>
+      <div class="amt">$100</div>
+      <div class="sub">FOR EVERY CLIENT WHO BOOKS FROM YOUR REFERENCE</div>
+    </div>
+    <div class="how">Tell a friend, planner or venue about Big Business. <b>They book and mention your name.</b> You collect up to $100 — every single time.</div>
+    <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
