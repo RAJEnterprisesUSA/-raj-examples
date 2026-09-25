@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald500.ttf');font-weight:500}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 6deg at 50% 32%,
+  rgba(229,184,75,.06) 0deg 1deg, transparent 1deg 18deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:78px;line-height:1.02;margin-top:14px;
+  background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
+.list{margin-top:36px;width:100%;border:2px solid #6b5628;border-radius:20px;
+  background:linear-gradient(180deg,rgba(229,184,75,.09),rgba(229,184,75,.03));padding:34px 46px}
+.it{display:flex;align-items:center;gap:24px;padding:13px 0;text-align:left}
+.it+.it{border-top:1px solid rgba(229,184,75,.18)}
+.bx{flex:0 0 46px;height:46px;border-radius:12px;border:2.5px solid #B08D3E;position:relative;
+  background:rgba(229,184,75,.08)}
+.bx.on{background:linear-gradient(180deg,#EFCB7C,#B08D3E)}
+.bx.on:after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo Black';font-size:28px;color:#141310}
+.it p{font-weight:700;font-size:26px;color:#e9dfc8}
+.it p span{color:#8f8672;font-weight:600;font-size:20px}
+.cta{margin-top:34px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#141310;
+  font-family:'Oswald';font-weight:600;font-size:29px;letter-spacing:3px;padding:17px 52px;border-radius:60px;
+  box-shadow:0 10px 30px rgba(229,184,75,.25)}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:18px;color:#cbc0a6;margin-top:3px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; FRIDAY CHECK-IN &nbsp;◆</div>
+    <h1>WEEKEND READY?</h1>
+    <div class="list">
+      <div class="it"><div class="bx on"></div><p>Date locked</p></div>
+      <div class="it"><div class="bx on"></div><p>Guest count final <span>&nbsp;(plus the 10% cousins buffer)</span></p></div>
+      <div class="it"><div class="bx on"></div><p>Tables &amp; chairs booked</p></div>
+      <div class="it"><div class="bx on"></div><p>Delivery window confirmed</p></div>
+      <div class="it"><div class="bx"></div><p>You, looking good &amp; stress-free <span>&nbsp;— that one's on you</span></p></div>
+    </div>
+    <div class="cta">LAST-MINUTE? CALL — WE MOVE FAST</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
