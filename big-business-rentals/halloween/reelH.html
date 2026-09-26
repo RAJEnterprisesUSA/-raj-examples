@@ -1168,6 +1168,170 @@ function reelH1(t){
 REELS[1]=reelH1;
 SHAKES[1]=[4.64,0.5,44];
 TAGLINES[1]='NOT HAUNTED. JUST QUALITY.';
+
+// ---------- H2: the skeleton guest ----------
+const BONE='#f2f0e4', BONE2='#dcd8c6';
+function drawSkeleton(p){
+  ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(rad(p.rot||0)); ctx.scale(p.face,1);
+  ctx.lineCap='round'; ctx.lineJoin='round';
+  [1,0].forEach((i,ord)=>{
+    const L=p.legs[i];
+    const [kx,ky]=seg(0,6,L.hip,108); const [fx,fy]=seg(kx,ky,L.hip+L.knee,106);
+    ctx.lineWidth=24; ctx.strokeStyle=ord===0?BONE2:BONE;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.lineWidth=8; ctx.strokeStyle=INK;
+    ctx.beginPath();ctx.moveTo(0,6);ctx.lineTo(kx,ky);ctx.lineTo(fx,fy);ctx.stroke();
+    ctx.fillStyle=ord===0?BONE2:BONE;
+    rr(fx-14,fy-11,66,24,12); ctx.fill(); ctx.stroke();
+  });
+  ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle=BONE;
+  ctx.beginPath(); ctx.ellipse(0,-2,38,24,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.lineWidth=12; ctx.strokeStyle=BONE;
+  ctx.beginPath(); ctx.moveTo(0,-14); ctx.lineTo(6,-150); ctx.stroke();
+  ctx.lineWidth=5; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.moveTo(0,-14); ctx.lineTo(6,-150); ctx.stroke();
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  for(let i=0;i<3;i++){
+    ctx.fillStyle=i%2?BONE2:BONE;
+    ctx.beginPath(); ctx.ellipse(4,-78-i*30,48-i*5,15,0,0,7); ctx.fill(); ctx.stroke();
+  }
+  const A=p.arm||{sh:35,el:40};
+  ctx.save(); ctx.translate(10,-146);
+  const [ex,ey]=seg(0,0,A.sh,92); const [hx,hy]=seg(ex,ey,A.sh+A.el,88);
+  ctx.lineWidth=16; ctx.strokeStyle=BONE;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
+  ctx.fillStyle=BONE; ctx.beginPath(); ctx.arc(hx,hy,14,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  ctx.save(); ctx.translate(8,-192); ctx.rotate(rad(p.headTilt||0));
+  ctx.lineWidth=8; ctx.fillStyle=BONE; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.arc(0,-48,52,0,7); ctx.fill(); ctx.stroke();
+  rr(-16,-16,50,26,9); ctx.fill(); ctx.stroke();
+  ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(-4,-12); ctx.lineTo(-4,8); ctx.moveTo(10,-12); ctx.lineTo(10,8); ctx.moveTo(22,-12); ctx.lineTo(22,8); ctx.stroke();
+  ctx.fillStyle=INK;
+  if(p.eyes==='wide'){
+    ctx.fillStyle='#fff'; ctx.lineWidth=5;
+    ctx.beginPath();ctx.arc(12,-52,15,0,7);ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.arc(38,-46,13,0,7);ctx.fill();ctx.stroke();
+    ctx.fillStyle=INK;
+    ctx.beginPath();ctx.arc(14,-50,6,0,7);ctx.fill();
+    ctx.beginPath();ctx.arc(40,-44,5.5,0,7);ctx.fill();
+  } else {
+    ctx.beginPath(); ctx.ellipse(12,-52,11,14,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(40,-46,10,13,0,0,7); ctx.fill();
+  }
+  ctx.beginPath(); ctx.moveTo(24,-30); ctx.lineTo(30,-20); ctx.lineTo(18,-20); ctx.closePath(); ctx.fill();
+  ctx.restore();
+  ctx.restore();
+}
+function drawBone(x,y,ang,len){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(ang));
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle=BONE;
+  rr(-len/2,-9,len,18,9); ctx.fill(); ctx.stroke();
+  [[-len/2,-8],[-len/2,8],[len/2,-8],[len/2,8]].forEach(([bx,by])=>{
+    ctx.beginPath(); ctx.arc(bx,by,12,0,7); ctx.fill(); ctx.stroke();
+  });
+  ctx.restore();
+}
+function drawSkullLoose(x,y,rot,eyes){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(rot));
+  ctx.lineWidth=8; ctx.fillStyle=BONE; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.arc(0,0,52,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK;
+  if(eyes==='x'){
+    ctx.lineWidth=7;
+    [[-14,-6],[16,-2]].forEach(([ex,ey])=>{
+      ctx.beginPath();ctx.moveTo(ex-9,ey-9);ctx.lineTo(ex+9,ey+9);ctx.moveTo(ex+9,ey-9);ctx.lineTo(ex-9,ey+9);ctx.stroke();
+    });
+  } else {
+    ctx.beginPath(); ctx.ellipse(-14,-6,11,14,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16,-2,10,13,0,0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function reelH2(t){
+  drawRoomH(t);
+  const RX=560, NX=840;
+  if(t>0.15){
+    const k=easeOutBack(Math.min(1,(t-0.15)/0.35));
+    let wob=0,broken=0,drop=0;
+    if(t>3.7&&t<4.3) wob=Math.sin(t*24)*4;
+    if(t>=4.3){broken=Math.min(1,(t-4.3)/0.18);drop=Math.min(1,(t-4.32)/0.18);wob=0;}
+    ctx.save(); ctx.translate(RX,FLOOR); ctx.scale(k,k); ctx.translate(-RX,-FLOOR);
+    drawChair(RX,wob,broken,drop,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  }
+  if(t>=5.7){
+    const k=ease((t-5.7)/0.6);
+    drawChair(lerp(W+240,NX,k),0,0,0);
+    if(t>7.6) sparkle(NX+40, SEAT_TOP-150, t);
+  }
+  // skeleton
+  if(t<1.4){
+    const step=Math.sin(t*11);
+    drawSkeleton({x:lerp(-200,RX-140,ease(t/1.4)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:22*step,knee:26+16*Math.max(0,-step)},{hip:-22*step,knee:26+16*Math.max(0,step)}],
+      arm:{sh:26+14*step,el:30}, headTilt:step*4});
+  } else if(t<2.3){
+    const k=ease((t-1.4)/0.9);
+    drawSkeleton({x:lerp(RX-140,RX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1,
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(24,58,k),el:lerp(30,44,k)}});
+  } else if(t<4.3){
+    const rat=t>3.7?Math.sin(t*26)*3:Math.sin(t*4)*1.5;
+    drawSkeleton({x:RX-24+rat, y:HIP_SEAT, face:-1,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:58,el:44}, headTilt:rat*1.6, eyes:t>3.7?'wide':undefined});
+  } else {
+    // scatter: bones fly then rest
+    const k=Math.min(1,(t-4.3)/0.5);
+    const bones=[[RX-130,FLOOR-26,-24,120,-260],[RX-30,FLOOR-22,14,130,-180],[RX-190,FLOOR-30,66,100,-320],
+                 [RX+40,FLOOR-24,-58,110,-140],[RX-90,FLOOR-44,8,124,-90],[RX-150,FLOOR-52,40,90,-40]];
+    bones.forEach(([bx,by,ang,len,arc],i)=>{
+      const kk=Math.min(1,Math.max(0,(t-4.3-i*0.04)/0.5));
+      const py=lerp(HIP_SEAT-60,by,ease(kk))-Math.sin(kk*Math.PI)*(-arc*0.4);
+      drawBone(lerp(RX-24,bx,kk), py, ang*kk*2, len);
+    });
+    // ribs pile
+    if(k>0.6){
+      ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle=BONE;
+      for(let i=0;i<3;i++){
+        ctx.beginPath(); ctx.ellipse(RX-90,FLOOR-38-i*16,44-i*6,12,0,0,7); ctx.fill(); ctx.stroke();
+      }
+    }
+    // skull rolls left
+    const kr=Math.min(1,Math.max(0,(t-4.35)/0.9));
+    const sx=lerp(RX-40,RX-290,ease(kr));
+    const sy=FLOOR-50-Math.abs(Math.sin(kr*Math.PI*2))*(1-kr)*90;
+    drawSkullLoose(sx,sy,kr*-520, kr>0.9?'x':undefined);
+    if(t>=4.3) dust(RX,FLOOR,(t-4.3)/1.0);
+    if(t>=4.36&&t<5.3){const kk=easeOutBack((t-4.36)/0.3);starburst(RX+240,FLOOR-620,kk*0.95,'CLATTER!');}
+  }
+  // the uncle test
+  if(t>=6.0&&t<7.0){
+    drawMan(walkPose(lerp(W+220,NX+66,ease((t-6.0)/1.0)), t, -1, null));
+  } else if(t>=7.0&&t<7.6){
+    const k=ease((t-7.0)/0.6);
+    drawMan({x:lerp(NX+66,NX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-6,-14,k),
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:lerp(20,58,k),el:lerp(36,44,k)}, mouth:'smile'});
+  } else if(t>=7.6){
+    const settle=Math.exp(-(t-7.6)*4)*Math.sin((t-7.6)*24)*5;
+    drawMan(sitPose(NX-24,null,{y:HIP_SEAT+settle, mouth:'smile'}));
+  }
+  if(t>=0.3&&t<2.2) caption(['A GUEST ARRIVED…','FASHIONABLY DEAD.'],240,(t-0.3)/0.35,58);
+  if(t>=2.6&&t<4.2) caption(['HE WEIGHS','LITERALLY NOTHING.'],240,(t-2.6)/0.35);
+  if(t>=4.9&&t<6.3) caption(['IF IT CAN’T HOLD BONES…'],240,(t-4.9)/0.35,56);
+  if(t>=7.7&&t<8.9) caption(['…IT CAN’T HOLD','YOUR UNCLE.'],240,(t-7.7)/0.35);
+}
+REELS[2]=reelH2;
+SHAKES[2]=[4.32,0.5,44];
+TAGLINES[2]='STRONG ENOUGH FOR EVERY BODY.';
 </script>
 </body></html>
+
 
