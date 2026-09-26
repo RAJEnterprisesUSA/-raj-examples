@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 82%, #2b1140 0%, #150a24 50%, #060309 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 6deg at 50% 80%,
+  rgba(255,140,46,.05) 0deg 1deg, transparent 1deg 18deg)}
+.moon{position:absolute;left:110px;top:100px;width:110px;height:110px;border-radius:50%;
+  background:radial-gradient(circle at 40% 38%,#fdf3d0,#e8cf8e);box-shadow:0 0 80px rgba(253,243,208,.3)}
+.bat{position:absolute;fill:#0d0716}
+.frame{position:absolute;inset:30px;border:2px solid #c9641e}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 80px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#ff9d4d}
+.pumpwrap{margin-top:20px;position:relative;filter:drop-shadow(0 20px 50px rgba(255,122,26,.3))}
+.carve{position:absolute;left:0;right:0;top:172px;text-align:center;
+  font-family:'Archivo Black';font-size:150px;line-height:1;color:#ffe9a8;
+  text-shadow:0 0 34px rgba(255,220,130,.9), 0 0 80px rgba(255,180,60,.6)}
+.nights{font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:9px;color:#f6f1e4;margin-top:18px}
+.sub{font-weight:600;font-size:24px;color:#d9c9b4;margin-top:20px;line-height:1.55;max-width:860px}
+.sub b{color:#ffb340}
+.cta{margin-top:26px;background:linear-gradient(180deg,#ffb340,#e0631a);color:#1c0b30;
+  font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:3px;padding:16px 50px;border-radius:60px;
+  box-shadow:0 10px 34px rgba(255,140,46,.35)}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#ffb340;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d0c2ac;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="moon"></div>
+  <svg class="bat" style="right:180px;top:130px" width="80" height="36" viewBox="0 0 90 40"><path d="M45 14c-4-8-12-12-20-10 3 4 3 8 1 11-7-5-16-4-24 3 8 0 12 4 13 9 5-3 9-2 12 2l6-7 6 7c3-4 7-5 12-2 1-5 5-9 13-9-8-7-17-8-24-3-2-3-2-7 1-11-8-2-16 2-20 10z"/></svg>
+  <svg class="bat" style="right:330px;top:220px" width="56" height="26" viewBox="0 0 90 40"><path d="M45 14c-4-8-12-12-20-10 3 4 3 8 1 11-7-5-16-4-24 3 8 0 12 4 13 9 5-3 9-2 12 2l6-7 6 7c3-4 7-5 12-2 1-5 5-9 13-9-8-7-17-8-24-3-2-3-2-7 1-11-8-2-16 2-20 10z"/></svg>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">🎃 &nbsp;HALLOWEEN COUNTDOWN&nbsp; 🎃</div>
+    <div class="pumpwrap">
+      <svg width="520" height="400" viewBox="0 0 520 400">
+        <path d="M272 44c-6-22 4-38 26-44 6 16 2 32-10 44" fill="none" stroke="#4a7a3a" stroke-width="18" stroke-linecap="round"/>
+        <ellipse cx="260" cy="230" rx="240" ry="164" fill="#ff7a1a"/>
+        <ellipse cx="140" cy="230" rx="94" ry="156" fill="#e0631a" opacity=".5"/>
+        <ellipse cx="380" cy="230" rx="94" ry="156" fill="#e0631a" opacity=".5"/>
+        <ellipse cx="260" cy="230" rx="88" ry="162" fill="#ff8c2e" opacity=".45"/>
+        <path d="M118 132l44 40H84zM402 132l34 40h-78z" fill="#ffe9a8" opacity=".95"/>
+        <path d="M96 306c44 44 284 44 328 0-22 52-64 62-164 62s-142-10-164-62z" fill="#ffe9a8" opacity=".95"/>
+      </svg>
+      <div class="carve">34</div>
+    </div>
+    <div class="nights">NIGHTS TILL HALLOWEEN</div>
+    <div class="sub"><b>October is a 4-weekend month</b> — and every one of them books tables &amp; chairs. Get your date carved in before it's gone.</div>
+    <div class="cta">CLAIM YOUR OCTOBER DATE — 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

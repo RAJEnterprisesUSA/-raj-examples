@@ -1331,7 +1331,90 @@ function reelH2(t){
 REELS[2]=reelH2;
 SHAKES[2]=[4.32,0.5,44];
 TAGLINES[2]='STRONG ENOUGH FOR EVERY BODY.';
+
+// ---------- H3: pumpkin overload ----------
+function reelH3(t){
+  drawRoomH(t);
+  const TX=430, APEXY=TTOP-118;
+  drawTable(TX,0,0);
+  // pyramid pops: 3 + 2
+  const spots=[[TX-120,TTOP,0.62],[TX,TTOP,0.62],[TX+120,TTOP,0.62],[TX-60,TTOP-60,0.6],[TX+60,TTOP-60,0.6]];
+  spots.forEach(([px,py,sc],i)=>{
+    const born=0.7+i*0.5;
+    if(t>born){
+      const k=easeOutBack(Math.min(1,(t-born)/0.3));
+      ctx.save(); ctx.translate(px,py); ctx.scale(k,k); ctx.translate(-px,-py);
+      drawPumpkin(px,py,sc,t+i);
+      ctx.restore();
+    }
+  });
+  // giant pumpkin: carried in, placed on apex, wobbles, rolls off onto man
+  let gx=null, gy=null, grot=0, gs=0.95;
+  if(t>=3.6&&t<5.0){
+    const k=ease((t-3.6)/1.4);
+    gx=lerp(W+260,TX+330,k); gy=HIP_STAND-235+Math.abs(Math.sin(t*7))*-8;
+  } else if(t>=5.0&&t<5.6){
+    const k=ease((t-5.0)/0.6);
+    gx=lerp(TX+330,TX,k); gy=lerp(HIP_STAND-235,APEXY,k)-Math.sin(k*Math.PI)*80;
+  } else if(t>=5.6&&t<7.0){
+    gx=TX; gy=APEXY;
+    if(t>6.4) grot=Math.sin(t*16)*5*(t-6.4);
+  } else if(t>=7.0){
+    const k=Math.min(1,(t-7.0)/0.55);
+    gx=lerp(TX,TX+470,ease(k));
+    gy=lerp(APEXY,FLOOR-40,k*k)-Math.sin(k*Math.PI)*40;
+    grot=k*380;
+  }
+  // man
+  if(t<3.6){
+    // watches pyramid grow from left
+    drawMan({x:150, y:HIP_STAND, face:1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}], arm:{sh:30,el:30},
+      mouth:'smile', headTilt:Math.sin(t*2)*3});
+  } else if(t<5.0){
+    const step=Math.sin(t*9);
+    drawMan({x:lerp(W+140,TX+390,ease((t-3.6)/1.4)), y:HIP_STAND-Math.abs(step)*8, face:-1, lean:-14,
+      legs:[{hip:16*step,knee:24+12*Math.max(0,-step)},{hip:-16*step,knee:24+12*Math.max(0,step)}],
+      arm:{sh:150,el:-24}, arm2:{sh:158,el:-30}, mouth:'o', eyes:'wide'});
+    if(t>4.2) sweat(TX+430, HIP_STAND-380, t);
+  } else if(t<5.6){
+    drawMan({x:TX+390, y:HIP_STAND, face:-1, lean:-18,
+      legs:[{hip:14,knee:12},{hip:-8,knee:10}],
+      arm:{sh:135,el:-16}, arm2:{sh:142,el:-22}, mouth:'o'});
+  } else if(t<7.0){
+    const k=ease(Math.min(1,(t-5.6)/0.5));
+    drawMan({x:lerp(TX+390,TX+470,k), y:HIP_STAND, face:-1, lean:2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}], arm:{sh:58,el:44},
+      mouth:'smile'});
+  } else {
+    const k=ease(Math.min(1,(t-7.0)/0.45));
+    if(k<1){
+      drawMan({x:TX+470+k*40, y:lerp(HIP_STAND,FLOOR-96,k), face:-1, rot:k*80, lean:-8,
+        legs:[{hip:lerp(6,44,k),knee:lerp(8,-26,k)},{hip:lerp(-4,58,k),knee:lerp(8,-42,k)}],
+        arm:{sh:130,el:10}, mouth:'o', eyes:'wide'});
+    } else {
+      drawMan({x:TX+510, y:FLOOR-96, face:-1, rot:80, lean:-8,
+        legs:[{hip:44,knee:-26},{hip:58,knee:-42}], arm:{sh:130,el:10}, mouth:'sad', eyes:'x'});
+      dizzyStars(TX+600, FLOOR-300, t);
+    }
+    if(t>=7.05) dust(TX+500,FLOOR,(t-7.05)/1.0);
+    if(t>=7.4&&t<8.3){const kk=easeOutBack((t-7.4)/0.3);starburst(TX-160,FLOOR-620,kk*0.9,'BONK!');}
+  }
+  // giant pumpkin drawn after man when rolling so it lands ON him
+  if(gx!==null){
+    ctx.save(); ctx.translate(gx,gy); ctx.rotate(rad(grot)); ctx.translate(-gx,-gy);
+    drawPumpkin(gx,gy,gs,t);
+    ctx.restore();
+  }
+  if(t>=1.2&&t<3.4) caption(['PUMPKIN HAUL:','EXCESSIVE.'],240,(t-1.2)/0.35);
+  if(t>=5.8&&t<7.0) caption(['THE TABLE?','UNBOTHERED.'],240,(t-5.8)/0.35);
+  if(t>=7.9&&t<8.9) caption(['THE TABLE SURVIVED.','HE DIDN’T.'],240,(t-7.9)/0.35,56);
+}
+REELS[3]=reelH3;
+SHAKES[3]=[7.3,0.4,36];
+TAGLINES[3]='HOLDS THE WHOLE PUMPKIN PATCH.';
 </script>
 </body></html>
+
 
 
