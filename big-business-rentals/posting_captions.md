@@ -84,3 +84,43 @@ Caption: Vegas wind took the decorations, the plates AND his hat 🌪️ The ren
 Caption: Invited 50. 150 said yes 😱 One call = unlimited chairs. Never panic over a plus-one again.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #PartyProblems #GuestList #ChairRentals #LasVegasEvents #UnlimitedChairs #EventPlanning
+
+---
+
+# WEEK 3 — THE DERRICK CHRONICLES (all-new reels)
+Derrick (green shirt) stars all week. Every end card: 702-706-8287 · bigbusinesspartyrentals.com · @bigbusiness_rentals_events
+
+## Monday — Derrick vs. The Folding Chair (BB3_Reel_Mon_ChairFight.mp4)
+Derrick's first day on the job 😂 The chair won. Round 1 goes to the equipment — even Derrick can't break 'em.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #FirstDayOnTheJob #ChairRentals #PartyFail #LasVegasEvents #BigBusinessRentals
+
+## Tuesday — The Tablecloth Trick (BB3_Reel_Tue_TableclothTrick.mp4)
+Derrick saw a magic trick ONCE 🎩 The table didn't move. The cake? Everywhere. Sturdy tables, zero drama — Derrick not included.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #MagicFail #TableRentals #CakeTok #LasVegasEvents #PartyFail
+
+## Wednesday — The Delivery Race (BB3_Reel_Wed_DeliveryRace.mp4)
+Derrick "helped" with delivery day 💀 Still. One. Chair. Meanwhile the whole setup got done around him. We're faster — way faster.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #DeliveryDay #WeDeliver #EventSetup #LasVegasNV #FunnyReels
+
+## Thursday — Derrick Counts the Chairs (BB3_Reel_Thu_ChairCount.mp4)
+Derrick had ONE job: count the chairs 🔢 47… wait. 12? 63?? Final answer: ∞. Lost count, never out.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #OneJob #UnlimitedChairs #ChairRentals #LasVegasEvents #PartyProblems
+
+## Friday — The Worm (BB3_Reel_Fri_TheWorm.mp4)
+Derrick's signature move: THE WORM 🪱 …straight into the table leg. The table won. Always have a seat ready.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #TheWorm #DanceFloorFail #FridayVibes #PartyRentalsVegas #FunnyReels
+
+## Saturday — Setup Showdown (BB3_Reel_Sat_SetupShowdown.mp4)
+Derrick set up the chairs 🙃 Upside down. Sideways. Backwards. Fixed in seconds — we set up, so Derrick doesn't have to.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #SetupFail #WeSetUp #EventRentals #LasVegasNV #PartyRentals
+
+## Sunday — The Family Photo (BB3_Reel_Sun_FamilyPhoto.mp4)
+Family photo in 3… 2… DERRICK 📸 He slid through the frame mid-flash and the chairs didn't flinch. Even Derrick gets a seat.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#DerrickChronicles #FamilyPhoto #PictureDay #PartyFail #LasVegasEvents #BigBusinessRentals

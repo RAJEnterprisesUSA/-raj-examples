@@ -1,0 +1,76 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 20%, #241040 0%, #140823 50%, #060309 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 6deg at 50% 24%,
+  rgba(255,140,46,.05) 0deg 1deg, transparent 1deg 18deg)}
+.moon{position:absolute;right:130px;top:90px;width:100px;height:100px;border-radius:50%;
+  background:radial-gradient(circle at 40% 38%,#fdf3d0,#e8cf8e);box-shadow:0 0 70px rgba(253,243,208,.3)}
+.bat{position:absolute;fill:#0d0716}
+.frame{position:absolute;inset:30px;border:2px solid #c9641e}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 80px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#ff9d4d}
+h1{font-family:'Archivo Black';font-size:58px;line-height:1.08;margin-top:12px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#ffc25e,#ff7a1a 55%,#d0480e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grave{margin-top:24px;position:relative;filter:drop-shadow(0 18px 44px rgba(0,0,0,.6))}
+.gtxt{position:absolute;left:0;right:0;top:74px;text-align:center}
+.gtxt .rip{font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:8px;color:#8f95a3}
+.gtxt .num{font-family:'Archivo Black';font-size:128px;line-height:1;color:#c8cedb;
+  text-shadow:0 3px 0 #6f7684, 0 6px 14px rgba(0,0,0,.5)}
+.gtxt .lbl{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:4px;color:#8f95a3;margin-top:4px}
+.sub{font-weight:600;font-size:24px;color:#d9c9b4;margin-top:24px;line-height:1.55;max-width:860px}
+.sub b{color:#ffb340}
+.cta{margin-top:26px;background:linear-gradient(180deg,#ffb340,#e0631a);color:#1c0b30;
+  font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:3px;padding:16px 50px;border-radius:60px;
+  box-shadow:0 10px 34px rgba(255,140,46,.35)}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#ffb340;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d0c2ac;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="moon"></div>
+  <svg class="bat" style="left:150px;top:140px" width="76" height="34" viewBox="0 0 90 40"><path d="M45 14c-4-8-12-12-20-10 3 4 3 8 1 11-7-5-16-4-24 3 8 0 12 4 13 9 5-3 9-2 12 2l6-7 6 7c3-4 7-5 12-2 1-5 5-9 13-9-8-7-17-8-24-3-2-3-2-7 1-11-8-2-16 2-20 10z"/></svg>
+  <svg class="bat" style="left:300px;top:70px" width="54" height="24" viewBox="0 0 90 40"><path d="M45 14c-4-8-12-12-20-10 3 4 3 8 1 11-7-5-16-4-24 3 8 0 12 4 13 9 5-3 9-2 12 2l6-7 6 7c3-4 7-5 12-2 1-5 5-9 13-9-8-7-17-8-24-3-2-3-2-7 1-11-8-2-16 2-20 10z"/></svg>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">🎃 &nbsp;HALLOWEEN COUNTDOWN&nbsp; 🎃</div>
+    <h1>DON'T LET YOUR PARTY<br><em>REST IN PIECES.</em></h1>
+    <div class="grave">
+      <svg width="460" height="330" viewBox="0 0 460 330">
+        <path d="M60 330V150C60 60 130 14 230 14s170 46 170 136v180z" fill="#3a4150"/>
+        <path d="M60 330V150C60 60 130 14 230 14c-56 10-104 62-104 136v180z" fill="#2c323e"/>
+        <path d="M60 330V150C60 60 130 14 230 14s170 46 170 136v180" fill="none" stroke="#171b23" stroke-width="9"/>
+        <rect x="20" y="316" width="420" height="18" rx="9" fill="#2c323e" stroke="#171b23" stroke-width="7"/>
+        <path d="M110 96l14 8M340 80l-12 10" stroke="#59616f" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="gtxt">
+        <div class="rip">ONLY</div>
+        <div class="num">33</div>
+        <div class="lbl">NIGHTS LEFT</div>
+      </div>
+    </div>
+    <div class="sub">Halloween falls on a <b>SATURDAY</b> this year — the biggest party night of the season.
+    Tables &amp; chairs will be gone. <b>Book yours while they're still alive.</b></div>
+    <div class="cta">BOOK BEFORE IT'S TOO LATE — 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

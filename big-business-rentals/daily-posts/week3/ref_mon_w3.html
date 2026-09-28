@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 28%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 18deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 80px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:62px;line-height:1.06;margin-top:10px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rec{margin-top:26px;width:620px;background:#f6f1e2;color:#2b2418;border-radius:8px;
+  padding:30px 38px 26px;box-shadow:0 18px 50px rgba(0,0,0,.55);position:relative;text-align:left;
+  font-family:'Montserrat'}
+.rec:after{content:'';position:absolute;left:0;right:0;bottom:-14px;height:16px;
+  background:radial-gradient(circle at 10px -2px, transparent 11px, #f6f1e2 12px) repeat-x;background-size:31px 16px}
+.rec .h{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:4px;text-align:center;color:#2b2418}
+.rec .sub2{font-weight:600;font-size:15px;text-align:center;color:#8a8068;margin-top:2px;letter-spacing:1px}
+.rec .dash{border-top:2px dashed #b8ac90;margin:16px 0}
+.rec .li{display:flex;justify-content:space-between;font-weight:700;font-size:21px;padding:5px 0}
+.rec .li span:last-child{font-family:'Oswald';font-weight:600}
+.rec .tot{display:flex;justify-content:space-between;font-family:'Archivo Black';font-size:30px;padding-top:8px}
+.rec .paid{margin-top:14px;text-align:center;font-family:'Archivo Black';font-size:26px;color:#1c6b3a;
+  border:3px solid #1c6b3a;border-radius:8px;padding:8px;transform:rotate(-3deg);letter-spacing:2px}
+.fine{margin-top:30px;font-weight:600;font-size:16.5px;color:#8f8672;letter-spacing:.4px;line-height:1.5}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#cbc0a6;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; REFERRAL PROGRAM &nbsp;◆</div>
+    <h1>THE ONLY RECEIPT WHERE<br><em>YOU GET PAID.</em></h1>
+    <div class="rec">
+      <div class="h">BIG BUSINESS</div>
+      <div class="sub2">REFERRAL RECEIPT · LAS VEGAS, NV</div>
+      <div class="dash"></div>
+      <div class="li"><span>1× Told a friend about us</span><span>FREE</span></div>
+      <div class="li"><span>1× They booked their event</span><span>DONE</span></div>
+      <div class="li"><span>1× Mentioned your name</span><span>✓</span></div>
+      <div class="dash"></div>
+      <div class="tot"><span>YOU EARN</span><span>UP TO $100</span></div>
+      <div class="paid">★ PAID TO: YOU ★</div>
+    </div>
+    <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
