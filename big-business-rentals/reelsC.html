@@ -1093,5 +1093,120 @@ window.drawFrame=function(t){
     ctx.restore();
   }
 };
+
+// ---------- SPECIAL: derrick builds a ladder ----------
+function drawBlock(){
+  ctx.save(); ctx.lineWidth=12; ctx.strokeStyle=INK; ctx.fillStyle='#ff5fb0';
+  rr(700, FLOOR-720, 330, 720, 18); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='rgba(255,255,255,.18)'; rr(715, FLOOR-705, 60, 690, 12); ctx.fill();
+  ctx.restore();
+}
+function drawLadder(t){
+  // leans against left face of block; rails pop at 2.5, rungs 2.8..4.3
+  if(t<2.5) return;
+  ctx.save();
+  ctx.translate(505,FLOOR); ctx.rotate(rad(16));
+  const kr=easeOutBack(Math.min(1,(t-2.5)/0.35));
+  ctx.lineWidth=18; ctx.strokeStyle=INK; ctx.lineCap='round';
+  ctx.strokeStyle='#8a6a3a';
+  ctx.lineWidth=26;
+  ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-780*kr); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(96,0); ctx.lineTo(96,-780*kr); ctx.stroke();
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-780*kr); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(96,0); ctx.lineTo(96,-780*kr); ctx.stroke();
+  for(let i=0;i<8;i++){
+    const born=2.8+i*0.20;
+    if(t>born){
+      const k=easeOutBack(Math.min(1,(t-born)/0.25));
+      const ry=-80-i*92;
+      ctx.save(); ctx.translate(48,ry); ctx.scale(k,1);
+      ctx.lineWidth=22; ctx.strokeStyle='#a8874a';
+      ctx.beginPath(); ctx.moveTo(-48,0); ctx.lineTo(48,0); ctx.stroke();
+      ctx.lineWidth=8; ctx.strokeStyle=INK;
+      ctx.beginPath(); ctx.moveTo(-48,0); ctx.lineTo(48,0); ctx.stroke();
+      ctx.restore();
+    }
+  }
+  ctx.restore();
+}
+function drawHammer(x,y,swing){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(-40+swing));
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#8a6a3a'; rr(-8,-10,16,86,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#6f7684'; rr(-34,-38,68,34,8); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function hearts(t,t0,x,y){
+  if(t<t0) return;
+  ctx.save(); ctx.font='64px Montserrat'; ctx.fillStyle='#ff5fb0';
+  for(let i=0;i<3;i++){
+    const ph=((t-t0)*0.8+i*0.33)%1;
+    ctx.globalAlpha=Math.min(1,(1-ph)*1.8);
+    ctx.fillText('♥', x+Math.sin((t+i)*3)*40+i*60-60, y-ph*200);
+  }
+  ctx.restore();
+}
+function reelD1(t){
+  drawRoom();
+  drawBlock();
+  const TOPY=FLOOR-720;
+  // woman on the block
+  const wClap=t>7.0?Math.sin(t*12)*12:0;
+  drawMan({x:950, y:TOPY-28, face:-1, lean:-12, style:STYLEW,
+    legs:[{hip:84,knee:-70},{hip:78,knee:-64}],
+    arm:t>7.0?{sh:110+wClap,el:-40}:{sh:58,el:44},
+    mouth:(t>6.7?'o':((t>2.2&&t<4.6)?'o':'smile')),
+    eyes:(t>2.4&&t<4.8)?'wide':undefined,
+    headTilt:(t>4.8&&t<6.7)?8:0});
+  drawLadder(t);
+  // derrick
+  if(t<1.2){
+    drawMan(walkPose(lerp(-220,480,ease(t/1.2)), t, 1, STYLE2));
+  } else if(t<2.4){
+    // looks up, then idea
+    const idea=t>2.0;
+    drawMan({x:480, y:HIP_STAND, face:1, lean:-8, style:STYLE2,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:idea?{sh:168,el:-8}:{sh:110,el:-150}, mouth:idea?'o':'smile', headTilt:-10});
+    if(idea) sparkle(560, HIP_STAND-460, t);
+  } else if(t<4.7){
+    // hammering
+    const sw=Math.sin(t*14);
+    drawMan({x:470, y:HIP_STAND, face:1, lean:-14, style:STYLE2,
+      legs:[{hip:12,knee:12},{hip:-8,knee:10}],
+      arm:{sh:110+sw*26,el:-40}, mouth:'o'});
+    drawHammer(620, HIP_STAND-260-sw*40, sw*30);
+    if(t>3.2) sweat(500, HIP_STAND-390, t);
+    if(t>2.85){const ph=(t-2.85)%0.26; if(ph<0.1) dust(660, FLOOR-140-((t-2.85)/0.26|0)*80, ph*6);}
+  } else if(t<6.7){
+    // the climb
+    const stepD=100;
+    const n=Math.min(7.5,(t-4.7)/0.26);
+    const d=Math.min(700, (Math.floor(n)+ease(n%1))*stepD);
+    const wob=(t>5.6&&t<6.0)?Math.sin(t*26)*5:0;
+    const step=Math.sin(n*Math.PI);
+    drawMan({x:551+0.276*d+wob, y:FLOOR-0.96*d-10, face:1, lean:-20, rot:14+wob, style:STYLE2,
+      legs:[{hip:34+step*26,knee:40-step*20},{hip:60-step*26,knee:24+step*20}],
+      arm:{sh:135,el:-52}, arm2:{sh:118,el:-40},
+      mouth:(t>5.6&&t<6.0)?'o':'smile', eyes:(t>5.6&&t<6.0)?'wide':undefined});
+  } else {
+    // seated next to her on top
+    const k=ease(Math.min(1,(t-6.7)/0.5));
+    drawMan({x:lerp(744,800,k), y:lerp(FLOOR-682,TOPY-28,k), face:-1, lean:-12, style:STYLE2,
+      legs:[{hip:84,knee:-70},{hip:78,knee:-64}],
+      arm:{sh:58,el:44}, mouth:'smile'});
+    hearts(t,7.2,880,TOPY-170);
+    if(t>6.9) sparkle(880, TOPY-230, t);
+  }
+  if(t>=0.3&&t<2.0) caption(['“WHY DON’T YOU MEET','ME UP HERE?”'],240,(t-0.3)/0.35,56);
+  if(t>=2.2&&t<3.4) caption(['DERRICK: SAY LESS.'],240,(t-2.2)/0.35,58);
+  if(t>=5.5&&t<6.5) caption(['EASY… EASY…'],240,(t-5.5)/0.35,58);
+  if(t>=7.4&&t<8.9) caption(['MEET THEM AT','THEIR LEVEL.'],240,(t-7.4)/0.35);
+}
+REELS[8]=reelD1;
+SHAKES[8]=[2.55,0.2,10];
+TAGLINES[8]='WE RISE TO THE OCCASION.';
 </script>
 </body></html>
+
