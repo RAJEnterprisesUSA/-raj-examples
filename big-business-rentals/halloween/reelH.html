@@ -1524,8 +1524,125 @@ function reelH4(t){
 REELS[4]=reelH4;
 SHAKES[4]=[4.27,0.45,40];
 TAGLINES[4]='NO TRICKS. JUST TABLES.';
+
+// ---------- H5: the mummy's unraveling ----------
+const STYLEM={tee:'#e9e4d2', teeShade:'#d8d2bc', capless:true, skin:'#cbbc9c', pant:'#ddd6c0', pantBack:'#c8c1aa'};
+function drawWraps(x,y,face,rot){
+  // bandage strips over torso + head
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(rot||0)); ctx.scale(face,1);
+  ctx.lineWidth=6; ctx.strokeStyle='#8f886f';
+  ctx.fillStyle='#f2ecda';
+  [[-56,-190,120,18,-8],[-50,-150,118,18,6],[-58,-104,124,18,-5],[-46,-60,112,18,7]].forEach(([bx,by,bw,bh,ba])=>{
+    ctx.save(); ctx.translate(bx+bw/2,by+bh/2); ctx.rotate(rad(ba));
+    rr(-bw/2,-bh/2,bw,bh,8); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  });
+  ctx.save(); ctx.translate(30,-252);
+  [[-58,-96,116,16,-6],[-56,-64,118,16,5]].forEach(([bx,by,bw,bh,ba])=>{
+    ctx.save(); ctx.translate(bx+bw/2,by+bh/2); ctx.rotate(rad(ba));
+    rr(-bw/2,-bh/2,bw,bh,7); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  });
+  ctx.restore();
+  ctx.restore();
+}
+function reelH5(t){
+  drawRoomH(t);
+  const SNAGX=230;
+  // snag chair (small folded chair on floor at left)
+  ctx.save(); ctx.translate(SNAGX,FLOOR-22);
+  ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle='#e8eaee';
+  rr(-105,-17,210,34,12); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // rescue chair
+  if(t>=6.2){
+    const k=ease((t-6.2)/0.6);
+    drawChair(lerp(W+240,760,k),0,0,0);
+    if(t>7.6) sparkle(800, SEAT_TOP-150, t);
+  }
+  // mummy position
+  let mx, my=HIP_STAND, mrot=0, spinning=false;
+  if(t<4.5){
+    const shuffle=Math.sin(t*7);
+    mx=lerp(-200,620,ease(Math.min(1,t/3.2)));
+    if(t>=3.2) mx=620+Math.min(1,(t-3.2)/1.3)*70; // straining forward
+    my=HIP_STAND-Math.abs(shuffle)*5;
+  } else if(t<5.5){
+    spinning=true;
+    mx=690+Math.sin(t*30)*6;
+    mrot=(t-4.5)*720;
+  } else {
+    mx=700;
+  }
+  // trailing bandage from snag chair to mummy
+  if(t>=1.6&&t<5.5){
+    ctx.save(); ctx.lineWidth=14; ctx.strokeStyle='#f2ecda';
+    const tautK=Math.min(1,Math.max(0,(t-3.0)/1.4));
+    const sag=lerp(120,6,tautK);
+    ctx.beginPath(); ctx.moveTo(SNAGX,FLOOR-40);
+    ctx.quadraticCurveTo((SNAGX+mx-60)/2, FLOOR-60+sag, mx-52, my-90);
+    ctx.stroke();
+    ctx.lineWidth=5; ctx.strokeStyle='#8f886f';
+    ctx.beginPath(); ctx.moveTo(SNAGX,FLOOR-40);
+    ctx.quadraticCurveTo((SNAGX+mx-60)/2, FLOOR-60+sag, mx-52, my-90);
+    ctx.stroke();
+    ctx.restore();
+  }
+  // unravel strips flying during spin
+  if(t>=4.5&&t<6.2){
+    for(let i=0;i<6;i++){
+      const k=Math.min(1,Math.max(0,(t-4.5-i*0.1)/0.8));
+      if(k<=0) continue;
+      const ang=i*1.05+t*2;
+      const px=690+Math.cos(ang)*(60+k*260);
+      const py=HIP_STAND-160+Math.sin(ang)*(40+k*150)+k*220;
+      ctx.save(); ctx.translate(px,Math.min(py,FLOOR-16)); ctx.rotate(ang);
+      ctx.globalAlpha=1-k*0.3;
+      ctx.lineWidth=5; ctx.strokeStyle='#8f886f'; ctx.fillStyle='#f2ecda';
+      rr(-60,-9,120,18,8); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    }
+    dust(690,FLOOR,(t-4.5)/1.7);
+  }
+  // mummy body
+  if(t<4.5){
+    const shuffle=Math.sin(t*7);
+    const strain=t>3.2;
+    drawMan({x:mx, y:my, face:1, lean:strain?-30:-6, style:STYLEM,
+      legs:strain?[{hip:30,knee:22},{hip:-22,knee:16}]:
+        [{hip:14*shuffle,knee:20+10*Math.max(0,-shuffle)},{hip:-14*shuffle,knee:20+10*Math.max(0,shuffle)}],
+      arm:{sh:96,el:-8}, arm2:{sh:88,el:-4},
+      mouth:strain?'o':'smile', eyes:strain?'wide':undefined});
+    drawWraps(mx,my,1,strain?-4:0);
+    if(t>3.6) sweat(mx+40, my-390, t);
+  } else if(t<5.5){
+    drawMan({x:mx, y:HIP_STAND, face:1, rot:mrot%360, lean:0, style:STYLEM,
+      legs:[{hip:20,knee:10},{hip:-16,knee:12}],
+      arm:{sh:150,el:0}, arm2:{sh:-150,el:0}, mouth:'o', eyes:'wide'});
+  } else if(t<6.9){
+    // dazed on floor, half unwrapped
+    drawMan({x:700, y:FLOOR-96, face:1, rot:-80, lean:-8, style:STYLEM,
+      legs:[{hip:40,knee:-24},{hip:54,knee:-38}], arm:{sh:130,el:10}, mouth:'sad', eyes:'x'});
+    dizzyStars(700, FLOOR-280, t);
+  } else {
+    const k=ease(Math.min(1,(t-6.9)/0.7));
+    drawMan({x:lerp(700,760-24,k), y:lerp(FLOOR-96,HIP_SEAT,k), face:-1, rot:lerp(-80,0,k), lean:lerp(-8,-14,k), style:STYLEM,
+      legs:[{hip:lerp(40,84,k),knee:lerp(-24,-86,k)},{hip:lerp(54,78,k),knee:lerp(-38,-80,k)}],
+      arm:{sh:58,el:44}, mouth:k>0.85?'smile':'sad'});
+    if(k>0.9) drawWraps(760-24,HIP_SEAT,-1,0);
+  }
+  if(t>=4.55&&t<5.5){const kk=easeOutBack((t-4.55)/0.3);starburst(330,FLOOR-620,kk*0.9,'RRRIP!');}
+  if(t>=0.3&&t<2.2) caption(['THE MUMMY CAME','TO PARTY.'],240,(t-0.3)/0.35);
+  if(t>=2.8&&t<4.3) caption(['SIR… YOUR WRAP','IS CAUGHT.'],240,(t-2.8)/0.35,56);
+  if(t>=5.6&&t<6.8) caption(['IT ALL UNRAVELED.'],240,(t-5.6)/0.35);
+  if(t>=7.6&&t<8.9) caption(['DON’T LET YOUR','PARTY UNRAVEL.'],240,(t-7.6)/0.35);
+}
+REELS[5]=reelH5;
+SHAKES[5]=[4.55,0.4,34];
+TAGLINES[5]='WE KEEP IT TOGETHER.';
 </script>
 </body></html>
+
 
 
 
