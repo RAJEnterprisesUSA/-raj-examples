@@ -1,0 +1,64 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 32%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 4deg at 50% 34%,
+  rgba(229,184,75,.06) 0deg 1deg, transparent 1deg 18deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.4)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 70px 42px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:8px;color:#D6B25E;display:flex;align-items:center;gap:16px}
+.kick .r{width:60px;height:1px;background:#B08D3E}
+h1{font-family:'Archivo Black';font-size:60px;line-height:1.06;margin-top:18px;
+  background:linear-gradient(180deg,#F3D88F,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
+.list{margin-top:28px;width:100%;border:2px solid #6b5628;border-radius:20px;
+  background:linear-gradient(180deg,rgba(229,184,75,.09),rgba(229,184,75,.03));padding:26px 42px}
+.it{display:flex;align-items:center;gap:22px;padding:11px 0;text-align:left}
+.it+.it{border-top:1px solid rgba(229,184,75,.18)}
+.n{flex:0 0 46px;height:46px;border-radius:50%;background:linear-gradient(180deg,#EFCB7C,#B08D3E);
+  display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:22px;color:#141310}
+.it p{font-weight:700;font-size:23px;color:#e9dfc8}
+.it p span{display:block;font-weight:600;font-size:17.5px;color:#9a917e;margin-top:2px}
+.punch{margin-top:24px;border:2px solid #B08D3E;border-radius:14px;background:rgba(229,184,75,.08);
+  padding:15px 34px;font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:2px;color:#f2ecdd}
+.punch b{color:#E5B84B}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:82px;height:82px;border-radius:14px}
+.foot .c{text-align:left}
+.foot .p{font-family:'Archivo Black';font-size:35px;color:#E5B84B;letter-spacing:1px}
+.foot .s{font-weight:600;font-size:18px;color:#cbc0a6;margin-top:3px}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick"><span class="r"></span>PARTY MATH · TIP No.17<span class="r"></span></div>
+    <h1>5 THINGS PEOPLE<br>FORGET TO RENT.</h1>
+    <div class="list">
+      <div class="it"><div class="n">1</div><p>The gift table <span>Presents on the grass is not the look</span></p></div>
+      <div class="it"><div class="n">2</div><p>The cake table <span>It deserves its own stage — away from elbows</span></p></div>
+      <div class="it"><div class="n">3</div><p>The shade-corner chairs <span>The elders WILL claim a corner. Seat it.</span></p></div>
+      <div class="it"><div class="n">4</div><p>The drinks &amp; serving table <span>Coolers on the floor slow every line down</span></p></div>
+      <div class="it"><div class="n">5</div><p>The "extra 10" chairs <span>For the cousins nobody counted</span></p></div>
+    </div>
+    <div class="punch">ADD THEM ALL IN <b>ONE CALL — SAME DELIVERY, ZERO STRESS</b></div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="c">
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

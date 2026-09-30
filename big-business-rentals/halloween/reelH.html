@@ -1640,8 +1640,113 @@ function reelH5(t){
 REELS[5]=reelH5;
 SHAKES[5]=[4.55,0.4,34];
 TAGLINES[5]='WE KEEP IT TOGETHER.';
+
+// ---------- H6: frankenstein's seat ----------
+const STYLEF={tee:'#4a4458', teeShade:'#3a3548', capless:true, skin:'#7fae5a', pant:'#2f2b3d', pantBack:'#262233'};
+function drawFrankHead(p){
+  ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(rad(p.rot||0)); ctx.scale(p.face,1);
+  ctx.translate(30,-252); ctx.rotate(rad(p.headTilt||0));
+  // flat-top hair block
+  ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#1c1a26';
+  ctx.beginPath();
+  ctx.moveTo(-72,-96); ctx.lineTo(74,-108); ctx.lineTo(72,-70); ctx.quadraticCurveTo(0,-84,-70,-62);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  // neck bolts
+  ctx.fillStyle='#9aa2ad';
+  [[-84,10],[64,16]].forEach(([bx,by])=>{
+    ctx.save(); ctx.translate(bx,by);
+    rr(-16,-7,32,14,4); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(bx<0?-16:16,0,9,0,7); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  });
+  // forehead stitches
+  ctx.lineWidth=5;
+  ctx.beginPath(); ctx.moveTo(-40,-56); ctx.lineTo(-2,-60); ctx.stroke();
+  for(let i=0;i<3;i++){ctx.beginPath();ctx.moveTo(-34+i*12,-66);ctx.lineTo(-32+i*12,-50);ctx.stroke();}
+  ctx.restore();
+}
+function reelH6(t){
+  drawRoomH(t);
+  const RX=560, NX=840;
+  // red chair
+  if(t>0.15&&t<7.2){
+    const k=easeOutBack(Math.min(1,(t-0.15)/0.35));
+    let broken=0,drop=0;
+    if(t>=2.9){broken=Math.min(1,(t-2.9)/0.12);drop=Math.min(1,(t-2.91)/0.12);}
+    ctx.save(); ctx.translate(RX,FLOOR); ctx.scale(k,k); ctx.translate(-RX,-FLOOR);
+    drawChair(RX,0,broken,drop,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  }
+  // our chair
+  if(t>=4.0){
+    const k=ease((t-4.0)/0.6);
+    drawChair(lerp(W+240,NX,k),0,0,0);
+    if(t>6.6) sparkle(NX+40, SEAT_TOP-150, t);
+  }
+  // frankenstein
+  let fx=null, fy=null, fface=1, frot=0, pose=null;
+  if(t<1.6){
+    // stomping walk: stiff legs, arms straight out
+    const step=Math.sin(t*6);
+    pose={x:lerp(-240,RX-140,ease(t/1.6)), y:HIP_STAND-Math.abs(step)*16, face:1, lean:-4, style:STYLEF,
+      legs:[{hip:26*step,knee:6},{hip:-26*step,knee:6}],
+      arm:{sh:92,el:-4}, arm2:{sh:84,el:0}, mouth:'o'};
+  } else if(t<2.6){
+    const k=ease((t-1.6)/1.0);
+    pose={x:lerp(RX-140,RX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k), style:STYLEF,
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:92,el:-4}, mouth:'o'};
+  } else if(t<2.9){
+    pose={x:RX-24, y:HIP_SEAT, face:-1, lean:-14, style:STYLEF,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}], arm:{sh:92,el:-4}, mouth:'o'};
+  } else if(t<4.2){
+    const k=ease(Math.min(1,(t-2.9)/0.35));
+    if(k<1){
+      pose={x:RX-24-k*50, y:lerp(HIP_SEAT,FLOOR-100,k), face:-1, rot:-k*76, lean:-8, style:STYLEF,
+        legs:[{hip:lerp(84,50,k),knee:lerp(-86,-28,k)},{hip:lerp(78,62,k),knee:lerp(-80,-44,k)}],
+        arm:{sh:110,el:10}, mouth:'o', eyes:'wide'};
+    } else {
+      pose={x:RX-74, y:FLOOR-100, face:-1, rot:-76, lean:-8, style:STYLEF,
+        legs:[{hip:38,knee:-22},{hip:52,knee:-38}], arm:{sh:120,el:12}, mouth:'sad', eyes:'x'};
+    }
+    if(t>=2.9) dust(RX,FLOOR,(t-2.9)/0.9);
+    if(t>=2.95&&t<3.8){const kk=easeOutBack((t-2.95)/0.28);starburst(RX-300,FLOOR-620,kk*0.95,'CRUNCH!');}
+  } else if(t<5.0){
+    // gets up grumpy
+    const k=ease((t-4.2)/0.8);
+    pose={x:lerp(RX-74,NX-160,k), y:lerp(FLOOR-100,HIP_STAND,k), face:1, rot:lerp(-76,0,k), lean:-4, style:STYLEF,
+      legs:[{hip:lerp(38,12,k),knee:lerp(-22,6,k)},{hip:lerp(52,-8,k),knee:lerp(-38,6,k)}],
+      arm:{sh:92,el:-4}, mouth:'sad'};
+  } else if(t<5.8){
+    const k=ease((t-5.0)/0.8);
+    pose={x:lerp(NX-160,NX-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k), style:STYLEF,
+      legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+      arm:{sh:92,el:-4}, mouth:'o', eyes:'wide'};
+  } else if(t<6.6){
+    // bounce test x2 — HOLDS
+    const b=Math.sin((t-5.8)*14)*24;
+    pose={x:NX-24, y:HIP_SEAT-Math.abs(b), face:-1, lean:-14, style:STYLEF,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}], arm:{sh:92,el:-4}, mouth:'o', eyes:'wide'};
+  } else {
+    // happy monster: seated, arms pumping
+    const cheer=Math.sin(t*10);
+    pose={x:NX-24, y:HIP_SEAT, face:-1, lean:-14, style:STYLEF,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:150+cheer*14,el:-20}, mouth:'smile', headTilt:cheer*4};
+  }
+  drawMan(pose);
+  drawFrankHead(pose);
+  if(t>=0.3&&t<2.0) caption(['FRANKENSTEIN','NEEDED A SEAT.'],240,(t-0.3)/0.35);
+  if(t>=3.2&&t<4.4) caption(['0.2 SECONDS.','A NEW RECORD.'],240,(t-3.2)/0.35,58);
+  if(t>=5.9&&t<7.0) caption(['WAIT… IT HELD?'],240,(t-5.9)/0.35,58);
+  if(t>=7.3&&t<8.9) caption(['MONSTER-TESTED.'],240,(t-7.3)/0.35);
+}
+REELS[6]=reelH6;
+SHAKES[6]=[2.92,0.45,46];
+TAGLINES[6]='MONSTER-TESTED. UNCLE-APPROVED.';
 </script>
 </body></html>
+
 
 
 
