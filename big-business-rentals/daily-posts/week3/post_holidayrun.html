@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:50px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:74px;line-height:1.05;margin-top:16px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.months{display:flex;gap:20px;margin-top:36px}
+.m{width:252px;border:2px solid #B08D3E;border-radius:16px;overflow:hidden;background:rgba(229,184,75,.05)}
+.m .h{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:5px;color:#1c1a14;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);padding:10px 0}
+.m .i{font-size:44px;padding-top:18px}
+.m .d{font-weight:700;font-size:20px;color:#f0e8d2;padding:10px 16px 4px;line-height:1.35}
+.m .l{font-weight:600;font-size:15px;color:#a99e86;padding:4px 16px 18px;line-height:1.45}
+.sub{margin-top:32px;font-weight:600;font-size:24px;color:#d8ceb6;line-height:1.55;max-width:880px}
+.sub b{color:#E5B84B}
+.cta{margin-top:26px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#1c1a14;
+  font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:3px;padding:16px 50px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:80px;height:80px}
+.foot .p{font-family:'Archivo Black';font-size:34px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; OCTOBER 1 · GAME ON &nbsp;◆</div>
+    <h1>THE HOLIDAY RUN<br><em>STARTS TODAY.</em></h1>
+    <div class="months">
+      <div class="m"><div class="h">OCTOBER</div><div class="i">🎃</div><div class="d">Halloween &amp; fall bashes</div><div class="l">5 Saturdays. Costumes need chairs too.</div></div>
+      <div class="m"><div class="h">NOVEMBER</div><div class="i">🦃</div><div class="d">Friendsgiving &amp; Thanksgiving</div><div class="l">Everybody hosts. Nobody owns 40 chairs.</div></div>
+      <div class="m"><div class="h">DECEMBER</div><div class="i">🎄</div><div class="d">Holiday parties &amp; NYE</div><div class="l">The fastest month to book out. Every year.</div></div>
+    </div>
+    <div class="sub">The next 92 days hold more parties than the other 273 <b>combined.</b> The hosts who win the holidays book their tables &amp; chairs <b>now</b> — not the week of.</div>
+    <div class="cta">GET AHEAD OF IT — 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

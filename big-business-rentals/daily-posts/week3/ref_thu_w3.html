@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+.poster{margin-top:22px;width:760px;border:3px solid #B08D3E;border-radius:10px;background:rgba(229,184,75,.045);
+  padding:30px 40px 28px;position:relative}
+.poster:before{content:'';position:absolute;inset:8px;border:1px solid rgba(229,184,75,.4);border-radius:6px}
+.wanted{font-family:'Playfair';font-weight:900;font-size:108px;letter-spacing:8px;line-height:1;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.who{font-family:'Archivo Black';font-size:44px;color:#f6f1e4;margin-top:14px;line-height:1.15}
+.desc{font-weight:600;font-size:21px;color:#c7bb9f;margin-top:14px;line-height:1.5}
+.desc b{color:#E5B84B}
+.reward{margin-top:22px;border-top:2px solid rgba(229,184,75,.5);border-bottom:2px solid rgba(229,184,75,.5);
+  padding:16px 0 14px}
+.reward .l{font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:8px;color:#D6B25E}
+.reward .v{font-family:'Archivo Black';font-size:66px;margin-top:4px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reward .c{font-weight:600;font-size:19px;color:#d8ceb6;margin-top:4px}
+.steps{display:flex;gap:16px;margin-top:26px;width:860px}
+.st{flex:1;border:1px solid rgba(229,184,75,.45);border-radius:12px;background:rgba(0,0,0,.2);padding:14px 12px}
+.st .n{font-family:'Archivo Black';font-size:26px;color:#E5B84B}
+.st .t{font-weight:600;font-size:17px;color:#cfc4a8;margin-top:5px;line-height:1.4}
+.fine{margin-top:18px;font-weight:600;font-size:15px;color:#8f8670;letter-spacing:.5px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; THE REFERRAL PROGRAM &nbsp;◆</div>
+    <div class="poster">
+      <div class="wanted">WANTED</div>
+      <div class="who">PEOPLE WHO<br>KNOW PEOPLE.</div>
+      <div class="desc">Got a friend planning a birthday, shower,<br>repast or holiday party?<br><b>Send them our way — we'll handle the rest.</b></div>
+      <div class="reward">
+        <div class="l">R E W A R D</div>
+        <div class="v">UP TO $100</div>
+        <div class="c">cash for every client who books from your reference</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><div class="t">Tell them to call &amp; drop <b style="color:#E5B84B">your name</b></div></div>
+      <div class="st"><div class="n">2</div><div class="t">They book their tables &amp; chairs</div></div>
+      <div class="st"><div class="n">3</div><div class="t">Their event happens — <b style="color:#E5B84B">you get paid</b></div></div>
+    </div>
+    <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

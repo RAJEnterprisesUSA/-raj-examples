@@ -1744,6 +1744,70 @@ function reelH6(t){
 REELS[6]=reelH6;
 SHAKES[6]=[2.92,0.45,46];
 TAGLINES[6]='MONSTER-TESTED. UNCLE-APPROVED.';
+
+// ---------- H7: the zombie line dance ----------
+const STYLEZ=[
+ {tee:'#5d7a3f',teeShade:'#4c6633',capless:true,skin:'#8fbf63',pant:'#3a3550',pantBack:'#2d2940'},
+ {tee:'#7a5f8f',teeShade:'#66507a',capless:true,skin:'#9ec46f',pant:'#44405c',pantBack:'#36334a'},
+ {tee:'#8f4f4f',teeShade:'#7a4242',capless:true,skin:'#86b35f',pant:'#3f3b57',pantBack:'#322f46'}];
+function reelH7(t){
+  drawRoomH(t);
+  const ZX=[300,580,860], CH=[350,630,910];
+  const PH=2*Math.PI/1.4;
+  const DX0=Math.sin((5.4-1.8)*PH)*64;
+  if(t>=4.8){
+    const k=ease(Math.min(1,(t-4.8)/0.6));
+    for(let i=0;i<3;i++) drawChair(lerp(W+260+i*150,CH[i],k),0,0,0);
+    if(t>7.4) sparkle(CH[1]+40, SEAT_TOP-150, t);
+  }
+  if(t>=3.1){
+    const k=Math.min(1,(t-3.1)/0.45);
+    const bx=ZX[1]+96+k*54, by=lerp(FLOOR-430,FLOOR-20,k*k);
+    drawBone(bx,by,lerp(80,8,k)+(k<1?Math.sin(t*30)*8*(1-k):0),150);
+    if(t>=3.45&&t<4.2){const kk=easeOutBack(Math.min(1,(t-3.45)/0.3));starburst(ZX[1]+230,FLOOR-340,kk*0.8,'PLOP!');}
+  }
+  for(let i=0;i<3;i++){
+    const S=STYLEZ[i], armless=(i===1&&t>=3.1);
+    const stub={sh:96,el:160};
+    let pose=null;
+    if(t<1.8){
+      const d=ease(Math.min(1,t/1.7));
+      const step=Math.sin((t+i*0.4)*5.2);
+      pose={x:lerp(ZX[i]-760,ZX[i],d), y:HIP_STAND-Math.abs(step)*10, face:1, lean:4, style:S,
+        legs:[{hip:20*step,knee:4},{hip:-20*step,knee:4}],
+        arm:{sh:88,el:2}, arm2:{sh:80,el:6}, mouth:'o', headTilt:Math.sin((t+i)*3)*6};
+    } else if(t<5.4){
+      if(i===1&&t>=3.1&&t<3.6){
+        pose={x:ZX[1], y:HIP_STAND, face:1, lean:6, style:S,
+          legs:[{hip:8,knee:4},{hip:-4,knee:4}],
+          arm:{sh:88,el:2}, arm2:stub, mouth:'o', eyes:'wide', headTilt:18};
+      } else {
+        const ph=(t-1.8)*PH;
+        const dx=Math.sin(ph)*64, hop=Math.abs(Math.cos(ph))*10;
+        pose={x:ZX[i]+dx, y:HIP_STAND-hop, face:(Math.cos(ph)>=0?1:-1), lean:3, style:S,
+          legs:[{hip:16*Math.cos(ph),knee:6},{hip:-16*Math.cos(ph),knee:6}],
+          arm:{sh:88,el:2}, arm2:(armless?stub:{sh:80,el:6}), mouth:'o', headTilt:Math.sin(ph)*8};
+        if(i===1&&t>=3.6&&t<4.2){pose.eyes='wide';}
+      }
+    } else if(t<6.4){
+      const k=ease((t-5.4)/1.0);
+      pose={x:lerp(ZX[i]+DX0,CH[i]-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k), style:S,
+        legs:[{hip:lerp(8,84,k),knee:lerp(8,-86,k)},{hip:lerp(-2,78,k),knee:lerp(6,-80,k)}],
+        arm:{sh:lerp(88,58,k),el:lerp(2,44,k)}, arm2:(armless?stub:undefined), mouth:'o'};
+    } else {
+      pose=sitPose(CH[i]-24,S,{mouth:'smile', headTilt:Math.sin(t*8+i)*6,
+        arm:{sh:150+Math.sin(t*8+i)*14,el:-20}, arm2:(armless?stub:undefined)});
+    }
+    drawMan(pose);
+  }
+  if(t>=0.35&&t<1.9) caption(['THE UNDEAD PULLED UP','TO THE FUNCTION…'],240,(t-0.35)/0.35,56);
+  if(t>=2.0&&t<3.0) caption(['ZOMBIE SLIDE…','ZOMBIE SLIDE…'],240,(t-2.0)/0.35);
+  if(t>=3.3&&t<4.7) caption(['HE LEFT IT ALL ON','THE DANCE FLOOR.'],240,(t-3.3)/0.35,56);
+  if(t>=7.2&&t<8.9) caption(['DANCED ALL NIGHT.','CHAIRS HELD ALL NIGHT.'],240,(t-7.2)/0.35,52);
+}
+REELS[7]=reelH7;
+SHAKES[7]=[3.12,0.3,20];
+TAGLINES[7]='STRONG ENOUGH FOR THE UNDEAD.';
 </script>
 </body></html>
 

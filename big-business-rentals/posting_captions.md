@@ -124,3 +124,43 @@ Derrick set up the chairs 🙃 Upside down. Sideways. Backwards. Fixed in second
 Family photo in 3… 2… DERRICK 📸 He slid through the frame mid-flash and the chairs didn't flinch. Even Derrick gets a seat.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #DerrickChronicles #FamilyPhoto #PictureDay #PartyFail #LasVegasEvents #BigBusinessRentals
+
+---
+
+## THURSDAY — OCT 1 (Week 3) — 7-POST DAY (venue flyer debuts!)
+
+### 1 · Morning — Tip No.18 (BB_Post_Tip18_BuffetLine.png)
+Party Math, Tip No.18: the buffet line, SOLVED. 🍽️ One 6-ft serving table per 25 guests, open BOTH sides of the line, and give the drinks their own table. Do those three things and nobody stands in line while the food gets cold.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyplanning #partytips #buffet #eventplanner #lasvegas #vegasparty #tablerentals #partyrentals
+
+### 2 · Midday — Holiday Run (BB_Post_HolidayRun_BG.png)
+October 1st. The holiday run starts TODAY. 🎃🦃🎄 Halloween, Friendsgiving, Thanksgiving, holiday parties, NYE — the next 92 days hold more parties than the rest of the year combined. The hosts who win the holidays lock in tables & chairs NOW, not the week of.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#holidayseason #q4 #friendsgiving #thanksgiving #holidayparty #nye #lasvegas #partyrentals #tablesandchairs
+
+### 3 · Afternoon — 🚨 VENUE SPACE DEBUT (BB_Venue_80Guests.png)
+BIG announcement: we don't just bring the party — we can HOST it. 🏛️ Big Business now offers VENUE SPACE holding up to 80 guests. The room, the tables, the chairs, the setup — one call books it all. Birthdays, baby showers, repasts, holiday parties… no more hunting for a hall.
+📞 702-706-8287 · Book a tour · Get your free quote at bigbusinesspartyrentals.com
+#venue #eventspace #vegasvenue #lasvegas #partyvenue #birthdayvenue #babyshower #eventplanning #bigbusiness
+
+### 4 · Evening — Referral "WANTED" (BB_Referral_Thu_W3_BG.png)
+WANTED: people who know people. 🤝 Got a friend planning a party? Send them our way, they drop your name, and when their event is done YOU get paid — up to $100 cash per booking. No limit on referrals.
+Reward based on booking size, up to $100 · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #sidehustle #lasvegas #vegas #partyrentals #easymoney #network
+
+### 5 · Halloween countdown (BB_Halloween_30Nights.png)
+3-0. 🎃 Exactly ONE MONTH till Halloween night — and it lands on a SATURDAY. Costume's easy. Seating for the whole crew? That's the part people forget. Tables & chairs delivered, set up & picked up.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #30days #spookyseason #october #halloweenparty #lasvegas #vegas #partyrentals
+
+### 6 · Halloween reel (BB_Halloween_Reel_ZombieLineDance.mp4)
+The undead pulled up to the function and hit the ZOMBIE SLIDE. 🧟‍♂️🕺 One of them left it ALL on the dance floor (literally — his whole arm). But the chairs? Danced on all night, held all night. Strong enough for the undead.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#zombie #halloween #funnyreels #zombiedance #lineDance #spookyseason #lasvegas #partyrentals #comedy
+
+### 7 · Evening reel (BB3_Reel_Thu_ChairCount.mp4)
+He counted the chairs five times and got five different numbers. 😂 Save yourself the headache — tell us the guest count, we do the math AND the delivery.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#funnyreels #partyproblems #chaircount #vegas #lasvegas #partyrentals #comedy

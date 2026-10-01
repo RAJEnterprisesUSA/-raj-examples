@@ -1,0 +1,76 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2e8d8;
+  background:radial-gradient(circle at 50% 34%, #241040 0%, #140823 50%, #060309 100%)}
+.frame{position:absolute;inset:30px;border:2px solid #c9641e}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.webTL{position:absolute;top:32px;left:32px;width:150px;height:150px;opacity:.5}
+.webTR{position:absolute;top:32px;right:32px;width:150px;height:150px;opacity:.5;transform:scaleX(-1)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:52px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:10px;color:#ff9d4d}
+.pk{margin-top:26px;position:relative;width:460px;height:400px}
+.pk svg{width:100%;height:100%;filter:drop-shadow(0 0 48px rgba(255,140,46,.45))}
+.nights{font-family:'Archivo Black';font-size:56px;line-height:1.1;margin-top:20px;color:#f6f1e4}
+.nights em{font-style:normal;color:#ff8c2e}
+.date{margin-top:16px;font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:6px;color:#ffb36b}
+.sub{margin-top:24px;font-weight:600;font-size:23px;color:#d9cbb6;line-height:1.55;max-width:860px}
+.sub b{color:#ff9d4d}
+.cta{margin-top:24px;background:linear-gradient(180deg,#ffa54f,#d86a14);color:#1d0d05;
+  font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:3px;padding:15px 48px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#ffb36b;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cbb6;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="frame"></div>
+  <svg class="webTL" viewBox="0 0 100 100"><g stroke="#b9a6c9" stroke-width="1.1" fill="none" opacity=".8">
+    <path d="M0 0 L100 12 M0 0 L86 36 M0 0 L58 64 M0 0 L30 88 M0 0 L8 100"/>
+    <path d="M28 4 Q26 14 22 20 Q16 28 10 30 Q4 32 2 28"/>
+    <path d="M56 8 Q52 26 42 38 Q30 50 18 54 Q8 58 4 54"/>
+    <path d="M84 12 Q76 38 60 56 Q44 74 26 80 Q12 84 6 80"/>
+  </g></svg>
+  <svg class="webTR" viewBox="0 0 100 100"><g stroke="#b9a6c9" stroke-width="1.1" fill="none" opacity=".8">
+    <path d="M0 0 L100 12 M0 0 L86 36 M0 0 L58 64 M0 0 L30 88 M0 0 L8 100"/>
+    <path d="M28 4 Q26 14 22 20 Q16 28 10 30 Q4 32 2 28"/>
+    <path d="M56 8 Q52 26 42 38 Q30 50 18 54 Q8 58 4 54"/>
+    <path d="M84 12 Q76 38 60 56 Q44 74 26 80 Q12 84 6 80"/>
+  </g></svg>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; THE COUNTDOWN IS ON &nbsp;◆</div>
+    <div class="pk">
+      <svg viewBox="0 0 460 400">
+        <path d="M230 46 q-10 -26 8 -40 q22 2 20 34 z" fill="#3f7a33" stroke="#241a10" stroke-width="6"/>
+        <ellipse cx="230" cy="220" rx="196" ry="158" fill="#ff7a1a" stroke="#241a10" stroke-width="8"/>
+        <ellipse cx="134" cy="220" rx="58" ry="148" fill="rgba(0,0,0,.14)"/>
+        <ellipse cx="326" cy="220" rx="58" ry="148" fill="rgba(0,0,0,.14)"/>
+        <ellipse cx="230" cy="220" rx="88" ry="154" fill="rgba(255,255,255,.07)"/>
+        <path d="M118 140 L168 180 L86 180 Z" fill="#ffe9a8"/>
+        <path d="M342 140 L374 180 L292 180 Z" fill="#ffe9a8"/>
+        <text x="230" y="300" text-anchor="middle" font-family="Archivo Black" font-size="150"
+          fill="#ffe9a8" stroke="#241a10" stroke-width="5" paint-order="stroke">30</text>
+      </svg>
+    </div>
+    <div class="nights"><em>NIGHTS</em> TILL HALLOWEEN</div>
+    <div class="date">SATURDAY · OCTOBER 31</div>
+    <div class="sub">One month out — right on the nose. Costume's easy. <b>Seating for the whole crew?</b> That's the part people forget. Tables &amp; chairs delivered, set up &amp; picked up.</div>
+    <div class="cta">BOOK THE 31st — 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
