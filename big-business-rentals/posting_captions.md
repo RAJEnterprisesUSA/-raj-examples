@@ -238,10 +238,11 @@ A ghost pulled up to the party and went RIGHT through the cheap chair. 👻 Coul
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #ghost #halloween #funnyreels #spookyseason #october #lasvegas #partyrentals #comedy
 
-### 7 · Pink October day 2 (BB_PinkOctober_Day2_KnowTheSigns.mp4)
-Pink October, day 2: a lump is not the only sign. 🎀 Swelling, dimpling, nipple changes, redness, a change in size or shape... know your normal and notice what changes. Here is the good news: most changes are NOT cancer. But every change deserves a doctor. Checked beats worried, every time.
+### 7 · Pink October, Friday video (BB_PinkOctober_MonthlyCheck.mp4)
+Pink October continues: the monthly check. 🎀 Three steps, five minutes, once a month. LOOK in the mirror for anything new. FEEL with your fingertips, small circles, breast and underarm. TELL your doctor about anything different. And here is your hope: more than 4 MILLION breast cancer survivors are living in the U.S. right now. Early detection is why.
 📞 702-706-8287 · bigbusinesspartyrentals.com
-#breastcancerawareness #pinkoctober #knowthesigns #earlydetection #knowyournormal #pinkribbon #lasvegas
+#breastcancerawareness #pinkoctober #monthlycheck #selfcheck #earlydetection #knowyournormal #pinkribbon #lasvegas
+(Know the Signs video moved to the Saturday bank)
 
 ### 8 · Evening reel (BB3_Reel_Fri_TheWorm.mp4)
 Friday night and Derrick hit the WORM at the function. 😂 The floor survived. The chairs survived. His pride? Pending. Party hard, we bring seating that parties harder.
@@ -258,10 +259,19 @@ A ghost pulled up to the party and could not even sit down. Cheap chairs will no
 IG: @bigbusiness_rentals_events
 #Shorts #Ghost #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
 
-### BB_PinkOctober_Day2_KnowTheSigns.mp4
+### BB_PinkOctober_MonthlyCheck.mp4
+**Title:** Look. Feel. Tell. 🎀 The 5 minute monthly check
+**Description:**
+The monthly check, in three steps: LOOK in the mirror for anything new, FEEL with your fingertips in small circles, breast and underarm, and TELL your doctor about anything different. More than 4 million breast cancer survivors are living in the U.S. right now, and early detection is why.
+Source: American Cancer Society
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #MonthlyCheck #SelfCheck #EarlyDetection #PinkRibbon
+
+### SATURDAY BANK — BB_PinkOctober_Day2_KnowTheSigns.mp4 (unused, saved for Saturday)
 **Title:** A lump is not the only sign 🎀 Know the signs
 **Description:**
-Pink October, day 2: signs to watch for. Swelling, skin dimpling, nipple changes, redness, a change in size or shape. Most changes are NOT cancer, but every change deserves a doctor. Checked beats worried, every time.
+Signs to watch for: swelling, skin dimpling, nipple changes, redness, a change in size or shape. Most changes are NOT cancer, but every change deserves a doctor. Checked beats worried, every time.
 Sources: American Cancer Society, U.S. CDC
 📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
 IG: @bigbusiness_rentals_events
