@@ -1,0 +1,64 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.08) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:9px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:55px;line-height:1.12;margin-top:14px;color:#f6f1e4;white-space:nowrap}
+h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ticket{margin-top:30px;width:800px;position:relative;background:linear-gradient(135deg,#f3d388,#c9a04a 60%,#b08d3e);
+  border-radius:22px;padding:34px 40px 30px;color:#2b2008;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.ticket:before,.ticket:after{content:'';position:absolute;width:44px;height:44px;border-radius:50%;
+  background:#241043;top:50%;transform:translateY(-50%)}
+.ticket:before{left:-22px}.ticket:after{right:-22px}
+.ticket .perf{position:absolute;left:70px;right:70px;top:50%;border-top:3px dashed rgba(43,32,8,.4)}
+.ticket .tk{font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:10px}
+.ticket .big{font-family:'Archivo Black';font-size:72px;line-height:1.05;margin-top:6px}
+.ticket .adm{font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:4px;margin-top:26px;padding-top:22px}
+.ticket .val{font-family:'Archivo Black';font-size:56px;margin-top:4px}
+.sub{margin-top:28px;font-weight:600;font-size:24px;color:#d8ceb6;line-height:1.55;max-width:880px}
+.sub b{color:#E5B84B}
+.fine{margin-top:16px;font-weight:600;font-size:15px;color:#8f84a8;letter-spacing:.5px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; THE REFERRAL PROGRAM &nbsp;◆</div>
+    <h1>EVERY FRIEND YOU'VE GOT<br>IS A <em>GOLDEN TICKET.</em></h1>
+    <div class="ticket">
+      <div class="perf"></div>
+      <div class="tk">★ GOLDEN TICKET ★</div>
+      <div class="big">REFER &amp; EARN</div>
+      <div class="adm">ADMIT: ANYONE PLANNING A PARTY</div>
+      <div class="val">WORTH UP TO $100</div>
+    </div>
+    <div class="sub">They call, they drop your name, they book. Their event happens and <b>you cash in.</b> No limit on tickets.</div>
+    <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

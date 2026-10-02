@@ -202,3 +202,75 @@ Sources: American Cancer Society, USPSTF 2024, U.S. CDC
 📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
 IG: @bigbusiness_rentals_events
 #Shorts #BreastCancerAwareness #PinkOctober #EarlyDetection #KnowYourNormal #PinkRibbon #LasVegas
+
+---
+
+## FRIDAY — OCT 2 (Week 3) — 8-POST DAY
+
+### 1 · Morning — Tip No.19 (BB_Post_Tip19_PlusOneBuffer_BG.png)
+Party Math, Tip No.19: the plus-one buffer. Whatever your guest list says, add 10 percent. Invite 50, seat 55. RSVPs lie, the food line never does. Five extra chairs beat five standing guests every single time.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyplanning #partytips #partymath #eventplanner #lasvegas #vegasparty #chairrentals #partyrentals
+
+### 2 · Midday — Weekend Forecast (BB_Post_WeekendForecast.png)
+The weekend forecast is IN. 🎉 100% chance of kickbacks Friday, heavy seating expected Saturday, scattered cookouts Sunday. First weekend of October and the parties are rolling in from every direction. Tables and chairs delivered before the storm hits.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#weekendvibes #october #vegasweekend #lasvegas #partyrentals #tablesandchairs #weekendforecast
+
+### 3 · Afternoon — Venue flyer #2 (BB_Venue_Fri_BG.png)
+Your party deserves a home. 🏛️ Our venue space holds up to 80 guests, with our own tables, chairs and setup already on site. Walk in and party. Weekends book first and holiday dates are already moving, so come take a tour.
+📞 702-706-8287 · Book a tour · bigbusinesspartyrentals.com
+#venue #eventspace #vegasvenue #lasvegas #partyvenue #birthdayvenue #babyshower #holidayparty #bigbusiness
+
+### 4 · Evening — Golden Ticket referral (BB_Referral_Fri_W3.png)
+Every friend you've got is a golden ticket. 🎫 They call, they drop your name, they book their party, and after their event YOU cash in, up to $100 per booking. No limit on tickets.
+Reward based on booking size, up to $100 · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #goldenticket #sidehustle #lasvegas #vegas #partyrentals #network
+
+### 5 · Halloween countdown (BB_Halloween_29Nights.png)
+2-9 and counting. 🦇 We are officially UNDER 30 nights till Halloween. The costume can wait till the 30th. The seating cannot. Tables and chairs delivered, set up and picked up.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #29days #spookyseason #october #halloweenparty #lasvegas #vegas #partyrentals
+
+### 6 · Halloween reel (BB_Halloween_Reel_GhostGuest.mp4)
+A ghost pulled up to the party and went RIGHT through the cheap chair. 👻 Could not grab it, could not sit on it. Then he tried ours... and landed. Cheap chairs will not even hold a spirit. Ours? Ghost-proof.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#ghost #halloween #funnyreels #spookyseason #october #lasvegas #partyrentals #comedy
+
+### 7 · Pink October day 2 (BB_PinkOctober_Day2_KnowTheSigns.mp4)
+Pink October, day 2: a lump is not the only sign. 🎀 Swelling, dimpling, nipple changes, redness, a change in size or shape... know your normal and notice what changes. Here is the good news: most changes are NOT cancer. But every change deserves a doctor. Checked beats worried, every time.
+📞 702-706-8287 · bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #knowthesigns #earlydetection #knowyournormal #pinkribbon #lasvegas
+
+### 8 · Evening reel (BB3_Reel_Fri_TheWorm.mp4)
+Friday night and Derrick hit the WORM at the function. 😂 The floor survived. The chairs survived. His pride? Pending. Party hard, we bring seating that parties harder.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#funnyreels #theworm #fridaynight #dancemoves #vegas #lasvegas #partyrentals #comedy
+
+## YOUTUBE SHORTS CAPTIONS (Friday Oct 2)
+
+### BB_Halloween_Reel_GhostGuest.mp4
+**Title:** The ghost went RIGHT through the cheap chair 👻
+**Description:**
+A ghost pulled up to the party and could not even sit down. Cheap chairs will not hold a spirit. Ours are ghost-proof. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Ghost #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
+
+### BB_PinkOctober_Day2_KnowTheSigns.mp4
+**Title:** A lump is not the only sign 🎀 Know the signs
+**Description:**
+Pink October, day 2: signs to watch for. Swelling, skin dimpling, nipple changes, redness, a change in size or shape. Most changes are NOT cancer, but every change deserves a doctor. Checked beats worried, every time.
+Sources: American Cancer Society, U.S. CDC
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #KnowTheSigns #EarlyDetection #PinkRibbon
+
+### BB3_Reel_Fri_TheWorm.mp4
+**Title:** He hit the WORM at the function 😂
+**Description:**
+Friday night Derrick hit the worm and the chairs survived. Party hard, we bring seating that parties harder. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Funny #TheWorm #FridayNight #Comedy #LasVegas #PartyRentals
