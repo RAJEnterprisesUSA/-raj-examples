@@ -164,3 +164,41 @@ The undead pulled up to the function and hit the ZOMBIE SLIDE. 🧟‍♂️🕺
 He counted the chairs five times and got five different numbers. 😂 Save yourself the headache — tell us the guest count, we do the math AND the delivery.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #funnyreels #partyproblems #chaircount #vegas #lasvegas #partyrentals #comedy
+
+### EXTRA · Pink October (BB_PinkOctober_Awareness.mp4)
+October is Breast Cancer Awareness Month. 🎀 One quick minute of facts that could save a life: 1 in 8 women will be diagnosed in her lifetime, but caught early the 5 year survival rate is about 99 percent. Self check monthly, know your normal, and if you are 40 or older, ask your doctor about mammograms. Men, this one is for you too, about 1 in 100 cases is a man.
+Big Business goes PINK this month. Fighters, survivors, families: we stand with you. Share this with somebody you love. 💗
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #earlydetection #knowyournormal #mammogram #pinkribbon #lasvegas #vegas #bigbusiness
+
+---
+
+## YOUTUBE SHORTS CAPTIONS (Thursday Oct 1)
+Format: Title goes in the video title field. Description goes in the description box.
+
+### BB_Halloween_Reel_ZombieLineDance.mp4
+**Title:** The Zombie Line Dance 🧟 Even the undead need strong chairs
+**Description:**
+The undead pulled up to the function and hit the zombie slide. One of them left it ALL on the dance floor. The chairs held all night though. Strong enough for the undead.
+Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Zombie #FunnyShorts #LineDance #SpookySeason #LasVegas #PartyRentals
+
+### BB3_Reel_Thu_ChairCount.mp4
+**Title:** He counted the chairs 5 times and got 5 different numbers 😂
+**Description:**
+Save yourself the headache. Tell us the guest count, we do the math AND the delivery. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Funny #PartyProblems #Comedy #LasVegas #PartyRentals #Derrick
+
+### BB_PinkOctober_Awareness.mp4
+**Title:** 1 in 8. Know the facts. 🎀 Breast Cancer Awareness Month
+**Description:**
+October is Breast Cancer Awareness Month. One quick minute of facts that could save a life: 1 in 8 women will be diagnosed in her lifetime, but caught early the 5 year survival rate is about 99 percent. Self check monthly, know your normal, and ask your doctor about mammograms by age 40. Men, about 1 in 100 cases is a man, so this is for you too.
+Big Business goes PINK this month. Fighters, survivors, families: we stand with you.
+Sources: American Cancer Society, USPSTF 2024, U.S. CDC
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #EarlyDetection #KnowYourNormal #PinkRibbon #LasVegas
