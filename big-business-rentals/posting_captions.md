@@ -284,3 +284,69 @@ Friday night Derrick hit the worm and the chairs survived. Party hard, we bring 
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Funny #TheWorm #FridayNight #Comedy #LasVegas #PartyRentals
+
+---
+
+## SATURDAY — OCT 3 (Week 3) — 8-POST DAY
+
+### 1 · Morning — Tip No.20 (BB_Post_Tip20_KidPartyMath.png)
+Party Math, Tip No.20: kid party math. 🎈 One 6-ft table seats 8 kids, every kid shows up with a grown-up who also needs a chair, and do not forget the cake table and the gift table. Invite 15 kids, plan for 35 humans. We do the math with you when you call.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#kidsparty #birthdayparty #partyplanning #partytips #partymath #lasvegas #vegasparty #partyrentals
+
+### 2 · Midday — Party Day Handled (BB_Post_PartyDayHandled_BG.png)
+Your party day, handled. 🪑 Morning: we pull up and set up. Afternoon: you handle the food, the music and the fit. Party time: everybody sits, nobody carries a folding table in church clothes. After: we make it all disappear. You never lift a thing.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#saturday #partyday #deliveryandsetup #lasvegas #vegasparty #partyrentals #tablesandchairs
+
+### 3 · Afternoon — Venue flyer (BB_Venue_Sat_EveryOccasion.png)
+One room. Every occasion. 🏛️ Birthdays, baby showers, repasts, holiday parties... our venue space holds up to 80 guests with tables and chairs already on site. Come take a tour before your date is gone.
+📞 702-706-8287 · Book a tour · bigbusinesspartyrentals.com
+#venue #eventspace #vegasvenue #lasvegas #partyvenue #birthdayvenue #babyshower #repast #holidayparty
+
+### 4 · Evening — Breaking News referral (BB_Referral_Sat_W3_BG.png)
+BREAKING: local plug gets paid for knowing people. 📰 All they did was tell a friend "call Big Business and drop my name." Friend books, event happens, plug collects up to $100. Authorities confirm there is no limit on how many times you can do it.
+Reward based on booking size, up to $100 · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #breakingnews #sidehustle #lasvegas #vegas #partyrentals #network
+
+### 5 · Halloween countdown (BB_Halloween_28Nights.png)
+2-8. 🕷️ Four weekends till Halloween, and the 31st IS one of them. The spider already picked his spot. Have you picked your seating? Tables and chairs delivered, set up and picked up.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #28days #spookyseason #october #halloweenparty #lasvegas #vegas #partyrentals
+
+### 6 · Halloween reel (BB_Halloween_Reel_SkeletonLimbo.mp4)
+Limbo night at the function went GREAT until somebody lost his head. 💀 Literally. Skull rolled clean across the floor, and the party did not even pause. Found it, popped it back on, party on. Sturdy tables, limbo ready.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#skeleton #limbo #halloween #funnyreels #spookyseason #lasvegas #partyrentals #comedy
+
+### 7 · Pink October (BB_PinkOctober_Day2_KnowTheSigns.mp4)
+Pink October: a lump is not the only sign. 🎀 Swelling, dimpling, nipple changes, redness, a change in size or shape... know your normal and notice what changes. Here is the good news: most changes are NOT cancer. But every change deserves a doctor. Checked beats worried, every time.
+📞 702-706-8287 · bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #knowthesigns #earlydetection #knowyournormal #pinkribbon #lasvegas
+
+### 8 · Evening reel (BB3_Reel_Sat_SetupShowdown.mp4)
+Saturday night SETUP SHOWDOWN. 😂 Derrick versus the clock, and the clock never had a chance. Delivery, setup and breakdown so smooth it looks like a sport.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#funnyreels #setupshowdown #saturdaynight #vegas #lasvegas #partyrentals #comedy
+
+## YOUTUBE SHORTS CAPTIONS (Saturday Oct 3)
+
+### BB_Halloween_Reel_SkeletonLimbo.mp4
+**Title:** Limbo night: he LOST HIS HEAD 💀
+**Description:**
+Limbo night at the function went great until the skull rolled across the floor. Found it, popped it back on, party on. Sturdy tables, limbo ready. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Skeleton #Limbo #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
+
+### BB_PinkOctober_Day2_KnowTheSigns.mp4
+(YouTube caption already in the Saturday bank section above)
+
+### BB3_Reel_Sat_SetupShowdown.mp4
+**Title:** Saturday night SETUP SHOWDOWN 😂
+**Description:**
+Derrick versus the clock, and the clock never had a chance. Delivery, setup and breakdown so smooth it looks like a sport. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Funny #Setup #SaturdayNight #Comedy #LasVegas #PartyRentals

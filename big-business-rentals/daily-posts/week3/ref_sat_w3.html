@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 90px 44px}
+.paper{width:840px;background:#f2ead3;border-radius:8px;color:#241f14;padding:28px 40px 26px;
+  box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.mast{font-family:'Playfair';font-weight:900;font-size:44px;letter-spacing:2px;border-bottom:3px solid #241f14;padding-bottom:10px}
+.date{font-family:'Oswald';font-weight:600;font-size:16px;letter-spacing:4px;color:#6b6350;margin-top:8px;
+  border-bottom:1px solid rgba(36,31,20,.35);padding-bottom:8px}
+.headline{font-family:'Archivo Black';font-size:56px;line-height:1.08;margin-top:18px}
+.sub2{font-family:'Playfair';font-weight:900;font-size:24px;font-style:italic;color:#4a4332;margin-top:12px}
+.cols{display:flex;gap:22px;margin-top:16px;text-align:left}
+.col{flex:1;font-weight:600;font-size:16.5px;line-height:1.5;color:#3a3426}
+.col b{color:#8a6a1c}
+.reward{margin-top:16px;border:3px double #241f14;padding:10px 0;font-family:'Archivo Black';font-size:30px}
+.fine{margin-top:16px;font-weight:600;font-size:15px;color:#8f84a8;letter-spacing:.5px;max-width:860px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="paper">
+      <div class="mast">THE BIG BUSINESS BULLETIN</div>
+      <div class="date">SATURDAY EDITION &nbsp;·&nbsp; LAS VEGAS, NV &nbsp;·&nbsp; FREE (LIKE THE MONEY)</div>
+      <div class="headline">LOCAL PLUG GETS PAID<br>FOR KNOWING PEOPLE</div>
+      <div class="sub2">"All I did was drop my name," says source, counting cash</div>
+      <div class="cols">
+        <div class="col">Residents across the valley are reportedly collecting <b>up to $100 per referral</b> simply by telling friends who rent tables &amp; chairs for their parties. Authorities confirm there is <b>no limit</b> on how many times it can be done.</div>
+        <div class="col">Witnesses say the process takes one sentence: <b>"Call Big Business and tell them I sent you."</b> Once the friend's event is completed, the reward is paid out. Officials describe the scheme as "completely legal and honestly kind of genius."</div>
+      </div>
+      <div class="reward">REWARD: UP TO $100 PER BOOKING</div>
+    </div>
+    <div class="fine">Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

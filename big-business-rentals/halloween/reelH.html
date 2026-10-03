@@ -1206,6 +1206,7 @@ function drawSkeleton(p){
   ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(ex,ey);ctx.lineTo(hx,hy);ctx.stroke();
   ctx.fillStyle=BONE; ctx.beginPath(); ctx.arc(hx,hy,14,0,7); ctx.fill(); ctx.stroke();
   ctx.restore();
+  if(!p.noHead){
   ctx.save(); ctx.translate(8,-192); ctx.rotate(rad(p.headTilt||0));
   ctx.lineWidth=8; ctx.fillStyle=BONE; ctx.strokeStyle=INK;
   ctx.beginPath(); ctx.arc(0,-48,52,0,7); ctx.fill(); ctx.stroke();
@@ -1226,6 +1227,7 @@ function drawSkeleton(p){
   }
   ctx.beginPath(); ctx.moveTo(24,-30); ctx.lineTo(30,-20); ctx.lineTo(18,-20); ctx.closePath(); ctx.fill();
   ctx.restore();
+  }
   ctx.restore();
 }
 function drawBone(x,y,ang,len){
@@ -1913,6 +1915,81 @@ function reelH8(t){
 REELS[8]=reelH8;
 SHAKES[8]=[3.55,0.3,16];
 TAGLINES[8]='SO SOLID, EVEN SPIRITS STAY SEATED.';
+
+// ---------- H9: skeleton limbo ----------
+function reelH9(t){
+  drawRoomH(t);
+  const TX=560;
+  if(t>0.15){
+    const k=easeOutBack(Math.min(1,(t-0.15)/0.4));
+    ctx.save(); ctx.translate(TX,FLOOR); ctx.scale(k,k); ctx.translate(-TX,-FLOOR);
+    drawTable(TX,0,0);
+    ctx.restore();
+  }
+  // skull (loose) after detach
+  let skullHome=null;
+  if(t>=3.9){
+    const k=ease(Math.min(1,(t-3.9)/1.1));
+    let sx=lerp(TX-190,TX+380,k);
+    let sy=FLOOR-50-Math.abs(Math.sin(k*Math.PI*2.2))*90*(1-k)-130*(1-k);
+    let srot=k*720;
+    if(t>=5.6){
+      const j=ease(Math.min(1,(t-5.6)/0.7));
+      const bx=TX+290+8, by=HIP_STAND-240;
+      sx=lerp(TX+380,bx,j);
+      sy=lerp(FLOOR-50,by,j)-Math.sin(j*Math.PI)*160;
+      srot=720-j*360;
+      if(j>=1) skullHome=true;
+    }
+    if(!skullHome) drawSkullLoose(sx,sy,srot,(t<5.9)?'wide':undefined);
+  }
+  const reunited=(t>=6.3);
+  let pose;
+  if(t<1.5){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-200,TX-310,ease(t/1.5)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:30+12*step,el:30}, headTilt:Math.sin(t*3)*5};
+  } else if(t<2.3){
+    const k=ease((t-1.5)/0.8);
+    pose={x:TX-310, y:lerp(HIP_STAND,FLOOR-170,k), face:1, rot:-35*k,
+      legs:[{hip:lerp(8,58,k),knee:lerp(8,-72,k)},{hip:lerp(-4,48,k),knee:lerp(8,-62,k)}],
+      arm:{sh:lerp(30,92,k),el:lerp(30,-16,k)}, mouth:'o'};
+  } else if(t<4.8){
+    const k=ease((t-2.3)/2.5);
+    const x=lerp(TX-310,TX+200,k);
+    const d=Math.max(0,1-Math.abs(x-TX)/310);
+    pose={x:x, y:FLOOR-170+40*d, face:1, rot:-35-46*d,
+      legs:[{hip:58+9*Math.sin(t*13),knee:-74},{hip:48-9*Math.sin(t*13),knee:-64}],
+      arm:{sh:94,el:-18}, eyes:(t>3.7?'wide':undefined),
+      noHead:(t>=3.9)};
+    if(t>=3.95&&t<4.9){const kk=easeOutBack(Math.min(1,(t-3.95)/0.3)); starburst(TX-90,FLOOR-560,kk*0.9,'POP!');}
+  } else if(t<5.6){
+    const k=ease((t-4.8)/0.8);
+    pose={x:lerp(TX+200,TX+290,k), y:lerp(FLOOR-170,HIP_STAND,k), face:1, rot:lerp(-25,0,k),
+      legs:[{hip:lerp(58,8,k),knee:lerp(-74,8,k)},{hip:lerp(48,-4,k),knee:lerp(-64,8,k)}],
+      arm:{sh:lerp(94,165,k),el:lerp(-18,-70,k)}, noHead:true};
+  } else if(t<6.3){
+    pose={x:TX+290, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-4,knee:8}],
+      arm:{sh:150,el:-55}, noHead:true};
+  } else {
+    const hop=Math.abs(Math.sin(t*6))*12;
+    pose={x:TX+290, y:HIP_STAND-hop, face:1,
+      legs:[{hip:10,knee:6},{hip:-6,knee:6}],
+      arm:{sh:150+Math.sin(t*9)*14,el:-20}, headTilt:Math.sin(t*7)*9};
+    sparkle(TX+290, HIP_STAND-420, t);
+  }
+  drawSkeleton(pose);
+  if(t>=0.3&&t<1.7) caption(['LIMBO NIGHT','AT THE FUNCTION.'],240,(t-0.3)/0.35,56);
+  if(t>=2.4&&t<3.6) caption(['HOW LOW','CAN HE GO?'],240,(t-2.4)/0.35);
+  if(t>=4.2&&t<5.5) caption(['WELP.','HE LOST HIS HEAD.'],240,(t-4.2)/0.35,56);
+  if(t>=6.6&&t<7.6) caption(['FOUND IT.','PARTY ON.'],240,(t-6.6)/0.35);
+  if(t>=7.8&&t<8.9) caption(['STURDY TABLES.','LIMBO READY.'],240,(t-7.8)/0.35,56);
+}
+REELS[9]=reelH9;
+SHAKES[9]=[3.92,0.3,16];
+TAGLINES[9]='PARTY TILL YOU FALL APART. WE GOT YOU.';
 </script>
 </body></html>
 

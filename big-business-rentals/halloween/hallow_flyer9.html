@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2e8d8;
+  background:radial-gradient(circle at 50% 36%, #241040 0%, #140823 50%, #060309 100%)}
+.frame{position:absolute;inset:30px;border:2px solid #c9641e}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.thread{position:absolute;top:32px;left:50%;width:2px;height:218px;background:rgba(230,220,235,.55)}
+.spider{position:absolute;top:238px;left:50%;transform:translateX(-50%);width:110px}
+.webL{position:absolute;top:32px;left:32px;width:170px;height:170px;opacity:.45}
+.webR{position:absolute;top:32px;right:32px;width:170px;height:170px;opacity:.45;transform:scaleX(-1)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:54px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:10px;color:#ff9d4d}
+.num{font-family:'Archivo Black';font-size:400px;line-height:1.0;margin-top:148px;
+  background:linear-gradient(180deg,#ffc98f 10%,#ff8c2e 55%,#d8601a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 50px rgba(255,140,46,.35))}
+.nights{font-family:'Archivo Black';font-size:54px;line-height:1.1;color:#f6f1e4}
+.nights em{font-style:normal;color:#ff8c2e}
+.date{margin-top:14px;font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:6px;color:#ffb36b}
+.sub{margin-top:20px;font-weight:600;font-size:23px;color:#d9cbb6;line-height:1.5;max-width:860px}
+.sub b{color:#ff9d4d}
+.cta{margin-top:22px;background:linear-gradient(180deg,#ffa54f,#d86a14);color:#1d0d05;
+  font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:3px;padding:15px 48px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#ffb36b;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cbb6;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="frame"></div>
+  <svg class="webL" viewBox="0 0 100 100"><g stroke="#b9a6c9" stroke-width="1.1" fill="none" opacity=".8">
+    <path d="M0 0 L100 12 M0 0 L86 36 M0 0 L58 64 M0 0 L30 88 M0 0 L8 100"/>
+    <path d="M28 4 Q26 14 22 20 Q16 28 10 30 Q4 32 2 28"/>
+    <path d="M56 8 Q52 26 42 38 Q30 50 18 54 Q8 58 4 54"/>
+    <path d="M84 12 Q76 38 60 56 Q44 74 26 80 Q12 84 6 80"/>
+  </g></svg>
+  <svg class="webR" viewBox="0 0 100 100"><g stroke="#b9a6c9" stroke-width="1.1" fill="none" opacity=".8">
+    <path d="M0 0 L100 12 M0 0 L86 36 M0 0 L58 64 M0 0 L30 88 M0 0 L8 100"/>
+    <path d="M28 4 Q26 14 22 20 Q16 28 10 30 Q4 32 2 28"/>
+    <path d="M56 8 Q52 26 42 38 Q30 50 18 54 Q8 58 4 54"/>
+    <path d="M84 12 Q76 38 60 56 Q44 74 26 80 Q12 84 6 80"/>
+  </g></svg>
+  <div class="thread"></div>
+  <svg class="spider" viewBox="0 0 110 80">
+    <g stroke="#0d0617" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M38 40 Q18 28 8 12"/><path d="M38 46 Q16 44 4 34"/><path d="M38 52 Q18 58 8 70"/><path d="M40 57 Q28 68 24 78"/>
+      <path d="M72 40 Q92 28 102 12"/><path d="M72 46 Q94 44 106 34"/><path d="M72 52 Q92 58 102 70"/><path d="M70 57 Q82 68 86 78"/>
+    </g>
+    <ellipse cx="55" cy="48" rx="24" ry="20" fill="#1a0f26" stroke="#0d0617" stroke-width="4"/>
+    <circle cx="55" cy="24" r="13" fill="#1a0f26" stroke="#0d0617" stroke-width="4"/>
+    <circle cx="50" cy="22" r="3.4" fill="#ff8c2e"/><circle cx="60" cy="22" r="3.4" fill="#ff8c2e"/>
+  </svg>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; HALLOWEEN COUNTDOWN &nbsp;◆</div>
+    <div class="num">28</div>
+    <div class="nights"><em>NIGHTS</em> TILL HALLOWEEN</div>
+    <div class="date">SATURDAY · OCTOBER 31</div>
+    <div class="sub">Four weekends left, and the 31st IS one of them. The spider already picked his spot. <b>Have you picked your seating?</b></div>
+    <div class="cta">BOOK THE 31st · 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
