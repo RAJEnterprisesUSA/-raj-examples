@@ -359,3 +359,10 @@ IG: @bigbusiness_rentals_events
 - Reels now run ~12 seconds (shorter end card) for better watch-through
 - Captions lead with a question or bold claim, plus a tag-a-friend prompt
 - Awareness videos open on the strongest stat in the first 2 seconds
+
+---
+
+## VENUE PACKAGE CAROUSEL (luxury 3-flyer set, post as one carousel)
+What if the venue came WITH the tables, chairs, backdrop and sound? 🥂 Ours does. One private Las Vegas event space, fully set before you walk in. 3 hours for $625 (up to 25 guests) or 4 hours for $800 (up to 40 guests), one price for everything. Swipe for the full breakdown, then tag somebody who needs a room for their next event.
+📞 702-706-8287 · Book your date at bigbusinesspartyrentals.com
+#vegasvenue #eventspace #privateevents #venuepackage #lasvegas #birthdayvenue #babyshower #eventplanning #bigbusiness
