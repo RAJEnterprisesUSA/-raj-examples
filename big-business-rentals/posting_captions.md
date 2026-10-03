@@ -316,7 +316,7 @@ Reward based on booking size, up to $100 · Paid after the referred event is com
 #halloween #halloweencountdown #28days #spookyseason #october #halloweenparty #lasvegas #vegas #partyrentals
 
 ### 6 · Halloween reel (BB_Halloween_Reel_SkeletonLimbo.mp4)
-Limbo night at the function went GREAT until somebody lost his head. 💀 Literally. Skull rolled clean across the floor, and the party did not even pause. Found it, popped it back on, party on. Sturdy tables, limbo ready.
+Would YOU keep dancing if your head rolled off? 💀 This skeleton did. Limbo night at the function, skull rolled clean across the floor, and the party did not even pause. Tag somebody who parties this hard. Sturdy tables, limbo ready.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #skeleton #limbo #halloween #funnyreels #spookyseason #lasvegas #partyrentals #comedy
 
@@ -326,16 +326,16 @@ Pink October: a lump is not the only sign. 🎀 Swelling, dimpling, nipple chang
 #breastcancerawareness #pinkoctober #knowthesigns #earlydetection #knowyournormal #pinkribbon #lasvegas
 
 ### 8 · Evening reel (BB3_Reel_Sat_SetupShowdown.mp4)
-Saturday night SETUP SHOWDOWN. 😂 Derrick versus the clock, and the clock never had a chance. Delivery, setup and breakdown so smooth it looks like a sport.
+How fast can one man set a whole party? ⏱️ Derrick versus the clock, and the clock never had a chance. Tag the friend who shows up when everything is already set up. 😂
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #funnyreels #setupshowdown #saturdaynight #vegas #lasvegas #partyrentals #comedy
 
 ## YOUTUBE SHORTS CAPTIONS (Saturday Oct 3)
 
 ### BB_Halloween_Reel_SkeletonLimbo.mp4
-**Title:** Limbo night: he LOST HIS HEAD 💀
+**Title:** Would YOU keep dancing if your head fell off? 💀
 **Description:**
-Limbo night at the function went great until the skull rolled across the floor. Found it, popped it back on, party on. Sturdy tables, limbo ready. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+Limbo night at the function: the skull rolled across the floor and the party did not even pause. Sturdy tables, limbo ready. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Skeleton #Limbo #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
@@ -350,3 +350,12 @@ Derrick versus the clock, and the clock never had a chance. Delivery, setup and 
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Funny #Setup #SaturdayNight #Comedy #LasVegas #PartyRentals
+
+
+---
+
+## CONTENT RULES UPDATE (from Instagram Audience Reception feedback, Oct 3)
+- Every reel cold-opens with a tease hook on screen at second zero
+- Reels now run ~12 seconds (shorter end card) for better watch-through
+- Captions lead with a question or bold claim, plus a tag-a-friend prompt
+- Awareness videos open on the strongest stat in the first 2 seconds
