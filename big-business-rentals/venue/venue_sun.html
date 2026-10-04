@@ -1,0 +1,64 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 30%, #23201a 0%, #121110 55%, #060606 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 30%,
+  rgba(229,184,75,.07) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 80px 44px}
+.newtag{font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:6px;color:#1c1a14;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);padding:8px 30px;border-radius:40px}
+h1{font-family:'Archivo Black';font-size:80px;line-height:1.05;margin-top:20px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub0{margin-top:18px;font-weight:600;font-size:26px;color:#d8ceb6;max-width:860px;line-height:1.5}
+.sub0 b{color:#E5B84B}
+.prices{display:flex;gap:24px;margin-top:34px}
+.p1{width:300px;border:2px solid #B08D3E;border-radius:16px;background:rgba(229,184,75,.06);padding:26px 0 22px}
+.p1 .h{font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:5px;color:#D6B25E}
+.p1 .v{font-family:'Archivo Black';font-size:66px;margin-top:8px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p1 .g{font-weight:600;font-size:19px;color:#bdb29b;margin-top:6px}
+.cap{margin-top:28px;font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:4px;color:#f6f1e4}
+.cap b{color:#E5B84B}
+.inc{margin-top:14px;font-weight:600;font-size:22px;color:#bdb29b}
+.cta{margin-top:26px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#1c1a14;
+  font-family:'Oswald';font-weight:600;font-size:28px;letter-spacing:3px;padding:15px 48px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="newtag">★ THE VENUE PACKAGE ★</div>
+    <h1>SKIP THE<br><em>VENUE HUNT.</em></h1>
+    <div class="sub0">One private Las Vegas event space with the tables, chairs, backdrop and sound <b>already set up, for one price.</b></div>
+    <div class="prices">
+      <div class="p1"><div class="h">3 HOURS</div><div class="v">$625</div><div class="g">up to 25 guests</div></div>
+      <div class="p1"><div class="h">4 HOURS</div><div class="v">$800</div><div class="g">up to 40 guests</div></div>
+    </div>
+    <div class="cap">SEATS 40 &nbsp;·&nbsp; HOLDS <b>80</b> STANDING</div>
+    <div class="inc">Room + rentals + setup, one call books it all</div>
+    <div class="cta">BOOK A TOUR · 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

@@ -1990,6 +1990,129 @@ function reelH9(t){
 REELS[9]=reelH9;
 SHAKES[9]=[3.92,0.3,16];
 TAGLINES[9]='PARTY TILL YOU FALL APART. WE GOT YOU.';
+
+// ---------- H10: the black cat ----------
+function drawCat(x,y,o){
+  ctx.save(); ctx.translate(x,y); const cs=o.s||1.5; ctx.scale((o.face||1)*cs,cs);
+  ctx.fillStyle='#0b0613'; ctx.strokeStyle='#0b0613';
+  if(o.pose==='trot'){
+    for(let i=0;i<4;i++){
+      const ph=Math.sin(o.t*16+i*1.6)*16;
+      ctx.save(); ctx.translate(-40+i*26,-16); ctx.rotate(rad(ph));
+      ctx.fillRect(-5,0,10,36); ctx.restore();
+    }
+    ctx.beginPath(); ctx.ellipse(0,-46,62,30,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.arc(66,-66,24,0,7); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(52,-84); ctx.lineTo(58,-104); ctx.lineTo(68,-86); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(70,-86); ctx.lineTo(80,-104); ctx.lineTo(84,-82); ctx.closePath(); ctx.fill();
+    ctx.lineWidth=12; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(-58,-54);
+    ctx.quadraticCurveTo(-92,-72+Math.sin(o.t*6)*12,-104,-112+Math.sin(o.t*5)*10);
+    ctx.stroke();
+    ctx.fillStyle='#9fe24f';
+    ctx.beginPath(); ctx.ellipse(72,-68,4.5,6,0,0,7); ctx.fill();
+  } else {
+    ctx.beginPath(); ctx.moveTo(-34,0); ctx.quadraticCurveTo(-40,-66,-10,-88);
+    ctx.quadraticCurveTo(14,-100,26,-80); ctx.quadraticCurveTo(40,-40,36,0); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.arc(6,-102,26,0,7); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-12,-120); ctx.lineTo(-6,-142); ctx.lineTo(6,-122); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(10,-122); ctx.lineTo(22,-140); ctx.lineTo(26,-118); ctx.closePath(); ctx.fill();
+    ctx.lineWidth=12; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(34,-8);
+    ctx.quadraticCurveTo(66,-6,64,-44+Math.sin((o.t||0)*3)*8); ctx.stroke();
+    ctx.fillStyle='#9fe24f';
+    ctx.beginPath(); ctx.ellipse(-2,-104,4.5,6.5,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16,-102,4.5,6.5,0,0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function drawStack(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(rot||0));
+  ctx.lineWidth=7; ctx.strokeStyle=INK;
+  for(let i=0;i<3;i++){
+    ctx.fillStyle=i%2?'#e8eaee':'#f7f8fa';
+    rr(-62,-i*26-24,124,22,8); ctx.fill(); ctx.stroke();
+  }
+  ctx.restore();
+}
+function reelH10(t){
+  drawRoomH(t);
+  const NX=780;
+  if(t>=5.6){
+    const k=ease(Math.min(1,(t-5.6)/0.6));
+    drawChair(lerp(W+240,NX,k),0,0,0);
+    if(t>7.2) sparkle(NX+46, SEAT_TOP-160, t);
+  }
+  // dropped stack pieces
+  if(t>=4.0){
+    drawStack(500,FLOOR-6,-14);
+    drawStack(635,FLOOR-2,9);
+  }
+  // uncle
+  let pose=null, carry=true;
+  if(t<1.6){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,300,ease(t/1.6)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'o'};
+  } else if(t<2.5){
+    const back=ease(Math.min(1,(t-1.7)/0.5))*60;
+    pose={x:300-back, y:HIP_STAND, face:1, lean:-10,
+      legs:[{hip:4,knee:6},{hip:-10,knee:6}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'o', eyes:'wide', headTilt:-6};
+  } else if(t<3.8){
+    const k=ease((t-2.5)/1.3);
+    const step=Math.sin(t*9);
+    pose={x:lerp(240,560,k), y:HIP_STAND-Math.abs(step)*20, face:1, lean:-6,
+      legs:[{hip:52*step,knee:-20},{hip:-52*step,knee:-20}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'o', eyes:'wide'};
+  } else if(t<4.4){
+    const k=Math.min(1,(t-3.8)/0.6);
+    carry=(t<4.0);
+    pose={x:560, y:HIP_STAND, face:(k<0.5?1:-1), rot:Math.sin(k*Math.PI)*14, lean:0,
+      legs:[{hip:10,knee:8},{hip:-8,knee:8}],
+      arm:{sh:120,el:-30}, arm2:{sh:110,el:-20}, mouth:'o', eyes:'wide', headTilt:Math.sin(t*20)*8};
+    if(t>=4.05&&t<4.9){const kk=easeOutBack(Math.min(1,(t-4.05)/0.3)); starburst(770,FLOOR-710,kk*0.9,'CRASH!');}
+    if(t>=4.0) dust(570,FLOOR,(t-4.0)/0.8);
+  } else if(t<6.4){
+    carry=false;
+    pose={x:560, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:30,el:40}, mouth:'sad', headTilt:Math.sin(t*5)*7};
+  } else {
+    carry=false;
+    const cheer=Math.sin(t*9);
+    pose={x:520, y:HIP_STAND-Math.abs(Math.sin(t*6))*8, face:1,
+      legs:[{hip:10,knee:6},{hip:-6,knee:6}],
+      arm:{sh:150+cheer*14,el:-20}, mouth:'smile', headTilt:cheer*5};
+  }
+  drawMan(pose);
+  if(carry) drawStack(pose.x+108*pose.face, pose.y-78, (pose.rot||0)+Math.sin(t*9)*3);
+  // the cat
+  if(t>=1.3&&t<2.4){
+    const k=(t-1.3)/1.1;
+    drawCat(lerp(W+140,-160,k), FLOOR-4, {pose:'trot', face:-1, t:t});
+  } else if(t>=3.3&&t<4.3){
+    const k=(t-3.3)/1.0;
+    drawCat(lerp(-160,880,k), FLOOR-4, {pose:'trot', face:1, t:t});
+  } else if(t>=4.3&&t<5.9){
+    drawCat(880, FLOOR-4, {pose:'sit', face:-1, t:t});
+  } else if(t>=5.9&&t<6.6){
+    const k=ease((t-5.9)/0.7);
+    const hop=Math.sin(k*Math.PI)*170;
+    drawCat(lerp(880,NX+10,k), lerp(FLOOR-4,SEAT_TOP+4,k)-hop, {pose:(k<0.8?'trot':'sit'), face:-1, t:t});
+  } else if(t>=6.6){
+    drawCat(NX+10, SEAT_TOP+4, {pose:'sit', face:-1, t:t});
+  }
+  if(t<1.6) caption(['NEVER CROSS A BLACK CAT','ON SETUP DAY.'],240,(t+0.35)/0.35,52);
+  if(t>=2.0&&t<3.1) caption(['NOPE. BAD LUCK.','GO AROUND.'],240,(t-2.0)/0.35);
+  if(t>=4.4&&t<5.5) caption(['THE CAT:','UNBOTHERED.'],240,(t-4.4)/0.35);
+  if(t>=6.8&&t<7.9) caption(['EVEN BAD LUCK','TAKES A SEAT.'],240,(t-6.8)/0.35,56);
+  if(t>=8.0&&t<8.9) caption(['LUCKY FOR YOU,','WE DELIVER.'],240,(t-8.0)/0.35,58);
+}
+REELS[10]=reelH10;
+SHAKES[10]=[4.02,0.35,22];
+TAGLINES[10]='LUCK RUNS OUT. OUR CHAIRS DON\'T.';
 </script>
 </body></html>
 

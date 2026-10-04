@@ -1,0 +1,74 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2e8d8;
+  background:radial-gradient(circle at 50% 36%, #241040 0%, #140823 50%, #060309 100%)}
+.frame{position:absolute;inset:30px;border:2px solid #c9641e}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.moon{position:absolute;top:110px;left:120px;width:150px;height:150px;border-radius:50%;
+  background:#f6ecc9;box-shadow:0 0 80px 26px rgba(246,236,201,.22);opacity:.9}
+.moon:after{content:'';position:absolute;left:36px;top:-10px;width:150px;height:150px;border-radius:50%;
+  background:#140823}
+.star{position:absolute;color:#f6ecc9;opacity:.7}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:54px 80px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:10px;color:#ff9d4d}
+.numrow{position:relative;margin-top:116px}
+.num{font-family:'Archivo Black';font-size:400px;line-height:1.0;
+  background:linear-gradient(180deg,#ffc98f 10%,#ff8c2e 55%,#d8601a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 50px rgba(255,140,46,.35))}
+.cat{position:absolute;top:-128px;right:-40px;width:230px}
+.nights{font-family:'Archivo Black';font-size:54px;line-height:1.1;color:#f6f1e4}
+.nights em{font-style:normal;color:#ff8c2e}
+.date{margin-top:14px;font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:6px;color:#ffb36b}
+.sub{margin-top:20px;font-weight:600;font-size:23px;color:#d9cbb6;line-height:1.5;max-width:860px}
+.sub b{color:#ff9d4d}
+.cta{margin-top:22px;background:linear-gradient(180deg,#ffa54f,#d86a14);color:#1d0d05;
+  font-family:'Oswald';font-weight:600;font-size:27px;letter-spacing:3px;padding:15px 48px;border-radius:60px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:24px}
+.foot img{width:78px;height:78px}
+.foot .p{font-family:'Archivo Black';font-size:33px;color:#ffb36b;text-align:left}
+.foot .s{font-weight:600;font-size:18px;color:#d9cbb6;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="moon"></div>
+  <div class="frame"></div>
+  <div class="star" style="top:150px;right:200px;font-size:22px">✦</div>
+  <div class="star" style="top:240px;right:120px;font-size:14px">✦</div>
+  <div class="star" style="top:110px;right:420px;font-size:16px">✦</div>
+  <div class="star" style="top:300px;left:300px;font-size:14px">✦</div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; HALLOWEEN COUNTDOWN &nbsp;◆</div>
+    <div class="numrow">
+      <div class="num">27</div>
+      <svg class="cat" viewBox="0 0 230 170">
+        <path d="M60 160 Q52 120 62 92 Q70 68 92 60 L96 38 L110 54 Q118 52 126 54 L140 38 L144 60 Q166 70 172 96 Q178 124 172 160 Z" fill="#0b0613"/>
+        <path d="M172 150 Q214 142 212 110 Q210 88 192 84" fill="none" stroke="#0b0613" stroke-width="16" stroke-linecap="round"/>
+        <ellipse cx="103" cy="78" rx="7" ry="9" fill="#9fe24f"/>
+        <ellipse cx="131" cy="78" rx="7" ry="9" fill="#9fe24f"/>
+        <ellipse cx="103" cy="79" rx="2.6" ry="7" fill="#0b0613"/>
+        <ellipse cx="131" cy="79" rx="2.6" ry="7" fill="#0b0613"/>
+      </svg>
+    </div>
+    <div class="nights"><em>NIGHTS</em> TILL HALLOWEEN</div>
+    <div class="date">SATURDAY · OCTOBER 31</div>
+    <div class="sub">The black cat is already in position. 27 nights out, the good dates and the good chairs <b>both start disappearing.</b> Tables &amp; chairs delivered, set up &amp; picked up.</div>
+    <div class="cta">BOOK THE 31st · 702-706-8287</div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

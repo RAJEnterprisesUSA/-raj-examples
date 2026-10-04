@@ -366,3 +366,74 @@ IG: @bigbusiness_rentals_events
 What if the venue came WITH the tables, chairs, backdrop and sound? 🥂 Ours does. One private Las Vegas event space, fully set before you walk in. 3 hours for $625 (up to 25 guests) or 4 hours for $800 (up to 40 guests), one price for everything. Swipe for the full breakdown, then tag somebody who needs a room for their next event.
 📞 702-706-8287 · Book your date at bigbusinesspartyrentals.com
 #vegasvenue #eventspace #privateevents #venuepackage #lasvegas #birthdayvenue #babyshower #eventplanning #bigbusiness
+
+---
+
+## SUNDAY — OCT 4 (Week 3 finale) — 8-POST DAY
+
+### 1 · Morning — Tip No.21 (BB_Post_Tip21_SetupClock_BG.png)
+How long does party setup REALLY take? ⏱️ Party Math, Tip No.21: 2 minutes per table, 30 seconds per chair, and over an hour for a 50-guest setup once you count the hauling... right when guests start texting "omw." Or: we set it while you get dressed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyplanning #partytips #partymath #setup #eventplanner #lasvegas #vegasparty #partyrentals
+
+### 2 · Midday — Sunday Dinner (BB_Post_SundayDinner.png)
+Who runs YOUR Sunday dinner table? 👑 Grandma gets a throne, everybody fits at one table, and the kids get their own so grown folks can talk grown folks business. Big family dinners, repasts, reunions: we set the family table. Tag the family cook.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#sundaydinner #family #familydinner #reunion #lasvegas #vegasparty #partyrentals #tablesandchairs
+
+### 3 · Afternoon — Venue flyer (BB_Venue_Sun_SkipTheHunt_BG.png)
+Still hunting for a venue? Stop. 🏛️ One private Las Vegas event space with tables, chairs, backdrop and sound already set up, for one price: $625 for 3 hours (up to 25 guests) or $800 for 4 hours (up to 40 guests). Seats 40, holds 80 standing. One call books it all.
+📞 702-706-8287 · Book a tour · bigbusinesspartyrentals.com
+#venue #eventspace #vegasvenue #venuepackage #lasvegas #partyvenue #birthdayvenue #babyshower #eventplanning
+
+### 4 · Evening — The Text That Pays (BB_Referral_Sun_W4.png)
+This is the text that pays. 💰 Your friend books their party with us, drops your name, and after their event YOU collect up to $100. No limit on referrals. Who is the first person you are sending our number to?
+Reward based on booking size, up to $100 · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #sidehustle #payday #lasvegas #vegas #partyrentals #network
+
+### 5 · Halloween countdown (BB_Halloween_27Nights.png)
+The black cat is in position. 🐈‍⬛ 27 nights till Halloween, and the good dates and the good chairs both start disappearing right about now. Tables and chairs delivered, set up and picked up.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #27days #blackcat #spookyseason #october #halloweenparty #lasvegas #partyrentals
+
+### 6 · Halloween reel (BB_Halloween_Reel_BlackCat.mp4)
+Would YOU cross a black cat on setup day? 🐈‍⬛ Unc said absolutely not, took the long way around, and STILL dropped every chair he was carrying. The cat? Unbothered. Took the best seat in the house. Tag your most superstitious relative.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#blackcat #superstition #halloween #funnyreels #spookyseason #lasvegas #partyrentals #comedy
+
+### 7 · Pink October (BB_PinkOctober_SupportEdition.mp4)
+This is your reminder. 🎀 Text her today: "Did you schedule your mammogram yet?" Send it to your mom, your sister, your auntie, your best friend. Then show up: drive her to the appointment, cook, listen, and celebrate every clear scan. Support is early detection too. Send this to the group chat.
+📞 702-706-8287 · bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #supportsquad #checkonyourpeople #earlydetection #pinkribbon #lasvegas
+
+### 8 · Evening reel (BB3_Reel_Sun_FamilyPhoto.mp4)
+Every family photo has a casualty. 😂 Somebody always goes down right when the flash hits. The chairs made it though. The chairs ALWAYS make it. Tag the family member who ruins every picture.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#familyphoto #funnyreels #sundayvibes #family #vegas #lasvegas #partyrentals #comedy
+
+## YOUTUBE SHORTS CAPTIONS (Sunday Oct 4)
+
+### BB_Halloween_Reel_BlackCat.mp4
+**Title:** Would YOU cross a black cat on setup day? 🐈‍⬛
+**Description:**
+Unc took the long way around and still dropped every chair. The cat took the best seat in the house. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #BlackCat #Halloween #FunnyShorts #Superstition #SpookySeason #LasVegas #PartyRentals
+
+### BB_PinkOctober_SupportEdition.mp4
+**Title:** This is your reminder 🎀 Text her today
+**Description:**
+Pink October, support edition: text somebody you love and ask if she scheduled her mammogram. Then show up: drive her, cook, listen, and celebrate every clear scan. Support is early detection too.
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #CheckOnYourPeople #EarlyDetection #PinkRibbon
+
+### BB3_Reel_Sun_FamilyPhoto.mp4
+**Title:** Every family photo has a casualty 😂
+**Description:**
+Somebody always goes down right when the flash hits. The chairs made it though. The chairs ALWAYS make it. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #FamilyPhoto #Funny #SundayVibes #Comedy #LasVegas #PartyRentals
