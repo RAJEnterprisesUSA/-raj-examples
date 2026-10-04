@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 42%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 42%,
+  rgba(229,184,75,.08) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 90px}
+.kick{font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:10px;color:#D6B25E}
+h1{font-family:'Archivo Black';font-size:110px;line-height:1.06;margin-top:30px;color:#f6f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:40px;font-weight:600;font-size:30px;color:#d8ceb6;line-height:1.5;max-width:820px}
+.swipe{position:absolute;bottom:90px;left:0;right:0;text-align:center;
+  font-family:'Oswald';font-weight:600;font-size:26px;letter-spacing:8px;color:#8d7fae}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; BIG ANNOUNCEMENT &nbsp;◆</div>
+    <h1>WE THREW<br>THE <em>VENUE</em> IN.</h1>
+    <div class="sub">The room, the tables, the chairs, the backdrop and the sound. One price. Swipe to see how it works.</div>
+  </div>
+  <div class="swipe">SWIPE &nbsp;→</div>
+</body></html>

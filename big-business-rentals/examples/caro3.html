@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 36%, #3a1a5e 0%, #2c1247 55%, #190a2c 100%)}
+.rays{position:absolute;inset:-200px;background:repeating-conic-gradient(from 0deg at 50% 36%,
+  rgba(229,184,75,.08) 0deg 1deg, transparent 1deg 20deg)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(229,184,75,.35)}
+.dia{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:50px 90px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:9px;color:#D6B25E}
+.prices{display:flex;gap:26px;margin-top:36px}
+.p1{width:330px;border:2px solid #B08D3E;border-radius:18px;background:rgba(229,184,75,.06);padding:30px 0 26px}
+.p1 .h{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:5px;color:#D6B25E}
+.p1 .v{font-family:'Archivo Black';font-size:80px;margin-top:10px;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p1 .g{font-weight:600;font-size:22px;color:#bdb29b;margin-top:8px}
+.cmd{margin-top:44px;border:2px solid #E5B84B;border-radius:18px;background:rgba(229,184,75,.1);
+  padding:26px 46px;max-width:860px}
+.cmd .a{font-family:'Archivo Black';font-size:44px;color:#f6f1e4}
+.cmd .a b{color:#E5B84B}
+.cmd .b{font-weight:600;font-size:24px;color:#d8ceb6;margin-top:10px}
+.foot2{margin-top:40px;font-weight:600;font-size:24px;color:#d9cdb2}
+.foot2 b{font-family:'Archivo Black';font-size:30px;color:#E5B84B}
+</style></head>
+<body>
+  <div class="rays"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; ONE PRICE, EVERYTHING IN &nbsp;◆</div>
+    <div class="prices">
+      <div class="p1"><div class="h">3 HOURS</div><div class="v">$625</div><div class="g">up to 25 guests</div></div>
+      <div class="p1"><div class="h">4 HOURS</div><div class="v">$800</div><div class="g">up to 40 guests</div></div>
+    </div>
+    <div class="cmd">
+      <div class="a">Comment <b>"VENUE"</b></div>
+      <div class="b">and we will DM you the full package details &amp; open dates</div>
+    </div>
+    <div class="foot2"><b>702-706-8287</b> &nbsp;·&nbsp; bigbusinesspartyrentals.com &nbsp;·&nbsp; LAS VEGAS, NV</div>
+  </div>
+</body></html>
