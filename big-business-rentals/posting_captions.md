@@ -437,3 +437,9 @@ Somebody always goes down right when the flash hits. The chairs made it though. 
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #FamilyPhoto #Funny #SundayVibes #Comedy #LasVegas #PartyRentals
+
+## DESIGN RULES UPDATE (Oct 4)
+- Flyer 2.0 standard: 4:5 portrait (1080x1350) for feed cards, editorial/asymmetric layouts, Playfair italic accents, ghost numerals, illustrated hero objects, grain + vignette + shadows
+- Color rotation is now FREE: Emerald Night, Velvet Rope burgundy, Midnight Navy, Daylight Cream (light mode), Desert Teal, Pink Hour, plus classic Purple/Gold, Black & Gold, and Halloween orange
+- Brand anchors that never change: gold accent in every palette, logo + 702-706-8287 + site + IG footer, Oswald/Archivo/Playfair type system
+- No two consecutive days use the same palette; at least one light-mode card per week as a pattern breaker
