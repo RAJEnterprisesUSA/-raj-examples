@@ -135,8 +135,15 @@ Season Two: owner's real voice recordings begin.
   Per-reel end card time via window.ENDTIMES[n] in reelsD.html.
 - ElevenLabs is WORKING via environment credential (xi-api-key injected for api.elevenlabs.io; no env var).
   If 401 returns, the credential needs re-saving in environment settings; Piper stays the fallback.
-- Tuesday Oct 6 needs: Tip No.23, business card, venue slot (Story unless 2nd feed day), referral flyer,
-  25-nights countdown (VERIFY with datetime), gag #12 (new gag, never reuse), Pink October #6, EP. 16
-  (~20s, SFX only; continue "Road to the Halloween Party" arc; hidden pumpkin; W-L now 0-1 going in).
+- TUESDAY OCT 6 SET BUILT, DELIVERED AND PUSHED (awaiting owner go-ahead to queue in Buffer):
+  Tip No.23 DRINK MATH (Midnight Navy), Hired A Team business card (Velvet Rope), Plan B venue flyer
+  (Purple/Gold, Story), Word Of Mouth referral (Black&Gold), 25-nights jack-o-glow countdown,
+  gag #12 Spider Guest (reelH REELS[12]), Pink #6 By The Numbers (pink6.html, 26s),
+  EP. 16 The Demonstration (REELS[16] in reelsD, 21s: Mrs. Never Wrong debut, Lil Wobbles, W-L 0-2).
+  Captions for all of it in posting_captions.md under TUESDAY OCT 6. DO NOT queue until owner says so;
+  then use build_buffer_queue.py pattern at the standing times.
+- Wednesday Oct 7 needs: Tip No.24, business card, venue slot, referral flyer, 24-nights countdown
+  (VERIFY with datetime), gag #13 (used now: ...black cat, pumpkin head, spider guest), Pink October #7,
+  EP. 17 (~20s SFX only; W-L 0-2 going in; Tyler/cat available; arc continues).
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
