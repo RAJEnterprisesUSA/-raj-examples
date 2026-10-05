@@ -472,7 +472,7 @@ Your party deserves a home. 🏛️ Our private venue seats 40 and holds 80 stan
 #venue #privateevent #lasvegas #vegas #partyvenue #eventspace #birthdayparty
 
 ### 4 · Meet The Cast (EX_MeetTheCast.png) [FEED]
-Vegas, meet the cast. 🎬 THE BIG BUSINESS CHRONICLES premieres TONIGHT: Mr. Big Business, Mrs. Never Wrong, Unc, Tyler the Intern, Lil Wobbles the cheap chair, and The Cat. New episodes daily through the Halloween party finale. Which one is you? Tell us below.
+Vegas, meet the cast. 🎬 THE BIG BUSINESS CHRONICLES premieres TONIGHT: Mr. Big Business, Mrs. Never Wrong, Unc, Tyler the Intern, Lil Wobbles the cheap chair, and The Cat. New episodes daily through the Halloween party finale. Which one are you? Tell us below.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #newseries #comedy #meetthecast #lasvegas #vegas #partyrentals #chronicles
 

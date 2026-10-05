@@ -11,6 +11,8 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 - Instagram: @bigbusiness_rentals_events · LAS VEGAS, NV.
 - Footer block on every card: logo + phone + site + IG + LAS VEGAS, NV.
 - NO em dashes anywhere: chat, captions, designs. Use commas, periods, or " · ".
+- STANDARD GRAMMAR ONLY in all copy (owner correction Oct 5): never use slang subject-verb constructions
+  like "which one is you". Write "which one are you". Casual tone is fine, broken grammar is not.
 - Captions end with: "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" + hashtags.
 - Never remove or cover AI watermarks (e.g. Gemini/Veo) on user-supplied videos; BB badge may sit NEXT to one.
 - Do not invent prices or services. Known prices: Venue Package 3-Hour $625 (up to 25 guests),
