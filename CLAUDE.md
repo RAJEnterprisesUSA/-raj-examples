@@ -163,8 +163,14 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   EP. 16 The Demonstration (REELS[16] in reelsD, 21s: Mrs. Never Wrong debut, Lil Wobbles, W-L 0-2).
   Captions for all of it in posting_captions.md under TUESDAY OCT 6. DO NOT queue until owner says so;
   then use build_buffer_queue.py pattern at the standing times.
-- Wednesday Oct 7 needs: Tip No.24, business card, venue slot, referral flyer, 24-nights countdown
-  (VERIFY with datetime), gag #13 (used now: ...black cat, pumpkin head, spider guest), Pink October #7,
-  EP. 17 (~20s SFX only; W-L 0-2 going in; Tyler/cat available; arc continues).
+- WEDNESDAY OCT 7 SET BUILT, DELIVERED, PUSHED AND QUEUED IN BUFFER (22/22 OK at standing times):
+  TRASH MATH Tip No.24 carousel (Emerald), YOUR WEEKEND BACK carousel (Cream), One Price venue card
+  (Navy, Story), GET PAID TO BE POPULAR referral carousel (Purple/Gold), 24 NIGHTS carousel
+  ("Halloween lands on a Saturday" hook), gag #13 Candy Hand (reelH REELS[13], boneArm+drawBowl added),
+  Pink #7 Men's Edition (pink7.html, 26s, CDC), EP. 17 The Decoy (REELS[17] in reelsD, drawCatD ported,
+  cat beats Mr. Big Business, W-L 0-3). Captions under WEDNESDAY OCT 7. Queue script: build_buffer_queue_wed.py.
+- Thursday Oct 8 needs: Tip No.25 carousel, business carousel, venue slot, referral carousel, 23-nights
+  countdown carousel (VERIFY with datetime), gag #14 (used now: ...pumpkin head, spider guest, candy hand),
+  Pink October #8, EP. 18 (~20s SFX only; W-L 0-3 going in; Tyler due for a return; arc continues).
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
