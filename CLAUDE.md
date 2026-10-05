@@ -42,11 +42,14 @@ UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from now
 someone asks "WHERE DID YOU EVEN COME FROM?", he always replies shy/irritated "...im the new intern."),
 villain LIL WOBBLES the red cheap chair (col {a:'#e05252',b:'#c94444',c:'#ef6d6d'}), THE CAT (silent nemesis).
 Episode numbering continues from Derrick era: next episode is EP. 15.
-Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; ~12s runtime
-(encode -t 12.2 with afade out at 11.7); zoom punches/instant replay/freeze frames; 2-note theme sting;
+Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; EPISODES ARE 45s+ 
+(owner decision Oct 5; EP15 format: ~52.5s, 1838 frames @35fps, encode -t 52.5, afade out at 51.5);
+dialogue-driven: write VO script FIRST, generate ElevenLabs lines, measure durations, time the episode around them
+(per-reel end card via window.ENDTIMES[n] in reelsD.html); zoom punches/instant replay/freeze frames; 2-note theme sting;
 season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpkin every episode;
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
-Season One voices: Piper TTS or silent. Season Two: owner's real voice recordings begin.
+Season One voices: ElevenLabs character VO (decided Oct 5; voice IDs per character in CAST.md; narrator=Brian).
+Piper is the fallback if ElevenLabs is down. Season Two: owner's real voice recordings begin.
 
 ## Design system (Flyer 2.0, since Oct 4)
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).

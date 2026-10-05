@@ -1,0 +1,9 @@
+# transient render-asset copies (source of truth: big-business-rentals/assets/)
+big-business-rentals/fonts/
+big-business-rentals/bb_logo.png
+big-business-rentals/BB_Logo_Purple_2160.png
+big-business-rentals/*/fonts/
+big-business-rentals/*/*/fonts/
+big-business-rentals/*/bb_logo.png
+big-business-rentals/*/*/bb_logo.png
+big-business-rentals/*/BB_Logo_Purple_2160.png

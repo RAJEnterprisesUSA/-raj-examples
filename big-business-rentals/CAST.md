@@ -3,7 +3,7 @@
 Show: THE BIG BUSINESS CHRONICLES (formerly the Derrick reels; renamed Oct 5)
 Star character: MR. BIG BUSINESS (the owner-operator; name promotes the brand in every episode)
 New episodes daily · Episode numbers continue from the Derrick era (next episode: Ep. 15)
-Season One = animated, no voices. Season Two = Rashad's recorded voice lines begin.
+Season One = animated WITH ElevenLabs character voiceovers (owner decision Oct 5; episodes 45s+). Season Two = Rashad's recorded voice lines begin.
 
 ## The cast
 - MR. BIG BUSINESS (the star) · rig style STYLER: slim build, faded haircut, green tee, navy pants.
@@ -26,7 +26,7 @@ Season One = animated, no voices. Season Two = Rashad's recorded voice lines beg
 
 ## Voices (ElevenLabs, verified working Oct 5)
 Credential: environment credential "ElevenLabs" injects xi-api-key for api.elevenlabs.io (no env var needed).
-Season One default is still animated/no voices unless Rashad opts in; when voiced lines are wanted, use these IDs consistently:
+Season One episodes are voiced with these IDs, consistently:
 - MR. BIG BUSINESS · Liam, TX3LPaxmHKxFdv7VOQHJ (young, energetic, built for reels; confident lead)
 - MRS. NEVER WRONG · Matilda, XrExE9yKIg1WjnnlVkGX (knowledgeable, professional alto; "never wrong" energy)
 - UNC · Bill, pqHfZKP75CvOlQylNhV4 (old, wise, unbothered; slow delivery)

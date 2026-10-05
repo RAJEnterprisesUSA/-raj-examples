@@ -446,3 +446,85 @@ IG: @bigbusiness_rentals_events
 
 ## SHOW UPDATE (Oct 5): THE BIG BUSINESS CHRONICLES
 Derrick is now MR. BIG BUSINESS (slim, faded cut, same green tee). The show is THE BIG BUSINESS CHRONICLES. Woman in pink = MRS. NEVER WRONG. Uncle = UNC. New character: TYLER THE INTERN (fair skin, orange backwards cap, blue tee, takes everything literally). Running gag: he appears out of nowhere, somebody asks "WHERE DID YOU EVEN COME FROM?", he always replies shy and irritated: "...im the new intern." Villain: LIL WOBBLES the red cheap chair. The black cat is Rashad's silent nemesis. Season One is animated only; voice lines start Season Two. Full details in CAST.md.
+
+## RULE CHANGE (Oct 5, owner): EPISODES GO LONG + VOICED
+THE BIG BUSINESS CHRONICLES episodes are now AT LEAST 45 SECONDS and carry ElevenLabs character
+voiceovers (voice IDs in CAST.md; narrator = Brian). Season One "silent" rule is retired.
+EP. 15 is the first long voiced episode (~52.5s). Short gag reels and awareness videos keep their formats.
+
+# MONDAY OCT 5 · SEASON ONE PREMIERE DAY
+
+## FB/IG CAPTIONS (Monday Oct 5)
+
+### 1 · Morning Story — Tip No.22 (BB_Post_Tip22_IceMath.png) [STORY]
+How much ice does a party actually need? 🧊 1 lb per guest for cups, 2 lb if you are burying cans in a cooler, and DOUBLE everything outdoors because this is Vegas and the sun drinks first. Ice is the one thing you cannot set up early. We handle everything else before the first bag melts. Send this to whoever is hosting next.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partytips #icemath #partyplanning #vegas #lasvegas #partyrentals #eventplanning
+
+### 2 · Midday Story — business card (BB_Post_Mon_Handled.png) [STORY]
+What if party day was already handled? Tables, chairs and linens delivered to your door, set up while you get dressed, picked up when it is over. You never lift a thing. Comment QUOTE and we will DM you a price today.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyrentals #lasvegas #vegas #eventrentals #partyplanning #delivered
+
+### 3 · Venue — luxury carousel caro1-3 (EX_Carousel_1-3.png) [FEED, first post]
+Your party deserves a home. 🏛️ Our private venue seats 40 and holds 80 standing: 3 hours for $625 or 4 hours for $800, rentals included. One call books all of it. Comment VENUE and we will DM you open dates.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#venue #privateevent #lasvegas #vegas #partyvenue #eventspace #birthdayparty
+
+### 4 · Meet The Cast (EX_MeetTheCast.png) [FEED]
+Vegas, meet the cast. 🎬 THE BIG BUSINESS CHRONICLES premieres TONIGHT: Mr. Big Business, Mrs. Never Wrong, Unc, Tyler the Intern, Lil Wobbles the cheap chair, and The Cat. New episodes daily through the Halloween party finale. Which one is you? Tell us below.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#newseries #comedy #meetthecast #lasvegas #vegas #partyrentals #chronicles
+
+### 5 · Referral Story (BB_Referral_Mon_CasinoChip.png) [STORY]
+The easiest $100 in Vegas is not on the casino floor. 🎰 Know someone planning a party? Send them our way, have them drop your name, and when their event wraps you collect up to $100. No chips, no dice.
+Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #easiest100 #vegas #lasvegas #sidehustle #partyrentals
+
+### 6 · Halloween countdown (BB_Halloween_26Nights.png) [STORY]
+Candy corn says 26. 🍬 26 nights till Halloween and the spooky season books itself out fast. Tables, chairs and the party room, locked in one call.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #26days #candycorn #spookyseason #october #lasvegas #partyrentals
+
+### 7 · Halloween gag #11 (BB_Halloween_Reel_PumpkinHead.mp4) [FEED]
+What do you do when the pumpkin will NOT come off? 🎃 He wore it "for the pictures." It stayed for everything else. One chair, one countdown, one POP, and the chair never moved an inch. Send this to whoever commits too hard to the costume.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#pumpkinhead #halloween #funnyreels #spookyseason #costume #lasvegas #partyrentals #comedy
+
+### 8 · Pink October #5 (BB_PinkOctober_MythsBusted.mp4) [STORY or TRIAL REEL]
+Most women diagnosed have NO family history. 🎀 That fact busts the biggest myth out there. Myths busted today: "it runs in families, I'm safe", "I'm too young", and "it doesn't hurt so it's nothing." Lumps are often painless. Know the facts and share them. Send this to someone you love.
+Source: American Cancer Society.
+📞 702-706-8287 · bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #mythsbusted #knowthefacts #earlydetection #pinkribbon #lasvegas
+
+### 9 · PREMIERE — EP. 15 (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4) [FEED, evening]
+He hired an intern. He said four words: "stack the chairs." 😂 EP. 15 of THE BIG BUSINESS CHRONICLES is the Season One premiere, now in full-length episodes WITH VOICES. Tyler's first day went exactly how you think it went. What should Tyler help with next? Best idea gets the next episode credit.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#thebigbusinesschronicles #newintern #comedy #funnyreels #sitcom #lasvegas #vegas #partyrentals
+
+## YOUTUBE SHORTS CAPTIONS (Monday Oct 5)
+
+### BB_Halloween_Reel_PumpkinHead.mp4
+**Title:** The pumpkin would NOT come off 🎃
+**Description:**
+He wore it for the pictures. It stayed for everything else. One chair, one POP, zero wobbles. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PumpkinHead #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
+
+### BB_PinkOctober_MythsBusted.mp4
+**Title:** Most diagnosed have NO family history 🎀
+**Description:**
+Pink October, myths busted: no family history does not mean safe, young does not mean immune, painless does not mean harmless. Know the facts. Share them. Source: American Cancer Society.
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #MythsBusted #KnowTheFacts #PinkRibbon
+
+### BB_Chronicles_Ep15_TheNewIntern.mp4
+**Title:** EP. 15: The New Intern 😂 "stack the chairs"
+**Description:**
+THE BIG BUSINESS CHRONICLES, Season One premiere, now with voices. Tyler takes every instruction 100 percent literally. What should Tyler help with next? Comment below. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #NewIntern #FunnyShorts #LasVegas #PartyRentals
