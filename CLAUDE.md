@@ -168,6 +168,17 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   ("23" comedy reels, "22" pink/awareness) + title + privacy public + madeForKids false. TikTok needs none.
   Story routing: tip, business card, referral, countdown, pink = story; venue + cast = post; gag + episode = reel.
   Reference script: big-business-rentals/build_buffer_queue.py (Monday Oct 5 run queued 24/24 OK).
+- PINNED FIRST COMMENT (owner directive Oct 5 night, applies to EVERY future FB + IG FEED post, type
+  post or reel; stories carry none, TikTok/YouTube have no field): set metadata.facebook.firstComment /
+  metadata.instagram.firstComment on createPost. Exact texts, verbatim:
+  FB: "If you're planning anything this season, follow the page. We post real setups, open dates, and what's available before it books up.\nfacebook.com/profile.php?id=61589138907701"
+  IG: "Follow @bigbusiness_rentals_events for real setups and open dates. Booking December now."
+  Buffer posts the comment automatically; PINNING it is manual (owner: open post, three dots on own
+  comment, Pin). NEVER use these comments in Facebook groups, only on our own page, IG, and Google posts.
+  Reference/backfill script: big-business-rentals/build_firstcomment.py (editPost note: video assets
+  must be re-sent WITHOUT thumbnailUrl or the edit fails). Buffer rate-limits bursts of mutations
+  (RATE_LIMIT_EXCEEDED): pace edits ~3s apart, back off 90s on a hit.
+  Pending owner action: set a custom FB username so the FB comment link reads clean.
 - BUFFER CAPTION FORMAT (owner spec, apply to 100% of Buffer captions, all platforms):
   opening line / blank line / ONE caption paragraph / blank line /
   "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" / blank line / all hashtags on one line.

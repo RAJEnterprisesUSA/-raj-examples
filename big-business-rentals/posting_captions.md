@@ -804,3 +804,14 @@ Be honest, wrong answers welcome, drop your number below. The balloons are the i
 PRICE IT runs every day at 1pm as a feed post, alternating indoor and outdoor setups, high-visual themes
 (sports colors, cartoon-style kids, baby showers and the like; no logos, no licensed characters).
 Feed is now always exactly: PRICE IT 1pm + gag 5pm + episode 8pm. All card carousels run as story sequences.
+
+## RULE CHANGE (Oct 5 night, owner): PINNED FIRST COMMENT ON EVERY OWN-PAGE POST
+Every FB and IG FEED post (post or reel; never stories) carries a pinned follow comment, attached
+automatically via Buffer metadata.firstComment at queue time. Exact texts, verbatim:
+FB: "If you're planning anything this season, follow the page. We post real setups, open dates, and what's available before it books up.
+facebook.com/profile.php?id=61589138907701"
+IG: "Follow @bigbusiness_rentals_events for real setups and open dates. Booking December now."
+Scope: our own FB page, Instagram, and Google posts ONLY. NEVER drop these comments in Facebook groups.
+Buffer posts the comment with the post; pinning is the owner's 10-second manual step (three dots on the
+comment, Pin). Backfilled onto all queued Mon/Tue/Wed feed posts Oct 5 night (build_firstcomment.py).
+Pending: owner to claim a custom FB username so the link reads clean.
