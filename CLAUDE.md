@@ -87,6 +87,26 @@ Season Two: owner's real voice recordings begin.
   and test it against the ElevenLabs API (never print the key). If valid, prefer ElevenLabs for character lines:
   pick consistent voices per character and keep IDs noted in CAST.md.
 
+## Buffer scheduling (working since Oct 5; owner-approved workflow)
+- API: GraphQL at https://api.buffer.com, auth via environment credential "Buffer" (Authorization: Bearer, injected).
+  The legacy REST api.bufferapp.com does NOT accept this token; never use it.
+- Organization ID: 6a8284ed71811e26a813241c. Channel IDs:
+  facebook "Big Business Party Rentals & Events Specialist" = 6aabfb63ea19ca0bde696947
+  instagram bigbusiness_rentals_events = 6aabfaf0ea19ca0bde6965d6
+  tiktok rashad_abdulwali = 6ab81da7ea19ca0bdef9436e
+  youtube "R.A Johnson" = 6ac2ff576a5c39ccb618d238
+- createPost(input:{channelId, text, mode: customScheduled, dueAt: <ISO datetime>, schedulingType: automatic,
+  assets:[{image:{url}} | {video:{url, thumbnailUrl?}}]}). Media = PUBLIC URLs; the repo is public, so use
+  raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
+  files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
+- DAILY WORKFLOW (owner-defined): Claude gives ONE post title at a time; owner replies with a time; Claude queues
+  that post to Buffer, then gives the next title. Default channels: cards -> FB + IG; videos -> FB + IG + YouTube +
+  TikTok (YouTube gets the YT Shorts title/description caption). Owner can override per post.
+- BUFFER CAPTION FORMAT (owner spec, apply to 100% of Buffer captions, all platforms):
+  opening line / blank line / ONE caption paragraph / blank line /
+  "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" / blank line / all hashtags on one line.
+  No headings, labels or bullets. Never change caption content or meaning, only this visual structure.
+
 ## Git & delivery
 - Branch: claude/photo-to-logo-editing-krxiu5 only. Commit+push after each day's set (retry 503s with backoff).
 - NO PRs unless asked. No model names in repo artifacts. Commit footer: Co-Authored-By Claude + Claude-Session link per system reminder.
