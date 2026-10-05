@@ -1550,6 +1550,179 @@ REELS[16]=ep16;
 SHAKES[16]=[14.3,0.4,40];
 TAGLINES[16]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[16]=18.5;
+
+// ========== EP. 17 · THE DECOY ==========
+function drawCatD(x,y,o){
+  ctx.save(); ctx.translate(x,y); const cs=o.s||1.5; ctx.scale((o.face||1)*cs,cs);
+  ctx.fillStyle='#0b0613'; ctx.strokeStyle='#0b0613';
+  if(o.pose==='trot'){
+    for(let i=0;i<4;i++){
+      const ph=Math.sin(o.t*16+i*1.6)*16;
+      ctx.save(); ctx.translate(-40+i*26,-16); ctx.rotate(rad(ph));
+      ctx.fillRect(-5,0,10,36); ctx.restore();
+    }
+    ctx.beginPath(); ctx.ellipse(0,-46,62,30,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.arc(66,-66,24,0,7); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(52,-84); ctx.lineTo(58,-104); ctx.lineTo(68,-86); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(70,-86); ctx.lineTo(80,-104); ctx.lineTo(84,-82); ctx.closePath(); ctx.fill();
+    ctx.lineWidth=12; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(-58,-54);
+    ctx.quadraticCurveTo(-92,-72+Math.sin(o.t*6)*12,-104,-112+Math.sin(o.t*5)*10);
+    ctx.stroke();
+    ctx.fillStyle='#9fe24f';
+    ctx.beginPath(); ctx.ellipse(72,-68,4.5,6,0,0,7); ctx.fill();
+  } else {
+    ctx.beginPath(); ctx.moveTo(-34,0); ctx.quadraticCurveTo(-40,-66,-10,-88);
+    ctx.quadraticCurveTo(14,-100,26,-80); ctx.quadraticCurveTo(40,-40,36,0); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.arc(6,-102,26,0,7); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-12,-120); ctx.lineTo(-6,-142); ctx.lineTo(6,-122); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(10,-122); ctx.lineTo(22,-140); ctx.lineTo(26,-118); ctx.closePath(); ctx.fill();
+    ctx.lineWidth=12; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(34,-8);
+    ctx.quadraticCurveTo(66,-6,64,-44+Math.sin((o.t||0)*3)*8); ctx.stroke();
+    ctx.fillStyle='#9fe24f';
+    ctx.beginPath(); ctx.ellipse(-2,-104,4.5,6.5,0,0,7); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(16,-102,4.5,6.5,0,0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function ep17(t){
+  const FR0=13.4, FR1=14.25;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.20*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(450,1050); ctx.scale(z,z); ctx.translate(-450,-1050);
+  }
+  drawRoom();
+  miniPumpkin(64, FLOOR+86);
+  // VIP chair at 640
+  if(tt>=1.6){
+    const k=easeOutBack(Math.min(1,(tt-1.6)/0.3));
+    const wob=(tt>10.8&&tt<11.9)?Math.sin(t*10)*7:0;
+    ctx.save(); ctx.translate(640,FLOOR); ctx.scale(k,k); ctx.translate(-640,-FLOOR);
+    drawChair(640,wob,0,0);
+    ctx.restore();
+    if(tt>3.2&&tt<4.4) sparkle(640+50, SEAT_TOP-160, t);
+  }
+  // decoy chair at 450
+  if(tt>=13.0){
+    const k=easeOutBack(Math.min(1,(tt-13.0)/0.3));
+    ctx.save(); ctx.translate(450,FLOOR); ctx.scale(k,k); ctx.translate(-450,-FLOOR);
+    drawChair(450,0,0,0);
+    ctx.restore();
+  }
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.5){
+    const k=ease(tt/1.5);
+    const step=Math.sin(tt*10);
+    mp={x:lerp(-220,540,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
+  } else if(tt<2.2){
+    mp={x:540, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', style:STYLER};
+  } else if(tt<3.2){
+    const wipe=Math.sin(tt*12)*18;
+    mp={x:540, y:HIP_STAND, face:1, lean:-12,
+      legs:[{hip:12,knee:-6},{hip:-10,knee:6}],
+      arm:{sh:70+wipe,el:10}, mouth:'o', style:STYLER};
+  } else if(tt<4.6){
+    mp={x:430, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(tt*4)*3, style:STYLER};
+  } else if(tt<6.4){
+    mp={x:430, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<8.4){
+    const wave=Math.sin(tt*10)*20;
+    mp={x:470, y:HIP_STAND, face:1, lean:-10,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:95+wave,el:-10}, arm2:{sh:85-wave,el:-6}, mouth:'o', style:STYLER};
+  } else if(tt<10.6){
+    const k=ease(Math.min(1,(tt-8.4)/0.5));
+    mp={x:lerp(470,480,k), y:HIP_STAND+k*55, face:1, lean:12,
+      legs:[{hip:28+k*28,knee:-18-k*26},{hip:-14,knee:8}],
+      arm:{sh:52,el:16}, mouth:'smile', style:STYLER};
+  } else if(tt<11.9){
+    const tug=Math.sin(tt*10)*8;
+    mp={x:760, y:HIP_STAND, face:-1, lean:-(14+tug*0.5),
+      legs:[{hip:26,knee:-14},{hip:-28,knee:22}],
+      arm:{sh:112,el:-26}, arm2:{sh:100,el:-18}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<12.6){
+    const k=ease((tt-11.9)/0.7);
+    const step=Math.sin(tt*11);
+    mp={x:lerp(760,-240,k), y:HIP_STAND-Math.abs(step)*10, face:-1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:30,el:40}, mouth:'o', style:STYLER};
+  } else if(tt<13.4){
+    const k=ease((tt-12.6)/0.8);
+    const step=Math.sin(tt*11);
+    mp={x:lerp(-240,380,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:76,el:26}, arm2:{sh:68,el:34}, mouth:'smile', style:STYLER};
+  } else if(tt<15.3){
+    const k=ease(Math.min(1,(tt-14.3)/0.6));
+    if(tt<14.3){
+      mp={x:450+60, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:12,el:68}, mouth:'smile', style:STYLER};
+    } else {
+      mp={x:lerp(450+60,450-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k),
+        legs:[{hip:lerp(20,84,k),knee:lerp(8,-86,k)},{hip:lerp(-10,78,k),knee:lerp(8,-80,k)}],
+        arm:{sh:58,el:44}, mouth:'smile', style:STYLER};
+    }
+  } else if(tt<16.4){
+    mp={x:450-24, y:HIP_SEAT, face:-1, lean:-14,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:58,el:44}, mouth:(tt>15.8?'o':'smile'), eyes:(tt>15.8?'wide':undefined), style:STYLER};
+  } else {
+    mp={x:450-24, y:HIP_SEAT, face:-1, lean:-14,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:168,el:-118}, mouth:'sad', headTilt:-8, style:STYLER};
+  }
+  drawMan(mp);
+  // THE CAT
+  if(tt>=3.8){
+    if(tt<4.6){
+      const k=(tt-3.8)/0.8;
+      drawCatD(lerp(W+140,720,k), FLOOR-4, {pose:'trot', face:-1, t:t});
+    } else if(tt<5.1){
+      const k=ease((tt-4.6)/0.5);
+      const hop=Math.sin(k*Math.PI)*180;
+      drawCatD(lerp(720,640+10,k), lerp(FLOOR-4,SEAT_TOP+4,k)-hop, {pose:(k<0.8?'trot':'sit'), face:-1, t:t});
+    } else if(tt<15.4){
+      drawCatD(640+10, SEAT_TOP+4, {pose:'sit', face:(tt>8.4&&tt<10.6)?1:-1, t:t});
+    } else if(tt<16.0){
+      const k=ease((tt-15.4)/0.6);
+      const hop=Math.sin(k*Math.PI)*160;
+      drawCatD(lerp(640+10,450+30,k), lerp(SEAT_TOP+4,HIP_SEAT-26,k)-hop, {pose:(k<0.8?'trot':'sit'), face:-1, t:t, s:1.35});
+    } else {
+      drawCatD(450+30, HIP_SEAT-26, {pose:'sit', face:-1, t:t, s:1.35});
+    }
+  }
+  if(tt>=5.15&&tt<5.9){const kk=easeOutBack(Math.min(1,(tt-5.15)/0.26)); starburst(760,FLOOR-700,kk*0.8,'?!');}
+  ctx.restore();
+  showBadge(17);
+  if(t>=0.05&&t<2.0) caption(['BIG CLIENT TODAY.','BEST CHAIR OUT.'],340,(t+0.3)/0.35,52);
+  if(t>=5.2&&t<6.3) caption(['...THE CAT','FOUND IT FIRST.'],340,(t-5.2)/0.35,52);
+  if(t>=6.6&&t<7.9) caption(['SHOO. PLEASE. SIR.'],340,(t-6.6)/0.35,54);
+  if(t>=8.6&&t<9.8) caption(['THE BRIBE.'],340,(t-8.6)/0.35,58);
+  if(t>=10.8&&t<11.8) caption(['THE TILT.'],340,(t-10.8)/0.35,58);
+  if(t>=FR0+0.05&&t<FR1) caption(['THE DECOY.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=16.2&&t<17.3) caption(['NOW HE CAN','NEVER GET UP.'],340,(t-16.2)/0.35,52);
+  if(t>=17.4&&t<18.45){
+    caption(['HOW DO YOU','BEAT THE CAT?'],340,(t-17.4)/0.35,48);
+    caption(['MR. BIG BUSINESS RECORD: 0 W · 3 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[17]=ep17;
+SHAKES[17]=[15.75,0.25,14];
+TAGLINES[17]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[17]=18.5;
 </script>
 </body></html>
 

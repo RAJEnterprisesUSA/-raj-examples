@@ -701,3 +701,83 @@ Reward based on booking size, up to $100 · No limit on referrals · Paid after 
 Swipe before the glow goes out. Comment SPOOKY and we will DM you open October dates.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #halloween #halloweencountdown #25days #jackolantern #spookyseason #october #lasvegas #partyrentals
+
+# WEDNESDAY OCT 7
+
+## FB/IG CAPTIONS (Wednesday Oct 7)
+
+### Carousel · TRASH MATH Tip No.24 (BB_Caro_Wed_TrashMath_01-06) [FEED 8am]
+Nobody plans for trash.
+Swipe for the one piece of party math everybody skips.
+Send this to whoever is on cleanup crew.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partytips #trashmath #partyplanning #vegas #lasvegas #partyrentals #eventplanning
+
+### Carousel · YOUR WEEKEND BACK (BB_Caro_Wed_WeekendBack_01-05) [FEED 10am]
+What does your party weekend actually look like?
+Swipe if it involves hauling, sweating and returns.
+Comment QUOTE and we will DM you a price today.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyrentals #lasvegas #vegas #eventrentals #partyplanning #weekend
+
+### Venue Story (BB_Venue_Wed_OnePrice.png) [STORY 12pm]
+One price, the whole party. Our private room runs $625 for 3 hours up to 25 guests or $800 for 4 hours up to 40, rentals included, with space for 80 standing. Comment VENUE and we will DM you open dates.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#venue #privateevent #lasvegas #vegas #partyvenue #oneprice
+
+### Carousel · GET PAID TO BE POPULAR (BB_Caro_Wed_GetPaid_01-05) [FEED 2pm]
+Get paid to be popular.
+Swipe to see how introductions turn into money.
+Send this to the friend who knows everybody.
+Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #getpaid #vegas #lasvegas #sidehustle #partyrentals
+
+### Carousel · 24 NIGHTS (BB_Caro_Wed_24Nights_01-04) [FEED 4pm]
+Halloween lands on a SATURDAY this year.
+Swipe for why that changes everything. 24 nights out, four party Saturdays left.
+Comment SPOOKY and we will DM you open October dates.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #24days #halloweensaturday #spookyseason #october #lasvegas #partyrentals
+
+### Gag #13 (BB_Halloween_Reel_CandyHand.mp4) [FEED 5pm]
+Who keeps eating the party candy? The bowl kept shrinking, Unc kept turning around, and the hand under the tablecloth kept winning. The guest list had one extra body on it the whole time. Send this to the friend who raids the snack table.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#candyhand #halloween #funnyreels #spookyseason #skeleton #lasvegas #partyrentals #comedy
+
+### Pink October #7 (BB_PinkOctober_MensEdition.mp4) [STORY 6pm]
+1 in 100 breast cancer cases in the U.S. is a man. Men have breast tissue too, the signs are the same, and because nobody is looking it often gets found later. A lump, a change in the skin or the nipple, anything new: get it checked. Say the awkward thing to the men you love. Send this to them.
+Source: CDC.
+📞 702-706-8287 · bigbusinesspartyrentals.com
+#breastcancerawareness #pinkoctober #mensedition #menstoo #earlydetection #pinkribbon #lasvegas
+
+### EP. 17 (fb_safe/BB_Chronicles_Ep17_TheDecoy.mp4) [FEED 8pm]
+He put out the best chair for a big client. The cat found it first. EP. 17: the shoo, the bribe, the tilt, and the decoy chair that backfired spectacularly. Record: 0 wins, 3 losses. How do you beat the cat? Tell us below.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#thebigbusinesschronicles #thecat #comedy #funnyreels #sitcom #catsofinstagram #lasvegas #partyrentals
+
+## YOUTUBE SHORTS CAPTIONS (Wednesday Oct 7)
+
+### BB_Halloween_Reel_CandyHand.mp4
+**Title:** Who keeps eating the party candy? 💀
+**Description:**
+The bowl kept shrinking and the hand under the tablecloth kept winning. Every guest gets a seat, and a snack. Tables and chairs delivered, set up and picked up in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Skeleton #Halloween #FunnyShorts #SpookySeason #LasVegas #PartyRentals
+
+### BB_PinkOctober_MensEdition.mp4
+**Title:** 1 in 100 is a man 🎀 Men's edition
+**Description:**
+Pink October, men's edition: men have breast tissue too, the signs are the same, and late discovery is the danger. Say the awkward thing to the men you love. Source: CDC.
+📞 702-706-8287 · bigbusinesspartyrentals.com · Las Vegas, NV
+IG: @bigbusiness_rentals_events
+#Shorts #BreastCancerAwareness #PinkOctober #MensHealth #EarlyDetection #PinkRibbon
+
+### BB_Chronicles_Ep17_TheDecoy.mp4
+**Title:** EP. 17: The Decoy 😂 you cannot beat the cat
+**Description:**
+THE BIG BUSINESS CHRONICLES: the shoo, the bribe, the tilt, and the decoy chair that backfired. Record: 0 wins, 3 losses. How do you beat the cat? New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #Cat #FunnyShorts #LasVegas #PartyRentals
