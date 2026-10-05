@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f6ecc9;
+  background:radial-gradient(circle at 50% 36%, #241040 0%, #140823 50%, #060309 100%)}
+.moon{position:absolute;left:70px;top:70px;width:190px;height:190px;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%, #ffe9b8, #f0b95c 70%);opacity:.9;
+  box-shadow:0 0 90px rgba(255,200,100,.4)}
+.grain{position:absolute;inset:0;opacity:.11;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%)}
+.frame{position:absolute;inset:30px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:7px;border:1px solid rgba(255,140,46,.45)}
+.dia{position:absolute;width:11px;height:11px;background:#ff8c2e;transform:rotate(45deg)}
+.bats{position:absolute;right:120px;top:100px;font-size:46px;transform:rotate(-8deg);letter-spacing:30px;opacity:.85}
+.wrap{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 70px 44px}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#ff8c2e}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:62px;color:#c9a9f0;margin-top:22px;line-height:1}
+.bignum{font-family:'Archivo Black';font-size:420px;line-height:.92;margin-top:4px;
+  background:repeating-linear-gradient(180deg,
+    #ffffff 0%, #fff8e6 17%,
+    #ffb13d 17%, #ff8c2e 56%,
+    #ffd84d 56%, #f6c231 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 18px 34px rgba(0,0,0,.6))}
+.nights{font-family:'Archivo Black';font-size:66px;letter-spacing:6px;color:#f6f1e4;margin-top:-16px}
+.nights em{font-style:normal;color:#ff8c2e}
+.sub{margin-top:24px;font-weight:600;font-size:26px;color:#d9c9ef;line-height:1.5;max-width:800px}
+.sub b{color:#E5B84B}
+.corns{margin-top:18px;display:flex;gap:16px}
+.corn{width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:44px solid #ff8c2e;position:relative}
+.foot{margin-top:auto;display:flex;align-items:center;gap:22px}
+.foot img{width:76px;height:76px}
+.foot .p{font-family:'Archivo Black';font-size:32px;color:#E5B84B;text-align:left}
+.foot .s{font-weight:600;font-size:17px;color:#d9cdb2;margin-top:3px;text-align:left}
+</style></head>
+<body>
+  <div class="moon"></div>
+  <div class="grain"></div>
+  <div class="vig"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="bats">🦇🦇</div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; HALLOWEEN COUNTDOWN &nbsp;◆</div>
+    <div class="script">candy corn says</div>
+    <div class="bignum">26</div>
+    <div class="nights">NIGHTS <em>LEFT.</em></div>
+    <div class="sub">The spooky season books itself out fast. Tables, chairs and the party room, <b>locked in one call.</b></div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div>
+        <div class="p">702-706-8287</div>
+        <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>

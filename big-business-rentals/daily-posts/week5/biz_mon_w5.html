@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f0ece0;
+  background:radial-gradient(circle at 40% 20%, #0d4a4f 0%, #073036 50%, #04272b 100%)}
+.spot{position:absolute;right:-220px;top:-200px;width:900px;height:900px;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,164,97,.12),transparent 65%)}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.5) 100%)}
+.frame{position:absolute;inset:34px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:8px;border:1px solid rgba(240,164,97,.35)}
+.dia{position:absolute;width:12px;height:12px;background:#D6B25E;transform:rotate(45deg)}
+.ghost{position:absolute;right:-90px;top:430px;font-family:'Archivo Black';font-size:520px;line-height:1;
+  color:transparent;-webkit-text-stroke:3px rgba(240,164,97,.18);letter-spacing:-18px}
+.stamp{position:absolute;top:170px;right:84px;transform:rotate(-6deg);
+  font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:5px;color:#04272b;
+  background:linear-gradient(180deg,#f3b97d,#e08a3c);padding:12px 28px;border-radius:10px;
+  box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.wrap{position:absolute;inset:34px;padding:70px 78px 60px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#f0a461}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:72px;color:#8fd0c8;margin-top:34px;line-height:1}
+h1{font-family:'Archivo Black';font-size:104px;line-height:1.02;margin-top:10px;color:#f4f1e6}
+h1 em{font-style:normal;background:linear-gradient(180deg,#f3b97d,#e08a3c 75%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.list{margin-top:44px;display:flex;flex-direction:column;gap:18px}
+.l{display:flex;align-items:center;gap:22px}
+.l .d{width:16px;height:16px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);transform:rotate(45deg);flex:none}
+.l .t{font-weight:600;font-size:29px;color:#dfe8d9;line-height:1.35}
+.l .t b{color:#E5B84B}
+.cta{margin-top:50px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#04272b;
+  font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:3px;padding:19px 52px;border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.kw{margin-top:22px;font-weight:600;font-size:24px;color:#9ec4bd}
+.kw b{color:#E5B84B}
+.vanwrap{position:absolute;right:56px;bottom:170px;width:400px;height:300px}
+.vanwrap svg{width:100%;height:100%;filter:drop-shadow(-22px 32px 28px rgba(0,0,0,.55))}
+.foot{position:absolute;left:112px;right:112px;bottom:88px;display:flex;align-items:center;gap:24px;
+  border-top:1px solid rgba(229,184,75,.4);padding-top:26px}
+.foot img{width:84px;height:84px}
+.foot .p{font-family:'Archivo Black';font-size:36px;color:#E5B84B}
+.foot .s{font-weight:600;font-size:18px;color:#cfd9cb;margin-top:4px}
+</style></head>
+<body>
+  <div class="spot"></div>
+  <div class="ghost">GO</div>
+  <div class="grain"></div>
+  <div class="vig"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+  <div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div>
+  <div class="stamp">◆ ONE CALL DOES IT</div>
+  <div class="vanwrap"><svg viewBox="0 0 400 300">
+    <g transform="rotate(-4 200 150)">
+      <rect x="30" y="80" width="230" height="130" rx="18" fill="#f7f8fa" stroke="#241a35" stroke-width="9"/>
+      <path d="M260 110 L330 110 L352 160 L352 210 L260 210 Z" fill="#ffffff" stroke="#241a35" stroke-width="9"/>
+      <rect x="276" y="124" width="46" height="36" rx="8" fill="#bfe3de" stroke="#241a35" stroke-width="7"/>
+      <rect x="52" y="104" width="120" height="30" rx="10" fill="#e08a3c"/>
+      <rect x="52" y="146" width="186" height="12" rx="6" fill="#e8eaee"/>
+      <circle cx="100" cy="216" r="34" fill="#241a35"/><circle cx="100" cy="216" r="15" fill="#e8eaee"/>
+      <circle cx="300" cy="216" r="34" fill="#241a35"/><circle cx="300" cy="216" r="15" fill="#e8eaee"/>
+      <path d="M20 250 L380 250" stroke="rgba(240,164,97,.5)" stroke-width="7" stroke-linecap="round" stroke-dasharray="26 18"/>
+    </g>
+  </svg></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div>
+    <div class="script">Party day,</div>
+    <h1>ALREADY<br><em>HANDLED.</em></h1>
+    <div class="list">
+      <div class="l"><div class="d"></div><div class="t">Tables, chairs &amp; linens <b>delivered to your door</b></div></div>
+      <div class="l"><div class="d"></div><div class="t">We set up, you <b>take the credit</b></div></div>
+      <div class="l"><div class="d"></div><div class="t">Pickup when it is over. <b>You never lift a thing.</b></div></div>
+    </div>
+    <div class="cta">GET A FREE QUOTE · 702-706-8287</div>
+    <div class="kw">Comment <b>"QUOTE"</b> and we will DM you a price today</div>
+  </div>
+  <div class="foot">
+    <img src="bb_logo.png">
+    <div>
+      <div class="p">702-706-8287</div>
+      <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>

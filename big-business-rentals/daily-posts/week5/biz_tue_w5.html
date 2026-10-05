@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f6ecdf;
+  background:radial-gradient(circle at 40% 18%, #5e1223 0%, #420a17 50%, #2e0710 100%)}
+.spot{position:absolute;right:-220px;top:-180px;width:880px;height:880px;border-radius:50%;
+  background:radial-gradient(circle,rgba(239,203,124,.12),transparent 65%)}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.52) 100%)}
+.frame{position:absolute;inset:34px;border:2px solid #B08D3E}
+.frame:after{content:'';position:absolute;inset:8px;border:1px solid rgba(232,184,106,.35)}
+.dia{position:absolute;width:12px;height:12px;background:#D6B25E;transform:rotate(45deg)}
+.ghost{position:absolute;left:-50px;bottom:110px;font-family:'Archivo Black';font-size:470px;line-height:1;
+  color:transparent;-webkit-text-stroke:3px rgba(239,203,124,.16);letter-spacing:-14px}
+.stamp{position:absolute;top:170px;right:84px;transform:rotate(-6deg);
+  font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:5px;color:#2e0710;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);padding:12px 28px;border-radius:10px;
+  box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.wrap{position:absolute;inset:34px;padding:70px 78px 60px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#e8b86a}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:72px;color:#e89aa8;margin-top:34px;line-height:1}
+h1{font-family:'Archivo Black';font-size:100px;line-height:1.02;margin-top:10px;color:#f8f1e4}
+h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#B08D3E 75%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.list{margin-top:44px;display:flex;flex-direction:column;gap:18px}
+.l{display:flex;align-items:center;gap:22px}
+.l .d{width:16px;height:16px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);transform:rotate(45deg);flex:none}
+.l .t{font-weight:600;font-size:28px;color:#eddcc8;line-height:1.35;max-width:600px}
+.l .t b{color:#EFCB7C}
+.cta{margin-top:48px;background:linear-gradient(180deg,#EFCB7C,#B08D3E);color:#2e0710;
+  font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:3px;padding:19px 52px;border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.kw{margin-top:22px;font-weight:600;font-size:24px;color:#d8a9b4}
+.kw b{color:#EFCB7C}
+.ropewrap{position:absolute;right:48px;bottom:190px;width:380px;height:420px}
+.ropewrap svg{width:100%;height:100%;filter:drop-shadow(-22px 32px 28px rgba(0,0,0,.55))}
+.foot{position:absolute;left:112px;right:112px;bottom:88px;display:flex;align-items:center;gap:24px;
+  border-top:1px solid rgba(229,184,75,.4);padding-top:26px}
+.foot img{width:84px;height:84px}
+.foot .p{font-family:'Archivo Black';font-size:36px;color:#E5B84B}
+.foot .s{font-weight:600;font-size:18px;color:#e3cdb8;margin-top:4px}
+</style></head>
+<body>
+  <div class="spot"></div>
+  <div class="ghost">VIP</div>
+  <div class="grain"></div>
+  <div class="vig"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+  <div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div>
+  <div class="stamp">★ FULL SERVICE</div>
+  <div class="ropewrap"><svg viewBox="0 0 380 420">
+    <g transform="rotate(4 190 210)">
+      <rect x="52" y="40" width="22" height="330" rx="11" fill="#d9b25e" stroke="#241a35" stroke-width="8"/>
+      <circle cx="63" cy="36" r="22" fill="#EFCB7C" stroke="#241a35" stroke-width="8"/>
+      <rect x="40" y="366" width="48" height="22" rx="10" fill="#b08d3e" stroke="#241a35" stroke-width="8"/>
+      <rect x="296" y="40" width="22" height="330" rx="11" fill="#d9b25e" stroke="#241a35" stroke-width="8"/>
+      <circle cx="307" cy="36" r="22" fill="#EFCB7C" stroke="#241a35" stroke-width="8"/>
+      <rect x="284" y="366" width="48" height="22" rx="10" fill="#b08d3e" stroke="#241a35" stroke-width="8"/>
+      <path d="M74 90 C 140 210, 230 210, 296 90" fill="none" stroke="#8f1d33" stroke-width="34" stroke-linecap="round"/>
+      <path d="M74 90 C 140 210, 230 210, 296 90" fill="none" stroke="#c24a62" stroke-width="22" stroke-linecap="round"/>
+      <path d="M74 90 C 140 210, 230 210, 296 90" fill="none" stroke="#241a35" stroke-width="38" stroke-linecap="round" opacity=".18"/>
+    </g>
+  </svg></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div>
+    <div class="script">Host like</div>
+    <h1>YOU HIRED<br>A <em>TEAM.</em></h1>
+    <div class="list">
+      <div class="l"><div class="d"></div><div class="t">Because you did. <b>Delivery, setup and pickup</b> on every order</div></div>
+      <div class="l"><div class="d"></div><div class="t">Tables, chairs and linens that <b>match your theme</b></div></div>
+      <div class="l"><div class="d"></div><div class="t">You greet the guests. <b>We do the heavy lifting.</b></div></div>
+    </div>
+    <div class="cta">GET A FREE QUOTE · 702-706-8287</div>
+    <div class="kw">Comment <b>"QUOTE"</b> and we will DM you a price today</div>
+  </div>
+  <div class="foot">
+    <img src="bb_logo.png">
+    <div>
+      <div class="p">702-706-8287</div>
+      <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>

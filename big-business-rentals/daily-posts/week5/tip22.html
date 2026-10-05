@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#241a35;
+  background:radial-gradient(circle at 30% 18%, #faf3e3 0%, #f4ead6 45%, #e7d9bc 100%)}
+.grain{position:absolute;inset:0;opacity:.08;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, transparent 60%, rgba(120,95,40,.16) 100%)}
+.frame{position:absolute;inset:34px;border:2px solid #a07c2c}
+.frame:after{content:'';position:absolute;inset:8px;border:1px solid rgba(160,124,44,.4)}
+.dia{position:absolute;width:12px;height:12px;background:#a07c2c;transform:rotate(45deg)}
+.ghost{position:absolute;right:-120px;top:120px;font-family:'Archivo Black';font-size:660px;line-height:1;
+  color:transparent;-webkit-text-stroke:3px rgba(160,124,44,.25);letter-spacing:-24px}
+.stamp{position:absolute;top:176px;right:88px;transform:rotate(7deg);
+  font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:5px;color:#f4ead6;
+  background:#241a35;padding:12px 28px;border-radius:10px;
+  box-shadow:0 14px 30px rgba(80,60,20,.35)}
+.wrap{position:absolute;inset:34px;padding:72px 78px 60px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.kick{font-family:'Oswald';font-weight:600;font-size:25px;letter-spacing:10px;color:#8a6a1c}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:72px;color:#9a6f20;margin-top:30px;line-height:1}
+h1{font-family:'Archivo Black';font-size:118px;line-height:1.0;margin-top:8px;color:#241a35}
+h1 em{font-style:normal;background:linear-gradient(180deg,#c89a3c,#8a6a1c 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.facts{margin-top:42px;display:flex;flex-direction:column;gap:18px}
+.f{display:flex;align-items:baseline;gap:20px}
+.f .n{font-family:'Archivo Black';font-size:52px;min-width:210px;white-space:nowrap;
+  background:linear-gradient(180deg,#c89a3c,#8a6a1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.f .t{font-weight:600;font-size:27px;color:#4a3c28;max-width:560px;line-height:1.35}
+.f .t b{color:#8a6a1c}
+.sub{margin-top:40px;border-left:5px solid #a07c2c;padding:8px 0 8px 24px;font-weight:600;font-size:26px;color:#4a3c28;line-height:1.5;max-width:600px}
+.sub b{color:#8a6a1c}
+.cubewrap{position:absolute;right:70px;bottom:270px;width:300px;height:310px}
+.cubewrap svg{width:100%;height:100%;filter:drop-shadow(-18px 26px 24px rgba(90,70,30,.35))}
+.foot{position:absolute;left:112px;right:112px;bottom:88px;display:flex;align-items:center;gap:24px;
+  border-top:1px solid rgba(160,124,44,.5);padding-top:26px}
+.foot img{width:84px;height:84px}
+.foot .p{font-family:'Archivo Black';font-size:36px;color:#8a6a1c}
+.foot .s{font-weight:600;font-size:18px;color:#5c4b2e;margin-top:4px}
+</style></head>
+<body>
+  <div class="ghost">ICE</div>
+  <div class="grain"></div>
+  <div class="vig"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+  <div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div>
+  <div class="stamp">◆ PARTY MATH · TIP No.22</div>
+  <div class="cubewrap"><svg viewBox="0 0 320 330">
+    <g transform="rotate(-8 160 165)">
+      <rect x="60" y="70" width="170" height="170" rx="26" fill="#eaf4f6" stroke="#241a35" stroke-width="9"/>
+      <path d="M60 140 L230 140" stroke="#cfe4e8" stroke-width="8"/>
+      <path d="M145 70 L145 240" stroke="#cfe4e8" stroke-width="8"/>
+      <path d="M82 96 L116 96" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+      <rect x="160" y="170" width="130" height="130" rx="22" fill="#f3fafb" stroke="#241a35" stroke-width="9"/>
+      <path d="M180 192 L206 192" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+      <path d="M160 236 L290 236" stroke="#d9ebee" stroke-width="7"/>
+    </g>
+  </svg></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div>
+    <div class="script">Ice</div>
+    <h1>MATH<em>.</em></h1>
+    <div class="facts">
+      <div class="f"><div class="n">1 LB</div><div class="t">per guest <b>for their cups,</b> minimum</div></div>
+      <div class="f"><div class="n">2 LB</div><div class="t">per guest if you are <b>burying cans and bottles</b> in a cooler</div></div>
+      <div class="f"><div class="n">2X</div><div class="t">everything for an outdoor party. <b>This is Vegas.</b> The sun drinks first.</div></div>
+    </div>
+    <div class="sub">Ice is the one thing you cannot set up early. Buy it <b>last</b>, keep it <b>shaded</b>, and let us handle every table, chair and linen <b>before the first bag melts.</b></div>
+  </div>
+  <div class="foot">
+    <img src="bb_logo.png">
+    <div>
+      <div class="p">702-706-8287</div>
+      <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>

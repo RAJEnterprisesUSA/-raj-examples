@@ -2134,6 +2134,245 @@ function reelH10(t){
 REELS[10]=reelH10;
 SHAKES[10]=[4.02,0.35,22];
 TAGLINES[10]='LUCK RUNS OUT. OUR CHAIRS DON\'T.';
+
+// ---------- H11: pumpkin head ----------
+function pumpkinOnHead(p, t, s, dy){
+  s=s||1.15; dy=dy||0;
+  ctx.save();
+  ctx.translate(p.x,p.y); ctx.rotate(rad(p.rot||0)); ctx.scale(p.face,1);
+  ctx.rotate(rad(-(p.lean||0)));
+  ctx.rotate(rad((p.headTilt||0)*0.5));
+  drawPumpkin(30, -308+48*s+dy, s, t);
+  ctx.restore();
+}
+function reelH11(t){
+  drawRoomH(t);
+  const CH=620;
+  drawChair(CH,0,0,0);
+  if(t>=6.6) sparkle(CH+60, SEAT_TOP-170, t);
+  // UNC with the pumpkin
+  let up=null, pumpkinWhere='hands';
+  if(t<1.3){
+    const step=Math.sin(t*11);
+    up={x:lerp(-220,330,ease(t/1.3)), y:HIP_STAND-Math.abs(step)*12, face:1, lean:4,
+      legs:[{hip:20*step,knee:26+16*Math.max(0,-step)},{hip:-20*step,knee:26+16*Math.max(0,step)}],
+      arm:{sh:74,el:26}, arm2:{sh:66,el:34}, mouth:'smile'};
+  } else if(t<2.0){
+    const k=ease((t-1.3)/0.7);
+    up={x:330, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:lerp(74,156,k),el:lerp(26,-36,k)}, arm2:{sh:lerp(66,146,k),el:lerp(34,-28,k)},
+      mouth:'o'};
+    pumpkinWhere='lift';
+  } else if(t<3.0){
+    up={x:330, y:HIP_STAND, face:1, lean:-2,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:20,el:50}, arm2:{sh:12,el:58}, mouth:'smile', headTilt:Math.sin(t*4)*6};
+    pumpkinWhere='head';
+  } else if(t<4.1){
+    const wob=Math.sin(t*16)*6;
+    up={x:330, y:HIP_STAND, face:1, lean:wob*0.8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:150,el:-64}, arm2:{sh:140,el:-56}, mouth:'o', headTilt:wob};
+    pumpkinWhere='head';
+  } else if(t<4.8){
+    const k=ease((t-4.1)/0.7);
+    const step=Math.sin(t*10);
+    up={x:lerp(330,CH-10,k), y:HIP_STAND-Math.abs(step)*8, face:1, lean:2,
+      legs:[{hip:22*step,knee:10},{hip:-22*step,knee:10}],
+      arm:{sh:150,el:-64}, arm2:{sh:30,el:40}, mouth:'o'};
+    pumpkinWhere='head';
+  } else if(t<5.9){
+    const k=ease(Math.min(1,(t-4.8)/0.35));
+    const tug=(t>5.1)?Math.max(0,Math.sin((t-5.1)*9))*26:0;
+    up={x:CH-10, y:lerp(HIP_STAND,HIP_SEAT,k)-tug, face:1, lean:-10+tug*0.4,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:40,el:60}, arm2:{sh:32,el:66}, mouth:'o'};
+    pumpkinWhere='head';
+  } else if(t<6.35){
+    const k=ease((t-5.9)/0.45);
+    up={x:CH-10, y:HIP_SEAT+Math.sin(k*Math.PI)*-34, face:1, lean:-14,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:58,el:44}, arm2:{sh:50,el:50}, mouth:'o', eyes:'wide', headTilt:Math.sin(t*22)*8};
+    pumpkinWhere='gone';
+  } else {
+    up={x:CH-10, y:HIP_SEAT, face:1, lean:-14,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:58,el:44}, arm2:{sh:50,el:50}, mouth:'smile', headTilt:Math.sin(t*2.5)*4};
+    pumpkinWhere='gone';
+  }
+  // MR. BIG BUSINESS pulls
+  if(t>=4.2){
+    let mp=null;
+    if(t<5.0){
+      const k=ease((t-4.2)/0.8);
+      const step=Math.sin(t*11);
+      mp={x:lerp(W+200,CH+300,k), y:HIP_STAND-Math.abs(step)*12, face:-1, lean:4, style:STYLER,
+        legs:[{hip:20*step,knee:26+16*Math.max(0,-step)},{hip:-20*step,knee:26+16*Math.max(0,step)}],
+        arm:{sh:24+14*step,el:30}, mouth:'o'};
+    } else if(t<5.9){
+      const heave=Math.max(0,Math.sin((t-5.1)*9));
+      mp={x:CH+300+heave*26, y:HIP_STAND, face:-1, lean:-(16+heave*16), style:STYLER,
+        legs:[{hip:30+heave*10,knee:-18},{hip:-34-heave*8,knee:30}],
+        arm:{sh:118,el:-30}, arm2:{sh:104,el:-18}, mouth:'o', eyes:heave>0.7?'wide':undefined};
+    } else if(t<6.6){
+      const k=ease((t-5.9)/0.7);
+      mp={x:lerp(CH+300,CH+375,k), y:lerp(HIP_STAND,FLOOR-96,k), face:-1, rot:k*74, lean:-8, style:STYLER,
+        legs:[{hip:40,knee:-20},{hip:54,knee:-36}],
+        arm:{sh:70,el:30}, arm2:{sh:62,el:38}, mouth:'o', eyes:'wide'};
+    } else {
+      mp={x:CH+375, y:FLOOR-96, face:-1, rot:74, lean:-8, style:STYLER,
+        legs:[{hip:40,knee:-20},{hip:54,knee:-36}],
+        arm:{sh:70,el:30}, arm2:{sh:62,el:38}, mouth:'sad', eyes:'wide'};
+    }
+    drawMan(mp);
+  }
+  drawMan(up);
+  // the pumpkin
+  if(pumpkinWhere==='hands'){
+    drawPumpkin(up.x+150, up.y-120, 1.15, t);
+  } else if(pumpkinWhere==='lift'){
+    const k=ease((t-1.3)/0.7);
+    drawPumpkin(lerp(up.x+150,up.x+30,k), lerp(up.y-120,up.y-420,k*1.08), 1.15, t);
+    if(k>0.93) pumpkinOnHead(up,t);
+  } else if(pumpkinWhere==='head'){
+    const dy=(t>=3.0&&t<4.1)?Math.sin(t*16)*4:((t>=5.1&&t<5.9)?-Math.max(0,Math.sin((t-5.1)*9))*10:0);
+    pumpkinOnHead(up,t,1.15,dy);
+  } else if(t<6.6){
+    const k=ease((t-5.9)/0.7);
+    const px=lerp(CH+20,CH+330,k), py=lerp(HIP_SEAT-360,FLOOR-135,k)-Math.sin(k*Math.PI)*260;
+    drawPumpkin(px,py,1.15,t);
+  } else {
+    drawPumpkin(CH+330,FLOOR-135,1.15,t);
+  }
+  if(t>=5.88&&t<6.7){const kk=easeOutBack(Math.min(1,(t-5.88)/0.28)); starburst(CH+120,FLOOR-760,kk*0.9,'POP!');}
+  if(t<1.5) caption(['HE PUT THE','PUMPKIN ON.'],240,(t+0.35)/0.35,56);
+  if(t>=2.05&&t<2.95) caption(['FOR THE PICTURES,','HE SAID.'],240,(t-2.05)/0.35);
+  if(t>=3.1&&t<4.0) caption(['IT\'S STUCK.'],240,(t-3.1)/0.35,62);
+  if(t>=4.85&&t<5.8) caption(['SIT DOWN.','WE PULL ON THREE.'],240,(t-4.85)/0.35);
+  if(t>=6.6&&t<7.6) caption(['THE CHAIR TOOK','EVERY TUG.'],240,(t-6.6)/0.35,56);
+  if(t>=7.8&&t<8.9) caption(['RENT THE CHAIRS','THAT HOLD.'],240,(t-7.8)/0.35,58);
+}
+REELS[11]=reelH11;
+SHAKES[11]=[5.9,0.3,18];
+TAGLINES[11]='HOLDS THE PARTY. AND THE PUMPKIN.';
+
+// ---------- H12: the spider guest ----------
+function drawSpider(x,y,o){
+  // o: {s, t, dangle(line from top), legsT}
+  ctx.save(); ctx.translate(x,y); const ss=o.s||1; ctx.scale(ss,ss);
+  if(o.dangle){
+    ctx.strokeStyle='rgba(230,230,240,.65)'; ctx.lineWidth=4/ss;
+    ctx.beginPath(); ctx.moveTo(0,-y/ss); ctx.lineTo(0,-96); ctx.stroke();
+  }
+  ctx.lineWidth=10; ctx.strokeStyle='#0b0613'; ctx.lineCap='round';
+  for(let i=0;i<4;i++){
+    const ph=Math.sin((o.t||0)*10+i*1.3)*8;
+    const lx=36+i*16, ly=-60+i*14;
+    ctx.beginPath(); ctx.moveTo(-18,-58);
+    ctx.quadraticCurveTo(-lx,-ly-40+ph,-lx-16,8+ph*0.5); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(18,-58);
+    ctx.quadraticCurveTo(lx,-ly-40-ph,lx+16,8-ph*0.5); ctx.stroke();
+  }
+  ctx.fillStyle='#17101f';
+  ctx.beginPath(); ctx.ellipse(0,-70,42,36,0,0,7); ctx.fill();
+  ctx.beginPath(); ctx.arc(0,-24,26,0,7); ctx.fill();
+  ctx.fillStyle='#9fe24f';
+  ctx.beginPath(); ctx.ellipse(-12,-76,6,8,0,0,7); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(12,-76,6,8,0,0,7); ctx.fill();
+  ctx.fillStyle='#17101f';
+  ctx.beginPath(); ctx.arc(-12,-77,2.6,0,7); ctx.fill();
+  ctx.beginPath(); ctx.arc(12,-77,2.6,0,7); ctx.fill();
+  if(o.bow){
+    ctx.fillStyle='#e05252';
+    ctx.beginPath(); ctx.moveTo(-4,-104); ctx.lineTo(-22,-116); ctx.lineTo(-22,-94); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(4,-104); ctx.lineTo(22,-116); ctx.lineTo(22,-94); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.arc(0,-104,6,0,7); ctx.fill();
+  }
+  ctx.restore();
+}
+function reelH12(t){
+  drawRoomH(t);
+  const NX=760;
+  drawChair(NX,0,0,0);
+  if(t>=7.0) sparkle(NX+56, SEAT_TOP-170, t);
+  // dropped stack after the scare
+  if(t>=3.2){
+    drawStack(430,FLOOR-6,-12);
+    drawStack(560,FLOOR-2,10);
+  }
+  // UNC carrying stacked plates in
+  let pose=null, carry=true;
+  if(t<1.8){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,360,ease(t/1.8)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'smile'};
+  } else if(t<2.6){
+    pose={x:360, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-8,knee:8}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'smile'};
+  } else if(t<3.2){
+    // sees the spider: recoil
+    const k=Math.min(1,(t-2.6)/0.3);
+    pose={x:360-k*30, y:HIP_STAND-Math.sin(k*Math.PI)*20, face:1, lean:-16,
+      legs:[{hip:18,knee:-12},{hip:-16,knee:-6}],
+      arm:{sh:130,el:-30}, arm2:{sh:120,el:-24}, mouth:'o', eyes:'wide', headTilt:-6};
+  } else if(t<4.6){
+    carry=false;
+    const k=ease((t-3.2)/1.4);
+    const step=Math.sin(t*13);
+    pose={x:lerp(330,-240,k), y:HIP_STAND-Math.abs(step)*16, face:-1,
+      legs:[{hip:40*step,knee:-16},{hip:-40*step,knee:-16}],
+      arm:{sh:130,el:-40}, arm2:{sh:120,el:-30}, mouth:'o', eyes:'wide'};
+    if(t<3.8) dust(330,FLOOR,(t-3.2)/0.6);
+  } else if(t<6.4){
+    carry=false; pose=null; // hiding off screen
+  } else if(t<7.6){
+    carry=false;
+    const k=ease((t-6.4)/1.2);
+    pose={x:lerp(-240,150,k), y:HIP_STAND, face:1, lean:6,
+      legs:[{hip:14,knee:6},{hip:-8,knee:8}],
+      arm:{sh:40,el:50}, mouth:'o', eyes:'wide', headTilt:8};
+  } else {
+    carry=false;
+    pose={x:170, y:HIP_STAND, face:1, lean:-2,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:150+Math.sin(t*9)*12,el:-20}, mouth:'smile', headTilt:Math.sin(t*4)*4};
+  }
+  if(pose) drawMan(pose);
+  if(pose&&carry) drawStack(pose.x+108*pose.face, pose.y-78, Math.sin(t*9)*3);
+  // THE SPIDER
+  if(t>=1.9){
+    let sx=620, sy, dangle=true, legsT=t, bow=(t>=6.2);
+    if(t<3.4){
+      const k=ease(Math.min(1,(t-1.9)/1.1));
+      sy=lerp(-160,FLOOR-520,k);
+    } else if(t<5.2){
+      sy=FLOOR-520+Math.sin(t*2.2)*14;
+    } else if(t<6.2){
+      const k=ease((t-5.2)/1.0);
+      sy=lerp(FLOOR-520,FLOOR-10,k);
+      dangle=true;
+    } else if(t<7.2){
+      dangle=false;
+      const k=ease((t-6.2)/1.0);
+      sx=lerp(620,NX-6,k); sy=FLOOR-10+Math.sin(k*Math.PI)*-30;
+    } else {
+      dangle=false; sx=NX-6; sy=SEAT_TOP-6;
+    }
+    drawSpider(sx,sy,{s:1.1,t:t,dangle:dangle,bow:bow});
+  }
+  if(t>=2.62&&t<3.4){const kk=easeOutBack(Math.min(1,(t-2.62)/0.26)); starburst(330,FLOOR-740,kk*0.85,'AAAH!');}
+  if(t<1.7) caption(['SETUP WAS','GOING GREAT.'],240,(t+0.35)/0.35,56);
+  if(t>=2.7&&t<3.9) caption(['UNTIL THE PLUS-ONE','DROPPED IN.'],240,(t-2.7)/0.35);
+  if(t>=4.8&&t<6.1) caption(['THE SPIDER: NOT','EVEN ON THE LIST.'],240,(t-4.8)/0.35);
+  if(t>=6.9&&t<7.9) caption(['IT JUST WANTED','A GOOD SEAT.'],240,(t-6.9)/0.35,56);
+  if(t>=8.0&&t<8.9) caption(['EVERY GUEST','GETS A CHAIR.'],240,(t-8.0)/0.35,58);
+}
+REELS[12]=reelH12;
+SHAKES[12]=[2.62,0.3,16];
+TAGLINES[12]='EIGHT LEGS. STILL HOLDS.';
 </script>
 </body></html>
 

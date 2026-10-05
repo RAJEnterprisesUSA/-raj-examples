@@ -11,6 +11,8 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 - Instagram: @bigbusiness_rentals_events · LAS VEGAS, NV.
 - Footer block on every card: logo + phone + site + IG + LAS VEGAS, NV.
 - NO em dashes anywhere: chat, captions, designs. Use commas, periods, or " · ".
+- STANDARD GRAMMAR ONLY in all copy (owner correction Oct 5): never use slang subject-verb constructions
+  like "which one is you". Write "which one are you". Casual tone is fine, broken grammar is not.
 - Captions end with: "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" + hashtags.
 - Never remove or cover AI watermarks (e.g. Gemini/Veo) on user-supplied videos; BB badge may sit NEXT to one.
 - Do not invent prices or services. Known prices: Venue Package 3-Hour $625 (up to 25 guests),
@@ -42,11 +44,14 @@ UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from now
 someone asks "WHERE DID YOU EVEN COME FROM?", he always replies shy/irritated "...im the new intern."),
 villain LIL WOBBLES the red cheap chair (col {a:'#e05252',b:'#c94444',c:'#ef6d6d'}), THE CAT (silent nemesis).
 Episode numbering continues from Derrick era: next episode is EP. 15.
-Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; ~12s runtime
-(encode -t 12.2 with afade out at 11.7); zoom punches/instant replay/freeze frames; 2-note theme sting;
+Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; episodes ~20s, NO VOICES
+(owner decision Oct 5 evening: voices tested and CANCELLED, 45s format cancelled; EP15 final = 21.0s, 735 frames
+@35fps, encode -t 21.0, afade out at 20.2; per-reel end card time via window.ENDTIMES[n] in reelsD.html);
+zoom punches/instant replay/freeze frames; 2-note theme sting;
 season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpkin every episode;
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
-Season One voices: Piper TTS or silent. Season Two: owner's real voice recordings begin.
+Season One voices: NONE, SFX only (ElevenLabs VO tested Oct 5, owner cancelled it; keep IDs in CAST.md on file).
+Season Two: owner's real voice recordings begin.
 
 ## Design system (Flyer 2.0, since Oct 4)
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).
@@ -84,27 +89,61 @@ Season One voices: Piper TTS or silent. Season Two: owner's real voice recording
   and test it against the ElevenLabs API (never print the key). If valid, prefer ElevenLabs for character lines:
   pick consistent voices per character and keep IDs noted in CAST.md.
 
+## Buffer scheduling (working since Oct 5; owner-approved workflow)
+- API: GraphQL at https://api.buffer.com, auth via environment credential "Buffer" (Authorization: Bearer, injected).
+  The legacy REST api.bufferapp.com does NOT accept this token; never use it.
+- Organization ID: 6a8284ed71811e26a813241c. Channel IDs:
+  facebook "Big Business Party Rentals & Events Specialist" = 6aabfb63ea19ca0bde696947
+  instagram bigbusiness_rentals_events = 6aabfaf0ea19ca0bde6965d6
+  tiktok rashad_abdulwali = 6ab81da7ea19ca0bdef9436e
+  youtube "R.A Johnson" = 6ac2ff576a5c39ccb618d238
+- createPost(input:{channelId, text, mode: customScheduled, dueAt: <ISO datetime>, schedulingType: automatic,
+  assets:[{image:{url}} | {video:{url, thumbnailUrl?}}]}). Media = PUBLIC URLs; the repo is public, so use
+  raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
+  files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
+- DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
+  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 extra/cast slot 1pm · 5 referral 2pm ·
+  6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm. Owner can override per post.
+  Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).
+  Required metadata or createPost FAILS: FB needs metadata.facebook.type (post/story/reel); IG needs
+  metadata.instagram.type AND shouldShareToFeed (false for story); YouTube needs metadata.youtube.categoryId
+  ("23" comedy reels, "22" pink/awareness) + title + privacy public + madeForKids false. TikTok needs none.
+  Story routing: tip, business card, referral, countdown, pink = story; venue + cast = post; gag + episode = reel.
+  Reference script: big-business-rentals/build_buffer_queue.py (Monday Oct 5 run queued 24/24 OK).
+- BUFFER CAPTION FORMAT (owner spec, apply to 100% of Buffer captions, all platforms):
+  opening line / blank line / ONE caption paragraph / blank line /
+  "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" / blank line / all hashtags on one line.
+  No headings, labels or bullets. Never change caption content or meaning, only this visual structure.
+
 ## Git & delivery
 - Branch: claude/photo-to-logo-editing-krxiu5 only. Commit+push after each day's set (retry 503s with backoff).
 - NO PRs unless asked. No model names in repo artifacts. Commit footer: Co-Authored-By Claude + Claude-Session link per system reminder.
 - Deliver files to the user via SendUserFile as they are produced (cards first, videos when encoded), captions in chat on request.
 - The user's timezone is Las Vegas (UTC-7/8): the UTC date is often a day AHEAD of his. Confirm "today" from his words, not the clock.
 
-## Current status (as of Oct 5 handoff, second save)
-- Done through Sunday Oct 4. Last Halloween reel: #10 Black Cat. Last tip: No.21. Countdown Monday = 26 nights (verified).
-- SEASON ONE sources ready: big-business-rentals/reelsD.html = reelsC copy with purple end-card logo (window.logoReady)
-  plus REELS[15] = EP. 15 "The New Intern" FULLY WRITTEN and contact-sheet QA'd (badge/captions/freeze-zoom/tower/crash all working).
-  Remaining nits before full render: move the CRASH starburst from x=350 to ~x=430 (clips left edge), re-check Tyler's
-  reach pose at tt~4.9 against the tower. Render it like the Halloween reels: setReel(15), 420 frames, numpy audio
-  (add the NEW 2-note theme sting at t=0, e.g. G4 then D5, plus poof at 1.55, ?! sting 1.95, sad two-note catchphrase
-  motif at 3.1 AND 7.05 same notes both times, stack taps 4.4+, record-scratch at freeze 5.1, wobble creak, CRASH 6.5,
-  pop-out boing 6.95), encode with -t 12.2 and afade out at 11.7 -> fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4.
-- Monday premiere still to build: Tip No.22 "ICE MATH" (Daylight Cream light-mode, Flyer 2.0 4:5), referral card
-  (Emerald Night, casino-chip "easiest $100 in Vegas" concept), Halloween 26-nights flyer (candy-corn striped numeral),
-  Halloween gag #11 (suggested: "Pumpkin Head" - pumpkin stuck on head, our chair holds during the pull-off),
-  Pink October #5 ("Myths, Busted": most diagnosed have no family history ACS; younger women too; lumps often painless),
-  Meet The Cast announcement post (examples/EX_MeetTheCast.png, ready), venue slot = the caro1-3 carousel (never posted).
-  Feed routing Monday: Ep15 + Cast card + gag #11; everything else Stories/Trial Reel; captions FB/IG + YT Shorts, hook-first.
-- ElevenLabs: key added by user Oct 5; sessions started after that should have ELEVENLABS_API_KEY. Verify + test on start.
-- Season One voice decision still open (Piper or silent); user said voices "season 2" originally, Piper demo was liked.
+## Current status (as of Monday Oct 5, end of day)
+- MONDAY OCT 5 SET DELIVERED AND PUSHED: Tip No.22 ICE MATH (Daylight Cream), midday business card
+  (Desert Teal "Party Day Handled"), referral casino chip (Emerald Night "easiest $100 in Vegas"),
+  26-nights candy corn countdown, Halloween gag #11 Pumpkin Head (reelH REELS[11]),
+  Pink October #5 Myths Busted (awareness/pink5.html, 28s), Meet The Cast post + six Cast File cards (from sibling session),
+  and EP. 15 "The New Intern" FINAL at 21.0s, SFX only (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4).
+  All captions in posting_captions.md (use the Oct 5 corrected EP15 captions, no voice mentions).
+- EPISODE FORMAT (final, owner decisions Oct 5): ~20s, SFX only, NO voiceovers. A 52.5s ElevenLabs-voiced
+  cut was built and then cancelled by the owner the same evening ("cancel the whole voices i dont like them
+  and only make the video about 20 seconds"). Do not add TTS voices to episodes again unless he asks.
+  build_ep15v3_render.py is the reference render script (735 frames, -t 21.0, afade 20.2).
+  Per-reel end card time via window.ENDTIMES[n] in reelsD.html.
+- ElevenLabs is WORKING via environment credential (xi-api-key injected for api.elevenlabs.io; no env var).
+  If 401 returns, the credential needs re-saving in environment settings; Piper stays the fallback.
+- TUESDAY OCT 6 SET BUILT, DELIVERED AND PUSHED (awaiting owner go-ahead to queue in Buffer):
+  Tip No.23 DRINK MATH (Midnight Navy), Hired A Team business card (Velvet Rope), Plan B venue flyer
+  (Purple/Gold, Story), Word Of Mouth referral (Black&Gold), 25-nights jack-o-glow countdown,
+  gag #12 Spider Guest (reelH REELS[12]), Pink #6 By The Numbers (pink6.html, 26s),
+  EP. 16 The Demonstration (REELS[16] in reelsD, 21s: Mrs. Never Wrong debut, Lil Wobbles, W-L 0-2).
+  Captions for all of it in posting_captions.md under TUESDAY OCT 6. DO NOT queue until owner says so;
+  then use build_buffer_queue.py pattern at the standing times.
+- Wednesday Oct 7 needs: Tip No.24, business card, venue slot, referral flyer, 24-nights countdown
+  (VERIFY with datetime), gag #13 (used now: ...black cat, pumpkin head, spider guest), Pink October #7,
+  EP. 17 (~20s SFX only; W-L 0-2 going in; Tyler/cat available; arc continues).
+- Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
