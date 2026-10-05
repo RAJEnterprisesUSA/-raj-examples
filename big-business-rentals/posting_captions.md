@@ -548,3 +548,22 @@ Meet the cast of THE BIG BUSINESS CHRONICLES. 🎬 Six characters, one party ren
 05 · Every party has a villain. LIL WOBBLES: four legs allegedly, holds weight absolutely not. It always comes back.
 06 · Words spoken: zero. Luck provided: bad. THE CAT already took the best seat at your function.
 (Each ends with: 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com + the series hashtags)
+
+
+## RULE REVERSAL (Oct 5, owner, same evening): VOICES CANCELLED, EPISODES ~20s
+The 45s+ voiced-episode rule from earlier today is cancelled. Owner: "cancel the whole voices
+i dont like them and only make the video about 20 seconds." Episodes are ~20s, SFX only.
+EP. 15 final = 21.0s silent cut. Corrected captions below replace the earlier EP15 captions.
+
+### CORRECTED · 9 · PREMIERE — EP. 15 (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4) [FEED, evening]
+He hired an intern. He said four words: "stack the chairs." 😂 EP. 15 premieres THE BIG BUSINESS CHRONICLES Season One. Tyler's first day went exactly how you think it went. What should Tyler help with next? Best idea gets the next episode credit.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#thebigbusinesschronicles #newintern #comedy #funnyreels #sitcom #lasvegas #vegas #partyrentals
+
+### CORRECTED · YT Shorts · BB_Chronicles_Ep15_TheNewIntern.mp4
+**Title:** EP. 15: The New Intern 😂 "stack the chairs"
+**Description:**
+THE BIG BUSINESS CHRONICLES, Season One premiere. Tyler takes every instruction 100 percent literally. What should Tyler help with next? Comment below. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #NewIntern #FunnyShorts #LasVegas #PartyRentals

@@ -1249,7 +1249,7 @@ function showBadge(ep){
   ctx.restore();
 }
 function ep15(t){
-  const FR0=32.0, FR1=32.95;
+  const FR0=13.4, FR1=14.3;
   const tt=(t>=FR0&&t<FR1)?FR0:t;
   ctx.save();
   if(t>=FR0&&t<FR1){
@@ -1258,26 +1258,24 @@ function ep15(t){
   }
   drawRoom();
   miniPumpkin(64, FLOOR+86);
-  // chair row: 260 pre-set, 450 placed at 2.0, 640 placed at 3.6
   drawChair(260,0,0,0);
-  if(tt>=2.0){
-    const k=easeOutBack(Math.min(1,(tt-2.0)/0.3));
+  if(tt>=1.5){
+    const k=easeOutBack(Math.min(1,(tt-1.5)/0.3));
     ctx.save(); ctx.translate(450,FLOOR); ctx.scale(k,k); ctx.translate(-450,-FLOOR);
     drawChair(450,0,0,0); ctx.restore();
   }
-  if(tt>=3.6&&tt<37.5){
-    const k=easeOutBack(Math.min(1,(tt-3.6)/0.3));
+  if(tt>=2.4&&tt<15.2){
+    const k=easeOutBack(Math.min(1,(tt-2.4)/0.3));
     ctx.save(); ctx.translate(640,FLOOR); ctx.scale(k,k); ctx.translate(-640,-FLOOR);
     drawChair(640,0,0,0); ctx.restore();
   }
-  // tower build 24.8+, five chairs, red base
   const RED={a:'#e05252',b:'#c94444',c:'#ef6d6d'};
-  if(tt>=24.8&&tt<37.5){
-    const wob=(tt>36.6)?Math.sin(t*20)*(tt-36.6)*9:0;
+  if(tt>=10.2&&tt<15.2){
+    const wob=(tt>14.4)?Math.sin(t*20)*(tt-14.4)*11:0;
     ctx.save(); ctx.translate(640,FLOOR); ctx.rotate(rad(wob)); ctx.translate(-640,-FLOOR);
-    const n=Math.min(5,Math.floor((tt-24.8)/0.55)+1);
+    const n=Math.min(5,Math.floor((tt-10.2)/0.4)+1);
     for(let i=0;i<n;i++){
-      const k=easeOutBack(Math.min(1,(tt-(24.8+i*0.55))/0.25));
+      const k=easeOutBack(Math.min(1,(tt-(10.2+i*0.4))/0.25));
       ctx.save(); ctx.translate(640,FLOOR-i*168); ctx.scale(k,k); ctx.translate(-640,-(FLOOR-i*168));
       ctx.save(); ctx.translate(0,-i*168);
       drawChair(640,0,0,0, i===0?RED:undefined);
@@ -1285,91 +1283,69 @@ function ep15(t){
     }
     ctx.restore();
   }
-  if(tt>=37.5){
+  if(tt>=15.2){
     [[470,-24],[575,14],[690,-8],[795,22],[640,-40]].forEach(([cx,rot],i)=>{
       ctx.save(); ctx.translate(cx,FLOOR); ctx.rotate(rad(rot)); ctx.translate(-cx,-FLOOR);
       drawChair(cx,0,(i===4)?0.5:0,(i===4)?0.4:0, i===0?RED:undefined);
       ctx.restore();
     });
-    if(t<38.3){
+    if(t<15.9){
       ctx.save(); ctx.fillStyle='#e8762e'; ctx.strokeStyle=INK; ctx.lineWidth=7;
       ctx.beginPath(); ctx.arc(700,FLOOR-96,30,rad(180),rad(360)); ctx.closePath(); ctx.fill(); ctx.stroke();
       ctx.restore();
     }
-    dust(640,FLOOR,Math.min(1,(t-37.5)/0.9));
+    dust(640,FLOOR,Math.min(1,(t-15.2)/0.9));
   }
-  // ---------- MR. BIG BUSINESS ----------
+  // MR. BIG BUSINESS
   let mp=null;
-  if(tt<1.6){
-    const k=ease(tt/1.6);
+  if(tt<1.2){
+    const k=ease(tt/1.2);
     const step=Math.sin(tt*10);
     mp={x:lerp(-220,500,k), y:HIP_STAND-Math.abs(step)*10, face:1,
       legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
       arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
-  } else if(tt<2.3){
-    const k=Math.sin(Math.min(1,(tt-1.6)/0.7)*Math.PI);
+  } else if(tt<1.9){
+    const k=Math.sin(Math.min(1,(tt-1.2)/0.7)*Math.PI);
     mp={x:500, y:HIP_STAND+k*22, face:-1, lean:k*16,
       legs:[{hip:14+k*12,knee:-k*18},{hip:-10,knee:8}],
       arm:{sh:60,el:20}, mouth:'o', style:STYLER};
-  } else if(tt<3.4){
-    const k=ease((tt-2.3)/1.1);
-    const step=Math.sin(tt*9);
-    mp={x:lerp(500,600,k), y:HIP_STAND-Math.abs(step)*8, face:1,
-      legs:[{hip:20*step,knee:8},{hip:-20*step,knee:8}],
-      arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
-  } else if(tt<4.2){
-    const k=Math.sin(Math.min(1,(tt-3.4)/0.8)*Math.PI);
-    mp={x:600, y:HIP_STAND+k*22, face:1, lean:k*16,
-      legs:[{hip:14+k*12,knee:-k*18},{hip:-10,knee:8}],
+  } else if(tt<2.7){
+    const k=Math.sin(Math.min(1,(tt-1.9)/0.8)*Math.PI);
+    mp={x:lerp(500,580,ease(Math.min(1,(tt-1.9)/0.4))), y:HIP_STAND+k*16, face:1, lean:k*12,
+      legs:[{hip:12+k*10,knee:-k*14},{hip:-10,knee:8}],
       arm:{sh:60,el:20}, mouth:'o', style:STYLER};
-  } else if(tt<5.4){
-    const k=ease((tt-4.2)/1.2);
-    mp={x:lerp(600,540,k), y:HIP_STAND, face:1,
-      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
-      arm:{sh:12,el:68}, mouth:'smile', style:STYLER};
-  } else if(tt<7.2){
+  } else if(tt<3.6){
     mp={x:540, y:HIP_STAND, face:1, legs:[{hip:8,knee:8},{hip:-6,knee:8}],
       arm:{sh:150,el:-70}, mouth:'smile', headTilt:Math.sin(tt*8)*4, style:STYLER};
-  } else if(tt<9.0){
-    mp={x:540, y:HIP_STAND, face:1, lean:-2,
-      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
-      arm:{sh:40,el:30}, arm2:{sh:32,el:38}, mouth:'smile', style:STYLER};
-  } else if(tt<10.6){
-    mp={x:540, y:HIP_STAND, face:-1, legs:[{hip:8,knee:8},{hip:-6,knee:8}],
-      arm:{sh:12,el:68}, mouth:'smile', style:STYLER};
-  } else if(tt<11.5){
-    const k=(tt-11.1>0)?Math.min(1,(tt-11.1)/0.4):0;
-    mp={x:540, y:HIP_STAND-Math.sin(k*Math.PI)*26, face:1, lean:-14,
+  } else if(tt<4.4){
+    const k=(tt-4.0>0)?Math.min(1,(tt-4.0)/0.4):0;
+    mp={x:540, y:HIP_STAND-Math.sin(k*Math.PI)*26, face:(tt<3.9?-1:1), lean:-14,
       legs:[{hip:16,knee:-10},{hip:-14,knee:-6}],
       arm:{sh:120,el:-20}, mouth:'o', eyes:'wide', style:STYLER};
-  } else if(tt<16.6){
+  } else if(tt<7.5){
     mp={x:540, y:HIP_STAND, face:1, lean:-6,
       legs:[{hip:8,knee:8},{hip:-6,knee:8}],
-      arm:{sh:84,el:4}, mouth:(tt<13.6?'o':'smile'), eyes:(tt<13.6?'wide':undefined), style:STYLER};
-  } else if(tt<21.3){
-    const sweep=Math.sin(tt*2.2)*10;
+      arm:{sh:84,el:4}, mouth:(tt<5.9?'o':'smile'), eyes:(tt<5.9?'wide':undefined), style:STYLER};
+  } else if(tt<9.3){
+    const sweep=Math.sin(tt*2.5)*10;
     mp={x:540, y:HIP_STAND, face:1, lean:-4,
       legs:[{hip:8,knee:8},{hip:-6,knee:8}],
       arm:{sh:52+sweep,el:14}, mouth:'o', style:STYLER};
-  } else if(tt<23.2){
-    mp={x:540, y:HIP_STAND, face:1,
-      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
-      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(tt*5)*3, style:STYLER};
-  } else if(tt<24.6){
-    const k=ease((tt-23.2)/1.4);
+  } else if(tt<10.2){
+    const k=ease((tt-9.3)/0.9);
     const step=Math.sin(tt*10);
     mp={x:lerp(540,-240,k), y:HIP_STAND-Math.abs(step)*10, face:-1,
       legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
       arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
-  } else if(tt<30.4){
-    mp=null; // off screen getting more chairs
-  } else if(tt<31.8){
-    const k=ease((tt-30.4)/1.4);
+  } else if(tt<12.3){
+    mp=null;
+  } else if(tt<13.4){
+    const k=ease((tt-12.3)/1.1);
     const step=Math.sin(tt*10);
     mp={x:lerp(-240,380,k), y:HIP_STAND-Math.abs(step)*10, face:1,
       legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
       arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
-  } else if(tt<37.5){
+  } else if(tt<15.2){
     mp={x:380, y:HIP_STAND, face:1, lean:-10,
       legs:[{hip:10,knee:8},{hip:-8,knee:8}],
       arm:{sh:128,el:-30}, mouth:'o', eyes:'wide', style:STYLER};
@@ -1379,72 +1355,70 @@ function ep15(t){
       arm:{sh:168,el:-118}, mouth:'sad', headTilt:-8, style:STYLER};
   }
   if(mp) drawMan(mp);
-  // ---------- TYLER ----------
-  if(tt>=10.6){
-    let tk=easeOutBack(Math.min(1,(tt-10.6)/0.3));
-    if(tt<11.5) dust(880,FLOOR,Math.min(1,(tt-10.6)/0.7));
+  // TYLER
+  if(tt>=3.6){
+    let tk=easeOutBack(Math.min(1,(tt-3.6)/0.3));
+    if(tt<4.4) dust(880,FLOOR,Math.min(1,(tt-3.6)/0.7));
     let tp=null;
-    if(tt<14.3){
+    if(tt<6.0){
       tp={x:880, y:HIP_STAND, face:-1, legs:[{hip:6,knee:8},{hip:-4,knee:8}],
         arm:{sh:142,el:-44}, mouth:'smile', eyes:'wide', style:STYLET};
-    } else if(tt<16.6){
+    } else if(tt<7.5){
       tp={x:880, y:HIP_STAND, face:-1, lean:6, headTilt:16,
         legs:[{hip:10,knee:4},{hip:-2,knee:10+Math.sin(tt*6)*6}],
         arm:{sh:6,el:10}, mouth:'sad', style:STYLET};
-    } else if(tt<21.5){
+    } else if(tt<8.8){
       tp={x:880, y:HIP_STAND, face:-1,
         legs:[{hip:6,knee:8},{hip:-4,knee:8}],
-        arm:{sh:10,el:30}, mouth:'smile', headTilt:(tt>19?Math.sin(tt*6)*4:0), style:STYLET};
-    } else if(tt<23.0){
+        arm:{sh:10,el:30}, mouth:'smile', style:STYLET};
+    } else if(tt<9.8){
       tp={x:880, y:HIP_STAND, face:-1, legs:[{hip:6,knee:8},{hip:-4,knee:8}],
         arm:{sh:138,el:-82}, mouth:'smile', style:STYLET};
-    } else if(tt<30.6){
-      const cyc=Math.max(0,tt-24.3)%0.55;
-      const up=Math.sin(cyc/0.55*Math.PI);
+    } else if(tt<12.4){
+      const cyc=Math.max(0,tt-9.9)%0.4;
+      const up=Math.sin(cyc/0.4*Math.PI);
       tp={x:820, y:HIP_STAND+up*6, face:-1, lean:6+up*4,
         legs:[{hip:12,knee:4},{hip:-6,knee:8}],
         arm:{sh:60+up*95,el:-10-up*10}, mouth:'o', style:STYLET};
-    } else if(tt<37.5){
+    } else if(tt<15.2){
       const reach=Math.sin(tt*7)*8;
       tp={x:820, y:HIP_STAND, face:-1, lean:8,
         legs:[{hip:12,knee:4},{hip:-6,knee:8}],
         arm:{sh:150+reach,el:-10}, mouth:(t>=FR1?'o':'smile'), style:STYLET};
       if(t>=FR1) tp.eyes='wide';
-    } else if(t>=38.3){
-      const k=easeOutBack(Math.min(1,(t-38.3)/0.4));
+    } else if(t>=15.9){
+      const k=easeOutBack(Math.min(1,(t-15.9)/0.4));
       tp={x:720, y:FLOOR-110*k, face:1, lean:0,
         legs:[{hip:92,knee:-116},{hip:84,knee:-108}],
         arm:{sh:20,el:20}, mouth:'o', eyes:'wide', headTilt:Math.sin(t*5)*6, style:STYLET};
     }
     if(tp){
-      if(tt<11.0){
+      if(tt<4.0){
         ctx.save(); ctx.translate(880,FLOOR); ctx.scale(tk,tk); ctx.translate(-880,-FLOOR);
         drawMan(tp); ctx.restore();
       } else drawMan(tp);
     }
   }
-  if(tt>=11.3&&tt<12.1){const kk=easeOutBack(Math.min(1,(tt-11.3)/0.28)); starburst(700,FLOOR-700,kk*0.8,'?!');}
-  if(t>=37.55&&t<38.5){const kk=easeOutBack(Math.min(1,(t-37.55)/0.3)); starburst(430,FLOOR-700,kk*0.95,'CRASH!');}
+  if(tt>=4.2&&tt<5.0){const kk=easeOutBack(Math.min(1,(tt-4.2)/0.28)); starburst(700,FLOOR-700,kk*0.8,'?!');}
+  if(t>=15.25&&t<16.1){const kk=easeOutBack(Math.min(1,(t-15.25)/0.3)); starburst(430,FLOOR-700,kk*0.95,'CRASH!');}
   ctx.restore();
   showBadge(15);
-  if(t>=0.05&&t<2.2) caption(['HE HIRED AN INTERN.'],340,(t+0.3)/0.35,56);
-  if(t>=11.6&&t<13.7) caption(['WHERE DID YOU EVEN','COME FROM?'],340,(t-11.6)/0.35,54);
-  if(t>=14.3&&t<16.1) caption(['...im the new intern.'],360,(t-14.3)/0.35,46);
-  if(t>=17.4&&t<19.4) caption(['EASY FIRST JOB.','STACK THE CHAIRS.'],340,(t-17.4)/0.35,54);
-  if(t>=21.6&&t<23.0) caption(['SAY LESS, BOSS.'],340,(t-21.6)/0.35,54);
-  if(t>=25.2&&t<28.8) caption(['EVERY INSTRUCTION.','100% LITERALLY.'],340,(t-25.2)/0.35,52);
+  if(t>=0.05&&t<2.0) caption(['HE HIRED AN INTERN.'],340,(t+0.3)/0.35,56);
+  if(t>=4.3&&t<5.8) caption(['WHERE DID YOU EVEN','COME FROM?'],340,(t-4.3)/0.35,54);
+  if(t>=6.0&&t<7.4) caption(['...im the new intern.'],360,(t-6.0)/0.35,46);
+  if(t>=7.6&&t<9.0) caption(['EASY FIRST JOB.','STACK THE CHAIRS.'],340,(t-7.6)/0.35,54);
+  if(t>=9.0&&t<9.9) caption(['SAY LESS, BOSS.'],340,(t-9.0)/0.35,54);
   if(t>=FR0+0.05&&t<FR1) caption(['HE SAID','STACK THE CHAIRS.'],340,(t-FR0-0.05)/0.35,54);
-  if(t>=33.4&&t<36.2) caption(['TYLER. BUDDY.','THAT IS A LADDER TO HEAVEN.'],340,(t-33.4)/0.35,46);
-  if(t>=39.2&&t<40.8) caption(['...im the new intern.'],340,(t-39.2)/0.35,46);
-  if(t>=41.5&&t<45.6){
-    caption(['WHAT SHOULD TYLER','HELP WITH NEXT?'],340,(t-41.5)/0.35,48);
-    caption(['MR. BIG BUSINESS RECORD: 0 W · 1 L'],1700,(t-41.5)/0.35,28);
+  if(t>=16.1&&t<17.3) caption(['...im the new intern.'],340,(t-16.1)/0.35,46);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT SHOULD TYLER','HELP WITH NEXT?'],340,(t-17.4)/0.35,48);
+    caption(['MR. BIG BUSINESS RECORD: 0 W · 1 L'],1700,(t-17.4)/0.35,28);
   }
 }
 REELS[15]=ep15;
-SHAKES[15]=[37.5,0.4,40];
+SHAKES[15]=[15.2,0.4,40];
 TAGLINES[15]='BIG BUSINESS. BIGGER PERSONALITIES.';
-window.ENDTIMES=window.ENDTIMES||{}; window.ENDTIMES[15]=45.8;
+window.ENDTIMES=window.ENDTIMES||{}; window.ENDTIMES[15]=18.5;
 </script>
 </body></html>
 

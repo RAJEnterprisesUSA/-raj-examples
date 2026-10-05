@@ -7,7 +7,7 @@ BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
 OUT = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
 OUT.mkdir(parents=True, exist_ok=True)
 
-TIMES = [0.4, 2.1, 5.8, 10.8, 12.2, 15.0, 18.0, 22.0, 26.0, 29.5, 32.4, 34.5, 37.8, 38.6, 42.5, 47.0]
+TIMES = [0.4, 1.7, 3.0, 4.6, 6.5, 8.2, 9.4, 11.0, 12.8, 13.8, 15.5, 16.4, 17.8, 19.0, 19.9, 20.6]
 
 with sync_playwright() as p:
     b = p.chromium.launch(executable_path=CHROME)

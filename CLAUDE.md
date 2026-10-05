@@ -42,14 +42,14 @@ UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from now
 someone asks "WHERE DID YOU EVEN COME FROM?", he always replies shy/irritated "...im the new intern."),
 villain LIL WOBBLES the red cheap chair (col {a:'#e05252',b:'#c94444',c:'#ef6d6d'}), THE CAT (silent nemesis).
 Episode numbering continues from Derrick era: next episode is EP. 15.
-Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; EPISODES ARE 45s+ 
-(owner decision Oct 5; EP15 format: ~52.5s, 1838 frames @35fps, encode -t 52.5, afade out at 51.5);
-dialogue-driven: write VO script FIRST, generate ElevenLabs lines, measure durations, time the episode around them
-(per-reel end card via window.ENDTIMES[n] in reelsD.html); zoom punches/instant replay/freeze frames; 2-note theme sting;
+Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; episodes ~20s, NO VOICES
+(owner decision Oct 5 evening: voices tested and CANCELLED, 45s format cancelled; EP15 final = 21.0s, 735 frames
+@35fps, encode -t 21.0, afade out at 20.2; per-reel end card time via window.ENDTIMES[n] in reelsD.html);
+zoom punches/instant replay/freeze frames; 2-note theme sting;
 season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpkin every episode;
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
-Season One voices: ElevenLabs character VO (decided Oct 5; voice IDs per character in CAST.md; narrator=Brian).
-Piper is the fallback if ElevenLabs is down. Season Two: owner's real voice recordings begin.
+Season One voices: NONE, SFX only (ElevenLabs VO tested Oct 5, owner cancelled it; keep IDs in CAST.md on file).
+Season Two: owner's real voice recordings begin.
 
 ## Design system (Flyer 2.0, since Oct 4)
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).
@@ -98,18 +98,17 @@ Piper is the fallback if ElevenLabs is down. Season Two: owner's real voice reco
   (Desert Teal "Party Day Handled"), referral casino chip (Emerald Night "easiest $100 in Vegas"),
   26-nights candy corn countdown, Halloween gag #11 Pumpkin Head (reelH REELS[11]),
   Pink October #5 Myths Busted (awareness/pink5.html, 28s), Meet The Cast post + six Cast File cards (from sibling session),
-  and EP. 15 "The New Intern" as the FIRST LONG VOICED EPISODE: 52.5s, full ElevenLabs VO
-  (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4). All captions in posting_captions.md.
-- NEW EPISODE FORMAT (owner decision Oct 5): Chronicles episodes are 45s+ with ElevenLabs character VO.
-  Pipeline: write VO script first -> generate lines (voice IDs in CAST.md) -> measure durations ->
-  time the episode around them -> QA contact sheet -> render (35fps; EP15 = 1838 frames) ->
-  numpy SFX + VO mix -> encode. Per-reel end card time via window.ENDTIMES[n] in reelsD.html.
-  Build scripts committed: build_ep15v2_render.py is the reference for voiced episodes.
-  VO source wavs live in session scratchpad only (regenerate per episode; not committed).
+  and EP. 15 "The New Intern" FINAL at 21.0s, SFX only (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4).
+  All captions in posting_captions.md (use the Oct 5 corrected EP15 captions, no voice mentions).
+- EPISODE FORMAT (final, owner decisions Oct 5): ~20s, SFX only, NO voiceovers. A 52.5s ElevenLabs-voiced
+  cut was built and then cancelled by the owner the same evening ("cancel the whole voices i dont like them
+  and only make the video about 20 seconds"). Do not add TTS voices to episodes again unless he asks.
+  build_ep15v3_render.py is the reference render script (735 frames, -t 21.0, afade 20.2).
+  Per-reel end card time via window.ENDTIMES[n] in reelsD.html.
 - ElevenLabs is WORKING via environment credential (xi-api-key injected for api.elevenlabs.io; no env var).
   If 401 returns, the credential needs re-saving in environment settings; Piper stays the fallback.
 - Tuesday Oct 6 needs: Tip No.23, business card, venue slot (Story unless 2nd feed day), referral flyer,
   25-nights countdown (VERIFY with datetime), gag #12 (new gag, never reuse), Pink October #6, EP. 16
-  (45s+ voiced; continue "Road to the Halloween Party" arc; hidden pumpkin; W-L now 0-1 going in).
+  (~20s, SFX only; continue "Road to the Halloween Party" arc; hidden pumpkin; W-L now 0-1 going in).
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
