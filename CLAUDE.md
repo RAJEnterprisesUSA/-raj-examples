@@ -99,9 +99,15 @@ Season Two: owner's real voice recordings begin.
   assets:[{image:{url}} | {video:{url, thumbnailUrl?}}]}). Media = PUBLIC URLs; the repo is public, so use
   raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
   files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
-- DAILY WORKFLOW (owner-defined): Claude gives ONE post title at a time; owner replies with a time; Claude queues
-  that post to Buffer, then gives the next title. Default channels: cards -> FB + IG; videos -> FB + IG + YouTube +
-  TikTok (YouTube gets the YT Shorts title/description caption). Owner can override per post.
+- DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
+  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 extra/cast slot 1pm · 5 referral 2pm ·
+  6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm. Owner can override per post.
+  Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).
+  Required metadata or createPost FAILS: FB needs metadata.facebook.type (post/story/reel); IG needs
+  metadata.instagram.type AND shouldShareToFeed (false for story); YouTube needs metadata.youtube.categoryId
+  ("23" comedy reels, "22" pink/awareness) + title + privacy public + madeForKids false. TikTok needs none.
+  Story routing: tip, business card, referral, countdown, pink = story; venue + cast = post; gag + episode = reel.
+  Reference script: big-business-rentals/build_buffer_queue.py (Monday Oct 5 run queued 24/24 OK).
 - BUFFER CAPTION FORMAT (owner spec, apply to 100% of Buffer captions, all platforms):
   opening line / blank line / ONE caption paragraph / blank line /
   "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" / blank line / all hashtags on one line.
