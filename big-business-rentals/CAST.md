@@ -14,8 +14,12 @@ Season One = animated, no voices. Season Two = Rashad's recorded voice lines beg
 - UNC · default rig style (purple backwards cap, cream tee).
   Never listens, leans back on chairs, superstitious, carries things the wrong way.
 - TYLER THE INTERN · rig style STYLET: fair skin, orange backwards cap, blue tee, khakis, no goatee, slim.
-  Week one on the job, worships Rashad, takes every instruction 100 percent literally.
+  Week one on the job, worships Mr. Big Business, takes every instruction 100 percent literally.
   Role: chaos through helpfulness. "Stack the chairs" = a chair tower to the ceiling.
+  RUNNING GAG (every appearance): Tyler pops up out of nowhere. Somebody always asks
+  "WHERE DID YOU EVEN COME FROM?" and his answer is always the same shy, irritated
+  "...im the new intern." Same wording every time, lowercase energy, never explained.
+  The question can come from anyone (even the cat can side-eye him). The gag IS his intro.
 - LIL WOBBLES (villain) · the red cheap chair, {a:'#e05252',b:'#c94444',c:'#ef6d6d'}.
   Evil squeak sound when it appears. Collapses under anyone. Cannot be destroyed, always returns.
 - THE CAT · black cat from the Halloween lane. Rashad's silent nemesis. Shows up at the worst moment, always gets the best seat.
