@@ -54,8 +54,18 @@ CALENDAR HOOKS Oct 8-11 (from research): Thu 10/8 VGK home opener (verify vs NHL
 Sat 10/10 World Mental Health Day (pair with pink lane); Sun 10/11 Raiders at New England 10am PT = brunch
 watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for adult Halloween;
 F1 Vegas Nov 19-21 = corporate booking look-ahead.
-CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily; remind
-him if engagement shows unanswered keywords.
+CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily
+(owner confirmed Oct 5 he sends the DMs; ready-made DM replies for each keyword are in chat history).
+PRICE IT LANE (owner request Oct 5): "How Much Would You Pay For This Setup?" engagement posts, 2-3x/week
+in the 1pm slot as a FEED single-image post; on those days the rotating-lane carousel moves to a story
+sequence so the feed stays at 3 (PriceIt + gag + episode). Images are AI-GENERATED setup inspo via the
+Hugging Face Z-Image tool (mcp huggingface gr2_z_image_turbo_generate, 1104x1472 3:4, photoreal prompts,
+no people, no text), NEVER photos scraped from Reddit or other sites (copyright + passing-off risk;
+owner asked for Reddit finds, redirected to generated/licensed images Oct 5). Card template:
+big-business-rentals/build_priceit.py (full-bleed photo, gradient, "Be honest," script, question headline,
+"SETUP INSPO" stamp so it never reads as a client job photo, brand footer). Caption rule: NEVER imply the
+balloon decor is our service (do not invent services); angle is "the tables, chairs and the room underneath
+it, that is us." First three cards: inspo/BB_PriceIt_{EmeraldGold,NavyChrome,Halloween}.png.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),

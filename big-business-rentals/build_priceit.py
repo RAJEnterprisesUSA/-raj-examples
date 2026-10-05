@@ -1,0 +1,98 @@
+import glob, pathlib
+from playwright.sync_api import sync_playwright
+from PIL import Image
+
+BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
+OUT = BASE/'inspo'
+CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
+
+# fonts/logo live one level up patterns; copy into inspo
+import shutil
+if not (OUT/'fonts').exists(): shutil.copytree(BASE/'assets/fonts', OUT/'fonts')
+shutil.copy(BASE/'assets/bb_logo.png', OUT/'bb_logo.png')
+
+TPL = """<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}}
+@font-face{{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}}
+@font-face{{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}}
+@font-face{{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}}
+@font-face{{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}}
+*{{margin:0;padding:0;box-sizing:border-box}}
+html,body{{width:1080px;height:1350px;overflow:hidden}}
+body{{position:relative;font-family:'Montserrat';color:#f6f1e4;background:#0d0c10}}
+.ph{{position:absolute;inset:0;background:url('{img}') center/cover no-repeat}}
+.grad{{position:absolute;left:0;right:0;bottom:0;height:62%;
+  background:linear-gradient(180deg, rgba(10,8,14,0) 0%, rgba(10,8,14,.55) 42%, rgba(10,8,14,.93) 100%)}}
+.gradtop{{position:absolute;left:0;right:0;top:0;height:16%;
+  background:linear-gradient(0deg, rgba(10,8,14,0) 0%, rgba(10,8,14,.55) 100%)}}
+.grain{{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}}
+.frame{{position:absolute;inset:30px;border:2px solid rgba(214,178,94,.9)}}
+.dia{{position:absolute;width:11px;height:11px;background:#D6B25E;transform:rotate(45deg)}}
+.kick{{position:absolute;top:78px;left:0;right:0;text-align:center;
+  font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:9px;color:#EFCB7C;
+  text-shadow:0 2px 14px rgba(0,0,0,.8)}}
+.stamp{{position:absolute;top:128px;right:76px;transform:rotate(7deg);
+  font-family:'Oswald';font-weight:600;font-size:20px;letter-spacing:4px;color:#241a35;
+  background:linear-gradient(180deg,#EFCB7C,#B08D3E);padding:9px 20px;border-radius:9px;
+  box-shadow:0 12px 28px rgba(0,0,0,.5)}}
+.block{{position:absolute;left:84px;right:84px;bottom:200px;text-align:left}}
+.script{{font-family:'Playfair';font-weight:900;font-style:italic;font-size:58px;color:#EFCB7C}}
+h1{{font-family:'Archivo Black';font-size:88px;line-height:1.04;color:#f8f3e6;margin-top:8px;
+  text-shadow:0 6px 30px rgba(0,0,0,.65)}}
+h1 em{{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#c89a3c 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}}
+.sub{{margin-top:18px;font-weight:700;font-size:30px;color:#efe6cd}}
+.foot{{position:absolute;left:84px;right:84px;bottom:74px;display:flex;align-items:center;gap:20px;
+  border-top:1px solid rgba(229,184,75,.5);padding-top:22px}}
+.foot img{{width:72px;height:72px}}
+.foot .p{{font-family:'Archivo Black';font-size:32px;color:#E5B84B}}
+.foot .s{{font-weight:600;font-size:17px;color:#e3d9c0;margin-top:3px}}
+</style></head>
+<body>
+  <div class="ph"></div>
+  <div class="gradtop"></div>
+  <div class="grad"></div>
+  <div class="grain"></div>
+  <div class="frame"></div>
+  <div class="dia" style="left:25px;top:25px"></div><div class="dia" style="right:25px;top:25px"></div>
+  <div class="dia" style="left:25px;bottom:25px"></div><div class="dia" style="right:25px;bottom:25px"></div>
+  <div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div>
+  <div class="stamp">★ SETUP INSPO</div>
+  <div class="block">
+    <div class="script">Be honest,</div>
+    <h1>HOW MUCH WOULD YOU PAY FOR <em>THIS SETUP?</em></h1>
+    <div class="sub">Drop your number below. Wrong answers welcome. 👇</div>
+  </div>
+  <div class="foot">
+    <img src="bb_logo.png">
+    <div>
+      <div class="p">702-706-8287</div>
+      <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>"""
+
+JOBS = [
+    ("setup_emeraldgold.png", "BB_PriceIt_EmeraldGold.png"),
+    ("setup_navychrome.png",  "BB_PriceIt_NavyChrome.png"),
+    ("setup_halloween.png",   "BB_PriceIt_Halloween.png"),
+]
+
+with sync_playwright() as p:
+    b = p.chromium.launch(executable_path=CHROME)
+    pg = b.new_page(viewport={'width':1080,'height':1350}, device_scale_factor=2)
+    for src, out in JOBS:
+        f = OUT/f'priceit_{src.replace(".png","")}.html'
+        f.write_text(TPL.format(img=src))
+        pg.goto('file://'+str(f))
+        pg.wait_for_function("document.fonts.status==='loaded'")
+        pg.wait_for_timeout(400)
+        tmp = str(OUT/(out+'.2x.png'))
+        pg.screenshot(path=tmp)
+        Image.open(tmp).resize((1080,1350), Image.LANCZOS).save(OUT/out)
+        pathlib.Path(tmp).unlink()
+        print('done', out)
+    b.close()

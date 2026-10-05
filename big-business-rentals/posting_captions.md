@@ -789,3 +789,13 @@ IG: @bigbusiness_rentals_events
 2. HASHTAGS: hard max 5 per caption, local + niche mix. Applied to all re-routed IG posts; FB unchanged.
 3. WEEKLY ANALYTICS: build_weekly_report.py every Sunday; data steers lanes, hooks and times.
 4. REAL FOOTAGE STANDING ORDER: owner job footage replaces illustrated pieces whenever supplied.
+
+## NEW LANE (Oct 5, owner request): PRICE IT
+"How Much Would You Pay For This Setup?" engagement posts, 2-3x/week, 1pm feed slot. AI-generated setup
+inspo images only (never scraped photos). Caption template below; never imply balloon decor is our service.
+
+### PRICE IT caption template (swap the setup description line per image)
+How much would you pay for this setup?
+Be honest, wrong answers welcome, drop your number below. The balloons are the inspo. The tables, the chairs and the room underneath it? That is us.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#priceit #partyinspo #lasvegas #partyrentals #eventdecor
