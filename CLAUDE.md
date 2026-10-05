@@ -36,7 +36,14 @@ FEED DISCIPLINE (owner-approved Oct 5, updated same night when PRICE IT went dai
 exactly THREE posts per day: PRICE IT at 1pm + the gag reel at 5pm + the Chronicles episode at 8pm.
 ALL card-lane carousels (tip, business, venue, referral, countdown) run as IG STORY SEQUENCES every day
 (multi-image story post = tap-through frames; metadata.instagram.type story works with multiple image
-assets; captions say "Tap through", not "Swipe"). FB posts may stay as feed posts. Trial Reels cannot be
+assets; captions say "Tap through", not "Swipe").
+STORY IMAGES MUST BE 9:16 (owner screenshot Oct 5: IG zoom-crops 4:5 cards posted as stories, cutting
+the sides off). Every image queued as an IG story uses the 1080x1920 padded version from
+big-business-rentals/story9/ (build_story_pad.py edge-smears the card's top/bottom rows onto a 1920
+canvas; build_restory_ig.py re-points queued IG stories at story9/ URLs). Future daily builds: render
+the 4:5 card for FB/feed AND generate the story9 pad in the same run; prefer dropping the "SWIPE →" cue
+on frames that only run as stories. FB stories tolerate 4:5 but use the padded version there too when
+routed as story. FB posts may stay as feed posts. Trial Reels cannot be
 scheduled via API (manual only). All videos also go to YouTube Shorts and TikTok.
 HASHTAGS: HARD MAX 5 per caption (Instagram caps meaning at 5 since 2026); prefer local + niche mix.
 Captions: FB/IG version AND YouTube Shorts version (title + description + #Shorts) for every video.
