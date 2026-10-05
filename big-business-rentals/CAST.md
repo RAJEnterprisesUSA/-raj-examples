@@ -24,6 +24,18 @@ Season One = animated, no voices. Season Two = Rashad's recorded voice lines beg
   Evil squeak sound when it appears. Collapses under anyone. Cannot be destroyed, always returns.
 - THE CAT · black cat from the Halloween lane. Rashad's silent nemesis. Shows up at the worst moment, always gets the best seat.
 
+## Voices (ElevenLabs, verified working Oct 5)
+Credential: environment credential "ElevenLabs" injects xi-api-key for api.elevenlabs.io (no env var needed).
+Season One default is still animated/no voices unless Rashad opts in; when voiced lines are wanted, use these IDs consistently:
+- MR. BIG BUSINESS · Liam, TX3LPaxmHKxFdv7VOQHJ (young, energetic, built for reels; confident lead)
+- MRS. NEVER WRONG · Matilda, XrExE9yKIg1WjnnlVkGX (knowledgeable, professional alto; "never wrong" energy)
+- UNC · Bill, pqHfZKP75CvOlQylNhV4 (old, wise, unbothered; slow delivery)
+- TYLER THE INTERN · Will, bIHbv24MWmeRgasZH58o (young, quiet optimist; shy "...im the new intern")
+- LIL WOBBLES · Callum, N2lVS1w4EtoT3dr4eOWO (husky trickster, unsettling edge; villain squeaks/taunts)
+- Narrator/promo VO · Brian, nPczCjzI2devNBz1zQrb (deep, resonant, comforting)
+THE CAT stays silent, always.
+Fallback if ElevenLabs is down: Piper TTS per CLAUDE.md (ryan-high / amy-low / danny-low pitched up).
+
 ## Show mechanics (Season One rules)
 - Cold open hook text at second zero; episodes ~12s; zoom punches, instant replay, freeze frames
 - 2-note theme sting opens every episode (audio branding)
