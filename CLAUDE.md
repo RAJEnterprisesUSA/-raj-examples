@@ -90,11 +90,21 @@ Season One voices: Piper TTS or silent. Season Two: owner's real voice recording
 - Deliver files to the user via SendUserFile as they are produced (cards first, videos when encoded), captions in chat on request.
 - The user's timezone is Las Vegas (UTC-7/8): the UTC date is often a day AHEAD of his. Confirm "today" from his words, not the clock.
 
-## Current status (as of Oct 5 handoff)
-- Done through Sunday Oct 4 (week 3 + Sunday of week 4 folder). Last Halloween reel: #10 Black Cat. Last tip: No.21.
-- Monday Oct 5 = SEASON ONE PREMIERE day, not yet built. It opens the new system: Ep. 15 of The Big Business
-  Chronicles (Tyler's debut; concept "Derrick found a megaphone" was mocked but episode is unwritten),
-  Meet The Cast card available at examples/EX_MeetTheCast.png as announcement post, carousel instead of static flyer,
-  free palettes, routed captions, countdown = 26 nights (verify), Pink October video #5 needed, Tip No.22.
-- Week 4 needs a new evening-reel pack (nothing reused; create reelsD.html from reelsC head with new episodes).
+## Current status (as of Oct 5 handoff, second save)
+- Done through Sunday Oct 4. Last Halloween reel: #10 Black Cat. Last tip: No.21. Countdown Monday = 26 nights (verified).
+- SEASON ONE sources ready: big-business-rentals/reelsD.html = reelsC copy with purple end-card logo (window.logoReady)
+  plus REELS[15] = EP. 15 "The New Intern" FULLY WRITTEN and contact-sheet QA'd (badge/captions/freeze-zoom/tower/crash all working).
+  Remaining nits before full render: move the CRASH starburst from x=350 to ~x=430 (clips left edge), re-check Tyler's
+  reach pose at tt~4.9 against the tower. Render it like the Halloween reels: setReel(15), 420 frames, numpy audio
+  (add the NEW 2-note theme sting at t=0, e.g. G4 then D5, plus poof at 1.55, ?! sting 1.95, sad two-note catchphrase
+  motif at 3.1 AND 7.05 same notes both times, stack taps 4.4+, record-scratch at freeze 5.1, wobble creak, CRASH 6.5,
+  pop-out boing 6.95), encode with -t 12.2 and afade out at 11.7 -> fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4.
+- Monday premiere still to build: Tip No.22 "ICE MATH" (Daylight Cream light-mode, Flyer 2.0 4:5), referral card
+  (Emerald Night, casino-chip "easiest $100 in Vegas" concept), Halloween 26-nights flyer (candy-corn striped numeral),
+  Halloween gag #11 (suggested: "Pumpkin Head" - pumpkin stuck on head, our chair holds during the pull-off),
+  Pink October #5 ("Myths, Busted": most diagnosed have no family history ACS; younger women too; lumps often painless),
+  Meet The Cast announcement post (examples/EX_MeetTheCast.png, ready), venue slot = the caro1-3 carousel (never posted).
+  Feed routing Monday: Ep15 + Cast card + gag #11; everything else Stories/Trial Reel; captions FB/IG + YT Shorts, hook-first.
+- ElevenLabs: key added by user Oct 5; sessions started after that should have ELEVENLABS_API_KEY. Verify + test on start.
+- Season One voice decision still open (Piper or silent); user said voices "season 2" originally, Piper demo was liked.
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
