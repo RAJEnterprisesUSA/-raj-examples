@@ -528,3 +528,23 @@ THE BIG BUSINESS CHRONICLES, Season One premiere, now with voices. Tyler takes e
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #NewIntern #FunnyShorts #LasVegas #PartyRentals
+
+---
+
+## CAST FILE CARDS (6 individual character intros, Flyer 2.0 · Oct 5)
+Files: BB_CastFile_01_MrBigBusiness, 02_MrsNeverWrong, 03_Unc, 04_TylerTheIntern, 05_LilWobbles, 06_TheCat.
+Post as ONE carousel (recommended for the premiere) or drip one per day for a week of Stories.
+
+### Carousel caption (all 6 slides)
+Meet the cast of THE BIG BUSINESS CHRONICLES. 🎬 Six characters, one party rental company, new episodes every day. Swipe to meet them all, then comment your favorite. Season One is officially on.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#thebigbusinesschronicles #meetthecast #animation #series #lasvegas #vegas #partyrentals #comedy
+
+### Individual captions (if dripping daily)
+01 · Who runs this town? MR. BIG BUSINESS. The brand, the man, the fade. Record: wins pending. 😤
+02 · She has never lost an argument. MRS. NEVER WRONG. Three words per episode, 100 percent accuracy.
+03 · UNC knows a shortcut. He will not listen, he will lean back on the chair, and he will survive it. Tag your Unc.
+04 · Where did he even come from? TYLER THE INTERN. Week one. Takes everything literally. "...im the new intern."
+05 · Every party has a villain. LIL WOBBLES: four legs allegedly, holds weight absolutely not. It always comes back.
+06 · Words spoken: zero. Luck provided: bad. THE CAT already took the best seat at your function.
+(Each ends with: 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com + the series hashtags)
