@@ -443,3 +443,6 @@ IG: @bigbusiness_rentals_events
 - Color rotation is now FREE: Emerald Night, Velvet Rope burgundy, Midnight Navy, Daylight Cream (light mode), Desert Teal, Pink Hour, plus classic Purple/Gold, Black & Gold, and Halloween orange
 - Brand anchors that never change: gold accent in every palette, logo + 702-706-8287 + site + IG footer, Oswald/Archivo/Playfair type system
 - No two consecutive days use the same palette; at least one light-mode card per week as a pattern breaker
+
+## SHOW UPDATE (Oct 5): THE RASHAD CHRONICLES
+Derrick is now RASHAD (slim, faded cut, same green tee). Woman in pink = MRS. NEVER WRONG. Uncle = UNC. New character: TYLER THE INTERN (fair skin, orange backwards cap, blue tee, takes everything literally). Villain: LIL WOBBLES the red cheap chair. The black cat is Rashad's silent nemesis. Season One is animated only; voice lines start Season Two. Full details in CAST.md.

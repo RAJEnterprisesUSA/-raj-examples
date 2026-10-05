@@ -107,15 +107,24 @@ function drawMan(p){
   ctx.rotate(rad(-(p.lean||0)));
   ctx.fillStyle=S.tee;
   ctx.beginPath();
-  ctx.moveTo(-58,14);
-  ctx.bezierCurveTo(-108,-66,-98,-196,-42,-232);
-  ctx.bezierCurveTo(8,-258,78,-242,94,-188);
-  ctx.bezierCurveTo(150,-116,156,-36,120,10);
+  if(S.slim){
+    ctx.moveTo(-42,14);
+    ctx.bezierCurveTo(-74,-70,-66,-196,-32,-228);
+    ctx.bezierCurveTo(6,-250,56,-238,68,-192);
+    ctx.bezierCurveTo(96,-122,96,-42,72,10);
+  } else {
+    ctx.moveTo(-58,14);
+    ctx.bezierCurveTo(-108,-66,-98,-196,-42,-232);
+    ctx.bezierCurveTo(8,-258,78,-242,94,-188);
+    ctx.bezierCurveTo(150,-116,156,-36,120,10);
+  }
   ctx.closePath(); ctx.fill(); ctx.stroke();
   ctx.fillStyle=S.teeShade;
-  ctx.beginPath(); ctx.ellipse(72,-56,56,82,rad(-14),0,7); ctx.fill();
+  if(S.slim){ ctx.beginPath(); ctx.ellipse(44,-62,34,74,rad(-12),0,7); ctx.fill(); }
+  else { ctx.beginPath(); ctx.ellipse(72,-56,56,82,rad(-14),0,7); ctx.fill(); }
   ctx.strokeStyle=INK; ctx.lineWidth=8;
-  ctx.beginPath(); ctx.moveTo(-54,8); ctx.quadraticCurveTo(38,30,116,4); ctx.stroke();
+  if(S.slim){ ctx.beginPath(); ctx.moveTo(-38,8); ctx.quadraticCurveTo(16,26,70,4); ctx.stroke(); }
+  else { ctx.beginPath(); ctx.moveTo(-54,8); ctx.quadraticCurveTo(38,30,116,4); ctx.stroke(); }
   // gold chain
   ctx.strokeStyle=GOLD; ctx.lineWidth=10;
   ctx.beginPath(); ctx.moveTo(2,-220); ctx.quadraticCurveTo(58,-164,92,-192); ctx.stroke();
@@ -174,6 +183,16 @@ function drawMan(p){
   ctx.beginPath(); ctx.moveTo(-70,-84); ctx.quadraticCurveTo(-128,-76,-124,-56);
   ctx.quadraticCurveTo(-90,-56,-66,-62); ctx.closePath(); ctx.fill(); ctx.stroke();  // back brim
   ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(6,-96,10,0,7); ctx.fill();  // cap button
+  } else if(S.fade){
+    ctx.fillStyle='#1e1710';
+    ctx.beginPath();
+    ctx.moveTo(-68,-58);
+    ctx.quadraticCurveTo(-82,-112,-34,-136);
+    ctx.lineTo(48,-128);
+    ctx.lineTo(44,-102);
+    ctx.quadraticCurveTo(-6,-118,-44,-100);
+    ctx.quadraticCurveTo(-62,-86,-68,-58);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
   } else {
     ctx.fillStyle='#241a10';
     ctx.beginPath(); ctx.arc(0,-70,68,rad(180),rad(360)); ctx.closePath(); ctx.fill(); ctx.stroke(); // short hair
@@ -205,10 +224,10 @@ function drawMan(p){
   else if(p.mouth==='sad'){ctx.beginPath();ctx.arc(44,0,15,rad(200),rad(340));ctx.stroke();}
   else {ctx.beginPath();ctx.arc(40,-26,16,rad(30),rad(140));ctx.stroke();}
   // goatee (men) / lashes (women)
-  if(!S.fem){
+  if(!S.fem && S.goatee!==false){
     ctx.fillStyle='#241a10';
     ctx.beginPath(); ctx.ellipse(46,4,14,10,0,0,7); ctx.fill();
-  } else {
+  } else if(S.fem){
     ctx.lineWidth=5; ctx.strokeStyle=INK;
     ctx.beginPath();ctx.moveTo(20,-68);ctx.lineTo(12,-74);ctx.stroke();
     ctx.beginPath();ctx.moveTo(50,-62);ctx.lineTo(44,-69);ctx.stroke();
@@ -457,6 +476,8 @@ function sitPose(x, style, extra){
 const CHX=620;
 const STYLE2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
 const STYLEW={fem:true, tee:'#e88bb3', teeShade:'#d377a0', skin:'#8a5a38', pant:'#5a3f7a', pantBack:'#4a3168'};
+const STYLER={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, fade:true, slim:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
+const STYLET={tee:'#7db8e8', teeShade:'#699fd0', cap:'#e8762e', slim:true, goatee:false, skin:'#eec39f', pant:'#c9a46a', pantBack:'#b08c54'};
 const TTOP=FLOOR-262;
 
 let REEL=1;
