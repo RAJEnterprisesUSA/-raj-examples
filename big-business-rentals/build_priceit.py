@@ -76,9 +76,10 @@ h1 em{{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#c89a3c 80%);
 </body></html>"""
 
 JOBS = [
-    ("setup_emeraldgold.png", "BB_PriceIt_EmeraldGold.png"),
-    ("setup_navychrome.png",  "BB_PriceIt_NavyChrome.png"),
-    ("setup_halloween.png",   "BB_PriceIt_Halloween.png"),
+    ("setup_football.png",   "BB_PriceIt_GameDay.png"),
+    ("setup_hockey.png",     "BB_PriceIt_HockeyNight.png"),
+    ("setup_babyshower.png", "BB_PriceIt_BabyShower.png"),
+    ("setup_cartoon.png",    "BB_PriceIt_KidsParty.png"),
 ]
 
 with sync_playwright() as p:
