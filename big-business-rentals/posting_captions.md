@@ -799,3 +799,8 @@ How much would you pay for this setup?
 Be honest, wrong answers welcome, drop your number below. The balloons are the inspo. The tables, the chairs and the room underneath it? That is us.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #priceit #partyinspo #lasvegas #partyrentals #eventdecor
+
+## RULE CHANGE (Oct 5 night, owner): PRICE IT IS DAILY, INDOOR/OUTDOOR ALTERNATING
+PRICE IT runs every day at 1pm as a feed post, alternating indoor and outdoor setups, high-visual themes
+(sports colors, cartoon-style kids, baby showers and the like; no logos, no licensed characters).
+Feed is now always exactly: PRICE IT 1pm + gag 5pm + episode 8pm. All card carousels run as story sequences.

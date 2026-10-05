@@ -32,13 +32,12 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
-FEED DISCIPLINE (owner-approved Oct 5 improvement plan; per-post engagement decays sharply past 2-3
-feed posts/day): exactly ONE carousel on the IG feed per day on a ROTATING lane (Mon tip, Tue referral,
-Wed countdown, Thu business, then repeat), plus the gag reel and the Chronicles episode. Every other card
-lane runs its SAME carousel slides as an IG STORY SEQUENCE (multi-image story post = tap-through frames;
-Buffer accepts metadata.instagram.type story with multiple image assets; caption says "Tap through", not
-"Swipe"). FB posts may stay as feed posts. Trial Reels cannot be scheduled via API (manual only).
-All videos also go to YouTube Shorts and TikTok.
+FEED DISCIPLINE (owner-approved Oct 5, updated same night when PRICE IT went daily): the IG feed carries
+exactly THREE posts per day: PRICE IT at 1pm + the gag reel at 5pm + the Chronicles episode at 8pm.
+ALL card-lane carousels (tip, business, venue, referral, countdown) run as IG STORY SEQUENCES every day
+(multi-image story post = tap-through frames; metadata.instagram.type story works with multiple image
+assets; captions say "Tap through", not "Swipe"). FB posts may stay as feed posts. Trial Reels cannot be
+scheduled via API (manual only). All videos also go to YouTube Shorts and TikTok.
 HASHTAGS: HARD MAX 5 per caption (Instagram caps meaning at 5 since 2026); prefer local + niche mix.
 Captions: FB/IG version AND YouTube Shorts version (title + description + #Shorts) for every video.
 Caption style: first line = question or bold claim; include a "send this to..." share line and/or ONE keyword CTA
@@ -56,16 +55,24 @@ watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for
 F1 Vegas Nov 19-21 = corporate booking look-ahead.
 CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily
 (owner confirmed Oct 5 he sends the DMs; ready-made DM replies for each keyword are in chat history).
-PRICE IT LANE (owner request Oct 5): "How Much Would You Pay For This Setup?" engagement posts, 2-3x/week
-in the 1pm slot as a FEED single-image post; on those days the rotating-lane carousel moves to a story
-sequence so the feed stays at 3 (PriceIt + gag + episode). Images are AI-GENERATED setup inspo via the
-Hugging Face Z-Image tool (mcp huggingface gr2_z_image_turbo_generate, 1104x1472 3:4, photoreal prompts,
-no people, no text), NEVER photos scraped from Reddit or other sites (copyright + passing-off risk;
-owner asked for Reddit finds, redirected to generated/licensed images Oct 5). Card template:
-big-business-rentals/build_priceit.py (full-bleed photo, gradient, "Be honest," script, question headline,
-"SETUP INSPO" stamp so it never reads as a client job photo, brand footer). Caption rule: NEVER imply the
-balloon decor is our service (do not invent services); angle is "the tables, chairs and the room underneath
-it, that is us." First three cards: inspo/BB_PriceIt_{EmeraldGold,NavyChrome,Halloween}.png.
+PRICE IT LANE (owner request Oct 5; made DAILY the same night): "How Much Would You Pay For This Setup?"
+engagement post EVERY DAY in the 1pm FEED slot (FB + IG). ALTERNATE INDOOR AND OUTDOOR setups day by day
+(owner directive): indoor = ballrooms, fan caves, living rooms, the venue look; outdoor = Vegas backyards,
+pool decks, park pavilions, rooftop patios, desert-sunset yards. Rotate HIGH-VISUAL themes and never repeat
+within 2 weeks: local sports colors (silver/black football, gold/steel hockey, NO team logos), cartoon-style
+kids parties (generic characters only, NO licensed IP like Disney/Nick), baby showers, quinceañeras,
+graduations, birthdays, holiday glam. Owner rejected subtle luxury-only looks ("make them more visual"):
+go big, saturated, prop-heavy scenes. Images are AI-GENERATED via Hugging Face Z-Image
+(mcp huggingface gr2_z_image_turbo_generate, 1104x1472 3:4, photoreal prompts, no people, "absolutely no
+text or letters anywhere", no logos), NEVER photos scraped from Reddit or other sites (copyright +
+passing-off risk). Card template: big-business-rentals/build_priceit.py ("SETUP INSPO" stamp stays so it
+never reads as a client job photo). Caption rule: NEVER imply balloon decor is our service; angle is
+"the tables, chairs and the room underneath it, that is us."
+Card bank: inspo/BB_PriceIt_{GameDay,HockeyNight,BabyShower,KidsParty}.png (v2, owner-approved direction)
+plus v1 {EmeraldGold,NavyChrome,Halloween}. Schedule GameDay near Raiders games, HockeyNight near VGK games.
+QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and small (~6-8 generations);
+generate 1-2 new setups per day during the nightly build, not in batches. Outdoor seeds (pool party,
+desert-sunset backyard) still owed as of Oct 5 night; generate them in the Thursday build for Friday's slot.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),
@@ -152,8 +159,9 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
   files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
 - DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
-  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 extra/cast slot 1pm · 5 referral 2pm ·
-  6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm. Owner can override per post.
+  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 PRICE IT 1pm (daily, feed) ·
+  5 referral 2pm · 6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm.
+  Owner can override per post.
   Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).
   Required metadata or createPost FAILS: FB needs metadata.facebook.type (post/story/reel); IG needs
   metadata.instagram.type AND shouldShareToFeed (false for story); YouTube needs metadata.youtube.categoryId
