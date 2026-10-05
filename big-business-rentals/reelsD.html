@@ -1419,6 +1419,137 @@ REELS[15]=ep15;
 SHAKES[15]=[15.2,0.4,40];
 TAGLINES[15]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES=window.ENDTIMES||{}; window.ENDTIMES[15]=18.5;
+
+// ========== EP. 16 · THE DEMONSTRATION ==========
+function ep16(t){
+  const FR0=13.4, FR1=14.25;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.20*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(560,1050); ctx.scale(z,z); ctx.translate(-560,-1050);
+  }
+  drawRoom();
+  miniPumpkin(1012, FLOOR+88);
+  const RED={a:'#e05252',b:'#c94444',c:'#ef6d6d'};
+  drawChair(260,0,0,0); drawChair(450,0,0,0);
+  // LIL WOBBLES placed at 640
+  if(tt>=1.5){
+    const k=easeOutBack(Math.min(1,(tt-1.5)/0.3));
+    const evil=(tt>1.8&&tt<2.6)?Math.sin(t*26)*2.5:0;
+    const wob=(tt>11.5&&tt<14.3)?Math.sin(t*17)*Math.min(6,(tt-11.5)*3):evil;
+    const broken=(tt>=14.3)?Math.min(1,(tt-14.3)/0.25):0;
+    ctx.save(); ctx.translate(640,FLOOR); ctx.scale(k,k); ctx.translate(-640,-FLOOR);
+    drawChair(640, wob, broken*0.9, broken*0.85, RED);
+    ctx.restore();
+    if(tt>=14.3) dust(640,FLOOR,Math.min(1,(tt-14.3)/0.8));
+  }
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.5){
+    const k=ease(tt/1.5);
+    const step=Math.sin(tt*7);
+    mp={x:lerp(-220,560,k), y:HIP_STAND-Math.abs(step)*8, face:(tt>0.9&&tt<1.2)?-1:1, lean:10,
+      legs:[{hip:18*step,knee:12},{hip:-18*step,knee:12}],
+      arm:{sh:76,el:30}, arm2:{sh:68,el:38}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<2.2){
+    const k=Math.sin(Math.min(1,(tt-1.5)/0.7)*Math.PI);
+    mp={x:560, y:HIP_STAND+k*20, face:1, lean:k*14,
+      legs:[{hip:12+k*10,knee:-k*14},{hip:-10,knee:8}],
+      arm:{sh:60,el:20}, mouth:'smile', style:STYLER};
+  } else if(tt<3.4){
+    mp={x:540, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:150,el:-70}, mouth:'smile', headTilt:Math.sin(tt*8)*4, style:STYLER};
+  } else if(tt<6.6){
+    mp={x:540, y:HIP_STAND, face:(tt>4.6)?-1:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', style:STYLER};
+  } else if(tt<8.4){
+    const shrug=Math.sin(tt*5)*6;
+    mp={x:540, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'o', style:STYLER};
+  } else if(tt<9.4){
+    const k=ease((tt-8.4)/1.0);
+    const step=Math.sin(tt*9);
+    mp={x:lerp(540,700,k), y:HIP_STAND-Math.abs(step)*8, face:1,
+      legs:[{hip:20*step,knee:8},{hip:-20*step,knee:8}],
+      arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
+  } else if(tt<10.0){
+    const k=ease((tt-9.4)/0.6);
+    mp={x:lerp(700,640-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k),
+      legs:[{hip:lerp(20,84,k),knee:lerp(8,-86,k)},{hip:lerp(-10,78,k),knee:lerp(8,-80,k)}],
+      arm:{sh:58,el:44}, mouth:'smile', style:STYLER};
+  } else if(tt<14.3){
+    const conc=(tt>12.2);
+    const wob=(tt>11.5)?Math.sin(t*17)*Math.min(6,(tt-11.5)*3):0;
+    mp={x:640-24, y:HIP_SEAT+wob*1.6, face:-1, lean:-14+wob*0.6,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:58,el:44}, mouth:conc?'o':'smile', eyes:conc?'wide':undefined,
+      headTilt:conc?Math.sin(t*14)*5:0, style:STYLER};
+  } else if(tt<15.1){
+    const k=easeOutBack(Math.min(1,(tt-14.3)/0.4));
+    mp={x:640-40, y:lerp(HIP_SEAT,FLOOR-96,k), face:-1, rot:-k*72, lean:-8,
+      legs:[{hip:40,knee:-20},{hip:54,knee:-36}],
+      arm:{sh:70,el:30}, arm2:{sh:62,el:38}, mouth:'o', eyes:'wide', style:STYLER};
+  } else {
+    mp={x:640-40, y:FLOOR-96, face:-1, rot:-72, lean:-8,
+      legs:[{hip:40,knee:-20},{hip:54,knee:-36}],
+      arm:{sh:168,el:-118}, mouth:'sad', eyes:(tt<16.4?'x':undefined), style:STYLER};
+  }
+  drawMan(mp);
+  // MRS. NEVER WRONG
+  if(tt>=3.4){
+    let wp=null;
+    if(tt<4.8){
+      const k=ease((tt-3.4)/1.4);
+      const step=Math.sin(tt*9);
+      wp={x:lerp(W+180,880,k), y:HIP_STAND-Math.abs(step)*8, face:-1, lean:2, style:STYLEW,
+        legs:[{hip:20*step,knee:10},{hip:-20*step,knee:10}],
+        arm:{sh:20,el:36}, mouth:'smile'};
+    } else if(tt<15.0){
+      const tilt=(tt>5.2&&tt<6.8)?-9:0;
+      wp={x:880, y:HIP_STAND, face:-1, lean:0, style:STYLEW,
+        legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+        arm:{sh:8,el:46}, arm2:{sh:4,el:52}, mouth:'smile', headTilt:tilt};
+    } else if(tt<16.3){
+      const k=ease((tt-15.0)/1.3);
+      const step=Math.sin(tt*9);
+      wp={x:lerp(880,450+60,k), y:HIP_STAND-Math.abs(step)*8, face:-1, lean:2, style:STYLEW,
+        legs:[{hip:20*step,knee:10},{hip:-20*step,knee:10}],
+        arm:{sh:20,el:36}, mouth:'smile'};
+    } else if(tt<16.9){
+      const k=ease((tt-16.3)/0.6);
+      wp={x:lerp(450+60,450-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k), style:STYLEW,
+        legs:[{hip:lerp(20,84,k),knee:lerp(8,-86,k)},{hip:lerp(-10,78,k),knee:lerp(8,-80,k)}],
+        arm:{sh:58,el:44}, mouth:'smile'};
+    } else {
+      wp={x:450-24, y:HIP_SEAT, face:-1, lean:-14, style:STYLEW,
+        legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+        arm:{sh:58,el:44}, mouth:'smile', headTilt:Math.sin(t*2)*3};
+      sparkle(450+40, SEAT_TOP-150, t);
+    }
+    if(wp) drawMan(wp);
+  }
+  if(t>=14.35&&t<15.2){const kk=easeOutBack(Math.min(1,(t-14.35)/0.3)); starburst(430,FLOOR-700,kk*0.95,'CRASH!');}
+  ctx.restore();
+  showBadge(16);
+  if(t>=0.05&&t<2.0) caption(['HE TRIED TO SAVE $5.'],340,(t+0.3)/0.35,56);
+  if(t>=5.0&&t<6.6) caption(['MRS. NEVER WRONG','SAID NOTHING.'],340,(t-5.0)/0.35,52);
+  if(t>=6.8&&t<8.2) caption(['IT IS BASICALLY NEW.'],340,(t-6.8)/0.35,54);
+  if(t>=8.6&&t<9.9) caption(['THE DEMONSTRATION.'],340,(t-8.6)/0.35,54);
+  if(t>=FR0+0.05&&t<FR1) caption(['HE CHOSE THE','CHEAP CHAIR.'],340,(t-FR0-0.05)/0.35,54);
+  if(t>=16.5&&t<17.3) caption(['SHE KNEW.'],340,(t-16.5)/0.35,60);
+  if(t>=17.4&&t<18.45){
+    caption(['NEVER DOUBT','MRS. NEVER WRONG.'],340,(t-17.4)/0.35,48);
+    caption(['MR. BIG BUSINESS RECORD: 0 W · 2 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[16]=ep16;
+SHAKES[16]=[14.3,0.4,40];
+TAGLINES[16]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[16]=18.5;
 </script>
 </body></html>
 
