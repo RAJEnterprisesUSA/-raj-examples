@@ -53,6 +53,27 @@ end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business 
 Season One voices: NONE, SFX only (ElevenLabs VO tested Oct 5, owner cancelled it; keep IDs in CAST.md on file).
 Season Two: owner's real voice recordings begin.
 
+## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
+## referral and countdown posts; videos and pre-built sets keep their formats)
+Every daily card post is a swipeable carousel of 4 to 6 slides at 1080x1350, one idea per slide:
+1. HOOK slide: huge headline only, question or bold claim, 8 words or fewer, NO body text,
+   small "SWIPE →" cue bottom right. No progress marker on this slide.
+2. SETUP slide: the problem or fact the hook promised, one or two short lines.
+3. VALUE slides (1-3): ONE tip/number/step each; large gold number or keyword + max two sentences;
+   ghost numeral or simple illustration behind.
+4. PAYOFF slide: the surprising result or "here is what to do", set BIGGER than value slides.
+5. CTA slide (last): one clear action (keyword comment CTA or "send this to..."), then logo LARGE,
+   phone, site, IG, LAS VEGAS NV. Fine print here when required (referral).
+Design rules: ONE palette + font set across the whole carousel, different palette each day; heavy display
+type + italic serif accents + clean sans; gold accent, thin gold frame, film grain, soft vignette on EVERY
+slide; "n/N" counter + slim gold progress bar on every slide after the first; slides 1 and last must work
+standalone; small brand footer on every slide, large on CTA slide; no em dashes; no photos of real people.
+Caption: question/bold claim first line, then a swipe line, then "send this to..." or ONE keyword CTA,
+then contact line + hashtags.
+Build: big-business-rentals/build_mon_carousels.py is the reference generator (one HTML per carousel,
+.slide divs, Playwright element screenshots at dsf=2, LANCZOS downscale to 1080x1350).
+Buffer: queue as type "post" (carousel = multiple image assets in order) on FB + IG.
+
 ## Design system (Flyer 2.0, since Oct 4)
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).
 - Editorial/asymmetric layouts, mixed type (Playfair900 italic accents + Archivo Black), ghost outline numerals,

@@ -639,3 +639,38 @@ THE BIG BUSINESS CHRONICLES: he tried to save $5, Mrs. Never Wrong said nothing,
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #CheapChair #FunnyShorts #LasVegas #PartyRentals
+
+## RULE CHANGE (Oct 5, owner): DAILY CAROUSEL SYSTEM
+Single static daily cards are retired. Tip, business, referral and countdown posts are now 4-6 slide
+carousels (hook / setup / value / payoff / CTA), full spec in CLAUDE.md. Monday Oct 5 rebuilt below.
+
+# MONDAY OCT 5 · CAROUSEL REDO CAPTIONS
+
+### Carousel · ICE MATH (BB_Caro_Mon_IceMath_01-06)
+How much ice do you actually need?
+Swipe for the party math nobody does until it is too late.
+Send this to the friend who always forgets the ice.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partytips #icemath #partyplanning #vegas #lasvegas #partyrentals #eventplanning
+
+### Carousel · PARTY DAY HANDLED (BB_Caro_Mon_Handled_01-05)
+What if party day was already handled?
+Swipe to see how little you would be lifting.
+Comment QUOTE and we will DM you a price today.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyrentals #lasvegas #vegas #eventrentals #partyplanning #delivered
+
+### Carousel · EASIEST $100 (BB_Caro_Mon_Referral_01-05)
+The easiest $100 in Vegas is not on the casino floor.
+Swipe to see how the referral play works.
+Send this to the plug of your group chat.
+Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #easiest100 #vegas #lasvegas #sidehustle #partyrentals
+
+### Carousel · 26 NIGHTS (BB_Caro_Mon_26Nights_01-04)
+26 nights till Halloween.
+Swipe before the good dates go.
+Send this to whoever is hosting Halloween.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #26days #spookyseason #october #lasvegas #partyrentals
