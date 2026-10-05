@@ -674,3 +674,30 @@ Swipe before the good dates go.
 Send this to whoever is hosting Halloween.
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 #halloween #halloweencountdown #26days #spookyseason #october #lasvegas #partyrentals
+
+# TUESDAY OCT 6 · CAROUSEL REDO CAPTIONS (queued to Buffer)
+
+### Carousel · DRINK MATH (BB_Caro_Tue_DrinkMath_01-06)
+How many drinks does a party actually need?
+Swipe for the bartender math, then send this to whoever is stocking the cooler.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partytips #drinkmath #partyplanning #vegas #lasvegas #partyrentals #eventplanning
+
+### Carousel · HIRED A TEAM (BB_Caro_Tue_HiredATeam_01-05)
+What if you could host like you hired a team?
+Swipe to meet your party day crew. Comment QUOTE and we will DM you a price today.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#partyrentals #lasvegas #vegas #eventrentals #fullservice #hosting
+
+### Carousel · WORD OF MOUTH (BB_Caro_Tue_WordOfMouth_01-05)
+In this economy, word of mouth pays.
+Swipe to see the referral play, then send this to your best connector.
+Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#referral #wordofmouth #vegas #lasvegas #sidehustle #partyrentals
+
+### Carousel · 25 NIGHTS (BB_Caro_Tue_25Nights_01-04)
+25 nights till Halloween.
+Swipe before the glow goes out. Comment SPOOKY and we will DM you open October dates.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#halloween #halloweencountdown #25days #jackolantern #spookyseason #october #lasvegas #partyrentals
