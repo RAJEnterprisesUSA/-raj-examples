@@ -1,13 +1,14 @@
-# The Rashad Chronicles · Cast Bible (Season One)
+# The Big Business Chronicles · Cast Bible (Season One)
 
-Show: THE RASHAD CHRONICLES (formerly the Derrick reels; renamed Oct 5)
+Show: THE BIG BUSINESS CHRONICLES (formerly the Derrick reels; renamed Oct 5)
+Star character: MR. BIG BUSINESS (the owner-operator; name promotes the brand in every episode)
 New episodes daily · Episode numbers continue from the Derrick era (next episode: Ep. 15)
 Season One = animated, no voices. Season Two = Rashad's recorded voice lines begin.
 
 ## The cast
-- RASHAD (the star) · rig style STYLER: slim build, faded haircut, green tee, navy pants.
+- MR. BIG BUSINESS (the star) · rig style STYLER: slim build, faded haircut, green tee, navy pants.
   The owner-operator. Confident, tries everything himself, usually loses to physics.
-  Running record on end cards: Rashad W-L tracker. He wins rarely so it counts.
+  Running record on end cards: the Mr. Big Business W-L tracker. He wins rarely so it counts.
 - MRS. NEVER WRONG · rig style STYLEW: pink tee, bun, gold hoop.
   Is never wrong. Says nothing, is proven right by the end of the episode. One raised eyebrow = the punchline.
 - UNC · default rig style (purple backwards cap, cream tee).
@@ -25,4 +26,4 @@ Season One = animated, no voices. Season Two = Rashad's recorded voice lines beg
 - Season One arc: "Road to the Halloween Party" with the full-cast finale Oct 31
 - Hidden pumpkin in every episode (tell the audience once, let them hunt)
 - End cards: episode question to the audience + credit fan ideas by @name in later episodes
-- Reply to comments as Rashad sometimes
+- Reply to comments as Mr. Big Business sometimes
