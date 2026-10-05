@@ -32,11 +32,30 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
-Routing rule: only 2-3 FEED posts/day; everything else Stories + 1-2 Trial Reels; all videos also to YouTube Shorts.
+FEED DISCIPLINE (owner-approved Oct 5 improvement plan; per-post engagement decays sharply past 2-3
+feed posts/day): exactly ONE carousel on the IG feed per day on a ROTATING lane (Mon tip, Tue referral,
+Wed countdown, Thu business, then repeat), plus the gag reel and the Chronicles episode. Every other card
+lane runs its SAME carousel slides as an IG STORY SEQUENCE (multi-image story post = tap-through frames;
+Buffer accepts metadata.instagram.type story with multiple image assets; caption says "Tap through", not
+"Swipe"). FB posts may stay as feed posts. Trial Reels cannot be scheduled via API (manual only).
+All videos also go to YouTube Shorts and TikTok.
+HASHTAGS: HARD MAX 5 per caption (Instagram caps meaning at 5 since 2026); prefer local + niche mix.
 Captions: FB/IG version AND YouTube Shorts version (title + description + #Shorts) for every video.
 Caption style: first line = question or bold claim; include a "send this to..." share line and/or ONE keyword CTA
 ("Comment VENUE and we will DM you..."); never engagement bait ("comment yes", "tag 3 friends").
 Weekly: all-new flyer designs and all-new reel material every week, nothing reused.
+WEEKLY ANALYTICS (Sundays): run big-business-rentals/build_weekly_report.py (pulls sent-post metrics from
+Buffer GraphQL, groups by lane). After 2+ weeks of data, let winning lanes/hooks steer content and times.
+REAL FOOTAGE STANDING ORDER (research priority 1): whenever the owner sends raw job footage (deliveries,
+venue flips, teardowns, truck loading), DROP the illustrated piece in the nearest lane and cut the footage
+instead: bold hook text ON FRAME ONE (no intros), 15-30s, end on the reveal, loop-edit short cuts, real
+sound. Transformation content is the growth engine; illustrated content is the fallback.
+CALENDAR HOOKS Oct 8-11 (from research): Thu 10/8 VGK home opener (verify vs NHL.com) watch-party angle;
+Sat 10/10 World Mental Health Day (pair with pink lane); Sun 10/11 Raiders at New England 10am PT = brunch
+watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for adult Halloween;
+F1 Vegas Nov 19-21 = corporate booking look-ahead.
+CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily; remind
+him if engagement shows unanswered keywords.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),

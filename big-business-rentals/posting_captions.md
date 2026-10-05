@@ -781,3 +781,11 @@ THE BIG BUSINESS CHRONICLES: the shoo, the bribe, the tilt, and the decoy chair 
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #Cat #FunnyShorts #LasVegas #PartyRentals
+
+## RULE CHANGE (Oct 5 night, owner approved improvement plan)
+1. FEED DISCIPLINE: one rotating-lane carousel on the IG feed per day (Mon tip, Tue referral, Wed countdown,
+   Thu business) + gag reel + episode. All other card lanes run their slides as IG STORY SEQUENCES (tap-through).
+   Applied retroactively to the queued Mon/Tue/Wed sets via Buffer edits (23 IG posts re-routed).
+2. HASHTAGS: hard max 5 per caption, local + niche mix. Applied to all re-routed IG posts; FB unchanged.
+3. WEEKLY ANALYTICS: build_weekly_report.py every Sunday; data steers lanes, hooks and times.
+4. REAL FOOTAGE STANDING ORDER: owner job footage replaces illustrated pieces whenever supplied.
