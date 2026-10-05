@@ -446,3 +446,23 @@ IG: @bigbusiness_rentals_events
 
 ## SHOW UPDATE (Oct 5): THE BIG BUSINESS CHRONICLES
 Derrick is now MR. BIG BUSINESS (slim, faded cut, same green tee). The show is THE BIG BUSINESS CHRONICLES. Woman in pink = MRS. NEVER WRONG. Uncle = UNC. New character: TYLER THE INTERN (fair skin, orange backwards cap, blue tee, takes everything literally). Running gag: he appears out of nowhere, somebody asks "WHERE DID YOU EVEN COME FROM?", he always replies shy and irritated: "...im the new intern." Villain: LIL WOBBLES the red cheap chair. The black cat is Rashad's silent nemesis. Season One is animated only; voice lines start Season Two. Full details in CAST.md.
+
+---
+
+## CAST FILE CARDS (6 individual character intros, Flyer 2.0 · Oct 5)
+Files: BB_CastFile_01_MrBigBusiness, 02_MrsNeverWrong, 03_Unc, 04_TylerTheIntern, 05_LilWobbles, 06_TheCat.
+Post as ONE carousel (recommended for the premiere) or drip one per day for a week of Stories.
+
+### Carousel caption (all 6 slides)
+Meet the cast of THE BIG BUSINESS CHRONICLES. 🎬 Six characters, one party rental company, new episodes every day. Swipe to meet them all, then comment your favorite. Season One is officially on.
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+#thebigbusinesschronicles #meetthecast #animation #series #lasvegas #vegas #partyrentals #comedy
+
+### Individual captions (if dripping daily)
+01 · Who runs this town? MR. BIG BUSINESS. The brand, the man, the fade. Record: wins pending. 😤
+02 · She has never lost an argument. MRS. NEVER WRONG. Three words per episode, 100 percent accuracy.
+03 · UNC knows a shortcut. He will not listen, he will lean back on the chair, and he will survive it. Tag your Unc.
+04 · Where did he even come from? TYLER THE INTERN. Week one. Takes everything literally. "...im the new intern."
+05 · Every party has a villain. LIL WOBBLES: four legs allegedly, holds weight absolutely not. It always comes back.
+06 · Words spoken: zero. Luck provided: bad. THE CAT already took the best seat at your function.
+(Each ends with: 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com + the series hashtags)
