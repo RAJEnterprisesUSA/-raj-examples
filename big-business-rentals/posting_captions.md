@@ -815,3 +815,12 @@ Scope: our own FB page, Instagram, and Google posts ONLY. NEVER drop these comme
 Buffer posts the comment with the post; pinning is the owner's 10-second manual step (three dots on the
 comment, Pin). Backfilled onto all queued Mon/Tue/Wed feed posts Oct 5 night (build_firstcomment.py).
 Pending: owner to claim a custom FB username so the link reads clean.
+
+## RULE CHANGE (Oct 5 night, owner): CARD SETS RUN AS POSTS TOO, IG + TIKTOK
+Owner: "make the tap through stories as post too, for ig and tiktok." Every tap-through card set
+(tip, business, venue, referral, countdown) now runs three ways at its standing time:
+1. IG story sequence (9:16 story9 images, caption "Tap through")
+2. IG feed carousel (4:5 originals, type post, pinned firstComment, caption "Swipe")
+3. TikTok photo carousel (9:16 story9 images)
+Applied to the queued Tuesday Oct 6 and Wednesday Oct 7 sets via build_carousel_posts.py;
+standard in every nightly queue from Thursday on.

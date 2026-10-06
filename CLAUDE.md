@@ -32,9 +32,12 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
-FEED DISCIPLINE (owner-approved Oct 5, updated same night when PRICE IT went daily): the IG feed carries
-exactly THREE posts per day: PRICE IT at 1pm + the gag reel at 5pm + the Chronicles episode at 8pm.
-ALL card-lane carousels (tip, business, venue, referral, countdown) run as IG STORY SEQUENCES every day
+FEED DISCIPLINE (owner-approved Oct 5; REVISED by owner Oct 5 night "make the tap through stories as
+post too, for ig and tiktok"): every card-lane set runs THREE ways daily: IG story sequence (9:16
+story9 images) AND IG feed carousel (4:5 originals, type post, firstComment attached, caption says
+"Swipe") AND TikTok photo carousel (9:16 story9 images, no metadata). Same standing time for all three.
+So the IG feed carries the card carousels PLUS PRICE IT 1pm + gag 5pm + episode 8pm.
+ALL card-lane carousels (tip, business, venue, referral, countdown) still run as IG STORY SEQUENCES every day
 (multi-image story post = tap-through frames; metadata.instagram.type story works with multiple image
 assets; captions say "Tap through", not "Swipe").
 STORY IMAGES MUST BE 9:16 (owner screenshot Oct 5: IG zoom-crops 4:5 cards posted as stories, cutting
