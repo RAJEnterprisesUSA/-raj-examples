@@ -824,3 +824,8 @@ Owner: "make the tap through stories as post too, for ig and tiktok." Every tap-
 3. TikTok photo carousel (9:16 story9 images)
 Applied to the queued Tuesday Oct 6 and Wednesday Oct 7 sets via build_carousel_posts.py;
 standard in every nightly queue from Thursday on.
+
+## RULE CHANGE (Oct 5 night, owner): NO SLIDESHOW VIDEOS, TIKTOK STAYS PHOTO CAROUSELS
+Owner rejected the music slideshow videos ("no videos"). All 10 queued TikTok posts reverted to
+9:16 photo carousels (story9 images). Card sets run as: IG story + IG feed carousel + TikTok photo
+carousel. No music via API on photo posts; owner can add a trending sound in the TikTok app if wanted.
