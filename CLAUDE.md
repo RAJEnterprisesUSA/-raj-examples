@@ -243,8 +243,18 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   ("Halloween lands on a Saturday" hook), gag #13 Candy Hand (reelH REELS[13], boneArm+drawBowl added),
   Pink #7 Men's Edition (pink7.html, 26s, CDC), EP. 17 The Decoy (REELS[17] in reelsD, drawCatD ported,
   cat beats Mr. Big Business, W-L 0-3). Captions under WEDNESDAY OCT 7. Queue script: build_buffer_queue_wed.py.
-- Thursday Oct 8 needs: Tip No.25 carousel, business carousel, venue slot, referral carousel, 23-nights
-  countdown carousel (VERIFY with datetime), gag #14 (used now: ...pumpkin head, spider guest, candy hand),
-  Pink October #8, EP. 18 (~20s SFX only; W-L 0-3 going in; Tyler due for a return; arc continues).
+- THURSDAY OCT 8 SET BUILT, DELIVERED AND PUSHED (queue the night before per workflow):
+  Tip No.25 TABLE MATH carousel (Purple/Gold, 6), VEGAS THIS WEEKEND IS LOADED business carousel
+  (Emerald, 5), rodeo venue card BB_Venue_Thu_SoldOut (Desert Teal, single, "The rodeo sold out. Your
+  afterparty should not."), WEEKEND PLUG referral carousel (Velvet Rope, 5), 23 NIGHTS countdown
+  (Halloween, 4), gag #14 DJ Bones (reelH REELS[14], drawSpeaker+drawSkullLoose; used now: ...candy hand,
+  DJ Bones), Pink #8 The Screening Explained (pink8.html, 26s, ACS+USPSTF), EP. 18 The Flyer (REELS[18]
+  in reelsD, drawFlyer helper, Tyler returns, W-L 0-4). PRICE IT Thu 1pm = HockeyNight (VGK opener).
+  Captions under THURSDAY OCT 8. story9 pads generated for all Thursday cards.
+  BANKED for Friday/Saturday: inspo/BB_PriceIt_RodeoNight.png (western outdoor, Fri 1pm) and
+  BB_PriceIt_PoolParty.png (Sat); outdoor seeds debt CLEARED (setup_western.png, setup_pool.png).
+- Friday Oct 9 needs: Tip No.26 carousel, business carousel, venue slot, referral carousel, 22-nights
+  countdown (VERIFY with datetime), gag #15, Pink #9, EP. 19 (~21s SFX only; W-L 0-4 going in),
+  PRICE IT = RodeoNight (banked). Rodeo-weekend caption flavor per calendar hooks.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.

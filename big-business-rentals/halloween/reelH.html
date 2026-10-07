@@ -2520,6 +2520,94 @@ function reelH13(t){
 REELS[13]=reelH13;
 SHAKES[13]=[6.0,0.3,14];
 TAGLINES[13]='SEATS FOR EVERY BODY.';
+
+// ---------- H14: DJ Bones ----------
+function drawSpeaker(x,y,t,beat){
+  const pump=1+Math.max(0,Math.sin(t*Math.PI*2*beat))*0.04;
+  ctx.save(); ctx.translate(x,y); ctx.scale(pump,pump);
+  ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#2b2436';
+  rr(-62,-170,124,170,14); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#161020';
+  ctx.beginPath(); ctx.arc(0,-116,34,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0,-46,22,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function reelH14(t){
+  drawRoomH(t);
+  const TX=660, TOP=FLOOR-250, SX=TX+30;
+  const BPM=2.1, DROP=5.2;
+  // speakers
+  drawSpeaker(TX-330,FLOOR,t,BPM);
+  drawSpeaker(TX+330,FLOOR,t,BPM);
+  // DJ skeleton behind the table, bobbing hard
+  const bob=Math.abs(Math.sin(t*Math.PI*BPM))*(t<DROP?26:16);
+  const pumpL=Math.sin(t*Math.PI*2*BPM)>0;
+  const sk={x:SX, y:HIP_STAND-20-bob, face:-1, noHead:t>=DROP,
+    legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+    arm: pumpL?{sh:160,el:-40}:{sh:70,el:30},
+    arm2: pumpL?{sh:70,el:30}:{sh:160,el:-40},
+    headTilt:Math.sin(t*Math.PI*2*BPM)*14};
+  drawSkeleton(sk);
+  // DJ table + deck
+  drawTable(TX,0,0);
+  ctx.save();
+  ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#241c33';
+  rr(TX-170,TOP-54,340,48,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#0f0a18';
+  const spin=t*4;
+  [TX-90,TX+90].forEach(cx=>{
+    ctx.beginPath(); ctx.arc(cx,TOP-30,30,0,7); ctx.fill(); ctx.stroke();
+    ctx.lineWidth=4;
+    ctx.beginPath(); ctx.moveTo(cx,TOP-30);
+    ctx.lineTo(cx+Math.cos(spin)*24, TOP-30+Math.sin(spin)*8); ctx.stroke();
+    ctx.lineWidth=8;
+  });
+  ctx.restore();
+  // the flying skull
+  if(t>=DROP){
+    const x0=SX-8, y0=HIP_STAND-20-bob-240, xl=SX+300, yl=FLOOR-54;
+    if(t<DROP+1.0){
+      const k=(t-DROP)/1.0;
+      const x=lerp(x0,xl,k), y=lerp(y0,yl,k)-340*Math.sin(Math.PI*k);
+      drawSkullLoose(x,y,720*k,'wide');
+    } else if(t<DROP+1.35){
+      const k=(t-DROP-1.0)/0.35;
+      const x=lerp(xl,xl+56,k), y=yl-64*Math.sin(Math.PI*k);
+      drawSkullLoose(x,y,720+90*k);
+    } else {
+      drawSkullLoose(xl+56,yl,810+Math.sin(t*3.2)*5);
+    }
+  }
+  // the guest, dancing then shook then vibing again
+  let pose=null;
+  if(t<DROP-0.4){
+    const step=Math.sin(t*Math.PI*BPM);
+    pose={x:250+step*26, y:HIP_STAND-Math.abs(step)*16, face:1,
+      legs:[{hip:22*step,knee:6},{hip:-22*step,knee:6}],
+      arm:{sh:150+step*18,el:-36}, arm2:{sh:150-step*18,el:-36},
+      mouth:'smile', headTilt:step*8};
+  } else if(t<DROP+1.6){
+    pose={x:250, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};
+  } else {
+    const step=Math.sin(t*Math.PI*BPM);
+    pose={x:250+step*20, y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:18*step,knee:6},{hip:-18*step,knee:6}],
+      arm:{sh:150+step*16,el:-36}, arm2:{sh:70,el:30},
+      mouth:'smile', headTilt:step*6};
+  }
+  drawMan(pose);
+  if(t>=DROP&&t<DROP+0.8){const kk=easeOutBack(Math.min(1,(t-DROP)/0.28)); starburst(TX-60,FLOOR-760,kk*0.9,'THE DROP!');}
+  if(t<1.7) caption(['THE DJ CAME','HIGHLY RECOMMENDED.'],240,(t+0.35)/0.35,54);
+  if(t>=2.4&&t<3.6) caption(['HE REALLY FEELS','THE MUSIC.'],240,(t-2.4)/0.35);
+  if(t>=4.2&&t<5.1) caption(['WAIT FOR','THE DROP...'],240,(t-4.2)/0.35);
+  if(t>=6.1&&t<7.3) caption(['HE LOST HIS HEAD','TO THE BEAT.'],240,(t-6.1)/0.35,54);
+  if(t>=7.9&&t<8.9) caption(['STURDY TABLES.','WILD PARTIES.'],240,(t-7.9)/0.35,50);
+}
+REELS[14]=reelH14;
+SHAKES[14]=[5.2,0.35,18];
+TAGLINES[14]='THE BEAT DROPS. SO DOES HE.';
 </script>
 </body></html>
 

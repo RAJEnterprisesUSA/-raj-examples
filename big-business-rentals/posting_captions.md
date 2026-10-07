@@ -846,3 +846,128 @@ Owner: run the rodeo angle Thursday and Friday. Thursday: venue lane = rodeo wee
 opener that night); generate the western outdoor setup image Thursday night. Friday: 1pm PRICE IT =
 western outdoor setup; referral and caption hooks carry rodeo-weekend flavor. No event name or branding
 in any post, no implied affiliation.
+
+# THURSDAY OCT 8
+
+## BB_Caro_Thu_TableMath (tip No.25, Purple/Gold, 6 slides)
+FEED (FB + IG):
+How many tables does your party need?
+
+Swipe for the ten second math nobody does until the chairs show up. Send this to whoever is hosting next.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #tablemath #partyplanning #lasvegas #partyrentals
+STORY (IG): same with "Tap through for the ten second math..."
+
+## BB_Caro_Thu_Loaded (business, Emerald, 5 slides)
+FEED:
+Vegas, this weekend is loaded.
+
+Hockey is back tonight, the rodeo is in town and Sunday is football brunch. Swipe to see how one call covers the whole weekend, then comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#lasvegas #partyrentals #vegasweekend #eventrentals #watchparty
+STORY: "Tap through to see how one call covers the whole weekend..."
+
+## BB_Venue_Thu_SoldOut (venue, Desert Teal, single card, post + story)
+The rodeo sold out. Your afterparty should not.
+
+Our private venue seats 40 and holds 80 standing, 3 hours for $625 or 4 hours for $800 with tables, chairs and setup included. Comment VENUE and we will DM you open dates this weekend.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#lasvegas #partyvenue #privateevent #rodeoweekend #vegas
+
+## PRICE IT Thursday 1pm = BB_PriceIt_HockeyNight (feed, FB + IG)
+How much would you pay for this setup?
+
+Hockey is back in Vegas tonight and this fan cave is ready for puck drop. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the room underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #hockeynight #lasvegas #partyrentals #fancave
+
+## BB_Caro_Thu_WeekendPlug (referral, Velvet Rope, 5 slides)
+FEED:
+Everybody is planning something this weekend.
+
+Rodeo crews, watch parties, birthday dinners. Send them our way, have them drop your name, and you collect up to $100 after their event wraps. Send this to the planner of your crew. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #lasvegas #sidehustle #partyrentals #weekendplans
+STORY: swap "Send them our way" paragraph opener to "Tap through, then send them our way..."
+
+## BB_Caro_Thu_23Nights (countdown, Halloween, 4 slides)
+FEED:
+23 nights till Halloween.
+
+Three weekends left and the Saturday parties are claiming dates first. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+STORY: "Tap through, then comment SPOOKY..."
+
+## BB_Halloween_Reel_DJBones.mp4 (gag #14, 5pm, FB + IG reel + TikTok + YouTube)
+FB/IG:
+The DJ came highly recommended. 💀
+
+He really felt the music. Then the beat dropped and so did his head. One table, one drop, zero wobble. Send this to the friend who loses it when the beat drops.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#djbones #halloween #funnyreels #lasvegas #partyrentals
+YOUTUBE (categoryId 23):
+Title: DJ Bones loses his head to the beat 💀 #Shorts
+Description:
+The DJ came highly recommended. Then the beat dropped and so did his head. One table, one drop, zero wobble. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Skeleton #DJ #FunnyShorts #LasVegas #PartyRentals
+
+## BB_PinkOctober_ScreeningExplained.mp4 (pink #8, 6pm, story FB/IG + TikTok + YouTube)
+FB/IG:
+A mammogram takes about 20 minutes, start to finish. 🎀
+
+No mystery and no horror story: a tech positions you, compression lasts a few seconds per picture, and you are done in about 20 minutes. Experts recommend starting at age 40, so ask your doctor what schedule fits you. Send this to someone who keeps putting it off. Sources: American Cancer Society, USPSTF.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #mammogram #earlydetection #lasvegas
+YOUTUBE (categoryId 22):
+Title: The mammogram, explained in 26 seconds 🎀 #Shorts
+Description:
+About 20 minutes, start to finish. No mystery, no horror story. Experts recommend starting at age 40. Ask your doctor what schedule fits you. Sources: American Cancer Society, USPSTF.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #Mammogram #LasVegas
+
+## BB_Chronicles_Ep18_TheFlyer.mp4 (EP. 18, 8pm, FB + IG reel + TikTok + YouTube)
+FB/IG:
+The flyer fell. Twice. Then the intern appeared from nowhere. 😂
+
+EP. 18: Mr. Big Business versus one piece of paper. Four pieces of tape later the record still is not improving. What should Tyler fix next? Best answer gets the next episode credit.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #comedy #funnyreels #lasvegas #partyrentals
+YOUTUBE (categoryId 23):
+Title: EP. 18: The Flyer 😂 Tyler saves the day #Shorts
+Description:
+THE BIG BUSINESS CHRONICLES: the flyer fell twice, the intern appeared from nowhere, and four pieces of tape did what Mr. Big Business could not. Record: 0 wins, 4 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #Intern #FunnyShorts #LasVegas #PartyRentals
+
+## FRIDAY OCT 9 PRICE IT (banked tonight): BB_PriceIt_RodeoNight (western outdoor, 1pm feed)
+How much would you pay for this setup?
+
+Rodeo weekend calls for a backyard that matches the energy: hay bales, lanterns and long tables under the desert sunset. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the setup underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #rodeoweekend #lasvegas #partyrentals #westernparty
+(Also banked: BB_PriceIt_PoolParty for Saturday, outdoor rotation.)

@@ -1723,6 +1723,195 @@ REELS[17]=ep17;
 SHAKES[17]=[15.75,0.25,14];
 TAGLINES[17]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[17]=18.5;
+
+// ---------- EP 18: THE FLYER ----------
+function drawFlyer(x,y,rot,taped){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(rot||0));
+  ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#f6edd8';
+  rr(-110,-150,220,300,10); ctx.fill(); ctx.stroke();
+  // jack-o-lantern art
+  ctx.fillStyle='#ff8c2e';
+  ctx.beginPath(); ctx.ellipse(0,-62,58,48,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK;
+  ctx.beginPath(); ctx.moveTo(-26,-74); ctx.lineTo(-12,-58); ctx.lineTo(-40,-58); ctx.closePath(); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(26,-74); ctx.lineTo(40,-58); ctx.lineTo(12,-58); ctx.closePath(); ctx.fill();
+  ctx.lineWidth=6;
+  ctx.beginPath(); ctx.arc(0,-48,26,0.35,Math.PI-0.35); ctx.stroke();
+  ctx.fillStyle='#2f6b43';
+  rr(-8,-122,16,18,5); ctx.fill();
+  // text bars
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  [[36,150],[70,190],[100,120]].forEach(([yy,w])=>{
+    ctx.beginPath(); ctx.moveTo(-w/2,yy); ctx.lineTo(w/2,yy); ctx.stroke();
+  });
+  if(taped){
+    ctx.fillStyle='#EFCB7C'; ctx.strokeStyle=INK; ctx.lineWidth=5;
+    const n = Math.min(4, taped);
+    [[-104,-144,30],[104,-144,-30],[-104,144,-30],[104,144,30]].slice(0,n).forEach(([tx,ty,tr])=>{
+      ctx.save(); ctx.translate(tx,ty); ctx.rotate(rad(tr));
+      rr(-26,-12,52,24,4); ctx.fill(); ctx.stroke(); ctx.restore();
+    });
+  }
+  ctx.restore();
+}
+function ep18(t){
+  const FR0=7.0, FR1=7.8;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(840,1420); ctx.scale(z,z); ctx.translate(-840,-1420);
+  }
+  drawRoom();
+  miniPumpkin(64, FLOOR+86);
+  const WX=800, WY=FLOOR-880;
+  // ---- the flyer state machine ----
+  if(tt<1.5){
+    // carried in
+    const k=ease(tt/1.5);
+    drawFlyer(lerp(-150,560,k)+70, HIP_STAND-170, Math.sin(tt*9)*6);
+  } else if(tt<3.6){
+    drawFlyer(WX, WY, 0);
+  } else if(tt<4.0){
+    // peel from the top
+    const k=(tt-3.6)/0.4;
+    drawFlyer(WX, WY, k*14);
+  } else if(tt<4.7){
+    // first fall, fluttering
+    const k=ease((tt-4.0)/0.7);
+    drawFlyer(lerp(WX,WX+50,k), lerp(WY,FLOOR-40,k), 14+Math.sin(tt*14)*22);
+  } else if(tt<5.3){
+    drawFlyer(WX+50, FLOOR-40, 78);
+  } else if(tt<5.6){
+    // snatched back up
+    const k=ease((tt-5.3)/0.3);
+    drawFlyer(lerp(WX+50,WX,k), lerp(FLOOR-40,WY,k), lerp(78,0,k));
+  } else if(tt<6.8){
+    drawFlyer(WX, WY, 0);
+  } else if(tt<7.3){
+    // instant second fall
+    const k=ease((tt-6.8)/0.5);
+    drawFlyer(lerp(WX,WX+40,k), lerp(WY,FLOOR-40,k), Math.sin(tt*16)*26);
+  } else if(tt<13.5){
+    drawFlyer(WX+40, FLOOR-40, -70);
+  } else if(tt<14.0){
+    // tyler restores it
+    const k=ease((tt-13.5)/0.5);
+    drawFlyer(lerp(WX+40,WX,k), lerp(FLOOR-40,WY,k), lerp(-70,0,k));
+  } else {
+    const tape = tt<14.2?1 : tt<14.45?2 : tt<14.7?3 : 4;
+    drawFlyer(WX, WY, 0, tape);
+    if(tt>15.3&&tt<16.6) sparkle(WX+90, WY-120, t);
+  }
+  // ---- MR. BIG BUSINESS ----
+  let mp=null;
+  if(tt<1.5){
+    const k=ease(tt/1.5);
+    const step=Math.sin(tt*10);
+    mp={x:lerp(-220,560,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:120,el:-30}, mouth:'smile', style:STYLER};
+  } else if(tt<2.6){
+    const wipe=Math.sin(tt*12)*16;
+    mp={x:672, y:HIP_STAND, face:1, lean:-12,
+      legs:[{hip:12,knee:-6},{hip:-10,knee:6}],
+      arm:{sh:142+wipe,el:-46}, mouth:'smile', style:STYLER};
+  } else if(tt<3.9){
+    mp={x:470, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(tt*4)*3, style:STYLER};
+  } else if(tt<5.2){
+    mp={x:470, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<6.2){
+    // slaps it back, big press
+    const press=Math.sin(tt*14)*10;
+    mp={x:672, y:HIP_STAND, face:1, lean:-16,
+      legs:[{hip:16,knee:-8},{hip:-12,knee:8}],
+      arm:{sh:145+press,el:-48}, mouth:'o', style:STYLER};
+  } else if(tt<6.8){
+    // backs away slowly, hands up
+    mp={x:lerp(640,500,(tt-6.2)/0.6), y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:110,el:-20}, arm2:{sh:102,el:-14}, mouth:'o', style:STYLER};
+  } else if(tt<9.8){
+    const wave=Math.sin(tt*10)*20;
+    mp={x:500, y:HIP_STAND, face:1, lean:-10,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:95+wave,el:-10}, arm2:{sh:85-wave,el:-6}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<11.6){
+    // startled by tyler
+    mp={x:470, y:HIP_STAND, face:-1, lean:16,
+      legs:[{hip:30,knee:-18},{hip:-20,knee:12}],
+      arm:{sh:120,el:-36}, arm2:{sh:108,el:-24}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<15.4){
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:30,el:40}, mouth:'o', style:STYLER};
+  } else if(tt<17.0){
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(tt*3)*4, style:STYLER};
+  } else {
+    mp={x:400, y:HIP_STAND, face:1, lean:6,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:168,el:-118}, mouth:'sad', headTilt:-8, style:STYLER};
+  }
+  drawMan(mp);
+  // ---- TYLER ----
+  if(tt>=9.8){
+    if(tt<10.2){
+      const k=easeOutBack((tt-9.8)/0.4);
+      ctx.save(); ctx.translate(840,HIP_STAND); ctx.scale(k,k); ctx.translate(-840,-HIP_STAND);
+      drawMan({x:840, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:30,el:40}, mouth:'smile', style:STYLET});
+      ctx.restore();
+    } else if(tt<12.6){
+      // shy intern shrug
+      mp={x:840, y:HIP_STAND, face:-1, lean:(tt>11.4?4:0),
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:6,el:10}, mouth:(tt>11.4?'sad':'smile'), headTilt:(tt>11.4?6:0), style:STYLET};
+      drawMan(mp);
+    } else if(tt<13.5){
+      const k=ease((tt-12.6)/0.9);
+      const step=Math.sin(tt*11);
+      drawMan({x:lerp(840,WX-120,k), y:HIP_STAND-Math.abs(step)*8, face:1,
+        legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+        arm:{sh:60,el:20}, mouth:'smile', style:STYLET});
+    } else if(tt<15.0){
+      const dab=Math.sin(tt*16)*14;
+      drawMan({x:WX-120, y:HIP_STAND, face:1, lean:-8,
+        legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+        arm:{sh:128+dab,el:-38}, mouth:'smile', style:STYLET});
+    } else {
+      drawMan({x:WX-140, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:6,el:10}, mouth:'smile', style:STYLET});
+    }
+  }
+  if(tt>=4.0&&tt<4.8){const kk=easeOutBack(Math.min(1,(tt-4.0)/0.26)); starburst(560,FLOOR-760,kk*0.7,'?!');}
+  if(tt>=9.85&&tt<10.7){const kk=easeOutBack(Math.min(1,(tt-9.85)/0.26)); starburst(700,FLOOR-740,kk*0.85,'?!');}
+  ctx.restore();
+  showBadge(18);
+  if(t>=0.05&&t<2.0) caption(['THE PARTY FLYER','MUST BE PERFECT.'],340,(t+0.3)/0.35,52);
+  if(t>=4.2&&t<5.2) caption(['...IT FELL.'],340,(t-4.2)/0.35,58);
+  if(t>=5.6&&t<6.7) caption(['SECURE. DEFINITELY','SECURE.'],340,(t-5.6)/0.35,50);
+  if(t>=FR0+0.05&&t<FR1) caption(['EVERY. SINGLE. TIME.'],340,(t-FR0-0.05)/0.35,52);
+  if(t>=10.2&&t<11.4) caption(['WHERE DID YOU','EVEN COME FROM?'],340,(t-10.2)/0.35,50);
+  if(t>=11.6&&t<12.7) caption(['...im the new intern.'],340,(t-11.6)/0.35,46);
+  if(t>=14.0&&t<15.2) caption(['FOUR PIECES OF TAPE.'],340,(t-14.0)/0.35,50);
+  if(t>=15.6&&t<16.8) caption(['IT HAS NEVER BEEN','MORE SECURE.'],340,(t-15.6)/0.35,48);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT SHOULD TYLER','FIX NEXT?'],340,(t-17.4)/0.35,48);
+    caption(['MR. BIG BUSINESS RECORD: 0 W · 4 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[18]=ep18;
+SHAKES[18]=[9.8,0.25,16];
+TAGLINES[18]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[18]=18.5;
 </script>
 </body></html>
 

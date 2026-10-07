@@ -1,0 +1,229 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+html,body{margin:0;padding:0;background:#000}
+canvas{display:block;width:540px;height:960px}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const cv=document.getElementById('c'), ctx=cv.getContext('2d');
+const W=1080, H=1920;
+const PINK='#ff7bac', PINK2='#ffb3cf', PINKD='#e35a90', GOLD='#E5B84B', CREAM='#f6f1e4', GRAY='#b9aec9';
+window.logoReady=false;
+const logo=new Image(); logo.onload=()=>{window.logoReady=true;}; logo.src='BB_Logo_Purple_2160.png';
+// warm up fonts for canvas
+const warm=['900 20px "Archivo Black"','600 20px Oswald','600 20px Montserrat','700 20px Montserrat'];
+window.fontsWarm=false;
+Promise.all(warm.map(f=>document.fonts.load(f))).then(()=>{window.fontsWarm=true;});
+function ease(k){k=Math.max(0,Math.min(1,k));return k<0.5?2*k*k:1-Math.pow(-2*k+2,2)/2;}
+function easeOutBack(k){k=Math.max(0,Math.min(1,k));const c=1.70158;return 1+(c+1)*Math.pow(k-1,3)+c*Math.pow(k-1,2);}
+function clamp01(k){return Math.max(0,Math.min(1,k));}
+function lerp(a,b,k){return a+(b-a)*k;}
+// scene alpha: fade in 0.35s, fade out 0.4s
+function sa(t,t0,t1){return clamp01((t-t0)/0.35)*clamp01((t1-t)/0.4);}
+function pop(t0,t){return easeOutBack(clamp01((t-t0)/0.4));}
+
+function bg(t){
+  const g=ctx.createRadialGradient(540,620,80,540,620,1500);
+  g.addColorStop(0,'#3a1a5e'); g.addColorStop(0.55,'#2c1247'); g.addColorStop(1,'#15081f');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  // floating pink bokeh
+  for(let i=0;i<16;i++){
+    const sp=18+(i%5)*7;
+    const x=((i*173+40)%W)+Math.sin(t*0.5+i)*30;
+    const y=((H+200)-((t*sp+i*237)%(H+300)))-100;
+    const r=10+(i%4)*9;
+    ctx.fillStyle='rgba(255,140,180,'+(0.05+(i%3)*0.03)+')';
+    ctx.beginPath(); ctx.arc(x,y,r,0,7); ctx.fill();
+  }
+}
+function ribbonPath(x,y,s){
+  ctx.beginPath();
+  ctx.moveTo(x+95*s, y+185*s);
+  ctx.quadraticCurveTo(x-8*s, y+62*s, x-30*s, y-18*s);
+  ctx.quadraticCurveTo(x-48*s, y-95*s, x, y-112*s);
+  ctx.quadraticCurveTo(x+48*s, y-95*s, x+30*s, y-18*s);
+  ctx.quadraticCurveTo(x+8*s, y+62*s, x-95*s, y+185*s);
+}
+function drawRibbon(x,y,s,sway){
+  ctx.save();
+  ctx.translate(x,y); ctx.rotate(sway||0); ctx.translate(-x,-y);
+  ctx.lineCap='round'; ctx.lineJoin='round';
+  ctx.strokeStyle='#8e2f58'; ctx.lineWidth=58*s;
+  ribbonPath(x,y,s); ctx.stroke();
+  const g=ctx.createLinearGradient(x-110*s,y-110*s,x+110*s,y+190*s);
+  g.addColorStop(0,'#ffb3cf'); g.addColorStop(0.5,'#ff7bac'); g.addColorStop(1,'#e35a90');
+  ctx.strokeStyle=g; ctx.lineWidth=44*s;
+  ribbonPath(x,y,s); ctx.stroke();
+  // front tail highlight redraw (right tail over left)
+  ctx.beginPath();
+  ctx.moveTo(x+30*s,y-18*s);
+  ctx.quadraticCurveTo(x+8*s, y+62*s, x-95*s, y+185*s);
+  ctx.strokeStyle='#8e2f58'; ctx.lineWidth=58*s; ctx.stroke();
+  ctx.strokeStyle=g; ctx.lineWidth=44*s;
+  ctx.beginPath();
+  ctx.moveTo(x+30*s,y-18*s);
+  ctx.quadraticCurveTo(x+8*s, y+62*s, x-95*s, y+185*s);
+  ctx.stroke();
+  ctx.restore();
+}
+function kicker(txt,y,a){
+  ctx.save(); ctx.globalAlpha*=a;
+  ctx.font='600 36px Oswald'; ctx.fillStyle=PINK2; ctx.textAlign='center';
+  ctx.fillText(txt.split('').join(' '), 540, y);
+  // manual letterspacing via spaces is unreliable; draw simple
+  ctx.restore();
+}
+function kick2(txt,y,a){
+  ctx.save(); ctx.globalAlpha*=a;
+  ctx.font='600 34px Oswald'; ctx.fillStyle=PINK2; ctx.textAlign='center';
+  const sp=10; let total=0;
+  for(const ch of txt) total+=ctx.measureText(ch).width+sp;
+  let x=540-total/2;
+  for(const ch of txt){ ctx.fillText(ch,x+ctx.measureText(ch).width/2,y); x+=ctx.measureText(ch).width+sp; }
+  ctx.restore();
+}
+function big(txt,y,size,color,a,popT){
+  ctx.save(); ctx.globalAlpha*=a;
+  const s=(popT!==undefined)?easeOutBack(clamp01(popT/0.4)):1;
+  ctx.translate(540,y); ctx.scale(s,s);
+  ctx.font='900 '+size+'px "Archivo Black"'; ctx.textAlign='center';
+  if(color==='pink'){
+    const g=ctx.createLinearGradient(0,-size,0,20);
+    g.addColorStop(0,'#ffc2d8'); g.addColorStop(0.6,'#ff7bac'); g.addColorStop(1,'#d94f86');
+    ctx.fillStyle=g;
+  } else if(color==='gold'){
+    const g=ctx.createLinearGradient(0,-size,0,20);
+    g.addColorStop(0,'#EFCB7C'); g.addColorStop(1,'#B08D3E');
+    ctx.fillStyle=g;
+  } else ctx.fillStyle=color||CREAM;
+  ctx.fillText(txt,0,0);
+  ctx.restore();
+}
+function body(lines,y,size,a,lh){
+  ctx.save(); ctx.globalAlpha*=a;
+  ctx.font='700 '+size+'px Montserrat'; ctx.fillStyle='#e9dff0'; ctx.textAlign='center';
+  lines.forEach((l,i)=>ctx.fillText(l,540,y+i*(lh||size*1.5)));
+  ctx.restore();
+}
+function small(txt,y,a){
+  ctx.save(); ctx.globalAlpha*=a;
+  ctx.font='600 26px Montserrat'; ctx.fillStyle=GRAY; ctx.textAlign='center';
+  ctx.fillText(txt,540,y);
+  ctx.restore();
+}
+function person(x,y,s,col,a){
+  ctx.save(); ctx.globalAlpha*=a;
+  ctx.fillStyle=col;
+  ctx.beginPath(); ctx.arc(x,y-56*s,26*s,0,7); ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(x-30*s,y+58*s);
+  ctx.quadraticCurveTo(x-34*s,y-22*s,x,y-22*s);
+  ctx.quadraticCurveTo(x+34*s,y-22*s,x+30*s,y+58*s);
+  ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+function check(x,y,a,txt){
+  ctx.save(); ctx.globalAlpha*=a;
+  const s=easeOutBack(a);
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.fillStyle=PINK; ctx.beginPath(); ctx.arc(0,0,34,0,7); ctx.fill();
+  ctx.strokeStyle='#2c1247'; ctx.lineWidth=8; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(-14,2); ctx.lineTo(-4,13); ctx.lineTo(16,-12); ctx.stroke();
+  ctx.restore();
+  ctx.font='700 38px Montserrat'; ctx.fillStyle='#efe6f4'; ctx.textAlign='left';
+  ctx.fillText(txt, x+64, y+13);
+  ctx.restore();
+}
+function face(x,y,s,t,a){
+  ctx.save(); ctx.globalAlpha*=a;
+  const blink=(Math.sin(t*0.9)>0.985)?0.15:1;
+  ctx.fillStyle='#fff';
+  ctx.beginPath(); ctx.ellipse(x-26*s,y-48*s,15*s,16*s*blink,0,0,7); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(x+26*s,y-48*s,15*s,16*s*blink,0,0,7); ctx.fill();
+  ctx.fillStyle='#3a1226';
+  ctx.beginPath(); ctx.arc(x-24*s,y-46*s,7*s*blink,0,7); ctx.fill();
+  ctx.beginPath(); ctx.arc(x+28*s,y-46*s,7*s*blink,0,7); ctx.fill();
+  ctx.strokeStyle='#3a1226'; ctx.lineWidth=6*s; ctx.lineCap='round';
+  ctx.beginPath(); ctx.arc(x,y-24*s,16*s,0.3,Math.PI-0.3); ctx.stroke();
+  ctx.restore();
+}
+
+const T1=4.6, T2=11.8, T3=18.6, DUR=26.0;
+window.drawFrame=function(t){
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,W,H);
+  bg(t);
+  if(t<T1){
+    const a=clamp01((T1-t)/0.4);
+    ctx.save(); ctx.globalAlpha=Math.min(1,a);
+    big('20',430,220,'pink',1,t+0.4);
+    big('MINUTES.',640,110,'pink',1,t+0.32);
+    big('THAT IS THE WHOLE',790,54,CREAM,1,t+0.24);
+    big('MAMMOGRAM, START TO FINISH.',870,54,CREAM,1,t+0.18);
+    kick2("PINK OCTOBER · THE SCREENING, EXPLAINED",1000,clamp01((t-0.5)/0.35)*a);
+    small('Source: American Cancer Society',1080,clamp01((t-0.7)/0.35)*a);
+    const rs=easeOutBack(clamp01((t-0.8)/0.5));
+    if(t>0.8) drawRibbon(540,1430,1.2*rs,Math.sin(t*1.5)*0.04);
+    ctx.restore();
+  }
+  else if(t<T2){
+    const a=sa(t,T1,T2);
+    kick2('HERE IS WHAT ACTUALLY HAPPENS',560,a);
+    big('NO MYSTERY.',690,84,CREAM,a,t-(T1+0.1));
+    big('NO HORROR STORY.',805,84,'pink',a,t-(T1+0.25));
+    const rows=[
+      'A tech positions you, one side at a time',
+      'A few seconds of pressure per picture',
+      'About 20 minutes and you are done'
+    ];
+    rows.forEach((txt,i)=>{
+      const ra=clamp01((t-(T1+1.2+i*1.3))/0.45)*a;
+      if(ra>0) check(150,1010+i*150,ra,txt);
+    });
+    if(t>T1+5.2) body(['The fear of the test keeps people away.','The test is the easy part.'],1560,40,sa(t,T1+5.2,T2));
+  }
+  else if(t<T3){
+    const a=sa(t,T2,T3);
+    kick2('WHEN TO START',560,a);
+    big('40',900,300,'pink',a,t-(T2+0.2));
+    if(t>T2+1.0) body(['Experts recommend regular mammograms','starting at age 40.'],1120,40,sa(t,T2+1.0,T3));
+    if(t>T2+2.4) body(['Ask your doctor','what schedule fits you.'],1300,40,sa(t,T2+2.4,T3));
+    if(t>T2+3.4) small('Source: U.S. Preventive Services Task Force',1450,sa(t,T2+3.4,T3));
+  }
+  else {
+    const a=clamp01((t-T3)/0.35);
+    ctx.save(); ctx.globalAlpha=a;
+    const bob=Math.sin(t*2.2)*10;
+    const rs=easeOutBack(clamp01((t-T3)/0.5));
+    drawRibbon(540,470+bob,1.4*rs,Math.sin(t*1.6)*0.04);
+    ctx.restore();
+    if(t>T3+0.5) big('BOOK THE',850,70,CREAM,a,t-(T3+0.5));
+    if(t>T3+0.68) big('20 MINUTES.',940,70,'pink',a,t-(T3+0.68));
+    if(t>T3+1.1) body(['Big Business goes pink all October.','Send this to someone who keeps putting it off.'],1050,38,clamp01((t-(T3+1.1))/0.4));
+    if(window.logoReady&&t>T3+1.5){
+      ctx.save(); ctx.globalAlpha=clamp01((t-(T3+1.5))/0.5);
+      ctx.drawImage(logo,540-140,1170,280,280);
+      ctx.restore();
+    }
+    if(t>T3+1.9) big('702-706-8287',1560,56,'gold',clamp01((t-(T3+1.9))/0.4),t-(T3+1.9));
+    if(t>T3+2.1){
+      ctx.save(); ctx.globalAlpha=clamp01((t-(T3+2.1))/0.4);
+      ctx.font='600 32px Montserrat'; ctx.fillStyle='#e9dff0'; ctx.textAlign='center';
+      ctx.fillText('bigbusinesspartyrentals.com',540,1630);
+      ctx.font='600 28px Montserrat'; ctx.fillStyle=GRAY;
+      ctx.fillText('IG  @bigbusiness_rentals_events   \u00b7   LAS VEGAS, NV',540,1680);
+      ctx.restore();
+    }
+  }
+  ctx.fillStyle='rgba(0,0,0,'+clamp01((t-(DUR-0.5))/0.5)+')';
+  ctx.fillRect(0,0,W,H);
+};
+window.drawFrame(0);
+</script>
+</body></html>
