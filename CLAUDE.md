@@ -68,7 +68,14 @@ REAL FOOTAGE STANDING ORDER (research priority 1): whenever the owner sends raw 
 venue flips, teardowns, truck loading), DROP the illustrated piece in the nearest lane and cut the footage
 instead: bold hook text ON FRAME ONE (no intros), 15-30s, end on the reveal, loop-edit short cuts, real
 sound. Transformation content is the growth engine; illustrated content is the fallback.
-CALENDAR HOOKS Oct 8-11 (from research): Thu 10/8 VGK home opener (verify vs NHL.com) watch-party angle;
+CALENDAR HOOKS Oct 8-11 (from research + owner): RODEO WEEKEND (owner directive Oct 6: run it Thursday
+AND Friday): Las Vegas Invitational Black Rodeo at Horseman's Park, Fri 10/9 7pm + Sat 10/10 1pm/7pm,
+Saturday shows selling out. Thu: venue lane = "rodeo weekend afterparty headquarters", hook "The rodeo
+sold out. Your afterparty should not."; generate western outdoor PRICE IT image Thu night (hay bales,
+lanterns, desert sunset, denim+gold, no people, no event branding). Fri: 1pm PRICE IT = that western
+outdoor setup (fills the owed outdoor slot); referral + other captions get rodeo-weekend flavor.
+NEVER use the event's name or branding in posts, no implied affiliation; ride the weekend, not the brand.
+Thu 10/8 VGK home opener (verify vs NHL.com): Thursday 1pm PRICE IT stays HockeyNight + watch-party angle;
 Sat 10/10 World Mental Health Day (pair with pink lane); Sun 10/11 Raiders at New England 10am PT = brunch
 watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for adult Halloween;
 F1 Vegas Nov 19-21 = corporate booking look-ahead.

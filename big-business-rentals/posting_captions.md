@@ -838,3 +838,11 @@ duties (OPPORTUNITY report format), the Sunday analytics feedback loop, the 12-p
 and the owner-authority rules. It changes no existing production rule; CLAUDE.md specifics still govern
 where they are stricter (no real-people photos on cards, no people in PRICE IT images, 5-hashtag cap,
 caption format, episode format).
+
+## PLAN NOTE (Oct 6, owner): RODEO WEEKEND RUNS THURSDAY + FRIDAY
+Las Vegas Invitational Black Rodeo is Fri Oct 9 + Sat Oct 10 at Horseman's Park (Saturday selling out).
+Owner: run the rodeo angle Thursday and Friday. Thursday: venue lane = rodeo weekend afterparty HQ
+("The rodeo sold out. Your afterparty should not."), HockeyNight keeps the 1pm PRICE IT (VGK home
+opener that night); generate the western outdoor setup image Thursday night. Friday: 1pm PRICE IT =
+western outdoor setup; referral and caption hooks carry rodeo-weekend flavor. No event name or branding
+in any post, no implied affiliation.
