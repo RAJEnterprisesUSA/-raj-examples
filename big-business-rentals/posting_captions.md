@@ -829,3 +829,12 @@ standard in every nightly queue from Thursday on.
 Owner rejected the music slideshow videos ("no videos"). All 10 queued TikTok posts reverted to
 9:16 photo carousels (story9 images). Card sets run as: IG story + IG feed carousel + TikTok photo
 carousel. No music via API on photo posts; owner can add a trending sound in the TikTok app if wanted.
+
+## RULE CHANGE (Oct 6, owner): OPERATOR CHARTER ADOPTED
+Owner issued a full operator charter ("apply this to yourself, without changing anything that we have
+in place"). Saved verbatim as big-business-rentals/OPERATOR.md and referenced at the top of CLAUDE.md.
+It adds the growth mission, hooks-first standard, originality rules, research and growth-opportunity
+duties (OPPORTUNITY report format), the Sunday analytics feedback loop, the 12-point quality checklist
+and the owner-authority rules. It changes no existing production rule; CLAUDE.md specifics still govern
+where they are stricter (no real-people photos on cards, no people in PRICE IT images, 5-hashtag cap,
+caption format, episode format).

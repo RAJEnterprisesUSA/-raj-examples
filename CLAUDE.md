@@ -2,6 +2,12 @@
 
 This repo runs the daily social content system for Big Business Party Rentals And Events
 (Las Vegas, NV). Owner: Rashad Johnson. Read this whole file before building anything.
+OPERATOR CHARTER (owner-issued Oct 6): big-business-rentals/OPERATOR.md defines the role, mission and
+operating standards (growth mission, hooks-first, originality, research and growth-opportunity duties,
+Sunday analytics loop, quality checklist, owner authority). It sits ON TOP of this file and changes
+nothing in it; where the charter speaks generally (e.g. people in visuals) the specific rules below
+still govern (no photos of real people on cards, no people in PRICE IT images) until the owner says
+otherwise. Apply the charter in every session.
 Everything lives under `big-business-rentals/`. Deeper lore: `big-business-rentals/CAST.md`.
 All past captions and rule-change logs: `big-business-rentals/posting_captions.md` (append, never rewrite history).
 Research backing the strategy: `reports/Party rental content strategy.md`.
