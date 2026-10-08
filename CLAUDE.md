@@ -81,6 +81,15 @@ watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for
 F1 Vegas Nov 19-21 = corporate booking look-ahead.
 CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily
 (owner confirmed Oct 5 he sends the DMs; ready-made DM replies for each keyword are in chat history).
+WEBSITE CHATBOT CTA (owner directive Oct 7 night, applies from the Friday Oct 9 build onward): the
+chatbot on bigbusinesspartyrentals.com is a third conversion path alongside keyword DMs and calls.
+Every day AT LEAST TWO captions direct people to it with a line like "Questions? The chat on
+bigbusinesspartyrentals.com answers right away." or "Skip the wait, chat with us at
+bigbusinesspartyrentals.com." Rotate the wording, never robotic-sounding, never replace the standing
+contact line (that stays verbatim). CTA slides may use "CHAT WITH US AT BIGBUSINESSPARTYRENTALS.COM"
+as the clear action in rotation with keyword CTAs and "send this to...". DM replies to keywords should
+also point people to the site chat for instant answers after hours. (Site unreachable from this
+environment through the proxy; copy stays tool-agnostic, just "the chat on our website".)
 PRICE IT LANE (owner request Oct 5; made DAILY the same night): "How Much Would You Pay For This Setup?"
 engagement post EVERY DAY in the 1pm FEED slot (FB + IG). ALTERNATE INDOOR AND OUTDOOR setups day by day
 (owner directive): indoor = ballrooms, fan caves, living rooms, the venue look; outdoor = Vegas backyards,

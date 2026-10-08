@@ -971,3 +971,11 @@ Rodeo weekend calls for a backyard that matches the energy: hay bales, lanterns 
 
 #priceit #rodeoweekend #lasvegas #partyrentals #westernparty
 (Also banked: BB_PriceIt_PoolParty for Saturday, outdoor rotation.)
+
+## RULE CHANGE (Oct 7 night, owner): DIRECT PEOPLE TO THE WEBSITE CHATBOT
+The chatbot on bigbusinesspartyrentals.com joins keyword DMs and calls as a conversion path.
+From the Friday Oct 9 set onward, at least two captions per day point to it ("Questions? The chat on
+bigbusinesspartyrentals.com answers right away."), CTA slides rotate "CHAT WITH US AT
+BIGBUSINESSPARTYRENTALS.COM" in with keyword CTAs, and keyword DM replies mention the site chat for
+instant answers. The standing contact line stays verbatim. Thursday Oct 8 was already queued and runs
+as is.
