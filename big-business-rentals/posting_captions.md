@@ -1089,3 +1089,119 @@ THE BIG BUSINESS CHRONICLES: seating auditions for the Halloween party. Three so
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+## RULE CHANGE (Oct 9, owner): PINNED FIRST COMMENTS CROSS-LINK THE PLATFORMS
+The FB pinned comment now links to the IG page; the IG pinned comment now links to the FB page.
+New texts in CLAUDE.md. Applied to all still-scheduled feed posts via build_swap_firstcomment.py and
+standard in every future queue script.
+
+# SATURDAY OCT 10 (BUILT, NOT QUEUED; owner will say when)
+
+## PRICE IT NOTE: Saturday 1pm = BB_PriceIt_BabyShower (indoor, keeps the indoor/outdoor alternation
+## after Friday's outdoor RodeoNight). GameDay goes Sunday (Raiders 10am brunch angle). PoolParty
+## slides to Monday (outdoor).
+
+## BB_Caro_Sat_SpaceMath (tip No.27, Desert Teal, 6 slides)
+Will your party actually fit?
+
+Swipe for the planner rule of thumb before the tables arrive. Send this to whoever keeps saying it will fit.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #spacemath #partyplanning #lasvegas #partyrentals
+
+## BB_Caro_Sat_RecoveryDay (business, Velvet Rope, 5 slides, chat CTA)
+Why does hosting need a recovery day?
+
+You know the host who never sits down at their own party. Zero lifting for you: tables, chairs and linens delivered, set up and picked up by us. Comment QUOTE, or skip the wait and chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #stressfreehosting #eventrentals #vegas
+
+## BB_Venue_Sat_December (venue, Purple/Gold, single card, chat CTA)
+December parties book in October.
+
+Holiday dinners, friendsmas and company parties claim the good dates early. Our private venue seats 40 and holds 80 standing, with setup included. Comment VENUE for open December dates, or chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#lasvegas #holidayparty #partyvenue #privateevent #friendsmas
+
+## PRICE IT Saturday 1pm = BB_PriceIt_BabyShower
+How much would you pay for this setup?
+
+Baby shower season is upon us and this room understood the assignment. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the room underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #babyshower #lasvegas #partyrentals #eventdecor
+
+## BB_Caro_Sat_WeekendEars (referral, Midnight Navy, 5 slides)
+You will hear about three parties this weekend.
+
+A birthday, a baby shower, somebody's holiday plans. Every one needs tables and chairs, so send them our way, have them drop your name, and collect up to $100 after their event wraps. Send this to the one who hears everything first. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #lasvegas #sidehustle #partyrentals #weekendplans
+
+## BB_Caro_Sat_21Nights (countdown, Halloween, 4 slides; TIKTOK PICK OF THE DAY)
+Only 3 Saturdays stand between you and Halloween.
+
+21 nights out, and the last Saturday is the big one itself. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## BB_Halloween_Reel_PhotoBooth.mp4 (gag #16, 5pm)
+FB/IG:
+The photo booth's first customers had no cheeks to smile with. 💀
+
+One serious photo. That was the whole request. Three flashes later the keeper is a headshot in the most literal way. Send this to your crew's worst photo-taker.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#photobooth #halloween #funnyreels #lasvegas #partyrentals
+YOUTUBE (23):
+Title: The photo booth's first customers 💀 #Shorts
+Description:
+One serious photo. That was the whole request. Three flashes later, the keeper is a headshot in the most literal way. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Skeleton #PhotoBooth #FunnyShorts #LasVegas #PartyRentals
+
+## BB_PinkOctober_MindMatters.mp4 (pink #10, 6pm; World Mental Health Day pairing)
+FB/IG:
+Today is World Mental Health Day, and the fight is not only physical. 🎀
+
+A diagnosis is heavy on the mind too, so support like you mean it: listen more than you advise, show up without being asked, and keep inviting her even mid treatment. And if fear of the screening is the wall, bring a friend and make it a lunch date after. Check on somebody today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#pinkoctober #worldmentalhealthday #breastcancerawareness #checkonsomebody #lasvegas
+YOUTUBE (22):
+Title: Check the body. Mind the mind. 🎀 #Shorts
+Description:
+World Mental Health Day meets Pink October: a diagnosis is heavy on the mind too. Listen, show up, keep inviting her. Check on somebody today.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #WorldMentalHealthDay #BreastCancerAwareness #LasVegas
+
+## BB_Chronicles_Ep20_TheFirstW.mp4 (EP. 20, 8pm)
+FB/IG:
+After 19 episodes, it finally happened. 😂
+
+EP. 20: the party candy kept vanishing, Unc got caught in 4K, and the solution was so smart we are not sure what to do with ourselves. Everybody eats, nobody fights. Does this count as a win? Debate below.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #firstwin #comedy #lasvegas #funnyreels
+YOUTUBE (23):
+Title: EP. 20: THE FIRST W 😂 after 19 episodes #Shorts
+Description:
+THE BIG BUSINESS CHRONICLES: the candy kept vanishing, Unc got caught in 4K, and the fix earned the franchise's first win. Record: 1 win, 5 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals

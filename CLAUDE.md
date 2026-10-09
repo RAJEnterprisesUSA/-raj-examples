@@ -206,9 +206,10 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Reference script: big-business-rentals/build_buffer_queue.py (Monday Oct 5 run queued 24/24 OK).
 - PINNED FIRST COMMENT (owner directive Oct 5 night, applies to EVERY future FB + IG FEED post, type
   post or reel; stories carry none, TikTok/YouTube have no field): set metadata.facebook.firstComment /
-  metadata.instagram.firstComment on createPost. Exact texts, verbatim:
-  FB: "If you're planning anything this season, follow the page. We post real setups, open dates, and what's available before it books up.\nfacebook.com/profile.php?id=61589138907701"
-  IG: "Follow @bigbusiness_rentals_events for real setups and open dates. Booking December now."
+  metadata.instagram.firstComment on createPost. CROSS-LINKED (owner directive Oct 9: the FB comment
+  carries the IG link, the IG comment carries the FB link). Exact texts, verbatim:
+  FB: "If you're planning anything this season, follow us on Instagram too. Real setups, open dates, and what's available before it books up.\ninstagram.com/bigbusiness_rentals_events"
+  IG: "Follow @bigbusiness_rentals_events for real setups and open dates. Booking December now. We are on Facebook too: facebook.com/profile.php?id=61589138907701"
   Buffer posts the comment automatically; PINNING it is manual (owner: open post, three dots on own
   comment, Pin). NEVER use these comments in Facebook groups, only on our own page, IG, and Google posts.
   Reference/backfill script: big-business-rentals/build_firstcomment.py (editPost note: video assets

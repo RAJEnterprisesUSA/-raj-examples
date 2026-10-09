@@ -2047,6 +2047,155 @@ REELS[19]=ep19;
 SHAKES[19]=[5.7,0.25,14];
 TAGLINES[19]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[19]=18.5;
+
+// ---------- EP 20: THE FIRST W ----------
+function drawBowlD(x,y,count,scale){
+  const s=scale||1;
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.translate(-x,-y);
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#7a3fa8';
+  ctx.beginPath(); ctx.moveTo(x-85,y); ctx.quadraticCurveTo(x,y+66,x+85,y);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(x,y,85,18,0,0,7); ctx.fillStyle='#8f54bd'; ctx.fill(); ctx.stroke();
+  const cols=['#ff8c2e','#f6c231','#e05252','#9fe24f','#ffb3cf','#ff8c2e'];
+  for(let i=0;i<count;i++){
+    const a=i/6*Math.PI*2;
+    ctx.fillStyle=cols[i%6];
+    ctx.beginPath(); ctx.arc(x+Math.cos(a)*(10+(i%3)*18), y-6-(i%2)*8, 13, 0, 7); ctx.fill();
+    ctx.lineWidth=4; ctx.stroke(); ctx.lineWidth=8;
+  }
+  ctx.restore();
+}
+function ep20(t){
+  const FR0=5.2, FR1=6.0;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(760,1150); ctx.scale(z,z); ctx.translate(-760,-1150);
+  }
+  drawRoom();
+  miniPumpkin(1012, FLOOR+88);
+  const TX=560, TOP=FLOOR-250;
+  drawTable(TX,0,0);
+  // party bowl count over time
+  let candy=6;
+  if(tt>=2.9) candy=4;
+  if(tt>=4.3) candy=2;
+  if(tt>=9.6) candy=6;        // the refill
+  drawBowlD(TX-60, TOP-30, candy, 1.3);
+  if(tt>=9.6&&tt<10.6) sparkle(TX-10, TOP-110, t);
+  // UNC's personal mini bowl arrives at the side table spot
+  if(tt>=10.8){
+    const k=easeOutBack(Math.min(1,(tt-10.8)/0.35));
+    ctx.save(); ctx.translate(920,FLOOR); ctx.scale(k,k); ctx.translate(-920,-FLOOR);
+    drawChair(920,0,0,0);
+    ctx.restore();
+    if(tt>=11.2) drawBowlD(920, SEAT_TOP-10, 5, 0.8*Math.min(1,(tt-11.2)/0.3));
+  }
+  // UNC
+  let up=null;
+  if(tt<1.6){
+    const step=Math.sin(tt*9);
+    up={x:lerp(W+220,760,ease(tt/1.6)), y:HIP_STAND-Math.abs(step)*10, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:120,el:-30}, mouth:'smile'};
+  } else if(tt<5.0){
+    // innocent whistling, sneaky grabs timed to the bowl drops
+    const grab=(tt>=2.75&&tt<3.1)||(tt>=4.15&&tt<4.5);
+    up={x:760, y:HIP_STAND, face:-1, lean:grab?-14:0,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:grab?{sh:104,el:-16}:{sh:20,el:30}, mouth:grab?'o':'smile',
+      headTilt:grab?0:Math.sin(tt*3)*5};
+  } else if(tt<8.4){
+    // caught mid-reach, then sheepish shrug
+    if(tt<6.4){
+      up={x:760, y:HIP_STAND, face:-1, lean:-14,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:104,el:-16}, mouth:'o', eyes:'wide'};
+    } else {
+      const shrug=Math.sin(tt*4)*5;
+      up={x:760, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'sad', headTilt:shrug};
+    }
+  } else if(tt<11.6){
+    up={x:800, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:20,el:30}, mouth:'smile', headTilt:Math.sin(tt*2.5)*3};
+  } else if(tt<13.0){
+    const k=ease(Math.min(1,(tt-11.6)/0.8));
+    up={x:lerp(800,920-24,k), y:lerp(HIP_STAND,HIP_SEAT,k), face:-1, lean:lerp(-4,-14,k),
+      legs:[{hip:lerp(20,84,k),knee:lerp(8,-86,k)},{hip:lerp(-10,78,k),knee:lerp(8,-80,k)}],
+      arm:{sh:58,el:44}, mouth:'smile'};
+  } else {
+    const munch=Math.sin(tt*6)*4;
+    up={x:920-24, y:HIP_SEAT, face:-1, lean:-14,
+      legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+      arm:{sh:120+munch,el:-70}, mouth:'smile', headTilt:munch};
+  }
+  drawMan(up);
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<2.2){
+    mp={x:360, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:120,el:-36}, mouth:'smile', style:STYLER};   // arranging the bowl
+  } else if(tt<4.3){
+    // turned away tidying, back to the bowl
+    mp={x:300, y:HIP_STAND, face:-1, lean:-6,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:10}, mouth:'smile', style:STYLER};
+  } else if(tt<5.0){
+    mp={x:360, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<8.4){
+    mp={x:400, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:(tt<6.4?'wide':undefined), style:STYLER};
+  } else if(tt<9.6){
+    // the idea + refill
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:150,el:-70}, mouth:'smile', headTilt:6, style:STYLER};
+  } else if(tt<11.6){
+    // wheels in the solution
+    mp={x:lerp(400,640,ease(Math.min(1,(tt-9.6)/0.9))), y:HIP_STAND, face:1,
+      legs:[{hip:14,knee:6},{hip:-10,knee:6}],
+      arm:{sh:96,el:-10}, mouth:'smile', style:STYLER};
+  } else if(tt<14.4){
+    mp={x:640, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(tt*4)*3, style:STYLER};
+  } else {
+    // THE FLEX
+    const flex=Math.sin(tt*5)*6;
+    mp={x:420, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:150+flex,el:-100}, arm2:{sh:150-flex,el:-100}, mouth:'smile', style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=4.45&&tt<5.2){const kk=easeOutBack(Math.min(1,(tt-4.45)/0.26)); starburst(560,FLOOR-760,kk*0.8,'?!');}
+  if(tt>=14.6&&tt<16.2){const kk=easeOutBack(Math.min(1,(tt-14.6)/0.3)); starburst(290,FLOOR-810,kk*0.95,'FIRST W!');}
+  ctx.restore();
+  showBadge(20);
+  if(t>=0.05&&t<2.0) caption(['PARTY CANDY.','DO NOT TOUCH.'],340,(t+0.3)/0.35,52);
+  if(t>=3.1&&t<4.3) caption(['THE BOWL IS','SHRINKING AGAIN.'],340,(t-3.1)/0.35,50);
+  if(t>=FR0+0.05&&t<FR1) caption(['CAUGHT IN 4K.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=6.9&&t<8.1) caption(['UNC. SIR.'],340,(t-6.9)/0.35,56);
+  if(t>=10.6&&t<11.8) caption(['THE SOLUTION:','HIS OWN BOWL.'],340,(t-10.6)/0.35,50);
+  if(t>=13.0&&t<14.2) caption(['EVERYBODY EATS.','NOBODY FIGHTS.'],340,(t-13.0)/0.35,50);
+  if(t>=14.8&&t<16.4) caption(['WAIT.','DID HE JUST WIN?'],340,(t-14.8)/0.35,50);
+  if(t>=17.4&&t<18.45){
+    caption(['DOES THIS COUNT','AS A WIN?'],340,(t-17.4)/0.35,48);
+    caption(['MR. BIG BUSINESS RECORD: 1 W · 5 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[20]=ep20;
+SHAKES[20]=[4.45,0.25,14];
+TAGLINES[20]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[20]=18.5;
 </script>
 </body></html>
 
