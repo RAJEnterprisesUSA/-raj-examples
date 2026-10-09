@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Montserrat';
+  color:var(--ink);background:var(--bg)}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:var(--grainmode);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, transparent 55%, var(--vig) 100%)}
+.frame{position:absolute;inset:34px;border:2px solid var(--frame)}
+.dia{position:absolute;width:12px;height:12px;background:var(--frame);transform:rotate(45deg)}
+.ghostn{position:absolute;right:-70px;top:230px;font-family:'Archivo Black';font-size:620px;line-height:1;
+  color:transparent;-webkit-text-stroke:3px var(--ghost);letter-spacing:-22px}
+.kick{position:absolute;top:84px;left:0;right:0;text-align:center;
+  font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:9px;color:var(--gold2)}
+.prog{position:absolute;top:84px;right:92px;font-family:'Oswald';font-weight:600;font-size:24px;
+  letter-spacing:3px;color:var(--gold2)}
+.bar{position:absolute;top:130px;left:92px;right:92px;height:5px;background:var(--barbg);border-radius:3px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--gold1),var(--gold2));border-radius:3px}
+.mid{position:absolute;left:92px;right:92px;top:0;bottom:0;display:flex;flex-direction:column;
+  justify-content:center;align-items:flex-start;text-align:left}
+.mid.center{align-items:center;text-align:center}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:64px;color:var(--script);line-height:1.05}
+.h1{font-family:'Archivo Black';font-size:124px;line-height:1.02;color:var(--ink);margin-top:14px}
+.h1 em{font-style:normal;background:linear-gradient(180deg,var(--gold1),var(--gold2) 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font-family:'Archivo Black';font-size:78px;line-height:1.1;color:var(--ink)}
+.h2 em{font-style:normal;background:linear-gradient(180deg,var(--gold1),var(--gold2) 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.giant{font-family:'Archivo Black';font-size:300px;line-height:.95;
+  background:linear-gradient(180deg,var(--gold1),var(--gold2) 85%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 16px 30px rgba(0,0,0,.25))}
+.sup{font-weight:600;font-size:34px;color:var(--body);line-height:1.5;margin-top:34px;max-width:860px}
+.sup b{color:var(--gold2)}
+.swipe{position:absolute;right:92px;bottom:150px;font-family:'Oswald';font-weight:600;font-size:30px;
+  letter-spacing:6px;color:var(--gold2)}
+.footS{position:absolute;left:92px;bottom:76px;display:flex;align-items:center;gap:16px;opacity:.92}
+.footS img{width:54px;height:54px}
+.footS .t{font-weight:600;font-size:17px;color:var(--soft);line-height:1.5}
+.footS .t b{color:var(--gold2);font-weight:700}
+.ctaMain{font-family:'Archivo Black';font-size:72px;line-height:1.12;color:var(--ink)}
+.ctaMain em{font-style:normal;background:linear-gradient(180deg,var(--gold1),var(--gold2) 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.ctaBlock{margin-top:70px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.ctaBlock img{width:170px;height:170px;margin-bottom:8px}
+.ctaBlock .ph{font-family:'Archivo Black';font-size:64px;color:var(--gold2)}
+.ctaBlock .site{font-weight:700;font-size:32px;color:var(--ink)}
+.ctaBlock .ig{font-weight:600;font-size:24px;color:var(--soft)}
+.fine{margin-top:26px;font-weight:600;font-size:17px;color:var(--soft);line-height:1.5;max-width:700px;text-align:center}
+</style></head><body><div class="slide" style="--bg:radial-gradient(circle at 46% 20%, #1d2c52 0%, #15203e 50%, #0a1024 100%);--ink:#f1edde;--body:#ccd2e4;--script:#9fb6e8;--gold1:#EFCB7C;--gold2:#B08D3E;--frame:#B08D3E;--soft:#a9b6d4;--grainmode:overlay;--vig:rgba(0,0,0,.5);--ghost:rgba(229,184,75,.2);--barbg:rgba(229,184,75,.25)"><div class="grain"></div><div class="vig"></div><div class="frame"></div>
+<div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+<div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div><div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div><div class="mid"><div class="script">It is Friday and</div><div class="h1">THE PARTY IS TOMORROW. <em>NO TABLES YET.</em></div></div><div class="swipe">SWIPE&nbsp;&nbsp;→</div><div class="footS"><img src="bb_logo.png">
+<div class="t"><b>702-706-8287</b> · bigbusinesspartyrentals.com<br>@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div>
+<div class="slide" style="--bg:radial-gradient(circle at 46% 20%, #1d2c52 0%, #15203e 50%, #0a1024 100%);--ink:#f1edde;--body:#ccd2e4;--script:#9fb6e8;--gold1:#EFCB7C;--gold2:#B08D3E;--frame:#B08D3E;--soft:#a9b6d4;--grainmode:overlay;--vig:rgba(0,0,0,.5);--ghost:rgba(229,184,75,.2);--barbg:rgba(229,184,75,.25)"><div class="ghostn">!</div><div class="grain"></div><div class="vig"></div><div class="frame"></div>
+<div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+<div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div><div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div><div class="prog">2/5</div><div class="bar"><i style="width:40%"></i></div><div class="mid"><div class="h2">It happens every<br>Friday in Vegas.<br><em>Somebody counts chairs<br>and panics.</em></div><div class="sup">Here is the unpanic button.</div></div><div class="footS"><img src="bb_logo.png">
+<div class="t"><b>702-706-8287</b> · bigbusinesspartyrentals.com<br>@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div>
+<div class="slide" style="--bg:radial-gradient(circle at 46% 20%, #1d2c52 0%, #15203e 50%, #0a1024 100%);--ink:#f1edde;--body:#ccd2e4;--script:#9fb6e8;--gold1:#EFCB7C;--gold2:#B08D3E;--frame:#B08D3E;--soft:#a9b6d4;--grainmode:overlay;--vig:rgba(0,0,0,.5);--ghost:rgba(229,184,75,.2);--barbg:rgba(229,184,75,.25)"><div class="grain"></div><div class="vig"></div><div class="frame"></div>
+<div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+<div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div><div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div><div class="prog">3/5</div><div class="bar"><i style="width:60%"></i></div><div class="mid"><div class="giant" style="font-size:220px">1 CALL</div><div class="sup"><b>tables, chairs and linens,</b> delivered and set up around your schedule.</div></div><div class="footS"><img src="bb_logo.png">
+<div class="t"><b>702-706-8287</b> · bigbusinesspartyrentals.com<br>@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div>
+<div class="slide" style="--bg:radial-gradient(circle at 46% 20%, #1d2c52 0%, #15203e 50%, #0a1024 100%);--ink:#f1edde;--body:#ccd2e4;--script:#9fb6e8;--gold1:#EFCB7C;--gold2:#B08D3E;--frame:#B08D3E;--soft:#a9b6d4;--grainmode:overlay;--vig:rgba(0,0,0,.5);--ghost:rgba(229,184,75,.2);--barbg:rgba(229,184,75,.25)"><div class="grain"></div><div class="vig"></div><div class="frame"></div>
+<div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+<div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div><div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div><div class="prog">4/5</div><div class="bar"><i style="width:80%"></i></div><div class="mid"><div class="h2">PANIC AT 9AM.<br><em>HANDLED BY NOON.</em></div><div class="sup">You go back to the playlist, <b>we handle the heavy part.</b></div></div><div class="footS"><img src="bb_logo.png">
+<div class="t"><b>702-706-8287</b> · bigbusinesspartyrentals.com<br>@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div>
+<div class="slide" style="--bg:radial-gradient(circle at 46% 20%, #1d2c52 0%, #15203e 50%, #0a1024 100%);--ink:#f1edde;--body:#ccd2e4;--script:#9fb6e8;--gold1:#EFCB7C;--gold2:#B08D3E;--frame:#B08D3E;--soft:#a9b6d4;--grainmode:overlay;--vig:rgba(0,0,0,.5);--ghost:rgba(229,184,75,.2);--barbg:rgba(229,184,75,.25)"><div class="grain"></div><div class="vig"></div><div class="frame"></div>
+<div class="dia" style="left:29px;top:29px"></div><div class="dia" style="right:29px;top:29px"></div>
+<div class="dia" style="left:29px;bottom:29px"></div><div class="dia" style="right:29px;bottom:29px"></div><div class="kick">◆&nbsp; BIG BUSINESS · LAS VEGAS &nbsp;◆</div><div class="prog">5/5</div><div class="bar"><i style="width:100%"></i></div><div class="mid center"><div class="ctaMain">COMMENT <em>"QUOTE"</em> AND WE WILL DM YOU A PRICE TODAY.</div><div class="ctaBlock"><img src="bb_logo.png"><div class="ph">702-706-8287</div><div class="site">bigbusinesspartyrentals.com</div><div class="ig">@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div><div class="footS"><img src="bb_logo.png">
+<div class="t"><b>702-706-8287</b> · bigbusinesspartyrentals.com<br>@bigbusiness_rentals_events · LAS VEGAS, NV</div></div></div></body></html>

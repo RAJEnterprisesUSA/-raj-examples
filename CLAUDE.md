@@ -38,17 +38,16 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
-FEED DISCIPLINE (owner-approved Oct 5; REVISED by owner Oct 5 night "make the tap through stories as
-post too, for ig and tiktok", then "no videos"): every card-lane set runs THREE ways daily: IG story
-sequence (9:16 story9 images) AND IG feed carousel (4:5 originals, type post, firstComment attached,
-caption says "Swipe") AND TikTok PHOTO carousel (9:16 story9 images, no metadata). Same standing time
-for all three. So the IG feed carries the card carousels PLUS PRICE IT 1pm + gag 5pm + episode 8pm.
+FEED DISCIPLINE (owner-approved Oct 5; revised Oct 5 night "posts too, for ig and tiktok", "no videos";
+REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story"): every card-lane set
+(tip, business, venue, referral, countdown) runs TWO ways daily: FB feed post + IG feed carousel
+(4:5 originals, type post, firstComment attached, caption says "Swipe") AND TikTok PHOTO carousel
+(9:16 story9 images, no metadata). NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story
+lane is retired; story9 pads are still generated because TikTok uses them). Pink awareness VIDEO may
+still route as story (it is a video, not a photo carousel). Applied from the Friday Oct 9 queue onward.
 NO slideshow videos for card sets (owner rejected them Oct 5 night; a music test was built in
 slideshows/ then reverted, build_slideshow.py kept on file only). APIs cannot attach licensed music
 to photo posts, so TikTok carousels run silent unless the owner adds a sound in-app.
-ALL card-lane carousels (tip, business, venue, referral, countdown) still run as IG STORY SEQUENCES every day
-(multi-image story post = tap-through frames; metadata.instagram.type story works with multiple image
-assets; captions say "Tap through", not "Swipe").
 STORY IMAGES MUST BE 9:16 (owner screenshot Oct 5: IG zoom-crops 4:5 cards posted as stories, cutting
 the sides off). Every image queued as an IG story uses the 1080x1920 padded version from
 big-business-rentals/story9/ (build_story_pad.py edge-smears the card's top/bottom rows onto a 1920

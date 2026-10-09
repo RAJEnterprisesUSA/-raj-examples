@@ -979,3 +979,9 @@ bigbusinesspartyrentals.com answers right away."), CTA slides rotate "CHAT WITH 
 BIGBUSINESSPARTYRENTALS.COM" in with keyword CTAs, and keyword DM replies mention the site chat for
 instant answers. The standing contact line stays verbatim. Thursday Oct 8 was already queued and runs
 as is.
+
+## RULE CHANGE (Oct 8 night, owner): NO PHOTO CAROUSELS TO STORIES
+Card sets no longer post as IG story sequences. Routing from Friday Oct 9 onward: FB feed post +
+IG feed carousel (with pinned firstComment) + TikTok photo carousel (story9 9:16 images). The pink
+awareness video keeps its story routing (video, not a photo carousel). story9 pads remain in the
+build for TikTok.
