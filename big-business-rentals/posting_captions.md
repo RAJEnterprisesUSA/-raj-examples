@@ -1205,3 +1205,7 @@ THE BIG BUSINESS CHRONICLES: the candy kept vanishing, Unc got caught in 4K, and
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+## RULE CONFIRMED (Oct 9, owner): TIKTOK = 1 CAROUSEL + 3 REELS PER DAY
+TikTok carries exactly four posts daily: one card carousel (day's strongest hook) and the three
+videos (gag reel, pink video, Chronicles episode). Nothing else.
