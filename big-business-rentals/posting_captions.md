@@ -1209,3 +1209,8 @@ IG: @bigbusiness_rentals_events
 ## RULE CONFIRMED (Oct 9, owner): TIKTOK = 1 CAROUSEL + 3 REELS PER DAY
 TikTok carries exactly four posts daily: one card carousel (day's strongest hook) and the three
 videos (gag reel, pink video, Chronicles episode). Nothing else.
+
+## RULE REFINED (Oct 9, owner): TIKTOK CAROUSEL PICK ROTATES DAILY
+A different lane every day, never the same lane twice running, unless analytics numbers or researched
+reasoning dictate a repeat (log the override with its numbers). Saturday's pick CHANGED from the
+21 Nights countdown (would have repeated Friday's countdown lane) to the SPACE MATH tip carousel.

@@ -43,8 +43,11 @@ REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story" and 
 carousel to tiktok a day"): every card-lane set (tip, business, venue, referral, countdown) runs as
 FB feed post + IG feed carousel (4:5 originals, type post, firstComment attached, caption says
 "Swipe"). TikTok gets exactly FOUR posts per day (owner confirmed Oct 9): ONE card carousel (9:16 story9
-images, the day's strongest hook, lanes rotated across the week; Fri = 22 Nights, Sat = 21 Nights)
-plus the THREE daily reels (gag, pink video, Chronicles episode). Nothing else goes to TikTok. NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
+images) plus the THREE daily reels (gag, pink video, Chronicles episode). Nothing else goes to TikTok.
+CAROUSEL PICK ROTATES: a DIFFERENT lane every day, never the same lane two days running (owner
+directive Oct 9), UNLESS analytics numbers or researched reasoning clearly say one lane earns a
+repeat, and then the override and its numbers get logged in posting_captions.md.
+Picks so far: Fri Oct 9 = countdown (22 Nights). Sat Oct 10 = tip (Space Math). NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
 retired; story9 pads are still generated because the TikTok pick uses them). Pink awareness VIDEO may
 still route as story (it is a video, not a photo carousel). Applied from the Friday Oct 9 queue onward.
 NO slideshow videos for card sets (owner rejected them Oct 5 night; a music test was built in
