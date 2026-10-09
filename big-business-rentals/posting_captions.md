@@ -1214,3 +1214,19 @@ videos (gag reel, pink video, Chronicles episode). Nothing else.
 A different lane every day, never the same lane twice running, unless analytics numbers or researched
 reasoning dictate a repeat (log the override with its numbers). Saturday's pick CHANGED from the
 21 Nights countdown (would have repeated Friday's countdown lane) to the SPACE MATH tip carousel.
+
+## NEW LANE (Oct 10, owner): EN ESPAÑOL, ONE POST DAILY
+One Spanish-language post every day at 3pm Vegas (FB + IG feed), native copy, rotating themes
+(quinceañeras, December/posadas, venue, referidos, Halloween). Spanish pinned comments (cross-linked)
+logged in CLAUDE.md. No Spanish keyword-DM CTAs until the owner confirms he can answer Spanish DMs;
+CTAs use phone + website chat + share lines. Starts with the Sunday Oct 11 set.
+
+## BB_Caro_Sun_Quince (EN ESPAÑOL lane debut, Sunday Oct 11, 3pm, FB + IG feed; Purple/Gold, 5 slides)
+¿Ya tienen todo para la quinceañera?
+
+La fecha se acerca y las sillas no se rentan solas. Mesas, sillas y manteles entregados, instalados y recogidos por nosotros, en todo Las Vegas. Envía esto a una familia que está planeando su quince. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#quinceañera #lasvegas #fiestaslasvegas #rentadesillas #quinceañeras
+PINNED COMMENTS: Spanish cross-linked versions (texts in CLAUDE.md).

@@ -38,6 +38,15 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
+9. EN ESPAÑOL (owner directive Oct 10, DAILY from Sunday Oct 11): one Spanish-language post per day
+   at 3pm Vegas, FB + IG feed (card or 4-5 slide carousel, same design system). NATIVE Spanish copy
+   written for the audience, never a literal translation of an English post. Theme rotation:
+   quinceañeras, posadas/December holiday bookings, el venue, referidos (hasta $100), Halloween dates,
+   services. CTA: phone + "Escríbenos al chat de bigbusinesspartyrentals.com" + "Envía esto a..."
+   share lines; NO Spanish keyword-DM CTAs until the owner confirms he answers Spanish DMs.
+   Hashtags Spanish + local, max 5. Spanish pinned comments for this lane's posts, verbatim:
+   FB(ES): "¿Planeando una fiesta? Síguenos también en Instagram: montajes reales y fechas disponibles.\ninstagram.com/bigbusiness_rentals_events"
+   IG(ES): "Sigue a @bigbusiness_rentals_events para ver montajes reales y fechas disponibles. También estamos en Facebook: facebook.com/profile.php?id=61589138907701" 
 FEED DISCIPLINE (owner-approved Oct 5; revised Oct 5 night "posts too, for ig and tiktok", "no videos";
 REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story" and "only post one
 carousel to tiktok a day"): every card-lane set (tip, business, venue, referral, countdown) runs as
