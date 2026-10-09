@@ -39,11 +39,13 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
 FEED DISCIPLINE (owner-approved Oct 5; revised Oct 5 night "posts too, for ig and tiktok", "no videos";
-REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story"): every card-lane set
-(tip, business, venue, referral, countdown) runs TWO ways daily: FB feed post + IG feed carousel
-(4:5 originals, type post, firstComment attached, caption says "Swipe") AND TikTok PHOTO carousel
-(9:16 story9 images, no metadata). NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story
-lane is retired; story9 pads are still generated because TikTok uses them). Pink awareness VIDEO may
+REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story" and "only post one
+carousel to tiktok a day"): every card-lane set (tip, business, venue, referral, countdown) runs as
+FB feed post + IG feed carousel (4:5 originals, type post, firstComment attached, caption says
+"Swipe"). TikTok gets exactly ONE card carousel per day (9:16 story9 images, no metadata): pick the
+day's strongest hook and rotate lanes across the week (Fri Oct 9 = 22 Nights countdown). Videos still
+go to TikTok as always. NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
+retired; story9 pads are still generated because the TikTok pick uses them). Pink awareness VIDEO may
 still route as story (it is a video, not a photo carousel). Applied from the Friday Oct 9 queue onward.
 NO slideshow videos for card sets (owner rejected them Oct 5 night; a music test was built in
 slideshows/ then reverted, build_slideshow.py kept on file only). APIs cannot attach licensed music

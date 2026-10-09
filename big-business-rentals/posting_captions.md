@@ -985,3 +985,107 @@ Card sets no longer post as IG story sequences. Routing from Friday Oct 9 onward
 IG feed carousel (with pinned firstComment) + TikTok photo carousel (story9 9:16 images). The pink
 awareness video keeps its story routing (video, not a photo carousel). story9 pads remain in the
 build for TikTok.
+
+## RULE CHANGE (Oct 8 night, owner): ONE CAROUSEL TO TIKTOK PER DAY
+TikTok gets exactly one card carousel daily (the day's strongest hook, lanes rotated across the
+week), not all five. Videos keep going to TikTok. Friday Oct 9 pick: 22 Nights countdown.
+
+# FRIDAY OCT 9
+
+## BB_Caro_Fri_ChairMath (tip No.26, Daylight Cream, 6 slides, chat CTA)
+How many chairs do you actually need?
+
+Swipe for the two rules that save every host. Questions? The chat on bigbusinesspartyrentals.com answers right away. Send this to whoever is hosting next.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #chairmath #partyplanning #lasvegas #partyrentals
+
+## BB_Caro_Fri_Scramble (business, Midnight Navy, 5 slides, chat CTA)
+The party is tomorrow and there are no tables yet.
+
+It happens every Friday in Vegas. One call fixes it: tables, chairs and linens delivered, set up and picked up around your schedule. Skip the wait, chat with us at bigbusinesspartyrentals.com, or comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #lastminuteparty #eventrentals #vegas
+
+## BB_Venue_Fri_After (venue, Black&Gold, single card)
+Where is everybody going after?
+
+The whole city is out tonight. Our private venue seats 40 and holds 80 standing, 3 hours for $625 or 4 hours for $800 with tables, chairs and setup included. Comment VENUE and we will DM you open dates this weekend.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#lasvegas #partyvenue #afterparty #privateevent #vegas
+
+## PRICE IT Friday 1pm = BB_PriceIt_RodeoNight (caption logged under Thursday; use as written)
+
+## BB_Caro_Fri_FindersFee (referral, Emerald, 5 slides)
+Talking about parties pays now.
+
+Somebody out tonight is already planning their next event. Send them our way, have them drop your name, and you collect up to $100 after their event wraps. Send this to the friend who knows everybody. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #lasvegas #findersfee #partyrentals #sidehustle
+
+## BB_Caro_Fri_22Nights (countdown, Halloween, 4 slides; TIKTOK PICK OF THE DAY)
+4 Saturdays left. One is Halloween.
+
+22 nights out and the good dates go first. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## BB_Halloween_Reel_TableclothGhost.mp4 (gag #15, 5pm)
+FB/IG:
+The tablecloth would not stay still. 👻
+
+Easy job, they said. Then it started gliding. Turns out he works here, and honestly the table has never looked better. Send this to whoever believes in ghosts.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#tableclothghost #halloween #funnyreels #lasvegas #partyrentals
+YOUTUBE (23):
+Title: The tablecloth would not stay still 👻 #Shorts
+Description:
+Easy job, they said. Then the tablecloth started gliding. Turns out he works here. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Ghost #FunnyShorts #LasVegas #PartyRentals
+
+## BB_PinkOctober_KnowYourNormal.mp4 (pink #9, 6pm)
+FB/IG:
+Many breast cancers are found by women who notice a change themselves. 🎀
+
+Know your normal: how things usually look and feel and what changes with your cycle, so anything new stands out fast. A change does not mean cancer, it means make the call. Check once a month, same week every month. Send this to a woman you love. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #knowyournormal #earlydetection #lasvegas
+YOUTUBE (22):
+Title: Know your normal. It matters. 🎀 #Shorts
+Description:
+Many breast cancers are found by women who notice a change themselves. Know your normal so anything new stands out fast. A change means make the call. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #KnowYourNormal #LasVegas
+
+## BB_Chronicles_Ep19_TheAudition.mp4 (EP. 19, 8pm)
+FB/IG:
+He held seating auditions. One chair lied on the resume. 😂
+
+EP. 19: three solid chairs, one red imposter, and a final verdict from the committee of one. Wobbles stays, as decoration. What costume should Wobbles wear? Best answer gets the next episode credit.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #lilwobbles #comedy #lasvegas #funnyreels
+YOUTUBE (23):
+Title: EP. 19: The Audition 😂 one chair lied on the resume #Shorts
+Description:
+THE BIG BUSINESS CHRONICLES: seating auditions for the Halloween party. Three solid chairs, one red imposter, and the committee has spoken. Record: 0 wins, 5 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals

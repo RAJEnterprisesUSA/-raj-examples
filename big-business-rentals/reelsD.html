@@ -1912,6 +1912,141 @@ REELS[18]=ep18;
 SHAKES[18]=[9.8,0.25,16];
 TAGLINES[18]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[18]=18.5;
+
+// ---------- EP 19: THE AUDITION ----------
+function ep19(t){
+  const FR0=5.9, FR1=6.7;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(830,1300); ctx.scale(z,z); ctx.translate(-830,-1300);
+  }
+  drawRoom();
+  miniPumpkin(64, FLOOR+86);
+  const RED={a:'#e05252',b:'#c94444',c:'#ef6d6d'};
+  // the lineup pops in
+  [260,450,640].forEach((cx,i)=>{
+    const born=0.3+i*0.25;
+    if(tt>born){
+      const k=easeOutBack(Math.min(1,(tt-born)/0.3));
+      ctx.save(); ctx.translate(cx,FLOOR); ctx.scale(k,k); ctx.translate(-cx,-FLOOR);
+      drawChair(cx,0,0,0);
+      ctx.restore();
+    }
+  });
+  // LIL WOBBLES sneaks in from the right to 830
+  if(tt>=1.8){
+    let wx=830, wob=0;
+    if(tt<2.6) wx=lerp(W+180,830,ease((tt-1.8)/0.8));
+    if(tt>=5.6&&tt<7.6) wob=Math.sin(t*16)*Math.min(7,(tt-5.6)*8);          // caught wobbling
+    if(tt>=7.8&&tt<9.0) { wx=830+(tt-7.8)*60; wob=Math.sin(t*12)*3; }       // scooting out
+    if(tt>=9.0&&tt<11.6) { wx=920; wob=0; }                               // stopped by Mrs NW
+    if(tt>=11.6&&tt<13.2){ const k=ease((tt-11.6)/1.6); wx=lerp(920,930,k); wob=Math.sin(t*10)*2; }
+    if(tt>=13.2) { wx=930; wob=(tt>15.2)?Math.sin(t*6)*2.5:0; }             // proud wiggle
+    // tiny hops while scooting
+    let wy=0;
+    if((tt>=7.8&&tt<9.0)||(tt>=11.6&&tt<13.2)) wy=-Math.abs(Math.sin(t*14))*12;
+    ctx.save(); ctx.translate(0,wy);
+    drawChair(wx, wob, 0, 0, RED);
+    ctx.restore();
+    // pumpkin lands on the seat
+    if(tt>=13.6){
+      const k=easeOutBack(Math.min(1,(tt-13.6)/0.4));
+      ctx.save(); ctx.translate(930, SEAT_TOP+40-60*(1-k)); ctx.scale(k,k); ctx.translate(-930,-(SEAT_TOP+40));
+      miniPumpkin(930, SEAT_TOP+40);
+      ctx.restore();
+      if(tt>14.0&&tt<15.2) sparkle(975, SEAT_TOP-80, t);
+    }
+  }
+  // MR. BIG BUSINESS
+  let mp=null;
+  const stepf=Math.sin(tt*9);
+  if(tt<1.6){
+    mp={x:lerp(-220,180,ease(tt/1.6)), y:HIP_STAND-Math.abs(stepf)*10, face:1,
+      legs:[{hip:24*stepf,knee:8},{hip:-24*stepf,knee:8}],
+      arm:{sh:60,el:70}, mouth:'smile', style:STYLER};   // clipboard arm
+  } else if(tt<2.8){
+    mp={x:180, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:60,el:70}, mouth:'smile', headTilt:Math.sin(tt*4)*3, style:STYLER};
+  } else if(tt<5.4){
+    // inspection walk with taps at each chair
+    const stops=[[3.0,260],[3.8,450],[4.6,640]];
+    let x=260, tap=0;
+    for(const [ts,cx] of stops){ if(tt>=ts-0.3) x=cx; if(tt>=ts&&tt<ts+0.35) tap=1; }
+    mp={x:x-170, y:HIP_STAND, face:1, lean:tap?-10:0,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:(tap?{sh:96,el:-6}:{sh:60,el:70}), mouth:'smile', style:STYLER};
+  } else if(tt<7.8){
+    // reaches wobbles, taps, recoils
+    const tap=(tt>=5.6&&tt<6.0);
+    mp={x:660, y:HIP_STAND, face:1, lean:(tt>6.7?8:-10),
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:(tap?{sh:96,el:-6}:{sh:62,el:14}), mouth:(tt>6.0?'o':'smile'),
+      eyes:(tt>6.0?'wide':undefined), style:STYLER};
+  } else if(tt<9.0){
+    // points to the door
+    mp={x:660, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:100,el:-4}, mouth:'o', style:STYLER};
+  } else if(tt<13.4){
+    mp={x:490, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:(tt<10.4?'wide':undefined), style:STYLER};
+  } else if(tt<15.4){
+    const wave=Math.sin(tt*9)*16;
+    mp={x:490, y:HIP_STAND, face:-1, lean:-8,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:95+wave,el:-10}, arm2:{sh:85-wave,el:-6}, mouth:'o', style:STYLER};
+  } else {
+    mp={x:490, y:HIP_STAND, face:1, lean:6,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:168,el:-118}, mouth:'sad', headTilt:-8, style:STYLER};
+  }
+  drawMan(mp);
+  // MRS. NEVER WRONG arrives
+  if(tt>=8.8){
+    if(tt<9.8){
+      const k=ease((tt-8.8)/1.0);
+      const step=Math.sin(tt*10);
+      drawMan({x:lerp(W+200,755,k), y:HIP_STAND-Math.abs(step)*8, face:-1,
+        legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+        arm:{sh:100,el:-10}, mouth:'o', style:STYLEW});
+    } else if(tt<13.4){
+      // pointing: at wobbles, then at the corner
+      const pt=(tt<11.6)?{sh:96,el:-6}:{sh:120,el:-24};
+      drawMan({x:755, y:HIP_STAND, face:-1, lean:-4,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:pt, mouth:'smile', style:STYLEW});
+    } else {
+      // arms crossed, case closed
+      drawMan({x:755, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+        arm:{sh:40,el:95}, arm2:{sh:40,el:95}, mouth:'smile',
+        headTilt:Math.sin(tt*2)*2, style:STYLEW});
+    }
+  }
+  if(tt>=5.65&&tt<6.6){const kk=easeOutBack(Math.min(1,(tt-5.65)/0.26)); starburst(820,FLOOR-700,kk*0.85,'?!');}
+  if(tt>=8.9&&tt<9.7){const kk=easeOutBack(Math.min(1,(tt-8.9)/0.26)); starburst(790,FLOOR-740,kk*0.8,'STOP!');}
+  ctx.restore();
+  showBadge(19);
+  if(t>=0.05&&t<2.0) caption(['HALLOWEEN SEATING','AUDITIONS. TODAY.'],340,(t+0.3)/0.35,50);
+  if(t>=3.2&&t<4.4) caption(['SOLID. SOLID.','SOLID.'],340,(t-3.2)/0.35,54);
+  if(t>=FR0+0.05&&t<FR1) caption(['NOT SOLID.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=7.9&&t<8.8) caption(['OUT. NOW.'],340,(t-7.9)/0.35,56);
+  if(t>=10.0&&t<11.4) caption(['HE STAYS.','AS DECORATION.'],340,(t-10.0)/0.35,50);
+  if(t>=13.7&&t<14.9) caption(['THE COMMITTEE','HAS SPOKEN.'],340,(t-13.7)/0.35,50);
+  if(t>=15.5&&t<16.8) caption(['WOBBLES: EMPLOYED.','THE BOSS: OVERRULED.'],340,(t-15.5)/0.35,44);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT COSTUME SHOULD','WOBBLES WEAR?'],340,(t-17.4)/0.35,46);
+    caption(['MR. BIG BUSINESS RECORD: 0 W · 5 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[19]=ep19;
+SHAKES[19]=[5.7,0.25,14];
+TAGLINES[19]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[19]=18.5;
 </script>
 </body></html>
 
