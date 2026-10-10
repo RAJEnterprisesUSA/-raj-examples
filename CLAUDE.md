@@ -116,11 +116,15 @@ text or letters anywhere", no logos), NEVER photos scraped from Reddit or other 
 passing-off risk). Card template: big-business-rentals/build_priceit.py ("SETUP INSPO" stamp stays so it
 never reads as a client job photo). Caption rule: NEVER imply balloon decor is our service; angle is
 "the tables, chairs and the room underneath it, that is us."
-Card bank: inspo/BB_PriceIt_{GameDay,HockeyNight,BabyShower,KidsParty}.png (v2, owner-approved direction)
-plus v1 {EmeraldGold,NavyChrome,Halloween}. Schedule GameDay near Raiders games, HockeyNight near VGK games.
+NEVER REPEAT SETUP INSPO (owner directive Oct 10, after Saturday's 1pm reused the Oct 5 BabyShower
+card): EVERY PRICE IT image is FRESHLY GENERATED for its day. The card bank
+(inspo/BB_PriceIt_{GameDay,HockeyNight,BabyShower,KidsParty,RodeoNight,PoolParty}.png + v1s) is RETIRED
+from scheduling; already-posted ones are history only, and no banked or previously posted setup image may
+ever be queued again. Generate the next day's setup during the nightly build (theme still matches the
+calendar: football look near Raiders games, hockey look near VGK games, etc., always a new scene).
 QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and small (~6-8 generations);
-generate 1-2 new setups per day during the nightly build, not in batches. Outdoor seeds (pool party,
-desert-sunset backyard) still owed as of Oct 5 night; generate them in the Thursday build for Friday's slot.
+generate 1-2 new setups per day during the nightly build, not in batches. If the day's quota is exhausted
+before the PRICE IT image is made, generate it first thing the next session, never fall back to the bank.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),

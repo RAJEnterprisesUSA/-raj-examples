@@ -1230,3 +1230,12 @@ La fecha se acerca y las sillas no se rentan solas. Mesas, sillas y manteles ent
 
 #quinceañera #lasvegas #fiestaslasvegas #rentadesillas #quinceañeras
 PINNED COMMENTS: Spanish cross-linked versions (texts in CLAUDE.md).
+
+## NEW RULE (Oct 10, owner): NEVER REPEAT SETUP INSPO
+Owner correction after Saturday's 1pm PRICE IT reused the Oct 5 BabyShower bank image: "Never repeat
+setup inspo. It should always be new." Effective immediately, every PRICE IT image is freshly generated
+for its day (HF Z-Image, 1-2 per nightly build within quota). The banked cards (GameDay, HockeyNight,
+BabyShower, KidsParty, RodeoNight, PoolParty, v1s) are retired from scheduling; none may be queued again.
+Saturday's posts had already published before the correction arrived, so the fix applies from Sunday
+Oct 11 onward. Sunday's 1pm PRICE IT = newly generated outdoor game-day setup (Raiders brunch angle),
+not the banked GameDay card.
