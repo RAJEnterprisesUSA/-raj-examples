@@ -1,15 +1,15 @@
 """Combine two job photos + one raw clip into a vertical 1080x1920 reel (branded + clean versions).
 
 Usage:  python3 -I build_combine.py <workdir>
-  <workdir>/in_combine/clip.mov, photo1.jpg, photo2.jpg   (copy the uploads here first)
+  <workdir>/in_combine/clip.mov, portrait.jpg, landscape.jpg   (copy the uploads here first)
   outputs: <workdir>/fb_safe/BB_SuperheroParty_Combined.mp4 (hook text + phone/site strip)
            <workdir>/fb_safe/BB_SuperheroParty_Combined_Clean.mp4 (no text)
 
 Edit for the job: CLIP_A / CLIP_B, the photo crops, and the hook text. Written for the Oct 10 superhero-party job:
  - clip is 1920x1080 HLG HDR (tone-mapped to SDR here), 16.4 s, upright until ~12.2 s, then the phone rolls
    sideways; the plan skips the roll (12.0 -> 13.7) and shows the sideways reveal shot rotated upright (transpose=1).
- - photo1 has people in the top quarter of the frame, so its crop starts below them.
- - order = attachment order: photo1, photo2, clip. ~19.9 s total. crf 22 keeps the files ~10 MB.
+ - landscape.jpg has people in the top of the frame, so its crop starts below them.
+ - order = attachment order: portrait, landscape, clip. ~19.9 s total. crf 22 keeps the files ~10 MB.
 """
 import os, sys, shutil, subprocess, wave
 import numpy as np
@@ -62,9 +62,9 @@ def render_photo(name, crop0, crop1, aspect, folder):
         frame.paste(fg, (0, y_off))
         frame.save(f'{folder}/f{i:04d}.png')
 
-IW, IH = 2576, 1932
-render_photo('photo1', (IW / 2, 1932 - 750, 2576), (IW / 2 + 40, 1932 - 700, 2250), 2576 / 1500, f'{S}/frC1')
-render_photo('photo2', (IW / 2, IH / 2, 2576), (IW * 0.56, IH * 0.46, 2260), 4 / 3, f'{S}/frC2')
+# portrait.jpg = 1932x2576 empty tables (3:4); landscape.jpg = 2576x1932 with people in the top ~600 px, so its crop starts below them
+render_photo('portrait', (966, 1288, 1932), (966, 1400, 1650), 3 / 4, f'{S}/frC1')
+render_photo('landscape', (1450, 1266, 1776), (1450, 1202, 1500), 4 / 3, f'{S}/frC2')
 
 f_h = ImageFont.truetype(f'{FONTS}/ArchivoBlack.ttf', 92)
 f_s = ImageFont.truetype(f'{FONTS}/Mont700.ttf', 40)
