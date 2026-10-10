@@ -2373,6 +2373,449 @@ function reelH12(t){
 REELS[12]=reelH12;
 SHAKES[12]=[2.62,0.3,16];
 TAGLINES[12]='EIGHT LEGS. STILL HOLDS.';
+
+// ---------- H13: the candy hand ----------
+function drawBowl(x,y,count){
+  ctx.save();
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#7a3fa8';
+  ctx.beginPath(); ctx.moveTo(x-85,y); ctx.quadraticCurveTo(x,y+66,x+85,y);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(x,y,85,18,0,0,7); ctx.fillStyle='#8f54bd'; ctx.fill(); ctx.stroke();
+  const cols=['#ff8c2e','#f6c231','#e05252','#9fe24f','#ffb3cf','#ff8c2e'];
+  for(let i=0;i<count;i++){
+    const a=i/6*Math.PI*2;
+    ctx.fillStyle=cols[i%6];
+    ctx.beginPath(); ctx.arc(x+Math.cos(a)*(10+(i%3)*18), y-6-(i%2)*8, 13, 0, 7); ctx.fill();
+    ctx.lineWidth=4; ctx.stroke(); ctx.lineWidth=8;
+  }
+  ctx.restore();
+}
+function boneArm(x,y,ext,ang){
+  // skeletal arm reaching up from (x,y); ext 0..1, ang degrees lean
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(ang||0));
+  ctx.lineCap='round';
+  const L=ext*215;
+  ctx.lineWidth=22; ctx.strokeStyle=BONE;
+  ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-L); ctx.stroke();
+  ctx.lineWidth=18; ctx.strokeStyle=BONE2;
+  ctx.beginPath(); ctx.moveTo(0,-L); ctx.lineTo(26*ext,-L-46*ext); ctx.stroke();
+  if(ext>0.5){
+    ctx.lineWidth=9; ctx.strokeStyle=BONE;
+    [-16,0,16].forEach(d=>{
+      ctx.beginPath(); ctx.moveTo(26*ext,-L-46*ext);
+      ctx.lineTo(26*ext+d,-L-46*ext-24); ctx.stroke();
+    });
+  }
+  ctx.restore();
+}
+function reelH13(t){
+  drawRoomH(t);
+  const TX=620, TOP=FLOOR-250;
+  const NX=900;
+  // candy count over time
+  let candy=6;
+  if(t>=2.5) candy=4;
+  if(t>=4.55) candy=2;
+  // skeleton slides out at reveal
+  if(t>=6.0){
+    if(t<6.9){
+      const k=ease((t-6.0)/0.9);
+      drawSkeleton({x:lerp(TX+40,820,k), y:FLOOR-110, face:1, rot:lerp(70,0,k),
+        legs:[{hip:92,knee:-116},{hip:84,knee:-108}],
+        arm:{sh:20,el:20}, arm2:{sh:12,el:28}});
+    } else if(t<7.6){
+      const k=ease((t-6.9)/0.7);
+      drawSkeleton({x:lerp(820,NX-24,k), y:lerp(FLOOR-110,HIP_SEAT,k), face:-1,
+        legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+        arm:{sh:58,el:44}});
+    } else {
+      const b=Math.sin(t*3)*3;
+      drawSkeleton({x:NX-24, y:HIP_SEAT+b, face:-1,
+        legs:[{hip:84,knee:-86},{hip:78,knee:-80}],
+        arm:{sh:150,el:-60}, arm2:{sh:58,el:44}});
+      drawBowl(NX-10, HIP_SEAT-130, 2);
+    }
+  }
+  if(t>=6.9){
+    const k=easeOutBack(Math.min(1,(t-6.9)/0.4));
+    ctx.save(); ctx.translate(NX,FLOOR); ctx.scale(k,k); ctx.translate(-NX,-FLOOR);
+    drawChair(NX,0,0,0);
+    ctx.restore();
+    if(t>7.8) sparkle(NX+50, SEAT_TOP-160, t);
+  }
+  drawTable(TX,0,0);
+  // tablecloth drape (front)
+  ctx.save();
+  ctx.fillStyle='#f3ead6'; ctx.strokeStyle=INK; ctx.lineWidth=9;
+  const lift=(t>=5.9&&t<6.9)?Math.sin(Math.min(1,(t-5.9)/0.5)*Math.PI/2)*120:((t>=6.9)?120:0);
+  ctx.beginPath();
+  ctx.moveTo(TX-300,TOP-6);
+  ctx.lineTo(TX+300,TOP-6);
+  ctx.lineTo(TX+300,FLOOR-36-lift);
+  ctx.quadraticCurveTo(TX+150,FLOOR-16-lift,TX+20,FLOOR-30-lift*0.4);
+  ctx.quadraticCurveTo(TX-150,FLOOR-14,TX-300,FLOOR-34);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // bowl on table
+  if(t<7.6) drawBowl(TX+120, TOP-30, candy);
+  // the hand
+  if(t>=2.0&&t<2.75){
+    const ph=Math.min(1,(t-2.0)/0.35);
+    const ret=(t>2.5)?Math.min(1,(t-2.5)/0.25):0;
+    boneArm(TX+185, FLOOR-70, ph*(1-ret), -18);
+  }
+  if(t>=4.15&&t<4.85){
+    const ph=Math.min(1,(t-4.15)/0.25);
+    const ret=(t>4.55)?Math.min(1,(t-4.55)/0.3):0;
+    boneArm(TX+185, FLOOR-70, ph*(1-ret), -18);
+  }
+  // UNC
+  let pose=null;
+  if(t<1.3){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,300,ease(t/1.3)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:72,el:26}, arm2:{sh:64,el:34}, mouth:'smile'};
+  } else if(t<1.9){
+    pose={x:300, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:12,el:68}, mouth:'smile', headTilt:Math.sin(t*5)*4};
+  } else if(t<2.7){
+    pose={x:300, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:30,el:40}, mouth:'smile'};
+  } else if(t<4.0){
+    pose={x:300, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:62,el:14}, mouth:'o', headTilt:(t>3.0?10:0)};
+  } else if(t<4.7){
+    pose={x:300, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:30,el:40}, mouth:'smile'};
+  } else if(t<5.4){
+    pose={x:300, y:HIP_STAND, face:1, lean:-10,
+      legs:[{hip:14,knee:-8},{hip:-12,knee:-4}],
+      arm:{sh:110,el:-20}, mouth:'o', eyes:'wide'};
+  } else if(t<6.9){
+    const k=ease(Math.min(1,(t-5.4)/0.5));
+    pose={x:lerp(300,TX-250,k), y:HIP_STAND+k*60, face:1, lean:14,
+      legs:[{hip:30+k*30,knee:-20-k*30},{hip:-16,knee:8}],
+      arm:{sh:lerp(60,30,k),el:lerp(20,-10,k)}, mouth:'o', eyes:'wide'};
+  } else {
+    const shrug=Math.sin(t*4)*4;
+    pose={x:TX-250, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'smile', headTilt:shrug};
+  }
+  drawMan(pose);
+  if(t>=4.85&&t<5.5){const kk=easeOutBack(Math.min(1,(t-4.85)/0.26)); starburst(420,FLOOR-720,kk*0.8,'?!');}
+  if(t>=6.0&&t<6.8){const kk=easeOutBack(Math.min(1,(t-6.0)/0.28)); starburst(TX+140,FLOOR-700,kk*0.85,'AHA!');}
+  if(t<1.7) caption(['THE CANDY IS','FOR THE GUESTS.'],240,(t+0.35)/0.35,54);
+  if(t>=2.9&&t<4.0) caption(['...DID THE BOWL','JUST SHRINK?'],240,(t-2.9)/0.35);
+  if(t>=5.0&&t<5.9) caption(['SOMETHING IS','UNDER THERE.'],240,(t-5.0)/0.35);
+  if(t>=6.4&&t<7.5) caption(['HE HAD A GUEST','THE WHOLE TIME.'],240,(t-6.4)/0.35,54);
+  if(t>=8.0&&t<8.9) caption(['EVERY GUEST GETS A SEAT.','AND A SNACK.'],240,(t-8.0)/0.35,50);
+}
+REELS[13]=reelH13;
+SHAKES[13]=[6.0,0.3,14];
+TAGLINES[13]='SEATS FOR EVERY BODY.';
+
+// ---------- H14: DJ Bones ----------
+function drawSpeaker(x,y,t,beat){
+  const pump=1+Math.max(0,Math.sin(t*Math.PI*2*beat))*0.04;
+  ctx.save(); ctx.translate(x,y); ctx.scale(pump,pump);
+  ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#2b2436';
+  rr(-62,-170,124,170,14); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#161020';
+  ctx.beginPath(); ctx.arc(0,-116,34,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0,-46,22,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function reelH14(t){
+  drawRoomH(t);
+  const TX=660, TOP=FLOOR-250, SX=TX+30;
+  const BPM=2.1, DROP=5.2;
+  // speakers
+  drawSpeaker(TX-330,FLOOR,t,BPM);
+  drawSpeaker(TX+330,FLOOR,t,BPM);
+  // DJ skeleton behind the table, bobbing hard
+  const bob=Math.abs(Math.sin(t*Math.PI*BPM))*(t<DROP?26:16);
+  const pumpL=Math.sin(t*Math.PI*2*BPM)>0;
+  const sk={x:SX, y:HIP_STAND-20-bob, face:-1, noHead:t>=DROP,
+    legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+    arm: pumpL?{sh:160,el:-40}:{sh:70,el:30},
+    arm2: pumpL?{sh:70,el:30}:{sh:160,el:-40},
+    headTilt:Math.sin(t*Math.PI*2*BPM)*14};
+  drawSkeleton(sk);
+  // DJ table + deck
+  drawTable(TX,0,0);
+  ctx.save();
+  ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#241c33';
+  rr(TX-170,TOP-54,340,48,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#0f0a18';
+  const spin=t*4;
+  [TX-90,TX+90].forEach(cx=>{
+    ctx.beginPath(); ctx.arc(cx,TOP-30,30,0,7); ctx.fill(); ctx.stroke();
+    ctx.lineWidth=4;
+    ctx.beginPath(); ctx.moveTo(cx,TOP-30);
+    ctx.lineTo(cx+Math.cos(spin)*24, TOP-30+Math.sin(spin)*8); ctx.stroke();
+    ctx.lineWidth=8;
+  });
+  ctx.restore();
+  // the flying skull
+  if(t>=DROP){
+    const x0=SX-8, y0=HIP_STAND-20-bob-240, xl=SX+300, yl=FLOOR-54;
+    if(t<DROP+1.0){
+      const k=(t-DROP)/1.0;
+      const x=lerp(x0,xl,k), y=lerp(y0,yl,k)-340*Math.sin(Math.PI*k);
+      drawSkullLoose(x,y,720*k,'wide');
+    } else if(t<DROP+1.35){
+      const k=(t-DROP-1.0)/0.35;
+      const x=lerp(xl,xl+56,k), y=yl-64*Math.sin(Math.PI*k);
+      drawSkullLoose(x,y,720+90*k);
+    } else {
+      drawSkullLoose(xl+56,yl,810+Math.sin(t*3.2)*5);
+    }
+  }
+  // the guest, dancing then shook then vibing again
+  let pose=null;
+  if(t<DROP-0.4){
+    const step=Math.sin(t*Math.PI*BPM);
+    pose={x:250+step*26, y:HIP_STAND-Math.abs(step)*16, face:1,
+      legs:[{hip:22*step,knee:6},{hip:-22*step,knee:6}],
+      arm:{sh:150+step*18,el:-36}, arm2:{sh:150-step*18,el:-36},
+      mouth:'smile', headTilt:step*8};
+  } else if(t<DROP+1.6){
+    pose={x:250, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};
+  } else {
+    const step=Math.sin(t*Math.PI*BPM);
+    pose={x:250+step*20, y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:18*step,knee:6},{hip:-18*step,knee:6}],
+      arm:{sh:150+step*16,el:-36}, arm2:{sh:70,el:30},
+      mouth:'smile', headTilt:step*6};
+  }
+  drawMan(pose);
+  if(t>=DROP&&t<DROP+0.8){const kk=easeOutBack(Math.min(1,(t-DROP)/0.28)); starburst(TX-60,FLOOR-760,kk*0.9,'THE DROP!');}
+  if(t<1.7) caption(['THE DJ CAME','HIGHLY RECOMMENDED.'],240,(t+0.35)/0.35,54);
+  if(t>=2.4&&t<3.6) caption(['HE REALLY FEELS','THE MUSIC.'],240,(t-2.4)/0.35);
+  if(t>=4.2&&t<5.1) caption(['WAIT FOR','THE DROP...'],240,(t-4.2)/0.35);
+  if(t>=6.1&&t<7.3) caption(['HE LOST HIS HEAD','TO THE BEAT.'],240,(t-6.1)/0.35,54);
+  if(t>=7.9&&t<8.9) caption(['STURDY TABLES.','WILD PARTIES.'],240,(t-7.9)/0.35,50);
+}
+REELS[14]=reelH14;
+SHAKES[14]=[5.2,0.35,18];
+TAGLINES[14]='THE BEAT DROPS. SO DOES HE.';
+
+// ---------- H15: the tablecloth ghost ----------
+function drawClothGhost(x,y,s,t){
+  // the gliding cloth: ghost silhouette, cream, no face
+  ctx.save();
+  ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#f3ead6';
+  const w=100*s, top=y-240*s;
+  ctx.beginPath();
+  ctx.moveTo(x-w, y);
+  ctx.lineTo(x-w, top+90*s);
+  ctx.arc(x, top+90*s, w, Math.PI, 0);
+  ctx.lineTo(x+w, y);
+  const n=5;
+  for(let i=0;i<n;i++){
+    const x1=x+w-(i+0.5)*(2*w/n), x0=x+w-(i+1)*(2*w/n);
+    const dy=12*s*Math.sin(t*8+i*1.7);
+    ctx.quadraticCurveTo(x1, y+28*s+dy, x0, y);
+  }
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function clothDrape(TX,TOP,settle){
+  ctx.save();
+  ctx.fillStyle='#f3ead6'; ctx.strokeStyle=INK; ctx.lineWidth=9;
+  ctx.beginPath();
+  ctx.moveTo(TX-300,TOP-6);
+  ctx.lineTo(TX+300,TOP-6);
+  ctx.lineTo(TX+300,TOP+150*settle);
+  ctx.quadraticCurveTo(TX+150,TOP+180*settle,TX,TOP+160*settle);
+  ctx.quadraticCurveTo(TX-150,TOP+180*settle,TX-300,TOP+150*settle);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function reelH15(t){
+  drawRoomH(t);
+  const TX=620, TOP=FLOOR-250;
+  drawTable(TX,0,0);
+  // cloth states
+  if(t>=1.3&&t<2.4){
+    const k=ease(Math.min(1,(t-1.3)/0.5));
+    clothDrape(TX,TOP,k);
+  }
+  // gliding cloth-ghost
+  if(t>=2.4&&t<5.9){
+    const ph=(t-2.4)/3.5;
+    const gx=TX+Math.sin(ph*Math.PI*2.5)*260;
+    const gy=FLOOR-20+Math.sin(t*5)*14;
+    drawClothGhost(gx,gy,1.15,t);
+  }
+  // reveal: cloth falls back on the table, real ghost pops up
+  if(t>=5.9){
+    const k=ease(Math.min(1,(t-5.9)/0.5));
+    clothDrape(TX,TOP,k);
+    const gy=FLOOR-170+Math.sin(t*3)*12;
+    const gs=easeOutBack(Math.min(1,(t-5.9)/0.45));
+    const o={mouth:'smile'};
+    if(t>=6.6&&t<7.8){ o.reach=true; o.hx=TX+200; o.hy=TOP-10; }
+    drawGhost(880, gy, 1.0*gs, t, o);
+    if(t>=6.8&&t<8.2) sparkle(TX+160, TOP-80, t);
+  }
+  // UNC
+  let pose=null;
+  if(t<1.3){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,330,ease(t/1.3)), y:HIP_STAND-Math.abs(step)*12, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:120,el:-40}, mouth:'smile'};
+    // folded cloth in hand
+    ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#f3ead6';
+    rr(pose.x+110, HIP_STAND-220, 110, 56, 8); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  } else if(t<2.4){
+    pose={x:360, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:130,el:-40}, mouth:'smile'};
+  } else if(t<3.4){
+    pose={x:360, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};
+  } else if(t<5.9){
+    // the chase, flips with the cloth
+    const ph=(t-2.4)/3.5;
+    const gdir=Math.cos(ph*Math.PI*2.5);
+    const step=Math.sin(t*11);
+    pose={x:360+Math.sin(ph*Math.PI*2.5)*180, y:HIP_STAND-Math.abs(step)*10,
+      face:(gdir>0?1:-1),
+      legs:[{hip:28*step,knee:8},{hip:-28*step,knee:8}],
+      arm:{sh:110,el:-20}, arm2:{sh:100,el:-14}, mouth:'o', eyes:'wide'};
+  } else if(t<7.4){
+    pose={x:330, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:'wide'};
+  } else {
+    const nod=Math.sin(t*4)*4;
+    pose={x:330, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:150,el:-70}, mouth:'smile', headTilt:nod};
+  }
+  drawMan(pose);
+  if(t>=2.5&&t<3.3){const kk=easeOutBack(Math.min(1,(t-2.5)/0.26)); starburst(TX-40,FLOOR-740,kk*0.8,'?!');}
+  if(t>=5.95&&t<6.7){const kk=easeOutBack(Math.min(1,(t-5.95)/0.28)); starburst(860,FLOOR-700,kk*0.85,'BOO!');}
+  if(t<1.7) caption(['TABLECLOTH.','EASY JOB.'],240,(t+0.35)/0.35,54);
+  if(t>=2.7&&t<3.9) caption(['WHY IS IT','MOVING.'],240,(t-2.7)/0.35);
+  if(t>=4.4&&t<5.3) caption(['GET BACK HERE.'],240,(t-4.4)/0.35);
+  if(t>=6.5&&t<7.6) caption(['OH. HE','WORKS HERE.'],240,(t-6.5)/0.35,54);
+  if(t>=8.0&&t<8.9) caption(['SETUP INCLUDED.','SPIRITS TOO.'],240,(t-8.0)/0.35,50);
+}
+REELS[15]=reelH15;
+SHAKES[15]=[5.9,0.3,16];
+TAGLINES[15]='SETUP SO EASY, IT IS SCARY.';
+
+// ---------- H16: the photo booth ----------
+function drawCameraH(x,y){
+  ctx.save();
+  ctx.lineWidth=8; ctx.strokeStyle=INK;
+  // tripod
+  ctx.beginPath(); ctx.moveTo(x,y-150); ctx.lineTo(x-55,y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x,y-150); ctx.lineTo(x+55,y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x,y-150); ctx.lineTo(x,y-30); ctx.stroke();
+  // body
+  ctx.fillStyle='#2b2436';
+  rr(x-62,y-226,124,80,12); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#161020';
+  ctx.beginPath(); ctx.arc(x,y-186,26,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#f6c231';
+  ctx.beginPath(); ctx.arc(x+44,y-214,8,0,7); ctx.fill();
+  ctx.restore();
+}
+function reelH16(t){
+  drawRoomH(t);
+  const CX=250, SA=640, SB=840;
+  // backdrop: string of lights already in room; add a chair as prop
+  if(t>=0.2){
+    const k=easeOutBack(Math.min(1,(t-0.2)/0.35));
+    ctx.save(); ctx.translate(SB+40,FLOOR); ctx.scale(k,k); ctx.translate(-(SB+40),-FLOOR);
+    drawChair(SB+40,0,0,0);
+    ctx.restore();
+  }
+  drawCameraH(CX, FLOOR);
+  // flash moments
+  const FL=[2.4, 4.6, 6.8];
+  // skeleton poses change at each flash
+  const phase = t<FL[0] ? 0 : t<FL[1] ? 1 : t<FL[2] ? 2 : 3;
+  const bob=Math.sin(t*3)*5;
+  if(t>=0.9){
+    if(phase===0){
+      // stiff formal pose
+      drawSkeleton({x:SA, y:HIP_STAND-10+bob, face:-1,
+        legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:20,el:20}, arm2:{sh:16,el:24}});
+      drawSkeleton({x:SB, y:HIP_STAND-10-bob, face:-1,
+        legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:20,el:20}});
+    } else if(phase===1){
+      // goofy: one does bunny ears behind the other
+      drawSkeleton({x:SA, y:HIP_STAND-10+bob, face:-1,
+        legs:[{hip:18,knee:-8},{hip:-10,knee:6}], arm:{sh:150,el:-60}, headTilt:12});
+      drawSkeleton({x:SB, y:HIP_STAND-10-bob, face:-1,
+        legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:166,el:-110}, headTilt:-8});
+    } else if(phase===2){
+      // dramatic: one lounging on the chair, one flexing
+      drawSkeleton({x:SA, y:HIP_STAND-6+bob, face:-1, lean:-10,
+        legs:[{hip:30,knee:-16},{hip:-18,knee:10}], arm:{sh:120,el:-90}, arm2:{sh:110,el:-80}, headTilt:6});
+      drawSkeleton({x:SB+16, y:HIP_SEAT, face:-1,
+        legs:[{hip:84,knee:-86},{hip:78,knee:-80}], arm:{sh:150,el:-40}, headTilt:-14});
+    } else {
+      // the keeper: arm in arm, one head held under the arm
+      drawSkeleton({x:SA, y:HIP_STAND-10+bob, face:-1,
+        legs:[{hip:10,knee:4},{hip:-6,knee:4}], arm:{sh:60,el:30}, headTilt:8});
+      drawSkeleton({x:SB, y:HIP_STAND-10-bob, face:-1, noHead:true,
+        legs:[{hip:10,knee:4},{hip:-6,knee:4}], arm:{sh:46,el:66}});
+      drawSkullLoose(SB+36, HIP_STAND-80, 18+Math.sin(t*3)*4);
+      if(t>FL[2]+0.6&&t<FL[2]+2.0) sparkle(SB+90, HIP_STAND-220, t);
+    }
+  }
+  // UNC the photographer
+  let pose=null;
+  if(t<0.9){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-200,CX-110,ease(t/0.9)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:60,el:30}, mouth:'smile'};
+  } else {
+    // crouch behind the camera, pops up on each flash
+    const near=FL.some(f=>t>=f-0.35&&t<f+0.1);
+    pose={x:CX-110, y:HIP_STAND+(near?0:18), face:1, lean:-10,
+      legs:[{hip:18,knee:-10},{hip:-10,knee:8}],
+      arm:{sh:near?96:70,el:near?-10:10}, mouth:(phase===3?'smile':'o')};
+  }
+  drawMan(pose);
+  // flashes (white overlay) + CLICK bursts
+  FL.forEach(f=>{
+    if(t>=f&&t<f+0.26){
+      const a=1-(t-f)/0.26;
+      ctx.save(); ctx.globalAlpha=a*0.9; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore();
+    }
+    if(t>=f+0.02&&t<f+0.7){
+      const kk=easeOutBack(Math.min(1,(t-f-0.02)/0.25));
+      starburst(CX+120, FLOOR-680, kk*0.6, 'CLICK!');
+    }
+  });
+  if(t<1.7) caption(['PARTY PHOTO BOOTH.','FIRST CUSTOMERS.'],240,(t+0.35)/0.35,52);
+  if(t>=2.9&&t<4.1) caption(['OKAY. ONE','SERIOUS ONE.'],240,(t-2.9)/0.35);
+  if(t>=5.1&&t<6.3) caption(['THEY CANNOT','BE SERIOUS.'],240,(t-5.1)/0.35);
+  if(t>=7.3&&t<8.1) caption(['...THAT IS','THE ONE.'],240,(t-7.3)/0.35,54);
+  if(t>=8.2&&t<8.9) caption(['EVERY PARTY NEEDS','A PHOTO CORNER.'],240,(t-8.2)/0.35,48);
+}
+REELS[16]=reelH16;
+SHAKES[16]=[6.8,0.2,10];
+TAGLINES[16]='STRIKE A POSE. WE BRING THE REST.';
 </script>
 </body></html>
 

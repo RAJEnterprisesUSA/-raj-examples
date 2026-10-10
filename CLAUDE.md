@@ -2,6 +2,12 @@
 
 This repo runs the daily social content system for Big Business Party Rentals And Events
 (Las Vegas, NV). Owner: Rashad Johnson. Read this whole file before building anything.
+OPERATOR CHARTER (owner-issued Oct 6): big-business-rentals/OPERATOR.md defines the role, mission and
+operating standards (growth mission, hooks-first, originality, research and growth-opportunity duties,
+Sunday analytics loop, quality checklist, owner authority). It sits ON TOP of this file and changes
+nothing in it; where the charter speaks generally (e.g. people in visuals) the specific rules below
+still govern (no photos of real people on cards, no people in PRICE IT images) until the owner says
+otherwise. Apply the charter in every session.
 Everything lives under `big-business-rentals/`. Deeper lore: `big-business-rentals/CAST.md`.
 All past captions and rule-change logs: `big-business-rentals/posting_captions.md` (append, never rewrite history).
 Research backing the strategy: `reports/Party rental content strategy.md`.
@@ -32,11 +38,89 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
-Routing rule: only 2-3 FEED posts/day; everything else Stories + 1-2 Trial Reels; all videos also to YouTube Shorts.
+9. EN ESPAÑOL (owner directive Oct 10, DAILY from Sunday Oct 11): one Spanish-language post per day
+   at 3pm Vegas, FB + IG feed (card or 4-5 slide carousel, same design system). NATIVE Spanish copy
+   written for the audience, never a literal translation of an English post. Theme rotation:
+   quinceañeras, posadas/December holiday bookings, el venue, referidos (hasta $100), Halloween dates,
+   services. CTA: phone + "Escríbenos al chat de bigbusinesspartyrentals.com" + "Envía esto a..."
+   share lines; NO Spanish keyword-DM CTAs until the owner confirms he answers Spanish DMs.
+   Hashtags Spanish + local, max 5. Spanish pinned comments for this lane's posts, verbatim:
+   FB(ES): "¿Planeando una fiesta? Síguenos también en Instagram: montajes reales y fechas disponibles.\ninstagram.com/bigbusiness_rentals_events"
+   IG(ES): "Sigue a @bigbusiness_rentals_events para ver montajes reales y fechas disponibles. También estamos en Facebook: facebook.com/profile.php?id=61589138907701" 
+FEED DISCIPLINE (owner-approved Oct 5; revised Oct 5 night "posts too, for ig and tiktok", "no videos";
+REVISED AGAIN by owner Oct 8 night: "stop posting photo carousels to story" and "only post one
+carousel to tiktok a day"): every card-lane set (tip, business, venue, referral, countdown) runs as
+FB feed post + IG feed carousel (4:5 originals, type post, firstComment attached, caption says
+"Swipe"). TikTok gets exactly FOUR posts per day (owner confirmed Oct 9): ONE card carousel (9:16 story9
+images) plus the THREE daily reels (gag, pink video, Chronicles episode). Nothing else goes to TikTok.
+CAROUSEL PICK ROTATES: a DIFFERENT lane every day, never the same lane two days running (owner
+directive Oct 9), UNLESS analytics numbers or researched reasoning clearly say one lane earns a
+repeat, and then the override and its numbers get logged in posting_captions.md.
+Picks so far: Fri Oct 9 = countdown (22 Nights). Sat Oct 10 = tip (Space Math). NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
+retired; story9 pads are still generated because the TikTok pick uses them). Pink awareness VIDEO may
+still route as story (it is a video, not a photo carousel). Applied from the Friday Oct 9 queue onward.
+NO slideshow videos for card sets (owner rejected them Oct 5 night; a music test was built in
+slideshows/ then reverted, build_slideshow.py kept on file only). APIs cannot attach licensed music
+to photo posts, so TikTok carousels run silent unless the owner adds a sound in-app.
+STORY IMAGES MUST BE 9:16 (owner screenshot Oct 5: IG zoom-crops 4:5 cards posted as stories, cutting
+the sides off). Every image queued as an IG story uses the 1080x1920 padded version from
+big-business-rentals/story9/ (build_story_pad.py edge-smears the card's top/bottom rows onto a 1920
+canvas; build_restory_ig.py re-points queued IG stories at story9/ URLs). Future daily builds: render
+the 4:5 card for FB/feed AND generate the story9 pad in the same run; prefer dropping the "SWIPE →" cue
+on frames that only run as stories. FB stories tolerate 4:5 but use the padded version there too when
+routed as story. FB posts may stay as feed posts. Trial Reels cannot be
+scheduled via API (manual only). All videos also go to YouTube Shorts and TikTok.
+HASHTAGS: HARD MAX 5 per caption (Instagram caps meaning at 5 since 2026); prefer local + niche mix.
 Captions: FB/IG version AND YouTube Shorts version (title + description + #Shorts) for every video.
 Caption style: first line = question or bold claim; include a "send this to..." share line and/or ONE keyword CTA
 ("Comment VENUE and we will DM you..."); never engagement bait ("comment yes", "tag 3 friends").
 Weekly: all-new flyer designs and all-new reel material every week, nothing reused.
+WEEKLY ANALYTICS (Sundays): run big-business-rentals/build_weekly_report.py (pulls sent-post metrics from
+Buffer GraphQL, groups by lane). After 2+ weeks of data, let winning lanes/hooks steer content and times.
+REAL FOOTAGE STANDING ORDER (research priority 1): whenever the owner sends raw job footage (deliveries,
+venue flips, teardowns, truck loading), DROP the illustrated piece in the nearest lane and cut the footage
+instead: bold hook text ON FRAME ONE (no intros), 15-30s, end on the reveal, loop-edit short cuts, real
+sound. Transformation content is the growth engine; illustrated content is the fallback.
+CALENDAR HOOKS Oct 8-11 (from research + owner): RODEO WEEKEND (owner directive Oct 6: run it Thursday
+AND Friday): Las Vegas Invitational Black Rodeo at Horseman's Park, Fri 10/9 7pm + Sat 10/10 1pm/7pm,
+Saturday shows selling out. Thu: venue lane = "rodeo weekend afterparty headquarters", hook "The rodeo
+sold out. Your afterparty should not."; generate western outdoor PRICE IT image Thu night (hay bales,
+lanterns, desert sunset, denim+gold, no people, no event branding). Fri: 1pm PRICE IT = that western
+outdoor setup (fills the owed outdoor slot); referral + other captions get rodeo-weekend flavor.
+NEVER use the event's name or branding in posts, no implied affiliation; ride the weekend, not the brand.
+Thu 10/8 VGK home opener (verify vs NHL.com): Thursday 1pm PRICE IT stays HockeyNight + watch-party angle;
+Sat 10/10 World Mental Health Day (pair with pink lane); Sun 10/11 Raiders at New England 10am PT = brunch
+watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for adult Halloween;
+F1 Vegas Nov 19-21 = corporate booking look-ahead.
+CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily
+(owner confirmed Oct 5 he sends the DMs; ready-made DM replies for each keyword are in chat history).
+WEBSITE CHATBOT CTA (owner directive Oct 7 night, applies from the Friday Oct 9 build onward): the
+chatbot on bigbusinesspartyrentals.com is a third conversion path alongside keyword DMs and calls.
+Every day AT LEAST TWO captions direct people to it with a line like "Questions? The chat on
+bigbusinesspartyrentals.com answers right away." or "Skip the wait, chat with us at
+bigbusinesspartyrentals.com." Rotate the wording, never robotic-sounding, never replace the standing
+contact line (that stays verbatim). CTA slides may use "CHAT WITH US AT BIGBUSINESSPARTYRENTALS.COM"
+as the clear action in rotation with keyword CTAs and "send this to...". DM replies to keywords should
+also point people to the site chat for instant answers after hours. (Site unreachable from this
+environment through the proxy; copy stays tool-agnostic, just "the chat on our website".)
+PRICE IT LANE (owner request Oct 5; made DAILY the same night): "How Much Would You Pay For This Setup?"
+engagement post EVERY DAY in the 1pm FEED slot (FB + IG). ALTERNATE INDOOR AND OUTDOOR setups day by day
+(owner directive): indoor = ballrooms, fan caves, living rooms, the venue look; outdoor = Vegas backyards,
+pool decks, park pavilions, rooftop patios, desert-sunset yards. Rotate HIGH-VISUAL themes and never repeat
+within 2 weeks: local sports colors (silver/black football, gold/steel hockey, NO team logos), cartoon-style
+kids parties (generic characters only, NO licensed IP like Disney/Nick), baby showers, quinceañeras,
+graduations, birthdays, holiday glam. Owner rejected subtle luxury-only looks ("make them more visual"):
+go big, saturated, prop-heavy scenes. Images are AI-GENERATED via Hugging Face Z-Image
+(mcp huggingface gr2_z_image_turbo_generate, 1104x1472 3:4, photoreal prompts, no people, "absolutely no
+text or letters anywhere", no logos), NEVER photos scraped from Reddit or other sites (copyright +
+passing-off risk). Card template: big-business-rentals/build_priceit.py ("SETUP INSPO" stamp stays so it
+never reads as a client job photo). Caption rule: NEVER imply balloon decor is our service; angle is
+"the tables, chairs and the room underneath it, that is us."
+Card bank: inspo/BB_PriceIt_{GameDay,HockeyNight,BabyShower,KidsParty}.png (v2, owner-approved direction)
+plus v1 {EmeraldGold,NavyChrome,Halloween}. Schedule GameDay near Raiders games, HockeyNight near VGK games.
+QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and small (~6-8 generations);
+generate 1-2 new setups per day during the nightly build, not in batches. Outdoor seeds (pool party,
+desert-sunset backyard) still owed as of Oct 5 night; generate them in the Thursday build for Friday's slot.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),
@@ -52,6 +136,27 @@ season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpk
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
 Season One voices: NONE, SFX only (ElevenLabs VO tested Oct 5, owner cancelled it; keep IDs in CAST.md on file).
 Season Two: owner's real voice recordings begin.
+
+## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
+## referral and countdown posts; videos and pre-built sets keep their formats)
+Every daily card post is a swipeable carousel of 4 to 6 slides at 1080x1350, one idea per slide:
+1. HOOK slide: huge headline only, question or bold claim, 8 words or fewer, NO body text,
+   small "SWIPE →" cue bottom right. No progress marker on this slide.
+2. SETUP slide: the problem or fact the hook promised, one or two short lines.
+3. VALUE slides (1-3): ONE tip/number/step each; large gold number or keyword + max two sentences;
+   ghost numeral or simple illustration behind.
+4. PAYOFF slide: the surprising result or "here is what to do", set BIGGER than value slides.
+5. CTA slide (last): one clear action (keyword comment CTA or "send this to..."), then logo LARGE,
+   phone, site, IG, LAS VEGAS NV. Fine print here when required (referral).
+Design rules: ONE palette + font set across the whole carousel, different palette each day; heavy display
+type + italic serif accents + clean sans; gold accent, thin gold frame, film grain, soft vignette on EVERY
+slide; "n/N" counter + slim gold progress bar on every slide after the first; slides 1 and last must work
+standalone; small brand footer on every slide, large on CTA slide; no em dashes; no photos of real people.
+Caption: question/bold claim first line, then a swipe line, then "send this to..." or ONE keyword CTA,
+then contact line + hashtags.
+Build: big-business-rentals/build_mon_carousels.py is the reference generator (one HTML per carousel,
+.slide divs, Playwright element screenshots at dsf=2, LANCZOS downscale to 1080x1350).
+Buffer: queue as type "post" (carousel = multiple image assets in order) on FB + IG.
 
 ## Design system (Flyer 2.0, since Oct 4)
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).
@@ -102,14 +207,27 @@ Season Two: owner's real voice recordings begin.
   raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
   files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
 - DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
-  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 extra/cast slot 1pm · 5 referral 2pm ·
-  6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm. Owner can override per post.
+  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 PRICE IT 1pm (daily, feed) ·
+  5 referral 2pm · 6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm.
+  Owner can override per post.
   Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).
   Required metadata or createPost FAILS: FB needs metadata.facebook.type (post/story/reel); IG needs
   metadata.instagram.type AND shouldShareToFeed (false for story); YouTube needs metadata.youtube.categoryId
   ("23" comedy reels, "22" pink/awareness) + title + privacy public + madeForKids false. TikTok needs none.
   Story routing: tip, business card, referral, countdown, pink = story; venue + cast = post; gag + episode = reel.
   Reference script: big-business-rentals/build_buffer_queue.py (Monday Oct 5 run queued 24/24 OK).
+- PINNED FIRST COMMENT (owner directive Oct 5 night, applies to EVERY future FB + IG FEED post, type
+  post or reel; stories carry none, TikTok/YouTube have no field): set metadata.facebook.firstComment /
+  metadata.instagram.firstComment on createPost. CROSS-LINKED (owner directive Oct 9: the FB comment
+  carries the IG link, the IG comment carries the FB link). Exact texts, verbatim:
+  FB: "If you're planning anything this season, follow us on Instagram too. Real setups, open dates, and what's available before it books up.\ninstagram.com/bigbusiness_rentals_events"
+  IG: "Follow @bigbusiness_rentals_events for real setups and open dates. Booking December now. We are on Facebook too: facebook.com/profile.php?id=61589138907701"
+  Buffer posts the comment automatically; PINNING it is manual (owner: open post, three dots on own
+  comment, Pin). NEVER use these comments in Facebook groups, only on our own page, IG, and Google posts.
+  Reference/backfill script: big-business-rentals/build_firstcomment.py (editPost note: video assets
+  must be re-sent WITHOUT thumbnailUrl or the edit fails). Buffer rate-limits bursts of mutations
+  (RATE_LIMIT_EXCEEDED): pace edits ~3s apart, back off 90s on a hit.
+  Pending owner action: set a custom FB username so the FB comment link reads clean.
 - BUFFER CAPTION FORMAT (owner spec, apply to 100% of Buffer captions, all platforms):
   opening line / blank line / ONE caption paragraph / blank line /
   "📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com" / blank line / all hashtags on one line.
@@ -142,8 +260,24 @@ Season Two: owner's real voice recordings begin.
   EP. 16 The Demonstration (REELS[16] in reelsD, 21s: Mrs. Never Wrong debut, Lil Wobbles, W-L 0-2).
   Captions for all of it in posting_captions.md under TUESDAY OCT 6. DO NOT queue until owner says so;
   then use build_buffer_queue.py pattern at the standing times.
-- Wednesday Oct 7 needs: Tip No.24, business card, venue slot, referral flyer, 24-nights countdown
-  (VERIFY with datetime), gag #13 (used now: ...black cat, pumpkin head, spider guest), Pink October #7,
-  EP. 17 (~20s SFX only; W-L 0-2 going in; Tyler/cat available; arc continues).
+- WEDNESDAY OCT 7 SET BUILT, DELIVERED, PUSHED AND QUEUED IN BUFFER (22/22 OK at standing times):
+  TRASH MATH Tip No.24 carousel (Emerald), YOUR WEEKEND BACK carousel (Cream), One Price venue card
+  (Navy, Story), GET PAID TO BE POPULAR referral carousel (Purple/Gold), 24 NIGHTS carousel
+  ("Halloween lands on a Saturday" hook), gag #13 Candy Hand (reelH REELS[13], boneArm+drawBowl added),
+  Pink #7 Men's Edition (pink7.html, 26s, CDC), EP. 17 The Decoy (REELS[17] in reelsD, drawCatD ported,
+  cat beats Mr. Big Business, W-L 0-3). Captions under WEDNESDAY OCT 7. Queue script: build_buffer_queue_wed.py.
+- THURSDAY OCT 8 SET BUILT, DELIVERED AND PUSHED (queue the night before per workflow):
+  Tip No.25 TABLE MATH carousel (Purple/Gold, 6), VEGAS THIS WEEKEND IS LOADED business carousel
+  (Emerald, 5), rodeo venue card BB_Venue_Thu_SoldOut (Desert Teal, single, "The rodeo sold out. Your
+  afterparty should not."), WEEKEND PLUG referral carousel (Velvet Rope, 5), 23 NIGHTS countdown
+  (Halloween, 4), gag #14 DJ Bones (reelH REELS[14], drawSpeaker+drawSkullLoose; used now: ...candy hand,
+  DJ Bones), Pink #8 The Screening Explained (pink8.html, 26s, ACS+USPSTF), EP. 18 The Flyer (REELS[18]
+  in reelsD, drawFlyer helper, Tyler returns, W-L 0-4). PRICE IT Thu 1pm = HockeyNight (VGK opener).
+  Captions under THURSDAY OCT 8. story9 pads generated for all Thursday cards.
+  BANKED for Friday/Saturday: inspo/BB_PriceIt_RodeoNight.png (western outdoor, Fri 1pm) and
+  BB_PriceIt_PoolParty.png (Sat); outdoor seeds debt CLEARED (setup_western.png, setup_pool.png).
+- Friday Oct 9 needs: Tip No.26 carousel, business carousel, venue slot, referral carousel, 22-nights
+  countdown (VERIFY with datetime), gag #15, Pink #9, EP. 19 (~21s SFX only; W-L 0-4 going in),
+  PRICE IT = RodeoNight (banked). Rodeo-weekend caption flavor per calendar hooks.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
