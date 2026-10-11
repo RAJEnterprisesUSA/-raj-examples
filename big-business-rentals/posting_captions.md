@@ -1364,3 +1364,20 @@ NEXT MOVES: keep the 3 daily videos untouchable and keep YouTube titles hook-fir
 lane for the TikTok pick when rotation allows (numbers logged here justify repeats); test the $100
 referral as a Chronicles end-card beat or gag button instead of standalone carousels; renew the
 real-footage ask (still priority 1); keep pink for FB/IG/TikTok where it performs.
+
+## WEEKLY REPORT No.1 ADDENDUM: FACEBOOK (owner pulled Business Suite via Claude in Chrome, Oct 4-10)
+Overview: 2.0K viewers (down 52% from the spike week), 3.5K views, 210 interactions (UP 49%),
++5 follows, 1 link click, 0 messages.
+FINDING 1: the ENTIRE FB top 10 by reach is reels, 78-228 reach each, all from the 5pm gag and
+8pm Chronicles slots. Every single one.
+FINDING 2: FB card carousels reach 1-2 people. The same carousels reach 40-90 on IG. Facebook
+gives photo posts from a small page no distribution; reels are the only organic FB vehicle we have.
+FINDING 3: comments read 0 on every FB reel even though Buffer stored AND sent the cross-linked
+firstComment on each (verified via API). Either Business Suite excludes the page's own comment
+from the count, or the comment is not landing. OWNER CHECK: open any recent 5pm/8pm reel on the
+page, confirm our comment is under it, pin it. If missing, the FB firstComment path needs rework.
+NOTE: "Untitled Video" in Business Suite is cosmetic; Buffer's API has no FB reel title input and
+the caption lives in the reel description.
+READ: fewer viewers than the spike week but deeper engagement; FB conversion layer still near zero
+(1 click, 0 messages). FB wins will come from reels, which is one more reason real job footage
+stays priority 1: it feeds the only FB format that travels.
