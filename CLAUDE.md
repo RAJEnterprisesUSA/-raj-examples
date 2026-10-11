@@ -308,5 +308,19 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Captions under MONDAY OCT 12. Next: Tip No.30, gag #19, Pink #13, EP. 23, español #3 (theme: el
   venue or referidos), TikTok pick Tuesday ≠ tip. Banked for Tuesday: spiderman ballpit reveal clip
   (rotate last 5s +90 = vertical money shot), branded waterslide clip, backyard party photos.
+- TUESDAY OCT 13 SET BUILT AND QUEUED SUNDAY (28/28 OK, two days ahead): Tip No.30 CAKE MATH
+  carousel (Navy, 6), business 10am = BB_Real_FunStuff CINEMATIC reel (14.8s: ball pit, walk-out,
+  rotated vertical reveal of the giant inflatable, fresh orange/purple flyer #3 "THE FUN STUFF TOO"),
+  COMPANY PARTY venue card (Black&Gold, single, F1/December corporate angle), PRICE IT =
+  BB_PriceIt_HalloweenYard (FRESH outdoor venue-scale Halloween night, three long tables of twelve),
+  WORK PLUG referral carousel (Velvet, 5), EN ESPAÑOL #3 El Venue (Emerald, 5, 3pm),
+  18 NIGHTS countdown (Purple, 4, TikTok pick; rotation Sun business / Mon tip / Tue countdown),
+  gag #19 Candy Security (reelH REELS[19], ropePost+ropeLine+drawCandyBit helpers; used now:
+  ...Ghost Waiter, Candy Security), Pink #13 Everyday Defense (pink13.html, 26s, ACS lifestyle),
+  EP. 23 The Costume Check (REELS[23], witchHat helper; Wobbles busted at the door, W-L 2-7).
+  Captions under TUESDAY OCT 13. Next: Tip No.31, gag #20, Pink #14, EP. 24, español #4 (theme:
+  referidos or Halloween dates), TikTok pick Wednesday ≠ countdown. Still banked: branded waterslide
+  clip (owner-edited, ends on BB logo), backyard party photos, Blank Canvas venue concept (AI-dressed
+  looks of the real room, CONCEPT stamp) when HF quota is fresh.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
