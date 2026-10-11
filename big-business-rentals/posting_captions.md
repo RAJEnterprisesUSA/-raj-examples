@@ -1438,3 +1438,15 @@ used on (a) "blank canvas" concept posts built from the real venue photo, each A
 stamped CONCEPT like PRICE IT's SETUP INSPO stamp, (b) the already-AI PRICE IT lane, (c) corner
 fills on card photos that read as styling. Never decor that implies services we do not offer
 (balloon rule stands), never silently passing AI props off inside a real job video.
+
+## NEW RULES (Oct 11 night, owner): EVERY VIDEO ENDS WITH A FLYER + FLYERS NEVER REPEAT + CINEMATIC EDIT BAR
+1. All videos end on a flyer end card. Animated lanes already do (gag/episode end cards, pink logo
+   block); real-footage reels now get one too.
+2. Flyers always look DIFFERENT: a fresh design per video, never a reused end card. (The reelH
+   house card stays for the gag lane where it is the running format; new builds vary it.)
+3. Edit for ONE viewer's eyes, not all viewers: cinematic grade (contrast, teal shadows and warm
+   highlights, vignette, film grain), cinema bars, animated punch-ins on every shot, whip/dissolve
+   transitions with synced whoosh-and-boom FX layered UNDER the real audio, risers into reveals.
+   Reference build: user-videos/build_partydayflow.sh (Party Day Flow v4 CINEMATIC, 25s:
+   wipe, stacks, strap, room, party, fresh black-and-gold flyer "WE SET THE SCENE. YOU TAKE THE
+   CREDIT.", FX bed synth in script).
