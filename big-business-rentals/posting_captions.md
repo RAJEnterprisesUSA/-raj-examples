@@ -1381,3 +1381,23 @@ the caption lives in the reel description.
 READ: fewer viewers than the spike week but deeper engagement; FB conversion layer still near zero
 (1 click, 0 messages). FB wins will come from reels, which is one more reason real job footage
 stays priority 1: it feeds the only FB format that travels.
+
+## BB_Real_PartyDayFlow (REAL FOOTAGE reel, 18.5s; built Sun Oct 11 from owner clips: chair-strap
+## load + venue room photo + bounce house party; slots into MONDAY 10am business lane as FB reel +
+## IG reel + YouTube Short per the real-footage standing order; NOT TikTok, 4-post cap holds.
+## HOLD FOR OWNER OK: children's faces are visible in the bounce house clip; confirm the client
+## is fine with it before this gets queued.)
+Nobody sees this part.
+
+The straps, the stacks, the room getting its look before anyone arrives. Then the part everybody remembers. Real setups, real parties, all over Las Vegas. Comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #behindthescenes #eventsetup #vegas
+
+YouTube title: Nobody sees this part. #Shorts
+YouTube description:
+The straps, the stacks, the room getting its look. Then the part everybody remembers. Real party rentals in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PartyRentals #BehindTheScenes #LasVegas #Setup
