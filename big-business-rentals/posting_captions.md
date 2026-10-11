@@ -1430,3 +1430,11 @@ IG: @bigbusiness_rentals_events
 ## (v3 order per owner: wipe, stacks, strap) WIDE room beat (owner: V1 zoomed too close), bounce house payoff.
 ## Monday 10am business slot, FB reel + IG reel + YouTube Short. Caption unchanged from V1 entry.)
 Raws banked: raw_chair_inventory.mp4 (26s stacked-chairs pan), raw_table_wipe.mp4 (9.5s cleaning).
+
+## ALLOWANCE (Oct 11, owner): AI EXTRAS ON SETUP PHOTOS/VIDEOS PERMITTED
+Owner: "if you want to add some ai extras to make it look like a full setup do so." Applied with
+guardrails: real-footage REELS stay 100% real (their whole edge is authenticity); AI dressing is
+used on (a) "blank canvas" concept posts built from the real venue photo, each AI-dressed look
+stamped CONCEPT like PRICE IT's SETUP INSPO stamp, (b) the already-AI PRICE IT lane, (c) corner
+fills on card photos that read as styling. Never decor that implies services we do not offer
+(balloon rule stands), never silently passing AI props off inside a real job video.
