@@ -1239,3 +1239,64 @@ BabyShower, KidsParty, RodeoNight, PoolParty, v1s) are retired from scheduling; 
 Saturday's posts had already published before the correction arrived, so the fix applies from Sunday
 Oct 11 onward. Sunday's 1pm PRICE IT = newly generated outdoor game-day setup (Raiders brunch angle),
 not the banked GameDay card.
+
+====================================================================
+SUNDAY OCT 11 (queued morning-of; owner said "Sunday" at 7:38am, tip slot moved 8am -> 9am)
+====================================================================
+
+## BB_Caro_Sun_BrunchMath (Tip No.28, 9am today only, FB + IG feed; Daylight Cream, 6 slides)
+Hosting the 10am game? Do the brunch math.
+
+Morning guests show up hungry. Swipe for the three numbers that keep the table ahead of them, then send this to whoever is hosting kickoff.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #brunch #watchparty #lasvegas #partyrentals
+
+## BB_Caro_Sun_GameDay (business, 10am, FB + IG feed + TIKTOK CAROUSEL PICK; Emerald, 5 slides)
+TikTok pick rotation: Fri = countdown, Sat = tip, Sun = BUSINESS. Different lane three days running.
+Your crew is coming at 10am. Is your dining room ready?
+
+The group chat picked your house for the game. Tables, chairs and linens delivered, set up and picked up around your schedule, so you host the win instead of working it. Skip the wait, chat with us at bigbusinesspartyrentals.com, or comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#gameday #watchparty #lasvegas #partyrentals #vegas
+
+## BB_Venue_Sun_Masquerade (venue, 12pm, FB + IG feed; Velvet Rope, single card)
+Adults deserve Halloween too.
+
+Halloween lands on a Saturday this year. Masks on, kids at grandma's, and a private venue that seats 40 and holds 80 standing, 3 hours for $625 or 4 hours for $800 with tables, chairs and setup included. Comment VENUE for open October dates. Questions? The chat on bigbusinesspartyrentals.com answers right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #masquerade #lasvegas #partyvenue #adulthalloween
+
+## BB_PriceIt_SunBrunch (PRICE IT, 1pm, FB + IG feed; FRESHLY GENERATED outdoor brunch watch party)
+How much would you pay for this setup?
+
+Game day brunch, Vegas style: a big screen in the backyard, waffles on black linens and juice pitchers ready before the 10am kickoff. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the setup underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #gamedaybrunch #lasvegas #partyrentals #watchparty
+
+## BB_Caro_Sun_SundayDinner (referral, 2pm, FB + IG feed; Black&Gold, 5 slides)
+Every party starts at Sunday dinner.
+
+Somebody at the table today is announcing a baby shower, a birthday or a quince. Send them our way, have them drop your name, and you collect up to $100 after their event wraps. Send this to the family group chat. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #sundaydinner #lasvegas #partyrentals #sidehustle
+
+## BB_Caro_Sun_20Nights (countdown, 4pm, FB + IG feed; Purple/Gold, 4 slides; 20 nights VERIFIED with datetime)
+20 nights left. Zero excuses.
+
+Three Saturdays stand between you and Halloween, and the last one is Halloween night itself. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+(EN ESPAÑOL 3pm: BB_Caro_Sun_Quince caption logged above on Oct 10; Spanish cross-linked pinned comments.)
