@@ -1455,3 +1455,73 @@ fills on card photos that read as styling. Never decor that implies services we 
 ## price overlays mid-pan, closes on a fresh VELVET flyer "THE ROOM IS REAL. SO IS THE PRICE."
 ## with prices + COMMENT VENUE strip (different design from the Party Day Flow black-gold flyer,
 ## per the flyers-never-repeat rule). Caption unchanged.
+
+====================================================================
+MONDAY OCT 12 (queued Sunday evening; business + venue lanes = the two REAL FOOTAGE cinematic reels)
+====================================================================
+
+## BB_Caro_Mon_LinenMath (Tip No.29, 8am, FB + IG feed + TIKTOK CAROUSEL PICK; Desert Teal, 6 slides)
+TikTok pick rotation: Sat tip, Sun business, Mon TIP again (not two days running; week-1 data: tip
+carousels are the best TikTok card format, 187 reach / 320 views over 3, logged Oct 11).
+Why do tablecloths never fit?
+
+The one you bought floats at half-mast. Swipe for the two numbers that fix every table, then send this to whoever is still using bed sheets.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #linens #tablesetting #lasvegas #partyrentals
+
+## BB_Real_PartyDayFlow (business lane, 10am, FB reel + IG reel + YouTube; 25s cinematic)
+Nobody sees this part.
+
+The wipe-down, the stacks, the straps, the room getting its look. Then the part everybody remembers. Real setups, real parties, all over Las Vegas. Comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #behindthescenes #eventsetup #vegas
+
+YouTube title: Nobody sees this part. #Shorts
+YouTube description:
+The wipe-down, the stacks, the straps, the room getting its look. Then the part everybody remembers. Real party rentals in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PartyRentals #BehindTheScenes #LasVegas #Setup
+
+## BB_Real_VenueWalk (venue lane, 12pm, FB reel + IG reel + YouTube; 13.9s cinematic)
+(caption logged Oct 11, unchanged: "This is the room everybody asks about." + chat CTA line)
+
+## BB_PriceIt_HolidayGlam (PRICE IT, 1pm, FB + IG feed; FRESHLY GENERATED indoor December glam)
+How much would you pay for this setup?
+
+December dinner party energy: emerald linen, gold chargers, candlelight and the tree glowing in the corner. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the room underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #holidayparty #lasvegas #partyrentals #decemberparty
+
+## BB_Caro_Mon_Contacts (referral, 2pm, FB + IG feed; Emerald, 5 slides)
+Your contacts list is worth money.
+
+Somebody saved in your phone is planning a party right now. Send them our way, have them drop your name, and you collect up to $100 after their event wraps. Send this to the one who is always planning something. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #lasvegas #sidehustle #partyrentals #vegas
+
+## BB_Caro_Mon_Posada (EN ESPAÑOL, 3pm, FB + IG feed; Daylight Cream, 5 slides; Spanish cross-linked FCs)
+¿La posada es en tu casa este año?
+
+Diciembre se llena primero y las fechas buenas se apartan desde octubre. Mesas, sillas y manteles entregados, instalados y recogidos en todo Las Vegas, tú pones los tamales. Y si viene mucha gente, nuestro salón privado recibe 40 sentados y 80 de pie. Envía esto a la familia que siempre organiza la posada. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#posada #diciembre #lasvegas #fiestasenfamilia #rentademesas
+
+## BB_Caro_Mon_19Nights (countdown, 4pm, FB + IG feed; Halloween, 4 slides; 19 nights VERIFIED)
+19 nights. The costume is not the hard part.
+
+The costume takes an hour. The tables, chairs and party room take one call, if you make it before the rush does. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
