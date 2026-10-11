@@ -1348,3 +1348,19 @@ THE BIG BUSINESS CHRONICLES: the Halloween party seating chart was law, until Mr
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+## WEEKLY REPORT No.1 (Sunday Oct 11, build_weekly_report.py, 252 sent posts / 7 days)
+WINNERS: YouTube Shorts comedy (~6,700 views: gags 3,609/5, episodes 3,115/6, roughly 600-700 per
+video, every top-5 post of the week is a YouTube comedy short with a hook-first title). IG comedy
+(gag 411 reach, episode 329) runs 4-8x any card lane. TikTok TIP carousel 187 reach / 320 views over
+3, the best card number on TikTok. PRICE IT has the best card engagement rate (7 comments + 2 shares
+on 6 IG posts); business cards drew 9 comments.
+LOSERS: referral IG (34 reach / 7 posts, worst lane), countdown + referral carousels on TikTok
+(1-7 views), pink on YouTube (53 views / 5).
+DATA GAP: Buffer returns 0 impressions for every FB post; FB must be judged in the app's Insights.
+LESSONS: characters + motion travel to cold audiences, static cards only reach followers; tip
+carousels are the TikTok card format that works; referral needs a new vehicle, not a new design.
+NEXT MOVES: keep the 3 daily videos untouchable and keep YouTube titles hook-first; prefer the tip
+lane for the TikTok pick when rotation allows (numbers logged here justify repeats); test the $100
+referral as a Chronicles end-card beat or gag button instead of standalone carousels; renew the
+real-footage ask (still priority 1); keep pink for FB/IG/TikTok where it performs.
