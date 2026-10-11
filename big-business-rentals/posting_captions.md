@@ -1424,3 +1424,9 @@ IG: @bigbusiness_rentals_events
 ## cut Tuesday), raw_waterslide_branded.mp4 (owner-edited water slide clip, ends on BB logo card,
 ## postable nearly as-is; also Tuesday/Wednesday candidate), photo_spiderman_backyard_1/2.jpg
 ## (backyard kids party setup, black+blue spandex; photo 1 has kids in background, crop or get OK).
+
+## BB_Real_PartyDayFlow V2 (Sun Oct 11 night, replaces V1 after owner sent 2 more clips + blanket
+## "use all of these" clearance, which also clears the kids' faces. 24s: strap, chair inventory pan,
+## table spray-and-wipe, WIDE room beat (owner: V1 zoomed too close), bounce house payoff.
+## Monday 10am business slot, FB reel + IG reel + YouTube Short. Caption unchanged from V1 entry.)
+Raws banked: raw_chair_inventory.mp4 (26s stacked-chairs pan), raw_table_wipe.mp4 (9.5s cleaning).
