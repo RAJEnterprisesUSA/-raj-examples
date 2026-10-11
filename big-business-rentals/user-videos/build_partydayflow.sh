@@ -11,9 +11,9 @@ TM="zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=
 $FF -y -i "$B" -i "$C" -i "$D" -i "$P" -i "$A" \
  -loop 1 -t 2 -i ov1.png -loop 1 -t 2 -i ov2.png -loop 1 -t 2 -i ov3.png -loop 1 -t 2 -i ov4.png \
  -filter_complex "\
-[0:v]trim=0.5:5.5,setpts=PTS-STARTPTS,$TM[v0];\
+[2:v]trim=1:5.5,setpts=PTS-STARTPTS,$TM[v0];\
 [1:v]trim=2:6,setpts=PTS-STARTPTS,$TM[v1];\
-[2:v]trim=1:5.5,setpts=PTS-STARTPTS,$TM[v2];\
+[0:v]trim=0.5:5.5,setpts=PTS-STARTPTS,$TM[v2];\
 [3:v]split[p1][p2];\
 [p1]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=28,eq=brightness=-0.12[pbg];\
 [p2]scale=1080:810[pfg];\
@@ -24,9 +24,9 @@ $FF -y -i "$B" -i "$C" -i "$D" -i "$P" -i "$A" \
 [va][6:v]overlay=0:0:enable='between(t,13.6,15.5)'[vb];\
 [vb][7:v]overlay=0:0:enable='between(t,15.8,18.8)'[vd];\
 [vd][8:v]overlay=0:0:enable='between(t,20.8,24.0)',fps=30,format=yuv420p[vout];\
-[0:a]atrim=0.5:5.5,asetpts=PTS-STARTPTS[a0];\
+[2:a]atrim=1:5.5,asetpts=PTS-STARTPTS[a0];\
 [1:a]atrim=2:6,asetpts=PTS-STARTPTS[a1];\
-[2:a]atrim=1:7.5,asetpts=PTS-STARTPTS[a2];\
+[0:a]atrim=0.5:7.5,asetpts=PTS-STARTPTS[a2];\
 [4:a]atrim=1.0:9.5,asetpts=PTS-STARTPTS[a4];\
 [a0][a1][a2][a4]concat=n=4:v=0:a=1,afade=t=out:st=23.5:d=0.5[aout]" \
  -map "[vout]" -map "[aout]" -t 24.0 \
