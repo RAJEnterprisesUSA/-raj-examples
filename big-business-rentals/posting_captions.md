@@ -1450,3 +1450,8 @@ fills on card photos that read as styling. Never decor that implies services we 
    Reference build: user-videos/build_partydayflow.sh (Party Day Flow v4 CINEMATIC, 25s:
    wipe, stacks, strap, room, party, fresh black-and-gold flyer "WE SET THE SCENE. YOU TAKE THE
    CREDIT.", FX bed synth in script).
+
+## BB_Real_VenueWalk CINEMATIC (13.9s final): graded pan with punch-in, cinema bars, FX bed,
+## price overlays mid-pan, closes on a fresh VELVET flyer "THE ROOM IS REAL. SO IS THE PRICE."
+## with prices + COMMENT VENUE strip (different design from the Party Day Flow black-gold flyer,
+## per the flyers-never-repeat rule). Caption unchanged.
