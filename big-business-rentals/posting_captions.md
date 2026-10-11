@@ -1401,3 +1401,26 @@ The straps, the stacks, the room getting its look. Then the part everybody remem
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #PartyRentals #BehindTheScenes #LasVegas #Setup
+
+## BB_Real_VenueWalk (REAL FOOTAGE venue reel, 13.5s; built Sun Oct 11 from owner's venue pan clip.
+## Slots into MONDAY 12pm venue lane as FB reel + IG reel + YouTube Short. No faces in the cut.)
+This is the room everybody asks about.
+
+Real walkthrough, no filter: seats 40, holds 80 standing, 3 hours for $625 or 4 hours for $800 with tables, chairs and setup included. Comment VENUE and we will DM you open dates. Questions? The chat on bigbusinesspartyrentals.com answers right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#lasvegas #partyvenue #venuetour #eventspace #vegas
+
+YouTube title: The room everybody asks about. #Shorts
+YouTube description:
+Real walkthrough of our private Las Vegas venue: seats 40, holds 80 standing, 3 hours $625, 4 hours $800, tables, chairs and setup included.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #LasVegas #PartyVenue #VenueTour #EventSpace
+
+## FOOTAGE LIBRARY BANKED Sun Oct 11 (user-videos/): raw_spiderman_ballpit.mp4 (ball pit interior +
+## giant spiderman bounce house reveal, last 5s needs +90 rotation = native vertical money shot;
+## cut Tuesday), raw_waterslide_branded.mp4 (owner-edited water slide clip, ends on BB logo card,
+## postable nearly as-is; also Tuesday/Wednesday candidate), photo_spiderman_backyard_1/2.jpg
+## (backyard kids party setup, black+blue spandex; photo 1 has kids in background, crop or get OK).
