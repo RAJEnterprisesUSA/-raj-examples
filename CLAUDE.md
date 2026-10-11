@@ -283,5 +283,15 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
 - Friday Oct 9 needs: Tip No.26 carousel, business carousel, venue slot, referral carousel, 22-nights
   countdown (VERIFY with datetime), gag #15, Pink #9, EP. 19 (~21s SFX only; W-L 0-4 going in),
   PRICE IT = RodeoNight (banked). Rodeo-weekend caption flavor per calendar hooks.
+- SUNDAY OCT 11 SET BUILT AND QUEUED MORNING-OF (owner said "Sunday" at 7:38am; tip slot ran 9am
+  that day only; cards 15/15 queued, videos queued same day): Tip No.28 BRUNCH MATH carousel (Cream, 6),
+  YOUR CREW IS COMING AT 10AM business carousel (Emerald, 5, TikTok pick; rotation Fri countdown,
+  Sat tip, Sun business), MIDNIGHT MASQUERADE venue card (Velvet, single), SUNDAY DINNER referral
+  carousel (Black&Gold, 5), 20 NIGHTS countdown (Purple, 4), PRICE IT = BB_PriceIt_SunBrunch
+  (FRESH outdoor brunch watch party per never-repeat rule), EN ESPAÑOL debut Quince carousel 3pm,
+  gag #17 Pinata (reelH REELS[17]; used now: ...DJ Bones, Tablecloth Ghost, Photo Booth, Pinata),
+  Pink #11 Know Your History (pink11.html, 26s, ACS family-history facts),
+  EP. 21 The Seating Chart (REELS[21] in reelsD; Mrs NW silent chair war, cat takes seat one,
+  W-L 1-6). Captions under SUNDAY OCT 11. Next: Tip No.29, gag #18, Pink #12, EP. 22.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.

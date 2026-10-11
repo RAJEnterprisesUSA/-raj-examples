@@ -1300,3 +1300,51 @@ Three Saturdays stand between you and Halloween, and the last one is Halloween n
 #halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
 
 (EN ESPAÑOL 3pm: BB_Caro_Sun_Quince caption logged above on Oct 10; Spanish cross-linked pinned comments.)
+
+## BB_Halloween_Reel_Pinata (gag #17, 5pm, FB + IG reel + TikTok + YouTube; 12s)
+The pinata had other plans. 💀
+
+He swung first, nothing came out, and then the pinata swung back. Candy rained anyway, so technically everybody won. Send this to whoever runs the games at your parties.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#pinata #halloween #funnyreels #lasvegas #partyrentals
+
+YouTube title: The pinata swung back 💀 #Shorts
+YouTube description:
+He swung first. Nothing came out. Then the pinata swung back, and the candy rained anyway. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Pinata #FunnyShorts #LasVegas #PartyRentals
+
+## BB_PinkOctober_KnowHistory (Pink #11, 6pm, FB + IG story + TikTok + YouTube; 26s)
+Most women with breast cancer have no family history. 🎀
+
+So screening matters for everyone. And when it does run in the family, the stakes rise: a mother, sister or daughter with breast cancer roughly doubles risk, and your father's side counts just as much. The table is full today. Ask who, ask when, write it down, and tell your doctor. Send this to your family group chat. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #knowyourhistory #earlydetection #lasvegas
+
+YouTube title: Family history counts, both sides. 🎀 #Shorts
+YouTube description:
+Most women with breast cancer have no family history, so screening matters for everyone. When it runs in the family, risk rises, and your father's side counts just as much. Ask at dinner today. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #KnowYourHistory #LasVegas
+
+## BB_Chronicles_Ep21_TheSeatingChart (EP. 21, 8pm, FB + IG reel + TikTok + YouTube; 21s, SFX only)
+He made a seating chart. She made corrections. 😂
+
+EP. 21: seat one moved four times and the cat ended the war without saying a word. Fine. Seat one goes to the cat. Who else makes the Halloween party guest list? Drop names, best answer gets the next episode credit.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #comedy #lasvegas #funnyreels #halloweenparty
+
+YouTube title: EP. 21: The Seating Chart 😂 the cat ended the war #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: the Halloween party seating chart was law, until Mrs. Never Wrong made corrections and the cat claimed seat one. Record: 1 win, 6 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals

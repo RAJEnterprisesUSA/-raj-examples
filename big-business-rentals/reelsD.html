@@ -2196,6 +2196,164 @@ REELS[20]=ep20;
 SHAKES[20]=[4.45,0.25,14];
 TAGLINES[20]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[20]=18.5;
+
+// ---------- EP 21: THE SEATING CHART ----------
+function ep21(t){
+  const FR0=13.2, FR1=14.0;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(320,1250); ctx.scale(z,z); ctx.translate(-320,-1250);
+  }
+  drawRoom();
+  miniPumpkin(92, FLOOR+88);
+  const TX=620, TOP=FLOOR-250;
+  drawTable(TX,0,0);
+  // the chart on the wall
+  if(tt>=1.6){
+    const k=easeOutBack(Math.min(1,(tt-1.6)/0.35));
+    ctx.save(); ctx.translate(190,700); ctx.scale(k,k); ctx.translate(-190,-700);
+    drawFlyer(190,700,-4,true);
+    ctx.restore();
+  }
+  // SEAT ONE: the contested chair
+  const RX=850, LX=320;
+  let chairX=null;
+  if(tt>=2.2){
+    chairX=RX;
+    if(tt>=4.6&&tt<6.0)   chairX=lerp(RX,LX,ease((tt-4.6)/1.4));
+    else if(tt>=6.0&&tt<8.8) chairX=LX;
+    else if(tt>=8.8&&tt<10.0) chairX=lerp(LX,RX,ease((tt-8.8)/1.2));
+    else if(tt>=10.0&&tt<10.8) chairX=RX;
+    else if(tt>=10.8&&tt<11.6) chairX=lerp(RX,LX,ease((tt-10.8)/0.8));
+    else if(tt>=11.6) chairX=LX;
+    const k=easeOutBack(Math.min(1,(tt-2.2)/0.3));
+    ctx.save(); ctx.translate(chairX,FLOOR); ctx.scale(k,k); ctx.translate(-chairX,-FLOOR);
+    drawChair(chairX,0,0,0);
+    ctx.restore();
+  }
+  // THE CAT: trots in from the right, takes seat one
+  if(tt>=12.0&&tt<13.0){
+    drawCatD(lerp(W+140,LX+10,ease((tt-12.0)/1.0)), FLOOR, {pose:'trot',face:-1,t:tt});
+  } else if(tt>=13.0){
+    drawCatD(LX+6, SEAT_TOP+6, {face:-1,t:tt});
+  }
+  // MRS. NEVER WRONG (enters and exits stage right)
+  let wp=null;
+  if(tt>=3.6&&tt<4.6){
+    const k=ease((tt-3.6)/1.0), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,990,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=4.6&&tt<6.0){
+    wp={x:chairX+140, y:HIP_STAND, face:-1, lean:12,
+      legs:[{hip:26,knee:-10},{hip:-18,knee:10}],
+      arm:{sh:96,el:-4}, mouth:'flat', style:STYLEW};
+  } else if(tt>=6.0&&tt<7.2){
+    const nod=Math.sin(tt*5)*3;
+    wp={x:470, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, arm2:{sh:30,el:66}, mouth:'smile', headTilt:nod, style:STYLEW};
+  } else if(tt>=7.2&&tt<8.6){
+    const k=ease((tt-7.2)/1.4), step=Math.sin(tt*9);
+    wp={x:lerp(470,W+220,k), y:HIP_STAND-Math.abs(step)*9, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'smile', style:STYLEW};
+  } else if(tt>=10.6&&tt<10.8){
+    const k=ease((tt-10.6)/0.2);
+    wp={x:lerp(W+220,990,k), y:HIP_STAND, face:-1,
+      legs:[{hip:26,knee:-10},{hip:-18,knee:10}],
+      arm:{sh:60,el:10}, mouth:'flat', style:STYLEW};
+  } else if(tt>=10.8&&tt<11.6){
+    wp={x:chairX+140, y:HIP_STAND, face:-1, lean:14,
+      legs:[{hip:30,knee:-12},{hip:-20,knee:10}],
+      arm:{sh:100,el:-8}, mouth:'flat', style:STYLEW};
+  } else if(tt>=11.6&&tt<12.6){
+    const k=ease((tt-11.6)/1.0), step=Math.sin(tt*10);
+    wp={x:lerp(470,W+220,k), y:HIP_STAND-Math.abs(step)*9, face:1,
+      legs:[{hip:24*step,knee:8},{hip:-24*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'smile', style:STYLEW};
+  } else if(tt>=15.8){
+    const k=easeOutBack(Math.min(1,(tt-15.8)/0.5));
+    wp={x:lerp(W+220,880,k), y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'smile', headTilt:Math.sin(tt*4)*4, style:STYLEW};
+  }
+  if(wp) drawMan(wp);
+  // MR. BIG BUSINESS (lives stage left, under his chart)
+  let mp=null;
+  if(tt<1.8){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-220,330,ease(tt/1.8)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:120,el:-40}, mouth:'smile', style:STYLER};
+  } else if(tt<2.4){
+    mp={x:330, y:HIP_STAND, face:-1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:130,el:-30}, mouth:'smile', style:STYLER};
+  } else if(tt<4.6){
+    const k=ease(Math.min(1,(tt-2.4)/0.5));
+    mp={x:lerp(330,150,k), y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:96,el:-16}, mouth:'smile', headTilt:Math.sin(tt*3)*4, style:STYLER};
+  } else if(tt<6.2){
+    mp={x:150, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<8.8){
+    mp={x:150, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:84,el:4}, mouth:'flat', style:STYLER};
+  } else if(tt<10.0){
+    mp={x:chairX+150, y:HIP_STAND, face:1, lean:12,
+      legs:[{hip:26,knee:-10},{hip:-18,knee:10}],
+      arm:{sh:96,el:-4}, mouth:'o', style:STYLER};
+  } else if(tt<10.8){
+    const dust=Math.sin(tt*6)*4;
+    mp={x:lerp(1000,700,ease(Math.min(1,(tt-10.0)/0.5))), y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:40+dust,el:30}, mouth:'smile', headTilt:dust, style:STYLER};
+  } else if(tt<12.2){
+    mp={x:lerp(700,160,ease(Math.min(1,(tt-10.8)/0.6))), y:HIP_STAND, face:1,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:150,el:-70}, arm2:{sh:140,el:-60}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<15.0){
+    mp={x:150, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<16.6){
+    mp={x:lerp(150,110,ease(Math.min(1,(tt-15.0)/1.2))), y:HIP_STAND, face:1,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:30,el:40}, mouth:'sad', style:STYLER};
+  } else {
+    const sigh=Math.sin(tt*3)*3;
+    mp={x:110, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:20,el:40}, mouth:'sad', headTilt:sigh, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=11.7&&tt<12.6){const kk=easeOutBack(Math.min(1,(tt-11.7)/0.26)); starburst(260,FLOOR-780,kk*0.8,'?!');}
+  if(tt>=13.25&&tt<14.6){const kk=easeOutBack(Math.min(1,(tt-13.25)/0.3)); starburst(LX+190,FLOOR-700,kk*0.9,'MEOW.');}
+  ctx.restore();
+  showBadge(21);
+  if(t>=0.05&&t<2.0) caption(['THE PARTY SEATING','CHART IS LAW.'],340,(t+0.3)/0.35,50);
+  if(t>=2.6&&t<3.8) caption(['EVERY NAME.','PERFECT SPOT.'],340,(t-2.6)/0.35,52);
+  if(t>=4.9&&t<6.1) caption(['SHE MOVED','SEAT ONE.'],340,(t-4.9)/0.35,52);
+  if(t>=9.0&&t<10.1) caption(['CORRECTED.'],340,(t-9.0)/0.35,58);
+  if(t>=10.9&&t<12.0) caption(['RE-CORRECTED.'],340,(t-10.9)/0.35,54);
+  if(t>=FR0+0.05&&t<FR1) caption(['SEAT ONE IS TAKEN.'],340,(t-FR0-0.05)/0.35,52);
+  if(t>=14.7&&t<16.0) caption(['THE CAT DOES NOT','NEGOTIATE.'],340,(t-14.7)/0.35,50);
+  if(t>=16.4&&t<17.3) caption(['FINE. SEAT ONE','GOES TO THE CAT.'],340,(t-16.4)/0.35,48);
+  if(t>=17.4&&t<18.45){
+    caption(['WHO ELSE MAKES THE','GUEST LIST? DROP NAMES.'],340,(t-17.4)/0.35,44);
+    caption(['MR. BIG BUSINESS RECORD: 1 W \u00b7 6 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[21]=ep21;
+SHAKES[21]=[13.2,0.25,14];
+TAGLINES[21]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[21]=18.5;
 </script>
 </body></html>
 
