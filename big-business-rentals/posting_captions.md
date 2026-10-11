@@ -1525,3 +1525,51 @@ The costume takes an hour. The tables, chairs and party room take one call, if y
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
 #halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## BB_Halloween_Reel_GhostWaiter (gag #18, 5pm Mon, FB + IG reel + TikTok + YouTube; 12s)
+The drinks started serving themselves. 👻
+
+New record: the tray did three laps before anybody asked who was carrying it. Turns out he works here, great attitude, never spills. Send this to whoever never gets up to refill anything.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #ghost #funnyreels #lasvegas #partyrentals
+
+YouTube title: The drinks are serving themselves 👻 #Shorts
+YouTube description:
+The tray did three laps before anybody asked who was carrying it. He works here now. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Ghost #FunnyShorts #LasVegas #PartyRentals
+
+## BB_PinkOctober_DenseFacts (Pink #12, 6pm Mon, FB + IG story + TikTok + YouTube; 26s)
+About half of women over 40 have dense breasts. 🎀
+
+Totally normal, and worth knowing about: dense tissue can hide changes on a mammogram and your report now has to tell you if you have it. So read the report, then ask your doctor one question: does extra screening make sense for me? Send this to a woman who had a mammogram this year. Source: American Cancer Society and FDA.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #densebreasts #earlydetection #lasvegas
+
+YouTube title: Dense breasts: read the report, ask the question. 🎀 #Shorts
+YouTube description:
+About half of women over 40 have dense breast tissue. It can hide changes on a mammogram, and your report now has to tell you. Ask your doctor if extra screening makes sense. Source: American Cancer Society and FDA.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #DenseBreasts #LasVegas
+
+## BB_Chronicles_Ep22_TheDecorationCommittee (EP. 22, 8pm Mon, FB + IG reel + TikTok + YouTube; 21s, SFX only)
+He hung one pumpkin. Tyler hung fifty. 😂
+
+EP. 22: one tasteful pumpkin versus the intern's entire wall of Halloween, and the committee did not hesitate. WHERE DID HE EVEN COME FROM? What should Tyler decorate next? Best answer gets the next episode credit.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #comedy #lasvegas #funnyreels #halloweenparty
+
+YouTube title: EP. 22: The Decoration Committee 😂 Tyler strikes again #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: one tasteful pumpkin versus the intern's entire wall of Halloween. The committee has spoken. Record: 1 win, 7 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals

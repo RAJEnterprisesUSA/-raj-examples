@@ -2940,6 +2940,95 @@ function reelH17(t){
 REELS[17]=reelH17;
 SHAKES[17]=[4.6,0.3,16];
 TAGLINES[17]='SOME PARTY GUESTS SWING BACK.';
+
+// ---------- H18: the ghost waiter ----------
+function drawTrayH(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0);
+  ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#c9a55a';
+  ctx.beginPath(); ctx.ellipse(0,0,120,26,0,0,7); ctx.fill(); ctx.stroke();
+  const cups=[[-70,'#e05252'],[0,'#6fc3b2'],[70,'#f6c231']];
+  cups.forEach(c=>{
+    ctx.fillStyle=c[1];
+    rr(c[0]-20,-54,40,48,7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#f6f1e4';
+    ctx.beginPath(); ctx.ellipse(c[0],-54,20,7,0,0,7); ctx.fill(); ctx.stroke();
+  });
+  ctx.restore();
+}
+function reelH18(t){
+  drawRoomH(t);
+  const TX=640, TOP=FLOOR-250;
+  drawTable(TX,0,0);
+  // tray path: on table -> floats and glides -> held by ghost
+  let trx=TX-40, try_=TOP-28, trot=0;
+  if(t>=1.8&&t<5.5){
+    const ph=(t-1.8)/3.7;
+    trx=TX-40+Math.sin((ph+0.22)*Math.PI*2.2)*320;
+    try_=TOP-28-300*Math.min(1,(t-1.8)/0.8)-Math.sin(t*4)*20;
+    trot=Math.sin(t*3)*0.06;
+  } else if(t>=5.5){
+    trx=790+Math.sin(t*1.8)*40;
+    try_=FLOOR-510+Math.sin(t*3.2)*12;
+    trot=Math.sin(t*2.5)*0.05;
+  }
+  // ghost: hidden until the reveal, then clearly carrying the tray
+  if(t>=5.5){
+    const gs=easeOutBack(Math.min(1,(t-5.5)/0.45));
+    const gy=FLOOR-140+Math.sin(t*3)*12;
+    drawGhost(trx-60, gy, 1.15*gs, t, {reach:true, hx:trx-16, hy:try_+18, mouth:'smile'});
+    if(t>=5.6&&t<6.6) sparkle(trx+110, try_-80, t);
+  }
+  if(t>=0.9) drawTrayH(trx, try_, trot);
+  // UNC
+  let pose=null;
+  if(t<0.9){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,420,ease(t/0.9)), y:HIP_STAND-Math.abs(step)*11, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:96,el:-20}, mouth:'smile'};
+  } else if(t<1.8){
+    pose={x:420, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:60,el:26}, mouth:'smile'};
+  } else if(t<2.8){
+    // notices the tray lift off
+    pose={x:420, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};
+  } else if(t<5.5){
+    // the chase
+    const ph=(t-1.8)/3.7;
+    const dir=Math.cos(ph*Math.PI*2.2);
+    const step=Math.sin(t*11);
+    pose={x:420+Math.sin(ph*Math.PI*2.2)*200, y:HIP_STAND-Math.abs(step)*10,
+      face:(dir>0?1:-1),
+      legs:[{hip:28*step,knee:8},{hip:-28*step,knee:8}],
+      arm:{sh:120,el:-30}, arm2:{sh:104,el:-18}, mouth:'o', eyes:'wide'};
+  } else if(t<7.2){
+    pose={x:420, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', eyes:'wide'};
+  } else {
+    // accepts it: reaches up and takes a cup, relaxed
+    const reach=(t>=7.6&&t<8.4);
+    pose={x:560, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:reach?{sh:150,el:-40}:{sh:40,el:30}, mouth:'smile',
+      headTilt:Math.sin(t*3)*3};
+  }
+  drawMan(pose);
+  if(t>=2.0&&t<2.9){const kk=easeOutBack(Math.min(1,(t-2.0)/0.26)); starburst(TX+120,FLOOR-800,kk*0.8,'?!');}
+  if(t>=5.55&&t<6.5){const kk=easeOutBack(Math.min(1,(t-5.55)/0.28)); starburst(trx+180,FLOOR-760,kk*0.9,'BOO!');}
+  if(t<1.7) caption(['DRINK STATION.','DONE.'],240,(t+0.35)/0.35,54);
+  if(t>=2.7&&t<3.9) caption(['WHO IS','CARRYING THAT.'],240,(t-2.7)/0.35);
+  if(t>=4.4&&t<5.3) caption(['IT IS DOING','LAPS.'],240,(t-4.4)/0.35);
+  if(t>=6.3&&t<7.4) caption(['OH. THE','NEW HIRE.'],240,(t-6.3)/0.35,54);
+  if(t>=8.0&&t<8.9) caption(['SETUP. SERVICE.','SPIRITS.'],240,(t-8.0)/0.35,50);
+}
+REELS[18]=reelH18;
+SHAKES[18]=[5.5,0.3,15];
+TAGLINES[18]='SERVICE SO GOOD, IT IS SUPERNATURAL.';
 </script>
 </body></html>
 

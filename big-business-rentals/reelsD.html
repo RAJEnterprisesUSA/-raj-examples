@@ -2354,6 +2354,154 @@ REELS[21]=ep21;
 SHAKES[21]=[13.2,0.25,14];
 TAGLINES[21]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[21]=18.5;
+
+// ---------- EP 22: THE DECORATION COMMITTEE ----------
+function wallPumpkin(x,y,s,k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(k*s,k*s); ctx.translate(-x,-y);
+  miniPumpkin(x,y);
+  ctx.restore();
+}
+function ep22(t){
+  const FR0=4.5, FR1=5.4;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(620,1050); ctx.scale(z,z); ctx.translate(-620,-1050);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  // MBB's lone tasteful pumpkin on the left wall shelf line
+  if(tt>=1.5){
+    const k=easeOutBack(Math.min(1,(tt-1.5)/0.35));
+    wallPumpkin(250, 760, 2.8, k);
+  }
+  // TYLER's wall: pumpkins pop in one after another on the right side
+  const TP=[[700,640],[820,700],[920,620],[760,780],[880,820],[990,740],
+            [700,900],[940,920],[820,980],[1000,860]];
+  TP.forEach((pp,i)=>{
+    const t0=6.6+i*0.5;
+    if(tt>=t0) wallPumpkin(pp[0], pp[1], 2.2, easeOutBack(Math.min(1,(tt-t0)/0.3)));
+  });
+  // garland zigzag once the wall fills
+  if(tt>=11.6){
+    const gk=ease(Math.min(1,(tt-11.6)/0.8));
+    ctx.save(); ctx.lineWidth=7; ctx.strokeStyle='#ff8c2e';
+    ctx.beginPath();
+    for(let i=0;i<=8;i++){
+      const gx=640+i*(420/8)*gk, gy=560+(i%2)*46;
+      if(i===0) ctx.moveTo(gx,gy); else ctx.lineTo(gx,gy);
+    }
+    ctx.stroke(); ctx.restore();
+  }
+  // TYLER THE INTERN (appears from nowhere at the freeze)
+  let tp=null;
+  if(tt>=FR0){
+    if(tt<6.6){
+      // standing right next to MBB, holding a box
+      tp={x:720, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:{sh:70,el:50}, arm2:{sh:64,el:56}, mouth:'flat', style:STYLET};
+      ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#c9a55a';
+      rr(tp.x+60, HIP_STAND-250, 150, 110, 10); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    } else if(tt<12.4){
+      // decorating frenzy: bouncing along the wall placing pumpkins
+      const ph=(tt-6.6)/5.8;
+      const step=Math.sin(tt*10);
+      tp={x:640+Math.sin(ph*Math.PI*3)*180+140, y:HIP_STAND-Math.abs(step)*12,
+        face:(Math.cos(ph*Math.PI*3)>0?1:-1),
+        legs:[{hip:30*step,knee:10},{hip:-30*step,knee:10}],
+        arm:{sh:150,el:-50}, mouth:'smile', style:STYLET};
+    } else if(tt<16.6){
+      const nod=Math.sin(tt*4)*4;
+      tp={x:980, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:{sh:30,el:40}, mouth:'smile', headTilt:nod, style:STYLET};
+    } else {
+      // shy little wave on the win
+      tp={x:980, y:HIP_STAND, face:-1,
+        legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:{sh:150+Math.sin(tt*8)*14,el:-40}, mouth:'smile', style:STYLET};
+    }
+  }
+  if(tp) drawMan(tp);
+  // MRS. NEVER WRONG: the committee
+  let wp=null;
+  if(tt>=12.4&&tt<13.4){
+    const k=ease((tt-12.4)/1.0), step=Math.sin(tt*9);
+    wp={x:lerp(W+220,560,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=13.4&&tt<14.6){
+    // looks left at MBB's single pumpkin, unmoved
+    wp={x:560, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'flat', style:STYLEW};
+  } else if(tt>=14.6){
+    // points at Tyler's wall, nodding
+    const nod=Math.sin(tt*5)*3;
+    wp={x:560, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-10}, mouth:'smile', headTilt:nod, style:STYLEW};
+  }
+  if(wp) drawMan(wp);
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.5){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-220,320,ease(tt/1.5)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:120,el:-40}, mouth:'smile', style:STYLER};
+  } else if(tt<2.6){
+    mp={x:320, y:HIP_STAND, face:-1, lean:-8,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:130,el:-30}, mouth:'smile', style:STYLER};   // placing the one pumpkin
+  } else if(tt<FR0){
+    mp={x:420, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:34,el:60}, arm2:{sh:30,el:66}, mouth:'smile',
+      headTilt:Math.sin(tt*3)*4, style:STYLER};            // admiring it
+  } else if(tt<6.6){
+    mp={x:380, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide', style:STYLER}; // startled by Tyler
+  } else if(tt<12.4){
+    mp={x:300, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:34,el:60}, arm2:{sh:30,el:66}, mouth:'flat', style:STYLER}; // arms crossed watching
+  } else if(tt<16.6){
+    mp={x:280, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'o', style:STYLER};           // pleading his case
+  } else {
+    const sigh=Math.sin(tt*3)*3;
+    mp={x:150, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:20,el:40}, mouth:'sad', headTilt:sigh, style:STYLER}; // next to his one pumpkin
+  }
+  drawMan(mp);
+  if(tt>=FR0+0.03&&tt<5.6){const kk=easeOutBack(Math.min(1,(tt-FR0-0.03)/0.26)); starburst(620,FLOOR-820,kk*0.9,'?!');}
+  if(tt>=14.8&&tt<16.2){const kk=easeOutBack(Math.min(1,(tt-14.8)/0.3)); starburst(600,FLOOR-980,kk*0.85,'APPROVED.');}
+  ctx.restore();
+  showBadge(22);
+  if(t>=0.05&&t<2.0) caption(['PARTY DECORATION','DAY.'],340,(t+0.3)/0.35,52);
+  if(t>=2.7&&t<4.3) caption(['ONE PUMPKIN.','TASTEFUL.'],340,(t-2.7)/0.35,52);
+  if(t>=FR0+0.05&&t<FR1) caption(['WHERE DID YOU','EVEN COME FROM?'],340,(t-FR0-0.05)/0.35,48);
+  if(t>=5.5&&t<6.6) caption(['"...im the','new intern."'],340,(t-5.5)/0.35,48);
+  if(t>=8.6&&t<9.9) caption(['HE BROUGHT','FIFTY.'],340,(t-8.6)/0.35,52);
+  if(t>=13.5&&t<14.6) caption(['THE COMMITTEE','IS HERE.'],340,(t-13.5)/0.35,50);
+  if(t>=15.2&&t<16.4) caption(['IT WAS NOT','CLOSE.'],340,(t-15.2)/0.35,52);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT SHOULD TYLER','DECORATE NEXT?'],340,(t-17.4)/0.35,44);
+    caption(['MR. BIG BUSINESS RECORD: 1 W \u00b7 7 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[22]=ep22;
+SHAKES[22]=[4.5,0.25,14];
+TAGLINES[22]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[22]=18.5;
 </script>
 </body></html>
 
