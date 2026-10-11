@@ -293,5 +293,16 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Pink #11 Know Your History (pink11.html, 26s, ACS family-history facts),
   EP. 21 The Seating Chart (REELS[21] in reelsD; Mrs NW silent chair war, cat takes seat one,
   W-L 1-6). Captions under SUNDAY OCT 11. Next: Tip No.29, gag #18, Pink #12, EP. 22.
+- MONDAY OCT 12 SET BUILT AND QUEUED SUNDAY NIGHT (29/29 OK): Tip No.29 LINEN MATH carousel (Teal,
+  6, TikTok pick; rotation Sat tip / Sun business / Mon tip again, week-1 data logged), business 10am +
+  venue 12pm = the two REAL FOOTAGE CINEMATIC reels (Party Day Flow 25s, Venue Walk 13.9s; each ends on
+  its own fresh flyer per the new rules), PRICE IT = BB_PriceIt_HolidayGlam (FRESH indoor December
+  glam), CONTACTS referral carousel (Emerald, 5), EN ESPAÑOL #2 La Posada (Cream, 5, 3pm),
+  19 NIGHTS countdown (Halloween, 4), gag #18 Ghost Waiter (reelH REELS[18]; used now:
+  ...Photo Booth, Pinata, Ghost Waiter), Pink #12 Dense Facts (pink12.html, 26s, ACS+FDA),
+  EP. 22 The Decoration Committee (REELS[22]; Tyler returns and wins, W-L 1-7).
+  Captions under MONDAY OCT 12. Next: Tip No.30, gag #19, Pink #13, EP. 23, español #3 (theme: el
+  venue or referidos), TikTok pick Tuesday ≠ tip. Banked for Tuesday: spiderman ballpit reveal clip
+  (rotate last 5s +90 = vertical money shot), branded waterslide clip, backyard party photos.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
