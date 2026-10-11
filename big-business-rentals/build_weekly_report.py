@@ -18,14 +18,24 @@ CHANNEL_NAMES = {
 }
 
 LANES = [
-    ("tip",       ("ice do you", "drinks does", "plans for trash", "party math")),
-    ("business",  ("already handled", "hired a team", "party weekend")),
-    ("venue",     ("deserves a home", "plan b", "one price")),
-    ("referral",  ("$100", "word of mouth", "paid to be popular")),
-    ("countdown", ("nights till halloween", "lands on a saturday", "nights left")),
-    ("gag",       ("pumpkin", "eight legs", "party candy")),
-    ("pink",      ("family history", "99%", "1 in 100", "pink october")),
-    ("episode",   ("ep. 1", "chronicles", "intern", "save $5", "best chair")),
+    ("priceit",   ("how much would you pay",)),
+    ("espanol",   ("quincea\u00f1era", "\u00bfya tienen",)),
+    ("tip",       ("ice do you", "drinks does", "plans for trash", "party math",
+                   "chairs do you actually", "actually fit", "brunch math", "do the brunch")),
+    ("business",  ("already handled", "hired a team", "party weekend", "weekend is loaded",
+                   "party is tomorrow", "recovery day", "crew is coming")),
+    ("venue",     ("deserves a home", "plan b", "one price", "rodeo sold out", "going after",
+                   "december parties", "masquerade", "deserve halloween")),
+    ("referral",  ("$100", "word of mouth", "paid to be popular", "weekend plug",
+                   "talking about parties", "three parties", "sunday dinner")),
+    ("countdown", ("nights till halloween", "lands on a saturday", "nights left",
+                   "nights out", "saturdays left", "saturdays stand", "nights.")),
+    ("gag",       ("pumpkin", "eight legs", "party candy", "candy bowl", "beat drops",
+                   "tablecloth", "photo booth", "pinata", "dj", "skeleton")),
+    ("pink",      ("family history", "99%", "1 in 100", "pink october", "myths", "screening",
+                   "know your normal", "mental health", "men get", "by the numbers", "breast cancer")),
+    ("episode",   ("ep. 1", "ep. 2", "chronicles", "intern", "save $5", "best chair",
+                   "seating chart", "auditions", "seating audition", "candy kept")),
 ]
 
 def lane_of(text):
@@ -35,8 +45,8 @@ def lane_of(text):
             return lane
     return "other"
 
-Q = """query($input: PostsInput!){
-  posts(input:$input){
+Q = """query($input: PostsInput!, $after: String){
+  posts(input:$input, first: 50, after: $after){
     edges{ node{ id channelId text status sentAt dueAt metricsUpdatedAt
       metrics{ name value unit }
       metadata{ __typename } } }
@@ -45,10 +55,9 @@ Q = """query($input: PostsInput!){
 }"""
 
 def fetch(after=None):
-    # PostsInput has no cursor arg; posts(...) returns one page sorted by dueAt.
     inp = {"organizationId": ORG, "filter": {"status": ["sent"]},
            "sort": [{"field": "dueAt", "direction": "desc"}]}
-    body = json.dumps({"query": Q, "variables": {"input": inp}})
+    body = json.dumps({"query": Q, "variables": {"input": inp, "after": after}})
     r = subprocess.run(["curl", "-sS", "--max-time", "60", API,
                         "-H", "Content-Type: application/json", "-d", body],
                        capture_output=True, text=True)
@@ -57,8 +66,8 @@ def fetch(after=None):
 cutoff = (datetime.datetime.utcnow() - datetime.timedelta(days=7)).isoformat()
 rows = []
 after = None
-for _ in range(1):
-    d = fetch()
+for _ in range(8):
+    d = fetch(after)
     data = d.get("data", {}).get("posts")
     if not data:
         print("query failed:", json.dumps(d)[:300]); break
