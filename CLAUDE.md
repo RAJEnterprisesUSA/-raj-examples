@@ -122,6 +122,11 @@ card): EVERY PRICE IT image is FRESHLY GENERATED for its day. The card bank
 from scheduling; already-posted ones are history only, and no banked or previously posted setup image may
 ever be queued again. Generate the next day's setup during the nightly build (theme still matches the
 calendar: football look near Raiders games, hockey look near VGK games, etc., always a new scene).
+VENUE SCALE RULE (owner correction Oct 11 night, after the first HolidayGlam image read as a family
+dinner at home): PRICE IT always promotes MEDIUM TO SEMI-LARGE SEATING ARRANGEMENTS IN VENUE SPACING:
+banquet halls, ballrooms, event spaces, multiple round tables of 8-10 or long banquet runs, visible
+floor space. A home setting is allowed ONLY as a very large dining room setup. No cozy family-dinner
+scenes. Outdoor setups follow the same spirit: party scale, not patio-for-four.
 QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and small (~6-8 generations);
 generate 1-2 new setups per day during the nightly build, not in batches. If the day's quota is exhausted
 before the PRICE IT image is made, generate it first thing the next session, never fall back to the bank.
@@ -296,8 +301,7 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
 - MONDAY OCT 12 SET BUILT AND QUEUED SUNDAY NIGHT (29/29 OK): Tip No.29 LINEN MATH carousel (Teal,
   6, TikTok pick; rotation Sat tip / Sun business / Mon tip again, week-1 data logged), business 10am +
   venue 12pm = the two REAL FOOTAGE CINEMATIC reels (Party Day Flow 25s, Venue Walk 13.9s; each ends on
-  its own fresh flyer per the new rules), PRICE IT = BB_PriceIt_HolidayGlam (FRESH indoor December
-  glam), CONTACTS referral carousel (Emerald, 5), EN ESPAÑOL #2 La Posada (Cream, 5, 3pm),
+  its own fresh flyer per the new rules), PRICE IT = BB_PriceIt_DecemberBall (venue-scale ballroom; first HolidayGlam image rejected as home-scale, swapped in queue), CONTACTS referral carousel (Emerald, 5), EN ESPAÑOL #2 La Posada (Cream, 5, 3pm),
   19 NIGHTS countdown (Halloween, 4), gag #18 Ghost Waiter (reelH REELS[18]; used now:
   ...Photo Booth, Pinata, Ghost Waiter), Pink #12 Dense Facts (pink12.html, 26s, ACS+FDA),
   EP. 22 The Decoration Committee (REELS[22]; Tyler returns and wins, W-L 1-7).

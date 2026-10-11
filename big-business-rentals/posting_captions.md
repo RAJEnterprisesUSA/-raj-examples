@@ -1573,3 +1573,10 @@ THE BIG BUSINESS CHRONICLES: one tasteful pumpkin versus the intern's entire wal
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+## RULE (Oct 11 night, owner): PRICE IT = VENUE-SCALE SEATING ONLY
+Owner rejected the first December HolidayGlam image ("thats a house background for a family sitting").
+PRICE IT always promos medium to semi-large seating arrangements in VENUE spacing (ballrooms, halls,
+multiple rounds of 8-10, long banquet runs). Home spacing only as a very large dining room setup.
+Monday 1pm swapped in queue to BB_PriceIt_DecemberBall (seven rounds of ten, dance floor, chandeliers);
+caption updated to ballroom wording. Both FB + IG edits OK, firstComments preserved.
