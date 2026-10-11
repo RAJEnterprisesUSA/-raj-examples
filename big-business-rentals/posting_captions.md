@@ -1655,3 +1655,51 @@ The 17th, the 24th, then Halloween itself. Every party between now and then need
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
 #halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## BB_Halloween_Reel_CandySecurity (gag #19, 5pm Tue, FB + IG reel + TikTok + YouTube; 12s)
+The candy table has security now. 💀
+
+Two denied attempts, zero appeals process. Then the cat strolled under the rope and took what it wanted. Security has favorites. Send this to the friend who guards the snacks at every party.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #candysecurity #funnyreels #lasvegas #partyrentals
+
+YouTube title: The candy table has security now 💀 #Shorts
+YouTube description:
+Two denied attempts, zero appeals process. Then the cat walked under the rope. Security has favorites. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #FunnyShorts #BlackCat #LasVegas #PartyRentals
+
+## BB_PinkOctober_EverydayDefense (Pink #13, 6pm Tue, FB + IG story + TikTok + YouTube; 26s)
+Your daily walk is doing more than you think. 🎀
+
+Regular movement lowers breast cancer risk, less alcohol is better, and a healthy weight matters most after menopause. The American Cancer Society recommends 150 to 300 active minutes a week, and a 25 minute daily walk gets you there. Send this to your walking buddy. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #everydaydefense #walkingbuddy #lasvegas
+
+YouTube title: A 25 minute walk is real defense. 🎀 #Shorts
+YouTube description:
+Regular movement lowers breast cancer risk. The American Cancer Society recommends 150 to 300 active minutes a week, a daily walk gets you there. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #DailyWalk #LasVegas
+
+## BB_Chronicles_Ep23_TheCostumeCheck (EP. 23, 8pm Tue, FB + IG reel + TikTok + YouTube; 21s, SFX only)
+A chair in a witch hat tried to get into the party. 😂
+
+EP. 23: costume check at the door, and Lil Wobbles thought one witch hat would do it. Caught at the door, escorted out, and that is win number two on the board. What costume fools him next time? Wrong answers only.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #lilwobbles #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 23: The Costume Check 😂 Wobbles got caught #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: costume check at the door. One red chair, one witch hat, zero chance. Record: 2 wins, 7 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals

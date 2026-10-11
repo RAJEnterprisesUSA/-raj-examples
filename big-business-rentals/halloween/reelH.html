@@ -3029,6 +3029,104 @@ function reelH18(t){
 REELS[18]=reelH18;
 SHAKES[18]=[5.5,0.3,15];
 TAGLINES[18]='SERVICE SO GOOD, IT IS SUPERNATURAL.';
+
+// ---------- H19: candy security ----------
+function ropePost(x,y){
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#c9a55a';
+  ctx.beginPath(); ctx.ellipse(x,y,34,10,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillRect(x-7,y-150,14,150); ctx.strokeRect(x-7,y-150,14,150);
+  ctx.beginPath(); ctx.arc(x,y-158,14,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function ropeLine(x1,x2,y,sag){
+  ctx.save(); ctx.lineWidth=12; ctx.strokeStyle='#c0304a'; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(x1,y);
+  ctx.quadraticCurveTo((x1+x2)/2, y+sag, x2, y);
+  ctx.stroke(); ctx.restore();
+}
+function reelH19(t){
+  drawRoomH(t);
+  const TX=740, TOP=FLOOR-250;
+  drawTable(TX,0,0);
+  let candy=6;
+  if(t>=6.6) candy=4;
+  drawBowl(TX-20, TOP-30, candy);
+  // velvet rope line in front of the table
+  ropePost(500, FLOOR+40); ropePost(980, FLOOR+40);
+  // SECURITY: skeleton with arms crossed by the rope
+  const bob=Math.sin(t*2.6)*5;
+  let sk;
+  if(t>=1.6&&t<2.6){
+    sk={x:560, y:HIP_STAND-8+bob, face:-1,
+      legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:96,el:-8}, headTilt:-4};   // palm out
+  } else if(t>=3.4&&t<4.9){
+    const wag=Math.sin(t*9)*14;
+    sk={x:560, y:HIP_STAND-8+bob, face:-1,
+      legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:120,el:-40+wag}, headTilt:4}; // finger wag
+  } else {
+    sk={x:560, y:HIP_STAND-8+bob, face:-1,
+      legs:[{hip:6,knee:4},{hip:-4,knee:4}], arm:{sh:34,el:60}, arm2:{sh:30,el:66}}; // arms crossed
+  }
+  drawSkeleton(sk);
+  // rope drawn after skeleton so it reads in front
+  ropeLine(500, 980, FLOOR-110, 46);
+  // THE CAT: strolls in, slips under the rope, hops up, takes candy, leaves
+  if(t>=5.0){
+    if(t<6.0){
+      drawCat(lerp(-160,650,ease((t-5.0)/1.0)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    } else if(t<6.6){
+      const k=ease((t-6.0)/0.6);
+      drawCat(650+k*40, FLOOR-(TOP?0:0)-k*(FLOOR-(TOP-10)), {face:1,t:t,s:1.4});
+    } else if(t<7.8){
+      drawCat(TX-60, TOP-6, {face:1,t:t,s:1.4});
+      if(t>6.7&&t<7.5) sparkle(TX+60, TOP-90, t);
+    } else {
+      drawCat(lerp(TX-60,W+160,ease((t-7.8)/1.1)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    }
+  }
+  // UNC: two denied attempts, then disbelief
+  let pose=null;
+  if(t<1.4){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,330,ease(t/1.4)), y:HIP_STAND-Math.abs(step)*11, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:96,el:-20}, mouth:'smile'};
+  } else if(t<2.6){
+    pose={x:360, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:96,el:-10}, mouth:'o'};                     // reaching, denied
+  } else if(t<3.4){
+    pose={x:300, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:20,el:40}, mouth:'flat'};
+  } else if(t<4.9){
+    // the sneaky low approach
+    pose={x:340, y:HIP_STAND+26, face:1, lean:18,
+      legs:[{hip:34,knee:-18},{hip:-20,knee:12}],
+      arm:{sh:80,el:10}, mouth:'o', eyes:'wide'};
+  } else if(t<7.8){
+    pose={x:300, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};          // watching the cat
+  } else {
+    const shrug=Math.sin(t*4)*5;
+    pose={x:300, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'sad', headTilt:shrug};
+  }
+  drawMan(pose);
+  if(t>=1.7&&t<2.5){const kk=easeOutBack(Math.min(1,(t-1.7)/0.26)); starburst(460,FLOOR-760,kk*0.8,'NOPE.');}
+  if(t>=6.7&&t<7.6){const kk=easeOutBack(Math.min(1,(t-6.7)/0.28)); starburst(TX-180,FLOOR-780,kk*0.85,'?!');}
+  if(t<1.7) caption(['CANDY TABLE.','MAXIMUM SECURITY.'],240,(t+0.35)/0.35,50);
+  if(t>=2.8&&t<4.0) caption(['NOBODY GETS','SECONDS.'],240,(t-2.8)/0.35);
+  if(t>=5.1&&t<6.2) caption(['WAIT.','WAIT. WAIT.'],240,(t-5.1)/0.35);
+  if(t>=6.8&&t<7.9) caption(['SO THE CAT','GETS A PASS.'],240,(t-6.8)/0.35,52);
+  if(t>=8.1&&t<8.9) caption(['SECURITY HAS','FAVORITES.'],240,(t-8.1)/0.35,50);
+}
+REELS[19]=reelH19;
+SHAKES[19]=[6.6,0.25,12];
+TAGLINES[19]='EVEN SECURITY HAS A SOFT SPOT.';
 </script>
 </body></html>
 

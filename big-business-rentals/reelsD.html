@@ -2502,6 +2502,150 @@ REELS[22]=ep22;
 SHAKES[22]=[4.5,0.25,14];
 TAGLINES[22]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[22]=18.5;
+
+// ---------- EP 23: THE COSTUME CHECK ----------
+const RED23={a:'#e05252',b:'#c94444',c:'#ef6d6d'};
+function witchHat(x,y,k,rot){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0); ctx.scale(k,k);
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#1c1428';
+  ctx.beginPath(); ctx.ellipse(0,0,86,20,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-46,-6); ctx.quadraticCurveTo(-10,-120,8,-128);
+  ctx.quadraticCurveTo(26,-96,46,-6); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B';
+  ctx.fillRect(-40,-26,80,14); ctx.strokeRect(-40,-26,80,14);
+  ctx.restore();
+}
+function ep23(t){
+  const FR0=7.6, FR1=8.4;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(380,1250); ctx.scale(z,z); ctx.translate(-380,-1250);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  // the door line marker: a flyer sign on the wall
+  drawFlyer(880,700,5,true);
+  // WOBBLES: scoots in from the left wearing a witch hat
+  let wx=null, hatK=1, hatY=0, hatRot=0;
+  if(tt>=5.0&&tt<6.4){
+    wx=lerp(-180,380,ease((tt-5.0)/1.4));
+  } else if(tt>=6.4&&tt<10.4){
+    wx=380;
+  } else if(tt>=10.4&&tt<12.0){
+    wx=lerp(380,-200,ease((tt-10.4)/1.6));
+  }
+  if(wx!==null){
+    const wob=(tt<6.4||tt>10.4)?Math.sin(t*12)*6:((tt>9.6)?Math.sin(t*14)*8:0);
+    drawChair(wx,wob,0,0,RED23);
+    // hat sits on the top rail until MBB lifts it
+    if(tt<9.4){ hatY=SEAT_TOP-150; hatRot=Math.sin(t*2)*0.04; witchHat(wx+6,hatY,1,hatRot); }
+    else if(tt<10.4){
+      const k=ease((tt-9.4)/0.6);
+      witchHat(wx+6+40*k, SEAT_TOP-150-240*k, 1, k*0.9);
+    }
+  }
+  // TYLER: first through the line
+  let tp=null;
+  if(tt>=1.2&&tt<3.2){
+    const k=ease((tt-1.2)/2.0), step=Math.sin(tt*9);
+    tp={x:lerp(-200,1010,k), y:HIP_STAND-Math.abs(step)*9, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLET};
+  } else if(tt>=3.2&&tt<14.4){
+    tp={x:1010, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:30,el:40}, mouth:'smile', style:STYLET};
+  } else if(tt>=14.4){
+    const clap=Math.sin(tt*10)*16;
+    tp={x:1010, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:120+clap,el:-60}, arm2:{sh:120-clap,el:-60}, mouth:'smile', style:STYLET};
+  }
+  if(tp) drawMan(tp);
+  // MRS. NEVER WRONG: second through the line, stays to watch
+  let wp2=null;
+  if(tt>=3.2&&tt<4.8){
+    const k=ease((tt-3.2)/1.6), step=Math.sin(tt*9);
+    wp2={x:lerp(-200,810,k), y:HIP_STAND-Math.abs(step)*9, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=4.8){
+    const nod=(tt>=12.4&&tt<14.4)?Math.sin(tt*5)*5:0;
+    wp2={x:810, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:(tt>=12.4?'smile':'flat'), headTilt:nod, style:STYLEW};
+  }
+  if(wp2) drawMan(wp2);
+  // MR. BIG BUSINESS: working the door
+  let mp=null;
+  if(tt<1.2){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(W+200,580,ease(tt/1.2)), y:HIP_STAND-Math.abs(step)*10, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:120,el:-40}, mouth:'smile', style:STYLER};
+  } else if(tt<5.0){
+    // waves guests through
+    const wave=(tt>=2.2&&tt<2.8)||(tt>=4.0&&tt<4.6);
+    mp={x:580, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:wave?{sh:110,el:-30}:{sh:62,el:14}, mouth:'smile', style:STYLER};
+  } else if(tt<7.6){
+    // clocks the chair instantly
+    mp={x:580, y:HIP_STAND, face:-1, lean:6,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:84,el:4}, mouth:'flat', eyes:'wide', style:STYLER};
+  } else if(tt<9.4){
+    // walks over, grabs the hat
+    const k=ease(Math.min(1,(tt-8.4)/0.7));
+    mp={x:lerp(580,540,k), y:HIP_STAND, face:-1, lean:10*k,
+      legs:[{hip:16,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:96,el:-10}, mouth:'flat', style:STYLER};
+  } else if(tt<10.4){
+    // lifts it: busted
+    mp={x:540, y:HIP_STAND, face:-1,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:150,el:-50}, mouth:'smile', style:STYLER};
+  } else if(tt<12.4){
+    // points to the exit
+    mp={x:540, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:96,el:-6}, mouth:'flat', style:STYLER};
+  } else if(tt<14.4){
+    const dust=Math.sin(tt*6)*4;
+    mp={x:580, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:40+dust,el:30}, mouth:'smile', headTilt:dust, style:STYLER};
+  } else {
+    const flex=Math.sin(tt*5)*6;
+    mp={x:580, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:150+flex,el:-100}, arm2:{sh:150-flex,el:-100}, mouth:'smile', style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=6.5&&tt<7.6){const kk=easeOutBack(Math.min(1,(tt-6.5)/0.26)); starburst(300,FLOOR-780,kk*0.8,'?!');}
+  if(tt>=9.5&&tt<11.0){const kk=easeOutBack(Math.min(1,(tt-9.5)/0.3)); starburst(350,FLOOR-860,kk*0.9,'CAUGHT.');}
+  if(tt>=14.6&&tt<16.2){const kk=easeOutBack(Math.min(1,(tt-14.6)/0.3)); starburst(320,FLOOR-820,kk*0.95,'W No.2!');}
+  ctx.restore();
+  showBadge(23);
+  if(t>=0.05&&t<2.0) caption(['COSTUME CHECK','AT THE DOOR.'],340,(t+0.3)/0.35,50);
+  if(t>=3.0&&t<4.4) caption(['INVITED GUESTS','ONLY.'],340,(t-3.0)/0.35,52);
+  if(t>=5.6&&t<6.8) caption(['...A NEW','GUEST.'],340,(t-5.6)/0.35,54);
+  if(t>=FR0+0.05&&t<FR1) caption(['NICE TRY.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=10.6&&t<12.0) caption(['SIR. THE EXIT','IS THAT WAY.'],340,(t-10.6)/0.35,48);
+  if(t>=12.8&&t<14.2) caption(['SECURITY LEVEL:','FINALLY.'],340,(t-12.8)/0.35,50);
+  if(t>=15.0&&t<16.4) caption(['THAT IS','WIN NUMBER TWO.'],340,(t-15.0)/0.35,48);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT COSTUME FOOLS HIM','NEXT TIME? WRONG ANSWERS ONLY.'],340,(t-17.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 2 W \u00b7 7 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[23]=ep23;
+SHAKES[23]=[7.6,0.25,14];
+TAGLINES[23]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[23]=18.5;
 </script>
 </body></html>
 
