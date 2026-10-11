@@ -1580,3 +1580,78 @@ PRICE IT always promos medium to semi-large seating arrangements in VENUE spacin
 multiple rounds of 8-10, long banquet runs). Home spacing only as a very large dining room setup.
 Monday 1pm swapped in queue to BB_PriceIt_DecemberBall (seven rounds of ten, dance floor, chandeliers);
 caption updated to ballroom wording. Both FB + IG edits OK, firstComments preserved.
+
+====================================================================
+TUESDAY OCT 13 (built + queued Sunday, two days ahead per owner "tuesday")
+====================================================================
+
+## BB_Caro_Tue_CakeMath (Tip No.30, 8am, FB + IG feed; Midnight Navy, 6 slides)
+How much cake does a party eat?
+
+Everybody wants a slice, nobody wants seven leftover pounds. Swipe for the two numbers that get the order right, then send this to whoever always over-orders.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #cakemath #partyplanning #lasvegas #partyrentals
+
+## BB_Real_FunStuff (business lane, 10am, FB reel + IG reel + YouTube; 14.8s cinematic, flyer #3)
+Tables. Chairs. And then this.
+
+Straight off a real job: the ball pit, the walk outside, and the moment you see the whole thing. Real setups all over Las Vegas. Comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #bouncehouse #kidsparty #vegas
+
+YouTube title: Tables. Chairs. And then this. #Shorts
+YouTube description:
+Straight off a real job in Las Vegas: the ball pit, the walk outside, the reveal. Real party rentals, delivered, set up, picked up.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PartyRentals #BounceHouse #LasVegas #KidsParty
+
+## BB_Venue_Tue_Company (venue, 12pm, FB + IG feed; Black&Gold, single; TIKTOK PICK = countdown)
+The company party does not need a casino budget.
+
+December and F1 season are already filling the calendar. Our private venue seats 40 and holds 80 standing, 3 hours for $625 or 4 hours for $800 with tables, chairs and setup included. Comment VENUE for open dates. Questions? The chat on bigbusinesspartyrentals.com answers right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#companyparty #lasvegas #corporateevents #holidayparty #partyvenue
+
+## BB_PriceIt_HalloweenYard (PRICE IT, 1pm, FB + IG feed; FRESH outdoor venue-scale Halloween night)
+How much would you pay for this setup?
+
+Halloween dinner under the moon: three long tables of twelve, jack-o-lanterns down every runner, purple uplights and room left to dance. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the setup underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #halloweenparty #lasvegas #partyrentals #spookyseason
+
+## BB_Caro_Tue_WorkPlug (referral, 2pm, FB + IG feed; Velvet Rope, 5 slides)
+Every job has a party planner.
+
+Somebody at work is about to get handed the holiday party, and they need tables, chairs and a room. Send them our way, have them drop your name, and you collect up to $100 after their event wraps. Send this to your work bestie. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #lasvegas #workbestie #partyrentals #sidehustle
+
+## BB_Caro_Tue_ElVenue (EN ESPAÑOL, 3pm, FB + IG feed; Emerald, 5 slides; Spanish cross-linked FCs)
+¿Dónde va a ser la fiesta?
+
+En tu sala no caben 60 personas, lo sabemos. Nuestro salón privado recibe 40 personas sentadas y 80 de pie, 3 horas por $625 o 4 horas por $800, con mesas, sillas e instalación incluidas. Perfecto para cumpleaños, bautizos y posadas. Envía esto a quien anda buscando salón. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#salondeeventos #lasvegas #fiestas #quinceañera #posadas
+
+## BB_Caro_Tue_18Nights (countdown, 4pm, FB + IG feed + TIKTOK CAROUSEL PICK; Purple/Gold, 4 slides)
+TikTok pick rotation: Sun business, Mon tip, Tue COUNTDOWN (tip ineligible two days running).
+18 nights. Two Saturdays. Then the big one.
+
+The 17th, the 24th, then Halloween itself. Every party between now and then needs chairs, and most of them call this week. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
