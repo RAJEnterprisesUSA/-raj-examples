@@ -53,11 +53,13 @@ carousel to tiktok a day"): every card-lane set (tip, business, venue, referral,
 FB feed post + IG feed carousel (4:5 originals, type post, firstComment attached, caption says
 "Swipe"). TikTok gets exactly FOUR posts per day (owner confirmed Oct 9): ONE card carousel (9:16 story9
 images) plus the THREE daily reels (gag, pink video, Chronicles episode). Nothing else goes to TikTok.
-CAROUSEL PICK ROTATES: a DIFFERENT lane every day, never the same lane two days running (owner
-directive Oct 9), UNLESS analytics numbers or researched reasoning clearly say one lane earns a
-repeat, and then the override and its numbers get logged in posting_captions.md.
-Picks so far: Fri Oct 9 = countdown (22 Nights). Sat Oct 10 = tip (Space Math). NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
-retired; story9 pads are still generated because the TikTok pick uses them). Pink awareness VIDEO may
+TIKTOK NON-REEL SLOT = PRICE IT (owner directive Oct 11 night, REPLACES the rotating carousel
+pick): the one TikTok post besides the three reels is the day's PRICE IT image (9:16 story9 pad of
+the card) at 1pm, same caption as FB/IG. The carousel-pick rotation is RETIRED (history: Fri Oct 9
+countdown, Sat tip, Sun business, Mon tip, Tue countdown; Mon + Tue were swapped to PRICE IT in the
+queue when the rule landed). story9 pads are still generated for every PRICE IT card.
+NO IG STORY SEQUENCES for card sets anymore (the Mon-Thu story lane is
+retired; story9 pads are still generated for the TikTok PRICE IT post). Pink awareness VIDEO may
 still route as story (it is a video, not a photo carousel). Applied from the Friday Oct 9 queue onward.
 NO slideshow videos for card sets (owner rejected them Oct 5 night; a music test was built in
 slideshows/ then reverted, build_slideshow.py kept on file only). APIs cannot attach licensed music

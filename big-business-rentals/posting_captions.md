@@ -1703,3 +1703,10 @@ THE BIG BUSINESS CHRONICLES: costume check at the door. One red chair, one witch
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+## RULE (Oct 11 night, owner): TIKTOK NON-REEL POST = PRICE IT
+"for tiktok the one post other than the reels should be a price it." The rotating carousel pick is
+retired. TikTok daily = gag + pink + episode reels PLUS the day's PRICE IT image (9:16 story9 pad)
+at 1pm with the standard PRICE IT caption. Applied immediately: Monday's queued TT tip carousel and
+Tuesday's queued TT countdown carousel were DELETED and replaced with BB_PriceIt_DecemberBall and
+BB_PriceIt_HalloweenYard pads at 1pm (both createPosts OK).
