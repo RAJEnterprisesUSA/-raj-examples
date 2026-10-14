@@ -260,9 +260,13 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Pink October #5 Myths Busted (awareness/pink5.html, 28s), Meet The Cast post + six Cast File cards (from sibling session),
   and EP. 15 "The New Intern" FINAL at 21.0s, SFX only (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4).
   All captions in posting_captions.md (use the Oct 5 corrected EP15 captions, no voice mentions).
-- EPISODE FORMAT: ~26s from EP. 28 on (owner Oct 14: comedy videos 5 seconds longer; applies to
-  Chronicles episodes, the "evening comedy reel" lane; gag reels stay 12s and pink stays 26s unless
-  he says otherwise). SFX only, NO voiceovers (owner Oct 5: "cancel the whole voices i dont like them").
+- COMEDY LENGTH RULE (owner Oct 14: "start making the comedy videos 5 seconds longer", then
+  "all funny videos not just the chronicles"): from the Monday Oct 19 builds, Chronicles episodes
+  21s -> ~26s AND gag reels 12s -> ~17s. Pink awareness videos are not comedy, unchanged at 26s.
+  GAG 17s SPEC: 595 frames @35fps, encode -t 17.2, afade out at 16.7, action to ~13.8s, set
+  window.GAGENDS[n]=14.0 per new reel (reelH.html drawFrame now reads per-reel end-card start,
+  default 9.0 keeps gags #1-23 correct). Use the extra 5s for one more gag turn or reaction.
+  Episodes stay SFX only, NO voiceovers (owner Oct 5: "cancel the whole voices i dont like them").
   Do not add TTS voices to episodes again unless he asks. 26s render spec: 910 frames @35fps,
   -t 26.0, afade 25.2, ENDTIMES[n]=23.5, end-card captions 22.4-23.45 (see Season One rules above).
   EP15-27 shipped at 21.0s (build_ep15v3_render.py era: 735 frames, -t 21.0, afade 20.2).
@@ -351,5 +355,6 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Still banked: branded waterslide
   clip (owner-edited, ends on BB logo), backyard party photos, Blank Canvas venue concept (AI-dressed
   looks of the real room, CONCEPT stamp) when HF quota is fresh.
-- Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
+- Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: gags ~17s,
+  episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.

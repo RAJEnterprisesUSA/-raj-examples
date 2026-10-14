@@ -1041,10 +1041,12 @@ function reel7(t){
 
 const REELS={1:reel1,2:reel2,3:reel3,4:reel4,5:reel5,6:reel6,7:reel7};
 const SHAKES={1:[4.66,0.5,44],2:[5.6,0.5,40],3:[6.2,0.5,44],4:[5.78,0.35,22],5:[4.32,0.45,38],6:[7.35,0.3,20],7:[1.55,0.3,14]};
+window.GAGENDS=window.GAGENDS||{};  // per-reel end-card start; default 9.0 (12s gags), 14.0 for 17s gags
 window.drawFrame=function(t){
   ctx.setTransform(1,0,0,1,0,0);
   ctx.clearRect(0,0,W,H);
-  if(t<9.25){
+  const GE=window.GAGENDS[REEL]||9.0;
+  if(t<GE+0.25){
     const [t0,d,amp]=SHAKES[REEL];
     let sx=0,sy=0;
     if(t>t0&&t<t0+d){const k=(t0+d-t)/d;sx=(Math.random()-0.5)*amp*k;sy=(Math.random()-0.5)*amp*k;}
@@ -1052,10 +1054,10 @@ window.drawFrame=function(t){
     REELS[REEL](t);
     ctx.restore();
   }
-  if(t>=8.9){
-    const a=ease((t-8.9)/0.35);
+  if(t>=GE-0.1){
+    const a=ease((t-(GE-0.1))/0.35);
     ctx.save(); ctx.globalAlpha=a;
-    drawEndCard(Math.max(0,t-9.0));
+    drawEndCard(Math.max(0,t-GE));
     ctx.restore();
   }
 };

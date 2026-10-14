@@ -2228,3 +2228,10 @@ story beats (an extra gag turn, reaction, or replay), not a longer end card. Eve
 unchanged: SFX only, no voices, badge + EP number at open, hook at second zero, hidden pumpkin,
 W-L record line. EP. 15-27 shipped at 21.0s and stay as posted. Gag reels stay 12s and pink
 awareness videos stay 26s unless the owner says otherwise.
+
+FOLLOW-UP (same night): owner clarified "all funny videos not just the chronicles". So GAG REELS
+go longer too: 12s -> ~17s from gag #24 (Monday Oct 19). 17s gag spec: 595 frames @35fps,
+encode -t 17.2, afade out at 16.7, action through ~13.8s, end card from 14.0 via the new
+window.GAGENDS[n]=14.0 per-reel setting added to reelH.html drawFrame (default stays 9.0, so
+gags #1-23 render unchanged). Pink awareness videos are not comedy and stay 26s. The extra five
+seconds in both lanes go into story beats, never a longer end card.
