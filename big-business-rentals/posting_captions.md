@@ -1710,3 +1710,286 @@ retired. TikTok daily = gag + pink + episode reels PLUS the day's PRICE IT image
 at 1pm with the standard PRICE IT caption. Applied immediately: Monday's queued TT tip carousel and
 Tuesday's queued TT countdown carousel were DELETED and replaced with BB_PriceIt_DecemberBall and
 BB_PriceIt_HalloweenYard pads at 1pm (both createPosts OK).
+
+---
+
+## THURSDAY OCT 15 (queued Wed Oct 14; four-day build Thu-Sun per owner order)
+
+Lanes: tip 8am TIMELINE MATH No.31 (Purple/Gold, 6) · business 10am NOT A PROJECT (Cream, 5) ·
+venue 12pm WINTER BIRTHDAYS (Velvet, single) · PRICE IT 1pm QuinceBallroom (fresh indoor, FB+IG+TT pad) ·
+referral 2pm THE BARBER (Emerald, 5) · español 3pm REFERIDOS #4 (Black&Gold, 5) ·
+countdown 4pm 16 NIGHTS (Halloween, 4). Videos: gag #20 5pm · Pink #14 6pm · EP. 24 8pm.
+
+**Tip No.31 · TIMELINE MATH (FB/IG feed)**
+Your party has a secret deadline.
+
+Three dates decide every party: invites out three weeks ahead, final headcount 72 hours out, and nothing left for the morning of. Swipe for the timeline, then send this to somebody planning a November party.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyplanning #partytips #lasvegas #partyrentals #eventplanning
+
+**Business · NOT A PROJECT (FB/IG feed)**
+Renting tables is not a project.
+
+It is one message: date, guest count, address. We price it fast, it shows up, we set it up and we pick it up. Comment QUOTE and we will DM you a price today. Questions after hours? The chat on bigbusinesspartyrentals.com answers right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #lasvegas #tablesandchairs #eventrentals #vegas
+
+**Venue · WINTER BIRTHDAYS (FB/IG feed, single card)**
+Winter birthdays deserve a real room.
+
+Too cold for the backyard, too many people for the living room. Our private venue seats 40, holds 80 standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment VENUE for open dates, or chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#venue #birthdayparty #lasvegas #eventspace #winterbirthday
+
+**PRICE IT · QUINCE BALLROOM (FB/IG feed + TikTok story9 pad, 1pm)**
+How much would you pay for this setup?
+
+Quinceañera ballroom: blush and gold, eight tables of ten and a dance floor ready for the vals. Be honest, wrong answers welcome, drop your number below. The decor is the inspo. The tables, the chairs and the room underneath it? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #quinceanera #lasvegas #partyrentals #ballroom
+
+**Referral · THE BARBER (FB/IG feed)**
+Your barber hears about every party first.
+
+Every birthday, baby shower and reunion gets announced in that chair. If you cut hair, do nails, or just hear everything, send the party people our way and collect up to $100 after their event wraps. Send this to the chair that hears everything. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #barber #lasvegas #sidehustle #partyrentals
+
+**EN ESPAÑOL #4 · REFERIDOS (FB/IG feed, 3pm)**
+¿Conoces a alguien que hace fiestas?
+
+En cada familia hay alguien que organiza todo. Si esa persona eres tú, o la conoces, gana hasta $100 por cada reserva de mesas, sillas o el salón cuando dan tu nombre. Sin límite de referidos, se paga al terminar el evento. Envía esto a la tía que organiza todo. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referidos #fiestas #lasvegas #rentademesas #dineroextra
+
+**Countdown · 16 NIGHTS (FB/IG feed)**
+16 nights out and the group chat is still deciding.
+
+Somebody has to pick the house, and whoever picks the house needs tables, chairs and a plan. Halloween is a Saturday this year. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## FRIDAY OCT 16
+
+Lanes: tip 8am RSVP MATH No.32 (Navy, 6) · business 10am 48 HOURS (Teal, 5) ·
+venue 12pm $25 EACH SPLIT MATH (Emerald, single) · PRICE IT 1pm RooftopGlow (fresh outdoor, FB+IG+TT pad) ·
+referral 2pm PAYDAY (Black&Gold, 5) · español 3pm FECHAS DE HALLOWEEN #5 (Halloween, 5) ·
+countdown 4pm 15 NIGHTS (Purple, 4). Videos: gag #21 5pm · Pink #15 6pm · EP. 25 8pm.
+
+**Tip No.32 · RSVP MATH**
+Every guest list tells a little lie.
+
+People say yes in October and go quiet in November. Set for every yes, add two seats past your count, and let the rentals flex with the final number 72 hours out. Swipe for the math, then send this to whoever is still waiting on RSVPs.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #rsvp #partyplanning #lasvegas #partyrentals
+
+**Business · 48 HOURS**
+The weekend is 48 hours away.
+
+Saturday party, Friday panic? One call today locks tables, chairs and linens for the weekend, delivered, set up and picked up after. You never load a truck. Comment QUOTE and we will DM you a weekend price.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#weekend #partyrentals #lasvegas #saturdayparty #eventrentals
+
+**Venue · $25 EACH (single card)**
+$625 split 25 ways is $25 each.
+
+Three hours in a private venue with tables, chairs and setup included, for less than one night out on the Strip. Seats 40, holds 80 standing, 4 hours for $800. Comment VENUE for open dates, or chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#venue #lasvegas #partyvenue #birthdayparty #eventspace
+
+**PRICE IT · ROOFTOP GLOW (FB/IG feed + TikTok story9 pad, 1pm)**
+How much would you pay for this setup?
+
+Rooftop glow party: black linens, LED runners, a lit bar and the Vegas skyline doing the decorating. Be honest, wrong answers welcome, drop your number below. The lights are the inspo. The tables, the chairs and the setup underneath? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #rooftopparty #lasvegas #partyrentals #vegasnights
+
+**Referral · PAYDAY**
+Today is payday. Here is a second one.
+
+The first check came from work. The second comes from knowing people: send party people our way, have them drop your name, and collect up to $100 after their event wraps. Send this to somebody who knows everybody. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#payday #referral #lasvegas #sidehustle #partyrentals
+
+**EN ESPAÑOL #5 · FECHAS DE HALLOWEEN (3pm)**
+Halloween cae en sábado este año.
+
+Fiesta grande garantizada, y las fechas buenas de octubre ya se están apartando. Mesas, sillas y manteles entregados e instalados en todo Las Vegas, también el 31. Y si necesitas lugar, el salón privado recibe 40 sentados y 80 de pie. Envía esto al grupo que todavía no decide dónde es la fiesta. Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #fiestas #lasvegas #rentademesas #octubre
+
+**Countdown · 15 NIGHTS**
+15 nights. Candy is not the plan.
+
+Candy is for the kids at the door, the party is for everybody after, and the setup books before the costume does. Halloween is a Saturday this year. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## SATURDAY OCT 17
+
+Lanes: tip 8am WEATHER MATH No.33 (Cream, 6) · business 10am BEFORE BREAKFAST (Purple, 5) ·
+venue 12pm TWO SATURDAYS (Black&Gold, single) · PRICE IT 1pm KidsCartoon (fresh indoor, FB+IG+TT pad) ·
+referral 2pm TONIGHT (Velvet, 5) · español 3pm SERVICIOS #6 (Emerald, 5) ·
+countdown 4pm 14 NIGHTS TWO WEEKS (Halloween, 4). Videos: gag #22 5pm · Pink #16 6pm · EP. 26 8pm.
+
+**Tip No.33 · WEATHER MATH**
+Vegas October has two seasons a day.
+
+Warm at three, cold by eight, sunset around six. Plan for the colder number, light the party before dark, and keep a plan B room in your pocket. Swipe for the math, then send this to whoever is planning a backyard party.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#vegasweather #partytips #backyardparty #lasvegas #partyrentals
+
+**Business · BEFORE BREAKFAST**
+The party showed up before breakfast.
+
+Morning delivery means your Saturday starts finished: tables down, chairs set, truck gone. Delivery, setup and pickup are part of every order. Your only job is opening the door. Comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partyrentals #delivery #lasvegas #saturday #eventsetup
+
+**Venue · TWO SATURDAYS (single card)**
+Two Saturdays left in October.
+
+The 24th and the 31st. One of them should be your party. Private venue seats 40, holds 80 standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment VENUE and we will DM you which dates are still open. Questions? The chat on bigbusinesspartyrentals.com answers right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#october #venue #lasvegas #halloweenparty #eventspace
+
+**PRICE IT · KIDS CARTOON PARTY (FB/IG feed + TikTok story9 pad, 1pm)**
+How much would you pay for this setup?
+
+Kids birthday at ballroom scale: rainbow tables, lanterns, a dessert spread and a dance floor with confetti already down. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the room underneath? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #kidsparty #birthdayparty #lasvegas #partyrentals
+
+**Referral · TONIGHT**
+Tonight at the party, listen close.
+
+Somebody will say it: we should do this for my birthday. That sentence is worth up to $100 when you send them our way and they drop your name. Paid after their event wraps, no limit on referrals. Send this to the friend who said it. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#referral #saturdaynight #lasvegas #sidehustle #partyrentals
+
+**EN ESPAÑOL #6 · SERVICIOS (3pm)**
+La comida está. ¿Dónde se sientan?
+
+La música está, los tamales están, y a última hora siempre faltan las mesas, las sillas y los manteles. Nosotros los entregamos, los instalamos y los recogemos en todo Las Vegas, con manteles del tamaño correcto para cada mesa. Envía esto a quien organiza la próxima fiesta. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#fiestas #rentademesas #lasvegas #sillas #manteles
+
+**Countdown · 14 NIGHTS · TWO WEEKS EXACTLY**
+Two weeks. Exactly.
+
+Fourteen nights from tonight it is Halloween night, a Saturday, the biggest party night of the fall. Lock tables, chairs and the room before the rush does it for you. Comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+## SUNDAY OCT 18
+
+Lanes: tip 8am GOLDEN HOUR MATH No.34 (Teal, 6) · business 10am FOOTBALL SEATS (Navy, 5) ·
+venue 12pm FRIENDSGIVING (Cream, single) · PRICE IT 1pm FallHarvest (fresh outdoor, FB+IG+TT pad) ·
+referral 2pm CHAT ADMIN (Emerald, 5) · español 3pm EL VALS #7 (Velvet, 5) ·
+countdown 4pm 13 NIGHTS (Purple, 4). Videos: gag #23 5pm · Pink #17 6pm · EP. 27 8pm.
+NOTE: Sunday evening = weekly analytics report No.2 (build_weekly_report.py).
+
+**Tip No.34 · GOLDEN HOUR MATH**
+Your party photos have a deadline.
+
+The hour before sunset is golden hour: cake, toasts and the group photo belong there. After dark, light the tables, not the fence. Swipe for the math, then send this to the friend with the good phone.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#goldenhour #partyphotos #partytips #lasvegas #partyrentals
+
+**Business · FOOTBALL SEATS**
+Football Sunday needs more seats.
+
+The crew outgrew the couch three Sundays ago. Tables for the spread, chairs by the dozen, delivered and picked back up so the living room goes back to normal Monday. Skip the wait, chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#footballsunday #watchparty #lasvegas #partyrentals #gameday
+
+**Venue · FRIENDSGIVING (single card)**
+Friendsgiving needs a bigger table.
+
+November weekends book first and they are already going. Private venue seats 40, holds 80 standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment VENUE for open November dates, or chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#friendsgiving #november #lasvegas #venue #eventspace
+
+**PRICE IT · FALL HARVEST (FB/IG feed + TikTok story9 pad, 1pm)**
+How much would you pay for this setup?
+
+Fall harvest dinner under the lights: three long tables, pumpkins and plaid down every runner, and a desert sunset doing the backdrop. Be honest, wrong answers welcome, drop your number below. The decor is the inspo. The tables, the chairs and the setup underneath? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #falldinner #friendsgiving #lasvegas #partyrentals
+
+**Referral · CHAT ADMIN**
+Every group chat has an admin.
+
+Makes the plan, books the thing, collects the money, never gets paid. Fix that: point the chat's next party our way, have them drop your name, and collect up to $100 after the event wraps. Send this to the chat, the admin knows who they are. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#groupchat #referral #lasvegas #sidehustle #partyrentals
+
+**EN ESPAÑOL #7 · EL VALS (3pm)**
+El vals necesita pista.
+
+La sala de la casa no alcanza para el vals, ni para la corte, ni para las quince mesas de la familia. Nuestro salón privado recibe 40 sentados y 80 de pie: 3 horas $625 o 4 horas $800 con mesas, sillas e instalación. También rentamos todo para tu jardín o salón. Envía esto a una familia que está planeando una quince.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#quinceanera #quince #lasvegas #salondeeventos #fiestas
+
+**Countdown · 13 NIGHTS**
+13 nights left. Fitting.
+
+The spookiest number on the calendar and the last comfortable week to book: the closer it gets, the fewer dates and chairs are left. Comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
