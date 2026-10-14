@@ -139,9 +139,12 @@ UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from now
 someone asks "WHERE DID YOU EVEN COME FROM?", he always replies shy/irritated "...im the new intern."),
 villain LIL WOBBLES the red cheap chair (col {a:'#e05252',b:'#c94444',c:'#ef6d6d'}), THE CAT (silent nemesis).
 Episode numbering continues from Derrick era: next episode is EP. 15.
-Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; episodes ~20s, NO VOICES
-(owner decision Oct 5 evening: voices tested and CANCELLED, 45s format cancelled; EP15 final = 21.0s, 735 frames
-@35fps, encode -t 21.0, afade out at 20.2; per-reel end card time via window.ENDTIMES[n] in reelsD.html);
+Season One rules: episode badge + "EP. N" on screen at open; hook text at second ZERO; episodes ~26s from
+EP. 28 ON (owner directive Oct 14: "start making the comedy videos 5 seconds longer"; EP15-27 were ~21s),
+NO VOICES (owner decision Oct 5 evening: voices tested and CANCELLED, 45s format cancelled).
+26s SPEC: 910 frames @35fps, encode -t 26.0, afade out at 25.2, window.ENDTIMES[n]=23.5, end-card
+question captions at t 22.4-23.45; use the extra ~5s for story beats, not a longer end card.
+(Old 21s spec for reference: 735 frames, -t 21.0, afade 20.2, ENDTIMES 18.5, end card 17.4-18.45.);
 zoom punches/instant replay/freeze frames; 2-note theme sting;
 season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpkin every episode;
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
@@ -257,11 +260,12 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Pink October #5 Myths Busted (awareness/pink5.html, 28s), Meet The Cast post + six Cast File cards (from sibling session),
   and EP. 15 "The New Intern" FINAL at 21.0s, SFX only (fb_safe/BB_Chronicles_Ep15_TheNewIntern.mp4).
   All captions in posting_captions.md (use the Oct 5 corrected EP15 captions, no voice mentions).
-- EPISODE FORMAT (final, owner decisions Oct 5): ~20s, SFX only, NO voiceovers. A 52.5s ElevenLabs-voiced
-  cut was built and then cancelled by the owner the same evening ("cancel the whole voices i dont like them
-  and only make the video about 20 seconds"). Do not add TTS voices to episodes again unless he asks.
-  build_ep15v3_render.py is the reference render script (735 frames, -t 21.0, afade 20.2).
-  Per-reel end card time via window.ENDTIMES[n] in reelsD.html.
+- EPISODE FORMAT: ~26s from EP. 28 on (owner Oct 14: comedy videos 5 seconds longer; applies to
+  Chronicles episodes, the "evening comedy reel" lane; gag reels stay 12s and pink stays 26s unless
+  he says otherwise). SFX only, NO voiceovers (owner Oct 5: "cancel the whole voices i dont like them").
+  Do not add TTS voices to episodes again unless he asks. 26s render spec: 910 frames @35fps,
+  -t 26.0, afade 25.2, ENDTIMES[n]=23.5, end-card captions 22.4-23.45 (see Season One rules above).
+  EP15-27 shipped at 21.0s (build_ep15v3_render.py era: 735 frames, -t 21.0, afade 20.2).
 - ElevenLabs is WORKING via environment credential (xi-api-key injected for api.elevenlabs.io; no env var).
   If 401 returns, the credential needs re-saving in environment settings; Piper stays the fallback.
 - TUESDAY OCT 6 SET BUILT, DELIVERED AND PUSHED (awaiting owner go-ahead to queue in Buffer):

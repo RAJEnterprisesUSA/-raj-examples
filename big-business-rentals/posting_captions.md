@@ -2213,3 +2213,18 @@ THE BIG BUSINESS CHRONICLES: chair denied, cat decoyed, client approved. Win num
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+---
+
+## RULE CHANGE (owner directive, Wed Oct 14 evening): COMEDY EPISODES +5 SECONDS
+
+"since we've completed the content for this week, something i want you to do is start making the
+comedy videos 5 seconds longer."
+
+Applies to THE BIG BUSINESS CHRONICLES episodes (the evening comedy reel lane) starting EP. 28
+(Monday Oct 19). New length ~26s: 910 frames @35fps, encode -t 26.0, afade out at 25.2,
+window.ENDTIMES[n]=23.5, end-card question captions at t 22.4-23.45. The extra ~5 seconds go into
+story beats (an extra gag turn, reaction, or replay), not a longer end card. Everything else
+unchanged: SFX only, no voices, badge + EP number at open, hook at second zero, hidden pumpkin,
+W-L record line. EP. 15-27 shipped at 21.0s and stay as posted. Gag reels stay 12s and pink
+awareness videos stay 26s unless the owner says otherwise.
