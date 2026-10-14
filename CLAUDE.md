@@ -320,8 +320,31 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   gag #19 Candy Security (reelH REELS[19], ropePost+ropeLine+drawCandyBit helpers; used now:
   ...Ghost Waiter, Candy Security), Pink #13 Everyday Defense (pink13.html, 26s, ACS lifestyle),
   EP. 23 The Costume Check (REELS[23], witchHat helper; Wobbles busted at the door, W-L 2-7).
-  Captions under TUESDAY OCT 13. Next: Tip No.31, gag #20, Pink #14, EP. 24, español #4 (theme:
-  referidos or Halloween dates), TikTok pick Wednesday ≠ countdown. Still banked: branded waterslide
+  Captions under TUESDAY OCT 13.
+- WEDNESDAY OCT 14: NOTHING BUILT OR QUEUED (owner's Wed order was "create and queue Thursday-
+  Sunday post now", explicitly skipping Wednesday; flagged to owner in chat).
+- THU OCT 15 - SUN OCT 18 FOUR-DAY SET BUILT AND QUEUED WEDNESDAY (cards 60/60 OK; 12 videos
+  rendered and queued the same session, 4 channels each, see chat for final counts; week7 folder): Tips No.31 TIMELINE MATH (Purple, 6) / No.32 RSVP MATH (Navy, 6) / No.33 WEATHER
+  MATH (Cream, 6) / No.34 GOLDEN HOUR MATH (Teal, 6); business NOT A PROJECT (Cream) / 48 HOURS
+  (Teal) / BEFORE BREAKFAST (Purple) / FOOTBALL SEATS (Navy, chat CTA); venue singles WINTER
+  BIRTHDAYS (Velvet) / $625 SPLIT 25 WAYS (Emerald) / TWO SATURDAYS LEFT Oct 24+31 (Black&Gold) /
+  FRIENDSGIVING (Cream); referral THE BARBER (Emerald) / PAYDAY (Black&Gold) / TONIGHT (Velvet) /
+  CHAT ADMIN (Emerald); español #4 REFERIDOS (Black&Gold, Spanish fine print) / #5 FECHAS DE
+  HALLOWEEN (Halloween) / #6 SERVICIOS (Emerald) / #7 EL VALS quince (Velvet); countdowns 16/15/14
+  ("TWO WEEKS EXACTLY")/13 nights; PRICE IT fresh daily, venue scale, FB+IG+TT pad 1pm:
+  QuinceBallroom (indoor) / RooftopGlow (outdoor) / KidsCartoon (indoor, generic characters) /
+  FallHarvest (outdoor). Gags #20-23 FogMachine/DancingBroom (fogBank, drawBroom helpers) /
+  SeanceTable / CandyTax (used now: ...Candy Security, Fog Machine, Dancing Broom, Seance Table,
+  Candy Tax). Pink #14-17 Under40/BuddySystem/SurvivorSalute/GroupText (pink14-17.html).
+  EP. 24 The Playlist War (drawPhoneD, sparkleD; cat runs the aux, W-L 2-8) / EP. 25 The Guest List
+  (drawListD; Tyler "...im the new intern" plus two, 2-9) / EP. 26 The Dance Rehearsal (scoreCard
+  helper; chair outscores him, cat gets a 10, 2-10) / EP. 27 The Walkthrough (WIN No.3: Wobbles
+  denied, cat decoyed, approved, 3-10, sets up Halloween finale). Carousel generators
+  build_thufri_carousels.py + build_satsun_carousels.py; queues build_buffer_queue_thusun.py +
+  build_buffer_queue_thusun_videos.py. Captions under THURSDAY OCT 15 through SUNDAY OCT 18 +
+  VIDEO CAPTIONS block. Next: Tip No.35, gag #24, Pink #18, EP. 28, español #8, Monday Oct 19 set;
+  SUNDAY OCT 18 EVENING = weekly analytics report No.2 (build_weekly_report.py).
+  Still banked: branded waterslide
   clip (owner-edited, ends on BB logo), backyard party photos, Blank Canvas venue concept (AI-dressed
   looks of the real room, CONCEPT stamp) when HF quota is fresh.
 - Gag reels and awareness videos keep their short formats (only Chronicles episodes went long).
