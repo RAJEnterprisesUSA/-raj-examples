@@ -3127,6 +3127,295 @@ function reelH19(t){
 REELS[19]=reelH19;
 SHAKES[19]=[6.6,0.25,12];
 TAGLINES[19]='EVEN SECURITY HAS A SOFT SPOT.';
+
+// ---------- H20: fog machine ----------
+function drawFogMachine(x,y){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#3a3f4a'; rr(x-70,y-78,140,78,14); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#2b2f38'; rr(x-70,y-78,140,22,10); ctx.fill();
+  ctx.fillStyle='#8c93a2'; rr(x+70,y-58,34,26,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e05252'; ctx.beginPath(); ctx.arc(x-38,y-66,9,0,7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function fogBank(level,t){
+  if(level<=0)return;
+  ctx.save();
+  const hb=level*760;
+  for(let row=0;row<6;row++){
+    const ry=FLOOR+70-row*140;
+    if(ry<FLOOR+70-hb)continue;
+    for(let i=0;i<9;i++){
+      const fx=((i*150+row*95+t*26)%1300)-110;
+      const r=165+((i+row)%3)*50;
+      ctx.globalAlpha=Math.min(0.9,level)*(0.34+0.1*((i+row)%3));
+      ctx.fillStyle='#cfc8de';
+      ctx.beginPath(); ctx.ellipse(fx,ry+10*Math.sin(t*1.3+i+row),r,r*0.5,0,0,7); ctx.fill();
+    }
+  }
+  ctx.restore();
+}
+function reelH20(t){
+  drawRoomH(t);
+  drawTable(760,0,0); drawBowl(740,FLOOR-280,6);
+  drawChair(330,0,0,0);
+  drawFogMachine(130,FLOOR);
+  // fog level: up 2.0-4.5, holds, recedes 5.5-7.0
+  let fog=0;
+  if(t>=2.0) fog=Math.min(1,(t-2.0)/2.5);
+  if(t>=5.5) fog=Math.max(0,1-(t-5.5)/1.5);
+  // skeleton guest appears in the middle while it's thick, stays after
+  if(t>=4.2){
+    const wv=Math.sin(t*3.2)*6;
+    drawSkeleton({x:680, y:HIP_STAND+wv*0.4, face:-1,
+      legs:[{hip:8,knee:4},{hip:-6,knee:4}],
+      arm:{sh:150+wv,el:-26}, headTilt:wv*0.6});
+  }
+  // UNC
+  let pose=null;
+  if(t<1.4){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,250,ease(t/1.4)), y:HIP_STAND-Math.abs(step)*11, face:-1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:40,el:40}, mouth:'smile'};
+  } else if(t<2.2){
+    pose={x:250, y:HIP_STAND+40, face:-1, lean:26,
+      legs:[{hip:40,knee:-24},{hip:-16,knee:10}],
+      arm:{sh:118,el:28}, mouth:'smile'};               // pressing the button
+  } else if(t<5.5){
+    const look=Math.sin(t*5)*10;
+    pose={x:360, y:HIP_STAND, face:(Math.sin(t*2.2)>0?1:-1),
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:92,el:-30}, arm2:{sh:86,el:-24}, mouth:'o', eyes:'wide', headTilt:look}; // feeling around
+  } else if(t<7.6){
+    pose={x:360, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};        // sees the guest
+  } else {
+    const shrug=Math.sin(t*4)*5;
+    pose={x:360, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'smile', headTilt:shrug};
+  }
+  drawMan(pose);
+  fogBank(fog,t);
+  if(t>=2.1&&t<2.9){const kk=easeOutBack(Math.min(1,(t-2.1)/0.26)); starburst(240,FLOOR-820,kk*0.8,'PSSSH.');}
+  if(t>=6.2&&t<7.1){const kk=easeOutBack(Math.min(1,(t-6.2)/0.28)); starburst(560,FLOOR-800,kk*0.85,'?!');}
+  if(t<1.7) caption(['A LITTLE FOG.','FOR THE VIBES.'],240,(t+0.35)/0.35,50);
+  if(t>=2.9&&t<4.0) caption(['OKAY. THAT IS','A LOT OF FOG.'],240,(t-2.9)/0.35);
+  if(t>=4.3&&t<5.4) caption(['MARCO?'],240,(t-4.3)/0.35);
+  if(t>=6.4&&t<7.6) caption(['THE FOG CAME','WITH A GUEST.'],240,(t-6.4)/0.35,52);
+  if(t>=8.0&&t<8.9) caption(['VIBES:','DELIVERED.'],240,(t-8.0)/0.35,50);
+}
+REELS[20]=reelH20;
+SHAKES[20]=[6.2,0.3,14];
+TAGLINES[20]='THE VIBES ROLL IN. THE SETUP HOLDS UP.';
+
+// ---------- H21: the dancing broom ----------
+function drawBroom(x,y,ang,sweep){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(ang||0));
+  ctx.lineCap='round';
+  ctx.lineWidth=18; ctx.strokeStyle='#9a6a32';
+  ctx.beginPath(); ctx.moveTo(0,-30); ctx.lineTo(0,-470); ctx.stroke();
+  ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.moveTo(0,-30); ctx.lineTo(0,-470); ctx.stroke();
+  ctx.save(); ctx.rotate(rad((sweep||0)*0.4));
+  ctx.fillStyle='#e8b64c';
+  ctx.beginPath(); ctx.moveTo(-14,-46); ctx.lineTo(14,-46); ctx.lineTo(62,10); ctx.lineTo(-62,10); ctx.closePath();
+  ctx.fill(); ctx.strokeStyle=INK; ctx.lineWidth=7; ctx.stroke();
+  for(let i=-2;i<=2;i++){ctx.beginPath();ctx.moveTo(i*18,-24);ctx.lineTo(i*24,8);ctx.stroke();}
+  ctx.restore(); ctx.restore();
+}
+function reelH21(t){
+  drawRoomH(t);
+  drawTable(840,0,0);
+  // confetti on the floor, swept left to right
+  const bx = t<1.2 ? -160 : lerp(180,860,Math.min(1,(t-1.2)/4.6));
+  const bits=[[210,'#e05252'],[300,'#f6c231'],[395,'#9fe24f'],[480,'#ff8c2e'],[585,'#ffb3cf'],[670,'#7db8e8'],[760,'#e05252']];
+  bits.forEach(([cx,col],i)=>{
+    if(cx>bx) drawCandyBit(cx, FLOOR-6, i*37, col);
+  });
+  const sweep=Math.sin(t*9)*18;
+  // ghost holding the broom, invisible until the reveal
+  const reveal = t<6.2 ? 0 : Math.min(1,(t-6.2)/0.9);
+  if(reveal>0){
+    ctx.save(); ctx.globalAlpha=reveal;
+    drawGhost(bx-60, FLOOR-150, 1.15, t, {});
+    ctx.restore();
+  }
+  // the broom: sweeps on its own, dodges at 5.0
+  let broomX=bx, broomAng=10+sweep*0.5;
+  if(t>=5.0&&t<5.45){ broomX=bx+easeOutBack((t-5.0)/0.45)*150; }
+  else if(t>=5.45&&t<6.2){ broomX=bx+150-((t-5.45)/0.75)*150; }
+  if(t>=7.6){ broomAng=10+Math.sin((t-7.6)*4)*3-easeOutBack(Math.min(1,(t-7.6)/0.5))*26; } // little bow
+  drawBroom(broomX, FLOOR, broomAng, sweep);
+  // UNC
+  let pose=null;
+  if(t<2.4){ pose=null; }
+  else if(t<3.2){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,250,ease((t-2.4)/0.8)), y:HIP_STAND-Math.abs(step)*11, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}], arm:{sh:40,el:40}, mouth:'smile'};
+  } else if(t<4.2){
+    pose={x:250, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:4,knee:8},{hip:-2,knee:8}],
+      arm:{sh:92,el:-26}, mouth:'o', eyes:'wide'};        // freeze, point
+  } else if(t<5.6){
+    const creep=Math.sin(t*6);
+    pose={x:lerp(250,bx-190,ease((t-4.2)/1.4)), y:HIP_STAND+18, face:1, lean:16,
+      legs:[{hip:30*creep,knee:-12},{hip:-24*creep,knee:14}],
+      arm:{sh:84,el:4}, mouth:'o'};                       // tiptoe chase
+  } else if(t<7.4){
+    pose={x:bx-210>250?250:bx-210, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide'};
+  } else {
+    const shrug=Math.sin(t*4)*5;
+    pose={x:250, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'smile', headTilt:shrug};
+  }
+  if(pose)drawMan(pose);
+  if(t>=3.3&&t<4.1){const kk=easeOutBack(Math.min(1,(t-3.3)/0.26)); starburst(380,FLOOR-800,kk*0.85,'?!');}
+  if(t>=6.5&&t<7.4){const kk=easeOutBack(Math.min(1,(t-6.5)/0.28)); starburst(bx-200,FLOOR-820,kk*0.8,'OH.');}
+  if(t<1.6) caption(['AFTER EVERY PARTY,','SOMEBODY SWEEPS.'],240,(t+0.35)/0.35,48);
+  if(t>=3.4&&t<4.4) caption(['THE BROOM IS','SELF-EMPLOYED.'],240,(t-3.4)/0.35,50);
+  if(t>=6.6&&t<7.8) caption(['CLEANUP CREW','NEVER LEFT.'],240,(t-6.6)/0.35,52);
+  if(t>=8.0&&t<8.9) caption(['WE PICK UP','AFTER, TOO.'],240,(t-8.0)/0.35,50);
+}
+REELS[21]=reelH21;
+SHAKES[21]=[5.0,0.3,14];
+TAGLINES[21]='DELIVERY. SETUP. SPOOKY CLEANUP.';
+
+// ---------- H22: the seance table ----------
+function reelH22(t){
+  drawRoomH(t);
+  // table lift
+  let lift=0;
+  if(t>=1.8&&t<3.2) lift=ease((t-1.8)/1.4)*220;
+  else if(t>=3.2&&t<5.2) lift=220+Math.sin((t-3.2)*3.4)*18;
+  else if(t>=5.2&&t<6.5) lift=(1-ease((t-5.2)/1.3))*220;
+  ctx.save(); ctx.translate(0,-lift);
+  drawTable(640,lift>4?Math.sin(t*7)*1.6:0,0);
+  drawBowl(640,FLOOR-280,6);
+  ctx.restore();
+  if(t>=6.5&&t<7.3) sparkle(640,FLOOR-320,t);
+  // THE CAT: sits right, watching the whole show; claims the table at the end
+  if(t>=2.8){
+    if(t<7.6) drawCat(960, FLOOR, {face:-1,t:t,s:1.4});
+    else if(t<8.3){
+      const k=ease((t-7.6)/0.7);
+      drawCat(lerp(960,760,k), FLOOR-k*(FLOOR-(FLOOR-285)), {face:-1,t:t,s:1.4});
+    } else drawCat(760, FLOOR-285, {face:-1,t:t,s:1.4});
+  }
+  // UNC
+  let pose=null;
+  if(t<1.5){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,320,ease(t/1.5)), y:HIP_STAND-Math.abs(step)*11, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}], arm:{sh:40,el:40}, mouth:'smile'};
+  } else if(t<2.4){
+    pose={x:320, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:4,knee:8},{hip:-2,knee:8}],
+      arm:{sh:92,el:-32}, mouth:'o', eyes:'wide'};         // it's rising
+  } else if(t<5.2){
+    const strain=Math.sin(t*10)*4;
+    pose={x:400, y:HIP_STAND-26, face:1, lean:-14,
+      legs:[{hip:-12,knee:24},{hip:18,knee:-6}],
+      arm:{sh:150+strain,el:-18}, arm2:{sh:142+strain,el:-12}, mouth:'o'}; // on tiptoe grabbing for it
+  } else if(t<6.6){
+    pose={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-8}, mouth:'flat'};                    // DOWN. stern point
+  } else if(t<7.8){
+    pose={x:430, y:HIP_STAND+14, face:1, lean:10,
+      legs:[{hip:18,knee:-8},{hip:-10,knee:10}],
+      arm:{sh:112,el:10}, mouth:'smile'};                  // patting the tabletop
+  } else {
+    const shrug=Math.sin(t*4)*5;
+    pose={x:380, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:8},{hip:-6,knee:8}],
+      arm:{sh:70+shrug,el:30}, arm2:{sh:62+shrug,el:38}, mouth:'flat', headTilt:shrug};
+  }
+  drawMan(pose);
+  if(t>=2.0&&t<2.8){const kk=easeOutBack(Math.min(1,(t-2.0)/0.26)); starburst(430,FLOOR-840,kk*0.85,'?!');}
+  if(t>=6.5&&t<7.3){const kk=easeOutBack(Math.min(1,(t-6.5)/0.26)); starburst(850,FLOOR-640,kk*0.75,'THUD.');}
+  if(t<1.7) caption(['NICE. STURDY.','NORMAL.'],240,(t+0.35)/0.35,50);
+  if(t>=2.5&&t<3.6) caption(['THE TABLE HAS','OTHER PLANS.'],240,(t-2.5)/0.35,50);
+  if(t>=4.4&&t<5.4) caption(['DOWN. SIT.','STAY.'],240,(t-4.4)/0.35);
+  if(t>=6.7&&t<7.7) caption(['GOOD','TABLE.'],240,(t-6.7)/0.35);
+  if(t>=8.2&&t<8.9) caption(['CLAIMED.'],240,(t-8.2)/0.35,52);
+}
+REELS[22]=reelH22;
+SHAKES[22]=[6.5,0.25,12];
+TAGLINES[22]='OUR TABLES ALWAYS COME BACK DOWN.';
+
+// ---------- H23: the candy tax ----------
+function reelH23(t){
+  drawRoomH(t);
+  drawTable(540,0,0);
+  const TOP=FLOOR-250;
+  let c1=6,c2=6,c3=6;
+  if(t>=2.1)c1=4;
+  if(t>=3.4)c2=4;
+  if(t>=6.6)c3=8;  // the refund
+  drawBowl(330,TOP-30,c1); drawBowl(540,TOP-30,c2); drawBowl(750,TOP-30,c3);
+  // witnesses: skeleton left behind table, ghost floating right
+  const bob=Math.sin(t*2.6)*5;
+  drawSkeleton({x:60, y:HIP_STAND-8+bob, face:1,
+    legs:[{hip:6,knee:4},{hip:-4,knee:4}],
+    arm:{sh:(t>=2.1&&t<3.2)?96:34, el:(t>=2.1&&t<3.2)?-14:60}, headTilt:(t>=2.1&&t<3.2)?8:-2});
+  drawGhost(980, FLOOR-210+Math.sin(t*2.2)*16, 1.1, t, {});
+  // THE CAT: sits on the table guarding bowl three from 3.8
+  if(t>=3.8){
+    const k=Math.min(1,(t-3.8)/0.5);
+    drawCat(840, FLOOR-(FLOOR-(TOP-6))*k, {face:-1,t:t,s:1.4});
+  }
+  // UNC the collector
+  let pose=null;
+  if(t<1.4){
+    const step=Math.sin(t*7);
+    pose={x:lerp(-220,300,ease(t/1.4)), y:HIP_STAND-Math.abs(step)*11, face:1,
+      legs:[{hip:26*step,knee:8},{hip:-26*step,knee:8}],
+      arm:{sh:20,el:70}, mouth:'smile', headTilt:-4};      // strolling in, official
+  } else if(t<2.5){
+    pose={x:300, y:HIP_STAND, face:1, lean:10,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:108,el:16}, mouth:'smile'};                  // dip into bowl one
+  } else if(t<3.7){
+    pose={x:470, y:HIP_STAND, face:1, lean:10,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:108,el:16}, mouth:'smile'};                  // dip into bowl two
+  } else if(t<4.6){
+    pose={x:620, y:HIP_STAND, face:1, lean:12,
+      legs:[{hip:16,knee:-8},{hip:-10,knee:8}],
+      arm:{sh:104,el:18}, mouth:'smile'};                  // reaching for bowl three
+  } else if(t<5.6){
+    pose={x:620, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:88,el:8}, mouth:'o', eyes:'wide'};           // frozen mid-reach, cat stare
+  } else if(t<7.2){
+    pose={x:620, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:10,knee:-4},{hip:-8,knee:8}],
+      arm:{sh:106,el:20}, mouth:'flat'};                   // carefully giving it all back
+  } else {
+    const step=Math.sin(t*7);
+    pose={x:lerp(620,380,ease(Math.min(1,(t-7.2)/1.0))), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:20,el:70}, mouth:'flat'};                    // backing away
+  }
+  drawMan(pose);
+  if(t>=2.1&&t<2.8){const kk=easeOutBack(Math.min(1,(t-2.1)/0.24)); starburst(330,FLOOR-700,kk*0.7,'TAX.');}
+  if(t>=3.4&&t<4.1){const kk=easeOutBack(Math.min(1,(t-3.4)/0.24)); starburst(540,FLOOR-700,kk*0.7,'TAX.');}
+  if(t>=4.7&&t<5.5){const kk=easeOutBack(Math.min(1,(t-4.7)/0.28)); starburst(700,FLOOR-760,kk*0.9,'...');}
+  if(t<1.7) caption(['CANDY TAX.','EVERYBODY PAYS.'],240,(t+0.35)/0.35,50);
+  if(t>=2.9&&t<3.9) caption(['ONE FOR THE ROAD.','AND ANOTHER.'],240,(t-2.9)/0.35,46);
+  if(t>=4.8&&t<5.8) caption(['WAIT.'],240,(t-4.8)/0.35);
+  if(t>=6.2&&t<7.3) caption(['REFUND.','FULL REFUND.'],240,(t-6.2)/0.35,52);
+  if(t>=7.9&&t<8.9) caption(['THE TAX HAS','EXCEPTIONS.'],240,(t-7.9)/0.35,50);
+}
+REELS[23]=reelH23;
+SHAKES[23]=[4.7,0.3,14];
+TAGLINES[23]='EVERYBODY PAYS. EXCEPT THE CAT.';
 </script>
 </body></html>
 

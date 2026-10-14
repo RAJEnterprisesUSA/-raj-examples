@@ -2646,6 +2646,468 @@ REELS[23]=ep23;
 SHAKES[23]=[7.6,0.25,14];
 TAGLINES[23]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[23]=18.5;
+
+// ================= EP. 24 · THE PLAYLIST WAR =================
+function drawPhoneD(x,y,glow){
+  ctx.save(); ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.fillStyle='#20242e'; rr(x-38,y-70,76,70,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=glow?'#9fe2b8':'#4a5364'; rr(x-30,y-62,60,48,6); ctx.fill();
+  ctx.restore();
+}
+function ep24(t){
+  const FR0=7.4, FR1=8.2;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(660,1150); ctx.scale(z,z); ctx.translate(-660,-1150);
+  }
+  drawRoom();
+  miniPumpkin(70, FLOOR+88);
+  drawTable(660,0,0);
+  const TOP=FLOOR-250;
+  // whose track is playing: MBB green glow vs cat picks (toggles)
+  let mbbTrack=true;
+  if(tt>=4.6&&tt<5.8) mbbTrack=false;
+  else if(tt>=5.8&&tt<7.0) mbbTrack=true;
+  else if(tt>=7.0) mbbTrack=false;
+  if(tt>=1.6) drawPhoneD(700,TOP-16,true);
+  // THE CAT: hops up at 3.6, taps the phone, wins the war, sits on it
+  if(tt>=3.0){
+    if(tt<3.6) drawCatD(lerp(W+160,860,ease((tt-3.0)/0.6)), FLOOR, {pose:'trot',face:-1,t:t,s:1.4});
+    else if(tt<4.2){
+      const k=ease((tt-3.6)/0.6);
+      drawCatD(lerp(860,800,k), FLOOR-(FLOOR-(TOP-6))*k, {face:-1,t:t,s:1.4});
+    }
+    else if(tt<13.4) drawCatD(800, TOP-6, {face:-1,t:t,s:1.4});
+    else drawCatD(690, TOP-6, {face:-1,t:t,s:1.4});   // sits right on top of the phone, owning it
+  }
+  // cat paw taps
+  if((tt>=4.6&&tt<4.9)||(tt>=7.0&&tt<7.3)||(tt>=9.4&&tt<9.7)){
+    sparkleD(706,TOP-70,t);
+  }
+  // MRS. NEVER WRONG: arrives, judges the music, votes cat
+  let wp=null;
+  if(tt>=10.6&&tt<12.0){
+    const k=ease((tt-10.6)/1.4), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,985,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=12.0){
+    const nod=(tt>=12.6&&tt<14.4)?Math.sin(tt*5)*6:0;
+    wp={x:985, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:(tt>=12.6&&tt<14.4)?{sh:92,el:-16}:{sh:34,el:60},
+      mouth:'smile', headTilt:nod, style:STYLEW};        // points at the cat's pick
+  }
+  if(wp) drawMan(wp);
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.6){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-200,420,ease(tt/1.6)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:86,el:-64}, mouth:'smile', style:STYLER};  // carrying the phone in
+  } else if(tt<2.4){
+    mp={x:440, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:104,el:4}, mouth:'smile', style:STYLER};   // docks it
+  } else if(tt<4.6){
+    const b=Math.sin(tt*6.5);
+    mp={x:430, y:HIP_STAND, face:1,
+      legs:[{hip:8+b*4,knee:6},{hip:-6-b*4,knee:6}],
+      arm:{sh:120+b*18,el:-40}, mouth:'smile', headTilt:b*7, style:STYLER}; // vibing
+  } else if(tt<5.8){
+    mp={x:470, y:HIP_STAND, face:1, lean:6,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:100,el:0}, mouth:'o', eyes:'wide', style:STYLER}; // track changed?!
+  } else if(tt<7.0){
+    mp={x:470, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:106,el:6}, mouth:'flat', style:STYLER};    // changes it back
+  } else if(tt<10.6){
+    const shake=Math.sin(tt*9)*5;
+    mp={x:470, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-8}, mouth:'o', eyes:'wide', headTilt:shake, style:STYLER}; // the war
+  } else if(tt<14.4){
+    mp={x:450, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'flat', style:STYLER};    // pleading his case
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:450, y:HIP_STAND, face:1, lean:14,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=4.7&&tt<5.6){const kk=easeOutBack(Math.min(1,(tt-4.7)/0.26)); starburst(840,FLOOR-700,kk*0.8,'SKRRT.');}
+  if(tt>=12.7&&tt<14.0){const kk=easeOutBack(Math.min(1,(tt-12.7)/0.3)); starburst(880,FLOOR-840,kk*0.85,'BANGER.');}
+  ctx.restore();
+  showBadge(24);
+  if(t>=0.05&&t<2.0) caption(['THE PARTY PLAYLIST.','CURATED BY A PRO.'],340,(t+0.3)/0.35,48);
+  if(t>=2.8&&t<4.2) caption(['THREE HOURS.','ZERO SKIPS.'],340,(t-2.8)/0.35,50);
+  if(t>=4.9&&t<6.2) caption(['...WHO CHANGED','THE SONG?'],340,(t-4.9)/0.35,50);
+  if(t>=FR0+0.05&&t<FR1) caption(['A DUEL.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=8.6&&t<10.2) caption(['TAP. TAP BACK.','TAP. TAP BACK.'],340,(t-8.6)/0.35,46);
+  if(t>=12.6&&t<14.2) caption(['THE JUDGE HAS','PICKED A SIDE.'],340,(t-12.6)/0.35,48);
+  if(t>=15.0&&t<16.4) caption(['DJ CAT','RUNS THE AUX.'],340,(t-15.0)/0.35,50);
+  if(t>=17.4&&t<18.45){
+    caption(['WHAT DOES THE CAT PLAY','FIRST? WRONG ANSWERS ONLY.'],340,(t-17.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 2 W · 8 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+function sparkleD(x,y,t){
+  ctx.save(); ctx.strokeStyle='#ffe9a8'; ctx.lineWidth=6; ctx.lineCap='round';
+  for(let i=0;i<5;i++){
+    const a=i/5*Math.PI*2+t*3;
+    ctx.beginPath(); ctx.moveTo(x+Math.cos(a)*14,y+Math.sin(a)*14);
+    ctx.lineTo(x+Math.cos(a)*30,y+Math.sin(a)*30); ctx.stroke();
+  }
+  ctx.restore();
+}
+REELS[24]=ep24;
+SHAKES[24]=[7.4,0.25,14];
+TAGLINES[24]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[24]=18.5;
+
+// ================= EP. 25 · THE GUEST LIST =================
+function drawListD(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rad(rot||0));
+  ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='#f6f1e0';
+  rr(-52,-70,104,140,8); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='#8a7f68'; ctx.lineWidth=5;
+  for(let i=0;i<5;i++){ctx.beginPath();ctx.moveTo(-36,-46+i*24);ctx.lineTo(36,-46+i*24);ctx.stroke();}
+  ctx.restore();
+}
+function ep25(t){
+  const FR0=6.4, FR1=7.2;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(540,1250); ctx.scale(z,z); ctx.translate(-540,-1250);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  drawBowlD(930, FLOOR-6, 6, 1.1);
+  // sneakers: cat first (MBB facing left), Wobbles second (MBB facing right)
+  if(tt>=1.8&&tt<3.2){
+    drawCatD(lerp(W+160,880,ease((tt-1.8)/1.4)), FLOOR, {pose:'trot',face:-1,t:t,s:1.4});
+  } else if(tt>=3.2){
+    drawCatD(880, FLOOR, {face:-1,t:t,s:1.4});
+  }
+  if(tt>=3.6&&tt<5.0){
+    const wob=Math.sin(t*12)*6;
+    drawChair(lerp(-180,180,ease((tt-3.6)/1.4)), wob, 0, 0, RED23);
+  } else if(tt>=5.0){
+    const wob=(tt>14.0)?Math.sin(t*14)*7:0;
+    drawChair(180, wob, 0, 0, RED23);
+  }
+  // TYLER: materializes at 8.0 beside MBB, holding his plus-two note
+  if(tt>=8.0){
+    const shy=(tt>=10.4&&tt<12.4);
+    const tp={x:755, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:(tt>=12.4&&tt<14.4)?{sh:96,el:-10}:{sh:40,el:46},
+      mouth:shy?'flat':'smile', headTilt:shy?10:0, style:STYLET};
+    drawMan(tp);
+    if(tt>=12.4&&tt<14.4) drawListD(875,HIP_STAND-290,10);
+  }
+  // MR. BIG BUSINESS: list duty
+  let mp=null;
+  if(tt<1.2){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-200,460,ease(tt/1.2)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:86,el:-60}, mouth:'smile', style:STYLER};
+  } else if(tt<3.2){
+    mp={x:460, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:86,el:-60}, mouth:'flat', style:STYLER};   // studying list, facing LEFT (cat sneaks right)
+  } else if(tt<5.0){
+    mp={x:460, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:86,el:-60}, mouth:'flat', style:STYLER};   // turns RIGHT (Wobbles sneaks left)
+  } else if(tt<6.4){
+    mp={x:460, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:96,el:-6}, mouth:'o', eyes:'wide', style:STYLER}; // spots the cat by the bowl
+  } else if(tt<8.0){
+    mp={x:460, y:HIP_STAND, face:-1, lean:-6,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:96,el:-6}, mouth:'o', eyes:'wide', style:STYLER}; // spots Wobbles too
+  } else if(tt<10.4){
+    mp={x:460, y:HIP_STAND, face:1, lean:-8,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:88,el:-2}, mouth:'o', eyes:'wide', style:STYLER}; // WHERE DID YOU COME FROM
+  } else if(tt<14.4){
+    mp={x:460, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'flat', style:STYLER};
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:430, y:HIP_STAND, face:1, lean:12,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt<14.4&&tt>=1.2){} // list in hand is implied by arm pose
+  if(tt>=5.2&&tt<6.4){const kk=easeOutBack(Math.min(1,(tt-5.2)/0.26)); starburst(700,FLOOR-800,kk*0.8,'?!');}
+  if(tt>=8.2&&tt<9.4){const kk=easeOutBack(Math.min(1,(tt-8.2)/0.28)); starburst(610,FLOOR-860,kk*0.85,'POP.');}
+  if(tt>=14.6&&tt<16.0){const kk=easeOutBack(Math.min(1,(tt-14.6)/0.3)); starburst(320,FLOOR-800,kk*0.9,'SIGH.');}
+  ctx.restore();
+  showBadge(25);
+  if(t>=0.05&&t<2.0) caption(['THE GUEST LIST.','FINAL. LAMINATED.'],340,(t+0.3)/0.35,48);
+  if(t>=2.6&&t<4.0) caption(['NO CRASHERS','THIS YEAR.'],340,(t-2.6)/0.35,50);
+  if(t>=5.4&&t<6.3) caption(['...HOW.'],340,(t-5.4)/0.35,56);
+  if(t>=FR0+0.05&&t<FR1) caption(['BOTH OF THEM.'],340,(t-FR0-0.05)/0.35,50);
+  if(t>=8.5&&t<10.2) caption(['WHERE DID YOU','EVEN COME FROM?'],340,(t-8.5)/0.35,46);
+  if(t>=10.6&&t<12.2) caption(['...im the','new intern.'],340,(t-10.6)/0.35,44);
+  if(t>=12.6&&t<14.2) caption(['THEY ARE MY','PLUS TWO.'],340,(t-12.6)/0.35,48);
+  if(t>=15.0&&t<16.4) caption(['THE LIST IS NOW','DECORATIVE.'],340,(t-15.0)/0.35,46);
+  if(t>=17.4&&t<18.45){
+    caption(['WHO ELSE IS ON TYLER\'S LIST?','WRONG ANSWERS ONLY.'],340,(t-17.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 2 W · 9 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[25]=ep25;
+SHAKES[25]=[6.4,0.25,14];
+TAGLINES[25]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[25]=18.5;
+
+// ================= EP. 26 · THE DANCE REHEARSAL =================
+function scoreCard(x,y,txt,k){
+  if(k<=0)return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k);
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#f6f1e0';
+  rr(-70,-90,140,180,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#241a35'; ctx.font='900 110px "Archivo Black"'; ctx.textAlign='center';
+  ctx.fillText(txt,0,40);
+  ctx.restore();
+}
+function ep26(t){
+  const FR0=5.8, FR1=6.6;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(840,1150); ctx.scale(z,z); ctx.translate(-840,-1150);
+  }
+  drawRoom();
+  miniPumpkin(70, FLOOR+88);
+  // MRS. NEVER WRONG: the judge, seated-ish at right with scorecards
+  if(tt>=0.8){
+    const judge={x:940, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'flat', style:STYLEW};
+    let card=null;
+    if(tt>=4.8&&tt<7.6) card='6';
+    else if(tt>=9.6&&tt<11.2) card='9';
+    else if(tt>=12.8&&tt<13.8) card='7';
+    else if(tt>=14.6&&tt<16.6) card='10';
+    if(card){ judge.arm={sh:140,el:-34}; judge.mouth=(card==='6'||card==='7')?'flat':'smile'; }
+    drawMan(judge);
+    if(card) scoreCard(1000, HIP_STAND-430, card, easeOutBack(Math.min(1,((tt-(card==='6'?4.8:card==='9'?9.6:card==='7'?12.8:14.6))/0.4))));
+  }
+  // WOBBLES: dance entry no.2
+  if(tt>=7.2&&tt<9.2){
+    const wob=Math.sin(t*13)*10, k=ease(Math.min(1,(tt-7.2)/1.0));
+    drawChair(lerp(-180,420,k), wob, 0, 0, RED23);
+  } else if(tt>=9.2&&tt<12.0){
+    const groove=Math.sin(t*10)*12;
+    drawChair(420, groove, 0, 0, RED23);
+  } else if(tt>=12.0){
+    drawChair(180, Math.sin(t*7)*3, 0, 0, RED23);  // parked, smug
+  }
+  // THE CAT: walks through at 13.4, does nothing, gets the 10
+  if(tt>=13.4&&tt<14.6){
+    drawCatD(lerp(-160,520,ease((tt-13.4)/1.2)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+  } else if(tt>=14.6){
+    drawCatD(520, FLOOR, {face:1,t:t,s:1.4});
+  }
+  // MR. BIG BUSINESS: the artist
+  let mp=null;
+  if(tt<1.2){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-200,440,ease(tt/1.2)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:120,el:-40}, mouth:'smile', style:STYLER};
+  } else if(tt<4.6){
+    const b=Math.sin(tt*7);
+    mp={x:440+Math.sin(tt*3.5)*60, y:HIP_STAND-Math.abs(b)*16, face:(Math.sin(tt*1.7)>0?1:-1),
+      legs:[{hip:30*b,knee:-10},{hip:-30*b,knee:10}],
+      arm:{sh:130+b*30,el:-50}, arm2:{sh:130-b*30,el:-50}, mouth:'smile', headTilt:b*8, style:STYLER}; // THE routine
+  } else if(tt<5.8){
+    mp={x:470, y:HIP_STAND, face:1, lean:-6,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:120,el:-36}, mouth:'smile', style:STYLER};  // finish pose, waiting on the score
+  } else if(tt<7.2){
+    mp={x:470, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-8}, mouth:'o', eyes:'wide', style:STYLER}; // SIX?!
+  } else if(tt<12.0){
+    mp={x:640, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'o', eyes:'wide', style:STYLER}; // watching the chair cook
+  } else if(tt<13.4){
+    const b=Math.sin(tt*9);
+    mp={x:560, y:HIP_STAND-Math.abs(b)*18, face:1,
+      legs:[{hip:34*b,knee:-14},{hip:-34*b,knee:14}],
+      arm:{sh:150+b*26,el:-70}, arm2:{sh:150-b*26,el:-70}, mouth:'o', style:STYLER}; // desperation round
+  } else if(tt<16.6){
+    mp={x:660, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-6}, mouth:'o', eyes:'wide', style:STYLER}; // pointing at the cat: it did NOTHING
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:660, y:HIP_STAND, face:1, lean:12,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=4.9&&tt<5.8){const kk=easeOutBack(Math.min(1,(tt-4.9)/0.26)); starburst(640,FLOOR-840,kk*0.85,'SIX?');}
+  if(tt>=9.7&&tt<10.9){const kk=easeOutBack(Math.min(1,(tt-9.7)/0.28)); starburst(640,FLOOR-860,kk*0.85,'NINE?!');}
+  if(tt>=14.8&&tt<16.2){const kk=easeOutBack(Math.min(1,(tt-14.8)/0.3)); starburst(480,FLOOR-740,kk*0.95,'TEN.');}
+  ctx.restore();
+  showBadge(26);
+  if(t>=0.05&&t<2.0) caption(['REHEARSING THE','HALLOWEEN ENTRANCE.'],340,(t+0.3)/0.35,44);
+  if(t>=2.6&&t<4.2) caption(['HE HAS BEEN','PRACTICING ALL WEEK.'],340,(t-2.6)/0.35,44);
+  if(t>=FR0+0.05&&t<FR1) caption(['A SIX.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=7.6&&t<9.0) caption(['NEW','CHALLENGER.'],340,(t-7.6)/0.35,50);
+  if(t>=10.0&&t<11.4) caption(['THE CHAIR','GOT A NINE.'],340,(t-10.0)/0.35,48);
+  if(t>=13.6&&t<14.6) caption(['AND THEN...'],340,(t-13.6)/0.35,50);
+  if(t>=15.0&&t<16.6) caption(['THE CAT DID','NOTHING. TEN.'],340,(t-15.0)/0.35,46);
+  if(t>=17.4&&t<18.45){
+    caption(['SCORE HIS MOVES 1 TO 10.','BE HONEST.'],340,(t-17.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 2 W · 10 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[26]=ep26;
+SHAKES[26]=[5.8,0.25,14];
+TAGLINES[26]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[26]=18.5;
+
+// ================= EP. 27 · THE WALKTHROUGH =================
+function ep27(t){
+  const FR0=10.8, FR1=11.6;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(540,1150); ctx.scale(z,z); ctx.translate(-540,-1150);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  drawTable(820,0,0);
+  drawBowlD(800, FLOOR-280, 6, 1.0);
+  // the perfect chair row
+  drawChair(180,0,0,0); drawChair(380,0,0,0); drawChair(560,0,0,0);
+  // WOBBLES: tries to sneak onto the end of the row as chair four
+  let wx=null;
+  if(tt>=3.8&&tt<5.2) wx=lerp(W+200,730,ease((tt-3.8)/1.4));
+  else if(tt>=5.2&&tt<6.2) wx=730;
+  else if(tt>=6.2&&tt<7.6) wx=lerp(730,W+220,ease((tt-6.2)/1.4));
+  if(wx!==null){
+    const wob=(tt<5.2||tt>6.2)?Math.sin(t*12)*6:Math.sin(t*5)*2;
+    drawChair(wx,wob,0,0,RED23);
+  }
+  // THE CAT: goes for the big bowl, takes the floor decoy instead
+  if(tt>=7.6){
+    if(tt<8.8) drawCatD(lerp(-160,560,ease((tt-7.6)/1.2)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    else if(tt<10.0) drawCatD(lerp(560,700,ease((tt-8.8)/1.2)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    else drawCatD(700, FLOOR, {face:1,t:t,s:1.4});
+  }
+  if(tt>=8.6) drawBowlD(690, FLOOR-6, 4, 0.85);   // the decoy, floor level
+  // MRS. NEVER WRONG: the inspector, works the row from the left
+  let wp=null;
+  if(tt<1.4){
+    const k=ease(tt/1.4), step=Math.sin(tt*9);
+    wp={x:lerp(-200,140,k), y:HIP_STAND-Math.abs(step)*9, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt<3.8){
+    const k=ease((tt-1.4)/2.4), step=Math.sin(tt*8);
+    wp={x:lerp(140,480,k), y:HIP_STAND-Math.abs(step)*7, face:1,
+      legs:[{hip:18*step,knee:8},{hip:-18*step,knee:8}],
+      arm:{sh:86,el:-56}, mouth:'flat', style:STYLEW};   // walking the row, clipboard arms
+  } else if(tt<10.8){
+    wp={x:480, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:86,el:-56}, mouth:'flat', style:STYLEW};   // inspecting the table side
+  } else if(tt<13.2){
+    const nod=Math.sin(tt*5)*6;
+    wp={x:480, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:120,el:-60}, mouth:'smile', headTilt:nod, style:STYLEW};  // APPROVED
+  } else {
+    wp={x:480, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'smile', style:STYLEW};
+  }
+  if(wp) drawMan(wp);
+  // MR. BIG BUSINESS: hosts from the right, one step ahead all episode
+  let mp=null;
+  if(tt<1.4){
+    mp={x:920, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:110,el:-30}, mouth:'smile', style:STYLER};  // welcome sweep
+  } else if(tt<3.8){
+    mp={x:920, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'smile', style:STYLER};
+  } else if(tt<5.2){
+    mp={x:920, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:88,el:-4}, mouth:'flat', eyes:'wide', style:STYLER}; // clocks Wobbles silently
+  } else if(tt<7.6){
+    mp={x:870, y:HIP_STAND, face:-1, lean:8,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:100,el:4}, mouth:'flat', style:STYLER};     // calmly escorts it back out
+  } else if(tt<10.0){
+    mp={x:880, y:HIP_STAND, face:-1, lean:8,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:104,el:12}, mouth:'smile', style:STYLER};   // slides the decoy bowl down
+  } else if(tt<13.2){
+    mp={x:920, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'smile', style:STYLER};    // hands folded, flawless
+  } else {
+    const flex=Math.sin(tt*5)*6;
+    mp={x:920, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:12,knee:4},{hip:-8,knee:6}],
+      arm:{sh:150+flex,el:-100}, arm2:{sh:150-flex,el:-100}, mouth:'smile', style:STYLER};
+  }
+  drawMan(mp);
+  // TYLER: appears for the celebration, clapping, far left
+  if(tt>=14.2){
+    const clap=Math.sin(tt*10)*16;
+    drawMan({x:90, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:120+clap,el:-60}, arm2:{sh:120-clap,el:-60}, mouth:'smile', style:STYLET});
+  }
+  if(tt>=4.0&&tt<5.2){const kk=easeOutBack(Math.min(1,(tt-4.0)/0.26)); starburst(840,FLOOR-820,kk*0.75,'AHEM.');}
+  if(tt>=8.8&&tt<10.0){const kk=easeOutBack(Math.min(1,(tt-8.8)/0.26)); starburst(760,FLOOR-700,kk*0.7,'DECOY.');}
+  if(tt>=11.8&&tt<13.2){const kk=easeOutBack(Math.min(1,(tt-11.8)/0.3)); starburst(440,FLOOR-860,kk*0.9,'APPROVED.');}
+  if(tt>=14.4&&tt<16.0){const kk=easeOutBack(Math.min(1,(tt-14.4)/0.3)); starburst(320,FLOOR-820,kk*0.95,'W No.3!');}
+  ctx.restore();
+  showBadge(27);
+  if(t>=0.05&&t<2.0) caption(['THE FINAL','WALKTHROUGH.'],340,(t+0.3)/0.35,50);
+  if(t>=2.4&&t<3.8) caption(['EVERYTHING MUST','BE PERFECT.'],340,(t-2.4)/0.35,46);
+  if(t>=4.4&&t<5.8) caption(['NICE TRY.','NOT TODAY.'],340,(t-4.4)/0.35,48);
+  if(t>=7.9&&t<9.3) caption(['HE PLANNED FOR','THE CAT TOO.'],340,(t-7.9)/0.35,46);
+  if(t>=FR0+0.05&&t<FR1) caption(['FLAWLESS.'],340,(t-FR0-0.05)/0.35,56);
+  if(t>=12.0&&t<13.4) caption(['SHE SAID','APPROVED.'],340,(t-12.0)/0.35,50);
+  if(t>=14.8&&t<16.4) caption(['WIN NUMBER','THREE.'],340,(t-14.8)/0.35,50);
+  if(t>=17.4&&t<18.45){
+    caption(['CAN HE KEEP THE STREAK AT THE','HALLOWEEN PARTY? PREDICTIONS BELOW.'],340,(t-17.4)/0.35,36);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 10 L'],1700,(t-17.4)/0.35,28);
+  }
+}
+REELS[27]=ep27;
+SHAKES[27]=[10.8,0.25,14];
+TAGLINES[27]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[27]=18.5;
 </script>
 </body></html>
 

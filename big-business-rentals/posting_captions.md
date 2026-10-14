@@ -1993,3 +1993,223 @@ The spookiest number on the calendar and the last comfortable week to book: the 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
 #halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+---
+
+## VIDEO CAPTIONS · THU OCT 15 - SUN OCT 18 (gag 5pm reel, pink 6pm story, episode 8pm reel; all four channels, YT Shorts versions below each)
+
+**THURSDAY OCT 15 · GAG 5PM · BB_Halloween_Reel_FogMachine.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+A little fog for the vibes. Then a lot. 💨
+
+The fog machine had one job and did it too well. When it cleared, the party had gained a guest nobody invited. Vibes: delivered. Send this to the friend who always overdoes the decorations.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #fogmachine #funnyreels #lasvegas #partyrentals
+
+YouTube title: The fog machine did its job TOO well 💨 #Shorts
+YouTube description:
+A little fog for the vibes, then a lot, then a surprise guest. Vibes delivered. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #FogMachine #FunnyShorts #LasVegas #PartyRentals
+
+**THURSDAY OCT 15 · PINK 6PM · BB_PinkOctober_Under40.mp4 (story, YT cat 22)**
+
+FB/IG/TikTok:
+Under 40? This one is for you. 🎀
+
+Young does not mean immune. Know your normal, get changes checked, and if something feels off, speak up until somebody listens. Family history moves the timeline up, so ask your doctor when screening should start for you. Send this to a friend who keeps putting the call off.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #under40 #knowyourbody #lasvegas
+
+YouTube title: Under 40? Know your normal. 🎀 #Shorts
+YouTube description:
+Young does not mean immune. Know your normal, get changes checked, and ask your doctor when screening should start for you.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #Under40 #LasVegas
+
+**THURSDAY OCT 15 · EPISODE 8PM · BB_Chronicles_Ep24_ThePlaylistWar.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+The cat is the DJ now. 🎧
+
+EP. 24: three hours of curated playlist versus one cat with a paw. Tap, tap back, tap again, and then the judge picked a side. DJ Cat runs the aux and the record falls to 2 and 8. What does the cat play first? Wrong answers only.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #djcat #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 24: The Playlist War 🎧 DJ Cat wins #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: one curated playlist, one cat with a paw, one judge who picked a side. Record: 2 wins, 8 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+**FRIDAY OCT 16 · GAG 5PM · BB_Halloween_Reel_DancingBroom.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+The broom is self-employed. 🧹
+
+Swept the whole floor, dodged a stakeout, and turned out to have a ghost on payroll the entire time. Cleanup crew never left. We pick up after parties too, send this to whoever always gets stuck sweeping.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #hauntedhouse #funnyreels #lasvegas #partyrentals
+
+YouTube title: The broom is self-employed 🧹 #Shorts
+YouTube description:
+It swept the floor, dodged a stakeout, and had a ghost on payroll the whole time. Cleanup crew never left. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Ghost #FunnyShorts #LasVegas #PartyRentals
+
+**FRIDAY OCT 16 · PINK 6PM · BB_PinkOctober_BuddySystem.mp4 (story, YT cat 22)**
+
+FB/IG/TikTok:
+Some things are easier with a friend. 🎀
+
+Screening is one of them. Book the same week, remind each other, celebrate after. Mammograms catch what hands cannot feel, and your doctor can tell you the schedule that fits your age and history. Send this to your screening buddy and make it a date. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #buddysystem #mammogram #lasvegas
+
+YouTube title: Book your screening with a friend. 🎀 #Shorts
+YouTube description:
+The buddy system works: book the same week, remind each other, celebrate after. Mammograms catch what hands cannot feel. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #BuddySystem #LasVegas
+
+**FRIDAY OCT 16 · EPISODE 8PM · BB_Chronicles_Ep25_TheGuestList.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+The guest list was final. Was. 📋
+
+EP. 25: no crashers this year, until the cat and the chair showed up as somebody's plus two. Tyler appeared out of nowhere again, and the list is now decorative. Record drops to 2 and 9. Who else is on Tyler's list? Wrong answers only.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #tylertheintern #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 25: The Guest List 📋 Tyler strikes again #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: the list was final, laminated, and completely ignored. Tyler brought a plus two. Record: 2 wins, 9 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+**SATURDAY OCT 17 · GAG 5PM · BB_Halloween_Reel_SeanceTable.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+The table had other plans. 🛸
+
+One minute it is sturdy and normal, the next it is hovering like rent is due on the ceiling. He talked it down, it landed perfect, and the cat claimed it immediately. Our tables always come back down. Send this to somebody who believes in ghosts.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #seance #funnyreels #lasvegas #partyrentals
+
+YouTube title: The table had other plans 🛸 #Shorts
+YouTube description:
+Sturdy, normal, and suddenly airborne. He talked it down, it landed perfect, the cat claimed it. Our tables always come back down. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #Seance #FunnyShorts #LasVegas #PartyRentals
+
+**SATURDAY OCT 17 · PINK 6PM · BB_PinkOctober_SurvivorSalute.mp4 (story, YT cat 22)**
+
+FB/IG/TikTok:
+This one is not a tip. It is a thank you. 🎀
+
+To everyone in the fight right now, to everyone who won it, and to everyone we carry with us. Pink looks good on Vegas all month. Wear it, share it, and ask somebody how they are really doing. Send this to a survivor you love.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #survivor #stillhere #lasvegas
+
+YouTube title: To the survivors: still here, still celebrated. 🎀 #Shorts
+YouTube description:
+To everyone in the fight, everyone who won it, and everyone we carry with us. Pink looks good on Vegas all October.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #Survivor #LasVegas
+
+**SATURDAY OCT 17 · EPISODE 8PM · BB_Chronicles_Ep26_TheDanceRehearsal.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+The chair got a nine. He got a six. 💃
+
+EP. 26: all week rehearsing the Halloween entrance, and the judge gave the routine a six. The red chair wobbled once and scored a nine. The cat did nothing and got a ten. Record: 2 and 10. Score his moves below, be honest.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #dancebattle #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 26: The Dance Rehearsal 💃 a six?! #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: he rehearsed all week and scored a six. The chair got a nine. The cat did nothing and got a ten. Record: 2 wins, 10 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+**SUNDAY OCT 18 · GAG 5PM · BB_Halloween_Reel_CandyTax.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+Candy tax. Everybody pays. 🍬
+
+One for the road from every bowl, no exceptions, until bowl number three turned out to have a cat on it. Full refund, interest included. The tax has exceptions. Send this to the friend who skims every candy bowl.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #candytax #funnyreels #lasvegas #partyrentals
+
+YouTube title: Candy tax. Everybody pays. Except one. 🍬 #Shorts
+YouTube description:
+One for the road from every bowl, until bowl three had a cat on it. Full refund, interest included. New Halloween gags daily from Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Halloween #CandyTax #FunnyShorts #LasVegas #PartyRentals
+
+**SUNDAY OCT 18 · PINK 6PM · BB_PinkOctober_GroupText.mp4 (story, YT cat 22)**
+
+FB/IG/TikTok:
+Three names. One text. Today. 🎀
+
+Your mom, your sister, your best friend. Ask when their last screening was, no lecture, just love. The women in your life spend all year taking care of everybody else, so today somebody checks on them. That somebody is you. Send this to the group chat.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #checkonyourpeople #grouptext #lasvegas
+
+YouTube title: Three names. One text. Today. 🎀 #Shorts
+YouTube description:
+Ask the women you love when their last screening was. No lecture, just love. A thirty second text can start the appointment that matters.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #CheckOnYourPeople #LasVegas
+
+**SUNDAY OCT 18 · EPISODE 8PM · BB_Chronicles_Ep27_TheWalkthrough.mp4 (reel, YT cat 23)**
+
+FB/IG/TikTok:
+He finally had a perfect day. 🏆
+
+EP. 27: the final walkthrough before the big Halloween party. The chair tried the row, denied. The cat went for the bowl, decoyed. She said approved, and that is win number three. Can he keep the streak going at the Halloween party? Predictions below.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #bigwin #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 27: The Walkthrough 🏆 win number three #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: chair denied, cat decoyed, client approved. Win number three on the board. Record: 3 wins, 10 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
