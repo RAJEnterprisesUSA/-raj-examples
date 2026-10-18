@@ -2238,7 +2238,7 @@ seconds in both lanes go into story beats, never a longer end card.
 
 ---
 
-## GENDER REVEAL BILINGUAL FLYER (owner request Sat Oct 18 morning, one-off deliverable)
+## GENDER REVEAL BILINGUAL FLYER (owner request Sun Oct 18 morning, one-off deliverable)
 
 Owner sent a competitor's bilingual gender reveal flyer and asked for the same thing with his
 photos, his business and his prices. Built big-business-rentals/flyers/BB_GenderReveal_Bilingual.png
