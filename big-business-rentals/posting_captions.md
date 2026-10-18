@@ -2235,3 +2235,18 @@ encode -t 17.2, afade out at 16.7, action through ~13.8s, end card from 14.0 via
 window.GAGENDS[n]=14.0 per-reel setting added to reelH.html drawFrame (default stays 9.0, so
 gags #1-23 render unchanged). Pink awareness videos are not comedy and stay 26s. The extra five
 seconds in both lanes go into story beats, never a longer end card.
+
+---
+
+## GENDER REVEAL BILINGUAL FLYER (owner request Sat Oct 18 morning, one-off deliverable)
+
+Owner sent a competitor's bilingual gender reveal flyer and asked for the same thing with his
+photos, his business and his prices. Built big-business-rentals/flyers/BB_GenderReveal_Bilingual.png
+(1080x1350) + story9 pad. Every line EN + ES like the example: TEAM PINK or TEAM BLUE / Gender
+Reveal headline, two REAL photos (venue room cropped to remove the person, backyard banquet run
+photo with no people), services box (Tables · Mesas | Chairs · Sillas | Linens · Manteles | Chair
+Covers · Fundas | Delivery Setup Pickup · Entrega Instalación y Recogida), real venue prices
+(3 hours $625 · 4 horas $800 con mesas sillas e instalación), rentals = free quote · cotización
+gratis (no invented rental prices), BOOK YOUR DATE · RESERVA TU FECHA (702) 706-8287 gradient bar,
+BB footer. Build script: build_genderreveal_flyer.py. NOT queued; delivered to owner for use.
+Suggested caption if he wants it posted is in chat.
