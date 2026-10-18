@@ -2250,3 +2250,10 @@ Covers · Fundas | Delivery Setup Pickup · Entrega Instalación y Recogida), re
 gratis (no invented rental prices), BOOK YOUR DATE · RESERVA TU FECHA (702) 706-8287 gradient bar,
 BB footer. Build script: build_genderreveal_flyer.py. NOT queued; delivered to owner for use.
 Suggested caption if he wants it posted is in chat.
+
+FOLLOW-UP (owner, same morning): "I don't want it to be a gender reveal flyer." Reworked into a
+GENERAL bilingual party rentals flyer, same structure and photos: flyers/BB_PartyRentals_Bilingual.png
++ story9 pad (build_partyrentals_flyer.py). Headline EVERY OCCASION · TODA OCASIÓN / Party Rentals,
+sublines name birthdays and quinceañeras EN + ES, brand Purple/Gold palette replaces pink/blue,
+same services box, venue prices and (702) 706-8287 CTA bar. The gender reveal version stays on file
+unposted in case he ever wants it for an actual gender reveal promo.

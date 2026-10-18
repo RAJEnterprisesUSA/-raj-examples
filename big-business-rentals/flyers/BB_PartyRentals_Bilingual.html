@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';
+  background:linear-gradient(115deg,#f8f0e0 0%,#faf3e3 40%,#f0e6f2 70%,#e4d9ee 100%)}
+.grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;box-shadow:inset 0 0 180px rgba(120,95,70,.18)}
+.frame{position:absolute;inset:26px;border:2px solid #c9a24a;border-radius:6px}
+.frame2{position:absolute;inset:34px;border:1px solid rgba(201,162,74,.5);border-radius:4px}
+.wrap{position:absolute;inset:34px;padding:24px 52px 24px;text-align:center}
+.bizname{font-family:'Playfair';font-weight:900;font-size:48px;color:#241a35;letter-spacing:.5px}
+.bizname em{font-style:italic;color:#b9892f}
+.city{font-family:'Oswald';font-weight:600;font-size:21px;letter-spacing:9px;color:#6d6454;margin-top:8px}
+.rule{width:230px;height:5px;margin:12px auto 14px;border-radius:3px;
+  background:linear-gradient(90deg,#3a1a5e 0%,#3a1a5e 48%,#c9a24a 52%,#c9a24a 100%)}
+.team{font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:5px;color:#5a5244}
+.team .p{color:#3a1a5e}.team .b{color:#b9892f}.team .o{color:#8a8070;font-size:24px;letter-spacing:2px}
+.big{margin-top:2px;font-family:'Playfair';font-weight:900;font-size:96px;line-height:1.0}
+.big .p{color:#3a1a5e}.big .b{color:#b9892f;font-style:italic}
+.sub{margin-top:10px;font-weight:700;font-size:25px;color:#3f3827}
+.sub2{margin-top:4px;font-weight:600;font-style:italic;font-size:21px;color:#7a6f58}
+.photos{margin-top:16px;display:flex;gap:26px;justify-content:center}
+.ph{width:452px}
+.ph .img{width:452px;height:290px;border-radius:10px;background-size:cover;background-position:center;
+  border:3px solid #c9a24a;box-shadow:0 14px 30px rgba(60,40,20,.22)}
+.ph.pink .img{outline:6px solid rgba(58,26,94,.35);outline-offset:-9px}
+.ph.blue .img{outline:6px solid rgba(201,162,74,.45);outline-offset:-9px}
+.ph .lab{margin-top:8px;font-family:'Oswald';font-weight:600;font-size:20px;letter-spacing:4px}
+.ph.pink .lab{color:#3a1a5e}
+.ph.blue .lab{color:#9a7420}
+.box{margin:16px auto 0;width:930px;background:rgba(255,255,255,.82);border:2px solid #c9a24a;
+  border-radius:12px;padding:14px 30px 14px;box-shadow:0 10px 26px rgba(60,40,20,.12)}
+.boxh{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:4px;color:#241a35}
+.svc{margin-top:8px;font-size:21px;line-height:1.55;color:#3f3827;font-weight:600}
+.svc b{font-weight:700;color:#241a35}
+.svc .es{color:#7a6f58}
+.fine{margin-top:8px;font-size:18px;color:#6d6454;font-weight:600;line-height:1.5}
+.fine b{color:#241a35}
+.cta{margin:16px auto 0;width:930px;border-radius:12px;padding:12px 10px 14px;color:#fff;
+  background:linear-gradient(90deg,#3a1a5e 0%,#5b2a86 55%,#b9892f 100%);
+  box-shadow:0 12px 28px rgba(58,26,94,.35)}
+.cta .l1{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:5px}
+.cta .l2{font-family:'Archivo Black';font-size:46px;margin-top:3px;text-shadow:0 3px 10px rgba(0,0,0,.25)}
+.foot{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:18px}
+.foot img{width:58px;height:58px}
+.foot .t{text-align:left}
+.foot .s1{font-family:'Archivo Black';font-size:24px;color:#241a35}
+.foot .s2{font-weight:600;font-size:17px;color:#6d6454;margin-top:2px}
+</style></head>
+<body>
+  <div class="grain"></div><div class="vig"></div>
+  <div class="frame"></div><div class="frame2"></div>
+  <div class="wrap">
+    <div class="bizname">Big Business <em>Party Rentals</em> &amp; Events</div>
+    <div class="city">LAS VEGAS, NEVADA</div>
+    <div class="rule"></div>
+    <div class="team"><span class="p">EVERY OCCASION</span> <span class="o">·</span> <span class="b">TODA OCASIÓN</span></div>
+    <div class="big"><span class="p">Party</span> <span class="b">Rentals</span></div>
+    <div class="sub">Tables, chairs and linens for birthdays, quinceañeras and more!</div>
+    <div class="sub2">¡Mesas, sillas y manteles para cumpleaños, quinceañeras y más!</div>
+    <div class="photos">
+      <div class="ph pink">
+        <div class="img" style="background-image:url('gr_indoor.jpg')"></div>
+        <div class="lab">THE VENUE · EL SALÓN</div>
+      </div>
+      <div class="ph blue">
+        <div class="img" style="background-image:url('gr_outdoor.jpg')"></div>
+        <div class="lab">YOUR BACKYARD · TU JARDÍN</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="boxh">WE RENT &amp; DELIVER &nbsp;·&nbsp; RENTAMOS Y ENTREGAMOS</div>
+      <div class="svc"><b>Tables</b> <span class="es">· Mesas</span> &nbsp;|&nbsp; <b>Chairs</b> <span class="es">· Sillas</span> &nbsp;|&nbsp; <b>Linens &amp; Tablecloths</b> <span class="es">· Manteles</span><br>
+      <b>Chair Covers</b> <span class="es">· Fundas para Sillas</span> &nbsp;|&nbsp; <b>Delivery, Setup &amp; Pickup</b> <span class="es">· Entrega, Instalación y Recogida</span></div>
+      <div class="fine">Private venue available · Salón privado disponible: <b>3 hours $625 · 4 horas $800</b>, tables, chairs and setup included · con mesas, sillas e instalación</div>
+    </div>
+    <div class="cta">
+      <div class="l1">BOOK YOUR DATE &nbsp;·&nbsp; RESERVA TU FECHA</div>
+      <div class="l2">(702) 706-8287</div>
+    </div>
+    <div class="foot">
+      <img src="bb_logo.png">
+      <div class="t">
+        <div class="s1">bigbusinesspartyrentals.com</div>
+        <div class="s2">Free quotes · Cotización gratis &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+      </div>
+    </div>
+  </div>
+</body></html>
