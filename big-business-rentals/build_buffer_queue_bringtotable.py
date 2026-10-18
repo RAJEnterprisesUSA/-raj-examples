@@ -41,7 +41,7 @@ def gql(inp):
 def create(channel, text, yt_title=None):
     inp = {"channelId": CH[channel], "text": text, "mode": "customScheduled",
            "schedulingType": "automatic", "dueAt": "2026-10-19T10:00:00-07:00",
-           "assets": [{"video": {"url": RAW + "big-business-rentals/user-videos/BB_BringToTable.mp4"}}]}
+           "assets": [{"video": {"url": RAW + "big-business-rentals/user-videos/BB_BringToTable_V.mp4"}}]}
     if channel == "fb":
         inp["metadata"] = {"facebook": {"type": "reel", "firstComment": FC_FB}}
     elif channel == "ig":

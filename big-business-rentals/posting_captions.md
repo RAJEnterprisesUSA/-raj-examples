@@ -2257,3 +2257,31 @@ GENERAL bilingual party rentals flyer, same structure and photos: flyers/BB_Part
 sublines name birthdays and quinceañeras EN + ES, brand Purple/Gold palette replaces pink/blue,
 same services box, venue prices and (702) 706-8287 CTA bar. The gender reveal version stays on file
 unposted in case he ever wants it for an actual gender reveal promo.
+
+---
+
+## BRING TO THE TABLE SKETCH (owner-supplied AI video, queued Sun Oct 18 for MON OCT 19 10AM)
+
+Owner sent a 40s cinematic date-night sketch ("So what do you bring to the table?" "The tables.
+White folding tables, white folding chairs, and white round tables."). Original 1280x720 landscape;
+FB reels and YouTube Shorts require vertical, so built user-videos/BB_BringToTable_V.mp4 (1080x1920
+blur-pad, original audio). Queued 3/3 OK as Monday Oct 19 10am business-slot reel: FB reel + IG reel
+(cross-linked firstComments) + YouTube cat 23. NOT TikTok (the 4-post cap belongs to Monday's gag,
+pink, episode and PRICE IT). A first landscape IG post was queued then deleted and replaced with the
+vertical version. Queue script: build_buffer_queue_bringtotable.py.
+
+FB/IG caption:
+So what do you bring to the table?
+
+The tables. He understood the assignment: white folding tables, white folding chairs and white round tables, delivered, set up and picked up all over Las Vegas. Send this to somebody whose answer would be the same, or comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#datenight #partyrentals #funnyreels #lasvegas #tablesandchairs
+
+YouTube title: What do you bring to the table? 😂 #Shorts
+YouTube description:
+She asked what he brings to the table. He brought the actual tables. White folding tables, folding chairs and round tables, delivered and set up all over Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #FunnyShorts #DateNight #PartyRentals #LasVegas
