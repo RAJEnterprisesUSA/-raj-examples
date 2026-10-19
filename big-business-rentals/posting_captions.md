@@ -2355,3 +2355,119 @@ FOLLOW-UP (owner, minutes later): "this add on will replace the gag reel." GAG L
 REMIX video takes the gag reel's 5pm slot and all four channels including TikTok (cap stays 4:
 PRICE IT + trend + pink + episode through Oct 31). The ~17s short-reel spec applies to trend
 videos. reelH.html and its rig stay on file for trend builds. Gag #24 never runs.
+
+---
+
+## MONDAY OCT 19 (first set on the merged format; queued Sunday night)
+
+Lanes: MORNING CARD 9am SPACE MATH No.35 (Black&Gold, 6, merged lane debut, tip-style day) ·
+venue 12pm HOLIDAY DATE (Velvet, single) · PRICE IT 1pm HoopLounge (fresh indoor, NBA tipoff week,
+no logos, FB+IG+TT pad) · referral 2pm THE NAIL TECH (Purple, 5, profession-direct per week-2 data) ·
+español 3pm #8 DICIEMBRE (Cream, 5) · countdown 4pm 12 NIGHTS (Halloween, 4) ·
+TREND REMIX 5pm debut BB_Trend_CostumeWalk (17.2s, costume-walk slow-reveal format, all 4 channels) ·
+Pink #18 THE CALLBACK 6pm (26s) · EP. 28 THE TASTE TEST 8pm (FIRST 26s EPISODE; decoy twist,
+cat heist, W-L 3-11). Trend topic log: costume walk slow-reveal format charting on TikTok
+(anijam/newengen/revid roundups, Oct 18); news cycle skipped as tragedy-heavy.
+
+**Morning card · SPACE MATH No.35**
+Your living room is smaller than you think.
+
+Twenty yeses in the group chat and one couch: about ten square feet per seated guest is the math nobody does. We size the table and chair order to your space, and if the math says no, our private venue seats 40. Comment QUOTE and we will DM you a price today.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#partytips #partyplanning #lasvegas #partyrentals #eventplanning
+
+**Venue · HOLIDAY DATE (single)**
+Your holiday party has a date. Claim it.
+
+The December Saturdays are already moving. Private venue seats 40, holds 80 standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment VENUE for open December dates, or chat with us at bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#holidayparty #december #lasvegas #venue #eventspace
+
+**PRICE IT · HOOP LOUNGE (FB/IG + TikTok pad, 1pm)**
+How much would you pay for this setup?
+
+Hoops watch party at ballroom scale: six rounds of ten, a wall-sized screen and a stadium snack spread. Be honest, wrong answers welcome, drop your number below. The decorations are the inspo. The tables, the chairs and the room underneath? That is us.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#priceit #watchparty #basketball #lasvegas #partyrentals
+
+**Referral · THE NAIL TECH**
+Your nail tech hears every party plan first.
+
+Baby showers, birthdays, quinces: two hours of acrylic is two hours of party intel. If you do nails, or you know who does yours, send the party people our way and collect up to $100 after their event wraps. Send this to your nail tech. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#nailtech #referral #lasvegas #sidehustle #partyrentals
+
+**EN ESPAÑOL #8 · DICIEMBRE (3pm)**
+Diciembre se reserva en octubre.
+
+Posadas, cenas de empresa, año nuevo: los sábados de diciembre se apartan primero. Mesas, sillas y manteles entregados, instalados y recogidos en todo Las Vegas, y nuestro salón privado recibe 40 sentados y 80 de pie. Aparta tu fecha hoy. ¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#diciembre #posadas #lasvegas #rentademesas #fiestas
+
+**Countdown · 12 NIGHTS**
+12 nights. Your house or theirs?
+
+Somebody in your circle is hosting Halloween, and the one with the tables and chairs wins the argument. Halloween is a Saturday this year. Swipe, then comment SPOOKY and we will DM you open October dates.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+**TREND REMIX #1 · THE COSTUME WALK (5pm reel, all four channels)**
+The costume walk. Everybody is doing it. 🎃
+
+Even the chair understood the assignment: full dramatic slow walk, cape, hat, overtaken by the cat halfway down the runway. The real reveal is the setup behind it. We deliver the whole scene, tables, chairs and all. Send this to the most dramatic person you know.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#costumewalk #halloween #trending #lasvegas #partyrentals
+
+YouTube title: The costume walk, but make it furniture 🎃 #Shorts
+YouTube description:
+The dramatic slow walk, the cape, the reveal. Even the chair is doing the trend, and the real reveal is the party setup behind it. Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #CostumeWalk #Halloween #FunnyShorts #LasVegas
+(Trend sound note for the owner: the format runs to "Ramalama (Bang Bang)" in-app; ours ships with original SFX, add the sound on TikTok if you want it.)
+
+**Pink #18 · THE CALLBACK (6pm story FB/IG + TT + YT)**
+Got called back after a screening? Breathe. 🎀
+
+A callback is not a diagnosis. Often they just need a clearer image, and most callbacks are not cancer. The only wrong move is skipping the follow-up: take somebody with you, ask questions, write the answers down. Send this to somebody waiting on that letter. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #mammogram #thecallback #lasvegas
+
+YouTube title: A callback is not a diagnosis. 🎀 #Shorts
+YouTube description:
+Most screening callbacks are not cancer, often they just need a clearer image. The only wrong move is skipping the follow-up. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #TheCallback #LasVegas
+
+**EP. 28 · THE TASTE TEST (8pm reel, first 26s episode)**
+He invented the decoy. They learned it. 😼
+
+EP. 28, now in extended cut: three secret menu samples, one very loud red distraction at the door, and one cat already on the table. The student became the teacher and the record falls to 3 and 11. What snack would you guard with your life?
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #comedy #lasvegas #funnyreels #decoy
+
+YouTube title: EP. 28: The Taste Test 😼 his own decoy #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES, extended cut: three menu samples, one loud distraction, one cat already eating. Record: 3 wins, 11 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
