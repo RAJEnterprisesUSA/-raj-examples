@@ -3863,6 +3863,179 @@ REELS[27]=reelT27;
 SHAKES[27]=[10.6,0.25,12];
 TAGLINES[27]='THE SETUP ARRIVES. WHATEVER IT TAKES.';
 window.GAGENDS[27]=14.0;
+
+// ---------- T28: TREND REMIX · the cat judges (black-cat reaction format, 17s) ----------
+function podiumH(x){
+  ctx.save(); ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#3a1a5e';
+  rr(x-130, FLOOR-250, 260, 250, 12); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B';
+  ctx.fillRect(x-130, FLOOR-250, 260, 18);
+  ctx.fillStyle='#5b2a86';
+  rr(x-150, FLOOR-280, 300, 36, 10); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function reelT28(t){
+  const MX=800;
+  // zoom to the judge during each verdict
+  let z=1, cx=540, cy=1100;
+  const zones=[[2.9,4.3],[5.9,7.3],[8.9,10.3],[11.9,13.6]];
+  for(const [a,b] of zones){
+    if(t>=a&&t<b){
+      const k=Math.min(1,(t-a)/0.3)*Math.min(1,(b-t)/0.3);
+      z=1+0.5*Math.min(1,k*1.4); cx=MX; cy=FLOOR-420;
+    }
+  }
+  ctx.save();
+  ctx.translate(cx,cy); ctx.scale(z,z); ctx.translate(-cx,-cy);
+  drawRoomH(t);
+  podiumH(MX);
+  // THE JUDGE: the cat, seated on the podium, reacting with its whole body
+  let catRot=0, catY=FLOOR-280;
+  if(t>=2.9&&t<4.3) catRot=-0.10;                       // recoil from the budget chair
+  else if(t>=5.9&&t<7.3) catRot=0.14;                   // lean in, disgusted interest
+  else if(t>=8.9&&t<10.3) catRot=Math.sin(t*2.2)*0.03;  // the slow approving sway
+  else if(t>=11.9&&t<13.6) catY=FLOOR-280-Math.abs(Math.sin(t*7))*40;  // the applause bounce
+  ctx.save(); ctx.translate(MX,catY); ctx.rotate(catRot); ctx.translate(-MX,-catY);
+  drawCat(MX, catY, {face:-1, t:t, s:1.5});
+  ctx.restore();
+  // THE EXHIBITS, stage left
+  if(t>=1.5&&t<4.5){
+    const k=easeOutBack(Math.min(1,(t-1.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(4.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawChair(300,Math.sin(t*13)*10,0.3,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  } else if(t>=4.5&&t<7.5){
+    const k=easeOutBack(Math.min(1,(t-4.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(7.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawTable(300,Math.sin(t*9)*3,0.45+0.1*Math.sin(t*6));   // the neighbor's dying table
+    ctx.restore();
+  } else if(t>=7.5&&t<10.5){
+    const k=easeOutBack(Math.min(1,(t-7.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(10.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawTable(300,0,0); drawChair(140,0,0,0); drawChair(460,0,0,0);
+    ctx.restore();
+  } else if(t>=10.5){
+    const k=easeOutBack(Math.min(1,(t-10.5)/0.5));
+    ctx.save(); ctx.translate((1-k)*-500,0);
+    drawTable(300,0,0); drawBowl(280,FLOOR-280,6);
+    drawChair(140,0,0,0); drawChair(460,0,0,0);
+    if(t>11.2) sparkle(300,FLOOR-340,t);
+    ctx.restore();
+  }
+  ctx.restore();
+  if(t>=3.2&&t<4.3){const kk=easeOutBack(Math.min(1,(t-3.2)/0.26)); starburst(430,FLOOR-900,kk*0.8,'NO.');}
+  if(t>=6.2&&t<7.3){const kk=easeOutBack(Math.min(1,(t-6.2)/0.26)); starburst(430,FLOOR-900,kk*0.8,'INSULTED.');}
+  if(t>=9.2&&t<10.3){const kk=easeOutBack(Math.min(1,(t-9.2)/0.26)); starburst(430,FLOOR-900,kk*0.75,'HM.');}
+  if(t>=12.2&&t<13.6){const kk=easeOutBack(Math.min(1,(t-12.2)/0.28)); starburst(430,FLOOR-900,kk*0.9,'APPLAUSE.');}
+  if(t<1.6) caption(['THE JUDGE','IS IN.'],240,(t+0.35)/0.35,52);
+  if(t>=1.8&&t<2.9) caption(['EXHIBIT A:','THE "BUDGET" CHAIR.'],240,(t-1.8)/0.35,44);
+  if(t>=4.8&&t<5.9) caption(["EXHIBIT B: THE","NEIGHBOR'S TABLE."],240,(t-4.8)/0.35,44);
+  if(t>=7.8&&t<8.9) caption(['EXHIBIT C:','A REAL SETUP.'],240,(t-7.8)/0.35,46);
+  if(t>=10.8&&t<11.9) caption(['EXHIBIT D:','DELIVERY DAY.'],240,(t-10.8)/0.35,46);
+  if(t>=12.6&&t<13.9) caption(['EVEN THE CAT APPROVES.','BOOK YOUR OWN.'],240,(t-12.6)/0.35,42);
+}
+REELS[28]=reelT28;
+SHAKES[28]=[11.9,0.25,10];
+TAGLINES[28]='THE TOUGHEST CRITIC IN THE BUSINESS.';
+window.GAGENDS[28]=14.0;
+
+// ---------- T29: TREND REMIX · the porch reveal (17s) ----------
+function porchH(){
+  ctx.save(); ctx.lineWidth=9; ctx.strokeStyle=INK;
+  // house wall + door
+  ctx.fillStyle='#241633'; ctx.fillRect(0,0,W,FLOOR-40);
+  ctx.fillStyle='#2f1d44'; ctx.fillRect(0,FLOOR-760,W,720);
+  ctx.fillStyle='#5b2a86'; rr(430, FLOOR-520, 220, 480, 10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.beginPath(); ctx.arc(620, FLOOR-280, 11, 0, 7); ctx.fill();
+  // porch boards
+  ctx.fillStyle='#3d2b24'; ctx.fillRect(0,FLOOR-40,W,H-(FLOOR-40));
+  ctx.strokeStyle='rgba(0,0,0,0.35)'; ctx.lineWidth=4;
+  for(let y=FLOOR+20;y<H;y+=70){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.restore();
+}
+function reelT29(t){
+  const FR0=10.8, FR1=11.6;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.18*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(540,1150); ctx.scale(z,z); ctx.translate(-540,-1150);
+  }
+  porchH();
+  // reveals land one by one with each light sweep
+  const r1=(tt>=2.2), r2=(tt>=4.2), r3=(tt>=6.2), r4=(tt>=8.2), FULL=(tt>=10.2);
+  if(r1){ // pumpkins
+    const k=easeOutBack(Math.min(1,(tt-2.2)/0.5));
+    ctx.save(); ctx.translate(280,FLOOR+40); ctx.scale(k,k); ctx.translate(-280,-(FLOOR+40));
+    drawPumpkin(280, FLOOR+40, 1.1); drawPumpkin(385, FLOOR+52, 0.7);
+    ctx.restore();
+  }
+  if(r2){ // the skeleton greeter
+    const k=easeOutBack(Math.min(1,(tt-4.2)/0.5));
+    ctx.save(); ctx.globalAlpha=k;
+    drawSkeleton({x:870, y:HIP_STAND, face:-1, arm:{sh:150,el:-60},
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}]});
+    ctx.restore();
+  }
+  if(r3){ // the candy table
+    const k=easeOutBack(Math.min(1,(tt-6.2)/0.5));
+    ctx.save(); ctx.translate(250,FLOOR); ctx.scale(k,k); ctx.translate(-250,-FLOOR);
+    drawTable(250,0,0); drawBowl(230,FLOOR-280,6);
+    ctx.restore();
+  }
+  if(r4){ // the seating row
+    const k=easeOutBack(Math.min(1,(tt-8.2)/0.5));
+    ctx.save(); ctx.translate(600,FLOOR); ctx.scale(k,k); ctx.translate(-600,-FLOOR);
+    drawChair(560,0,0,0); drawChair(710,0,0,0);
+    ctx.restore();
+  }
+  if(FULL){
+    witchHatH(126,FLOOR-388,1,0.05);
+    drawChair(120,Math.sin(t*5)*4,0,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    sparkle(540,FLOOR-520,t);
+    sparkle(250,FLOOR-360,t+0.4);
+  }
+  // the lighting: a sweeping spotlight until the full reveal
+  if(!FULL){
+    let sx=540;
+    if(tt<2.2) sx=540;
+    else if(tt<4.2) sx=200; else if(tt<6.2) sx=880; else if(tt<8.2) sx=250; else sx=630;
+    const dark=0.92-((tt>=10.0)?(tt-10.0)/0.2*0.92:0);
+    spotOverlay(sx, FLOOR-260, Math.max(0,dark));
+  }
+  // string lights come alive on the full reveal
+  if(FULL){
+    ctx.save();
+    ctx.strokeStyle='#c98f3a'; ctx.lineWidth=5;
+    ctx.beginPath(); ctx.moveTo(0,240); ctx.quadraticCurveTo(540,400,W,240); ctx.stroke();
+    for(let i=0;i<11;i++){
+      const k=i/10, bx=lerp(0,W,k), by=240+Math.sin(Math.PI*k)*118;
+      ctx.fillStyle=(i%2)?'#ff8c2e':'#f6c231';
+      ctx.beginPath(); ctx.arc(bx,by+14,11,0,7); ctx.fill();
+      ctx.fillStyle='rgba(246,194,49,0.18)';
+      ctx.beginPath(); ctx.arc(bx,by+14,26,0,7); ctx.fill();
+    }
+    ctx.restore();
+  }
+  ctx.restore();
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(540,FLOOR-940,kk*0.9,'THE REVEAL.');}
+  if(t<1.9) caption(['THE PORCH REVEAL.','YOU KNOW THE FORMAT.'],240,(t+0.35)/0.35,42);
+  if(t>=2.5&&t<3.7) caption(['FIRST,','THE CLASSICS.'],240,(t-2.5)/0.35,48);
+  if(t>=4.5&&t<5.7) caption(['THE GREETER','WORKS FOR FREE.'],240,(t-4.5)/0.35,44);
+  if(t>=6.5&&t<7.7) caption(['THE CANDY','STATION.'],240,(t-6.5)/0.35,48);
+  if(t>=8.5&&t<9.7) caption(['AND REAL SEATING.','THAT IS THE SECRET.'],240,(t-8.5)/0.35,40);
+  if(t>=11.8&&t<13.0) caption(['DECOR GETS THE VIEWS.','SEATING KEEPS THE GUESTS.'],240,(t-11.8)/0.35,38);
+  if(t>=13.1&&t<13.9) caption(['TABLES AND CHAIRS,','DELIVERED.'],240,(t-13.1)/0.35,46);
+}
+REELS[29]=reelT29;
+SHAKES[29]=[10.8,0.25,12];
+TAGLINES[29]='WE DELIVER THE WHOLE SCENE.';
+window.GAGENDS[29]=14.0;
 </script>
 </body></html>
 
