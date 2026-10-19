@@ -59,7 +59,7 @@ body{position:relative;font-family:'Montserrat';color:#f2ecdd;
     <div class="script">Las Vegas party rentals and a private venue</div>
     <div class="box">
       <div class="boxh">WHAT WE RENT</div>
-      <div class="line"><b>Tables · Chairs · Linens · Chair Covers</b><br>Delivered, set up and picked up anywhere in Las Vegas.</div>
+      <div class="line"><b>Chairs $2 · 6 ft tables from $10 · Table + 6 chairs $22</b><br>Linens and chair covers too. Delivered and picked up anywhere in Las Vegas.<br>Full-service setup and breakdown from $265.</div>
     </div>
     <div class="box">
       <div class="boxh">THE PRIVATE VENUE</div>

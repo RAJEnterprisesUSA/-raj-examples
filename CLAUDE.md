@@ -24,6 +24,14 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 - Do not invent prices or services. Known prices: Venue Package 3-Hour $625 (up to 25 guests),
   4-Hour $800 (up to 40). Venue: seats 40, holds 80 standing. Referral: up to $100 per booking,
   fine print "Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed".
+  RENTAL PRICE LIST (owner-supplied price card, Oct 18 night; the pending price-list unlock is
+  DONE): DROP-OFF prices: folding chair $2 · 6 ft rectangle table $10 · 6 ft round table $15 ·
+  table + 6 chairs set $22. Drop-off = delivered and picked up, CUSTOMER sets up, delivery quoted
+  with the order (not free, not included in item price). FULL-SERVICE (we set up and break down):
+  packages FROM $265. COPY RULE from this point: for rentals say "delivered and picked up" plus
+  "full-service setup available", never a blanket "setup included" (that applies to the VENUE
+  package only, where it IS included). Owner's card saved at flyers/BB_PriceCard_Owner.png and
+  posted; reuse these numbers freely, never others.
 
 ## The daily set (triggered when user names a weekday, e.g. "Monday")
 8 pieces/day through October, each labeled with its ROUTING:
@@ -150,8 +158,7 @@ Approved expansions ("ok"), live now:
   are allowed on Google posts per the firstComment rule.
 - SUNDAY REPORT COUNTS LEADS: ask the owner each Sunday for rough call/DM/site-chat counts and
   fold them into the weekly report; steer lanes by leads, not reach.
-PENDING OWNER INPUT (ask when relevant, never invent): rental PRICE LIST (unlocks price menu card
-+ "Comment PRICE" lead magnet), weekly OPEN DATES list (unlocks scarcity posts; becomes the
+PENDING OWNER INPUT (ask when relevant, never invent): weekly OPEN DATES list (unlocks scarcity posts; becomes the
 countdown lane's replacement after Oct 31 as a December-dates countdown), SPANISH DM confirmation
 (unlocks "Comenta COTIZA" keyword CTAs in the español lane), weekly $5-10 boost pick (report names
 the candidate each Sunday).
