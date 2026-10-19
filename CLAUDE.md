@@ -441,8 +441,15 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   invite, decree everyone is invited, cat beds on the spare stack, finale setup, W-L 3-13).
   Wednesday ALSO carries START HERE pinned post 10am + owner price card 11am (queued earlier) =
   29 posts total. Captions under WEDNESDAY OCT 21. Next: morning card Thursday (business-angle
-  day), trend search Thursday, Pink #21, EP. 31, español #11, PRICE IT outdoor Thursday,
+  day), Pink #21, EP. 31, español #11, PRICE IT outdoor Thursday,
   referral profession next: photographer or party planner.
+  THURSDAY TREND LOCKED BY OWNER (directive Oct 19 night): no search needed, the topic is the
+  new Tesla roadster reveal. Concept: OUR DELIVERY VEHICLE operates exactly like the roadster
+  while making a delivery (instant launch, hover/thruster flight, mid-air parking, soft landing,
+  calm delivery of tables and chairs). Brand-safe per the lane rule: ride the trend, not the
+  brand. NO Tesla name, logo, badge or likeness of their actual design anywhere on frame or in
+  captions; generic "the new roadster everybody is talking about" phrasing only. Punchline lands
+  on delivery. BB_Trend_RocketDelivery, REELS[27], GAGENDS[27]=14.0, 17s spec.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
