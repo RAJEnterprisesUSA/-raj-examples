@@ -2329,3 +2329,23 @@ referral, español, countdown, gag, pink, episode), dropping to 7 in November wh
 pink retire with October. Effort saved goes to real footage edits, profession-direct referral
 carousels and the comedy lanes, per the week-2 data. Everything else unchanged: PRICE IT daily
 with the TikTok 1pm slot, referral daily, español daily at 3pm, videos at 5/6/8pm.
+
+---
+
+## NEW LANE (owner directive Sun Oct 18 night): DAILY TREND REMIX VIDEO
+
+"something id like to ad is a trending topic post , id like you to do a daily web search and find
+the most talked about topic for example teslas new flying roadster, and id like you to remix it or
+recreate it in a funny video that works toward my business angle."
+
+Lane rules logged in CLAUDE.md (TREND REMIX LANE): daily extended web search during the nightly
+build, fun topics only (never tragedy or politics), parody the idea never the brand (no logos,
+trademarks or celebrity likenesses), punchline always lands on the business, ~17s+, 7pm slot,
+FB + IG + YouTube (TikTok from Nov 1 when pink's reel slot frees up), our own SFX (owner adds
+trending sounds in-app when wanted), naming BB_Trend_*, topic + source logged daily.
+
+FIRST SEARCH (Sun Oct 18, for the Monday Oct 19 build): news cycle is tragedy-heavy (off-limits).
+Social trend pick: the COSTUME WALK slow-reveal format charting on TikTok this week (low-angle
+dramatic slow approach, then the costume reveal), plus NBA tipoff hashtags rising. Monday concept:
+BB_Trend_CostumeWalk, Lil Wobbles does the full dramatic slow-walk runway reveal in costume while
+the finished party setup reveals behind him; punchline: the setup looked better without a costume.

@@ -137,6 +137,24 @@ QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and 
 generate 1-2 new setups per day during the nightly build, not in batches. If the day's quota is exhausted
 before the PRICE IT image is made, generate it first thing the next session, never fall back to the bank.
 
+## TREND REMIX LANE (owner directive Oct 18 night, DAILY from the Monday Oct 19 build)
+One trending-topic comedy video per day that remixes the day's most talked-about topic toward the
+business ("teslas new flying roadster" was the owner's example). Mechanics, every nightly build:
+1. SEARCH: one extended WebSearch for the day's most talked-about topic (news + social trends).
+2. PICK with guardrails: fun topics only, product launches, viral formats, pop culture, sports
+   moments, absurd stories. NEVER tragedies, deaths, disasters, politics, culture-war topics.
+   Parody the IDEA, never the brand: no logos, trademarks, celebrity likenesses or implied
+   affiliation (same spirit as the rodeo rule: ride the trend, not the brand). A "flying roadster"
+   gag is fine, a Tesla logo is not. No licensed audio via API: remix the FORMAT with our own
+   SFX bed; note in the caption log when the owner should add the trending sound in-app.
+3. MAKE IT OURS: the punchline always lands on tables, chairs, linens, delivery or the venue.
+   Use whatever medium fits: the canvas rig cast (Wobbles/cat/Chronicles characters reacting to
+   or living the trend), recut real footage with the cinematic pipeline, or AI imagery (HF quota
+   permitting). Comedy length rule applies (~17s+). Naming: BB_Trend_*.
+4. SLOT: 7pm Vegas daily, FB reel + IG reel + YouTube (cat 23). NOT TikTok until Nov 1 (the
+   4-post cap holds; when pink retires Oct 31 the trend reel takes its TikTok reel slot).
+5. LOG the day's topic, source and angle in posting_captions.md with the captions.
+
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),
 UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from nowhere,
