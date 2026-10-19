@@ -2767,3 +2767,128 @@ and the record falls to 3 and 14. What goes wrong at the finale? Predictions bel
 YT: "EP. 31: The Dry Run 🎃 perfect for two seconds #Shorts" (cat 23)
 
 (Chat CTA rule satisfied three times: morning card, venue, español.)
+
+====================================================================
+FRIDAY OCT 23 (built and queued Monday night Oct 19, four days ahead; 13 cards + 12 videos)
+====================================================================
+
+MORNING CARD 9am · PARTY MATH TIP No.37 PLAYLIST MATH (Daylight Cream, 6; the weekly
+light-mode card)
+"68 songs. That is the whole party."
+A four hour party plays about 68 songs at three and a half minutes each, so you only need to
+pick 20 must-plays and one aux rule: the host holds it. The playlist is your argument to
+have. The tables, the chairs and the room underneath the party? That is our job. Comment
+QUOTE and we will DM you.
+#partytips #playlist #lasvegas #partyplanning #partyrentals
+
+VENUE 12pm · TOMORROW NIGHT OR NEXT SATURDAY? (Halloween palette single)
+"The 24th and the 31st are both party Saturdays..." Comment VENUE DM CTA.
+#halloween #venue #lasvegas #halloweenparty #eventspace
+
+PRICE IT 1pm · SPEAKEASY JAZZ (fresh indoor 1920s speakeasy lounge, round tables of eight,
+art deco gold; rotation Thu outdoor GlowNight -> Fri indoor; FB+IG+TT pad)
+"Speakeasy night: round tables of eight in black satin and gold, candlelight, a live jazz
+corner and a checkered dance floor... The band is the inspo. The tables, the chairs and the
+room underneath? That is us."
+#priceit #speakeasy #gatsbyparty #lasvegas #partyrentals
+
+REFERRAL 2pm · THE PARTY PLANNER (Desert Teal, 5; profession run continues)
+"Party planners, this one pays you." Vendor-list angle + fine print.
+#eventplanner #referral #lasvegas #partyplanner #vendorlist
+
+EN ESPAÑOL #12 3pm · HALLOWEEN CAE EN SÁBADO (Emerald, 5)
+"Dos sábados de fiesta seguidos: el 24 y el 31..." precios $22/$265/$625.
+#halloween #fiestas #lasvegas #rentademesas #sabado
+
+COUNTDOWN 4pm · 8 NIGHTS (Velvet, 4) "The weekend is loaded." SPOOKY CTA.
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+TREND REMIX #5 5pm · BB_Trend_CatJudges (17.2s, reelH REELS[28], GAGENDS[28]=14.0)
+TREND LOG Oct 23 (extended search Oct 19 night, socialpilot/newengen/later/socialbee
+roundups): picked the BLACK CAT REACTION format (the clapping black cat used to judge
+things that deserve applause or are terrible). Perfect cast fit: THE CAT judges four
+exhibits from a podium: budget chair NO, neighbor's collapsing table INSULTED, real setup
+HM, delivery day APPLAUSE. Format only, our own SFX bed; owner can add the trending
+black-cat sound in-app.
+FB/IG: "The toughest judge on the internet rated our setups. 🐈"
+(full caption in queue script; ends "Send this to somebody whose pet judges their life
+choices.")
+#blackcat #catsoftiktok #funnyreels #lasvegas #partyrentals
+YT: "The black cat judged our party setups 🐈 #Shorts" (cat 23)
+
+PINK OCTOBER #22 6pm · THE ONE-MINUTE CHECKLIST (pink22.html, 26s, ACS)
+"October is almost over. This takes one minute. 🎀" Book/confirm screening, ask both sides,
+set monthly reminder, tell two people.
+#breastcancerawareness #pinkoctober #checklist #screening #lasvegas
+YT: "The one-minute Pink October checklist 🎀 #Shorts" (cat 22)
+
+EP. 32 8pm · THE SUPPLY RUN (REELS[32], 26s, ENDTIMES[32]=23.5; drawBoxD/candyBagD
+helpers; every finale supply box holds a red chair, Wobbles drive-by of guilt, one sad
+candy bag, RETURN THEM verdict, Tyler in box two, cat signed for everything; L, W-L 3-15)
+"He ordered party supplies. Every box was a chair. 📦" end-card: what should he order
+instead, wrong answers only.
+#thebigbusinesschronicles #halloweenparty #comedy #lasvegas #funnyreels
+YT: "EP. 32: The Supply Run 📦 every box was a chair #Shorts" (cat 23)
+
+(Chat CTA rule: the first Friday queue run shipped without site-chat lines; FIXED the same
+night via editPost on 4 queued posts: PlaylistMath FB+IG now ends "...or skip the wait and
+use the chat at bigbusinesspartyrentals.com", venue FB+IG now ends "...or chat with us at
+bigbusinesspartyrentals.com." Two chat captions on Friday, rule satisfied.)
+
+====================================================================
+SATURDAY OCT 24 (built and queued Monday night Oct 19, five days ahead; 13 cards + 12 videos)
+====================================================================
+
+MORNING CARD 9am · NOVEMBER IS THE NEW DECEMBER (Midnight Navy, 5; business-angle day)
+"Friendsgiving, work parties and big race weekend guests: November fills quietly while
+everybody stares at December..." $22 set / $265 full-service, QUOTE date CTA.
+#friendsgiving #holidayparty #lasvegas #november #partyrentals
+
+VENUE 12pm · NEXT SATURDAY IS THE 31ST (Purple/Gold single)
+"One week from tonight, the biggest party night of fall." VENUE CTA + chat line. [chat CTA 1]
+#halloween #venue #lasvegas #halloweenparty #eventspace
+
+PRICE IT 1pm · GRIDIRON YARD (fresh outdoor backyard game-day watch party, big screen on
+the turf, silver/black tables for thirty, no logos; FB+IG+TT pad)
+"Backyard game day... The screen is the inspo. The tables, the chairs and the layout
+underneath? That is us."
+#priceit #gameday #watchparty #lasvegas #partyrentals
+
+REFERRAL 2pm · THE TEACHER (Black&Gold, 5)
+"Teachers know every party first." Thirty families per classroom angle + fine print.
+#teacher #referral #lasvegas #teachersofinstagram #sidehustle
+
+EN ESPAÑOL #13 3pm · RECOMIENDA Y GANA (Desert Teal, 5; referidos round 2, Spanish fine
+print on card)
+"Recomienda y gana hasta $100." + chat de bigbusinesspartyrentals.com. [chat CTA 2]
+#referidos #ganadinero #lasvegas #fiestas #recomienda
+
+COUNTDOWN 4pm · 7 NIGHTS ONE WEEK EXACTLY (Emerald, 4; verified 31-24=7)
+"Next Saturday, this exact hour, it is Halloween." SPOOKY CTA.
+#halloween #halloweencountdown #oneweek #lasvegas #partyrentals
+
+TREND REMIX #6 5pm · BB_Trend_PorchReveal (17.2s, reelH REELS[29], GAGENDS[29]=14.0)
+TREND LOG Oct 24 (same Oct 19 extended search): picked the HALLOWEEN PORCH REVEAL format
+(dramatic spotlight-sweep reveal of a decked porch). Our twist: sweeps reveal the classics
+(pumpkins, skeleton greeter, candy station) and the finale beat is REAL SEATING: "Decor
+gets the views. Seating keeps the guests." porchH/lightString visuals, Wobbles witch-hat
+cameo at the candy table. Format only; owner can add the trending porch-reveal sound
+in-app.
+FB/IG: "The porch reveal, but make it make money. 🎃"
+#porchreveal #halloween #trending #lasvegas #partyrentals
+YT: "The Halloween porch reveal with the real secret 🎃 #Shorts" (cat 23)
+
+PINK OCTOBER #23 6pm · ASK THESE THREE (pink23.html, 26s, ACS)
+"Your next screening deserves questions. 🎀" dense tissue / next due / changes to watch,
+write it down.
+#breastcancerawareness #pinkoctober #askquestions #screening #lasvegas
+YT: "Three questions to ask at your screening 🎀 #Shorts" (cat 22)
+
+EP. 33 8pm · THE LIGHT CHECK (REELS[33], 26s, ENDTIMES[33]=23.5; lightStringD/tangleD/
+wobblesLitD helpers; the tangle catches Wobbles who becomes the chandelier with opinions,
+inspector says higher, Tyler pre-lit his corner, every bulb works until the cat finds the
+outlet, one light survives (the wrong one); L, W-L 3-16)
+"Every bulb worked. Then the cat found the outlet. 💡" end-card: caption the cat's
+thoughts, best one gets credited.
+#thebigbusinesschronicles #halloweenparty #comedy #lasvegas #funnyreels
+YT: "EP. 33: The Light Check 💡 the cat found the outlet #Shorts" (cat 23)

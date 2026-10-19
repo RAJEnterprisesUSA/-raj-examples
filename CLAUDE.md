@@ -458,9 +458,30 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   "flying roadster news" phrasing only), Pink #21 THE NO-COST EDITION (pink21.html, CDC early detection program,
   dial 211), EP. 31 THE DRY RUN (REELS[31]; finale rehearsal, Wobbles crams into the row,
   inspection passed, cat knocks the centerpiece pumpkin, Tyler completes the row, W-L 3-14).
-  Captions under THURSDAY OCT 22. Next: morning card Friday (tip day No.37), trend search
-  Friday, Pink #22, EP. 32, español #12, PRICE IT indoor Friday, referral profession next:
-  party planner or event coordinator.
+  Captions under THURSDAY OCT 22.
+- FRIDAY OCT 23 + SATURDAY OCT 24 SETS BUILT AND QUEUED MONDAY NIGHT, FOUR AND FIVE DAYS
+  AHEAD (cards 13/13 OK each; videos queued same session, see chat). FRIDAY: tip No.37
+  PLAYLIST MATH (Cream, 6, weekly light card; chat line added to queued caption via
+  editPost), TOMORROW OR NEXT SATURDAY venue (Halloween single, chat line via editPost),
+  PRICE IT = BB_PriceIt_SpeakeasyJazz (fresh indoor 1920s speakeasy), THE PARTY PLANNER
+  referral (Teal, 5), ESPAÑOL #12 HALLOWEEN CAE EN SÁBADO (Emerald, 5), 8 NIGHTS (Velvet,
+  4), TREND #5 BB_Trend_CatJudges (REELS[28]; black-cat reaction format: the cat judges
+  four exhibits from a podium, applause for delivery day), Pink #22 THE ONE-MINUTE
+  CHECKLIST (pink22.html), EP. 32 THE SUPPLY RUN (REELS[32]; every box a red chair, one
+  candy bag, Tyler in box two, W-L 3-15). SATURDAY: NOVEMBER IS THE NEW DECEMBER business
+  card (Navy, 5), NEXT SATURDAY IS THE 31ST venue (Purple single, chat line), PRICE IT =
+  BB_PriceIt_GridironYard (fresh outdoor backyard game day, no logos), THE TEACHER referral
+  (Black&Gold, 5), ESPAÑOL #13 RECOMIENDA Y GANA (Teal, 5, Spanish fine print, chat line),
+  7 NIGHTS ONE WEEK EXACTLY (Emerald, 4), TREND #6 BB_Trend_PorchReveal (REELS[29];
+  porch-reveal format, payoff "decor gets the views, seating keeps the guests", Wobbles
+  witch-hat cameo), Pink #23 ASK THESE THREE (pink23.html), EP. 33 THE LIGHT CHECK
+  (REELS[33]; Wobbles becomes the chandelier, cat unplugs everything, one light survives,
+  W-L 3-16). Trend picks from one Oct 19 extended search (socialpilot/newengen/later
+  roundups), logged per day. Captions under FRIDAY OCT 23 and SATURDAY OCT 24. Next:
+  SUNDAY OCT 25 = weekly analytics report No.3 + GBP pack + lead counts + boost pick;
+  Sunday set: tip day No.38, trend search fresh, Pink #24, EP. 34, español #14, PRICE IT
+  indoor Sunday, referral profession: event coordinator or hair stylist; countdown 6
+  NIGHTS; arc note: EP. 34-37 run up to the Oct 31 full-cast finale.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
