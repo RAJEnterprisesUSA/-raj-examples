@@ -2553,3 +2553,20 @@ owner pins manually; caption logged in scratch queue script) and GOOGLE BUSINESS
 Sunday with the weekly report). Sunday reports now also ask the owner for lead counts (calls, DMs,
 site chats). Waiting on owner: rental price list, weekly open dates, Spanish DM confirmation,
 boost budget go-ahead. Full plan in chat Oct 18.
+
+---
+
+## PRICE LIST UNLOCKED (owner sent his price card, Sun Oct 18 night)
+
+Official drop-off prices now on file (CLAUDE.md brand facts updated): folding chair $2 · 6 ft
+rectangle table $10 · 6 ft round table $15 · table + 6 chairs set $22. Drop-off = delivered and
+picked up, customer sets up, delivery quoted with the order. FULL-SERVICE setup and breakdown
+packages FROM $265. COPY RULE: rentals say "delivered and picked up" + "full-service setup
+available", never blanket "setup included" (venue package only). Owner card saved at
+flyers/BB_PriceCard_Owner.png.
+
+Actions taken same night: START HERE card re-rendered WITH prices and the queued Wed posts
+swapped (delete + requeue, 10am FB+IG 2/2 OK, updated caption). Owner's price card QUEUED as its
+own post WED OCT 21 11AM (FB+IG 2/2 OK) with caption "What does renting actually cost?" + QUOTE
+keyword CTA + "También hablamos español" line. Note for future sets: some past captions said
+"we set up" generically; from now on the drop-off vs full-service split is always respected.
