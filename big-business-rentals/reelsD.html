@@ -3525,6 +3525,161 @@ REELS[30]=ep30;
 SHAKES[30]=[8.2,0.25,14];
 TAGLINES[30]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[30]=23.5;
+
+// ================= EP. 31 · THE DRY RUN =================
+function ep31(t){
+  const FR0=7.6, FR1=8.4;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(725,1260); ctx.scale(z,z); ctx.translate(-725,-1260);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  // the table pops in at 1.8, centerpiece pumpkin at 2.6
+  if(tt>=1.8){
+    const ts=easeOutBack(Math.min(1,(tt-1.8)/0.5));
+    ctx.save(); ctx.translate(560,FLOOR); ctx.scale(ts,ts); ctx.translate(-560,-FLOOR);
+    drawTable(560,0,0);
+    ctx.restore();
+  }
+  // centerpiece pumpkin: nudged by the cat at 17.6, falls off the right end at 18.0
+  if(tt>=2.6){
+    let px=540, py=FLOOR-250-60;
+    if(tt>=17.6&&tt<18.0) px=lerp(540,840,(tt-17.6)/0.4);
+    else if(tt>=18.0){
+      const k=Math.min(1,(tt-18.0)/0.5);
+      px=lerp(840,920,k); py=lerp(FLOOR-250-60,FLOOR-40,k*k);
+    }
+    const ps=easeOutBack(Math.min(1,(tt-2.6)/0.4));
+    drawPumpkinC(px,py,0.72*ps,(tt>=18.4)?2:0);
+  }
+  // the chair row pops in: 350, 600, 850
+  const rowT=[3.2,3.8,4.4];
+  [350,600,850].forEach((cx,i)=>{
+    if(tt>=rowT[i]){
+      const cs=easeOutBack(Math.min(1,(tt-rowT[i])/0.4));
+      let jolt=0;
+      if(i!==0&&tt>=6.2&&tt<7.0) jolt=Math.sin(t*22)*5;   // wobbles squeezes between them
+      ctx.save(); ctx.translate(cx,FLOOR); ctx.scale(cs,cs); ctx.translate(-cx,-FLOOR);
+      drawChair(cx,jolt,0,0);
+      ctx.restore();
+    }
+  });
+  // WOBBLES: speeds in at 5.8, crams into the row gap at 725, ejected at 9.4
+  if(tt>=5.8&&tt<6.6){
+    drawChair(lerp(-200,725,ease((tt-5.8)/0.8)), Math.sin(t*14)*8, 0, 0, RED23);
+  } else if(tt>=6.6&&tt<9.4){
+    drawChair(725, Math.sin(t*6)*((tt<7.0)?7:2), 0, 0, RED23);
+  } else if(tt>=9.4&&tt<10.8){
+    drawChair(lerp(725,-220,ease((tt-9.4)/1.4)), Math.sin(t*10)*6, 0, 0, RED23);
+  }
+  // MRS. NEVER WRONG: enters right 4.8-6.2, supervises, inspection verdict at 12.8
+  let wp=null;
+  if(tt>=4.8&&tt<6.2){
+    const k=ease((tt-4.8)/1.4), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,1000,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=6.2){
+    const inspect=(tt>=11.0&&tt<12.8);
+    const verdict=(tt>=12.8&&tt<14.0);
+    wp={x:1000, y:HIP_STAND, face:-1, lean:inspect?-6:0,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:verdict?{sh:150,el:-70}:(inspect?{sh:86,el:-56}:{sh:40,el:-24}),
+      mouth:verdict?'smile':'flat', style:STYLEW};
+  }
+  if(wp) drawMan(wp);
+  // THE CAT: trots in 16.4, leaps onto the table, owns it
+  if(tt>=16.4&&tt<17.2) drawCatD(lerp(W+160,620,ease((tt-16.4)/0.8)), FLOOR, {pose:'trot',face:-1,t:t,s:1.4});
+  else if(tt>=17.2){
+    const hop=(tt<17.6)?easeOutBack((tt-17.2)/0.4):1;
+    drawCatD(600, lerp(FLOOR,FLOOR-250+10,hop), {face:-1,t:t,s:1.4});
+  }
+  // TYLER: materializes at 19.6 beside the row, sets the final chair... already placed
+  if(tt>=19.6){
+    if(tt<20.4) sparkleD(725, FLOOR-480, t);
+    const shy=(tt>=20.6);
+    drawMan({x:725, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:(tt>=20.0)?{sh:110,el:-60}:{sh:20,el:50},
+      mouth:'smile', headTilt:shy?12:0, style:STYLET});
+    if(tt>=20.0){
+      const cs=easeOutBack(Math.min(1,(tt-20.0)/0.4));
+      ctx.save(); ctx.translate(725,FLOOR); ctx.scale(cs,cs); ctx.translate(-725,-FLOOR);
+      drawChair(725,0,0,0);
+      ctx.restore();
+    }
+  }
+  // MR. BIG BUSINESS: directs from the left with the checklist
+  let mp=null;
+  if(tt<1.4){
+    const k=ease(tt/1.4), step=Math.sin(tt*9);
+    mp={x:lerp(-200,140,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:40,el:70}, mouth:'smile', style:STYLER};
+  } else if(tt<5.8){
+    const point=(Math.floor(tt*1.4)%2===0);
+    mp={x:140, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:point?{sh:120,el:-30}:{sh:60,el:10}, mouth:'flat', style:STYLER};
+  } else if(tt<8.6){
+    mp={x:140, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:88,el:-10}, mouth:'o', eyes:'wide', style:STYLER};   // spots the intruder
+  } else if(tt<10.8){
+    mp={x:140, y:HIP_STAND, face:1, lean:8,
+      legs:[{hip:14,knee:-4},{hip:-10,knee:8}],
+      arm:{sh:134,el:-58}, mouth:'o', style:STYLER};               // OUT.
+  } else if(tt<14.0){
+    mp={x:140, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'flat', style:STYLER};              // awaiting the verdict
+  } else if(tt<16.4){
+    mp={x:140, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:150,el:-80}, arm2:{sh:150,el:-80}, mouth:'smile',
+      headTilt:Math.sin(t*5)*6, style:STYLER};                     // both arms up: READY
+  } else if(tt<18.4){
+    mp={x:140, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:96,el:-6}, mouth:'o', eyes:'wide', style:STYLER};    // the cat. no. NO.
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:140, y:HIP_STAND, face:-1, lean:14,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  // the clipboard floats by his pointing hand while directing
+  if(tt>=1.4&&tt<5.8) drawListD(300, FLOOR-520, -8);
+  if(tt>=14.2&&tt<16.2) sparkleD(560, FLOOR-520, t);
+  ctx.restore();
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(725,FLOOR-760,kk*0.9,'?');}
+  if(t>=12.9&&t<14.1){const kk=easeOutBack(Math.min(1,(t-12.9)/0.28)); starburst(860,FLOOR-880,kk*0.9,'APPROVED.');}
+  if(t>=18.1&&t<19.3){const kk=easeOutBack(Math.min(1,(t-18.1)/0.26)); starburst(760,FLOOR-700,kk*0.85,'NO.');}
+  showBadge(31);
+  if(t>=0.05&&t<2.0) caption(['EIGHT DAYS OUT.','THE FINALE DRY RUN.'],340,(t+0.3)/0.35,42);
+  if(t>=2.6&&t<4.2) caption(['EVERY CHAIR HAS','AN ASSIGNMENT.'],340,(t-2.6)/0.35,44);
+  if(t>=4.8&&t<5.8) caption(['INSPECTOR ON','SITE.'],340,(t-4.8)/0.35,46);
+  if(t>=FR0+0.05&&t<FR1) caption(['HE JOINED THE','ROW AGAIN.'],340,(t-FR0-0.05)/0.35,46);
+  if(t>=8.8&&t<10.4) caption(['NOT ON THE','SEATING CHART.'],340,(t-8.8)/0.35,44);
+  if(t>=11.2&&t<12.6) caption(['INSPECTION','TIME.'],340,(t-11.2)/0.35,50);
+  if(t>=13.2&&t<14.4) caption(['PASSED.'],340,(t-13.2)/0.35,56);
+  if(t>=14.6&&t<16.2) caption(['THE ROOM IS READY.','EIGHT DAYS EARLY.'],340,(t-14.6)/0.35,42);
+  if(t>=17.0&&t<18.0) caption(['THE CAT','DISAGREES.'],340,(t-17.0)/0.35,46);
+  if(t>=18.4&&t<19.5) caption(['CHAOS NEVER','RSVPS.'],340,(t-18.4)/0.35,46);
+  if(t>=19.9&&t<21.6) caption(['TYLER COMPLETED','THE ROW. SOMEHOW.'],340,(t-19.9)/0.35,40);
+  if(t>=22.4&&t<23.45){
+    caption(['WHAT GOES WRONG AT THE FINALE?','PREDICTIONS BELOW.'],340,(t-22.4)/0.35,38);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 14 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[31]=ep31;
+SHAKES[31]=[7.6,0.25,14];
+TAGLINES[31]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[31]=23.5;
 </script>
 </body></html>
 
