@@ -2349,3 +2349,9 @@ Social trend pick: the COSTUME WALK slow-reveal format charting on TikTok this w
 dramatic slow approach, then the costume reveal), plus NBA tipoff hashtags rising. Monday concept:
 BB_Trend_CostumeWalk, Lil Wobbles does the full dramatic slow-walk runway reveal in costume while
 the finished party setup reveals behind him; punchline: the setup looked better without a costume.
+
+FOLLOW-UP (owner, minutes later): "this add on will replace the gag reel." GAG LANE RETIRED after
+#23 Candy Tax (its finale ran tonight, Sun Oct 18 5pm). From the Monday Oct 19 build the TREND
+REMIX video takes the gag reel's 5pm slot and all four channels including TikTok (cap stays 4:
+PRICE IT + trend + pink + episode through Oct 31). The ~17s short-reel spec applies to trend
+videos. reelH.html and its rig stay on file for trend builds. Gag #24 never runs.

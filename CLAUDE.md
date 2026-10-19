@@ -36,9 +36,11 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 3. Venue space flyer, new design daily [feed ~2x/week, else Story]
 4. Referral flyer, new design daily [Story]
 5. Halloween countdown flyer until Oct 31 (live count: Oct N -> 31-N nights; VERIFY with python datetime) [Story]
-6. Halloween gag reel, brand-new gag daily (reelH.html; next is REELS[11]; used: haunted chair, skeleton guest,
-   pumpkin overload, witch setup, mummy unravel, frankenstein seat, zombie line dance, ghost guest,
-   skeleton limbo, black cat) [feed]
+6. GAG REEL LANE RETIRED (owner Oct 18 night: "this add on will replace the gag reel"): the daily
+   TREND REMIX video (see TREND REMIX LANE below) takes the gag reel's 5pm slot and its TikTok
+   reel slot from the Monday Oct 19 build. Gags #1-23 are history (last: Candy Tax, Sun Oct 18);
+   gag #24 never runs. reelH.html stays on file (its rig, helpers and the GAGENDS per-reel
+   end-card engine are reusable for trend videos). [feed]
 7. Pink October awareness video daily until Oct 31 (pink*.html engine; made: 1-in-8 intro, Know the Signs,
    Monthly Check, Support Edition) [feed or Trial Reel]
 8. Evening comedy reel: THE BIG BUSINESS CHRONICLES episode [feed]
@@ -151,8 +153,9 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    Use whatever medium fits: the canvas rig cast (Wobbles/cat/Chronicles characters reacting to
    or living the trend), recut real footage with the cinematic pipeline, or AI imagery (HF quota
    permitting). Comedy length rule applies (~17s+). Naming: BB_Trend_*.
-4. SLOT: 7pm Vegas daily, FB reel + IG reel + YouTube (cat 23). NOT TikTok until Nov 1 (the
-   4-post cap holds; when pink retires Oct 31 the trend reel takes its TikTok reel slot).
+4. SLOT (REVISED Oct 18 night, owner: the trend remix REPLACES the gag reel): 5pm Vegas daily,
+   the old gag slot, on all four channels: FB reel + IG reel + TikTok + YouTube (cat 23). The
+   TikTok 4-post cap holds: PRICE IT + trend + pink + episode through Oct 31.
 5. LOG the day's topic, source and angle in posting_captions.md with the captions.
 
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
@@ -244,7 +247,7 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
 - DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
   (all Vegas local; REVISED Oct 18, tip+business merged): 1 morning card 9am · 3 venue 12pm · 4 PRICE IT 1pm (daily, feed) ·
-  5 referral 2pm · 6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm.
+  5 referral 2pm · 6 countdown 4pm · 7 TREND REMIX video 5pm (replaced gag reel Oct 19) · 8 pink video 6pm · 9 Chronicles episode 8pm.
   Owner can override per post.
   Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).
   Required metadata or createPost FAILS: FB needs metadata.facebook.type (post/story/reel); IG needs
@@ -284,8 +287,9 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   All captions in posting_captions.md (use the Oct 5 corrected EP15 captions, no voice mentions).
 - COMEDY LENGTH RULE (owner Oct 14: "start making the comedy videos 5 seconds longer", then
   "all funny videos not just the chronicles"): from the Monday Oct 19 builds, Chronicles episodes
-  21s -> ~26s AND gag reels 12s -> ~17s. Pink awareness videos are not comedy, unchanged at 26s.
-  GAG 17s SPEC: 595 frames @35fps, encode -t 17.2, afade out at 16.7, action to ~13.8s, set
+  21s -> ~26s AND short comedy reels 12s -> ~17s (the gag lane retired Oct 18 night; the ~17s
+  spec now applies to the TREND REMIX videos that replaced it). Pink videos are not comedy, 26s.
+  17s SHORT-REEL SPEC: 595 frames @35fps, encode -t 17.2, afade out at 16.7, action to ~13.8s, set
   window.GAGENDS[n]=14.0 per new reel (reelH.html drawFrame now reads per-reel end-card start,
   default 9.0 keeps gags #1-23 correct). Use the extra 5s for one more gag turn or reaction.
   Episodes stay SFX only, NO voiceovers (owner Oct 5: "cancel the whole voices i dont like them").
@@ -377,6 +381,6 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Still banked: branded waterslide
   clip (owner-edited, ends on BB logo), backyard party photos, Blank Canvas venue concept (AI-dressed
   looks of the real room, CONCEPT stamp) when HF quota is fresh.
-- Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: gags ~17s,
+- Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
