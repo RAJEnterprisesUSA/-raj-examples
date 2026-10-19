@@ -2570,3 +2570,9 @@ swapped (delete + requeue, 10am FB+IG 2/2 OK, updated caption). Owner's price ca
 own post WED OCT 21 11AM (FB+IG 2/2 OK) with caption "What does renting actually cost?" + QUOTE
 keyword CTA + "También hablamos español" line. Note for future sets: some past captions said
 "we set up" generically; from now on the drop-off vs full-service split is always respected.
+
+FOLLOW-UP (same night): owner asked for an agent prompt to publish the GBP post. Prompt provided
+in chat (browser-agent handoff pattern, same as the Oct 12 Meta Business Suite pull): download the
+bilingual flyer from the public raw URL, business.google.com > Add update, paste the v2 priced
+post text exactly, Call now button 702-706-8287, publish, report back, touch nothing else on the
+profile. gbp/GBP_Pack_1_week_of_Oct19.txt updated to the v2 priced text so pack and prompt match.
