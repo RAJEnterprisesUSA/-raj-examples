@@ -381,6 +381,18 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   Still banked: branded waterslide
   clip (owner-edited, ends on BB logo), backyard party photos, Blank Canvas venue concept (AI-dressed
   looks of the real room, CONCEPT stamp) when HF quota is fresh.
+- MONDAY OCT 19 SET BUILT AND QUEUED SUNDAY NIGHT (25/25 OK: cards 13, videos 12; FIRST set on
+  the merged format, the trend lane and the new comedy lengths): MORNING CARD debut SPACE MATH
+  No.35 (Black&Gold, 6, 9am), HOLIDAY DATE venue single (Velvet), PRICE IT = BB_PriceIt_HoopLounge
+  (fresh indoor NBA-tipoff watch-party ballroom, no logos, left-edge wall art cropped out),
+  THE NAIL TECH referral (Purple, 5, profession-direct per week-2 data), EN ESPAÑOL #8
+  DICIEMBRE (Cream, 5), 12 NIGHTS countdown (Halloween, 4), TREND REMIX DEBUT BB_Trend_CostumeWalk
+  (17.2s, reelH REELS[24], GAGENDS[24]=14.0, witchHatH/capeH/spotOverlay helpers; topic: costume
+  walk slow-reveal format, logged), Pink #18 THE CALLBACK (pink18.html, 26s, ACS), EP. 28 THE
+  TASTE TEST (REELS[28], FIRST 26s EPISODE, 910 frames, ENDTIMES 23.5; his decoy used against
+  him, W-L 3-11). Also queued separately: Bring To The Table sketch 10am (FB/IG/YT).
+  Captions under MONDAY OCT 19. Next: morning card No.36 or business-angle day, trend search
+  Tuesday, Pink #19, EP. 29, español #9, PRICE IT outdoor Tuesday.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
