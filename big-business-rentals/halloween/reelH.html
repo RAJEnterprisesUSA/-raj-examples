@@ -3666,13 +3666,12 @@ SHAKES[26]=[10.6,0.25,12];
 TAGLINES[26]='EVERYBODY WANTS THE SETUP. GET YOUR OWN.';
 window.GAGENDS[26]=14.0;
 
-// ---------- T27: TREND REMIX · the rocket delivery van (17s) ----------
-// Rides the flying-roadster trend: OUR generic box van launches, hovers, parks mid-air,
-// lands soft and delivers. No brand names, logos or real car designs anywhere.
+// ---------- T27: TREND REMIX · the rocket delivery van (17s, v2 road cut) ----------
+// Owner note: takes place ON THE ROAD in traffic, then pulls up at the client's venue.
+// Rides the flying-roadster trend with OUR generic box van. No brands, logos or real designs.
 function drawVanH(x,y,rot,s,flame,t){
   ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0); ctx.scale(s,s);
   ctx.lineWidth=9; ctx.strokeStyle=INK;
-  // thruster flames under the body
   if(flame>0){
     for(const fx of [-120,120]){
       const fl=(26+Math.sin(t*40+fx)*10)*flame;
@@ -3684,23 +3683,18 @@ function drawVanH(x,y,rot,s,flame,t){
       ctx.restore();
     }
   }
-  // box body
   ctx.fillStyle='#3a1a5e';
   rr(-210,-96,330,162,14); ctx.fill(); ctx.stroke();
-  // cab, nose to the right
   ctx.fillStyle='#4b2a78';
   ctx.beginPath();
   ctx.moveTo(120,-66); ctx.lineTo(196,-66); ctx.quadraticCurveTo(226,-60,230,-18);
   ctx.lineTo(230,56); ctx.lineTo(120,56); ctx.closePath(); ctx.fill(); ctx.stroke();
-  // windshield
   ctx.fillStyle='#bcd6ef';
   ctx.beginPath();
   ctx.moveTo(150,-56); ctx.lineTo(192,-56); ctx.quadraticCurveTo(214,-50,217,-16);
   ctx.lineTo(150,-16); ctx.closePath(); ctx.fill(); ctx.stroke();
-  // gold stripe
   ctx.fillStyle='#E5B84B';
   ctx.fillRect(-210,-22,330,20); ctx.strokeRect(-210,-22,330,20);
-  // wheels
   for(const wx of [-130,150]){
     ctx.fillStyle='#241020';
     ctx.beginPath(); ctx.arc(wx,66,40,0,7); ctx.fill(); ctx.stroke();
@@ -3709,10 +3703,10 @@ function drawVanH(x,y,rot,s,flame,t){
   }
   ctx.restore();
 }
-function drawCarH(x,y,s){
+function drawCarH(x,y,s,col){
   ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
   ctx.lineWidth=9; ctx.strokeStyle=INK;
-  ctx.fillStyle='#7a8794';
+  ctx.fillStyle=col||'#7a8794';
   rr(-120,-40,240,56,16); ctx.fill(); ctx.stroke();
   ctx.fillStyle='#616d7a';
   ctx.beginPath(); ctx.moveTo(-64,-40); ctx.quadraticCurveTo(-40,-86,8,-86);
@@ -3723,72 +3717,144 @@ function drawCarH(x,y,s){
   }
   ctx.restore();
 }
+function roadSkyT27(t){
+  const g=ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#160a2e'); g.addColorStop(0.55,'#2c1247'); g.addColorStop(1,'#3a1a5e');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  for(let i=0;i<26;i++){
+    const sx=(i*149+60)%W, sy=(i*83)%640+70;
+    ctx.fillStyle='rgba(255,255,255,'+(0.2+(i%3)*0.14)+')';
+    ctx.fillRect(sx,sy,4,4);
+  }
+  ctx.fillStyle='#f3eccd'; ctx.beginPath(); ctx.arc(880,300,80,0,7); ctx.fill();
+  ctx.fillStyle='rgba(243,236,205,0.12)'; ctx.beginPath(); ctx.arc(880,300,125,0,7); ctx.fill();
+}
+function roadStripT27(skyline){
+  if(skyline){
+    ctx.fillStyle='#1d1133';
+    const bl=[[0,300,210],[180,420,160],[330,260,200],[520,380,150],[660,300,230],[880,430,200]];
+    for(const [bx,bh,bw] of bl) ctx.fillRect(bx,FLOOR-160-bh,bw,bh+140);
+    ctx.fillStyle='#f6c231';
+    for(let i=0;i<22;i++){
+      const wx=(i*127+40)%1040, wy=FLOOR-200-((i*191)%330);
+      ctx.globalAlpha=0.55; ctx.fillRect(wx,wy,16,22); ctx.globalAlpha=1;
+    }
+  }
+  ctx.fillStyle='#241d2e'; ctx.fillRect(0,FLOOR-24,W,H-(FLOOR-24));
+  ctx.fillStyle='#3b3148'; ctx.fillRect(0,FLOOR-24,W,12);
+  ctx.fillStyle='#d8cfae';
+  for(let x=0;x<W;x+=190) ctx.fillRect(x+36,FLOOR+150,92,14);
+}
+function venueFrontT27(){
+  const top=FLOOR-880, bot=FLOOR-12, x=560;
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#2b1a44'; ctx.fillRect(x,top,W-x+20,bot-top); ctx.strokeRect(x,top,W-x+60,bot-top);
+  // glowing windows
+  for(const wx of [x+70,x+300]){
+    ctx.fillStyle='#f6c231'; rr(wx,top+120,150,210,10); ctx.fill(); ctx.stroke();
+    ctx.strokeStyle='rgba(36,16,32,0.5)';
+    ctx.beginPath(); ctx.moveTo(wx+75,top+120); ctx.lineTo(wx+75,top+330); ctx.stroke();
+    ctx.strokeStyle=INK;
+  }
+  // door with gold trim
+  ctx.fillStyle='#5b2a86'; rr(x+170, bot-380, 200, 380, 10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.beginPath(); ctx.arc(x+340, bot-190, 10, 0, 7); ctx.fill();
+  // striped awning over the door
+  for(let i=0;i<6;i++){
+    ctx.fillStyle=(i%2)?'#E5B84B':'#5b2a86';
+    ctx.beginPath();
+    ctx.moveTo(x+140+i*44, bot-400); ctx.lineTo(x+140+(i+1)*44, bot-400);
+    ctx.lineTo(x+150+(i+1)*44, bot-330); ctx.lineTo(x+150+i*44, bot-330);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+  // string lights along the top
+  ctx.strokeStyle='#c98f3a'; ctx.lineWidth=5;
+  ctx.beginPath(); ctx.moveTo(x-40,top+60); ctx.quadraticCurveTo(x+260,top+130,W,top+40); ctx.stroke();
+  for(let i=0;i<9;i++){
+    const k=i/8, bx=lerp(x-40,W,k), by=top+60+Math.sin(Math.PI*k)*62;
+    ctx.fillStyle=(i%2)?'#ff8c2e':'#f6c231';
+    ctx.beginPath(); ctx.arc(bx,by+12,9,0,7); ctx.fill();
+  }
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+}
 function reelT27(t){
   const FR0=10.6, FR1=11.4;
   const tt=(t>=FR0&&t<FR1)?FR0:t;
+  const CUT=8.4;
   ctx.save();
   if(t>=FR0&&t<FR1){
     const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
     ctx.translate(900,1150); ctx.scale(z,z); ctx.translate(-900,-1150);
   }
-  drawRoomH(t);
-  // stalled traffic: one very parked car in the lane, drives off while the van flies
-  if(tt<6.4) drawCarH(620, FLOOR-14, 1.15);
-  else if(tt<7.8) drawCarH(lerp(620,1500,ease((tt-6.4)/1.4)), FLOOR-14, 1.15);
-  // THE CUSTOMER, right side, waiting
-  const worried=(tt<10.2);
-  drawMan({x:960, y:HIP_STAND, face:-1,
-    legs:[{hip:6,knee:6},{hip:-4,knee:6}],
-    arm:worried?{sh:70,el:-90}:{sh:30,el:40},
-    mouth:(tt>=FR0&&tt<12.0)?'o':(worried?'flat':'smile'),
-    eyes:(tt>=FR0&&tt<12.0)?'wide':null,
-    headTilt:worried?-6:0, style:STYLEM});
-  // THE VAN
-  let vx=-420, vy=FLOOR-100, vrot=0, fl=0;
-  if(tt>=1.5&&tt<3.0){ vx=lerp(-420,150,ease((tt-1.5)/1.5)); }
-  else if(tt>=3.0&&tt<4.4){ vx=150; vrot=Math.sin(tt*30)*0.01; }           // idling behind traffic
-  else if(tt>=4.4&&tt<6.0){ vx=150; vy=lerp(FLOOR-100,FLOOR-620,ease((tt-4.4)/1.6)); fl=1; vrot=-0.04; }
-  else if(tt>=6.0&&tt<8.6){ vx=lerp(150,540,ease((tt-6.0)/2.6)); vy=FLOOR-620+Math.sin(tt*2.5)*14; fl=1;
-    if(tt>=6.8&&tt<8.2) vrot=(tt-6.8)/1.4*Math.PI*2; }                      // full mid-air rotation
-  else if(tt>=8.6&&tt<10.2){ vx=540; vy=lerp(FLOOR-620,FLOOR-100,ease((tt-8.6)/1.6)); fl=1-(tt-8.6)/1.6; }
-  else if(tt>=10.2){ vx=540; vy=FLOOR-100; }
-  if(tt>=1.5) drawVanH(vx,vy,vrot,1.25,fl,t);
-  // launch dust + landing dust
-  if(tt>=4.4&&tt<5.2){
-    for(let i=0;i<6;i++){const ph=(tt-4.4)/0.8;
-      ctx.save(); ctx.globalAlpha=(1-ph)*0.6; ctx.fillStyle='#cbb9a2';
-      ctx.beginPath(); ctx.arc(60+i*40, FLOOR-10-ph*40, 16+ph*14, 0, 7); ctx.fill(); ctx.restore();}
-  }
-  if(tt>=10.0&&tt<10.5){
-    for(let i=0;i<6;i++){const ph=(tt-10.0)/0.5;
-      ctx.save(); ctx.globalAlpha=(1-ph)*0.6; ctx.fillStyle='#cbb9a2';
-      ctx.beginPath(); ctx.arc(330+i*80, FLOOR-10-ph*36, 18+ph*16, 0, 7); ctx.fill(); ctx.restore();}
-  }
-  // THE DELIVERY: MBB steps out, setup pops in
-  if(tt>=11.6){
-    const k=ease(Math.min(1,(tt-11.6)/0.8));
-    if(tt>=12.2){
-      const ts=easeOutBack(Math.min(1,(tt-12.2)/0.5));
-      ctx.save(); ctx.translate(130,FLOOR); ctx.scale(ts*0.68,ts*0.68); ctx.translate(-130,-FLOOR);
-      drawTable(130,0,0); drawChair(0,0,0,0); drawChair(270,0,0,0);
-      ctx.restore();
-      if(tt>12.8) sparkle(130,FLOOR-300,t);
+  roadSkyT27(t);
+  if(tt<CUT){
+    // ================= SCENE A: THE ROAD, RUSH HOUR =================
+    roadStripT27(true);
+    // the jam: three cars ahead, all going nowhere
+    const idle=Math.sin(t*10)*2;
+    drawCarH(540, FLOOR-14+idle, 1.1);
+    drawCarH(790, FLOOR-14-idle, 1.1, '#8a6f7d');
+    drawCarH(1030, FLOOR-14+idle, 1.1, '#6f7d8a');
+    // THE VAN, stuck at the back
+    let vx=230, vy=FLOOR-100, vrot=0, fl=0;
+    if(tt<3.0){ vrot=Math.sin(tt*26)*0.008; }
+    else if(tt<4.4){ vrot=Math.sin(tt*34)*0.014; }                           // revving
+    else if(tt<6.0){ vy=lerp(FLOOR-100,FLOOR-700,ease((tt-4.4)/1.6)); fl=1; vrot=-0.05; }
+    else { vx=lerp(230,1420,ease((tt-6.0)/2.6)); vy=FLOOR-700+Math.sin(tt*2.5)*14; fl=1;
+      if(tt>=6.6&&tt<8.0) vrot=(tt-6.6)/1.4*Math.PI*2; }                     // barrel-roll lane change
+    drawVanH(vx,vy,vrot,1.25,fl,t);
+    if(tt>=4.4&&tt<5.2){
+      for(let i=0;i<6;i++){const ph=(tt-4.4)/0.8;
+        ctx.save(); ctx.globalAlpha=(1-ph)*0.6; ctx.fillStyle='#8f8398';
+        ctx.beginPath(); ctx.arc(120+i*48, FLOOR-6-ph*40, 16+ph*14, 0, 7); ctx.fill(); ctx.restore();}
     }
-    drawMan({x:lerp(640,430,k), y:HIP_STAND, face:1,
-      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
-      arm:(tt>=12.8)?{sh:120,el:-40}:{sh:40,el:30},
-      mouth:'smile', style:STYLER});
+  } else {
+    // ================= SCENE B: THE CLIENT'S VENUE =================
+    roadStripT27(false);
+    venueFrontT27();
+    // THE CLIENT, out front checking the time
+    const stunned=(tt>=10.2&&tt<12.2);
+    drawMan({x:950, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:stunned?{sh:96,el:-10}:{sh:70,el:-90},
+      mouth:stunned?'o':'flat', eyes:stunned?'wide':null,
+      headTilt:stunned?0:-6, style:STYLEM});
+    // the van drops in from the top left and parks at the curb
+    let vx=230, vy=FLOOR-100, fl=0, vrot=0;
+    if(tt<10.2){ const k=ease((tt-CUT)/1.8);
+      vx=lerp(-60,230,k); vy=lerp(-500,FLOOR-100,k); fl=1-k*0.8; vrot=0.04*(1-k); }
+    drawVanH(vx,vy,vrot,1.25,fl,t);
+    if(tt>=10.0&&tt<10.5){
+      for(let i=0;i<6;i++){const ph=(tt-10.0)/0.5;
+        ctx.save(); ctx.globalAlpha=(1-ph)*0.6; ctx.fillStyle='#8f8398';
+        ctx.beginPath(); ctx.arc(60+i*78, FLOOR-6-ph*36, 18+ph*16, 0, 7); ctx.fill(); ctx.restore();}
+    }
+    // MBB steps out with the goods
+    if(tt>=11.6){
+      const k=ease(Math.min(1,(tt-11.6)/0.8));
+      if(tt>=12.2){
+        const ts=easeOutBack(Math.min(1,(tt-12.2)/0.5));
+        ctx.save(); ctx.translate(700,FLOOR); ctx.scale(ts*0.62,ts*0.62); ctx.translate(-700,-FLOOR);
+        drawTable(700,0,0); drawChair(570,0,0,0); drawChair(840,0,0,0);
+        ctx.restore();
+        if(tt>12.8) sparkle(700,FLOOR-290,t);
+      }
+      drawMan({x:lerp(520,580,k), y:HIP_STAND, face:1,
+        legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:(tt>=12.8)?{sh:120,el:-40}:{sh:40,el:30},
+        mouth:'smile', style:STYLER});
+    }
   }
   ctx.restore();
-  if(t>=3.4&&t<4.3){const kk=easeOutBack(Math.min(1,(t-3.4)/0.24)); starburst(300,FLOOR-820,kk*0.7,'...');}
-  if(t>=4.6&&t<5.6){const kk=easeOutBack(Math.min(1,(t-4.6)/0.26)); starburst(320,FLOOR-980,kk*0.85,'LIFTOFF.');}
-  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(760,FLOOR-860,kk*0.9,'?!');}
-  if(t<1.7) caption(['POV: YOU ORDERED','TABLES FOR 6PM.'],240,(t+0.35)/0.35,46);
+  if(t>=3.4&&t<4.3){const kk=easeOutBack(Math.min(1,(t-3.4)/0.24)); starburst(300,FLOOR-880,kk*0.7,'...');}
+  if(t>=4.6&&t<5.6){const kk=easeOutBack(Math.min(1,(t-4.6)/0.26)); starburst(320,FLOOR-1020,kk*0.85,'LIFTOFF.');}
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(700,FLOOR-900,kk*0.9,'?!');}
+  if(t<1.7) caption(['POV: PARTY DELIVERY.','RUSH HOUR.'],240,(t+0.35)/0.35,46);
   if(t>=2.0&&t<3.2) caption(['THE VAN SAW THE','ROADSTER NEWS.'],240,(t-2.0)/0.35,46);
   if(t>=3.5&&t<4.4) caption(['TRAFFIC.'],240,(t-3.5)/0.35,54);
   if(t>=4.8&&t<6.2) caption(['NEVER HEARD','OF IT.'],240,(t-4.8)/0.35,52);
-  if(t>=7.0&&t<8.4) caption(['MID-AIR','PARALLEL PARKING.'],240,(t-7.0)/0.35,46);
-  if(t>=9.0&&t<10.2) caption(['SOFT','LANDING.'],240,(t-9.0)/0.35,50);
+  if(t>=6.8&&t<8.2) caption(['MID-AIR','LANE CHANGE.'],240,(t-6.8)/0.35,46);
+  if(t>=8.7&&t<10.1) caption(["THE CLIENT'S VENUE,",'DEAD AHEAD.'],240,(t-8.7)/0.35,44);
   if(t>=FR0+0.05&&t<FR1) caption(['RIGHT','ON TIME.'],240,(t-FR0-0.05)/0.35,52);
   if(t>=12.4&&t<13.3) caption(['DELIVERED. AND','PICKED UP AFTER.'],240,(t-12.4)/0.35,44);
   if(t>=13.4&&t<13.9) caption(['THE SETUP ARRIVES.','WHATEVER IT TAKES.'],240,(t-13.4)/0.35,44);

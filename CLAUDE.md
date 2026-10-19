@@ -450,10 +450,12 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   centerpieces), THE PHOTOGRAPHER referral (Purple, 5; profession run: Barber, NailTech, DJ,
   Bartender, Photographer), EN ESPAÑOL #11 LAS POSADAS (Navy, 5; December bookings), 9 NIGHTS
   countdown (Black&Gold, 4), TREND REMIX #4 BB_Trend_RocketDelivery (reelH REELS[27],
-  GAGENDS[27]=14.0; OWNER-LOCKED topic: the new Tesla roadster reveal, remixed as our generic
-  purple box van launching, flying over traffic, mid-air parking and landing to deliver tables;
-  drawVanH/drawCarH helpers; NO Tesla name/logo/design anywhere, "flying roadster news"
-  phrasing only), Pink #21 THE NO-COST EDITION (pink21.html, CDC early detection program,
+  GAGENDS[27]=14.0; OWNER-LOCKED topic: the new Tesla roadster reveal; RESTAGED per owner Oct 19
+  night to take place ON THE ROAD: scene A rush-hour traffic jam with skyline, liftoff and
+  barrel-roll lane change over the cars; scene B pulls up at the CLIENT'S VENUE exterior
+  (venueFrontT27 facade: awning, glowing windows, string lights) and delivers at the curb;
+  drawVanH/drawCarH/roadSkyT27/roadStripT27 helpers; NO Tesla name/logo/design anywhere,
+  "flying roadster news" phrasing only), Pink #21 THE NO-COST EDITION (pink21.html, CDC early detection program,
   dial 211), EP. 31 THE DRY RUN (REELS[31]; finale rehearsal, Wobbles crams into the row,
   inspection passed, cat knocks the centerpiece pumpkin, Tyler completes the row, W-L 3-14).
   Captions under THURSDAY OCT 22. Next: morning card Friday (tip day No.37), trend search

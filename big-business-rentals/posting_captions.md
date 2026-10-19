@@ -2724,12 +2724,16 @@ comment SPOOKY and we will DM you open October dates.
 
 TREND REMIX #4 5pm · BB_Trend_RocketDelivery (17.2s, reelH REELS[27], GAGENDS[27]=14.0;
 all 4 channels)
-TREND LOG Oct 22 (TOPIC LOCKED BY OWNER Oct 19 night, no search needed): the new Tesla
-roadster reveal, remixed as OUR delivery vehicle operating exactly like it on a delivery
-run. Angle: customer waits, van stuck behind traffic, instant launch, thruster flight over
-the lane, full mid-air rotation parallel park, soft landing, calm table-and-chair drop,
-freeze on the customer's face. Brand-safe: generic purple box van, no Tesla name, logo or
-design likeness on frame or in captions, "flying roadster news" phrasing only. NOTE FOR
+TREND LOG Oct 22 (TOPIC LOCKED BY OWNER Oct 19 night, no search needed; RESTAGED same
+night per owner: "i want the video to actually take place on the road in traffic, pulling
+up to a clients venue"): the new Tesla roadster reveal, remixed as OUR delivery vehicle
+operating exactly like it. Final cut: SCENE A rush-hour road, city skyline, van stuck
+behind a three-car jam, liftoff on thrusters, barrel-roll mid-air lane change over the
+traffic; SCENE B the client's venue (awning, glowing windows, string lights), client
+checking the time at the door, van drops in and parks at the curb, soft landing, freeze on
+the client's face, MBB steps out and the table setup lands. Brand-safe: generic purple box
+van, no Tesla name, logo or design likeness on frame or in captions, "flying roadster
+news" phrasing only. NOTE FOR
 OWNER: if TikTok suggests a trending roadster/launch sound, add it in-app; the file ships
 with our own SFX bed (rumble, liftoff, soft-landing thud).
 FB/IG: "Our delivery van saw the flying roadster news. 🚀"
