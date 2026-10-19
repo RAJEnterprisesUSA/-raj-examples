@@ -3245,6 +3245,162 @@ REELS[28]=ep28;
 SHAKES[28]=[9.0,0.25,14];
 TAGLINES[28]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[28]=23.5;
+
+// ================= EP. 29 · THE PUMPKIN CARVE =================
+// carve: 0 plain · 1 fancy zigzag masterpiece · 2 single headbutt hole · 3 sudden perfection
+function drawPumpkinC(x,y,s,carve){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.lineWidth=7/s; ctx.strokeStyle=INK;
+  ctx.fillStyle='#e8822e';
+  ctx.beginPath(); ctx.ellipse(0,0,92,74,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#f29a4a';
+  ctx.beginPath(); ctx.ellipse(-34,0,30,68,0,0,7); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(34,0,30,68,0,0,7); ctx.fill();
+  ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.ellipse(0,0,92,74,0,0,7); ctx.stroke();
+  ctx.fillStyle='#4f7a3a';
+  ctx.save(); ctx.rotate(-0.15); ctx.fillRect(-9,-96,18,30); ctx.strokeRect(-9,-96,18,30); ctx.restore();
+  ctx.fillStyle='#241020';
+  if(carve===1){
+    ctx.beginPath(); ctx.moveTo(-52,-18); ctx.lineTo(-36,-40); ctx.lineTo(-20,-18); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(20,-18); ctx.lineTo(36,-40); ctx.lineTo(52,-18); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-50,22);
+    for(let i=0;i<6;i++){ ctx.lineTo(-50+(i+0.5)*17, 40); ctx.lineTo(-50+(i+1)*17, 22); }
+    ctx.lineTo(50,34); ctx.lineTo(-50,34); ctx.closePath(); ctx.fill();
+  } else if(carve===2){
+    ctx.beginPath(); ctx.ellipse(6,4,26,22,0.3,0,7); ctx.fill();
+  } else if(carve===3){
+    ctx.beginPath(); ctx.arc(-30,-24,12,0,7); ctx.fill();
+    ctx.beginPath(); ctx.arc(30,-24,12,0,7); ctx.fill();
+    ctx.lineWidth=9/s; ctx.strokeStyle='#241020'; ctx.lineCap='round';
+    ctx.beginPath(); ctx.arc(0,14,34,0.25,Math.PI-0.25); ctx.stroke();
+  }
+  ctx.restore();
+}
+function ep29(t){
+  const FR0=8.0, FR1=8.8;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(380,1230); ctx.scale(z,z); ctx.translate(-380,-1230);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  drawTable(400,0,0); drawTable(860,0,0);
+  const TOP=FLOOR-250;
+  // pumpkin states
+  let c1=0, c2=0, c3=0;
+  if(tt>=8.0) c1=1;                       // the masterpiece
+  if(tt>=13.8) c2=3;                      // Tyler's sudden perfection
+  if(tt>=10.8) c3=2;                      // the headbutt hole
+  drawPumpkinC(300, TOP-72, 1.0, c1);     // MBB's, left table
+  drawPumpkinC(860, TOP-72, 1.0, c2);     // Tyler's, right table
+  drawPumpkinC(110, FLOOR-60, 0.85, c3);  // Wobbles', floor left
+  // carving bits fly while MBB works
+  if(tt>=2.0&&tt<7.6){
+    for(let i=0;i<5;i++){
+      const ph=(t*3+i*1.3)%1;
+      ctx.save(); ctx.fillStyle='#f29a4a';
+      ctx.globalAlpha=1-ph;
+      ctx.fillRect(360+i*18, TOP-120-ph*140, 10, 10);
+      ctx.restore();
+    }
+  }
+  // WOBBLES: lines up and headbutts its pumpkin at 10.2
+  if(tt>=9.2){
+    let wx=120+((tt>=9.8&&tt<10.8)?Math.sin((tt-9.8)*20)*14:0);
+    if(tt>=10.2&&tt<10.8) wx=120-easeOutBack((tt-10.2)/0.6)*40;
+    drawChair(wx+130, Math.sin(t*8)*((tt<10.8)?8:3), 0, 0, RED23);
+  }
+  // TYLER: stands by his pumpkin doing absolutely nothing
+  if(tt>=1.0){
+    const shy=(tt>=14.6&&tt<16.4);
+    drawMan({x:1000, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:(tt>=16.4)?{sh:120,el:-50}:{sh:30,el:40},
+      mouth:'smile', headTilt:shy?10:0, style:STYLET});
+  }
+  // MRS. NEVER WRONG: the judge, enters 12.2 from the right... walks the line
+  let wp=null;
+  if(tt>=12.2&&tt<13.8){
+    const k=ease((tt-12.2)/1.6), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,700,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=13.8&&tt<16.0){
+    wp={x:700, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:86,el:-56}, mouth:'flat', style:STYLEW};    // inspecting both tables
+  } else if(tt>=16.0){
+    wp={x:700, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:120,el:-36}, mouth:'smile', style:STYLEW};  // points at Tyler: winner
+  }
+  if(wp) drawMan(wp);
+  // THE CAT: final verdict, sits beside the masterpiece looking unimpressed
+  if(tt>=18.4){
+    if(tt<19.4) drawCatD(lerp(-160,180,ease((tt-18.4)/1.0)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    else drawCatD(180, FLOOR, {face:1,t:t,s:1.4});
+  }
+  // MR. BIG BUSINESS: the artist at the left table
+  let mp=null;
+  if(tt<1.4){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-200,420,ease(tt/1.4)), y:HIP_STAND-Math.abs(step)*10, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:86,el:-60}, mouth:'smile', style:STYLER};
+  } else if(tt<7.6){
+    const work=Math.sin(tt*11)*18;
+    mp={x:440, y:HIP_STAND, face:-1, lean:10,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:104+work,el:10}, mouth:'flat', style:STYLER};   // carving furiously
+  } else if(tt<10.2){
+    mp={x:440, y:HIP_STAND, face:-1, lean:-6,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:130,el:-50}, mouth:'smile', style:STYLER};      // BEHOLD
+  } else if(tt<13.8){
+    mp={x:440, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:62,el:14}, mouth:'smile', style:STYLER};        // confident while judging starts
+  } else if(tt<16.0){
+    mp={x:440, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:88,el:-4}, mouth:'o', eyes:'wide', style:STYLER}; // Tyler's pumpkin?!
+  } else if(tt<18.4){
+    mp={x:440, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-8}, mouth:'o', style:STYLER};             // protest point
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:440, y:HIP_STAND, face:-1, lean:14,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=10.3&&tt<11.6){const kk=easeOutBack(Math.min(1,(tt-10.3)/0.26)); starburst(230,FLOOR-700,kk*0.8,'ART.');}
+  if(tt>=14.0&&tt<15.4){const kk=easeOutBack(Math.min(1,(tt-14.0)/0.28)); starburst(760,FLOOR-840,kk*0.85,'?!');}
+  if(tt>=16.2&&tt<17.6){const kk=easeOutBack(Math.min(1,(tt-16.2)/0.3)); starburst(820,FLOOR-780,kk*0.9,'WINNER.');}
+  ctx.restore();
+  showBadge(29);
+  if(t>=0.05&&t<2.0) caption(['THE ANNUAL','PUMPKIN CARVE.'],340,(t+0.3)/0.35,48);
+  if(t>=2.6&&t<4.0) caption(['HE HAS','A VISION.'],340,(t-2.6)/0.35,52);
+  if(t>=5.4&&t<6.8) caption(['TYLER HAS NOT','TOUCHED HIS.'],340,(t-5.4)/0.35,46);
+  if(t>=FR0+0.05&&t<FR1) caption(['BEHOLD.'],340,(t-FR0-0.05)/0.35,58);
+  if(t>=10.5&&t<11.8) caption(['WOBBLES CARVES','WITH HIS HEAD.'],340,(t-10.5)/0.35,44);
+  if(t>=12.4&&t<13.6) caption(['JUDGING','TIME.'],340,(t-12.4)/0.35,52);
+  if(t>=14.2&&t<15.8) caption(['WHEN DID HE','EVEN CARVE THAT?'],340,(t-14.2)/0.35,44);
+  if(t>=16.4&&t<18.0) caption(['THE INTERN','WINS AGAIN.'],340,(t-16.4)/0.35,48);
+  if(t>=19.6&&t<21.2) caption(['EVEN THE CAT','WALKED PAST HIS.'],340,(t-19.6)/0.35,44);
+  if(t>=22.4&&t<23.45){
+    caption(['WHAT SHOULD HE CARVE NEXT?','WRONG ANSWERS ONLY.'],340,(t-22.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 12 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[29]=ep29;
+SHAKES[29]=[8.0,0.25,14];
+TAGLINES[29]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[29]=23.5;
 </script>
 </body></html>
 

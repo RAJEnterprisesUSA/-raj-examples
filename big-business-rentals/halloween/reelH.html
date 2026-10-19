@@ -3499,6 +3499,88 @@ REELS[24]=reelT24;
 SHAKES[24]=[6.2,0.25,12];
 TAGLINES[24]='THE LOOK CHANGES. THE SETUP DELIVERS.';
 window.GAGENDS=window.GAGENDS||{}; window.GAGENDS[24]=14.0;
+
+// ---------- T25: TREND REMIX · rating setups with my face only (17s) ----------
+function reelT25(t){
+  // item windows: [start, reactStart, end]
+  // 1 fresh row 1.5-4.5 · 2 budget chair 4.5-7.5 · 3 uninvited guest 7.5-10.5 · 4 delivery day 10.5-13.8
+  const MX=790;
+  // camera: zoom to MBB's face during each reaction
+  let z=1, cx=540, cy=1100;
+  const zones=[[2.7,4.3],[5.7,7.3],[8.7,10.3],[11.7,13.6]];
+  for(const [a,b] of zones){
+    if(t>=a&&t<b){
+      const k=Math.min(1,(t-a)/0.3)*Math.min(1,(b-t)/0.3);
+      z=1+0.55*Math.min(1,k*1.4); cx=MX-40; cy=FLOOR-640;
+    }
+  }
+  ctx.save();
+  ctx.translate(cx,cy); ctx.scale(z,z); ctx.translate(-cx,-cy);
+  drawRoomH(t);
+  // the item stage, left side
+  if(t>=1.5&&t<4.5){
+    const k=easeOutBack(Math.min(1,(t-1.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(4.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawChair(160,0,0,0); drawChair(330,0,0,0); drawChair(500,0,0,0);
+    ctx.restore();
+  } else if(t>=4.5&&t<7.5){
+    const k=easeOutBack(Math.min(1,(t-4.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(7.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawChair(330,Math.sin(t*13)*9,0.25,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    ctx.restore();
+  } else if(t>=7.5&&t<10.5){
+    const k=easeOutBack(Math.min(1,(t-7.5)/0.5));
+    ctx.save(); ctx.globalAlpha=Math.min(1,(10.5-t)/0.25);
+    ctx.translate((1-k)*-400,0);
+    drawTable(330,0,0); drawBowl(310,FLOOR-280,4);
+    drawCat(400, FLOOR-256, {face:-1,t:t,s:1.4});
+    ctx.restore();
+  } else if(t>=10.5){
+    const k=easeOutBack(Math.min(1,(t-10.5)/0.5));
+    ctx.save(); ctx.translate((1-k)*-500,0);
+    drawTable(260,0,0); drawBowl(240,FLOOR-280,6);
+    drawChair(470,0,0,0); drawChair(610,0,0,0);
+    if(t>11.2) sparkle(260,FLOOR-330,t);
+    ctx.restore();
+  }
+  // MR. BIG BUSINESS: the face
+  let mouth='flat', eyes=null, tilt=0, arm={sh:34,el:60}, lean=0;
+  if(t<1.5){ mouth='smile'; }
+  else if(t<4.5){ // fresh row: pure joy builds
+    mouth=(t>2.7)?'smile':'flat';
+    tilt=(t>2.7)?Math.sin(t*4)*6:0;
+    if(t>3.4) arm={sh:120,el:-40};
+  } else if(t<7.5){ // budget chair: concern
+    mouth=(t>5.7)?'o':'flat'; eyes=(t>5.7)?'wide':null;
+    tilt=(t>6.2)?10:0;
+  } else if(t<10.5){ // uninvited guest: the long stare
+    mouth='flat'; tilt=(t>9.4)?-8:0;
+  } else { // delivery day: the face says book it
+    mouth=(t>11.7)?'smile':'flat';
+    tilt=(t>11.7)?Math.sin(t*5)*7:0;
+    if(t>12.3) arm={sh:150,el:-80};
+  }
+  drawMan({x:MX, y:HIP_STAND, face:-1,
+    legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:arm, mouth:mouth, eyes:eyes, headTilt:tilt, lean:lean});
+  ctx.restore();
+  if(t>=3.0&&t<4.3){const kk=easeOutBack(Math.min(1,(t-3.0)/0.26)); starburst(300,FLOOR-860,kk*0.75,'YES.');}
+  if(t>=6.0&&t<7.3){const kk=easeOutBack(Math.min(1,(t-6.0)/0.26)); starburst(300,FLOOR-860,kk*0.75,'HM.');}
+  if(t>=9.0&&t<10.3){const kk=easeOutBack(Math.min(1,(t-9.0)/0.26)); starburst(300,FLOOR-860,kk*0.7,'...');}
+  if(t>=12.0&&t<13.5){const kk=easeOutBack(Math.min(1,(t-12.0)/0.28)); starburst(300,FLOOR-860,kk*0.85,'BOOK IT.');}
+  if(t<1.6) caption(['RATING SETUPS.','FACE ONLY.'],240,(t+0.35)/0.35,50);
+  if(t>=1.8&&t<3.0) caption(['THE FRESH','SETUP.'],240,(t-1.8)/0.35,50);
+  if(t>=4.8&&t<6.0) caption(['THE "BUDGET"','CHAIR.'],240,(t-4.8)/0.35,50);
+  if(t>=7.8&&t<9.0) caption(['THE UNINVITED','GUEST.'],240,(t-7.8)/0.35,50);
+  if(t>=10.8&&t<12.0) caption(['OUR DELIVERY','DAY.'],240,(t-10.8)/0.35,50);
+  if(t>=12.4&&t<13.7) caption(['THE FACE SAYS','BOOK IT.'],240,(t-12.4)/0.35,48);
+}
+REELS[25]=reelT25;
+SHAKES[25]=[11.7,0.25,10];
+TAGLINES[25]='NO WORDS NEEDED. THE SETUP SPEAKS.';
+window.GAGENDS[25]=14.0;
 </script>
 </body></html>
 

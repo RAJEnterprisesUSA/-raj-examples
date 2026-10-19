@@ -2476,3 +2476,67 @@ FOLLOW-UP (Sun Oct 18 evening): owner said "queue it." The bilingual Party Renta
 QUEUED for MONDAY OCT 19 11AM (FB + IG feed post, cross-linked firstComments, 2/2 OK), between
 the 10am sketch reel and the 12pm venue card. Caption as logged in chat: "Every party needs
 seats. · Toda fiesta necesita sillas." with the QUOTE keyword CTA and bilingual body.
+
+---
+
+## TUESDAY OCT 20 (queued Sunday night, two days ahead)
+
+Lanes: MORNING CARD 9am WE CARRY IT (Emerald, 6, business-angle day) · venue 12pm CORPORATE
+NOVEMBER (Navy, single) · PRICE IT 1pm MovieNight (fresh outdoor backyard cinema, figures cropped
+out, FB+IG+TT pad) · referral 2pm THE DJ (Velvet, 5, profession-direct) · español 3pm #9 LA CORTE
+quince (Black&Gold, 5) · countdown 4pm 11 NIGHTS (Purple, 4) · TREND REMIX #2 5pm
+BB_Trend_FaceRating (17.2s, reelH REELS[25], "my reaction" face-only rating format) · Pink #19
+THE FAMILY TREE 6pm (26s, ACS) · EP. 29 THE PUMPKIN CARVE 8pm (26s, drawPumpkinC helper, Tyler
+wins again, W-L 3-12). Trend topic log: "my reaction" facial-expression ranking format +
+costume-reveal formats, from socialpilot/later/newengen roundups Oct 19; celebrity song trends
+skipped (licensed audio + likeness).
+
+Card captions are in build_buffer_queue_tue20.py verbatim (13/13 queued OK).
+
+**TREND REMIX #2 · FACE RATING (5pm reel, all four channels)**
+Rating party setups with my face only. 😐
+
+The fresh setup got the good face. The budget chair got concern. The uninvited guest got the long stare, and delivery day got the face that says book it. No words needed, the setup speaks. Send this to somebody whose face hides nothing.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#myreaction #trending #funnyreels #lasvegas #partyrentals
+
+YouTube title: Rating party setups with my face only 😐 #Shorts
+YouTube description:
+The fresh setup, the budget chair, the uninvited guest, and delivery day. No words needed. Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #MyReaction #FunnyShorts #PartyRentals #LasVegas
+
+**Pink #19 · THE FAMILY TREE (6pm story FB/IG + TT + YT)**
+Your family history has two sides. 🎀
+
+Breast cancer history can pass through either parent, so ask about aunts and grandmothers on both sides, and the men in your tree count too. Write it down and bring the list to your doctor: one honest family conversation can change your screening timeline. Send this to the family historian. Source: American Cancer Society.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#breastcancerawareness #pinkoctober #familyhistory #knowyourrisk #lasvegas
+
+YouTube title: Dad's side counts too. 🎀 #Shorts
+YouTube description:
+Family history of breast cancer can pass through either parent. Ask both sides, write it down, bring it to your doctor. Source: American Cancer Society.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #PinkOctober #BreastCancerAwareness #FamilyHistory #LasVegas
+
+**EP. 29 · THE PUMPKIN CARVE (8pm reel, 26s)**
+The intern won without touching a knife. 🎃
+
+EP. 29: the annual pumpkin carve. He had a vision, Wobbles used his head, literally, and Tyler's pumpkin showed up perfect without anybody seeing him carve it. The intern wins again and the record falls to 3 and 12. What should he carve next? Wrong answers only.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+#thebigbusinesschronicles #pumpkincarving #comedy #lasvegas #funnyreels
+
+YouTube title: EP. 29: The Pumpkin Carve 🎃 the intern strikes again #Shorts
+YouTube description:
+THE BIG BUSINESS CHRONICLES: one masterpiece, one headbutt, one pumpkin that carved itself. Record: 3 wins, 12 losses. New episodes daily in Las Vegas, NV.
+📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
+IG: @bigbusiness_rentals_events
+#Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
