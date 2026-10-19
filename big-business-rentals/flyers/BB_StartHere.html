@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack.ttf')}
+@font-face{font-family:'Playfair';src:url('fonts/Playfair900.ttf');font-weight:900}
+@font-face{font-family:'Oswald';src:url('fonts/Oswald600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont600.ttf');font-weight:600}
+@font-face{font-family:'Montserrat';src:url('fonts/Mont700.ttf');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{position:relative;font-family:'Montserrat';color:#f2ecdd;
+  background:radial-gradient(circle at 50% 24%, #3a1a5e 0%, #2c1247 55%, #150826 100%)}
+.grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='1'/></svg>")}
+.vig{position:absolute;inset:0;box-shadow:inset 0 0 220px rgba(0,0,0,.5)}
+.frame{position:absolute;inset:28px;border:2px solid #B08D3E}
+.wrap{position:absolute;inset:28px;padding:40px 60px 30px;text-align:center}
+.kick{font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:9px;color:#EFCB7C}
+.h1{margin-top:14px;font-family:'Archivo Black';font-size:92px;line-height:1.02}
+.h1 em{font-style:normal;background:linear-gradient(180deg,#EFCB7C,#c89a3c 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.script{font-family:'Playfair';font-weight:900;font-style:italic;font-size:40px;color:#cbb2e2;margin-top:10px}
+.box{margin:26px auto 0;width:930px;border:1px solid rgba(229,184,75,.55);border-radius:12px;
+  padding:20px 34px;background:rgba(0,0,0,.22);text-align:left}
+.boxh{font-family:'Oswald';font-weight:600;font-size:23px;letter-spacing:5px;color:#EFCB7C;text-align:center}
+.line{margin-top:10px;font-weight:600;font-size:27px;color:#e6dcc4;text-align:center;line-height:1.5}
+.line b{font-weight:700;color:#fff}
+.steps{margin-top:8px}
+.step{display:flex;align-items:center;gap:22px;margin-top:14px}
+.num{flex:0 0 58px;height:58px;border-radius:50%;background:linear-gradient(180deg,#EFCB7C,#B08D3E);
+  color:#241a35;font-family:'Archivo Black';font-size:30px;display:flex;align-items:center;justify-content:center}
+.st{font-weight:600;font-size:27px;color:#e6dcc4;line-height:1.35}
+.st b{font-weight:700;color:#fff}
+.foot{position:absolute;left:88px;right:88px;bottom:62px;display:flex;align-items:center;gap:20px;
+  border-top:1px solid rgba(229,184,75,.5);padding-top:20px;text-align:left}
+.foot img{width:76px;height:76px}
+.foot .p{font-family:'Archivo Black';font-size:34px;color:#E5B84B}
+.foot .s{font-weight:600;font-size:18px;color:#d8ceb6;margin-top:3px}
+</style></head>
+<body>
+  <div class="grain"></div><div class="vig"></div><div class="frame"></div>
+  <div class="wrap">
+    <div class="kick">◆&nbsp; NEW HERE? START HERE &nbsp;◆</div>
+    <div class="h1">YOUR PARTY, <em>HANDLED.</em></div>
+    <div class="script">Las Vegas party rentals and a private venue</div>
+    <div class="box">
+      <div class="boxh">WHAT WE RENT</div>
+      <div class="line"><b>Tables · Chairs · Linens · Chair Covers</b><br>Delivered, set up and picked up anywhere in Las Vegas.</div>
+    </div>
+    <div class="box">
+      <div class="boxh">THE PRIVATE VENUE</div>
+      <div class="line">Seats 40 · holds 80 standing<br><b>3 hours $625 · 4 hours $800</b> · tables, chairs and setup included</div>
+    </div>
+    <div class="box">
+      <div class="boxh">GET A QUOTE IN MINUTES</div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="st"><b>Call or text 702-706-8287</b></div></div>
+        <div class="step"><div class="num">2</div><div class="st"><b>Comment "QUOTE"</b> on any post and we will DM you</div></div>
+        <div class="step"><div class="num">3</div><div class="st"><b>Chat at bigbusinesspartyrentals.com,</b> it answers right away</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <img src="bb_logo.png">
+    <div>
+      <div class="p">702-706-8287</div>
+      <div class="s">bigbusinesspartyrentals.com &nbsp;·&nbsp; @bigbusiness_rentals_events &nbsp;·&nbsp; LAS VEGAS, NV</div>
+    </div>
+  </div>
+</body></html>
