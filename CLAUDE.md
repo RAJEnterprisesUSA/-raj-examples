@@ -428,6 +428,21 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   pumpkin carves itself, Wobbles headbutts his, W-L 3-12). Captions under TUESDAY
   OCT 20. Next: morning card tip-day No.36, trend search Wednesday, Pink #20, EP. 30,
   español #10, PRICE IT indoor Wednesday.
+- WEDNESDAY OCT 21 SET BUILT AND QUEUED MONDAY NIGHT, TWO DAYS AHEAD (cards 13/13 OK; videos
+  queued same session, see chat): MORNING CARD tip day BUDGET MATH No.36 (Teal, 6; FIRST
+  price-list carousel: $2 chair / $22 set / $176 seats 48, QUOTE headcount CTA), THE 31ST IS A
+  SATURDAY venue single (Purple), PRICE IT = BB_PriceIt_Masquerade (fresh indoor venue-scale
+  midnight masquerade, Pinterest-trend angle), THE BARTENDER referral (Black&Gold, 5), EN
+  ESPAÑOL #10 PRECIOS REALES (Cream, 5; first Spanish price card), 10 NIGHTS countdown
+  (Halloween, 4), TREND REMIX #3 BB_Trend_GettingRobbed (reelH REELS[26], GAGENDS[26]=14.0;
+  background-heist "robbed in broad daylight" format: cat/Wobbles/ghost strip the setup behind
+  MBB, freeze HE HAS NO IDEA), Pink #20 THE 55 PLUS EDITION (pink20.html, ACS every-other-year
+  choice at 55+), EP. 30 THE INVITATIONS (REELS[30]; invStack/invite helpers; Wobbles has an
+  invite, decree everyone is invited, cat beds on the spare stack, finale setup, W-L 3-13).
+  Wednesday ALSO carries START HERE pinned post 10am + owner price card 11am (queued earlier) =
+  29 posts total. Captions under WEDNESDAY OCT 21. Next: morning card Thursday (business-angle
+  day), trend search Thursday, Pink #21, EP. 31, español #11, PRICE IT outdoor Thursday,
+  referral profession next: photographer or party planner.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.

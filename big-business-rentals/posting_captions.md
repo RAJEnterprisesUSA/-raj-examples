@@ -2576,3 +2576,94 @@ in chat (browser-agent handoff pattern, same as the Oct 12 Meta Business Suite p
 bilingual flyer from the public raw URL, business.google.com > Add update, paste the v2 priced
 post text exactly, Call now button 702-706-8287, publish, report back, touch nothing else on the
 profile. gbp/GBP_Pack_1_week_of_Oct19.txt updated to the v2 priced text so pack and prompt match.
+
+====================================================================
+WEDNESDAY OCT 21 (queued Monday night Oct 19, two days ahead; 13 cards + 12 video posts
+at standing times; Wednesday ALSO carries the separately queued START HERE pinned post 10am
+and the owner price card post 11am = 29 posts total on the day)
+====================================================================
+
+MORNING CARD 9am · PARTY MATH TIP No.36 BUDGET MATH (Desert Teal, 6 slides; FIRST carousel
+built on the official price list)
+FB/IG: "Seating 48 people costs less than dinner."
+Real drop-off prices: folding chairs $2, a 6 ft table with six chairs $22, and eight sets seat 48
+guests for $176, delivered and picked up anywhere in Las Vegas. You set up, or full-service setup
+and breakdown starts at $265. Comment QUOTE with your headcount and we will DM your total today.
+#partyrentals #prices #lasvegas #budgetparty #tablesandchairs
+
+VENUE 12pm · THE 31ST IS A SATURDAY (Purple/Gold single)
+"The 31st is a Saturday. Book the room."
+A private room beats a crowded bar on the biggest party night of fall. Private venue seats 40,
+holds 80 standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment
+VENUE for Halloween availability, or chat with us at bigbusinesspartyrentals.com. [chat CTA 1]
+#halloween #venue #lasvegas #halloweenparty #eventspace
+
+PRICE IT 1pm · MASQUERADE (fresh indoor venue-scale midnight masquerade ballroom; FB + IG +
+TikTok story9 pad; indoor/outdoor rotation: Tue outdoor MovieNight -> Wed indoor)
+"How much would you pay for this setup?"
+Midnight masquerade: black satin, candelabras, gold chairs and a dance floor built for an
+entrance. Be honest, wrong answers welcome, drop your number below. The masks are the inspo.
+The tables, the chairs and the room underneath? That is us.
+#priceit #masquerade #halloween #lasvegas #partyrentals
+
+REFERRAL 2pm · THE BARTENDER (Black&Gold, 5; profession-direct week: Barber, NailTech, DJ,
+Bartender)
+"Bartenders hear the party plans first."
+Every round comes with a story about a birthday being planned or a venue being hunted. Send the
+party people our way, have them drop your name, and collect up to $100 after their event wraps.
+Send this to your favorite bartender. + referral fine print.
+#bartender #referral #lasvegas #sidehustle #partyrentals
+
+EN ESPAÑOL #10 3pm · PRECIOS REALES (Daylight Cream, 5; the weekly light-mode card; first
+Spanish price card on the official list)
+"¿Cuánto cuesta? Precios reales."
+Sin misterio: sillas plegables $2, mesas de 6 pies desde $10, y mesa con seis sillas $22,
+entregadas y recogidas en todo Las Vegas. ¿Quieres que instalemos y recojamos todo? Servicio
+completo desde $265, y el salón privado desde $625. Envía esto a quien anda cotizando su fiesta.
+¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com. [chat CTA 2]
+#precios #rentademesas #lasvegas #fiestas #sillas
+
+COUNTDOWN 4pm · 10 NIGHTS (Halloween palette, 4)
+"10 nights. The rush is here."
+This is the week everybody calls at once, and Halloween is a Saturday. Tables, chairs and the
+room go to whoever calls first. Swipe, then comment SPOOKY and we will DM you open October dates.
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+TREND REMIX #3 5pm · BB_Trend_GettingRobbed (17.2s, reelH REELS[26], GAGENDS[26]=14.0; all 4
+channels, FB/IG reel + TikTok + YT cat 23)
+TREND LOG Oct 20 search (socialpilot / later / newengen / napoleoncat trend roundups): picked the
+"robbed in broad daylight / everything disappears behind me" background-heist format (POV comedy
+where the subject presents proudly while the scene is stripped behind them). Angle: MBB presents
+the setup, cat takes the candy, Wobbles bulldozes a chair off frame, ghost floats the bowl away,
+freeze "HE HAS NO IDEA.", turn too late, payoff "BOOK YOUR OWN. WE DELIVER." No brands, no
+logos, format only. NOTE FOR OWNER: add the trending heist/oblivious sound in-app if TikTok
+suggests one; the file ships with our own SFX bed.
+FB/IG: "He got robbed in broad daylight and never noticed. 👀"
+He was busy showing off the setup while the cat took the candy, Lil Wobbles bulldozed a chair
+clean off the scene, and the ghost floated away with the whole bowl. That is what happens when
+the setup is this good, everybody wants it. Book your own, we deliver anywhere in Las Vegas.
+Send this to somebody who never notices anything.
+#funnyreels #halloween #trending #lasvegas #partyrentals
+YT: "Robbed in broad daylight and he never noticed 👀 #Shorts" (cat 23)
+
+PINK OCTOBER #20 6pm · THE 55 PLUS EDITION (pink20.html, 26s; FB/IG story + TikTok + YT cat 22)
+FB/IG: "At 55, your screening plan gets a choice. 🎀"
+At 55 and up there are two good options: switch to a mammogram every other year, or keep going
+every single year. Either way, stay on a schedule for as long as you are in good health. Then
+pass it on to the women you love, moms, aunties, grandmothers, neighbors. One phone call can put
+a screening back on the calendar. Source: American Cancer Society.
+#breastcancerawareness #pinkoctober #mammogram #over55 #lasvegas
+YT: "At 55, the screening plan gets a choice. 🎀 #Shorts" (cat 22)
+
+EP. 30 8pm · THE INVITATIONS (REELS[30] in reelsD, 26s, ENDTIMES[30]=23.5; invStack/invite
+helpers, drawFlyer reused; Wobbles mysteriously has an invite, Mrs NW decrees everyone is
+invited, cat claims the spare stack, sets up the Oct 31 full-cast finale attendance; L, W-L 3-13)
+FB/IG: "The chair got invited before you did. 🎃"
+EP. 30: the official party invitations went out. Mrs. Never Wrong got hers, the intern appeared
+out of nowhere already holding his, and somehow Lil Wobbles had one propped against his leg.
+Nobody confessed. The decree came down, everyone is invited, and the cat claimed the spare stack
+as a bed. Oct 31, everybody is coming. Who else gets an invite? Wrong answers only.
+#thebigbusinesschronicles #halloweenparty #comedy #lasvegas #funnyreels
+YT: "EP. 30: The Invitations 🎃 even the chair is coming #Shorts" (cat 23)
+
+(Chat CTA rule satisfied: venue caption + español caption both point to the site chat.)

@@ -3581,6 +3581,90 @@ REELS[25]=reelT25;
 SHAKES[25]=[11.7,0.25,10];
 TAGLINES[25]='NO WORDS NEEDED. THE SETUP SPEAKS.';
 window.GAGENDS[25]=14.0;
+
+// ---------- T26: TREND REMIX · getting robbed in the background (17s) ----------
+function reelT26(t){
+  const FR0=10.6, FR1=11.4;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.2*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(540,1150); ctx.scale(z,z); ctx.translate(-540,-1150);
+  }
+  drawRoomH(t);
+  // THE SETUP, stage right: table + bowl + two chairs
+  drawTable(760,0,0);
+  // chair left of table stays; chair right of table gets pushed off
+  drawChair(560,0,0,0);
+  let c2x=950;
+  if(tt>=6.0&&tt<7.6) c2x=lerp(950,-260,ease((tt-6.0)/1.6));
+  if(tt<7.6) drawChair(c2x,(tt>=6.0)?Math.sin(t*16)*5:0,0,0);
+  // candy drains while the cat works: 6 -> 0 between 2.8 and 5.2
+  let candy=6;
+  if(tt>=2.8) candy=Math.max(0,6-Math.floor((tt-2.8)/0.4));
+  // the bowl: ghost floats it off between 8.8 and 10.2
+  let by=FLOOR-280, bx=740, bowlGone=false;
+  if(tt>=8.8){
+    const k=ease(Math.min(1,(tt-8.8)/1.4));
+    by=lerp(FLOOR-280,-220,k); bx=lerp(740,860,k);
+    if(tt>=10.2) bowlGone=true;
+  }
+  if(!bowlGone) drawBowl(bx,by,candy);
+  // THE CAT: in 2.2, eats at the bowl, out 5.6
+  if(tt>=2.2&&tt<3.2) drawCat(lerp(W+160,880,ease((tt-2.2)/1.0)), FLOOR, {pose:'trot',face:-1,t:t,s:1.4});
+  else if(tt>=3.2&&tt<5.6) drawCat(880, FLOOR-256, {face:-1,t:t,s:1.4});
+  else if(tt>=5.6&&tt<6.8) drawCat(lerp(880,W+180,(tt-5.6)/1.2), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+  // WOBBLES: rams in from the right at 6.0 and bulldozes the chair clean off the left edge
+  if(tt>=5.6&&tt<8.0){
+    let wx=(tt<6.0)?lerp(W+180,1110,ease((tt-5.6)/0.4)):c2x+165;
+    drawChair(wx,Math.sin(t*12)*8,0,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+  }
+  // THE GHOST: drifts in 7.6, carries the bowl up and away
+  if(tt>=7.6&&tt<10.6){
+    const gy=lerp(-120,FLOOR-520,ease(Math.min(1,(tt-7.6)/1.2)));
+    const gy2=(tt>=8.8)?lerp(FLOOR-520,-260,ease(Math.min(1,(tt-8.8)/1.4))):gy;
+    drawGhost(900,(tt<8.8)?gy:gy2,0.9,t);
+  }
+  // MR. BIG BUSINESS: front left, presenting to camera, oblivious
+  let mp;
+  if(tt<1.4){
+    const k=ease(tt/1.4), step=Math.sin(tt*9);
+    mp={x:lerp(-200,270,k), y:HIP_STAND-Math.abs(step)*10, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:40}, mouth:'smile', style:STYLER};
+  } else if(tt<11.4){
+    const talk=Math.sin(t*6)*8;
+    const present=(Math.floor(tt/2.6)%2===0);
+    mp={x:270, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:present?{sh:150,el:-70}:{sh:60+talk,el:20}, mouth:'smile',
+      headTilt:Math.sin(t*3)*3, style:STYLER};
+  } else if(tt<12.4){
+    mp={x:270, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-10}, mouth:'o', eyes:'wide', style:STYLER};
+  } else {
+    mp={x:270, y:HIP_STAND, face:1, lean:12,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:140,el:-60}, arm2:{sh:20,el:70}, mouth:'o', eyes:'wide', style:STYLER};
+  }
+  drawMan(mp);
+  ctx.restore();
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(790,FLOOR-860,kk*0.9,'...');}
+  if(t>=11.6&&t<12.8){const kk=easeOutBack(Math.min(1,(t-11.6)/0.26)); starburst(640,FLOOR-820,kk*0.95,'?!');}
+  if(t<1.7) caption(['POV: SHOWING OFF','YOUR SETUP.'],240,(t+0.35)/0.35,48);
+  if(t>=2.6&&t<3.8) caption(['MEANWHILE,','BEHIND HIM.'],240,(t-2.6)/0.35,50);
+  if(t>=5.4&&t<6.4) caption(['THE CANDY.','GONE.'],240,(t-5.4)/0.35,50);
+  if(t>=6.9&&t<8.1) caption(['THE CHAIR.','GONE.'],240,(t-6.9)/0.35,50);
+  if(t>=9.2&&t<10.4) caption(['EVEN THE','BOWL.'],240,(t-9.2)/0.35,50);
+  if(t>=FR0+0.05&&t<FR1) caption(['HE HAS','NO IDEA.'],240,(t-FR0-0.05)/0.35,52);
+  if(t>=12.0&&t<12.9) caption(['THE TURN.','TOO LATE.'],240,(t-12.0)/0.35,50);
+  if(t>=13.0&&t<13.9) caption(['BOOK YOUR OWN.','WE DELIVER.'],240,(t-13.0)/0.35,50);
+}
+REELS[26]=reelT26;
+SHAKES[26]=[10.6,0.25,12];
+TAGLINES[26]='EVERYBODY WANTS THE SETUP. GET YOUR OWN.';
+window.GAGENDS[26]=14.0;
 </script>
 </body></html>
 

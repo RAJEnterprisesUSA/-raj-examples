@@ -3401,6 +3401,130 @@ REELS[29]=ep29;
 SHAKES[29]=[8.0,0.25,14];
 TAGLINES[29]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[29]=23.5;
+
+// ================= EP. 30 · THE INVITATIONS =================
+function invStack(x,y,n){
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  for(let i=0;i<n;i++){
+    ctx.fillStyle=(i%2)?'#efe4c8':'#f6edd8';
+    rr(x-80, y-16-i*12, 160, 16, 5); ctx.fill(); ctx.stroke();
+  }
+  ctx.restore();
+}
+function invite(x,y,s,rot){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.translate(-0,-0);
+  drawFlyer(0,0,rot||0,false);
+  ctx.restore();
+}
+function ep30(t){
+  const FR0=8.2, FR1=9.0;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.24*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(180,1320); ctx.scale(z,z); ctx.translate(-180,-1320);
+  }
+  drawRoom();
+  miniPumpkin(1016, FLOOR+88);
+  // the spare stack, center floor
+  if(tt>=0.8) invStack(560, FLOOR, Math.max(2, 6-((tt>=3.2)?1:0)-((tt>=5.6)?1:0)));
+  // WOBBLES far left, an invitation mysteriously propped against it
+  const ww=(tt>=9.6&&tt<12.0)?Math.sin(t*10)*7:Math.sin(t*5)*((tt>=17.5)?6:3);
+  drawChair(130, ww, 0, 0, RED23);
+  if(tt>=7.2) invite(205, FLOOR-30, 0.5, 14);
+  // MRS. NEVER WRONG: walks in from the right 1.2-2.6, takes her invite, later decrees
+  let wp=null;
+  if(tt>=1.2&&tt<2.6){
+    const k=ease((tt-1.2)/1.4), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,720,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=2.6){
+    const decree=(tt>=12.0&&tt<14.5);
+    wp={x:720, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:decree?{sh:150,el:-70}:{sh:46,el:-30}, mouth:decree?'o':'flat', style:STYLEW};
+  }
+  if(wp) drawMan(wp);
+  // her invite in hand after the hand-off
+  if(tt>=3.2&&tt<12.0) invite(640, FLOOR-330, 0.35, -10);
+  // TYLER: pops out of nowhere at 4.4, already holding the shy pose
+  if(tt>=4.4){
+    const shy=(tt>=5.6&&tt<7.6);
+    drawMan({x:1000, y:HIP_STAND, face:-1,
+      legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:(tt>=5.2)?{sh:60,el:-46}:{sh:20,el:50},
+      mouth:'smile', headTilt:shy?12:0, style:STYLET});
+    if(tt<5.0) sparkleD(1000, FLOOR-520, t);
+    if(tt>=5.6) invite(930, FLOOR-320, 0.35, 8);
+  }
+  // THE CAT: trots in at 14.5, curls up asleep ON the spare stack
+  if(tt>=14.5&&tt<15.5) drawCatD(lerp(-160,560,ease((tt-14.5)/1.0)), FLOOR-40, {pose:'trot',face:1,t:t,s:1.4});
+  else if(tt>=15.5) drawCatD(560, FLOOR-60, {face:1,t:t,s:1.4});
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.4){
+    const k=ease(tt/1.4), step=Math.sin(tt*9);
+    mp={x:lerp(-200,400,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:40,el:70}, mouth:'smile', style:STYLER};
+  } else if(tt<3.2){
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-20}, mouth:'smile', style:STYLER};        // handing NW hers
+  } else if(tt<7.2){
+    const hand=(tt>=5.2&&tt<6.2);
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:hand?{sh:120,el:-40}:{sh:50,el:20}, mouth:'smile', style:STYLER};
+  } else if(tt<9.6){
+    mp={x:400, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:88,el:-10}, mouth:'o', eyes:'wide', style:STYLER}; // spots the chair's invite
+  } else if(tt<12.0){
+    mp={x:400, y:HIP_STAND, face:-1, lean:8,
+      legs:[{hip:14,knee:-4},{hip:-10,knee:8}],
+      arm:{sh:130,el:-56}, mouth:'o', style:STYLER};             // pointing: hand it over
+  } else if(tt<14.5){
+    mp={x:400, y:HIP_STAND, face:1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:84,el:-30}, mouth:'o', style:STYLER};              // protesting the decree
+  } else if(tt<17.5){
+    mp={x:400, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-6}, mouth:'o', eyes:'wide', style:STYLER};  // the cat took the stack
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:400, y:HIP_STAND, face:-1, lean:14,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=19.8) sparkleD(560, FLOOR-480, t);
+  ctx.restore();
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(330,FLOOR-760,kk*0.9,'?');}
+  if(t>=12.2&&t<13.6){const kk=easeOutBack(Math.min(1,(t-12.2)/0.28)); starburst(760,FLOOR-860,kk*0.9,'EVERYONE.');}
+  if(t>=15.8&&t<17.0){const kk=easeOutBack(Math.min(1,(t-15.8)/0.26)); starburst(500,FLOOR-880,kk*0.8,'TAKEN.');}
+  showBadge(30);
+  if(t>=0.05&&t<2.0) caption(['THE OFFICIAL PARTY','INVITATIONS.'],340,(t+0.3)/0.35,44);
+  if(t>=2.8&&t<4.2) caption(['ONE FOR','MRS. NEVER WRONG.'],340,(t-2.8)/0.35,42);
+  if(t>=4.6&&t<5.8) caption(['WHERE DID HE','EVEN COME FROM?'],340,(t-4.6)/0.35,44);
+  if(t>=6.0&&t<7.6) caption(['"...IM THE','NEW INTERN."'],340,(t-6.0)/0.35,46);
+  if(t>=FR0+0.05&&t<FR1) caption(['WHO GAVE','HIM ONE?'],340,(t-FR0-0.05)/0.35,50);
+  if(t>=9.8&&t<11.6) caption(['CHAIRS DO NOT','GET INVITED.'],340,(t-9.8)/0.35,44);
+  if(t>=12.4&&t<14.2) caption(['THE DECREE:','EVERYONE IS INVITED.'],340,(t-12.4)/0.35,40);
+  if(t>=15.2&&t<16.8) caption(['THE SPARE STACK','IS TAKEN.'],340,(t-15.2)/0.35,44);
+  if(t>=17.8&&t<19.4) caption(['EVEN THE CHAIR','IS COMING.'],340,(t-17.8)/0.35,46);
+  if(t>=20.0&&t<21.8) caption(['OCT 31.','EVERYBODY IS COMING.'],340,(t-20.0)/0.35,44);
+  if(t>=22.4&&t<23.45){
+    caption(['WHO ELSE GETS AN INVITE?','WRONG ANSWERS ONLY.'],340,(t-22.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 13 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[30]=ep30;
+SHAKES[30]=[8.2,0.25,14];
+TAGLINES[30]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[30]=23.5;
 </script>
 </body></html>
 
