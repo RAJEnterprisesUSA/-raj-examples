@@ -443,13 +443,22 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   29 posts total. Captions under WEDNESDAY OCT 21. Next: morning card Thursday (business-angle
   day), Pink #21, EP. 31, español #11, PRICE IT outdoor Thursday,
   referral profession next: photographer or party planner.
-  THURSDAY TREND LOCKED BY OWNER (directive Oct 19 night): no search needed, the topic is the
-  new Tesla roadster reveal. Concept: OUR DELIVERY VEHICLE operates exactly like the roadster
-  while making a delivery (instant launch, hover/thruster flight, mid-air parking, soft landing,
-  calm delivery of tables and chairs). Brand-safe per the lane rule: ride the trend, not the
-  brand. NO Tesla name, logo, badge or likeness of their actual design anywhere on frame or in
-  captions; generic "the new roadster everybody is talking about" phrasing only. Punchline lands
-  on delivery. BB_Trend_RocketDelivery, REELS[27], GAGENDS[27]=14.0, 17s spec.
+- THURSDAY OCT 22 SET BUILT AND QUEUED MONDAY NIGHT, THREE DAYS AHEAD (cards 13/13 OK;
+  videos queued same session, see chat): MORNING CARD business day DELIVERY DAY (Velvet, 6;
+  chat CTA on the CTA slide), COSTUME PARTY HQ venue single (Emerald), PRICE IT =
+  BB_PriceIt_GlowNight (fresh outdoor backyard glow party, three long banquet runs, neon
+  centerpieces), THE PHOTOGRAPHER referral (Purple, 5; profession run: Barber, NailTech, DJ,
+  Bartender, Photographer), EN ESPAÑOL #11 LAS POSADAS (Navy, 5; December bookings), 9 NIGHTS
+  countdown (Black&Gold, 4), TREND REMIX #4 BB_Trend_RocketDelivery (reelH REELS[27],
+  GAGENDS[27]=14.0; OWNER-LOCKED topic: the new Tesla roadster reveal, remixed as our generic
+  purple box van launching, flying over traffic, mid-air parking and landing to deliver tables;
+  drawVanH/drawCarH helpers; NO Tesla name/logo/design anywhere, "flying roadster news"
+  phrasing only), Pink #21 THE NO-COST EDITION (pink21.html, CDC early detection program,
+  dial 211), EP. 31 THE DRY RUN (REELS[31]; finale rehearsal, Wobbles crams into the row,
+  inspection passed, cat knocks the centerpiece pumpkin, Tyler completes the row, W-L 3-14).
+  Captions under THURSDAY OCT 22. Next: morning card Friday (tip day No.37), trend search
+  Friday, Pink #22, EP. 32, español #12, PRICE IT indoor Friday, referral profession next:
+  party planner or event coordinator.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.

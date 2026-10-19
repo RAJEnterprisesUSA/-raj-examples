@@ -2667,3 +2667,99 @@ as a bed. Oct 31, everybody is coming. Who else gets an invite? Wrong answers on
 YT: "EP. 30: The Invitations 🎃 even the chair is coming #Shorts" (cat 23)
 
 (Chat CTA rule satisfied: venue caption + español caption both point to the site chat.)
+
+====================================================================
+THURSDAY OCT 22 (built and queued Monday night Oct 19, three days ahead; 13 cards +
+12 video posts at standing times)
+====================================================================
+
+MORNING CARD 9am · DELIVERY DAY (Velvet Rope, 6 slides; business-angle day)
+FB/IG: "Your party shows up on a truck."
+Delivery day means we pull up, unload, and go: tables and chairs delivered and picked up
+anywhere in Las Vegas, delivery quoted with your order. Want it fully handled? Full-service
+setup and breakdown starts at $265, and after the party we haul everything back. You never
+load a single table. Questions? The chat at bigbusinesspartyrentals.com answers right away.
+[chat CTA 1]
+#partyrentals #delivery #lasvegas #partyplanning #tablesandchairs
+
+VENUE 12pm · COSTUME PARTY HQ (Emerald Night single)
+"Host the costume party. Skip the cleanup."
+Your place stays spotless and the party still happens. Private venue seats 40, holds 80
+standing: 3 hours $625 or 4 hours $800 with tables, chairs and setup included. Comment VENUE
+for October dates, or chat with us at bigbusinesspartyrentals.com. [chat CTA 2]
+#halloween #venue #lasvegas #costumeparty #eventspace
+
+PRICE IT 1pm · GLOW NIGHT (fresh outdoor backyard glow party, three long banquet runs,
+neon centerpieces; indoor/outdoor rotation: Wed indoor Masquerade -> Thu outdoor; FB + IG +
+TikTok story9 pad)
+"How much would you pay for this setup?"
+Backyard glow night: three long banquet runs, neon centerpieces, blacklight blues and a
+dance floor under the string lights. Be honest, wrong answers welcome, drop your number
+below. The glow is the inspo. The tables, the chairs and the layout underneath? That is us.
+#priceit #glowparty #backyardparty #lasvegas #partyrentals
+
+REFERRAL 2pm · THE PHOTOGRAPHER (Purple/Gold, 5; profession-direct run: Barber, NailTech,
+DJ, Bartender, Photographer)
+"Photographers see the party first."
+Every shoot ends with somebody planning the next event: quinceañeras, baby showers,
+birthdays. Send the party people our way, have them drop your name, and collect up to $100
+after their event wraps. Send this to your favorite photographer. + referral fine print.
+#photographer #referral #lasvegas #sidehustle #partyrentals
+
+EN ESPAÑOL #11 3pm · LAS POSADAS (Midnight Navy, 5; December-booking angle)
+"La posada se planea desde octubre."
+Diciembre vuela, y las fechas de posadas y cenas navideñas se apartan primero. Mesa con seis
+sillas $22, entregada y recogida en todo Las Vegas, tú instalas o servicio completo desde
+$265. ¿La posada grande? Salón privado para 40 sentados u 80 de pie, 3 horas $625 · 4 horas
+$800 con instalación incluida. Envía esto al grupo familiar antes de que diciembre se llene.
+¿Preguntas? Escríbenos al chat de bigbusinesspartyrentals.com. [chat CTA 3]
+#posadas #diciembre #lasvegas #fiestas #rentademesas
+
+COUNTDOWN 4pm · 9 NIGHTS (Black&Gold, 4; verified 31-22=9 via datetime)
+"9 nights. Single digits."
+The calendar just got serious: nine nights, two Saturdays, one monster weekend, and the
+parties on the 24th and the finale on the 31st are booking at the same time. Swipe, then
+comment SPOOKY and we will DM you open October dates.
+#halloween #halloweencountdown #spookyseason #lasvegas #partyrentals
+
+TREND REMIX #4 5pm · BB_Trend_RocketDelivery (17.2s, reelH REELS[27], GAGENDS[27]=14.0;
+all 4 channels)
+TREND LOG Oct 22 (TOPIC LOCKED BY OWNER Oct 19 night, no search needed): the new Tesla
+roadster reveal, remixed as OUR delivery vehicle operating exactly like it on a delivery
+run. Angle: customer waits, van stuck behind traffic, instant launch, thruster flight over
+the lane, full mid-air rotation parallel park, soft landing, calm table-and-chair drop,
+freeze on the customer's face. Brand-safe: generic purple box van, no Tesla name, logo or
+design likeness on frame or in captions, "flying roadster news" phrasing only. NOTE FOR
+OWNER: if TikTok suggests a trending roadster/launch sound, add it in-app; the file ships
+with our own SFX bed (rumble, liftoff, soft-landing thud).
+FB/IG: "Our delivery van saw the flying roadster news. 🚀"
+Everybody is talking about a roadster that flies, so our delivery van decided traffic is
+optional: instant launch, mid-air parallel parking, soft landing, tables and chairs placed
+right on time. Delivered and picked up anywhere in Las Vegas, full-service setup available.
+The setup arrives, whatever it takes. Send this to somebody who is always stuck in traffic.
+#funnyreels #trending #delivery #lasvegas #partyrentals
+YT: "The delivery van saw the flying roadster news 🚀 #Shorts" (cat 23)
+
+PINK OCTOBER #21 6pm · THE NO-COST EDITION (pink21.html, 26s; CDC early detection program;
+FB/IG story + TikTok + YT cat 22)
+FB/IG: "A mammogram should not depend on a paycheck. 🎀"
+Free and low-cost mammograms are real: the CDC early detection program runs in every state
+for people without insurance, and dialing 211 can point you to one nearby. Somebody you love
+is skipping a screening over the cost, so send them this. One call can book a free one. No
+cost, no excuses. Source: CDC.
+#breastcancerawareness #pinkoctober #freemammogram #earlydetection #lasvegas
+YT: "Free mammograms exist. Pass it on. 🎀 #Shorts" (cat 22)
+
+EP. 31 8pm · THE DRY RUN (REELS[31] in reelsD, 26s, ENDTIMES[31]=23.5; finale rehearsal:
+chair row assignments, Wobbles crams into the row again (EP27 callback), inspection PASSED,
+room perfect for two seconds, cat knocks the centerpiece pumpkin, Tyler completes the row
+from nowhere; L, W-L 3-14; sets up the Oct 31 full-cast finale)
+FB/IG: "The room was perfect for exactly two seconds. 🎃"
+EP. 31: the finale dry run. Every chair had an assignment, the inspector approved, and the
+room was ready eight days early, until the cat jumped on the table and sent the centerpiece
+pumpkin flying. Lil Wobbles snuck into the seating row again, Tyler completed it somehow,
+and the record falls to 3 and 14. What goes wrong at the finale? Predictions below.
+#thebigbusinesschronicles #halloweenparty #comedy #lasvegas #funnyreels
+YT: "EP. 31: The Dry Run 🎃 perfect for two seconds #Shorts" (cat 23)
+
+(Chat CTA rule satisfied three times: morning card, venue, español.)
