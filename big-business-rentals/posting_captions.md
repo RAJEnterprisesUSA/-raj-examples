@@ -2285,3 +2285,34 @@ She asked what he brings to the table. He brought the actual tables. White foldi
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #FunnyShorts #DateNight #PartyRentals #LasVegas
+
+---
+
+## WEEKLY REPORT No.2 (run Sunday Oct 18 evening; window Mon Oct 12 - Sun Oct 18, 167 sent posts)
+
+HEADLINE: THE BARBER referral carousel (Thu 2pm, FB) did 61 SHARES and 460 impressions, the most
+shared post the page has ever had and the top FB post of the week, beating every reel. The angle
+(speaking directly TO a profession that hears about parties: barbers, nail techs) is a share
+engine. Rest of FB: gag reels steady at 229-246 impressions each, episodes ~186 avg; every other
+card lane stays single/low double digits. FB = reels + shareable referral angles.
+
+YOUTUBE still the reach king: top 5 posts of the week all YouTube (Fun Stuff footage 1000,
+Seance gag 989, Party Day Flow footage 979, EP. 25 975, Ghost Waiter 850). Footage bucket alone
+5.3K views across 11. REAL FOOTAGE also won IG (181, 171 views, two top spots) and TikTok (193).
+Research priority 1 confirmed a third week: more raw job footage = more reach.
+
+TIKTOK PRICE IT SLOT VALIDATED: the daily 1pm PRICE IT pads did 86-105 views each, the best
+non-reel TikTok content and level with or above the gag reels there. Keep the slot.
+
+IG: comedy 128-170 views per video vs cards at 20-40. Consistent with week 1.
+ESPAÑOL: still too few posts with metrics to judge (n=1-2 showing); hold for week 3.
+Pink: modest everywhere (TT 82 total, YT 151 total); it is a mission lane, not a growth lane.
+
+ACTIONS FOR WEEK OF OCT 19:
+1. Referral lane goes profession-direct: next carousels speak to nail techs, DJs, photographers,
+   bartenders, party planners ("you hear about every party first") and are built to be shared to
+   that person. One per day stays, angle shifts.
+2. Ask owner for more raw job footage; drop illustrated business/venue pieces whenever footage
+   exists.
+3. New comedy lengths start tonight (gag 17s, episode 26s): watch next Sunday whether views hold.
+4. PRICE IT TikTok slot stays. YT uploads stay on everything.
