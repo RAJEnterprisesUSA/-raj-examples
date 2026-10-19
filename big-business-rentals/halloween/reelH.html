@@ -3418,6 +3418,87 @@ function reelH23(t){
 REELS[23]=reelH23;
 SHAKES[23]=[4.7,0.3,14];
 TAGLINES[23]='EVERYBODY PAYS. EXCEPT THE CAT.';
+
+// ---------- T24: TREND REMIX · the costume walk (17s, GAGENDS=14) ----------
+function witchHatH(x,y,k,rot){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0); ctx.scale(k,k);
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#1c1428';
+  ctx.beginPath(); ctx.ellipse(0,0,86,20,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-46,-6); ctx.quadraticCurveTo(-10,-120,8,-128);
+  ctx.quadraticCurveTo(26,-96,46,-6); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B';
+  ctx.fillRect(-40,-26,80,14); ctx.strokeRect(-40,-26,80,14);
+  ctx.restore();
+}
+function capeH(x,topY,flap){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#5b2a86';
+  ctx.beginPath();
+  ctx.moveTo(x+4,topY);
+  ctx.quadraticCurveTo(x-150-flap*0.8, topY+100, x-190-flap, topY+240);
+  ctx.quadraticCurveTo(x-90, topY+210, x-20, topY+225);
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='#E5B84B'; ctx.lineWidth=7;
+  ctx.beginPath(); ctx.moveTo(x+2,topY+8);
+  ctx.quadraticCurveTo(x-144-flap*0.8, topY+106, x-182-flap, topY+230); ctx.stroke();
+  ctx.restore();
+}
+function spotOverlay(cx,cy,dark){
+  if(dark<=0)return;
+  const g=ctx.createRadialGradient(cx,cy,130,cx,cy,780);
+  g.addColorStop(0,'rgba(8,4,16,'+(dark*0.08).toFixed(3)+')');
+  g.addColorStop(1,'rgba(8,4,16,'+(dark*0.9).toFixed(3)+')');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+}
+function reelT24(t){
+  const FR0=6.2, FR1=7.0;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  // wobbles position: the slowest walk ever televised
+  let wx=-120;
+  if(tt>=0.8) wx=lerp(-120,540,Math.min(1,(tt-0.8)/8.7));
+  ctx.save();
+  const z=1+0.16*ease(Math.min(1,tt/9.5)) + ((t>=FR0&&t<FR1)?0.2*easeOutBack(Math.min(1,(t-FR0)/0.25)):0);
+  ctx.translate(540,1150); ctx.scale(z,z); ctx.translate(-540,-1150);
+  drawRoomH(t);
+  // the full setup waits in the dark behind him
+  drawTable(260,0,0); drawBowl(240,FLOOR-280,6);
+  drawTable(880,0,0); drawBowl(900,FLOOR-280,6);
+  // THE WALK
+  const sway=Math.sin(t*3)*4;
+  const flap=10+Math.sin(t*2.2)*8;
+  if(tt<11.6){
+    drawChair(wx,sway,0,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    capeH(wx-40,FLOOR-330,flap);
+    witchHatH(wx+6,FLOOR-388,1,sway*0.012);
+  } else {
+    const strut=Math.sin(t*9)*8;
+    drawChair(540,strut,0,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+    capeH(500,FLOOR-330,flap+strut);
+    witchHatH(546,FLOOR-388,1,strut*0.015);
+  }
+  // THE CAT: overtakes him effortlessly at 8.2, exits
+  if(tt>=8.2&&tt<10.2){
+    drawCat(lerp(-160,W+180,(tt-8.2)/2.0), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+  }
+  // lighting: spotlight dark until the reveal at 10.0
+  let dark=1;
+  if(tt>=10.0) dark=Math.max(0,1-(tt-10.0)/1.0);
+  spotOverlay(Math.max(140,Math.min(940,wx)), FLOOR-250, dark);
+  if(tt>=10.2&&tt<11.4) sparkle(260,FLOOR-340,t);
+  if(tt>=10.5&&tt<11.7) sparkle(880,FLOOR-340,t);
+  ctx.restore();
+  if(t>=FR0+0.05&&t<FR1){const kk=easeOutBack(Math.min(1,(t-FR0-0.05)/0.26)); starburst(790,FLOOR-840,kk*0.9,'ICONIC.');}
+  if(tt>=8.5&&tt<9.6){const kk=easeOutBack(Math.min(1,(tt-8.5)/0.26)); starburst(300,FLOOR-780,kk*0.8,'ZOOM.');}
+  if(t<1.8) caption(['THE COSTUME WALK.','EVERYBODY IS DOING IT.'],240,(t+0.35)/0.35,44);
+  if(t>=3.0&&t<4.4) caption(['THE DRAMA.','THE SLOW BURN.'],240,(t-3.0)/0.35,50);
+  if(t>=8.6&&t<9.8) caption(['OVERTAKEN.'],240,(t-8.6)/0.35,54);
+  if(t>=10.4&&t<11.8) caption(['THE REAL REVEAL:','THE SETUP.'],240,(t-10.4)/0.35,50);
+  if(t>=12.2&&t<13.7) caption(['WE DELIVER THE','WHOLE SCENE.'],240,(t-12.2)/0.35,50);
+}
+REELS[24]=reelT24;
+SHAKES[24]=[6.2,0.25,12];
+TAGLINES[24]='THE LOOK CHANGES. THE SETUP DELIVERS.';
+window.GAGENDS=window.GAGENDS||{}; window.GAGENDS[24]=14.0;
 </script>
 </body></html>
 

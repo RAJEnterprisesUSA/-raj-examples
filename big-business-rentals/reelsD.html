@@ -3108,6 +3108,143 @@ REELS[27]=ep27;
 SHAKES[27]=[10.8,0.25,14];
 TAGLINES[27]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[27]=18.5;
+
+// ================= EP. 28 · THE TASTE TEST (first 26s episode) =================
+function ep28(t){
+  const FR0=9.0, FR1=9.8;
+  const tt=(t>=FR0&&t<FR1)?FR0:t;
+  ctx.save();
+  if(t>=FR0&&t<FR1){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-FR0)/0.25));
+    ctx.translate(330,1250); ctx.scale(z,z); ctx.translate(-330,-1250);
+  }
+  drawRoom();
+  miniPumpkin(70, FLOOR+88);
+  drawTable(640,0,0);
+  const TOP=FLOOR-250;
+  // the secret menu: three sample bowls; the LEFT one gets robbed
+  let c1=6;
+  if(tt>=10.6) c1=Math.max(2, 6-Math.floor((tt-10.6)/0.5));
+  if(tt>=1.8) drawBowlD(460,TOP-30,c1,1.0);
+  if(tt>=2.4) drawBowlD(640,TOP-30,6,1.0);
+  if(tt>=3.0) drawBowlD(820,TOP-30,6,1.0);
+  // WOBBLES: the loud decoy, enters far left, escorted, parked shamed
+  let wx=null;
+  if(tt>=7.0&&tt<9.0) wx=lerp(-180,200,ease((tt-7.0)/2.0));
+  else if(tt>=9.0&&tt<12.4) wx=lerp(200,110,ease(Math.min(1,(tt-9.8)/2.2)));
+  else if(tt>=12.4) wx=110;
+  if(wx!==null){
+    const loud=(tt<9.8)?Math.sin(t*14)*9:Math.sin(t*6)*3;
+    drawChair(wx,loud,0,0,RED23);
+  }
+  // THE CAT: the real operation, left bowl, while the decoy holds the room
+  if(tt>=9.8){
+    if(tt<10.6){
+      const k=ease((tt-9.8)/0.8);
+      drawCatD(lerp(-160,450,k), FLOOR-(FLOOR-(TOP-6))*k*k, {pose:(k<0.7?'trot':undefined),face:1,t:t,s:1.4});
+    } else {
+      drawCatD(450, TOP-6, {face:1,t:t,s:1.4});
+      if(tt>10.8&&tt<13.8) sparkleD(470,TOP-80,t);
+    }
+  }
+  // MRS. NEVER WRONG: official taster, works the right end of the table
+  let wp=null;
+  if(tt>=3.4&&tt<4.6){
+    const k=ease((tt-3.4)/1.2), step=Math.sin(tt*9);
+    wp={x:lerp(W+200,950,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:30,el:30}, mouth:'flat', style:STYLEW};
+  } else if(tt>=4.6&&tt<5.8){
+    wp={x:950, y:HIP_STAND, face:-1, lean:10,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:106,el:14}, mouth:'smile', style:STYLEW};   // tastes the right bowl
+  } else if(tt>=5.8&&tt<12.6){
+    const nod=(tt<7.0)?Math.sin(tt*5)*5:0;
+    wp={x:950, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'smile', headTilt:nod, style:STYLEW};
+  } else if(tt>=12.6&&tt<14.8){
+    wp={x:950, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:120,el:-36}, mouth:'o', style:STYLEW};      // points down the table at the heist
+  } else if(tt>=14.8&&tt<19.6){
+    wp={x:950, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:34,el:60}, mouth:'flat', style:STYLEW};
+  } else if(tt>=19.6){
+    const sigh=Math.sin(t*3)*4;
+    wp={x:950, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:150,el:-86}, mouth:'flat', headTilt:8+sigh, style:STYLEW}; // hand to head
+  }
+  if(wp) drawMan(wp);
+  // MR. BIG BUSINESS
+  let mp=null;
+  if(tt<1.6){
+    const step=Math.sin(tt*9);
+    mp={x:lerp(-200,620,ease(tt/1.6)), y:HIP_STAND-Math.abs(step)*10, face:1,
+      legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}],
+      arm:{sh:86,el:-60}, mouth:'smile', style:STYLER};    // bringing the samples in
+  } else if(tt<3.4){
+    mp={x:620, y:HIP_STAND, face:-1, lean:8,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:104,el:8}, mouth:'smile', style:STYLER};     // setting the bowls
+  } else if(tt<5.8){
+    mp={x:620, y:HIP_STAND, face:1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:110,el:-26}, mouth:'smile', style:STYLER};   // presenting to the judge
+  } else if(tt<7.0){
+    mp={x:620, y:HIP_STAND, face:-1, lean:-4,
+      legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+      arm:{sh:62,el:14}, mouth:'smile', style:STYLER};
+  } else if(tt<9.8){
+    mp={x:430, y:HIP_STAND, face:-1, lean:6,
+      legs:[{hip:12,knee:-4},{hip:-8,knee:6}],
+      arm:{sh:96,el:-6}, mouth:'o', style:STYLER};         // confronting the LOUD chair
+  } else if(tt<12.4){
+    mp={x:340, y:HIP_STAND, face:-1, lean:8,
+      legs:[{hip:14,knee:-6},{hip:-10,knee:8}],
+      arm:{sh:100,el:4}, mouth:'flat', style:STYLER};      // escorting the decoy
+  } else if(tt<14.8){
+    mp={x:640, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:96,el:-8}, mouth:'o', eyes:'wide', style:STYLER}; // turns to the heist
+  } else if(tt<17.4){
+    const shake=Math.sin(tt*8)*5;
+    mp={x:640, y:HIP_STAND, face:-1,
+      legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:88,el:0}, mouth:'o', eyes:'wide', headTilt:shake, style:STYLER};
+  } else {
+    const slump=Math.sin(tt*4)*4;
+    mp={x:640, y:HIP_STAND, face:1, lean:14,
+      legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:slump, style:STYLER};
+  }
+  drawMan(mp);
+  if(tt>=7.4&&tt<8.6){const kk=easeOutBack(Math.min(1,(tt-7.4)/0.26)); starburst(560,FLOOR-800,kk*0.8,'HEY.');}
+  if(tt>=12.8&&tt<14.2){const kk=easeOutBack(Math.min(1,(tt-12.8)/0.28)); starburst(450,FLOOR-840,kk*0.85,'?!');}
+  if(tt>=17.6&&tt<19.2){const kk=easeOutBack(Math.min(1,(tt-17.6)/0.3)); starburst(380,FLOOR-740,kk*0.9,'BURP.');}
+  ctx.restore();
+  showBadge(28);
+  if(t>=0.05&&t<2.0) caption(['THE PARTY MENU.','TOP SECRET.'],340,(t+0.3)/0.35,50);
+  if(t>=2.6&&t<4.0) caption(['THREE SAMPLES.','ONE GUARD.'],340,(t-2.6)/0.35,50);
+  if(t>=4.8&&t<6.2) caption(['THE JUDGE','APPROVES.'],340,(t-4.8)/0.35,52);
+  if(t>=7.5&&t<8.8) caption(['A VERY LOUD','ENTRANCE.'],340,(t-7.5)/0.35,50);
+  if(t>=FR0+0.05&&t<FR1) caption(['WAIT. A DECOY.'],340,(t-FR0-0.05)/0.35,52);
+  if(t>=10.8&&t<12.2) caption(['THE REAL JOB IS','ALREADY RUNNING.'],340,(t-10.8)/0.35,44);
+  if(t>=13.0&&t<14.6) caption(['HE INVENTED','THE DECOY.'],340,(t-13.0)/0.35,50);
+  if(t>=15.0&&t<16.6) caption(['THEY LEARNED','IT FROM HIM.'],340,(t-15.0)/0.35,50);
+  if(t>=17.8&&t<19.4) caption(['THE MENU IS NOW','A LA CARTE.'],340,(t-17.8)/0.35,46);
+  if(t>=20.2&&t<21.8) caption(['THE RECORD KEEPS','RECORDING.'],340,(t-20.2)/0.35,46);
+  if(t>=22.4&&t<23.45){
+    caption(['WHAT SNACK WOULD YOU GUARD','WITH YOUR LIFE?'],340,(t-22.4)/0.35,40);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 11 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[28]=ep28;
+SHAKES[28]=[9.0,0.25,14];
+TAGLINES[28]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[28]=23.5;
 </script>
 </body></html>
 
