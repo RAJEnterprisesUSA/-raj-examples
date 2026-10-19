@@ -27,8 +27,12 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
 
 ## The daily set (triggered when user names a weekday, e.g. "Monday")
 8 pieces/day through October, each labeled with its ROUTING:
-1. Morning tip card: "PARTY MATH · TIP No.X" series (next: No.22) [Story or feed]
-2. Midday business card [feed or Story]
+1. MORNING CARD, one per day at 9am (MERGED LANE, owner-approved Oct 18 after week-2 report
+   showed tip + business cards each pulling single/low double digits: "yes make the merge",
+   applies from the Monday Oct 19 build): ONE carousel that rotates the two old angles day by
+   day, practical "PARTY MATH · TIP No.X" cards (numbering continues, next: No.35) and
+   business/service cards. The old separate 8am tip + 10am business slots are RETIRED.
+   Saved effort goes to real footage edits, profession-direct referral and the comedy lanes.
 3. Venue space flyer, new design daily [feed ~2x/week, else Story]
 4. Referral flyer, new design daily [Story]
 5. Halloween countdown flyer until Oct 31 (live count: Oct N -> 31-N nights; VERIFY with python datetime) [Story]
@@ -221,7 +225,7 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   raw.githubusercontent.com/RAJEnterprisesUSA/-raj-examples/claude/photo-to-logo-editing-krxiu5/<path> for committed
   files (commit+push media BEFORE queueing). dueAt in Las Vegas local time with explicit offset (-07:00 PDT in October).
 - DAILY WORKFLOW (owner-defined Oct 5): queue the WHOLE next day's set THE NIGHT BEFORE at the STANDING TIMES
-  (all Vegas local): 1 tip 8am · 2 business card 10am · 3 venue 12pm · 4 PRICE IT 1pm (daily, feed) ·
+  (all Vegas local; REVISED Oct 18, tip+business merged): 1 morning card 9am · 3 venue 12pm · 4 PRICE IT 1pm (daily, feed) ·
   5 referral 2pm · 6 countdown 4pm · 7 gag reel 5pm · 8 pink video 6pm · 9 Chronicles episode 8pm.
   Owner can override per post.
   Default channels: cards -> FB + IG; videos -> FB + IG + YouTube + TikTok (YouTube gets the Shorts title/description).

@@ -2316,3 +2316,16 @@ ACTIONS FOR WEEK OF OCT 19:
    exists.
 3. New comedy lengths start tonight (gag 17s, episode 26s): watch next Sunday whether views hold.
 4. PRICE IT TikTok slot stays. YT uploads stay on everything.
+
+---
+
+## RULE CHANGE (owner approval Sun Oct 18 night, after weekly report No.2): TIP + BUSINESS MERGED
+
+Recommendation accepted ("yes make the merge."). From the Monday Oct 19 build onward the separate
+8am tip card and 10am business card become ONE morning card at 9am: a single carousel that rotates
+the two angles day by day (PARTY MATH · TIP No.X numbering continues, next No.35; business/service
+angles on alternate days). Daily set is now 9 pieces through Oct 31 (morning card, venue, PRICE IT,
+referral, español, countdown, gag, pink, episode), dropping to 7 in November when countdown and
+pink retire with October. Effort saved goes to real footage edits, profession-direct referral
+carousels and the comedy lanes, per the week-2 data. Everything else unchanged: PRICE IT daily
+with the TikTok 1pm slot, referral daily, español daily at 3pm, videos at 5/6/8pm.
