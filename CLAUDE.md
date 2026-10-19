@@ -393,6 +393,17 @@ Buffer: queue as type "post" (carousel = multiple image assets in order) on FB +
   him, W-L 3-11). Also queued separately: Bring To The Table sketch 10am (FB/IG/YT).
   Captions under MONDAY OCT 19. Next: morning card No.36 or business-angle day, trend search
   Tuesday, Pink #19, EP. 29, español #9, PRICE IT outdoor Tuesday.
+- TUESDAY OCT 20 SET BUILT AND QUEUED SUNDAY NIGHT, TWO DAYS AHEAD (25/25 OK: cards 13,
+  videos 12): MORNING CARD WE CARRY IT (Emerald, 6, business-angle day), CORPORATE NOVEMBER
+  venue single (Navy, "big race weekends" phrasing, no event branding), PRICE IT =
+  BB_PriceIt_MovieNight (fresh outdoor backyard cinema, background figures cropped out),
+  THE DJ referral (Velvet, 5), EN ESPAÑOL #9 LA CORTE quince (Black&Gold, 5), 11 NIGHTS
+  countdown (Purple, 4), TREND REMIX #2 BB_Trend_FaceRating (reelH REELS[25], "my reaction"
+  face-only rating format, zoom-to-face zones), Pink #19 THE FAMILY TREE (pink19.html, both
+  sides of the family, ACS), EP. 29 THE PUMPKIN CARVE (REELS[29], drawPumpkinC helper; Tyler's
+  pumpkin carves itself, Wobbles headbutts his, W-L 3-12). Captions under TUESDAY
+  OCT 20. Next: morning card tip-day No.36, trend search Wednesday, Pink #20, EP. 30,
+  español #10, PRICE IT indoor Wednesday.
 - Awareness (pink) videos keep their 26s format. Comedy lengths from Oct 19: trend remixes ~17s,
   episodes ~26s (owner Oct 14 directive, see COMEDY LENGTH RULE above).
 - Open offers never accepted: website work; re-render old reel end cards with new logo; referral tracking sheet.
