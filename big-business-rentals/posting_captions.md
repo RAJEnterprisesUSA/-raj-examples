@@ -2471,3 +2471,8 @@ THE BIG BUSINESS CHRONICLES, extended cut: three menu samples, one loud distract
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+FOLLOW-UP (Sun Oct 18 evening): owner said "queue it." The bilingual Party Rentals flyer post is
+QUEUED for MONDAY OCT 19 11AM (FB + IG feed post, cross-linked firstComments, 2/2 OK), between
+the 10am sketch reel and the 12pm venue card. Caption as logged in chat: "Every party needs
+seats. · Toda fiesta necesita sillas." with the QUOTE keyword CTA and bilingual body.
