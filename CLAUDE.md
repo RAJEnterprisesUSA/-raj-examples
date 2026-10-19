@@ -139,6 +139,23 @@ QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and 
 generate 1-2 new setups per day during the nightly build, not in batches. If the day's quota is exhausted
 before the PRICE IT image is made, generate it first thing the next session, never fall back to the bank.
 
+## MONETIZATION NORTH STAR (owner, Oct 18 night): "the main goal for all of this is to build
+monetization, through social media while only posting things that will bring me leads."
+Approved expansions ("ok"), live now:
+- START HERE PINNED POST: flyers/BB_StartHere.png queued Wed Oct 21 10am FB+IG; owner pins both
+  manually after they post. Refresh it when prices or services change.
+- GOOGLE BUSINESS PROFILE PACK, WEEKLY: big-business-rentals/gbp/ holds a paste-ready pack
+  (post text, image pointer, review-ask text). Produce a fresh pack every Sunday with the weekly
+  report; owner pastes it into business.google.com. No hashtags on Google. Pinned-comment texts
+  are allowed on Google posts per the firstComment rule.
+- SUNDAY REPORT COUNTS LEADS: ask the owner each Sunday for rough call/DM/site-chat counts and
+  fold them into the weekly report; steer lanes by leads, not reach.
+PENDING OWNER INPUT (ask when relevant, never invent): rental PRICE LIST (unlocks price menu card
++ "Comment PRICE" lead magnet), weekly OPEN DATES list (unlocks scarcity posts; becomes the
+countdown lane's replacement after Oct 31 as a December-dates countdown), SPANISH DM confirmation
+(unlocks "Comenta COTIZA" keyword CTAs in the español lane), weekly $5-10 boost pick (report names
+the candidate each Sunday).
+
 ## TREND REMIX LANE (owner directive Oct 18 night, DAILY from the Monday Oct 19 build)
 One trending-topic comedy video per day that remixes the day's most talked-about topic toward the
 business ("teslas new flying roadster" was the owner's example). Mechanics, every nightly build:

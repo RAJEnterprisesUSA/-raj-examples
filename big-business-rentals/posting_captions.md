@@ -2540,3 +2540,16 @@ THE BIG BUSINESS CHRONICLES: one masterpiece, one headbutt, one pumpkin that car
 📞 702-706-8287 · Free quotes at bigbusinesspartyrentals.com
 IG: @bigbusiness_rentals_events
 #Shorts #Comedy #Sitcom #FunnyShorts #LasVegas #PartyRentals
+
+---
+
+## MONETIZATION DIRECTIVE (owner, Sun Oct 18 night)
+
+"the main goal for all of this is to build monetization , through social media while only posting
+things that will bring me leads ." Expansion plan presented, owner approved ("ok"). Shipped same
+night: START HERE pinned-post card (flyers/BB_StartHere.png, queued Wed Oct 21 10am FB+IG 2/2 OK,
+owner pins manually; caption logged in scratch queue script) and GOOGLE BUSINESS PROFILE PACK #1
+(gbp/GBP_Pack_1_week_of_Oct19.txt: post text, image pointer, client review-ask text; new pack every
+Sunday with the weekly report). Sunday reports now also ask the owner for lead counts (calls, DMs,
+site chats). Waiting on owner: rental price list, weekly open dates, Spanish DM confirmation,
+boost budget go-ahead. Full plan in chat Oct 18.
