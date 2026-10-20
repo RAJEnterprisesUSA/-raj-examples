@@ -1,6 +1,7 @@
 # TikTok Week 1 · Wed Oct 21 to Sun Oct 25
 
-5 posts, 1 a day max, all at 1:00pm Pacific. You publish each one in the TikTok app.
+5 posts, 1 a day max, all at 1:00pm Pacific. Buffer publishes each one after you approve it.
+You still pin each follow comment by hand after it posts.
 Files sit in `big-business-rentals/tiktok/` and I also sent them to you in chat.
 
 | Day | Pillar | Post | Status |
@@ -34,8 +35,7 @@ two-part format and Hosting Chaos depends on your AI tool. Week 2 shifts toward 
 - **Caption:** Who in your family always ends up on the worst chair?
 - **Hashtags:** #thebigbusinesschronicles #halloweenparty #animation #lasvegas
 - **Pinned comment (you post, then pin):** Follow so you catch Pt. 2. The cat is not done.
-- **AI label:** not required. This animation is drawn in code, no AI generation. Turn the
-  label on anyway if you'd rather label every animated post the same way.
+- **AI label:** none (toggle off). This animation is drawn in code, no AI generation.
 - **Metric it should move:** average watch time (old Chronicles averaged 2.9s, target over 4s)
   and the drop-off second (it should move later than 0:01).
 
@@ -61,7 +61,8 @@ You make the video in your AI video tool (Gemini/Veo or similar, 8-second vertic
 - **Caption:** Tag the cousin who always brings "a couple people."
 - **Hashtags:** #hostingproblems #familyparty #partyhost #lasvegas
 - **Pinned comment:** Follow for more party chaos. Every family has this cousin.
-- **AI label:** ON (AI-generated video).
+- **AI label:** toggle OFF. Add a small "AI SKIT" text tag in a top corner when you edit,
+  because this is realistic AI video (TikTok requires on-screen disclosure if the toggle is off).
 - **Metric it should move:** comments (the account has 0 comments on 144 posts; the "tag
   the cousin" prompt is the test) and average watch time over 4s.
 
@@ -100,7 +101,8 @@ full). This is the sequel, shot at home with your own chairs.
 - **Caption:** Three clues, one party theme. What is it?
 - **Hashtags:** #guessthetheme #partytheme #vintagevegas #lasvegas
 - **Pinned comment:** Follow so you catch the reveal tomorrow.
-- **AI label:** ON (AI-generated images). Never call this a Big Business job; it's concept art.
+- **AI label:** toggle OFF. The burned-in "AI CONCEPT ART" stamp is the disclosure. Never call
+  this a Big Business job; it's concept art.
 - **Metric it should move:** comments (people answering the guess) and full-watch %.
 
 ## SUN OCT 25 · 1:00pm · Guess the Theme · Old Vegas · Pt. 2
@@ -113,21 +115,20 @@ full). This is the sequel, shot at home with your own chairs.
 - **Caption:** Who guessed it? Which detail gave it away?
 - **Hashtags:** #guessthetheme #oldvegas #partyinspo #lasvegas
 - **Pinned comment:** Follow for the next Guess the Theme.
-- **AI label:** ON (AI-generated images), concept art stamp burned in.
+- **AI label:** toggle OFF. The burned-in "AI CONCEPT ART" stamp is the disclosure.
 - **Before posting:** reply to the Pt. 1 guesses first (I'll draft the replies if you send me
   the comments), so Pt. 2 lands with conversation already going.
 - **Metric it should move:** average watch time and comments.
 
 ---
 
-## What I need from you each morning (the data gap)
+## What I need from you each morning
 
-Posts you publish in the app don't show up in Buffer, and I can't open TikTok Studio from
-this cloud session. To run the daily review the charter asks for, send me a screenshot of
-each post's TikTok Studio analytics page (views, average watch time, watched full video %,
-the retention graph with its drop point, likes, comments, shares, saves, new followers,
-profile views). Paste in any new comments too, and I'll draft replies. Until then those
-numbers are blank in the dashboard. I won't estimate them.
+Buffer publishes these posts, so views, average watch time, likes, comments and shares come back
+to me automatically. Five numbers only exist in TikTok Studio: watched full video %, the
+retention drop point, saves, new followers and profile views. Send a Studio screenshot of each
+post when you can, and paste in new comments so I can draft replies. Until then those five stay
+blank in the dashboard. I won't estimate them.
 
 ## Week 1 is a new baseline, not an experiment
 

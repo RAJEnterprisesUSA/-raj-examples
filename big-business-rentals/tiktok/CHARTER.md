@@ -97,3 +97,20 @@ ONGOING
   views) only exist in TikTok Studio. This cloud session cannot open TikTok Studio. Until
   that changes, daily numbers come from the owner (Studio screenshots) or from a session
   run on his own computer.
+- Oct 20, 2026 (owner, evening): "ok bypass the owner publishes . and stick with approve."
+  PUBLISHING CHANGE: Buffer publishes TikTok posts (scheduled at the package's time, with
+  metadata.tiktok.isAiGenerated set per the AI-label rule). The APPROVAL RULE STAYS: no TikTok
+  post is queued until the owner explicitly approves that specific post. Workflow: build the
+  package, send it, get approval, then queue. Correction on record: Buffer's API DOES support the
+  TikTok AI label (TikTokPostMetadataInput.isAiGenerated); the earlier statement that it could
+  not was wrong. Still manual for the owner: pinning the follow comment, adding in-app sounds.
+  Side benefit: Buffer-published posts report views, average watch, likes, comments, shares back
+  to Buffer, so the daily review no longer depends on screenshots for those five numbers.
+- Oct 20, 2026 (owner, evening): "i dont want any ai labels set." AI LABEL CHANGE: never set
+  TikTok's AI-generated toggle (Buffer metadata.tiktok.isAiGenerated stays false/unset). This
+  replaces the hard rule "Turn on TikTok's AI-generated content label." Disclosure moves ON
+  SCREEN instead, only where visuals are realistic AI (TikTok requires disclosure of realistic
+  AI images/video and accepts on-screen text, stickers or captions): Guess the Theme keeps its
+  burned-in "AI CONCEPT ART" stamp; Hosting Chaos AI skits carry a small burned-in "AI SKIT"
+  corner tag; Chronicles rig animation is not AI and needs nothing. The rule "never present AI
+  as a real Big Business setup, job, client or review" is unchanged.
