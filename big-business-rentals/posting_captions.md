@@ -2892,3 +2892,25 @@ outlet, one light survives (the wrong one); L, W-L 3-16)
 thoughts, best one gets credited.
 #thebigbusinesschronicles #halloweenparty #comedy #lasvegas #funnyreels
 YT: "EP. 33: The Light Check 💡 the cat found the outlet #Shorts" (cat 23)
+
+====================================================================
+TIKTOK CHARTER (owner-issued Tue Oct 20, 2026 afternoon) · RULE CHANGE LOG
+====================================================================
+Owner issued a full TikTok manager charter (saved verbatim at tiktok/CHARTER.md). It governs
+all TikTok work and overrides the TikTok parts of CLAUDE.md. Key changes: the owner publishes
+TikTok himself from ready-to-post packages; max 1 post a day while median views are under 100;
+4 to 5 posts a week for weeks 1 and 2; 1pm Pacific; first frame = punchline; loops; AI label
+on for AI visuals; no phone, prices, quote requests, sales lines or the word "free" in TikTok
+captions; pillars Hosting Chaos 40 / Chronicles 20 / Guess the Theme 20 / Real moments 20.
+ACTION (owner approved "Delete all 19"): deleted all 19 TikTok posts still scheduled in Buffer
+(Oct 20 to 24: trend, pink, episode and PRICE IT pads). 19/19 deleted. FB 44, IG 44, YT 15
+scheduled posts untouched. Nothing is scheduled to TikTok in Buffer anymore.
+WEEK 1 TIKTOK PACKAGES (tiktok/packages/WEEK1_Oct21-25.md): Wed Chronicles Halloween Arc Pt. 1
+"The Cheap Chair" (tiktok/TT_Chronicles_HalloweenArc_Pt1_CheapChair.mp4, 11.0s seamless loop,
+reelsD REELS[101]) · Thu Hosting Chaos #1 "A Couple People" (owner generates, prompt in pack) ·
+Fri Nobody Sees This Part Pt. 2 (owner shoots, shot list in pack) · Sat Guess the Theme Old
+Vegas Pt. 1 (TT_GuessTheTheme_OldVegas_Pt1.mp4, 10.2s, AI concept art stamp) · Sun Pt. 2
+reveal (TT_GuessTheTheme_OldVegas_Pt2.mp4, 9.4s). Baseline dashboard: tiktok/dashboard.csv
+(tiktok/build_tiktok_dashboard.py). Research log: tiktok/ideas.md.
+DATA GAP: natively published posts are invisible to Buffer and TikTok Studio is not reachable
+from the cloud session; daily numbers depend on owner Studio screenshots.

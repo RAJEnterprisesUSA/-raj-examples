@@ -8,6 +8,14 @@ Sunday analytics loop, quality checklist, owner authority). It sits ON TOP of th
 nothing in it; where the charter speaks generally (e.g. people in visuals) the specific rules below
 still govern (no photos of real people on cards, no people in PRICE IT images) until the owner says
 otherwise. Apply the charter in every session.
+TIKTOK CHARTER (owner-issued Oct 20, 2026): big-business-rentals/tiktok/CHARTER.md GOVERNS ALL
+TIKTOK WORK and overrides every TikTok rule in this file (the 4-posts-a-day cap, the PRICE IT
+TikTok pad, "videos -> TikTok" defaults, the phone/contact caption line on TikTok). Summary: the
+owner publishes TikTok himself from ready-to-post packages in big-business-rentals/tiktok/packages/;
+NEVER queue anything to the TikTok channel in Buffer (all 19 scheduled TikTok posts were deleted
+with owner approval Oct 20); max 1 TikTok post a day while median views are under 100; first
+frame = punchline, loops, AI label on, no phone/prices/"free"/sales lines in TikTok captions.
+Nightly FB/IG/YT builds keep running exactly as below, minus the TikTok channel.
 Everything lives under `big-business-rentals/`. Deeper lore: `big-business-rentals/CAST.md`.
 All past captions and rule-change logs: `big-business-rentals/posting_captions.md` (append, never rewrite history).
 Research backing the strategy: `reports/Party rental content strategy.md`.
