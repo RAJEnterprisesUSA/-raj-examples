@@ -114,3 +114,10 @@ ONGOING
   burned-in "AI CONCEPT ART" stamp; Hosting Chaos AI skits carry a small burned-in "AI SKIT"
   corner tag; Chronicles rig animation is not AI and needs nothing. The rule "never present AI
   as a real Big Business setup, job, client or review" is unchanged.
+- Oct 20, 2026 3:20pm PT: owner approved "ok queue the rest of the weeks tiktok post." Queued
+  3/3 finished posts in Buffer, TikTok only, 1pm PT, no AI toggle: Wed Oct 21 Chronicles
+  Halloween Arc Pt. 1 Cheap Chair (6ad7e8ff294af05c91ba8ee8), Sat Oct 24 Guess the Theme Old
+  Vegas Pt. 1 (6ad7e9022b60166c6ac1ac44), Sun Oct 25 Pt. 2 (6ad7e9068e50122a680c42d6). Thu Oct 22
+  Hosting Chaos #1 and Fri Oct 23 Nobody Sees This Part Pt. 2 wait on the owner's AI clip and
+  real footage; queue each the day it arrives (covered by this week's approval). Script:
+  tiktok/queue_week1.py.
