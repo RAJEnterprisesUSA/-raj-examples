@@ -108,3 +108,9 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   insights off). Week 1 Reels go at 5pm.
 - Week 1 packages: facebook/packages/WEEK1_Oct21-25.md. People post built:
   facebook/week1/FB_People_ChairGuy_01-05.png (facebook/build_fb_week1.py).
+- Oct 20, 2026 ~6:30pm PT: owner approved "Yes, queue it" (Wed test Reel) and "Queue it in
+  Buffer" (Fri album). Queued: Wed Oct 21 5pm Reel, Cheap Chair (6ad811a2d894396f66bced68);
+  Fri Oct 23 12pm 5-slide album, Chair Guy (6ad811a69fdbc474fbf48675). Both Facebook only,
+  pinned follow comment attached. TEST: owner checks in Business Suite whether the Wed Reel
+  shows its caption and a title. Thu and Sat/Sun Reels (photoreal AI) go out through the owner
+  in Business Suite with Meta's AI label. Script: facebook/queue_week1.py.
