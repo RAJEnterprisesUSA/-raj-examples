@@ -28,8 +28,17 @@ prompt only; account needs the "AI-generated profile" label while it features AI
 Nothing published, deleted or boosted without the owner's approval of that specific action
 (Oct 20: 5 episode captions rewritten, 30 posts deleted with approval). Packages live in
 big-business-rentals/instagram/packages/. Never batch-queue Instagram from the nightly build.
-With TikTok, Facebook and Instagram each under their own charter, the old 9-slot nightly build
-below now applies only to YouTube until the owner says otherwise.
+YOUTUBE CHARTER (owner-issued Oct 21, 2026): big-business-rentals/youtube/CHARTER.md GOVERNS ALL
+YOUTUBE WORK and overrides every YouTube rule in this file. Summary: 1 to 2 Shorts a day, one-gag
+skits ~50% (lead format), Chronicles ~35% (playlist "The Big Business Chronicles", end with "next
+episode tomorrow"), real moments ~15%; NO health/awareness Shorts (4 pink Shorts deleted with
+approval Oct 20); descriptions one line + max 3 hashtags, no phone, URL or "free"; "altered or
+synthetic content" disclosure (Buffer isAiGenerated) on realistic AI only; playlist, Related video
+and stickers are manual in Studio. Never delete and re-upload a Short. Nothing published, deleted
+or changed without the owner's approval of that specific action. Packages live in
+big-business-rentals/youtube/packages/. Never batch-queue YouTube from the nightly build.
+With all four platforms under their own charters, the old 9-slot nightly build below is RETIRED
+as a queueing plan; it stays as reference for rigs, specs and brand facts.
 FACEBOOK CHARTER (owner-issued Oct 21, 2026): big-business-rentals/facebook/CHARTER.md GOVERNS ALL
 FACEBOOK PAGE WORK and overrides every Facebook rule in this file. Summary: 1 to 2 feed posts a
 day, mostly Reels (5pm), one people-centered post a week, Stories 2 to 3 a day max; no links, no
