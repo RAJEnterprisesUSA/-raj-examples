@@ -19,7 +19,17 @@ the TikTok AI toggle (owner Oct 20: no AI labels); realistic AI visuals carry an
 disclosure instead (AI CONCEPT ART stamp, AI SKIT tag). Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
-Nightly IG/YT builds keep running exactly as below, minus the TikTok channel.
+INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL
+INSTAGRAM WORK and overrides every Instagram rule in this file. Summary: 1 Reel a day (8pm, the Big
+Business Chronicles are the signature series), new formats as trial reels first (owner posts
+them, the API cannot), Stories 2 to 3 a day, max 1 save-worthy carousel a week; no phone, links,
+"free" or bait in captions; one keyword line plus max 5 hashtags; pinned comment is a follow
+prompt only; account needs the "AI-generated profile" label while it features AI people.
+Nothing published, deleted or boosted without the owner's approval of that specific action
+(Oct 20: 5 episode captions rewritten, 30 posts deleted with approval). Packages live in
+big-business-rentals/instagram/packages/. Never batch-queue Instagram from the nightly build.
+With TikTok, Facebook and Instagram each under their own charter, the old 9-slot nightly build
+below now applies only to YouTube until the owner says otherwise.
 FACEBOOK CHARTER (owner-issued Oct 21, 2026): big-business-rentals/facebook/CHARTER.md GOVERNS ALL
 FACEBOOK PAGE WORK and overrides every Facebook rule in this file. Summary: 1 to 2 feed posts a
 day, mostly Reels (5pm), one people-centered post a week, Stories 2 to 3 a day max; no links, no
