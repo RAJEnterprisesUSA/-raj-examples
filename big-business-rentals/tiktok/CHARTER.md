@@ -121,3 +121,8 @@ ONGOING
   Hosting Chaos #1 and Fri Oct 23 Nobody Sees This Part Pt. 2 wait on the owner's AI clip and
   real footage; queue each the day it arrives (covered by this week's approval). Script:
   tiktok/queue_week1.py.
+- Oct 20, 2026 5:15pm PT: owner approved ("queue it") Hosting Chaos #1 v2 (owner's avatar as
+  the cousin, TT_HostingChaos_ACouplePeople_v2.mp4). Queued Thu Oct 22 1pm PT, TikTok only, no
+  AI toggle, on-screen AI SKIT tag (Buffer id 6ad80478f9a362e691d01235). v1 (first Veo take) is
+  kept on file, not queued. Week 1 TikTok queue now: Wed Chronicles Pt. 1 · Thu Hosting Chaos #1
+  · Sat/Sun Guess the Theme Pt. 1/2. Fri Nobody Sees This Part Pt. 2 waits on owner footage.
