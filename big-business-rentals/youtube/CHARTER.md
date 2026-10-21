@@ -110,3 +110,11 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   label on every platform (YouTube isAiGenerated, TikTok toggle, Meta AI label via Business
   Suite, Instagram AI label plus the account's "AI-generated profile" label). Drawn animation
   carries none.
+- Oct 20, 2026 ~8pm PT, owner: "i want all the ai skits to revolve around the business, set ups,
+  tear downs, tent set ups ect. the main character should always be a black man or woman."
+  AI SKIT RULE (all platforms): every AI skit is set inside the work (setups, teardowns, tent
+  raises, linens, loading, deliveries, client walk-throughs) and the main character is always a
+  Black man or woman, written as the competent pro; the comedy comes from the situation (wind,
+  clients, physics, the new guy), never from identity or stereotype. The AI label and the
+  burned-in AI SKIT tag stay, and no skit is presented as a real Big Business job. Family/guest
+  Hosting Chaos ideas are shelved.

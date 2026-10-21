@@ -135,3 +135,11 @@ ONGOING
   Applied via editPost and verified: Thu Hosting Chaos v2 (6ad80478f9a362e691d01235), Sat GtT
   Pt. 1 (6ad7e9022b60166c6ac1ac44), Sun GtT Pt. 2 (6ad7e9068e50122a680c42d6) = true; Wed Cheap
   Chair (6ad7e8ff294af05c91ba8ee8) = false. Script: tiktok/set_ai_label_oct20.py.
+- Oct 20, 2026 ~8pm PT, owner: "i want all the ai skits to revolve around the business, set ups,
+  tear downs, tent set ups ect. the main character should always be a black man or woman."
+  AI SKIT RULE (all platforms): every AI skit is set inside the work (setups, teardowns, tent
+  raises, linens, loading, deliveries, client walk-throughs) and the main character is always a
+  Black man or woman, written as the competent pro; the comedy comes from the situation (wind,
+  clients, physics, the new guy), never from identity or stereotype. The AI label and the
+  burned-in AI SKIT tag stay, and no skit is presented as a real Big Business job. Family/guest
+  Hosting Chaos ideas are shelved.

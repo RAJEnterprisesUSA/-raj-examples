@@ -18,7 +18,10 @@ builds (the 19 old scheduled TikTok posts were deleted with owner approval Oct 2
 (owner Oct 20 night, "ok add for realistic ai videos", replaces the earlier no-labels rule): every
 REALISTIC AI video gets the platform AI label on all four platforms (TikTok toggle + YouTube via
 Buffer isAiGenerated; Meta label via the owner in Business Suite); on-screen stamps (AI CONCEPT
-ART, AI SKIT) stay too. Drawn rig animation never gets a label. Max 1 TikTok post a day while median views
+ART, AI SKIT) stay too. Drawn rig animation never gets a label.
+AI SKIT RULE (owner Oct 20 night, all platforms): every AI skit revolves around the business
+(setups, teardowns, tent setups, linens, loading, deliveries) and its main character is always
+a Black man or woman, the competent pro; humor from the situation, never identity or stereotype. Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
 INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL
