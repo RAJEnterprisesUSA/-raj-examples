@@ -106,5 +106,7 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   disclosure and is set ONLY on realistic AI (Hosting Chaos style skits); the rig-animated trends
   and Chronicles are clearly unrealistic and need none. NOT in Buffer: playlist, Related video
   link, stickers. Those stay manual in YouTube Studio for the owner.
-- The TikTok "no AI labels" owner rule is TikTok-only. YouTube's charter requires the disclosure
-  on realistic AI, so YouTube follows its own charter.
+- Oct 20 ~7:45pm PT, owner: "ok add for realistic ai videos." Realistic AI videos carry the AI
+  label on every platform (YouTube isAiGenerated, TikTok toggle, Meta AI label via Business
+  Suite, Instagram AI label plus the account's "AI-generated profile" label). Drawn animation
+  carries none.

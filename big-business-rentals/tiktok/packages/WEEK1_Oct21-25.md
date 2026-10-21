@@ -61,8 +61,8 @@ You make the video in your AI video tool (Gemini/Veo or similar, 8-second vertic
 - **Caption:** Tag the cousin who always brings "a couple people."
 - **Hashtags:** #hostingproblems #familyparty #partyhost #lasvegas
 - **Pinned comment:** Follow for more party chaos. Every family has this cousin.
-- **AI label:** toggle OFF. Add a small "AI SKIT" text tag in a top corner when you edit,
-  because this is realistic AI video (TikTok requires on-screen disclosure if the toggle is off).
+- **AI label:** toggle ON (set in Buffer, owner Oct 20 night: label realistic AI videos). The
+  burned-in "AI SKIT" corner tag stays too.
 - **Metric it should move:** comments (the account has 0 comments on 144 posts; the "tag
   the cousin" prompt is the test) and average watch time over 4s.
 
@@ -101,7 +101,7 @@ full). This is the sequel, shot at home with your own chairs.
 - **Caption:** Three clues, one party theme. What is it?
 - **Hashtags:** #guessthetheme #partytheme #vintagevegas #lasvegas
 - **Pinned comment:** Follow so you catch the reveal tomorrow.
-- **AI label:** toggle OFF. The burned-in "AI CONCEPT ART" stamp is the disclosure. Never call
+- **AI label:** toggle ON (set in Buffer). The burned-in "AI CONCEPT ART" stamp stays too. Never call
   this a Big Business job; it's concept art.
 - **Metric it should move:** comments (people answering the guess) and full-watch %.
 
@@ -115,7 +115,7 @@ full). This is the sequel, shot at home with your own chairs.
 - **Caption:** Who guessed it? Which detail gave it away?
 - **Hashtags:** #guessthetheme #oldvegas #partyinspo #lasvegas
 - **Pinned comment:** Follow for the next Guess the Theme.
-- **AI label:** toggle OFF. The burned-in "AI CONCEPT ART" stamp is the disclosure.
+- **AI label:** toggle ON (set in Buffer). The burned-in "AI CONCEPT ART" stamp stays too.
 - **Before posting:** reply to the Pt. 1 guesses first (I'll draft the replies if you send me
   the comments), so Pt. 2 lands with conversation already going.
 - **Metric it should move:** average watch time and comments.

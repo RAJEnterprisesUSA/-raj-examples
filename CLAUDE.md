@@ -14,9 +14,11 @@ TikTok pad, "videos -> TikTok" defaults, the phone/contact caption line on TikTo
 TikTok posts are built as packages in big-business-rentals/tiktok/packages/ and published THROUGH
 BUFFER (owner Oct 20 evening: "bypass the owner publishes . and stick with approve"), but ONLY
 after the owner explicitly approves that specific post; never batch-queue TikTok from nightly
-builds (the 19 old scheduled TikTok posts were deleted with owner approval Oct 20). NEVER set
-the TikTok AI toggle (owner Oct 20: no AI labels); realistic AI visuals carry an on-screen
-disclosure instead (AI CONCEPT ART stamp, AI SKIT tag). Max 1 TikTok post a day while median views
+builds (the 19 old scheduled TikTok posts were deleted with owner approval Oct 20). AI LABELS
+(owner Oct 20 night, "ok add for realistic ai videos", replaces the earlier no-labels rule): every
+REALISTIC AI video gets the platform AI label on all four platforms (TikTok toggle + YouTube via
+Buffer isAiGenerated; Meta label via the owner in Business Suite); on-screen stamps (AI CONCEPT
+ART, AI SKIT) stay too. Drawn rig animation never gets a label. Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
 INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL

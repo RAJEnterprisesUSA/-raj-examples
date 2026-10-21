@@ -126,3 +126,12 @@ ONGOING
   AI toggle, on-screen AI SKIT tag (Buffer id 6ad80478f9a362e691d01235). v1 (first Veo take) is
   kept on file, not queued. Week 1 TikTok queue now: Wed Chronicles Pt. 1 · Thu Hosting Chaos #1
   · Sat/Sun Guess the Theme Pt. 1/2. Fri Nobody Sees This Part Pt. 2 waits on owner footage.
+- Oct 20, 2026 ~7:45pm PT (owner: "ok add for realistic ai videos", after asking whether labels
+  help views; answer given: labels do not add views, they protect against penalties for
+  undisclosed realistic AI). AI LABEL CHANGE, replaces the earlier "never set the toggle" entry:
+  TikTok's AI-generated toggle (Buffer metadata.tiktok.isAiGenerated) is ON for every post with
+  realistic AI visuals (Veo skits, Guess the Theme photoreal images). Drawn rig animation (the
+  Chronicles, trend remixes) stays OFF. Burned-in AI SKIT / AI CONCEPT ART stamps stay as well.
+  Applied via editPost and verified: Thu Hosting Chaos v2 (6ad80478f9a362e691d01235), Sat GtT
+  Pt. 1 (6ad7e9022b60166c6ac1ac44), Sun GtT Pt. 2 (6ad7e9068e50122a680c42d6) = true; Wed Cheap
+  Chair (6ad7e8ff294af05c91ba8ee8) = false. Script: tiktok/set_ai_label_oct20.py.
