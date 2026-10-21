@@ -19,7 +19,17 @@ the TikTok AI toggle (owner Oct 20: no AI labels); realistic AI visuals carry an
 disclosure instead (AI CONCEPT ART stamp, AI SKIT tag). Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
-Nightly FB/IG/YT builds keep running exactly as below, minus the TikTok channel.
+Nightly IG/YT builds keep running exactly as below, minus the TikTok channel.
+FACEBOOK CHARTER (owner-issued Oct 21, 2026): big-business-rentals/facebook/CHARTER.md GOVERNS ALL
+FACEBOOK PAGE WORK and overrides every Facebook rule in this file. Summary: 1 to 2 feed posts a
+day, mostly Reels (5pm), one people-centered post a week, Stories 2 to 3 a day max; no links, no
+phone, no "free", no engagement bait ("send this to", "comment WORD", "tag", "wrong answers
+only") and max 5 hashtags in Facebook captions; every Reel captioned; Meta AI label on
+photorealistic AI (Buffer cannot set it, so those go through the owner in Business Suite).
+Nothing is published, deleted or boosted on Facebook without the owner's approval of that
+specific action (35 old scheduled FB posts deleted with approval Oct 20; 4 pink Stories kept).
+Packages live in big-business-rentals/facebook/packages/. Never batch-queue Facebook from the
+nightly build.
 Everything lives under `big-business-rentals/`. Deeper lore: `big-business-rentals/CAST.md`.
 All past captions and rule-change logs: `big-business-rentals/posting_captions.md` (append, never rewrite history).
 Research backing the strategy: `reports/Party rental content strategy.md`.
