@@ -2914,3 +2914,17 @@ reveal (TT_GuessTheTheme_OldVegas_Pt2.mp4, 9.4s). Baseline dashboard: tiktok/das
 (tiktok/build_tiktok_dashboard.py). Research log: tiktok/ideas.md.
 DATA GAP: natively published posts are invisible to Buffer and TikTok Studio is not reachable
 from the cloud session; daily numbers depend on owner Studio screenshots.
+
+## SUNDAY OCT 25 · EP. 34 THE SECURITY DETAIL (built Oct 21, awaiting owner approval to queue)
+Trend: humanoid "bodyguard" robot unveiled Oct 21 (parody of the idea only; generic unbranded robot,
+no company name or real design). REELS[34] in reelsD.html, 26s, SFX only, W-L 3-17.
+File: fb_safe/BB_Chronicles_Ep34_TheSecurityDetail.mp4
+Instagram (Sun 8pm Reel): The Big Business Chronicles EP. 34: he hired a robot bodyguard for the Las Vegas Halloween party, and the cat walked right past it. 🤖
+
+#thebigbusinesschronicles #lasvegas #halloweenparty #robot #comedy
+IG pinned: Follow so you never miss the next Big Business Chronicles episode.
+YouTube (Sun 8pm Short) title: EP. 34: The Security Detail 🤖 the robot let the cat in #Shorts
+YouTube description: The Big Business Chronicles EP. 34: he hired a robot bodyguard to keep the cheap chair out, and the cat walked right past it. Next episode tomorrow.
+
+#thebigbusinesschronicles #halloween #comedy
+AI disclosure: none (drawn animation).

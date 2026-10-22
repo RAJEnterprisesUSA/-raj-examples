@@ -12,7 +12,7 @@ Big Business Chronicles episode."
 | Thu Oct 22 · 8pm | EP. 31 The Dry Run | Queued, caption fixed |
 | Fri Oct 23 · 8pm | EP. 32 The Supply Run | Queued, caption fixed |
 | Sat Oct 24 · 8pm | EP. 33 The Light Check | Queued, caption fixed |
-| Sun Oct 25 · 8pm | EP. 34 | Not built yet; I'll send it for approval |
+| Sun Oct 25 · 8pm | EP. 34 The Security Detail | Built, awaiting your approval |
 
 Stories: the 4 pink awareness Stories stay at 6pm Wed to Sat (1 a day, under the 2 to 3 cap).
 
