@@ -93,6 +93,18 @@ Hi neighbors! We're a local Las Vegas party rental business, and if you're hosti
 
 Halloween is on a Saturday this year! If you're hosting the block party or the family get-together, we deliver tables and chairs and pick them up after. A table with 6 chairs is $22, and 8 sets seat 48 guests for $176. Questions are welcome here, or call 702-706-8287.
 
+**Nextdoor post 3** (flyer: Venue)
+
+Hi neighbors! If you need a spot for a birthday, shower or holiday party, our private party room seats 40 and holds 80 standing. Three hours is $625 for up to 25 guests, four hours is $800 for up to 40, with tables, chairs and setup included. Ask away here or call 702-706-8287.
+
+**Nextdoor post 4** (flyer: Holidays)
+
+Hosting Friendsgiving or the family holiday dinner this year? Eight tables and 48 chairs, delivered and picked up, is $176. We're booking November and December now, and full-service setup is available from $265. Questions are welcome here, or call 702-706-8287.
+
+**Nextdoor post 5** (flyer: MesasSillas)
+
+¡Hola, vecinos! Somos un negocio local de renta para fiestas en Las Vegas. Silla plegable $2, mesa de 6 ft desde $10, y mesa con 6 sillas por $22. Las llevamos y las recogemos, y ofrecemos montaje completo desde $265. Pregunten aquí o llamen al 702-706-8287.
+
 **Recommendations:** Nextdoor runs on neighbor recommendations. Ask your real past clients to
 recommend the Business Page. Only real clients, never friends posing as clients.
 
