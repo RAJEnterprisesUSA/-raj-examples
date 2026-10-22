@@ -4005,6 +4005,212 @@ SHAKES[33]=[7.8,0.25,14];
 TAGLINES[33]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[33]=23.5;
 
+// ================= EP. 34 · THE SECURITY DETAIL =================
+// Trend: a humanoid bodyguard robot was unveiled (Oct 21). Parody of the idea only: a generic,
+// unbranded robot, no company name or real robot design.
+function partyDoorD(){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#120820'; rr(770,FLOOR-640,210,640,14); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='rgba(229,184,75,.18)'; rr(790,FLOOR-620,170,620,10); ctx.fill();
+  ctx.fillStyle=GOLD; rr(780,FLOOR-716,190,60,14); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.font='34px "Archivo Black"'; ctx.textAlign='center';
+  ctx.fillText('PARTY',875,FLOOR-674);
+  ctx.restore();
+}
+function noChairSignD(x){
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.moveTo(x-10,FLOOR); ctx.lineTo(x-10,FLOOR-260); ctx.stroke();
+  ctx.fillStyle='#f2ede2'; rr(x-110,FLOOR-430,200,180,16); ctx.fill(); ctx.stroke();
+  drawMiniChair(x-10,FLOOR-280,0.62,RED23.a);
+  ctx.strokeStyle='#d6312f'; ctx.lineWidth=12;
+  ctx.beginPath(); ctx.arc(x-10,FLOOR-340,70,0,7); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x-60,FLOOR-390); ctx.lineTo(x+40,FLOOR-290); ctx.stroke();
+  ctx.restore();
+}
+function roboLimbD(x,y,a1,l1,a2,l2,w){
+  const [kx,ky]=seg(x,y,a1,l1), [fx,fy]=seg(kx,ky,a1+a2,l2);
+  ctx.lineCap='round'; ctx.lineJoin='round';
+  ctx.strokeStyle=INK; ctx.lineWidth=w+14;
+  ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(kx,ky); ctx.lineTo(fx,fy); ctx.stroke();
+  ctx.strokeStyle='#4a5160'; ctx.lineWidth=w;
+  ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(kx,ky); ctx.lineTo(fx,fy); ctx.stroke();
+  ctx.fillStyle='#9aa3b2'; ctx.strokeStyle=INK; ctx.lineWidth=6;
+  ctx.beginPath(); ctx.arc(kx,ky,w*0.42,0,7); ctx.fill(); ctx.stroke();
+  return [fx,fy];
+}
+// o: {face, pose:'stand'|'kungfu'|'block'|'scan'|'bow'|'point', visor:'cyan'|'red'|'green'|'pink', t}
+function drawRobotD(x,o){
+  const P=o.pose||'stand', t=o.t||0;
+  const kung=(P==='kungfu'||P==='block');
+  const drop=kung?34:0;
+  ctx.save(); ctx.translate(x,FLOOR); ctx.scale(o.face||1,1);
+  const HIPY=-300+drop;
+  // legs (back leg first)
+  const legs=kung?[[-30,40],[34,-30]]:[[-6,0],[6,0]];
+  for(let i=0;i<2;i++){
+    const [fx,fy]=roboLimbD(i?14:-14,HIPY,legs[i][0],150,legs[i][1],150,44);
+    ctx.fillStyle='#2b3039'; ctx.strokeStyle=INK; ctx.lineWidth=7;
+    rr(fx-30,fy-16,86,34,12); ctx.fill(); ctx.stroke();
+  }
+  // torso pivots at the hip for the bow
+  ctx.save(); ctx.translate(0,HIPY);
+  if(P==='bow') ctx.rotate(rad(34+Math.sin(t*2)*2));
+  // back arm
+  const armB = P==='kungfu'?[-70,-60]: P==='block'?[-20,40]: P==='bow'?[60,60]: [-8,6];
+  roboLimbD(-20,-220,armB[0],120,armB[1],118,34);
+  // torso
+  ctx.fillStyle='#3a404c'; ctx.strokeStyle=INK; ctx.lineWidth=9;
+  rr(-82,-250,164,250,40); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#8f98a8'; rr(-58,-224,116,120,28); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=o.visor==='red'?'#ff4d4d':o.visor==='green'?'#5fe08a':o.visor==='pink'?'#ff5fb0':'#5fe3ff';
+  ctx.beginPath(); ctx.arc(0,-164,14,0,7); ctx.fill();
+  ctx.fillStyle='#2b3039'; rr(-70,-40,140,40,14); ctx.fill(); ctx.stroke();
+  // head
+  ctx.fillStyle='#4a5160'; rr(-20,-282,40,40,8); ctx.fill(); ctx.stroke();
+  const hl=(P==='scan')?Math.sin(t*6)*6:0;
+  ctx.save(); ctx.translate(0,-336); ctx.rotate(rad(hl));
+  ctx.fillStyle='#3a404c'; rr(-62,-58,124,112,40); ctx.fill(); ctx.stroke();
+  const vc=o.visor==='red'?'#ff4d4d':o.visor==='green'?'#5fe08a':o.visor==='pink'?'#ff5fb0':'#5fe3ff';
+  ctx.fillStyle='#0d1118'; rr(-50,-24,108,36,18); ctx.fill();
+  ctx.fillStyle=vc; ctx.shadowColor=vc; ctx.shadowBlur=24;
+  if(o.visor==='pink'){
+    ctx.font='34px Montserrat'; ctx.textAlign='center'; ctx.fillText('♥ ♥',6,4);
+  } else if(P==='scan'){
+    const sx=-40+((t*1.6)%1)*92;
+    rr(sx,-18,16,24,6); ctx.fill();
+  } else if(o.visor==='green'){
+    ctx.font='32px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText('OK',6,6);
+  } else {
+    rr(-6,-16,62,20,10); ctx.fill();
+  }
+  ctx.shadowBlur=0;
+  ctx.restore();
+  // front arm
+  const armF = P==='kungfu'?[100,-34+Math.sin(t*10)*10]: P==='block'?[92,-80]: P==='point'?[110,0]:
+               P==='bow'?[70,80]: P==='scan'?[60,-40]: [6,-6];
+  const [hx,hy]=roboLimbD(20,-220,armF[0],120,armF[1],118,34);
+  ctx.fillStyle='#8f98a8'; ctx.strokeStyle=INK; ctx.lineWidth=7;
+  if(P==='block'){ rr(hx-18,hy-52,40,64,14); ctx.fill(); ctx.stroke(); }   // the palm
+  else { ctx.beginPath(); ctx.arc(hx,hy,22,0,7); ctx.fill(); ctx.stroke(); }
+  ctx.restore();
+  ctx.restore();
+}
+function ep34(t){
+  const FREEZES=[[6.0,6.8],[18.9,19.7]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-fz[0])/0.25));
+    const cx=fz[0]<10?470:860;
+    ctx.translate(cx,1300); ctx.scale(z,z); ctx.translate(-cx,-1300);
+  }
+  drawRoom();
+  partyDoorD();
+  noChairSignD(160);
+  miniPumpkin(1040, FLOOR+88);
+  // ---- MR. BIG BUSINESS ----
+  let mp;
+  if(tt<2.4){
+    mp={x:330, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:{sh:72,el:-18}, mouth:'smile', style:STYLER};                 // presents his hire
+  } else if(tt<3.8){
+    const k=ease((tt-2.4)/1.4), step=Math.sin(tt*9);
+    mp={x:lerp(330,935,k), y:HIP_STAND-Math.abs(step)*10, face:1,
+        legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}], arm:{sh:30,el:30}, mouth:'smile', style:STYLER};
+  } else if(tt<14.2){
+    const cheer=(tt>=6.8&&tt<7.8)||(tt>=10.0&&tt<10.8);
+    mp={x:935, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:cheer?{sh:160,el:-30}:{sh:40,el:-24}, mouth:cheer?'smile':'flat', style:STYLER};
+  } else if(tt<17.8){
+    mp={x:935, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:{sh:150,el:-80}, arm2:{sh:150,el:-80}, mouth:'smile', headTilt:Math.sin(t*5)*6, style:STYLER};
+  } else {
+    mp={x:935, y:HIP_STAND, face:-1, lean:12, legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+        arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', eyes:(tt<19.7?'wide':undefined),
+        headTilt:Math.sin(tt*4)*4, style:STYLER};
+  }
+  drawMan(mp);
+  // ---- TYLER: appears from nowhere at 10.8, cleared, walks through the door ----
+  if(tt>=10.8&&tt<14.0){
+    let tx=470, walk=0;
+    if(tt>=13.0){ walk=ease((tt-13.0)/1.0); tx=lerp(470,880,walk); }
+    ctx.save(); if(tt>=13.6) ctx.globalAlpha=1-ease((tt-13.6)/0.4);
+    const step=walk>0&&walk<1?Math.sin(tt*9):0;
+    drawMan({x:tx, y:HIP_STAND-Math.abs(step)*10, face:walk>0?1:-1,
+      legs:[{hip:6+22*step,knee:6},{hip:-4-22*step,knee:6}],
+      arm:{sh:20,el:40}, mouth:'flat', headTilt:(tt>=12.4&&tt<13.0)?-10:0, style:STYLET});
+    ctx.restore();
+    if(tt<11.4) sparkleD(470,FLOOR-520,t);
+  }
+  // ---- THE CAT: 15.6 trots in, stops, gets the bow, walks through 17.6 ----
+  if(tt>=15.6&&tt<16.6) drawCatD(lerp(-160,440,ease((tt-15.6)/1.0)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+  else if(tt>=16.6&&tt<17.6) drawCatD(440, FLOOR, {face:1,t:t,s:1.4});
+  else if(tt>=17.6&&tt<18.6){
+    ctx.save(); if(tt>=18.2) ctx.globalAlpha=1-ease((tt-18.2)/0.4);
+    drawCatD(lerp(440,880,ease((tt-17.6)/0.7)), FLOOR, {pose:'trot',face:1,t:t,s:1.4});
+    ctx.restore();
+  }
+  // ---- THE ROBOT ----
+  let rp={face:-1, pose:'stand', visor:'cyan', t:t};
+  if(tt>=2.4&&tt<4.6) rp.pose='kungfu';
+  else if(tt>=5.5&&tt<7.8){ rp.pose='block'; rp.visor='red'; }
+  else if(tt>=8.4&&tt<9.4){ rp.pose='scan'; rp.visor='red'; }
+  else if(tt>=9.4&&tt<10.6){ rp.pose='point'; rp.visor='red'; }
+  else if(tt>=10.8&&tt<12.4){ rp.pose='kungfu'; rp.visor='red'; }
+  else if(tt>=12.4&&tt<13.0){ rp.pose='scan'; rp.visor='green'; }
+  else if(tt>=13.0&&tt<14.2){ rp.visor='green'; }
+  else if(tt>=16.6&&tt<16.9){ rp.pose='scan'; }
+  else if(tt>=16.9){ rp.pose=(tt>=17.4)?'bow':'stand'; rp.visor='pink'; }
+  drawRobotD(640, rp);
+  if(tt>=16.9) hearts(t,16.9,640,FLOOR-700);
+  // ---- LIL WOBBLES ----
+  let wx=null, wob=Math.sin(t*12)*7, hat=false, hatFly=-1;
+  if(tt>=4.6&&tt<5.9){ wx=lerp(-220,440,ease((tt-4.6)/1.3)); }
+  else if(tt>=5.9&&tt<6.4){ wx=440-ease((tt-5.9)/0.5)*40; wob=-14; }
+  else if(tt>=6.8&&tt<7.6){ wx=lerp(400,-240,ease((tt-6.8)/0.8)); }
+  else if(tt>=7.6&&tt<9.4){ wx=lerp(-220,420,ease((tt-7.6)/0.8)); hat=true; wob=Math.sin(t*3)*3; }
+  else if(tt>=9.4&&tt<10.6){
+    hatFly=ease((tt-9.4)/0.6);
+    wx=(tt<9.8)?420:lerp(420,-240,ease((tt-9.8)/0.8));
+  }
+  else if(tt>=17.8&&tt<18.9){ wx=lerp(-220,810,ease((tt-17.8)/1.1)); }
+  else if(tt>=18.9&&tt<22.4){ wx=810; wob=Math.sin(t*5)*5; }
+  if(wx!==null){
+    ctx.save();
+    if(tt>=19.7&&tt<22.4) ctx.globalAlpha=1-0.35*ease((tt-19.7)/0.5);
+    drawChair(wx,wob,0,0,RED23);
+    ctx.restore();
+    if(hat) witchHat(wx+6, SEAT_TOP-150, 1, Math.sin(t*2)*0.04);
+    if(hatFly>=0&&hatFly<1) witchHat(wx+6-120*hatFly, SEAT_TOP-150-320*hatFly, 1, -hatFly*1.4);
+  }
+  ctx.restore();
+  // ---- starbursts ----
+  if(t>=6.05&&t<6.8){const kk=easeOutBack(Math.min(1,(t-6.05)/0.25)); starburst(340,FLOOR-880,kk*1.0,'DENIED.');}
+  if(t>=9.45&&t<10.4){const kk=easeOutBack(Math.min(1,(t-9.45)/0.26)); starburst(340,FLOOR-860,kk*0.95,'NOPE.');}
+  if(t>=18.95&&t<19.7){const kk=easeOutBack(Math.min(1,(t-18.95)/0.25)); starburst(720,FLOOR-880,kk*1.0,'BREACH.');}
+  showBadge(34);
+  // ---- captions ----
+  if(t>=0.05&&t<2.3) caption(['HE HIRED A','ROBOT BODYGUARD.'],340,(t+0.3)/0.35,48);
+  if(t>=2.6&&t<4.5) caption(['ONE JOB:','NO CHEAP CHAIRS.'],340,(t-2.6)/0.35,48);
+  if(t>=6.05&&t<6.8) caption(['NOT ON','HIS WATCH.'],340,(t-6.05)/0.35,48);
+  if(t>=8.0&&t<9.4) caption(['DISGUISE ATTEMPT','NUMBER TWO.'],340,(t-8.0)/0.35,44);
+  if(t>=10.9&&t<12.3) caption(['WHERE DID YOU EVEN','COME FROM?'],340,(t-10.9)/0.35,44);
+  if(t>=12.4&&t<13.9) caption(['...im the new intern.'],340,(t-12.4)/0.35,46);
+  if(t>=14.4&&t<15.6) caption(['SECURITY.','IS. FLAWLESS.'],340,(t-14.4)/0.35,50);
+  if(t>=16.0&&t<17.4) caption(['THEN THE CAT','SHOWED UP.'],340,(t-16.0)/0.35,46);
+  if(t>=18.95&&t<19.7) caption(['THE CAT HAS','CLEARANCE.'],340,(t-18.95)/0.35,48);
+  if(t>=19.9&&t<22.2) caption(['AND THE CAT','BROUGHT A PLUS ONE.'],340,(t-19.9)/0.35,44);
+  if(t>=22.4&&t<23.45){
+    caption(['WHO SHOULD SECURITY STOP NEXT?','BEST ANSWER GETS CREDITED.'],340,(t-22.4)/0.35,36);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 17 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[34]=ep34;
+SHAKES[34]=[5.9,0.25,16];
+TAGLINES[34]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[34]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
