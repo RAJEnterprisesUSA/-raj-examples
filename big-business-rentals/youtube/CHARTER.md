@@ -118,3 +118,10 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   clients, physics, the new guy), never from identity or stereotype. The AI label and the
   burned-in AI SKIT tag stay, and no skit is presented as a real Big Business job. Family/guest
   Hosting Chaos ideas are shelved.
+- Oct 24, 2026 ~12:20pm PT, owner: "all episodes and remix videos should be posted on each
+  platform." STANDING RULE (all four platforms): every Big Business Chronicles episode and every
+  trend remix video runs on Facebook, Instagram, TikTok and YouTube, each with that platform's
+  caption rules. This overrides the per-platform frequency caps for these two formats (TikTok's
+  1-a-day cap, Instagram's 1 Reel a day). Gaps filled the same hour (9/9 OK, script
+  queue_everywhere_oct24.py): Sat Porch Reveal 5pm FB/IG/TT, Sat EP. 33 8pm FB/TT, Sun EP. 34
+  The Security Detail 8pm FB/IG/TT/YT.

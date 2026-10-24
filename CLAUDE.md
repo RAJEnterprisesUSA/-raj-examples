@@ -21,7 +21,10 @@ Buffer isAiGenerated; Meta label via the owner in Business Suite); on-screen sta
 ART, AI SKIT) stay too. Drawn rig animation never gets a label.
 AI SKIT RULE (owner Oct 20 night, all platforms): every AI skit revolves around the business
 (setups, teardowns, tent setups, linens, loading, deliveries) and its main character is always
-a Black man or woman, the competent pro; humor from the situation, never identity or stereotype. Max 1 TikTok post a day while median views
+a Black man or woman, the competent pro; humor from the situation, never identity or stereotype.
+EVERYWHERE RULE (owner Oct 24): every Chronicles episode and every trend remix video posts on ALL
+FOUR platforms (FB, IG, TikTok, YouTube) with each platform's caption rules; this overrides the
+per-platform caps for those two formats. Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
 INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL
