@@ -216,6 +216,11 @@ the candidate each Sunday).
 One trending-topic comedy video per day that remixes the day's most talked-about topic toward the
 business ("teslas new flying roadster" was the owner's example). Mechanics, every nightly build:
 1. SEARCH: one extended WebSearch for the day's most talked-about topic (news + social trends).
+   CURRENT ONLY (owner Oct 25: "i dont want to remix something thats old i want current trends thats
+   going on right now, the remix is to only make the trend compatible with my business"): pick a
+   trend that is live THIS WEEK (this week's TikTok/IG trend roundups, this week's news); never a
+   revival or nostalgia format (the Mannequin Challenge remix was pulled for this). Keep the trend's
+   format recognizable and only adapt it so the payoff lands on the business.
 2. PICK with guardrails: fun topics only, product launches, viral formats, pop culture, sports
    moments, absurd stories. NEVER tragedies, deaths, disasters, politics, culture-war topics.
    Parody the IDEA, never the brand: no logos, trademarks, celebrity likenesses or implied

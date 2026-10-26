@@ -2938,3 +2938,9 @@ EP. 35: reelsD REELS[35] (26s): 40 RSVPs, one more comes in, Mrs NW decrees ever
 Wobbles takes the open seat, Tyler is the 41st, the cat RSVPs as 42nd. W-L 3-18.
 Captions: see queue_mon26.py (FB lowercase no links, IG keyword line + 5 tags, TikTok one line +
 4 tags, YouTube title + one line + 3 tags).
+UPDATE Oct 25 night: owner rejected the Mannequin Challenge remix as an old trend ("i want current
+trends thats going on right now"). The 4 queued Mannequin posts were deleted with approval. Replaced
+by TREND REMIX #8 FAN TRANSITION (current Oct 2026 TikTok format: overhead camera, a fan blade wipes
+the lens between looks; source newengen/signora October 2026 roundups). Ours: top-down venue floor,
+each blade pass adds tables, linens, chairs, details; a red cheap chair is caught and cut. reelH
+REELS[31], 17.2s. Captions in queue_mon26_t31.py. Owner may add the trending fan-transition sound in-app.

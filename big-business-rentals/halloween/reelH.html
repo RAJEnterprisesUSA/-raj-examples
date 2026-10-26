@@ -4109,6 +4109,125 @@ REELS[30]=reelT30;
 SHAKES[30]=[9.6,0.25,12];
 TAGLINES[30]='STEADY CHAIRS. ZERO DRAMA.';
 window.GAGENDS[30]=14.0;
+
+// ---------- T31: TREND REMIX · the fan transition (17s) ----------
+// Trend (Oct 2026): overhead camera, a fan blade sweeps the lens and each pass is a new look.
+// Ours: each blade pass turns an empty room into more of a party. Top-down view.
+const FT_TABLES=[[290,660],[790,660],[290,1100],[790,1100],[290,1540],[790,1540]];
+function ftFloor(){
+  ctx.fillStyle='#6a5138'; ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='rgba(36,26,16,.35)'; ctx.lineWidth=5;
+  for(let x=0;x<W;x+=90){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+  ctx.strokeStyle='rgba(36,26,16,.18)'; ctx.lineWidth=3;
+  for(let i=0;i<40;i++){ const x=(i*90)%W+45, y=(i*331)%H; ctx.beginPath(); ctx.moveTo(x-40,y); ctx.lineTo(x+40,y); ctx.stroke(); }
+}
+function ftTable(x,y,k){
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k);
+  ctx.fillStyle='rgba(0,0,0,.25)'; ctx.beginPath(); ctx.arc(10,14,98,0,7); ctx.fill();
+  ctx.fillStyle='#c9a46a'; ctx.strokeStyle=INK; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.arc(0,0,95,0,7); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='rgba(36,26,16,.25)'; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.arc(0,0,60,0,7); ctx.stroke();
+  ctx.restore();
+}
+function ftLinen(x,y,k){
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k);
+  ctx.fillStyle='#fbfbf7'; ctx.strokeStyle=INK; ctx.lineWidth=7;
+  ctx.beginPath();
+  for(let i=0;i<=24;i++){ const a=i/24*Math.PI*2, r=124+(i%2?6:-4); ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r); }
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='rgba(36,26,16,.12)'; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.arc(0,0,88,0,7); ctx.stroke();
+  ctx.restore();
+}
+function ftChair(x,y,a,red,wob){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(a+(wob||0)); if(red) ctx.scale(1.35,1.35);
+  ctx.fillStyle=red?'#e05252':'#eef0f2'; ctx.strokeStyle=INK; ctx.lineWidth=6;
+  rr(-24,-22,48,44,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=red?'#c94444':'#d8dce2'; rr(-24,14,48,12,5); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function ftChairs(x,y,k,redIdx,wob){
+  for(let i=0;i<8;i++){
+    const a=i/8*Math.PI*2, cx=x+Math.cos(a)*165*k, cy=y+Math.sin(a)*165*k;
+    ftChair(cx,cy,a+Math.PI/2, i===redIdx, i===redIdx?wob:0);
+  }
+}
+function ftCenter(x,y,t){
+  ctx.save(); ctx.translate(x,y);
+  ctx.fillStyle='rgba(246,194,49,.25)'; ctx.beginPath(); ctx.arc(0,0,60+Math.sin(t*4)*4,0,7); ctx.fill();
+  ctx.fillStyle='#ff7a1a'; ctx.strokeStyle=INK; ctx.lineWidth=5;
+  ctx.beginPath(); ctx.arc(0,0,30,0,7); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='rgba(36,26,16,.4)'; ctx.lineWidth=3;
+  for(let i=0;i<4;i++){ ctx.beginPath(); ctx.arc(0,0,30-i*0,i*0.8,i*0.8+0.4); ctx.stroke(); }
+  ctx.fillStyle='#3f7a33'; ctx.fillRect(-4,-6,8,12);
+  for(let i=0;i<3;i++){ const a=i*2.1+0.4; ctx.fillStyle='#ffe6a0';
+    ctx.beginPath(); ctx.arc(Math.cos(a)*52,Math.sin(a)*52,7,0,7); ctx.fill(); }
+  ctx.restore();
+}
+function ftLights(t){
+  ctx.save();
+  for(let r=0;r<3;r++){
+    const y=600+r*390;
+    ctx.strokeStyle='rgba(201,143,58,.8)'; ctx.lineWidth=4;
+    ctx.beginPath(); ctx.moveTo(0,y-40); ctx.quadraticCurveTo(540,y+30,W,y-40); ctx.stroke();
+    for(let i=0;i<9;i++){ const k=(i+0.5)/9, bx=k*W, by=y-40+Math.sin(Math.PI*k)*35*2*0.5;
+      ctx.fillStyle='rgba(246,194,49,.18)'; ctx.beginPath(); ctx.arc(bx,by,28,0,7); ctx.fill();
+      ctx.fillStyle=(i%2)?'#ff8c2e':'#f6c231'; ctx.beginPath(); ctx.arc(bx,by,10,0,7); ctx.fill(); }
+  }
+  ctx.restore();
+}
+function ftBlade(p){ // p 0..1 through the sweep
+  if(p<=0||p>=1) return;
+  const a=lerp(-1.25,1.25,p);
+  ctx.save(); ctx.translate(-1500,960);
+  for(let g=0;g<3;g++){
+    ctx.save(); ctx.rotate(a-g*0.06); ctx.globalAlpha=g===0?1:0.35;
+    const grd=ctx.createLinearGradient(0,-1300,0,1300);
+    grd.addColorStop(0,'#1a1220'); grd.addColorStop(0.5,'#3a2a24'); grd.addColorStop(1,'#1a1220');
+    ctx.fillStyle=grd; rr(200,-1300,4200,2600,600); ctx.fill();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function reelT31(t){
+  const SW=[2.2,4.3,6.4,8.5,10.6];          // blade sweeps (0.45s each); stage flips mid-sweep
+  let stage=0;
+  for(const s of SW){ if(t>=s+0.22) stage++; }
+  const zoom=1+0.03*Math.sin(t*0.6);
+  ctx.save(); ctx.translate(540,1150); ctx.scale(zoom,zoom); ctx.translate(-540,-1150);
+  ftFloor();
+  const pop=(s)=>easeOutBack(Math.min(1,Math.max(0,(t-(SW[s-1]+0.22))/0.35)));
+  const wobT=(t>=9.6&&t<10.82)?Math.sin(t*28)*0.35:0;
+  for(const [x,y] of FT_TABLES){
+    if(stage>=3){
+      const isRed=(x===790&&y===1100&&stage<5);
+      ftChairs(x,y,stage===3?pop(3):1, isRed?2:-1, isRed?wobT:0);
+    }
+    if(stage>=1) ftTable(x,y,stage===1?pop(1):1);
+    if(stage>=2) ftLinen(x,y,stage===2?pop(2):1);
+    if(stage>=4) ftCenter(x,y,t);
+  }
+  if(stage>=4){ ctx.save(); ctx.globalAlpha=stage===4?pop(4):1; ftLights(t); ctx.restore(); }
+  if(t>=9.6&&t<10.82){ ctx.save(); ctx.strokeStyle='#ffd94d'; ctx.lineWidth=9;
+    ctx.beginPath(); ctx.arc(790,1265,58+Math.sin(t*12)*8,0,7); ctx.stroke(); ctx.restore(); }
+  if(stage>=5){ ctx.fillStyle='rgba(246,194,49,0.06)'; ctx.fillRect(0,0,W,H); }
+  ctx.restore();
+  for(const s of SW) ftBlade((t-s)/0.45);
+  // captions
+  if(t<2.1) caption(['THE FAN TRANSITION.','PARTY SETUP EDITION.'],300,(t+0.35)/0.35,44);
+  if(t>=2.7&&t<4.1) caption(['TABLES.'],300,(t-2.7)/0.35,64);
+  if(t>=4.8&&t<6.2) caption(['LINENS.'],300,(t-4.8)/0.35,64);
+  if(t>=6.9&&t<8.3) caption(['CHAIRS.'],300,(t-6.9)/0.35,64);
+  if(t>=8.9&&t<9.5) caption(['THE DETAILS.'],300,(t-8.9)/0.35,56);
+  if(t>=9.6&&t<10.5) caption(['WAIT.','WHO INVITED HIM?'],300,(t-9.6)/0.35,52);
+  if(t>=11.0&&t<12.3) caption(['THE CHEAP CHAIR','DID NOT MAKE THE CUT.'],300,(t-11.0)/0.35,44);
+  if(t>=12.4&&t<13.9) caption(['EMPTY ROOM TO PARTY.','DELIVERED.'],300,(t-12.4)/0.35,46);
+}
+REELS[31]=reelT31;
+SHAKES[31]=[10.82,0.2,10];
+TAGLINES[31]='EMPTY ROOM TO PARTY. WE BRING IT ALL.';
+window.GAGENDS[31]=14.0;
 </script>
 </body></html>
 
