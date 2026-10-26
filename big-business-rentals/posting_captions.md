@@ -2987,3 +2987,12 @@ SETUP INSPO chip, QR contact bar). Owner approved "queue it for 2pm". Queued 2/2
 FB: be honest: how much would you pay for this halloween dinner setup? 🎃 the tables, chairs and the room underneath it, that part is us. #lasvegas #halloweenparty #eventrentals #partysetup #setupinspo
 IG: How much would you pay for this Las Vegas Halloween dinner setup? Setup inspo: the tables, chairs and the room underneath it are the part we bring. 🎃 #lasvegas #halloweenparty #partyrentals #eventdecor #setupinspo
 Pinned: FB follow-the-page comment; IG "Follow for more Las Vegas party setups."
+
+## TUESDAY OCT 27 · WEEKLY PROMOTION: VENUE FLYER (1pm, FB feed + IG Story), Flyer 2026 design
+Images: flyers2026/BB26_Venue_Tue27.png (4:5 feed) + BB26_Venue_Tue27_Story.png (9:16, top/contact bars moved
+inside the IG story safe zone). Photo = real frame of the room from user-videos/BB_VenueWalkthrough_RateSheet.mp4
+(no AI, no people). Headline "Skip the house. Book the room." Tiles $625 3 hrs up to 25 · $800 4 hrs up to 40;
+chips Seats 40 · Holds 80 standing · Tables, chairs + setup included. Owner approved "queue it for 1pm". Queued 2/2 OK.
+UPGRADE: Flyer 2026 story layout now respects the IG story safe zone (no UI over the phone number or QR).
+FB: Skip the house this year. Book the room. Our private venue in Las Vegas seats 40 and holds 80 standing, with tables, chairs and setup included. Three hours is $625 for up to 25 guests, and four hours is $800 for up to 40. Birthdays, holiday dinners, baby showers, company parties: the room is ready when you are. Questions? The chat on our website answers right away. #LasVegasVenue #VegasEventSpace #LasVegasParty #VegasPartyRentals #HolidayPartyVegas
+Pinned: FB follow-the-page comment. IG Story: no caption.
