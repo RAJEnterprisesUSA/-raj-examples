@@ -134,3 +134,6 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
 - Oct 25/26, 2026, owner: "Fb can have 3 feed post a day." FREQUENCY CHANGE: up to 3 Facebook feed
   posts a day (replaces 1 to 2). Guess the Theme does NOT run on Facebook (owner: TikTok and IG only).
+- Oct 26, 2026, owner set the WEEKLY PROMOTIONS schedule (see CLAUDE.md): Mon Price It, Tue venue flyer,
+  Wed Guess the Theme clues, Thu referral flyer + Guess the Theme answer, Fri save-worthy carousel, Sat price
+  list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.

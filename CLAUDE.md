@@ -32,7 +32,13 @@ FOUR platforms (FB, IG, TikTok, YouTube) with each platform's caption rules; thi
 per-platform caps for those two formats.
 GUESS THE THEME (owner Oct 26, locked): weekly, clues Wed 1pm + answer Thu 1pm, TikTok + Instagram
 only (never Facebook), AI label on, built as a package and queued only after owner approval.
-FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day. Max 1 TikTok post a day while median views
+FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day.
+WEEKLY PROMOTIONS (owner Oct 26, locked; one a day, built as packages, queued only after owner approval):
+Mon PRICE IT (fresh AI setup image, FB feed + IG feed) · Tue VENUE FLYER (FB feed + IG Story) ·
+Wed GUESS THE THEME clues (TikTok + IG, 1pm) · Thu REFERRAL FLYER (FB feed + IG Story) + GUESS THE THEME
+answer (TikTok + IG, 1pm) · Fri SAVE-WORTHY CAROUSEL (IG feed carousel + FB album) · Sat PRICE LIST
+(FB feed + IG Story) · Sun HOLIDAY BOOKING FLYER (FB feed + IG Story). Promo slot 1pm unless noted.
+Captions follow each charter (no phone, links, "free" or bait on FB/IG; prices allowed on FB/IG, never TikTok). Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
 INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL

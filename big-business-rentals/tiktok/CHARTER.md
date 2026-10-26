@@ -159,3 +159,6 @@ ONGOING
   answer (Pt. 2) Thursday 1pm, TikTok and Instagram only (never Facebook). Instagram runs as trial reels
   the owner posts in the app until the format beats the account median; AI label on both platforms.
   Each week's pair is built as a package and queued only after the owner approves it.
+- Oct 26, 2026, owner set the WEEKLY PROMOTIONS schedule (see CLAUDE.md): Mon Price It, Tue venue flyer,
+  Wed Guess the Theme clues, Thu referral flyer + Guess the Theme answer, Fri save-worthy carousel, Sat price
+  list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.
