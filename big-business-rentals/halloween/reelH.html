@@ -277,6 +277,7 @@ function dizzyStars(x,y,t){
   ctx.restore();
 }
 function caption(lines,y,popT,size){
+  if(window.NOCAP) return;
   const s=size||64;
   const sc=easeOutBack(popT);
   if(sc<=0)return;
@@ -4232,6 +4233,7 @@ window.GAGENDS[31]=14.0;
 // ---------- UPGRADE Oct 27: word-by-word pop captions (native TikTok/Reels look) ----------
 // Each word scales in 0.07s after the last; the newest word flashes gold, then turns white.
 function captionPop(lines, y, t0, t, size){
+  if(window.NOCAP) return;
   const s=size||60; const el=t-t0; if(el<0) return;
   ctx.save(); ctx.font=s+'px "Archivo Black"'; ctx.textBaseline='alphabetic'; ctx.textAlign='left';
   const sp=ctx.measureText(' ').width; let idx=0;
@@ -4360,6 +4362,75 @@ REELS[32]=reelT32;
 SHAKES[32]=[10.5,0.2,12];
 TAGLINES[32]='THE CAT APPROVES. BOOK THE WHOLE SETUP.';
 window.GAGENDS[32]=14.0;
+
+// ---------- T33: TREND REMIX · "Two Fishes" deadpan very-serious-opinion format (17s) ----------
+// Trend (late Oct 2026): a deadpan clip used to defend a questionable opinion with total confidence.
+// Ours: MRS. NEVER WRONG at a podium, delivering party opinions with a straight face.
+function podiumH(){
+  ctx.save(); ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#2c1247'; rr(380,FLOOR-330,320,330,16); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=GOLD; rr(380,FLOOR-330,320,40,12); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.font='30px "Archivo Black"'; ctx.textAlign='center';
+  ctx.fillText('NEVER WRONG', 540, FLOOR-200);
+  ctx.restore();
+}
+function micH(dropK){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.lineCap='round';
+  if(dropK<=0){
+    ctx.beginPath(); ctx.moveTo(660,FLOOR-330); ctx.lineTo(660,FLOOR-420); ctx.lineTo(630,FLOOR-445); ctx.stroke();
+    ctx.fillStyle='#3a3f4a'; ctx.beginPath(); ctx.ellipse(622,FLOOR-452,14,22,-0.9,0,7); ctx.fill(); ctx.stroke();
+  } else {
+    const y=lerp(FLOOR-452,FLOOR+40,Math.min(1,dropK*dropK)); const r=dropK*4;
+    ctx.beginPath(); ctx.moveTo(660,FLOOR-330); ctx.lineTo(660,FLOOR-420); ctx.stroke();
+    ctx.save(); ctx.translate(700,y); ctx.rotate(r);
+    ctx.fillStyle='#3a3f4a'; ctx.beginPath(); ctx.ellipse(0,0,16,24,0,0,7); ctx.fill(); ctx.stroke(); ctx.restore();
+  }
+  ctx.restore();
+}
+function reelT33(t){
+  const OPS=[[2.0,4.8],[4.9,7.7],[7.8,10.9],[11.0,13.8]];
+  let z=1, idx=-1;
+  OPS.forEach((o,i)=>{ if(t>=o[0]&&t<o[1]){ idx=i; z=1.3+0.32*ease((t-o[0])/(o[1]-o[0])); } });
+  if(t<2.0) z=1.15+0.15*ease(t/2.0);
+  if(t>=13.8) z=1.3;
+  ctx.save();
+  ctx.translate(540,1070); ctx.scale(z,z); ctx.translate(-540,-1070);
+  drawRoomH(t);
+  ctx.fillStyle='rgba(0,0,0,.35)'; ctx.fillRect(0,0,W,H);
+  const gl=ctx.createRadialGradient(540,1000,40,540,1000,560);
+  gl.addColorStop(0,'rgba(255,230,170,.45)'); gl.addColorStop(1,'rgba(255,230,170,0)');
+  ctx.fillStyle=gl; ctx.fillRect(0,0,W,H);
+  // LIL WOBBLES: trembles in for opinion 3, then slowly slides out of frame
+  if(t>=8.2&&t<11.2){
+    const out=t>=9.9?ease((t-9.9)/1.2):0;
+    drawChair(lerp(860,W+260,out), Math.sin(t*22)*5, 0, 0, {a:'#e05252',b:'#c94444',c:'#ef6d6d'});
+  }
+  // MRS. NEVER WRONG: perfectly still, a tiny nod at the end of each opinion
+  let nod=0; OPS.forEach(o=>{ const e=t-(o[1]-0.5); if(e>0&&e<0.4) nod=Math.sin(e/0.4*Math.PI)*8; });
+  drawMan({x:520, y:HIP_STAND, face:1, legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+    arm:{sh:30,el:60}, mouth:'flat', headTilt:nod, style:STYLEW});
+  podiumH();
+  micH(t>=13.2?(t-13.2)/0.5:0);
+  ctx.restore();
+  // the label + the opinions (word-pop captions)
+  if(t>=2.0&&t<13.9){
+    ctx.save(); ctx.fillStyle='rgba(36,18,67,.92)'; ctx.strokeStyle=GOLD; ctx.lineWidth=5;
+    rr(250,560,580,70,22); ctx.fill(); ctx.stroke();
+    ctx.fillStyle=GOLD; ctx.font='600 36px Oswald'; ctx.textAlign='center';
+    ctx.fillText('VERY SERIOUS OPINION No. '+(idx+1>0?idx+1:4), 540, 608);
+    ctx.restore();
+  }
+  if(t<2.0) captionPop(["MRS. NEVER WRONG'S",'VERY SERIOUS OPINIONS.'],300,0,t,48);
+  if(idx===0) captionPop(['A PARTY WITHOUT ENOUGH CHAIRS','IS JUST A LONG MEETING.'],300,2.0,t,40);
+  if(idx===1) captionPop(['LINENS ARE NOT DECOR.','LINENS ARE A PERSONALITY.'],300,4.9,t,42);
+  if(idx===2) captionPop(['THE CHEAP CHAIR IS NOT A CHAIR.','IT IS A LIABILITY.'],300,7.8,t,38);
+  if(idx===3) captionPop(['CHAIRS DELIVERED AND PICKED UP?','THAT IS SELF-CARE.'],300,11.0,t,38);
+  if(t>=13.25&&t<14.0){ const kk=easeOutBack(Math.min(1,(t-13.25)/0.25)); starburst(760,1300,kk*0.8,'FACTS.'); }
+}
+REELS[33]=reelT33;
+SHAKES[33]=[13.6,0.2,10];
+TAGLINES[33]='NEVER WRONG ABOUT CHAIRS.';
+window.GAGENDS[33]=14.0;
 </script>
 </body></html>
 

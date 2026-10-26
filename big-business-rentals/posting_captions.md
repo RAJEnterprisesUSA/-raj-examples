@@ -2956,3 +2956,14 @@ table, the cat is the paperweight. W-L 3-19.
 UPGRADES SHIPPED (upgrade rule): word-by-word pop captions (captionPop), 30 fps renders (was 35),
 instrument sound kit (FluidSynth + FluidR3 GM) for stingers. Renderer: audio/render30.py.
 Captions in queue_tue27.py.
+
+## WEDNESDAY OCT 28 · TREND REMIX #10 VERY SERIOUS OPINIONS (5pm) + EP. 37 THE PLACE CARDS (8pm), all four platforms
+Trend (current, late Oct 2026 roundups): "Two Fishes", a deadpan clip used to defend a questionable
+opinion with total confidence. Ours: Mrs. Never Wrong at a podium, four very serious party opinions
+(chairs, linens, the cheap chair is a liability, delivered-and-picked-up is self-care), mic drop.
+No Love Island audio or likeness; owner may add the trending sound in-app. reelH REELS[33], 17.2s.
+EP. 37: reelsD REELS[37], 26s: 42 place cards, Wobbles makes his own head-table card, the swap war,
+Mrs NW rules cards final, Tyler adds card 43, the cat sits on the head card, it reads THE CAT. W-L 3-20.
+UPGRADE SHIPPED: designed covers (build_covers.py, covers/), canvas frame with captions off
+(window.NOCAP), gold kicker + two-line title inside the 3:4 grid-safe zone, sent as Buffer thumbnailUrl.
+Captions in queue_wed28.py.

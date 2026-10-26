@@ -277,6 +277,7 @@ function dizzyStars(x,y,t){
   ctx.restore();
 }
 function caption(lines,y,popT,size){
+  if(window.NOCAP) return;
   const s=size||64;
   const sc=easeOutBack(popT);
   if(sc<=0)return;
@@ -1238,6 +1239,7 @@ function miniPumpkin(x,y){
   ctx.restore();
 }
 function showBadge(ep){
+  if(window.NOCAP) return;
   ctx.save();
   ctx.fillStyle='rgba(36,18,67,.92)'; ctx.strokeStyle='#E5B84B'; ctx.lineWidth=5;
   rr(40,120,560,78,24); ctx.fill(); ctx.stroke();
@@ -4335,6 +4337,7 @@ window.ENDTIMES[35]=23.5;
 // ---------- UPGRADE Oct 27: word-by-word pop captions (native TikTok/Reels look) ----------
 // Each word scales in 0.07s after the last; the newest word flashes gold, then turns white.
 function captionPop(lines, y, t0, t, size){
+  if(window.NOCAP) return;
   const s=size||60; const el=t-t0; if(el<0) return;
   ctx.save(); ctx.font=s+'px "Archivo Black"'; ctx.textBaseline='alphabetic'; ctx.textAlign='left';
   const sp=ctx.measureText(' ').width; let idx=0;
@@ -4500,6 +4503,131 @@ REELS[36]=ep36;
 SHAKES[36]=[10.6,0.3,16];
 TAGLINES[36]='CLIP YOUR LINENS. BOOK YOUR CHAIRS.';
 window.ENDTIMES[36]=23.5;
+
+// ================= EP. 37 · THE PLACE CARDS =================
+function placeCardD(x,y,k,gold){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k);
+  ctx.lineWidth=5; ctx.strokeStyle=INK; ctx.fillStyle=gold?GOLD:'#fbfbf7';
+  ctx.beginPath(); ctx.moveTo(-34,0); ctx.lineTo(-22,-46); ctx.lineTo(22,-46); ctx.lineTo(34,0); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=gold?'#241a10':'#8a7f68'; ctx.fillRect(-16,-30,32,5); ctx.fillRect(-12,-20,24,4);
+  ctx.restore();
+}
+function cardCloseupD(text, k, sub){
+  if(k<=0) return;
+  const sc=easeOutBack(Math.min(1,k));
+  ctx.save(); ctx.translate(540,1010); ctx.scale(sc,sc); ctx.rotate(rad(-4));
+  ctx.fillStyle='rgba(0,0,0,.35)'; rr(-330,-120,680,260,24); ctx.fill();
+  ctx.lineWidth=10; ctx.strokeStyle=INK; ctx.fillStyle=GOLD; rr(-340,-130,680,250,24); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#241a10'; ctx.textAlign='center';
+  ctx.font='600 32px Oswald'; ctx.fillText(sub||'HEAD TABLE', 0, -64);
+  ctx.font='60px "Archivo Black"'; ctx.fillText(text, 0, 30);
+  ctx.restore();
+}
+function nameTagD(x,y,text){
+  ctx.save(); ctx.font='34px "Archivo Black"'; const w=ctx.measureText(text).width+40;
+  ctx.fillStyle='#fff'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(x-w/2,y-34,w,56,16); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.textAlign='center'; ctx.fillText(text,x,y+6); ctx.restore();
+}
+function ep37(t){
+  const FREEZES=[[7.6,8.4],[20.6,21.4]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){
+    const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25));
+    ctx.translate(300,1300); ctx.scale(z,z); ctx.translate(-300,-1300);
+  }
+  drawRoom();
+  miniPumpkin(60, FLOOR+88);
+  // the head seat on the left end: a chair with a gold bow
+  drawChair(170,0,0,0);
+  ctx.save(); ctx.fillStyle=GOLD; ctx.strokeStyle=INK; ctx.lineWidth=5;
+  ctx.beginPath(); ctx.arc(250,FLOOR-430,20,0,7); ctx.fill(); ctx.stroke(); ctx.restore();
+  // TYLER: appears BEHIND the table (the table hides his legs) at 13.0
+  if(tt>=13.0&&tt<19.0){
+    drawMan({x:640, y:HIP_STAND, face:-1, legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:(tt>=15.2&&tt<16.0)?{sh:100,el:-10}:{sh:30,el:50}, mouth:(tt>=14.6)?'flat':'smile',
+      headTilt:(tt>=14.6&&tt<16.0)?-10:0, style:STYLET});
+    if(tt<13.7) sparkleD(640,FLOOR-520,t);
+  }
+  drawTable(600,0,0);
+  // place cards pop onto the table one by one (2.4 to 4.6), Tyler adds his at 15.4
+  const CX=[400,500,600,700,800];
+  CX.forEach((x,i)=>placeCardD(x, FLOOR-250, easeOutBack(Math.min(1,Math.max(0,(tt-2.6-i*0.38)/0.25))), false));
+  if(tt>=15.4) placeCardD(880, FLOOR-250, easeOutBack(Math.min(1,(tt-15.4)/0.25)), false);
+  // the gold head card at the left end of the table
+  const headK=easeOutBack(Math.min(1,Math.max(0,(tt-2.4)/0.25)));
+  if(!(tt>=16.6)) placeCardD(320, FLOOR-250, headK, true);
+  // whose name is on the head card: the swap war
+  let head='MR. BIG BUSINESS';
+  if(tt>=6.6) head='WOBBLES';
+  if(tt>=8.6&&tt<11.0){ head=(Math.floor((tt-8.6)/0.4)%2===0)?'MR. BIG BUSINESS':'WOBBLES'; }
+  if(tt>=11.0) head='WOBBLES';
+  if(tt>=2.6&&tt<16.4) nameTagD(320, FLOOR-360, head);
+  // LIL WOBBLES: rolls in at 5.6 to the head-seat end
+  if(tt>=5.6&&tt<6.4) drawChair(lerp(-220,380,ease((tt-5.6)/0.8)), Math.sin(t*12)*7, 0, 0, RED23);
+  else if(tt>=6.4) drawChair(380, (tt>=8.6&&tt<11.0)?Math.sin(t*30)*10:Math.sin(t*5)*4, 0, 0, RED23);
+  // THE CAT: hops onto the head chair and sits on the card at 16.6
+  if(tt>=16.0&&tt<16.6) drawCatD(lerp(-160,170,ease((tt-16.0)/0.6)), lerp(FLOOR,SEAT_TOP+4,ease((tt-16.3)/0.3)), {pose:'trot',face:1,t:t,s:1.3});
+  else if(tt>=16.6) drawCatD(170, SEAT_TOP+4, {face:1,t:t,s:1.3});
+  // MRS. NEVER WRONG: decree at 11.0, returns at 19.4 to read the card
+  const nwIn=(tt>=10.2&&tt<12.8)||(tt>=19.0);
+  if(nwIn){
+    const arriving=(tt<11.0)||(tt>=19.0&&tt<19.6);
+    if(arriving){ const k=tt<11?ease((tt-10.2)/0.8):ease((tt-19.0)/0.6), step=Math.sin(tt*9);
+      drawMan({x:lerp(W+220,990,k), y:HIP_STAND-Math.abs(step)*9, face:-1,
+        legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}], arm:{sh:30,el:30}, mouth:'flat', style:STYLEW});
+    } else {
+      drawMan({x:990, y:HIP_STAND, face:-1, legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+        arm:{sh:120,el:-30}, mouth:'flat', style:STYLEW});
+    }
+  }
+  // MR. BIG BUSINESS: right end of the table
+  let mp;
+  if(tt<5.6){
+    const placing=(tt>=2.4&&tt<4.8);
+    mp={x:930, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:placing?{sh:96+Math.sin(tt*12)*10,el:-10}:{sh:60,el:24}, mouth:'smile', style:STYLER};
+  } else if(tt<8.6){
+    mp={x:930, y:HIP_STAND, face:-1, lean:-6, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:88,el:-10}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<11.0){
+    const reach=Math.floor((tt-8.6)/0.4)%2===0;
+    mp={x:reach?520:700, y:HIP_STAND, face:-1, lean:16, legs:[{hip:20,knee:8},{hip:-16,knee:8}], arm:{sh:110,el:-10}, mouth:'o', style:STYLER};
+  } else if(tt<19.6){
+    mp={x:900, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:50,el:20}, mouth:'flat', style:STYLER};
+    if(tt>=10.2&&tt<12.8) mp.x=760;
+  } else {
+    mp={x:760, y:HIP_STAND, face:-1, lean:14, legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', headTilt:Math.sin(tt*4)*4, style:STYLER};
+  }
+  if(tt>=19.0&&tt<19.6) mp.x=760;
+  drawMan(mp);
+  ctx.restore();
+  // close-ups of the head card
+  if(t>=7.6&&t<8.4) cardCloseupD('WOBBLES', (t-7.6)/0.25, 'GUEST OF HONOR');
+  if(t>=20.6&&t<22.3) cardCloseupD('THE CAT', (t-20.6)/0.25, 'HEAD TABLE · FINAL');
+  if(t>=7.62&&t<8.4){const kk=easeOutBack(Math.min(1,(t-7.62)/0.25)); starburst(820,720,kk*0.75,'SWAP.');}
+  showBadge(37);
+  if(t<2.3) captionPop(['42 GUESTS.','42 PLACE CARDS.'],340,0.05,t,52);
+  if(t>=2.6&&t<4.4) captionPop(['EVERY SEAT,','LABELED.'],340,2.6,t,52);
+  if(t>=4.6&&t<5.6) captionPop(['PERFECTION.'],340,4.6,t,60);
+  if(t>=5.8&&t<7.5) captionPop(['SOMEONE MADE','HIS OWN CARD.'],340,5.8,t,50);
+  if(t>=8.7&&t<10.9) captionPop(['THE SWAP WAR.'],340,8.7,t,58);
+  if(t>=11.1&&t<12.7) captionPop(['THE INSPECTOR:','PLACE CARDS ARE FINAL.'],340,11.1,t,44);
+  if(t>=13.2&&t<14.5) captionPop(['WHERE DID YOU EVEN','COME FROM?'],340,13.2,t,46);
+  if(t>=14.6&&t<16.0) captionPop(['...im the new intern.'],340,14.6,t,48);
+  if(t>=16.7&&t<18.2) captionPop(['THE CAT SAT ON','THE HEAD CARD.'],340,16.7,t,48);
+  if(t>=19.7&&t<20.5) captionPop(['THE INSPECTOR READS IT.'],340,19.7,t,44);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHO ALWAYS SWAPS','THE PLACE CARDS?'],340,22.4,t,44);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 20 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[37]=ep37;
+SHAKES[37]=[7.6,0.25,12];
+TAGLINES[37]='BIG BUSINESS. BIGGER PERSONALITIES.';
+window.ENDTIMES[37]=23.5;
 
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
