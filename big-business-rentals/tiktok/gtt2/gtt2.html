@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Brico';src:url('../../assets/fonts2026/bricolage-grotesque-latin-800-normal.woff2');font-weight:800}
+@font-face{font-family:'Serif';src:url('../../assets/fonts2026/instrument-serif-latin-400-italic.woff2');font-style:italic}
+@font-face{font-family:'Inter';src:url('../../assets/fonts2026/inter-tight-latin-600-normal.woff2');font-weight:600}
+@font-face{font-family:'Inter';src:url('../../assets/fonts2026/inter-tight-latin-800-normal.woff2');font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:540px;height:960px;overflow:hidden;background:#0f0a17}
+#c{position:relative;width:540px;height:960px;overflow:hidden;color:#fbf6ea;font-family:'Inter';font-weight:600}
+.layer{position:absolute;inset:0;overflow:hidden}
+.layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,23,.78) 0%,rgba(15,10,23,.35) 30%,rgba(15,10,23,0) 48%,rgba(15,10,23,0) 70%,rgba(15,10,23,.55) 100%)}
+.bars{position:absolute;left:18px;right:18px;top:26px;display:flex;gap:6px}
+.bar{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.3);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#E5B84B}
+.row{position:absolute;left:18px;right:18px;top:44px;display:flex;justify-content:space-between}
+.chip{display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:999px;background:rgba(15,10,23,.55);
+ border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.chip.gold{background:#E5B84B;color:#0f0a17;border:none;font-weight:800}
+.head{position:absolute;left:22px;right:60px;top:96px;font-family:'Brico';font-weight:800;font-size:50px;line-height:.95;letter-spacing:-.035em;
+ text-shadow:0 4px 24px rgba(0,0,0,.55)}
+.head em{font-family:'Serif';font-style:italic;font-weight:400;color:#E5B84B;letter-spacing:-.01em}
+.head .w{display:inline-block;transform-origin:50% 80%}
+.big{position:absolute;left:22px;top:230px;font-family:'Brico';font-weight:800;font-size:150px;line-height:.8;letter-spacing:-.05em;color:#E5B84B;
+ text-shadow:0 6px 30px rgba(0,0,0,.5)}
+.sub{position:absolute;left:22px;right:60px;font-size:20px;font-weight:800;line-height:1.2}
+.sub span{display:inline-block;background:rgba(15,10,23,.72);padding:6px 12px;border-radius:12px}
+.grid{position:absolute;left:18px;right:18px;top:300px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.grid div{height:250px;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.55);border:2px solid rgba(229,184,75,.75)}
+.grid img{width:100%;height:100%;object-fit:cover}
+.inset{position:absolute;left:22px;bottom:150px;width:150px;height:200px;border-radius:18px;overflow:hidden;border:3px solid #E5B84B;box-shadow:0 14px 34px rgba(0,0,0,.6)}
+.inset img{width:100%;height:100%;object-fit:cover}
+.ring{position:absolute;border:4px solid #E5B84B;border-radius:50%;box-shadow:0 0 0 4px rgba(15,10,23,.35)}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+</style></head><body><div id="c"></div>
+<script>
+const IM={c1:'clue1_marigolds.png',c2:'clue2_papelpicado.png',c3:'clue3_sugarskulls.png',rv:'reveal_room.png'};
+const C=document.getElementById('c');
+const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+const back=x=>{x=Math.max(0,Math.min(1,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+// word-pop: each word scales in 0.12s apart; the newest word goes gold
+function pop(text,t0,t,firstFrameFull){
+  const ws=text.split(' ');let h='';
+  ws.forEach((w,i)=>{const s=t0+i*0.12; let k=firstFrameFull?1:back((t-s)/0.22); if(!firstFrameFull&&t<s){k=0}
+    const newest=!firstFrameFull&&t>=s&&t<s+0.3;
+    h+=`<span class="w" style="transform:scale(${k});opacity:${k>0?1:0};${newest?'color:#E5B84B':''}">${w}</span> `;});
+  return h;
+}
+function full(src,scale,ox,oy){return `<div class="layer"><img src="${src}" style="transform:translate(${ox||0}px,${oy||0}px) scale(${scale})"></div>`}
+function chrome(part,segs,t){
+  let b='<div class="bars">'+segs.map(([a,z])=>`<div class="bar"><i style="width:${Math.max(0,Math.min(1,(t-a)/(z-a)))*100}%"></i></div>`).join('')+'</div>';
+  return b+`<div class="row"><div class="chip">Guess the theme · Pt. ${part}</div><div class="chip gold">AI concept art</div></div>`;
+}
+function flash(t,cuts){let o=0;cuts.forEach(c=>{if(t>=c&&t<c+0.16)o=Math.max(o,0.55*(1-(t-c)/0.16))});return `<div class="flash" style="opacity:${o}"></div>`}
+
+function part1(t){
+  const SEG=2.6, segs=[[0,SEG],[SEG,2*SEG],[2*SEG,3*SEG]];
+  let h='';
+  if(t<3*SEG){
+    const i=Math.min(2,Math.floor(t/SEG)), k=(t-i*SEG)/SEG, src=[IM.c1,IM.c2,IM.c3][i];
+    const punch=1.12-0.12*ease((t-i*SEG)/0.35);
+    h+=full(src,punch*(1+0.07*k))+'<div class="shade"></div>';
+    if(i===0) h+=`<div class="head">${pop('Guess the party <em>theme</em> before clue 3.',0,t,true)}</div>`;
+    if(i===1) h+=`<div class="head">${pop('Clue 2. Look <em>up.</em>',SEG+0.15,t)}</div>`;
+    if(i===2) h+=`<div class="head">${pop('Last clue. Lock it <em>in.</em>',2*SEG+0.15,t)}</div>`;
+    const kk=back((t-i*SEG-0.05)/0.3);
+    h+=`<div class="big" style="top:${i===0?262:200}px;transform:scale(${i===0?1:kk});transform-origin:0 50%">${i+1}<span style="font-size:44px;letter-spacing:-.02em;color:#fbf6ea"> /3</span></div>`;
+    h+=chrome(1,segs,t);
+  } else {
+    const k=(t-3*SEG);
+    h+=full(IM.c1,1.25)+'<div class="layer" style="background:rgba(15,10,23,.72);backdrop-filter:blur(14px)"></div>';
+    h+=`<div class="head">${pop('So what is the <em>theme?</em>',3*SEG+0.1,t)}</div>`;
+    h+='<div class="grid">'+[IM.c1,IM.c2,IM.c3].map((s,j)=>{const q=back((k-0.15-j*0.12)/0.3);return `<div style="transform:scale(${q}) rotate(${(j-1)*3}deg)"><img src="${s}"></div>`}).join('')+'</div>';
+    const q=ease((k-0.9)/0.3);
+    h+=`<div class="sub" style="top:600px;opacity:${q}"><span>Drop your guess. Answer tomorrow.</span></div>`;
+    h+=chrome(1,segs,t);
+  }
+  h+=flash(t,[SEG,2*SEG,3*SEG]);
+  return h;
+}
+
+// reveal zoom targets on the room image (fractions of the frame): marigold runner, papel picado, sugar skulls
+const ZT=[[0.62,0.74,2.4],[0.5,0.1,2.2],[0.48,0.64,2.6]];
+function room(t,z,fx,fy){ // z zoom, fx/fy focus point fractions
+  const ox=(0.5-fx)*540*(z-1), oy=(0.5-fy)*960*(z-1);
+  return full(IM.rv,z,ox,oy);
+}
+function part2(t){
+  const A=2.8, S=1.6, B=A+3*S, T=10.4;
+  const segs=[[0,A],[A,B],[B,T]];
+  let h='';
+  if(t<A){
+    h+=room(t,1.08-0.08*ease(t/A),0.5,0.5)+'<div class="shade"></div>';
+    h+=`<div class="head">${pop('It is Día de los <em>Muertos.</em>',0,t,true)}</div>`;
+    h+=`<div class="sub" style="top:300px;opacity:${ease((t-0.8)/0.3)}"><span>Who got it on clue 1?</span></div>`;
+  } else if(t<B){
+    const i=Math.min(2,Math.floor((t-A)/S)), k=(t-A-i*S)/S;
+    const prev=i===0?[0.5,0.5,1.0]:ZT[i-1], cur=ZT[i], m=ease(k/0.45);
+    const fx=prev[0]+(cur[0]-prev[0])*m, fy=prev[1]+(cur[1]-prev[1])*m, z=prev[2]+(cur[2]-prev[2])*m;
+    h+=room(t,z,fx,fy)+'<div class="shade"></div>';
+    const lab=[['Clue 1','The marigold <em>runners.</em>'],['Clue 2','The papel <em>picado.</em>'],['Clue 3','The sugar <em>skulls.</em>']][i];
+    h+=`<div class="head" style="font-size:44px"><div style="font-family:Inter;font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#E5B84B;margin-bottom:8px">${lab[0]}</div>${pop(lab[1],A+i*S+0.1,t)}</div>`;
+    const q=back((k-0.25)/0.3);
+    h+=`<div class="inset" style="transform:scale(${q}) rotate(-4deg)"><img src="${[IM.c1,IM.c2,IM.c3][i]}"></div>`;
+  } else {
+    const k=(t-B)/(T-B), m=ease(k/0.4), last=ZT[2];
+    h+=room(t,last[2]+(1.08-last[2])*m,last[0]+(0.5-last[0])*m,last[1]+(0.5-last[1])*m)+'<div class="shade"></div>';
+    h+=`<div class="head">${pop('Same room. Three <em>clues.</em>',B+0.2,t)}</div>`;
+    h+=`<div class="sub" style="top:300px;opacity:${ease((t-B-1.2)/0.3)}"><span>New theme next Wednesday.</span></div>`;
+  }
+  h+=chrome(2,segs,t);
+  h+=flash(t,[A,B]);
+  return h;
+}
+window.PART=1;
+window.drawFrame=t=>{C.innerHTML=(window.PART===1?part1(t):part2(t))+'<div class="grain"></div>'};
+window.ready=async()=>{for(const f of ['800 40px Brico','italic 40px Serif','600 20px Inter','800 20px Inter'])await document.fonts.load(f);
+  await Promise.all(Object.values(IM).map(s=>new Promise(r=>{const i=new Image();i.onload=r;i.onerror=r;i.src=s})));};
+</script></body></html>
