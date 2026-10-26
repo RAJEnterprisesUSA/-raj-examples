@@ -289,7 +289,14 @@ Build: big-business-rentals/build_mon_carousels.py is the reference generator (o
 .slide divs, Playwright element screenshots at dsf=2, LANCZOS downscale to 1080x1350).
 Buffer: queue as type "post" (carousel = multiple image assets in order) on FB + IG.
 
-## Design system (Flyer 2.0, since Oct 4)
+## Design system: FLYER 2026 for all promotions (owner Oct 26: "look like it's the year 2026 and an average
+## person did not do them"). big-business-rentals/flyer2026.py (templates + render), output flyers2026/.
+Full-bleed image or rich gradient + fine grain, NO gold frames or corner diamonds; Bricolage Grotesque 800
+headlines (tight tracking) + one Instrument Serif italic gold accent word + Inter Tight UI text (OFL fonts in
+assets/fonts2026, fetched from npm @fontsource); frosted-glass panels, pill chips, bento price grids; contact
+bar with a QR code to bigbusinesspartyrentals.com (verified to decode). Never invent claims on tiles or tags.
+
+## Older design system (Flyer 2.0, since Oct 4) · reference only for promotions
 - Feed cards 1080x1350 (4:5); carousels replace static flyers for feed (hook slide, value slide, CTA slide).
 - Editorial/asymmetric layouts, mixed type (Playfair900 italic accents + Archivo Black), ghost outline numerals,
   illustrated hero objects (chair/table in rig style), film grain + vignette + drop shadows, rotated gold stamps.

@@ -1,0 +1,119 @@
+"""FLYER 2026 design system (owner Oct 26: "upgrade the looks of the promotion flyers ... I need them to
+look like it's the year 2026 and an average person did not do them").
+Replaces the Flyer 2.0 gold-frame/diamond look for promotions. Principles:
+- Full-bleed image or rich gradient, fine grain, no borders or corner ornaments.
+- Type: Bricolage Grotesque 800 (tight tracking) for headlines, Instrument Serif italic for one accent
+  word, Inter Tight for UI text. Brand gold #E5B84B stays the accent.
+- Frosted-glass panels (backdrop blur), pill chips, 32px radii, bento grids for prices.
+- Contact bar with a scannable QR code to the website. No em dashes.
+Usage: render(name, html_body, size=(1080,1350)) or the ready templates below."""
+import glob, pathlib, shutil
+from playwright.sync_api import sync_playwright
+from PIL import Image
+import qrcode
+
+BASE = pathlib.Path(__file__).parent
+OUT = BASE/'flyers2026'
+OUT.mkdir(exist_ok=True)
+CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
+if not (OUT/'fonts2026').exists(): shutil.copytree(BASE/'assets/fonts2026', OUT/'fonts2026')
+shutil.copy(BASE/'assets/bb_logo.png', OUT/'bb_logo.png')
+if not (OUT/'qr_site.png').exists():
+    q = qrcode.QRCode(border=1, box_size=12); q.add_data('https://bigbusinesspartyrentals.com'); q.make(fit=True)
+    q.make_image(fill_color='#120a1c', back_color='white').save(OUT/'qr_site.png')
+
+CSS = """
+@font-face{font-family:'Brico';src:url('fonts2026/bricolage-grotesque-latin-800-normal.woff2');font-weight:800}
+@font-face{font-family:'Brico';src:url('fonts2026/bricolage-grotesque-latin-700-normal.woff2');font-weight:700}
+@font-face{font-family:'Brico';src:url('fonts2026/bricolage-grotesque-latin-500-normal.woff2');font-weight:500}
+@font-face{font-family:'Serif';src:url('fonts2026/instrument-serif-latin-400-italic.woff2');font-style:italic}
+@font-face{font-family:'Inter';src:url('fonts2026/inter-tight-latin-500-normal.woff2');font-weight:500}
+@font-face{font-family:'Inter';src:url('fonts2026/inter-tight-latin-600-normal.woff2');font-weight:600}
+@font-face{font-family:'Inter';src:url('fonts2026/inter-tight-latin-800-normal.woff2');font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#E5B84B;--ink:#0f0a17;--cream:#fbf6ea}
+html,body{width:var(--w);height:var(--h);overflow:hidden;background:var(--ink)}
+.card{position:relative;width:var(--w);height:var(--h);overflow:hidden;color:var(--cream);font-family:'Inter';font-weight:500}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,23,.55) 0%,rgba(15,10,23,0) 22%,rgba(15,10,23,0) 42%,rgba(15,10,23,.78) 72%,rgba(15,10,23,.96) 100%)}
+.grain{position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>")}
+.top{position:absolute;left:56px;right:56px;top:52px;display:flex;justify-content:space-between;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:12px;height:58px;padding:0 24px;border-radius:999px;
+ background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+ font-family:'Inter';font-weight:600;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.chip img{width:38px;height:38px;border-radius:50%}
+.chip.gold{background:var(--gold);color:var(--ink);border:none}
+.h1{font-family:'Brico';font-weight:800;letter-spacing:-.035em;line-height:.92}
+.h1 em{font-family:'Serif';font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--gold)}
+.glass{border-radius:34px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);
+ backdrop-filter:blur(26px) saturate(140%);-webkit-backdrop-filter:blur(26px) saturate(140%)}
+.contact{position:absolute;left:56px;right:56px;bottom:52px;height:150px;display:flex;align-items:center;gap:26px;padding:0 26px}
+.contact .qr{width:108px;height:108px;border-radius:20px;background:#fff;padding:8px}
+.contact .qr img{width:100%;height:100%}
+.contact .ph{font-family:'Inter';font-weight:800;font-size:44px;letter-spacing:-.01em}
+.contact .ln{font-family:'Inter';font-weight:500;font-size:21px;opacity:.85;margin-top:4px}
+.contact .logo{margin-left:auto;width:96px;height:96px}
+.scan{font-family:'Inter';font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:6px}
+"""
+
+def contact_bar():
+    return ("<div class='contact glass'><div class='qr'><img src='qr_site.png'></div>"
+            "<div><div class='ph'>702-706-8287</div><div class='ln'>bigbusinesspartyrentals.com · @bigbusiness_rentals_events</div>"
+            "<div class='scan'>Scan for a quote · Las Vegas, NV</div></div><img class='logo' src='bb_logo.png'></div>")
+
+def top_bar(right_chip):
+    return (f"<div class='top'><div class='chip'><img src='bb_logo.png'>Big Business · Las Vegas</div>{right_chip}</div>")
+
+def render(name, body, size=(1080, 1350), extra_css=''):
+    w, h = size
+    html = (f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}{extra_css}</style></head>"
+            f"<body style='--w:{w}px;--h:{h}px'><div class='card'>{body}<div class='grain'></div></div></body></html>")
+    f = OUT/f'{name}.html'; f.write_text(html)
+    with sync_playwright() as p:
+        b = p.chromium.launch(executable_path=CHROME)
+        pg = b.new_page(viewport={'width': w, 'height': h}, device_scale_factor=2)
+        pg.goto('file://'+str(f)); pg.wait_for_function("document.fonts.status==='loaded'"); pg.wait_for_timeout(500)
+        tmp = OUT/f'{name}.2x.png'; pg.screenshot(path=str(tmp)); b.close()
+    Image.open(tmp).resize((w, h), Image.LANCZOS).save(OUT/f'{name}.png'); tmp.unlink(); f.unlink()
+    return OUT/f'{name}.png'
+
+# ---------- templates ----------
+def price_it(name, img, size=(1080, 1350)):
+    """Mon PRICE IT: full-bleed AI setup photo, question headline, glass sub-panel, contact bar."""
+    shutil.copy(img, OUT/pathlib.Path(img).name)
+    tall = size[1] > 1500
+    body = (f"<div class='bg' style=\"background-image:url('{pathlib.Path(img).name}')\"></div><div class='shade'></div>"
+            + top_bar("<div class='chip gold'>Setup inspo</div>")
+            + f"<div style='position:absolute;left:56px;right:56px;bottom:{'440' if tall else '232'}px'>"
+              "<div class='h1' style='font-size:118px'>How much would you <em>pay</em> for this setup?</div>"
+              "<div class='glass' style='margin-top:30px;padding:24px 30px;font-size:29px;line-height:1.35;display:inline-block'>"
+              "The tables, the chairs and the room underneath it: <b style=\"font-weight:800;color:#E5B84B\">that part is us.</b></div></div>"
+            + contact_bar())
+    return render(name, body, size)
+
+def price_list(name, size=(1080, 1350)):
+    """Sat PRICE LIST: bento grid of real prices on a rich gradient."""
+    tiles = [('Folding chair', '$2', ''), ('6 ft rectangle table', '$10', ''), ('6 ft round table', '$15', ''),
+             ('Table + 6 chairs', '$22', 'seats 6')]
+    cells = ''.join(f"<div class='tile glass'><div class='lbl'>{l}</div><div class='num'>{n}</div>"
+                    + (f"<div class='tag'>{tg}</div>" if tg else '') + "</div>" for l, n, tg in tiles)
+    css = """.bento{position:absolute;left:56px;right:56px;top:470px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .tile{position:relative;height:250px;padding:30px 30px}.lbl{font-size:28px;font-weight:600;opacity:.9}
+    .num{font-family:'Brico';font-weight:800;font-size:120px;letter-spacing:-.04em;line-height:1;margin-top:18px;color:#fff}
+    .tag{position:absolute;top:26px;right:24px;background:#E5B84B;color:#0f0a17;font-weight:800;font-size:17px;letter-spacing:.08em;
+    text-transform:uppercase;border-radius:999px;padding:8px 14px}
+    .note{position:absolute;left:56px;right:56px;top:1010px;font-size:25px;line-height:1.4;opacity:.92}
+    .note b{color:#E5B84B;font-weight:800}"""
+    body = ("<div class='bg' style='background:radial-gradient(120% 80% at 15% 0%,#5b2a86 0%,#2a1240 45%,#0f0a17 100%)'></div>"
+            "<div class='bg' style='background:radial-gradient(60% 40% at 95% 30%,rgba(229,184,75,.35),rgba(229,184,75,0))'></div>"
+            + top_bar("<div class='chip'>Real prices</div>")
+            + "<div style='position:absolute;left:56px;right:56px;top:170px'><div class='h1' style='font-size:112px'>Party rentals, <em>priced</em> plainly.</div></div>"
+            + f"<div class='bento'>{cells}</div>"
+            + "<div class='note'><b>Delivered and picked up.</b> Delivery is quoted with your order. Full-service setup and breakdown from $265.</div>"
+            + contact_bar())
+    return render(name, body, size, css)
+
+if __name__ == '__main__':
+    print(price_it('BB26_PriceIt_HalloweenGala', BASE/'inspo/setup_halloweengala.png'))
+    print(price_list('BB26_PriceList_Sample'))
