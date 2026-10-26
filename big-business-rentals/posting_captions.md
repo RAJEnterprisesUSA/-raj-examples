@@ -2979,3 +2979,4 @@ in the row, the fifth is Wobbles under a sheet, Mrs NW unmasks him, Tyler wheels
 W-L 4-20. The empty sheet floats off: "See you Saturday." Finale is EP. 40, Sat Oct 31.
 UPGRADES SHIPPED: confetti bursts (confettiBurst in reelH and reelsD) and the cinematic finish
 (render30 FINISH: contrast/saturation lift, vignette, moving grain). Captions in queue_thu29.py.
+QUEUED Oct 26 (owner: "queue thursday"): 8/8 OK, Thu Oct 29 remix 5pm + EP. 38 8pm on FB, IG, TikTok, YouTube.
