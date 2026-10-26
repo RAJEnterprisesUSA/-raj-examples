@@ -2980,3 +2980,10 @@ W-L 4-20. The empty sheet floats off: "See you Saturday." Finale is EP. 40, Sat 
 UPGRADES SHIPPED: confetti bursts (confettiBurst in reelH and reelsD) and the cinematic finish
 (render30 FINISH: contrast/saturation lift, vignette, moving grain). Captions in queue_thu29.py.
 QUEUED Oct 26 (owner: "queue thursday"): 8/8 OK, Thu Oct 29 remix 5pm + EP. 38 8pm on FB, IG, TikTok, YouTube.
+
+## MONDAY OCT 26 · WEEKLY PROMOTION: PRICE IT (2pm, FB + IG feed), first piece in the Flyer 2026 design
+Image: flyers2026/BB26_PriceIt_HalloweenGala.png (fresh HF Z-Image indoor Halloween dinner gala, seed 992092,
+SETUP INSPO chip, QR contact bar). Owner approved "queue it for 2pm". Queued 2/2 OK.
+FB: be honest: how much would you pay for this halloween dinner setup? 🎃 the tables, chairs and the room underneath it, that part is us. #lasvegas #halloweenparty #eventrentals #partysetup #setupinspo
+IG: How much would you pay for this Las Vegas Halloween dinner setup? Setup inspo: the tables, chairs and the room underneath it are the part we bring. 🎃 #lasvegas #halloweenparty #partyrentals #eventdecor #setupinspo
+Pinned: FB follow-the-page comment; IG "Follow for more Las Vegas party setups."
