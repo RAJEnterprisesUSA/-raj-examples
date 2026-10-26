@@ -48,3 +48,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Oct 30 (Fri build: Be OK remix + EP. 39): real lighting in the canvas rig (nightD: a flashlight cone
   cut out of a dark room, lights snapping on at the switch); save-worthy carousel in Flyer 2026.
 - Oct 31 (Sat build: The Merger + EP. 40): first news-trend remix; wide-shot camera for the full cast and a printed group-photo freeze frame. Season Two rig (Oct 26): hair styles (bun, locbun, locs, braids), beard, kid rigs, light brown family skin.
+- Nov 1 (Sun build: POV Thanksgiving + EP. 41): Season Two rig in production (STYLER2 + four kid rigs) and the psychology-playbook story rules; Flyer 2026 holiday template with true-calendar chips.

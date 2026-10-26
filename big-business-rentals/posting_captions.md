@@ -3089,3 +3089,27 @@ school staff, no friend-side reward until the owner approves one. Also applied: 
 (playbook/referral_partner_kit.md), Sunday report adds lead source / reply time / referred vs not / new reviews,
 Price It + Guess the Theme always close the loop, Chronicles competence-first rule (CAST.md). Not applied (owner): item 4,
 weekly open dates. Already-queued posts were not edited.
+
+## SUNDAY NOV 1 · SEASON TWO BEGINS · HOLIDAY BOOKING FLYER (1pm) + TREND REMIX #14 POV THANKSGIVING 2026 (5pm) + EP. 41 MEET THE FAMILY (8pm)
+Owner approved "queue sunday". Queued 10/10 OK (queue_sun01.py), PST -08:00 (DST ends Nov 1).
+HOLIDAY FLYER: flyers2026/BB26_Holiday_Sun01.png (FB feed) + _Story.png (IG Story), Flyer 2026 autumn copper; psychology
+playbook: fresh-start "November starts today", TRUE calendar chips (Thanksgiving Thu Nov 26; pre-Christmas Saturdays Dec 5,
+12, 19), owner-approved math ($88 for 24, $176 for 48, full-service from $265), single ask "Message us your date and
+headcount". No scarcity claims. FB 6adfd36e9a87effac428ef18.
+TREND #14 BB_Trend_POVThanksgiving2026 (reelH REELS[37], 17.2s): SOCIAL pool (alternates with Saturday's news remix): the
+"POV: [ordinary thing] in 2026" exaggeration format (Oct 2026 roundups: newengen, socialpilot, napoleoncat). Beats: 47 maybes,
+guest list changing every four minutes, the cat's plus-one, the turkey's own seat; payoff "Still one call: tables and chairs,
+delivered." First remix in the Season Two look (STYLER2).
+EP. 41 MEET THE FAMILY, SEASON TWO PREMIERE (reelsD REELS[41], 26s): competence first (he sets a table in 3 seconds), the kids
+introduced with name cards, family photo freeze (Dad, Lil and Baby same pose), the cat obeys only Princess, Vaeh dresses the
+whole table without looking up (OOF). End card "Which kid are you?" Season Two record 0 W · 1 L.
+UPGRADE: Season Two rig (new MBB look, four kid rigs: braids, locs, tiara, headphones, phone) + playbook story rules.
+FB 1pm: November starts today, and the holidays are for family. Hosting Thanksgiving on the 26th, a Friendsgiving or a December Saturday? Seating for 24 is $88 and seating for 48 is $176, delivered and picked up anywhere in Las Vegas, with delivery quoted with your order. Want us to set up and break down too? Full-service starts at $265. Message us your date and headcount, or use the chat on our website. #LasVegas #Thanksgiving #Friendsgiving #HolidayParty #PartyRentals
+FB 5pm: pov: hosting thanksgiving in 2026. 47 maybes, a guest list that changes every four minutes, and a turkey with its own seat. 🦃 #lasvegas #thanksgiving #pov #animation #partyrentals
+IG 5pm: POV: hosting Thanksgiving in Las Vegas in 2026. The guest list keeps growing; the seating does not have to be the stress. 🦃 #pov #thanksgiving #lasvegas #partyrentals #comedy
+TT 5pm: POV: hosting Thanksgiving in 2026. 🦃 #pov #thanksgiving #hosting #comedy
+YT 5pm: "POV: hosting Thanksgiving in 2026 🦃 #Shorts" / Hosting Thanksgiving in 2026: 47 maybes, a guest list that changes every four minutes, and a turkey with its own seat. #pov #thanksgiving #comedy
+FB 8pm: the big business chronicles, season two, ep. 41: meet the family. vaeh, lil big business, princess and baby big business are here for the holidays. 🏡 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles Season Two, EP. 41: meet the family. Mr. Big Business brought the kids for the Las Vegas holiday season. Which kid are you? 🏡 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles Season Two: meet the family. Which kid are you? 🏡 #thebigbusinesschronicles #seasontwo #family #comedy
+YT 8pm: "EP. 41: Meet the Family 🏡 Season Two premiere #Shorts" / ...and Vaeh set the whole table without looking up. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
