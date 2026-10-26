@@ -242,6 +242,10 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    sports milestones). Rotate between the two pools; the topic must be positive and new.
    Stocks and mergers: celebrate the news only, never give investment advice, price predictions or
    "buy" talk, and describe companies generically ("a giant chip merger") with no names, logos or tickers.
+   NO ADVICE OF ANY KIND (owner Oct 26: "no advice. only ways to remix it to use it for my business"):
+   the news is only the setup; the video never explains, rates or comments on the news itself, it only
+   remixes it into a party rental joke (e.g. "two giant companies merged" -> two tables pushed together
+   for a bigger party).
 2. PICK with guardrails: fun topics only, product launches, viral formats, pop culture, sports
    moments, absurd stories, positive business and tech news. NEVER tragedies, deaths, disasters,
    politics, culture-war topics, layoffs, lawsuits or market crashes.

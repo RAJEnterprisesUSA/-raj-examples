@@ -3048,3 +3048,4 @@ From the Saturday Oct 31 build: each trend search covers this week's social form
 and product releases, record market days, mergers and deals, space/science firsts, sports milestones); rotate between them.
 Guardrails: positive and new only; no investment advice, predictions or "buy" talk; companies described generically with
 no names, logos or tickers; never layoffs, lawsuits, crashes, politics or tragedies. Recorded in CLAUDE.md TREND REMIX LANE.
+Owner follow-up Oct 26: "no advice. only ways to remix it to use it for my business." News is only the setup; the video never explains, rates or comments on the news, it only turns it into a party rental joke. Added to CLAUDE.md.
