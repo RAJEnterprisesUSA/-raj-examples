@@ -2967,3 +2967,4 @@ Mrs NW rules cards final, Tyler adds card 43, the cat sits on the head card, it 
 UPGRADE SHIPPED: designed covers (build_covers.py, covers/), canvas frame with captions off
 (window.NOCAP), gold kicker + two-line title inside the 3:4 grid-safe zone, sent as Buffer thumbnailUrl.
 Captions in queue_wed28.py.
+RESULT Oct 26: Buffer rejected thumbnailUrl on FB, IG, TikTok and YouTube ("Video thumbnailUrl is not supported"); all 8 posts queued without covers (8/8 OK). Covers saved in covers/ for the owner to set in-app.

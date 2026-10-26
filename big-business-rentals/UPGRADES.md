@@ -17,7 +17,7 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
    instead of whole-line pops.
 3. **30 fps renders** (SHIPPED Oct 27) · the rig renders at 35 fps, a non-standard rate the apps convert; render at
    30 (or 60 for smoother motion).
-4. **Custom covers** (SHIPPED Oct 28) · a designed cover frame for every video (Buffer createPost thumbnailUrl), so
+4. **Custom covers** (BUILT Oct 28, but Buffer rejects video thumbnailUrl on every platform: "social networks do not accept custom video thumbnail images". Covers are made and saved in covers/ for the owner to set by hand in the Instagram app) · a designed cover frame for every video (Buffer createPost thumbnailUrl), so
    the Instagram grid and YouTube Shorts shelf look like one show.
 5. **Motion polish** · motion blur on fast moves, squash and stretch, camera push-ins, parallax
    backgrounds, particle bursts (confetti, dust, sparkles).
@@ -37,4 +37,5 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
   and reelsD), 30 fps renders (audio/render30.py), instrument sound kit stingers, music beds under
   the SFX (sfx_kit.bed), and loudness normalized to -14 LUFS (was peak-normalized, often ~-30 dB).
 - Oct 28 (Wed build: Very Serious Opinions remix + EP. 37): designed covers for every video
-  (build_covers.py make_cover_canvas, captions-off canvas frame, grid-safe title), passed as Buffer thumbnailUrl.
+  (build_covers.py make_cover_canvas, captions-off canvas frame, grid-safe title). Buffer refused the
+  thumbnail on all four platforms, so posts went out with the default frame; covers stay in covers/ for manual use.
