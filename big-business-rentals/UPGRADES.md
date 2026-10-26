@@ -5,7 +5,14 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 ## I can do these myself (no cost)
 1. **Real-sounding audio** · ElevenLabs sound-effects + music generation would replace the synth
    beeps. BLOCKED Oct 25: the ElevenLabs account returns "payment_required: failed or incomplete
-   payment" (owner must complete the latest invoice). Fallback: richer synth layering.
+   payment" (owner must complete the latest invoice).
+   FREE REPLACEMENT BUILT Oct 25: big-business-rentals/audio/sfx_kit.py renders real instrument
+   stingers and beds (brass theme, orchestra-hit freeze, xylophone pops, sad trombone, pizzicato
+   sneak, rimshot, applause, boing) from the FluidR3 General MIDI soundfont (MIT license) via
+   FluidSynth. Demo: audio/BB_SoundKit_Demo.m4a. Setup each session (container resets):
+   apt-get update && apt-get install -y fluidsynth fluid-soundfont-gm ; pip install mido.
+   Free sound sites (Freesound, Pixabay, Mixkit, Kenney, OpenGameArt, Sonniss) are unreachable
+   from this environment; the owner can download CC0 or Pixabay-license effects and upload them.
 2. **Animated captions** · word-by-word pop/highlight captions (the native TikTok/Reels look)
    instead of whole-line pops.
 3. **30 fps renders** · the rig renders at 35 fps, a non-standard rate the apps convert; render at

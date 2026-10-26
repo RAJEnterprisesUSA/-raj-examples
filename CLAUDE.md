@@ -25,6 +25,8 @@ a Black man or woman, the competent pro; humor from the situation, never identit
 UPGRADE RULE (owner Oct 25: "i want to always upgrade something when ever we can"): every build ships
 at least one visible production upgrade over the last one (sound, captions, motion, covers, frame rate,
 resolution). Log the upgrade with the captions. Upgrade backlog + research: big-business-rentals/UPGRADES.md.
+SOUND KIT (free, Oct 25): big-business-rentals/audio/sfx_kit.py (FluidSynth + FluidR3 GM soundfont, MIT)
+replaces synth beeps in new renders; install each session: apt-get install -y fluidsynth fluid-soundfont-gm; pip install mido.
 EVERYWHERE RULE (owner Oct 24): every Chronicles episode and every trend remix video posts on ALL
 FOUR platforms (FB, IG, TikTok, YouTube) with each platform's caption rules; this overrides the
 per-platform caps for those two formats. Max 1 TikTok post a day while median views
