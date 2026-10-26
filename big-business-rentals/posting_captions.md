@@ -2928,3 +2928,13 @@ YouTube description: The Big Business Chronicles EP. 34: he hired a robot bodygu
 
 #thebigbusinesschronicles #halloween #comedy
 AI disclosure: none (drawn animation).
+
+## MONDAY OCT 26 · TREND REMIX #7 MANNEQUIN CHALLENGE (5pm) + EP. 35 THE HEADCOUNT (8pm), all four platforms
+Trend: "2026 is the new 2016" nostalgia wave (AOL, GMA coverage; #2016 ~1.7M TikTok posts), remixing
+the 2016 mannequin challenge format. No 2016 song via API; owner may add a throwback sound in-app on
+TikTok. reelH REELS[30] (17.2s), GAGENDS 14.0. Punchline: our chairs stay still, the cheap chair
+cannot, linen drapes Wobbles into a ghost.
+EP. 35: reelsD REELS[35] (26s): 40 RSVPs, one more comes in, Mrs NW decrees every guest sits,
+Wobbles takes the open seat, Tyler is the 41st, the cat RSVPs as 42nd. W-L 3-18.
+Captions: see queue_mon26.py (FB lowercase no links, IG keyword line + 5 tags, TikTok one line +
+4 tags, YouTube title + one line + 3 tags).
