@@ -135,3 +135,4 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
 - Oct 26, 2026, owner approved "queue it for 1pm": Tue Oct 27 1pm venue flyer (Flyer 2026) queued, FB feed post with the follow comment + IG Story (9:16, story-safe layout). 2/2 OK.
 - Oct 26, 2026: Guess the Theme No. 2 Día de los Muertos Pt. 1 (Wed Oct 28) and Pt. 2 (Thu Oct 29) are Trial Reels for the owner to post in the app at 1pm with the AI label on; captions in tiktok/packages/GTT2_DiaDeMuertos_Oct28-29.md.
 - Oct 26, 2026, owner approved "queue it for 1pm": Thu Oct 29 1pm referral flyer (Flyer 2026, hair stylists) queued, FB feed post with the follow comment + IG Story (9:16). 2/2 OK.
+- Oct 26, 2026, owner approved "queue friday": Fri Oct 30 queued (10/10 OK, queue_fri30.py): 1pm Holiday Seating Cheat Sheet carousel (FB album + IG carousel), 5pm trend remix #12 Be OK and 8pm EP. 39 The Night Before on FB, IG, TikTok and YouTube (drawn animation, no AI label).

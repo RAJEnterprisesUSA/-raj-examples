@@ -128,3 +128,4 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
 - Oct 24, 2026 ~12:30pm PT, owner chose "Post them all now" for the week's backlog: 18/18 queued
   (queue_backlog_oct24.py). Sat FB+TT: EP. 29 1:30pm, EP. 30 2:30pm, EP. 31 3:30pm, EP. 32 6:30pm.
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
+- Oct 26, 2026, owner approved "queue friday": Fri Oct 30 queued (10/10 OK, queue_fri30.py): 1pm Holiday Seating Cheat Sheet carousel (FB album + IG carousel), 5pm trend remix #12 Be OK and 8pm EP. 39 The Night Before on FB, IG, TikTok and YouTube (drawn animation, no AI label).

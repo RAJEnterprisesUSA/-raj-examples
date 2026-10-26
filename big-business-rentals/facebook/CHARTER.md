@@ -139,3 +139,4 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.
 - Oct 26, 2026, owner approved "queue it for 1pm": Tue Oct 27 1pm venue flyer (Flyer 2026) queued, FB feed post with the follow comment + IG Story (9:16, story-safe layout). 2/2 OK.
 - Oct 26, 2026, owner approved "queue it for 1pm": Thu Oct 29 1pm referral flyer (Flyer 2026, hair stylists) queued, FB feed post with the follow comment + IG Story (9:16). 2/2 OK.
+- Oct 26, 2026, owner approved "queue friday": Fri Oct 30 queued (10/10 OK, queue_fri30.py): 1pm Holiday Seating Cheat Sheet carousel (FB album + IG carousel), 5pm trend remix #12 Be OK and 8pm EP. 39 The Night Before on FB, IG, TikTok and YouTube (drawn animation, no AI label).

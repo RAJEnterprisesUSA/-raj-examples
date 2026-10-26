@@ -3015,3 +3015,28 @@ Owner approved "queue it for 1pm". Queued 2/2 OK (FB 6adfacfaed65e162d578cd2d, I
 UPGRADE: referral rebuilt in Flyer 2026 (glass reward panel with ghost $, flex layout that fills both 4:5 and 9:16).
 FB: Hair stylists in Las Vegas: your clients tell you about every party before anyone else hears about it. Point them to Big Business for their tables, chairs and setup, and you can earn up to $100 for every booking. The reward is based on booking size, there is no limit on referrals, and you get paid after their event is completed. Questions? The chat on our website answers right away. #LasVegasHairStylist #VegasStylist #LasVegasSalon #VegasPartyRentals #LasVegasEvents
 Pinned: FB follow-the-page comment. IG Story: no caption.
+
+## FRIDAY OCT 30 · SAVE-WORTHY CAROUSEL (1pm) + TREND REMIX #12 BE OK (5pm) + EP. 39 THE NIGHT BEFORE (8pm)
+Owner approved "queue friday". Queued 10/10 OK (script queue_fri30.py).
+CAROUSEL: Holiday Seating Cheat Sheet, 6 slides, Flyer 2026 midnight navy (flyers2026/BB26_Carousel_Fri30_1..6.png;
+build_fri30_carousel.py): hook "How many tables do you actually need?" · 1 table + 6 chairs = 6 guests, divide and round up ·
+cheat table 12/18/24/30/36/48/60 guests = 2..10 sets = $44..$220 (owner's $22 set price) · spare chairs $2 · 3 ft behind each chair ·
+CTA "We bring the seats. You host." (delivered and picked up, full-service from $265). FB album 6adfba253ffda7dd058f1330,
+IG carousel 6adfba293ffda7dd058f13c8 (pinned "Follow for more Las Vegas party planning guides.").
+TREND #12 BB_Trend_BeOK (reelH REELS[35], 17.2s, GAGENDS 14.0). Topic: the "Be OK" format (late Oct 2026 TikTok roundups:
+cheerful dance while on-screen text lists what you are not okay with). Source: one Oct 26 extended search (socialpilot,
+newengen, later, revid roundups). Passed on Ramalama costume walk (revival from last year) and Two Fishes (reality-TV clip).
+Angle: Mr. Big Business dances through the day before Halloween (20 guests becoming 60, cat on the linens, cake chair, wind);
+payoff "the extra chairs are already on the truck. So I am OK." OWNER: add the trending "Be OK" sound in-app on TikTok/IG.
+EP. 39 THE NIGHT BEFORE (reelsD REELS[39], 26s): flashlight check in the dark, sheet ghost behind him (BOO), he screams, it is
+Tyler testing his costume ("...im the new intern."), Mrs. Never Wrong flips the light switch, the doorbell: Lil Wobbles with
+his invitation (EP. 30 callback), "See you tomorrow." Loss: W-L 4-21. Finale EP. 40 Sat Oct 31.
+UPGRADE: real lighting (nightD: flashlight cone cut out of a dark room, lights snapping on at the switch).
+FB 5pm: the day before halloween at a party rental company: not okay with any of it. still dancing. 🎃 #lasvegas #halloween #beok #animation #partyrentals
+IG 5pm: The day before Halloween at a Las Vegas party rental company: not okay with any of it, still dancing. 🎃 #beok #halloween #lasvegas #partyrentals #comedy
+TT 5pm: Not okay. Still dancing. The extra chairs are on the truck. 🎃 #beok #halloween #partyrentals #lasvegas
+YT 5pm: "Not okay. Still dancing. 🎃 #Shorts" / The day before Halloween at a party rental company: not okay with any of it, still dancing. #beok #halloween #comedy
+FB 8pm: the big business chronicles ep. 39: the night before the halloween party. one last check in the dark. he was not alone. 🔦 #lasvegas #halloweenparty #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 39: the night before the Las Vegas Halloween party, one last flashlight check, and he was not alone. 🔦 #thebigbusinesschronicles #lasvegas #halloweenparty #comedy #animation
+TT 8pm: The Big Business Chronicles EP. 39: one last check the night before the party. He was not alone. 🔦 #thebigbusinesschronicles #halloween #comedy #animation
+YT 8pm: "EP. 39: The Night Before 🔦 he was not alone #Shorts" / ...and he was not alone. Next episode tomorrow: the finale. #thebigbusinesschronicles #halloween #comedy

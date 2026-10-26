@@ -41,3 +41,9 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
   thumbnail on all four platforms, so posts went out with the default frame; covers stay in covers/ for manual use.
 - Oct 29 (Thu build: Pumpkin Head Illusion remix + EP. 38): confetti bursts and the cinematic finish
   (slight contrast/color lift, soft vignette, fine moving grain) on every render (render30 FINISH).
+- Oct 27 to 29 promotions: Flyer 2026 design system (flyer2026.py) for every promotion; story versions
+  sit inside the IG story safe zone; QR code on every flyer, decoded in QA.
+- Oct 28/29 Guess the Theme No. 2: full-bleed 9:16 images, story-style progress bars, giant clue
+  counter, punch-zoom cuts with a flash, word-pop captions in Flyer 2026 type, Pt. 2 zooms into the room.
+- Oct 30 (Fri build: Be OK remix + EP. 39): real lighting in the canvas rig (nightD: a flashlight cone
+  cut out of a dark room, lights snapping on at the switch); save-worthy carousel in Flyer 2026.
