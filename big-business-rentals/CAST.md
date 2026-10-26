@@ -30,9 +30,11 @@ Rigs live in reelsD.html (drawKid = drawMan scaled from the feet; KIDSCALE; acce
 phoneK; name cards nameCardK; reference still REELS[90] familySheet -> examples/EX_Family_Sheet.png).
 SEASON TWO LOOK (owner Oct 26): the whole family has a light brown complexion (SKIN2026 #b9845a), Mr. Big Business
 included. Hair options added to drawMan in reelsD.html AND halloween/reelH.html: hair:'locbun' (locs pulled back into a
-ponytail bun, a few locs hanging), hair:'locs' (short hanging locs), hair:'braids' (long individual braids, gold bead
+ponytail bun, a few locs hanging), hair:'bun' (smooth hair, ponytail tied in a bun), hair:'locs' (short hanging locs), hair:'braids' (long individual braids, gold bead
 tips), beard:true (full beard + mustache, light smile line drawn on top).
-- MR. BIG BUSINESS, Season Two look = STYLER2: locs in a ponytail bun + full beard, light brown skin, same green tee.
+- MR. BIG BUSINESS, Season Two look = STYLER2: hair:'bun' (owner Oct 26: "Mr big business does not have locs, he has hair
+  in a ponytail tied into a bun"): smooth hair pulled straight back, ponytail tied into a bun, NO locs; full beard; light brown
+  skin; same green tee.
   STYLER (Season One look: fade, darker skin) stays untouched so Season One episodes re-render exactly as aired.
   From November every new episode and trend remix uses STYLER2.
 Humor always comes from the situation (family party chaos, setups, seating), never from identity or stereotype.
@@ -41,8 +43,8 @@ Humor always comes from the situation (family party chaos, setups, seating), nev
   RUNNING GAG: every appearance she sighs "...this is SO embarrassing." (same wording, lowercase energy),
   eyes on her phone. Secret twist used sparingly: she is quietly the most competent person in the room
   (sets a whole table in the background while everyone argues, never looks up).
-- LIL BIG BUSINESS · 10, a boy · rig STYLELB: looks just like Dad (locs in a ponytail bun, green tee, navy pants) but no
-  beard. Dad's mini-me: copies every move, carries one chair "like Dad," and sometimes wins where Dad loses.
+- LIL BIG BUSINESS · 10, a boy · rig STYLELB: looks like Dad (green tee, navy pants, hair pulled back into a bun) but his
+  hair is LOCS (hair:'locbun', owner Oct 26) and no beard. Dad's mini-me: copies every move, carries one chair "like Dad," and sometimes wins where Dad loses.
   Gets his own record on the end card when he is in the episode (Lil Big Business W-L).
 - PRINCESS BIG BUSINESS · 6, a girl · rig STYLEPB: slim, long individual braids, lavender top, pink pants, gold tiara.
   Every party is her royal ball and the best chair is her throne. Bosses the cat around; the cat allows it.

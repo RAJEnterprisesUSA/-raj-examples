@@ -163,6 +163,7 @@ function drawMan(p){
   ctx.translate(30,-252); ctx.rotate(rad(p.headTilt||0));
   ctx.lineWidth=11;
   // SEASON TWO hair that hangs BEHIND the head (drawn before the face)
+  if(S.hair) ctx.strokeStyle=INK;
   if(S.hair==='braids'){
     ctx.lineCap='round';
     for(let i=0;i<9;i++){
@@ -199,6 +200,19 @@ function drawMan(p){
     ctx.beginPath(); ctx.arc(0,-66,75,rad(176),rad(362)); ctx.closePath(); ctx.fill(); ctx.stroke();
     ctx.strokeStyle='#4a3626'; ctx.lineWidth=4;
     for(let i=0;i<6;i++){ const a=rad(196+i*26); ctx.beginPath(); ctx.moveTo(Math.cos(a)*30,-66+Math.sin(a)*30); ctx.lineTo(Math.cos(a)*70,-66+Math.sin(a)*70); ctx.stroke(); }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  } else if(S.hair==='bun'){
+    // Mr. Big Business, Season Two: smooth hair pulled straight back into a ponytail tied in a bun (no locs)
+    ctx.fillStyle='#1e1710';
+    ctx.beginPath(); ctx.arc(0,-68,73,rad(184),rad(354)); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.strokeStyle='#3a2c1e'; ctx.lineWidth=3;                                              // slicked-back comb lines
+    for(let i=0;i<4;i++){ ctx.beginPath(); ctx.moveTo(50-i*6,-96+i*10); ctx.quadraticCurveTo(0,-128+i*12,-50,-112+i*12); ctx.stroke(); }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+    ctx.fillStyle='#1e1710';
+    ctx.beginPath(); ctx.ellipse(-70,-104,16,12,rad(-30),0,7); ctx.fill(); ctx.stroke();      // ponytail base
+    ctx.beginPath(); ctx.arc(-80,-124,26,0,7); ctx.fill(); ctx.stroke();                      // the bun
+    ctx.strokeStyle='#3a2c1e'; ctx.lineWidth=3; ctx.beginPath(); ctx.arc(-80,-124,14,rad(200),rad(470)); ctx.stroke();  // bun twist
+    ctx.strokeStyle=GOLD; ctx.lineWidth=7; ctx.beginPath(); ctx.moveTo(-74,-106); ctx.lineTo(-62,-114); ctx.stroke();   // hair tie
     ctx.strokeStyle=INK; ctx.lineWidth=11;
   } else if(S.hair==='locbun'||S.hair==='locs'){
     // locs: dark cap with rope texture; locbun adds the coiled bun at the back
@@ -555,7 +569,7 @@ const STYLER={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, fade:true, slim:t
 // SEASON TWO LOOK (owner Oct 26): light brown skin for the whole family; Mr. Big Business wears a ponytail bun + full beard.
 // STYLER stays untouched so Season One episodes re-render exactly as aired.
 const SKIN2026='#b9845a';
-const STYLER2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, hair:'locbun', beard:true, goatee:false, slim:true, skin:SKIN2026, pant:'#4a5f8a', pantBack:'#3c4e73'};
+const STYLER2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, hair:'bun', beard:true, goatee:false, slim:true, skin:SKIN2026, pant:'#4a5f8a', pantBack:'#3c4e73'};
 
 const STYLET={tee:'#7db8e8', teeShade:'#699fd0', cap:'#e8762e', slim:true, goatee:false, skin:'#eec39f', pant:'#c9a46a', pantBack:'#b08c54'};
 const TTOP=FLOOR-262;
