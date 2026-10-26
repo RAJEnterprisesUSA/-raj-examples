@@ -8,7 +8,7 @@ Numbers Buffer doesn't carry are listed under "Data I still need." None of them 
 
 **The Big Business Chronicles is the account's engine on every platform.** Episodes were the
 best-performing format on YouTube, Instagram and Facebook this week, and the first realistic AI
-skit was the best post TikTok has ever had.
+skit was TikTok's best post of the last two weeks.
 
 | Platform | Median views per post (W2 → W3) | Best format this week |
 |---|---|---|
@@ -33,7 +33,7 @@ the mix through Tuesday. The video formats all rose.
 
 ### Instagram
 - Episodes: median **153 views**, 6.9s average watch. EP. 29 The Pumpkin Carve reached 1,257
-  views with 11.2s average watch, the best Instagram Reel on record.
+  views with 11.2s average watch, the best Instagram Reel of the last two weeks.
 - Trend remixes: median 137 views, 5.0s average watch (charter baseline median: 39).
 - Photo cards: median 20 (13 posts, Mon to Tue only, cut since).
 
@@ -43,8 +43,8 @@ the mix through Tuesday. The video formats all rose.
 - Cards: median 11.
 
 ### TikTok
-- Hosting Chaos: A Couple People: **230 views, 5.6s average watch**, the account's best post,
-  and the only one over the 4-second keep line.
+- Hosting Chaos: A Couple People: **230 views, 5.6s average watch**, the best TikTok post of the last two
+  weeks, and the only one over the 4-second keep line.
 - Episodes: median 54 (7 posts), 3.0s average watch, under the 4-second line.
 - Guess the Theme Pt. 1: 154 views but 1.1s average watch. Pt. 2 had no numbers yet.
 - Remixes: 5 posted, most from the last 24 hours, numbers not in yet.
@@ -59,7 +59,7 @@ the mix through Tuesday. The video formats all rose.
 | Chronicles episodes | TikTok | 7 | **Rework** | Views beat the median (54 vs 15) but watch time is 3.0s; test the punchline-first cut |
 | Trend remixes | IG, FB | 6 each | **Keep** | IG 137 vs 39 median; FB 181, near the Reel median |
 | Trend remixes | YouTube, TikTok | 5 to 6 | Judge next week | Newest numbers still counting |
-| Hosting Chaos AI skit | TikTok | 1 | Too early | Best post ever; needs 3 more (Linen Flip is next) |
+| Hosting Chaos AI skit | TikTok | 1 | Too early | Best TikTok post in two weeks; needs 3 more (Linen Flip is next) |
 | Guess the Theme | TikTok | 2 | Too early | High views, weak watch (1.1s) |
 | People album | Facebook | 1 | Too early | 7 views |
 | Pink videos | all | many | **Cut** (already off YouTube) | Lowest format everywhere; Pink October ends Saturday |
