@@ -162,11 +162,64 @@ function drawMan(p){
   ctx.save();
   ctx.translate(30,-252); ctx.rotate(rad(p.headTilt||0));
   ctx.lineWidth=11;
+  // SEASON TWO hair that hangs BEHIND the head (drawn before the face)
+  if(S.hair==='braids'){
+    ctx.lineCap='round';
+    for(let i=0;i<9;i++){
+      const ax=-74+i*9, ay=-112+i*9, L=230-i*8, ex=ax-26+i*2, ey=ay+L;
+      ctx.strokeStyle=INK; ctx.lineWidth=17; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(ax-16,(ay+ey)/2,ex,ey); ctx.stroke();
+      ctx.strokeStyle='#241a10'; ctx.lineWidth=11; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(ax-16,(ay+ey)/2,ex,ey); ctx.stroke();
+      ctx.strokeStyle='#4a3626'; ctx.lineWidth=3;
+      for(let k=0.12;k<0.95;k+=0.1){ const bx=(1-k)*(1-k)*ax+2*(1-k)*k*(ax-16)+k*k*ex, by=(1-k)*(1-k)*ay+2*(1-k)*k*((ay+ey)/2)+k*k*ey;
+        ctx.beginPath(); ctx.moveTo(bx-5,by-3); ctx.lineTo(bx+5,by+3); ctx.stroke(); }
+      ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(ex,ey+4,6,0,7); ctx.fill();
+    }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  } else if(S.hair==='locbun'){
+    ctx.lineCap='round';
+    [[-70,-112,-104,-40],[-60,-118,-92,-24],[-78,-104,-118,-58]].forEach(([x0,y0,x1,y1])=>{
+      ctx.strokeStyle=INK; ctx.lineWidth=20; ctx.beginPath(); ctx.moveTo(x0,y0); ctx.quadraticCurveTo(x0-24,(y0+y1)/2,x1,y1); ctx.stroke();
+      ctx.strokeStyle='#2b1f14'; ctx.lineWidth=13; ctx.beginPath(); ctx.moveTo(x0,y0); ctx.quadraticCurveTo(x0-24,(y0+y1)/2,x1,y1); ctx.stroke();
+    });
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  } else if(S.hair==='locs'){
+    ctx.lineCap='round';
+    for(let i=0;i<5;i++){ const ax=-70+i*6, ay=-100+i*12, ex=ax-14, ey=ay+96;
+      ctx.strokeStyle=INK; ctx.lineWidth=20; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ex,ey); ctx.stroke();
+      ctx.strokeStyle='#2b1f14'; ctx.lineWidth=13; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ex,ey); ctx.stroke(); }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  }
   ctx.fillStyle=S.skin;
   ctx.beginPath(); ctx.arc(0,-56,72,0,7); ctx.fill(); ctx.stroke();
   ctx.beginPath(); ctx.arc(-52,-52,15,0,7); ctx.fill(); ctx.stroke(); // ear
   // backwards cap: dome on top + strap at back
-  if(S.fem){
+  if(S.hair==='braids'){
+    // long individual braids: the cap of parted hair (the braids themselves hang behind, drawn earlier)
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.arc(0,-66,75,rad(176),rad(362)); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.strokeStyle='#4a3626'; ctx.lineWidth=4;
+    for(let i=0;i<6;i++){ const a=rad(196+i*26); ctx.beginPath(); ctx.moveTo(Math.cos(a)*30,-66+Math.sin(a)*30); ctx.lineTo(Math.cos(a)*70,-66+Math.sin(a)*70); ctx.stroke(); }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+  } else if(S.hair==='locbun'||S.hair==='locs'){
+    // locs: dark cap with rope texture; locbun adds the coiled bun at the back
+    ctx.fillStyle='#241a10';
+    ctx.beginPath(); ctx.arc(0,-68,73,rad(184),rad(354)); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.strokeStyle='#4a3626'; ctx.lineWidth=5;
+    for(let i=0;i<7;i++){ const x=-56+i*17; ctx.beginPath(); ctx.moveTo(x,-80-Math.abs(i-3)*2); ctx.quadraticCurveTo(x-10,-112,x-24,-132+Math.abs(i-3)*6); ctx.stroke(); }
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
+    if(S.hair==='locbun'){
+      ctx.fillStyle='#241a10';
+      [[-66,-124,22],[-48,-134,20],[-80,-108,18]].forEach(([x,y,r])=>{ ctx.beginPath(); ctx.arc(x,y,r,0,7); ctx.fill(); ctx.stroke(); });
+      ctx.strokeStyle=GOLD; ctx.lineWidth=7; ctx.beginPath(); ctx.arc(-58,-118,30,rad(20),rad(110)); ctx.stroke();   // hair tie glint
+      ctx.strokeStyle=INK; ctx.lineWidth=11;
+    } else {
+      ctx.lineCap='round';
+      [[-40,-90,-52,-40],[-58,-84,-70,-30]].forEach(([x0,y0,x1,y1])=>{   // side locs in front of the ear
+        ctx.strokeStyle=INK; ctx.lineWidth=20; ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y1); ctx.stroke();
+        ctx.strokeStyle='#2b1f14'; ctx.lineWidth=13; ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y1); ctx.stroke(); });
+      ctx.strokeStyle=INK; ctx.lineWidth=11;
+    }
+  } else if(S.fem){
     ctx.fillStyle='#241a10';
     ctx.beginPath(); ctx.arc(0,-64,76,rad(168),rad(372)); ctx.closePath(); ctx.fill(); ctx.stroke();
     ctx.beginPath(); ctx.arc(-44,-136,36,0,7); ctx.fill(); ctx.stroke();   // bun
@@ -183,6 +236,14 @@ function drawMan(p){
   ctx.beginPath(); ctx.moveTo(-70,-84); ctx.quadraticCurveTo(-128,-76,-124,-56);
   ctx.quadraticCurveTo(-90,-56,-66,-62); ctx.closePath(); ctx.fill(); ctx.stroke();  // back brim
   ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(6,-96,10,0,7); ctx.fill();  // cap button
+  } else if(S.manbun){
+    // SEASON TWO: hair pulled back into a ponytail bun (Mr. Big Business + Lil Big Business)
+    ctx.fillStyle='#1e1710';
+    ctx.beginPath(); ctx.arc(0,-68,72,rad(186),rad(352)); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(-62,-120,30,26,rad(-20),0,7); ctx.fill(); ctx.stroke();   // the bun
+    ctx.strokeStyle='#3a2a1a'; ctx.lineWidth=8;
+    ctx.beginPath(); ctx.moveTo(-44,-104); ctx.lineTo(-36,-96); ctx.stroke();               // hair tie
+    ctx.strokeStyle=INK; ctx.lineWidth=11;
   } else if(S.fade){
     ctx.fillStyle='#1e1710';
     ctx.beginPath();
@@ -224,7 +285,20 @@ function drawMan(p){
   else if(p.mouth==='sad'){ctx.beginPath();ctx.arc(44,0,15,rad(200),rad(340));ctx.stroke();}
   else {ctx.beginPath();ctx.arc(40,-26,16,rad(30),rad(140));ctx.stroke();}
   // goatee (men) / lashes (women)
-  if(!S.fem && S.goatee!==false){
+  if(S.beard){
+    // SEASON TWO: full beard + mustache (Mr. Big Business only)
+    ctx.fillStyle='#1e1710'; ctx.lineWidth=7;
+    ctx.beginPath(); ctx.arc(0,-56,76,rad(10),rad(170));
+    ctx.quadraticCurveTo(-30,-14,18,-4); ctx.quadraticCurveTo(50,0,62,-30); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(44,-37,22,7,rad(6),0,7); ctx.fill();                       // mustache
+    ctx.strokeStyle='#4a3626'; ctx.lineWidth=3;                                                // a little beard texture
+    for(let i=0;i<5;i++){ ctx.beginPath(); ctx.moveTo(-30+i*20,-4+Math.abs(i-2)*4); ctx.lineTo(-24+i*20,8+Math.abs(i-2)*3); ctx.stroke(); }
+    ctx.strokeStyle=INK;
+    ctx.lineWidth=11;
+    if(p.mouth==='o'){ctx.fillStyle='#5a2c22';ctx.beginPath();ctx.ellipse(46,-16,13,18,0,0,7);ctx.fill();ctx.stroke();}
+    else if(p.mouth==='sad'){ctx.strokeStyle='#f3e7d3';ctx.lineWidth=6;ctx.beginPath();ctx.arc(44,0,15,rad(200),rad(340));ctx.stroke();ctx.strokeStyle=INK;}
+    else {ctx.strokeStyle='#f3e7d3';ctx.lineWidth=6;ctx.beginPath();ctx.arc(40,-26,16,rad(30),rad(140));ctx.stroke();ctx.strokeStyle=INK;}
+  } else if(!S.fem && S.goatee!==false){
     ctx.fillStyle='#241a10';
     ctx.beginPath(); ctx.ellipse(46,4,14,10,0,0,7); ctx.fill();
   } else if(S.fem){
@@ -478,6 +552,11 @@ const CHX=620;
 const STYLE2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
 const STYLEW={fem:true, tee:'#e88bb3', teeShade:'#d377a0', skin:'#8a5a38', pant:'#5a3f7a', pantBack:'#4a3168'};
 const STYLER={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, fade:true, slim:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'};
+// SEASON TWO LOOK (owner Oct 26): light brown skin for the whole family; Mr. Big Business wears a ponytail bun + full beard.
+// STYLER stays untouched so Season One episodes re-render exactly as aired.
+const SKIN2026='#b9845a';
+const STYLER2={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, hair:'locbun', beard:true, goatee:false, slim:true, skin:SKIN2026, pant:'#4a5f8a', pantBack:'#3c4e73'};
+
 const STYLET={tee:'#7db8e8', teeShade:'#699fd0', cap:'#e8762e', slim:true, goatee:false, skin:'#eec39f', pant:'#c9a46a', pantBack:'#b08c54'};
 const TTOP=FLOOR-262;
 
@@ -5024,11 +5103,11 @@ window.ENDTIMES[40]=23.5;
 
 // ================= SEASON TWO FAMILY (owner Oct 26: November = the holidays are for families) =================
 // Mr. Big Business's kids. Kid rigs = drawMan scaled from the feet, plus one accessory each.
-const STYLELB={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, fade:true, slim:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'}; // LIL BIG BUSINESS: dad's mini-me
-const STYLEPB={fem:true, tee:'#c58bf0', teeShade:'#ad74d8', skin:'#7a4e33', pant:'#f4a6cf', pantBack:'#e08fbb'};                         // PRINCESS BIG BUSINESS
-const STYLEBB={tee:'#ffd23f', teeShade:'#e8bd2c', capless:true, slim:true, skin:'#7a4e33', pant:'#3f6fb5', pantBack:'#345d99'};          // BABY BIG BUSINESS
-const STYLENIA={fem:true, tee:'#2b2b38', teeShade:'#22222d', skin:'#6f4630', pant:'#1d1d26', pantBack:'#16161e'};                       // NIA, 17
-const KIDSCALE={lil:0.70, princess:0.60, baby:0.54, nia:0.94};
+const STYLELB={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, hair:'locbun', goatee:false, slim:true, skin:SKIN2026, pant:'#4a5f8a', pantBack:'#3c4e73'}; // LIL BIG BUSINESS: Dad's look (locs in a ponytail bun), no beard
+const STYLEPB={fem:true, slim:true, hair:'braids', tee:'#c58bf0', teeShade:'#ad74d8', skin:SKIN2026, pant:'#f4a6cf', pantBack:'#e08fbb'};                         // PRINCESS BIG BUSINESS (slim)
+const STYLEBB={tee:'#ffd23f', teeShade:'#e8bd2c', capless:true, hair:'locs', slim:true, goatee:false, skin:SKIN2026, pant:'#3f6fb5', pantBack:'#345d99'};       // BABY BIG BUSINESS (short locs)
+const STYLEVAEH={fem:true, slim:true, hair:'braids', tee:'#2b2b38', teeShade:'#22222d', skin:SKIN2026, pant:'#1d1d26', pantBack:'#16161e'};                     // VAEH, 17 (slim)
+const KIDSCALE={lil:0.70, princess:0.60, baby:0.54, vaeh:0.94};
 function kidHeadY(s){ return FLOOR-(FLOOR-(HIP_STAND-400))*s; }   // top of the head for a standing rig scaled s
 function drawKid(p, s){
   ctx.save(); ctx.translate(p.x,FLOOR); ctx.scale(s,s); ctx.translate(-p.x,-FLOOR);
@@ -5061,17 +5140,17 @@ function nameCardK(x,y,name,sub){
 function familySheet(t){
   drawRoom();
   const L=[ // x, style, scale, label, sub
-    [170, STYLENIA, KIDSCALE.nia, 'NIA', '17 · SO EMBARRASSED'],
-    [400, STYLER, 1.0, 'MR. BIG BUSINESS', 'DAD'],
+    [170, STYLEVAEH, KIDSCALE.vaeh, 'VAEH', '17 · SO EMBARRASSED'],
+    [400, STYLER2, 1.0, 'MR. BIG BUSINESS', 'DAD'],
     [620, STYLELB, KIDSCALE.lil, 'LIL BIG BUSINESS', '10 · DAD\'S MINI-ME'],
     [800, STYLEPB, KIDSCALE.princess, 'PRINCESS', '6 · EVERY CHAIR = A THRONE'],
-    [960, STYLEBB, KIDSCALE.baby, 'BABY', '5 · PURE CHAOS'],
+    [960, STYLEBB, KIDSCALE.baby, 'BABY', '5 · TUFF · COPIES BIG BRO'],
   ];
-  // NIA: arms folded on her phone, flat face
-  drawKid({x:170, face:1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLENIA}, KIDSCALE.nia);
-  headphonesK(170, kidHeadY(KIDSCALE.nia), KIDSCALE.nia, 1);
-  phoneK(170+52*KIDSCALE.nia, FLOOR-470*KIDSCALE.nia, KIDSCALE.nia, true);
-  drawMan({x:400, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:18,el:10}, mouth:'smile', style:STYLER});
+  // VAEH: arms folded on her phone, flat face
+  drawKid({x:170, face:1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, KIDSCALE.vaeh);
+  headphonesK(170, kidHeadY(KIDSCALE.vaeh), KIDSCALE.vaeh, 1);
+  phoneK(170+52*KIDSCALE.vaeh, FLOOR-470*KIDSCALE.vaeh, KIDSCALE.vaeh, true);
+  drawMan({x:400, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:18,el:10}, mouth:'smile', style:STYLER2});
   drawKid({x:620, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, KIDSCALE.lil);
   drawKid({x:800, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, KIDSCALE.princess);
   tiaraK(800, kidHeadY(KIDSCALE.princess)+8, KIDSCALE.princess*1.3);

@@ -25,23 +25,30 @@ Season One = animated, ~20s episodes, SFX only, NO voices (ElevenLabs VO tested 
 - THE CAT · black cat from the Halloween lane. Rashad's silent nemesis. Shows up at the worst moment, always gets the best seat.
 
 ## SEASON TWO FAMILY (owner Oct 26: "for november since the holiday seasons are for families we are going
-## to introduce Mr. Big Business's kids"; owner: Lil Big Business and Baby Big Business are boys)
+## to introduce Mr. Big Business's kids")
 Rigs live in reelsD.html (drawKid = drawMan scaled from the feet; KIDSCALE; accessories tiaraK, headphonesK,
 phoneK; name cards nameCardK; reference still REELS[90] familySheet -> examples/EX_Family_Sheet.png).
+SEASON TWO LOOK (owner Oct 26): the whole family has a light brown complexion (SKIN2026 #b9845a), Mr. Big Business
+included. Hair options added to drawMan in reelsD.html AND halloween/reelH.html: hair:'locbun' (locs pulled back into a
+ponytail bun, a few locs hanging), hair:'locs' (short hanging locs), hair:'braids' (long individual braids, gold bead
+tips), beard:true (full beard + mustache, light smile line drawn on top).
+- MR. BIG BUSINESS, Season Two look = STYLER2: locs in a ponytail bun + full beard, light brown skin, same green tee.
+  STYLER (Season One look: fade, darker skin) stays untouched so Season One episodes re-render exactly as aired.
+  From November every new episode and trend remix uses STYLER2.
 Humor always comes from the situation (family party chaos, setups, seating), never from identity or stereotype.
-- NIA BIG BUSINESS · 17, the oldest, a girl · rig STYLENIA (black hoodie and pants), headphones, phone always lit. Name chosen Oct 26
-  (owner asked us to pick it). Always annoyed at everything.
+- VAEH BIG BUSINESS · 17, the oldest, a girl (name chosen by the owner Oct 26) · rig STYLEVAEH: slim, long individual
+  braids, black hoodie and pants, gold-band headphones, phone always lit. Always annoyed at everything.
   RUNNING GAG: every appearance she sighs "...this is SO embarrassing." (same wording, lowercase energy),
   eyes on her phone. Secret twist used sparingly: she is quietly the most competent person in the room
   (sets a whole table in the background while everyone argues, never looks up).
-- LIL BIG BUSINESS · 10, a boy · rig STYLELB = Dad's exact look in kid size (fade, green tee, navy pants).
-  Dad's mini-me: copies every move, carries one chair "like Dad," and sometimes wins where Dad loses.
+- LIL BIG BUSINESS · 10, a boy · rig STYLELB: looks just like Dad (locs in a ponytail bun, green tee, navy pants) but no
+  beard. Dad's mini-me: copies every move, carries one chair "like Dad," and sometimes wins where Dad loses.
   Gets his own record on the end card when he is in the episode (Lil Big Business W-L).
-- PRINCESS BIG BUSINESS · 6, a girl · rig STYLEPB (lavender top, pink pants) + gold tiara.
+- PRINCESS BIG BUSINESS · 6, a girl · rig STYLEPB: slim, long individual braids, lavender top, pink pants, gold tiara.
   Every party is her royal ball and the best chair is her throne. Bosses the cat around; the cat allows it.
-- BABY BIG BUSINESS · 5, a boy · rig STYLEBB (yellow tee, blue pants), the youngest.
-  Pure chaos and pure joy: hides under tablecloths, jumps on everything, best friends with the cat.
-  Hide-and-seek gag: "where is Baby Big Business?" sits alongside the hidden pumpkin hunt.
+- BABY BIG BUSINESS · 5, a boy, the youngest · rig STYLEBB: short locs, yellow tee, blue pants.
+  THE TUFF ONE (owner Oct 26): does everything his big brother does. Lil Big Business carries a chair, Baby carries a
+  chair. Lil jumps, Baby jumps higher. Never cries, never backs down, always one step behind his brother on purpose.
 OPEN QUESTION FOR THE OWNER: is Mrs. Never Wrong the kids' mom? Do not write her as their mother until he says so.
 
 ## Voices (ElevenLabs, verified working Oct 5)
