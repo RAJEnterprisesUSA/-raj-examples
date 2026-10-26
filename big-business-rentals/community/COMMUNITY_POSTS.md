@@ -264,6 +264,13 @@ Book our private room for three hours at $625 (up to 25 guests) or four hours at
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
+**R-F**
+Need a place for 25 to 40 people that is not your living room?
+
+Our private party room seats 40 and holds 80 standing. Three hours is $625, four hours is $800, and tables, chairs and setup are already done when you walk in.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
 **R-E · Español**
 ¿Quieres hacer la fiesta sin limpiar tu casa antes y después?
 
@@ -298,6 +305,13 @@ The whole family is coming this year. Where is everybody sitting?
 Church dinner, HOA party or a holiday potluck? Seating for 48 is $176.
 
 That is 8 tables and 48 chairs, delivered and picked up in Las Vegas. Full-service setup is available from $265.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**X-F**
+Planning the end-of-year party for your team, your church or your family? Book the seats before the calendar fills.
+
+Tables and chairs delivered and picked up across Las Vegas: $22 for a table with 6 chairs, $176 for 48 seats. Full-service setup starts at $265.
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
