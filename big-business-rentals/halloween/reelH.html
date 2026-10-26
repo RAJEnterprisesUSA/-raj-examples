@@ -4524,6 +4524,65 @@ REELS[34]=reelT34;
 SHAKES[34]=[12.3,0.2,10];
 TAGLINES[34]='REAL TABLES. NO ILLUSIONS.';
 window.GAGENDS[34]=14.0;
+
+// ---------- T35: TREND REMIX · "Be OK" (17s) ----------
+// Trend (late Oct 2026): dance to a cheerful song while on-screen text lists what you are NOT okay with.
+// Ours: Mr. Big Business dances through the day before Halloween; the payoff is the extra chairs already on the truck.
+function beOkPose(x0,t,style){
+  const b=Math.sin(t*7.8), sw=Math.sin(t*2.6);
+  return {x:x0+sw*40, y:HIP_STAND+Math.abs(b)*12, face:sw>=0?1:-1, lean:b*5,
+    legs:[{hip:18*b,knee:24+14*Math.max(0,-b)},{hip:-18*b,knee:24+14*Math.max(0,b)}],
+    arm:{sh:b>0?175:70, el:b>0?-30:40}, arm2:{sh:b>0?70:175, el:b>0?40:-30}, mouth:'smile', style:style, headTilt:b*6};
+}
+function guestCountT35(x,y,k){
+  const n=Math.round(20+40*Math.min(1,Math.max(0,k)));
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#f6edd8';
+  rr(x-170,y-200,340,220,30); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=n>=60?'#d6312f':INK; ctx.font='120px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText(String(n),x,y-40);
+  ctx.fillStyle=INK; ctx.font='30px "Archivo Black"'; ctx.fillText('GUESTS',x,y-2+0);
+  ctx.restore();
+}
+function linenPileT35(x){
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  const cols=['#fbfbf7','#efe7d6','#fbfbf7','#e9e1cf'];
+  for(let i=0;i<4;i++){ ctx.fillStyle=cols[i]; rr(x-150+i*4,FLOOR-60-i*46,300-i*8,48,12); ctx.fill(); ctx.stroke(); }
+  ctx.restore();
+}
+function reelT35(t){
+  drawRoomH(t);
+  // the right-side vignette for each line
+  const SEG=[1.6,4.2,6.8,9.4,12.0];
+  const i=(t<SEG[0])?-1:(t<SEG[1]?0:(t<SEG[2]?1:(t<SEG[3]?2:(t<SEG[4]?3:4))));
+  const vk=(i>=0)?easeOutBack(Math.min(1,(t-SEG[Math.min(i,4)])/0.3)):0;
+  ctx.save(); ctx.translate(780,FLOOR); ctx.scale(vk,vk); ctx.translate(-780,-FLOOR);
+  if(i===0) guestCountT35(780, FLOOR-420, (t-1.9)/1.6);
+  if(i===1){ linenPileT35(780); drawCat(790, FLOOR-244, {pose:'sit', face:-1, t:t, s:1.3}); }
+  if(i===2){ drawChair(780,0,0,0); drawCake(790, FLOOR-188, 0.85, 24); }
+  if(i===3){ drawTable(780, Math.sin(t*9)*4, 0); linenH(780+Math.sin(t*6)*60, FLOOR-620-Math.sin(t*4)*40, Math.sin(t*5)*0.5, 0.8); }
+  if(i===4){ drawVanH(690, FLOOR-10, 0, 0.8, 0, t); drawFoldedStack(925, FLOOR, 5, 0); }
+  ctx.restore();
+  if(i===3) windFx(t, 1);
+  // MR. BIG BUSINESS never stops dancing (that is the joke)
+  const p=beOkPose(300,t,STYLER);
+  drawMan(p);
+  if(i===2||i===3) sweat(p.x+70, HIP_STAND-560, t);
+  if(t>=12.6) confettiBurst(t,12.6,780,FLOOR-400,70,2.6);
+  // captions: the hook is fully on screen at frame one
+  if(t<SEG[0]) caption(['THINGS I AM NOT OK WITH','THE DAY BEFORE HALLOWEEN:'],300,1,40);
+  if(i>=0&&i<4){
+    ctx.save(); ctx.fillStyle='#E5B84B'; ctx.font='34px "Archivo Black"'; ctx.textAlign='center';
+    ctx.fillText('NOT OK WITH:',W/2,250); ctx.restore();
+  }
+  if(i===0) captionPop(['"ABOUT 20 PEOPLE"','BECOMING 60.'],320,SEG[0]+0.05,t,48);
+  if(i===1) captionPop(['THE CAT ASLEEP','ON THE LINENS.'],320,SEG[1]+0.05,t,50);
+  if(i===2) captionPop(['A CHAIR RETURNED','WITH CAKE ON IT.'],320,SEG[2]+0.05,t,50);
+  if(i===3) captionPop(['WIND.','JUST WIND.'],320,SEG[3]+0.05,t,60);
+  if(i===4&&t<13.95) captionPop(['BUT THE EXTRA CHAIRS ARE','ALREADY ON THE TRUCK.','SO I AM OK.'],300,SEG[4]+0.05,t,40);
+}
+REELS[35]=reelT35;
+SHAKES[35]=[9.4,0.2,8];
+TAGLINES[35]='EXTRA CHAIRS ON THE TRUCK. ALWAYS.';
+window.GAGENDS[35]=14.0;
 </script>
 </body></html>
 
