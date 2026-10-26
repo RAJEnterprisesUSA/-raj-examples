@@ -1,5 +1,10 @@
 # Community Posts · Facebook Groups and Nextdoor
 
+> **OWNER RULE Oct 26:** "Nothing about venues on these flyers. All about my business." Group and Nextdoor posts
+> promote rentals, setup and tents only. The venue flyer (`BB_Community_Venue.png`), the venue caption (#3) and the
+> venue Nextdoor post below are RETIRED for groups. Current group set: Halloween, Tents, Holidays (see THE 88-GROUP PUSH).
+
+
 Five flyers in `community/` (1080x1350, every one carries prices and the full contact block):
 
 | Flyer | Use it for |
@@ -51,7 +56,7 @@ If you are hosting, we deliver tables and chairs across Las Vegas and pick them 
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
-**3 · The venue** (flyer: Venue)
+**3 · The venue** (flyer: Venue) · RETIRED Oct 26, do not post in groups
 
 Need a place for the party without cleaning your whole house before and after?
 
@@ -93,7 +98,7 @@ Hi neighbors! We're a local Las Vegas party rental business, and if you're hosti
 
 Halloween is on a Saturday this year! If you're hosting the block party or the family get-together, we deliver tables and chairs and pick them up after. A table with 6 chairs is $22, and 8 sets seat 48 guests for $176. Questions are welcome here, or call 702-706-8287.
 
-**Nextdoor post 3** (flyer: Venue)
+**Nextdoor post 3** (flyer: Venue) · RETIRED Oct 26, do not post
 
 Hi neighbors! If you need a spot for a birthday, shower or holiday party, our private party room seats 40 and holds 80 standing. Three hours is $625 for up to 25 guests, four hours is $800 for up to 40, with tables, chairs and setup included. Ask away here or call 702-706-8287.
 
@@ -163,7 +168,7 @@ Halloween party this Saturday? Tables and chairs delivered and picked up in Las 
 
 Three Flyer 2026 group flyers, all prices from the owner's card, QR verified to open the website:
 - **H** = `flyers2026/BB26_Group_HalloweenSaturday.png` (stop after Fri Oct 30)
-- **R** = `flyers2026/BB26_Group_PartyRoom.png` (the real room; $625 / $800 venue packages)
+- **T** = `flyers2026/BB26_Group_Tents.png` (tents delivered, set up and picked up; no tent prices until the owner sends them). Replaced the party room flyer Oct 26 per owner: no venue on group flyers.
 - **X** = `flyers2026/BB26_Group_Holidays.png` (light cream; Thanksgiving, office parties, December)
 
 ### Why it's spread over 8 days
@@ -171,7 +176,7 @@ Posting the same flyer in dozens of groups in one sitting is the fastest way to 
 blocked from posting in groups, or to have the posts held as spam. About 11 groups a day, a few
 minutes apart, with a different caption each time, keeps it looking like a person and not a bot.
 
-| Day | H Halloween | R Party room | X Holidays | Total |
+| Day | H Halloween | T Tents | X Holidays | Total |
 |---|---|---|---|---|
 | Mon Oct 26 | 7 | 2 | 2 | 11 |
 | Tue Oct 27 | 7 | 2 | 2 | 11 |
@@ -185,7 +190,7 @@ minutes apart, with a different caption each time, keeps it looking like a perso
 
 **Which flyer goes to which group:**
 - **H:** neighborhood, moms and local event groups.
-- **R:** birthday, baby shower, moms and "things to do" groups.
+- **T:** backyard, homeowner, HOA, graduation, birthday and "things to do" groups.
 - **X:** office, church, Latino and HOA groups, plus anything about Thanksgiving or the holidays.
 - The tracker (`community/groups_88_tracker.csv`) has a row for each of the 88 posts.
   Fill in the group name, tick it off when posted, and note any calls or messages it brings.
@@ -234,47 +239,48 @@ Folding chairs are $2 and 6 ft tables start at $10, delivered and picked up anyw
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
-### R · Party room captions
+### T · Tent captions (replaced the party room flyer Oct 26, owner: "Nothing about venues on these flyers. All about my business. Replace it with tents and tent set up.")
+Tent prices are not on file yet, so these quote by size, date and location. Never add tent prices until the owner supplies them.
 
-**R-A**
-Want to host the party without cleaning your house before and after?
+**T-A**
+Having the party outside? We bring the tent and set it up for you.
 
-Our private party room in Las Vegas seats 40 and holds 80 standing. Three hours is $625 for up to 25 guests and four hours is $800 for up to 40, with tables, chairs and setup included.
-
-📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
-
-**R-B**
-Birthdays, baby showers, team nights and holiday dinners: you bring the people, the room is ready.
-
-Private party room, seats 40, holds 80 standing. $625 for three hours (up to 25 guests) or $800 for four hours (up to 40). Tables, chairs and setup are included.
+Tents delivered, raised by our crew and taken down after, anywhere in Las Vegas. Quotes go by tent size, date and location. Need seating too? A table with 6 chairs is $22.
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
-**R-C**
-Looking for a small event space in Las Vegas? This is the actual room in the photo.
+**T-B**
+Backyard birthday, graduation or holiday dinner? Put a tent over it.
 
-Seats 40, holds 80 standing, and tables, chairs and setup are included. Three hours is $625 and four hours is $800. Call to check a date, or scan the code on the flyer.
-
-📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
-
-**R-D**
-Your house stays clean. The party still happens.
-
-Book our private room for three hours at $625 (up to 25 guests) or four hours at $800 (up to 40). Setup is included, so you just show up.
+We deliver the tent, set it up and come back to take it down. Call with your guest count and date and we will match the right size.
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
-**R-F**
-Need a place for 25 to 40 people that is not your living room?
+**T-C**
+Shade in the day, string lights at night. A tent turns the backyard into the venue.
 
-Our private party room seats 40 and holds 80 standing. Three hours is $625, four hours is $800, and tables, chairs and setup are already done when you walk in.
+Delivered, set up and picked up by our crew across Las Vegas. Tables and chairs can come on the same truck: chairs are $2 and a table with 6 chairs is $22.
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
-**R-E · Español**
-¿Quieres hacer la fiesta sin limpiar tu casa antes y después?
+**T-D**
+Hosting more people than your house holds? Take it outside under a tent.
 
-Nuestro salón privado en Las Vegas tiene lugar para 40 sentados y 80 de pie. Tres horas cuestan $625 (hasta 25 invitados) y cuatro horas $800 (hasta 40), con mesas, sillas y montaje incluidos.
+Tell us your headcount and date, and we will quote the tent, the setup and the seating together. Scan the code on the flyer or call.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**T-E**
+You plan the party. We handle the tent.
+
+Delivery, setup and takedown in Las Vegas, quoted by tent size, date and location. Full-service packages for tables and chairs start at $265.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**T-F · Español**
+¿La fiesta es afuera? Nosotros llevamos la carpa y la armamos.
+
+Entregamos la carpa, la instala nuestro equipo y la recogemos después, en todo Las Vegas. Cotizamos según el tamaño, la fecha y el lugar. ¿También necesitas mesas y sillas? Una mesa con 6 sillas cuesta $22.
 
 📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
 

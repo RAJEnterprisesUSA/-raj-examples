@@ -193,6 +193,27 @@ def venue_full(name, photo, headline_html, size=(1080, 1350), sub=''):
             + contact_bar())
     return render(name, body, size, css)
 
+def tent(name, img, headline_html, sub, points, note_html, size=(1080, 1350)):
+    """Group TENT flyer: AI setup-inspo tent photo full-bleed, ink headline on the sky, glass service points, contact bar.
+    No tent prices until the owner supplies them (never invent)."""
+    shutil.copy(img, OUT/pathlib.Path(img).name)
+    pts = ''.join(f"<div class='pt glass'><div class='n'>{i+1}</div><div class='t'>{a}</div><div class='d'>{b}</div></div>" for i, (a, b) in enumerate(points))
+    css = """.tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,246,234,.55) 0%,rgba(251,246,234,0) 34%,rgba(15,10,23,0) 52%,rgba(15,10,23,.72) 70%,rgba(15,10,23,.96) 100%)}
+    .th{position:absolute;left:56px;right:56px;top:150px;color:#1d1424}.th .h1 em{color:#a8741c}
+    .th .sb{margin-top:16px;font-size:30px;font-weight:600;color:#3a2a44}
+    .top .chip{background:rgba(255,255,255,.72);color:#1d1424;border:1px solid rgba(29,20,36,.14)}.top .chip.gold{background:#1d1424;color:#E5B84B}
+    .insp{position:absolute;right:56px;top:560px;background:rgba(15,10,23,.72);border:1px solid rgba(229,184,75,.7)}
+    .pts{position:absolute;left:56px;right:56px;bottom:330px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .pt{padding:20px 22px;background:rgba(15,10,23,.45)}.pt .n{font-family:'Brico';font-weight:800;font-size:44px;color:#E5B84B;line-height:1}
+    .pt .t{font-family:'Brico';font-weight:800;font-size:30px;letter-spacing:-.02em;margin-top:8px}.pt .d{font-size:19px;opacity:.85;margin-top:6px;line-height:1.3}
+    .tnote{position:absolute;left:56px;right:56px;bottom:226px;font-size:24px;line-height:1.4}.tnote b{color:#E5B84B;font-weight:800}"""
+    body = (f"<div class='bg' style=\"background-image:url('{pathlib.Path(img).name}');background-position:center 70%\"></div><div class='tshade'></div>"
+            + top_bar("<div class='chip gold'>Tents + setup</div>")
+            + f"<div class='th'><div class='h1' style='font-size:112px'>{headline_html}</div><div class='sb'>{sub}</div></div>"
+            + "<div class='chip insp'>Setup inspo</div>"
+            + f"<div class='pts'>{pts}</div><div class='tnote'>{note_html}</div>" + contact_bar())
+    return render(name, body, size, css)
+
 LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
 .chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
 box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}
