@@ -5022,6 +5022,67 @@ SHAKES[40]=[12.75,0.25,12];
 TAGLINES[40]='THANK YOU FOR WATCHING SEASON ONE.';
 window.ENDTIMES[40]=23.5;
 
+// ================= SEASON TWO FAMILY (owner Oct 26: November = the holidays are for families) =================
+// Mr. Big Business's kids. Kid rigs = drawMan scaled from the feet, plus one accessory each.
+const STYLELB={tee:'#bde3c9', teeShade:'#a7cdb4', capless:true, fade:true, slim:true, skin:'#6f4630', pant:'#4a5f8a', pantBack:'#3c4e73'}; // LIL BIG BUSINESS: dad's mini-me
+const STYLEPB={fem:true, tee:'#c58bf0', teeShade:'#ad74d8', skin:'#7a4e33', pant:'#f4a6cf', pantBack:'#e08fbb'};                         // PRINCESS BIG BUSINESS
+const STYLEBB={tee:'#ffd23f', teeShade:'#e8bd2c', capless:true, slim:true, skin:'#7a4e33', pant:'#3f6fb5', pantBack:'#345d99'};          // BABY BIG BUSINESS
+const STYLENIA={fem:true, tee:'#2b2b38', teeShade:'#22222d', skin:'#6f4630', pant:'#1d1d26', pantBack:'#16161e'};                       // NIA, 17
+const KIDSCALE={lil:0.70, princess:0.60, baby:0.54, nia:0.94};
+function kidHeadY(s){ return FLOOR-(FLOOR-(HIP_STAND-400))*s; }   // top of the head for a standing rig scaled s
+function drawKid(p, s){
+  ctx.save(); ctx.translate(p.x,FLOOR); ctx.scale(s,s); ctx.translate(-p.x,-FLOOR);
+  drawMan(Object.assign({y:HIP_STAND}, p)); ctx.restore();
+}
+function tiaraK(x,y,s){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='#ffd94d';
+  ctx.beginPath(); ctx.moveTo(-46,10); ctx.lineTo(-40,-26); ctx.lineTo(-20,-4); ctx.lineTo(0,-38); ctx.lineTo(20,-4); ctx.lineTo(40,-26); ctx.lineTo(46,10); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#ff5fb0'; ctx.beginPath(); ctx.arc(0,-14,7,0,7); ctx.fill(); ctx.restore();
+}
+function headphonesK(x,y,s,face){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s*(face||1),s); ctx.lineWidth=10; ctx.strokeStyle='#e5b84b';
+  ctx.beginPath(); ctx.arc(0,62,66,Math.PI*1.08,Math.PI*1.92); ctx.stroke();
+  ctx.fillStyle='#1c1428'; ctx.strokeStyle=INK; ctx.lineWidth=6;
+  rr(-74,52,26,46,10); ctx.fill(); ctx.stroke(); rr(48,52,26,46,10); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function phoneK(x,y,s,glow){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=5; ctx.strokeStyle=INK; ctx.fillStyle='#111';
+  rr(-18,-32,36,64,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=glow?'#7fd3ff':'#2a3a48'; rr(-13,-26,26,50,5); ctx.fill(); ctx.restore();
+}
+function nameCardK(x,y,name,sub){
+  ctx.save(); ctx.font='24px "Archivo Black"'; const w1=ctx.measureText(name).width; ctx.font='600 19px Oswald';
+  const w=Math.max(w1, ctx.measureText(sub).width)+30;
+  ctx.fillStyle='rgba(36,18,67,.92)'; ctx.strokeStyle='#E5B84B'; ctx.lineWidth=4; rr(x-w/2,y,w,76,16); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.textAlign='center'; ctx.font='24px "Archivo Black"'; ctx.fillText(name,x,y+33);
+  ctx.fillStyle='#f6f1e4'; ctx.font='600 19px Oswald'; ctx.fillText(sub,x,y+60); ctx.restore();
+}
+function familySheet(t){
+  drawRoom();
+  const L=[ // x, style, scale, label, sub
+    [170, STYLENIA, KIDSCALE.nia, 'NIA', '17 · SO EMBARRASSED'],
+    [400, STYLER, 1.0, 'MR. BIG BUSINESS', 'DAD'],
+    [620, STYLELB, KIDSCALE.lil, 'LIL BIG BUSINESS', '10 · DAD\'S MINI-ME'],
+    [800, STYLEPB, KIDSCALE.princess, 'PRINCESS', '6 · EVERY CHAIR = A THRONE'],
+    [960, STYLEBB, KIDSCALE.baby, 'BABY', '5 · PURE CHAOS'],
+  ];
+  // NIA: arms folded on her phone, flat face
+  drawKid({x:170, face:1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLENIA}, KIDSCALE.nia);
+  headphonesK(170, kidHeadY(KIDSCALE.nia), KIDSCALE.nia, 1);
+  phoneK(170+52*KIDSCALE.nia, FLOOR-470*KIDSCALE.nia, KIDSCALE.nia, true);
+  drawMan({x:400, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:18,el:10}, mouth:'smile', style:STYLER});
+  drawKid({x:620, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, KIDSCALE.lil);
+  drawKid({x:800, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, KIDSCALE.princess);
+  tiaraK(800, kidHeadY(KIDSCALE.princess)+8, KIDSCALE.princess*1.3);
+  drawKid({x:960, face:-1, legs:[{hip:20,knee:20},{hip:-16,knee:20}], arm:{sh:165,el:-20}, arm2:{sh:150,el:-30}, mouth:'o', style:STYLEBB}, KIDSCALE.baby);
+  L.forEach(([x,,s,n,sub],i)=>nameCardK(x, FLOOR+40+(i%2)*96, n, sub));
+  caption(['MEET THE FAMILY.','SEASON TWO · NOVEMBER.'],300,1,52);
+}
+REELS[90]=familySheet;
+SHAKES[90]=[99,0,0];
+window.ENDTIMES[90]=60;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){

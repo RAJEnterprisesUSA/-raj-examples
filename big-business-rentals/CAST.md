@@ -24,6 +24,26 @@ Season One = animated, ~20s episodes, SFX only, NO voices (ElevenLabs VO tested 
   Evil squeak sound when it appears. Collapses under anyone. Cannot be destroyed, always returns.
 - THE CAT · black cat from the Halloween lane. Rashad's silent nemesis. Shows up at the worst moment, always gets the best seat.
 
+## SEASON TWO FAMILY (owner Oct 26: "for november since the holiday seasons are for families we are going
+## to introduce Mr. Big Business's kids"; owner: Lil Big Business and Baby Big Business are boys)
+Rigs live in reelsD.html (drawKid = drawMan scaled from the feet; KIDSCALE; accessories tiaraK, headphonesK,
+phoneK; name cards nameCardK; reference still REELS[90] familySheet -> examples/EX_Family_Sheet.png).
+Humor always comes from the situation (family party chaos, setups, seating), never from identity or stereotype.
+- NIA BIG BUSINESS · 17, the oldest, a girl · rig STYLENIA (black hoodie and pants), headphones, phone always lit. Name chosen Oct 26
+  (owner asked us to pick it). Always annoyed at everything.
+  RUNNING GAG: every appearance she sighs "...this is SO embarrassing." (same wording, lowercase energy),
+  eyes on her phone. Secret twist used sparingly: she is quietly the most competent person in the room
+  (sets a whole table in the background while everyone argues, never looks up).
+- LIL BIG BUSINESS · 10, a boy · rig STYLELB = Dad's exact look in kid size (fade, green tee, navy pants).
+  Dad's mini-me: copies every move, carries one chair "like Dad," and sometimes wins where Dad loses.
+  Gets his own record on the end card when he is in the episode (Lil Big Business W-L).
+- PRINCESS BIG BUSINESS · 6, a girl · rig STYLEPB (lavender top, pink pants) + gold tiara.
+  Every party is her royal ball and the best chair is her throne. Bosses the cat around; the cat allows it.
+- BABY BIG BUSINESS · 5, a boy · rig STYLEBB (yellow tee, blue pants), the youngest.
+  Pure chaos and pure joy: hides under tablecloths, jumps on everything, best friends with the cat.
+  Hide-and-seek gag: "where is Baby Big Business?" sits alongside the hidden pumpkin hunt.
+OPEN QUESTION FOR THE OWNER: is Mrs. Never Wrong the kids' mom? Do not write her as their mother until he says so.
+
 ## Voices (ElevenLabs, verified working Oct 5)
 Credential: environment credential "ElevenLabs" injects xi-api-key for api.elevenlabs.io (no env var needed).
 Season One is NOT voiced (owner cancelled Oct 5). IDs kept on file for Season Two reference or promos if he changes his mind:

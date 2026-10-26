@@ -279,6 +279,9 @@ season arc "Road to the Halloween Party" (full-cast finale Oct 31); hidden pumpk
 end-card question + credit fan ideas by @name; W-L tracker for Mr. Big Business (he rarely wins).
 Season One voices: NONE, SFX only (ElevenLabs VO tested Oct 5, owner cancelled it; keep IDs in CAST.md on file).
 Season Two: owner's real voice recordings begin.
+SEASON TWO FAMILY (owner Oct 26, November = family season): Mr. Big Business's kids join: NIA (17, girl, always
+annoyed, "...this is SO embarrassing."), LIL BIG BUSINESS (10, boy, Dad's mini-me), PRINCESS BIG BUSINESS (6, girl,
+tiara, every chair is a throne), BABY BIG BUSINESS (5, boy, pure chaos). Bible + rigs: CAST.md SEASON TWO FAMILY.
 
 ## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
 ## referral and countdown posts; videos and pre-built sets keep their formats)
