@@ -162,3 +162,4 @@ ONGOING
 - Oct 26, 2026, owner set the WEEKLY PROMOTIONS schedule (see CLAUDE.md): Mon Price It, Tue venue flyer,
   Wed Guess the Theme clues, Thu referral flyer + Guess the Theme answer, Fri save-worthy carousel, Sat price
   list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.
+- Oct 26, 2026, owner approved "queue both for 1pm": Guess the Theme No. 2 Día de los Muertos queued on TikTok, Pt. 1 Wed Oct 28 1pm (6adfa7733aaff6c7f599e6b0), Pt. 2 Thu Oct 29 1pm (6adfa7763aaff6c7f599e746), AI label ON verified. Script tiktok/queue_gtt2.py.

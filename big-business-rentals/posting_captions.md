@@ -2996,3 +2996,13 @@ chips Seats 40 · Holds 80 standing · Tables, chairs + setup included. Owner ap
 UPGRADE: Flyer 2026 story layout now respects the IG story safe zone (no UI over the phone number or QR).
 FB: Skip the house this year. Book the room. Our private venue in Las Vegas seats 40 and holds 80 standing, with tables, chairs and setup included. Three hours is $625 for up to 25 guests, and four hours is $800 for up to 40. Birthdays, holiday dinners, baby showers, company parties: the room is ready when you are. Questions? The chat on our website answers right away. #LasVegasVenue #VegasEventSpace #LasVegasParty #VegasPartyRentals #HolidayPartyVegas
 Pinned: FB follow-the-page comment. IG Story: no caption.
+
+## WED OCT 28 + THU OCT 29 · WEEKLY PROMOTION: GUESS THE THEME No. 2 · DÍA DE LOS MUERTOS (TikTok + IG, 1pm)
+Package: tiktok/packages/GTT2_DiaDeMuertos_Oct28-29.md. Files: tiktok/TT_GuessTheTheme_DiaDeMuertos_Pt1.mp4 (clues, 10.4s)
+and _Pt2.mp4 (answer, 10.4s). HF Z-Image concept art, seeds 96159/704615/18202/563411, AI CONCEPT ART chip every frame.
+Owner approved "queue both for 1pm". TikTok queued 2/2 OK with isAiGenerated true (verified): Pt. 1 6adfa7733aaff6c7f599e6b0,
+Pt. 2 6adfa7763aaff6c7f599e746. Instagram = Trial Reels the owner posts in the app (captions in the package). No Facebook.
+UPGRADE: full-bleed 9:16 images, story-style progress bars, giant clue counter, punch-zoom cuts with flash, Flyer 2026 type
+with word-pop captions, Pt. 2 zooms into the room to each clue with an inset, original nylon guitar + marimba bed.
+TT Pt. 1: Three clues, one party theme. Can you get it before clue 3? #guessthetheme #partytheme #partyinspo #lasvegas
+TT Pt. 2: Día de los Muertos, the celebration that honors the people we love. Marigold runners, papel picado and sugar skulls, all in one room. Who got it on clue 1? #guessthetheme #diadelosmuertos #partyinspo #lasvegas

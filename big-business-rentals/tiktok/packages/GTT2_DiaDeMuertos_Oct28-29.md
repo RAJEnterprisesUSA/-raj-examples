@@ -1,6 +1,6 @@
 # Guess the Theme No. 2 · Día de los Muertos · Wed Oct 28 + Thu Oct 29
 
-Status: BUILT, waiting for owner approval. Nothing queued.
+Status: APPROVED Oct 26 ("queue both for 1pm"). TikTok queued 2/2 with the AI label on. Instagram Trial Reels: owner posts in the app.
 Routing (locked Oct 26): TikTok + Instagram only, never Facebook. TikTok goes through Buffer
 with the AI label on. Instagram runs as a Trial Reel, which the owner posts in the app (the API
 can't make Trial Reels); turn on the AI label there too.
