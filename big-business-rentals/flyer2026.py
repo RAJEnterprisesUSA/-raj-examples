@@ -214,6 +214,39 @@ def tent(name, img, headline_html, sub, points, note_html, size=(1080, 1350)):
             + f"<div class='pts'>{pts}</div><div class='tnote'>{note_html}</div>" + contact_bar())
     return render(name, body, size, css)
 
+REFERRAL_FINE = "Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed"
+
+def referral(name, kicker, headline_html, steps, bg, glow, size=(1080, 1350), sub='', tags=()):
+    """Thu REFERRAL FLYER: kicker + headline, giant 'up to $100' glass panel, 3 steps, verbatim fine print, contact bar.
+    Works at 1080x1350 (feed) and 1080x1920 (story, inside the IG safe zone)."""
+    w, h = size; tall = h > 1500
+    st = ''.join(f"<div class='st glass'><div class='n'>{i+1}</div><div class='t'>{a}</div></div>" for i, a in enumerate(steps))
+    css = f""".col{{position:absolute;left:56px;right:56px;top:{290 if tall else 150}px;bottom:{440 if tall else 232}px;display:flex;flex-direction:column;justify-content:space-between}}
+    {'.top{top:200px}.contact{bottom:240px}' if tall else ''}
+    .kick{{font-family:'Inter';font-weight:800;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:14px}}
+    .money{{position:relative;padding:{'34px 40px' if tall else '26px 36px'};overflow:hidden}}
+    .money .u{{font-size:30px;font-weight:600;opacity:.9}}
+    .money .v{{font-family:'Brico';font-weight:800;font-size:{230 if tall else 190}px;letter-spacing:-.05em;line-height:.9;color:#E5B84B}}
+    .money .p{{font-size:28px;font-weight:600;margin-top:6px}}
+    .money .ghost{{position:absolute;right:-30px;bottom:-70px;font-family:'Brico';font-weight:800;font-size:330px;color:transparent;
+      -webkit-text-stroke:2px rgba(229,184,75,.22);letter-spacing:-.06em}}
+    .steps{{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}}
+    .st{{padding:{'22px' if tall else '18px'} 20px}}.st .n{{font-family:'Brico';font-weight:800;font-size:40px;color:#E5B84B;line-height:1}}
+    .st .t{{font-size:{24 if tall else 22}px;font-weight:600;line-height:1.25;margin-top:8px}}
+    .fine{{font-size:{19 if tall else 17}px;opacity:.75;line-height:1.4;margin-top:14px}}
+    .rsub{{font-size:{32 if tall else 28}px;font-weight:600;margin-top:{22 if tall else 16}px;opacity:.92}}
+    .rtags{{display:flex;flex-wrap:wrap;gap:10px;margin-top:{26 if tall else 18}px}}.rtags .chip{{height:{54 if tall else 48}px;font-size:{20 if tall else 18}px}}"""
+    body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
+            + top_bar("<div class='chip gold'>Referral reward</div>")
+            + f"<div class='col'><div><div class='kick'>{kicker}</div><div class='h1' style='font-size:{104 if tall else 92}px'>{headline_html}</div>"
+              + (f"<div class='rsub'>{sub}</div>" if sub else '')
+              + ("<div class='rtags'>" + ''.join(f"<div class='chip'>{t}</div>" for t in tags) + "</div>" if tags else '') + "</div>"
+              "<div class='money glass'><div class='ghost'>$</div><div class='u'>Up to</div><div class='v'>$100</div>"
+              "<div class='p'>for every booking you send our way.</div></div>"
+              f"<div><div class='steps'>{st}</div><div class='fine'>{REFERRAL_FINE}</div></div></div>"
+            + contact_bar())
+    return render(name, body, size, css)
+
 LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
 .chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
 box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}
