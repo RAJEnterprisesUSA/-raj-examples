@@ -31,10 +31,11 @@ phoneK; name cards nameCardK; reference still REELS[90] familySheet -> examples/
 SEASON TWO LOOK (owner Oct 26): the whole family has a light brown complexion (SKIN2026 #b9845a), Mr. Big Business
 included. Hair options added to drawMan in reelsD.html AND halloween/reelH.html: hair:'locbun' (locs pulled back into a
 ponytail bun, a few locs hanging), hair:'bun' (smooth hair, ponytail tied in a bun), hair:'locs' (short hanging locs), hair:'braids' (long individual braids, gold bead
-tips), beard:true (full beard + mustache, light smile line drawn on top).
+tips), beard:true (jaw and chin beard, no mustache, light smile line drawn on top).
 - MR. BIG BUSINESS, Season Two look = STYLER2: hair:'bun' (owner Oct 26: "Mr big business does not have locs, he has hair
-  in a ponytail tied into a bun"): smooth hair pulled straight back, ponytail tied into a bun, NO locs; full beard; light brown
-  skin; same green tee.
+  in a ponytail tied into a bun"): smooth slicked-back hair (forehead showing, soft shine, no strands or texture lines),
+  ponytail tied into one round bun at the top-back with a gold hair tie, NO locs; beard with NO mustache (owner Oct 26:
+  "keep the beard, take the mustache away"); light brown skin; same green tee.
   STYLER (Season One look: fade, darker skin) stays untouched so Season One episodes re-render exactly as aired.
   From November every new episode and trend remix uses STYLER2.
 Humor always comes from the situation (family party chaos, setups, seating), never from identity or stereotype.

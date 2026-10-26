@@ -283,7 +283,7 @@ SEASON TWO FAMILY (owner Oct 26, November = family season): Mr. Big Business's k
 braids, always annoyed, "...this is SO embarrassing."), LIL BIG BUSINESS (10, boy, looks just like Dad without the beard),
 PRINCESS BIG BUSINESS (6, girl, slim, long braids, tiara), BABY BIG BUSINESS (5, boy, short locs, the tuff one who does
 everything his big brother does). Whole family light brown skin; Mr. Big Business's Season Two look = smooth hair in a ponytail
-tied into a bun (NOT locs) + full beard; Lil and Baby have locs (rig STYLER2; STYLER kept for Season One re-renders). Bible + rigs: CAST.md SEASON TWO FAMILY.
+tied into a bun (NOT locs) + beard, no mustache; Lil and Baby have locs (rig STYLER2; STYLER kept for Season One re-renders). Bible + rigs: CAST.md SEASON TWO FAMILY.
 
 ## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
 ## referral and countdown posts; videos and pre-built sets keep their formats)
