@@ -128,3 +128,31 @@ sell gear outright (retired chairs or tables), that can go on Marketplace.
 - **"Do you deliver to my area?"** · Send me your address and date and I'll quote the delivery.
 - **Español:** ¡Hola! Con gusto. ¿Qué fecha es la fiesta y para cuántas personas? Te paso la cotización con el envío incluido.
 - **After hours:** Thanks for reaching out! The chat on bigbusinesspartyrentals.com answers right away, and I'll follow up first thing in the morning.
+
+---
+
+## Mon Oct 26 · Flyer 2026 group flyer: Halloween is Saturday (post through Fri Oct 30)
+Flyer: `flyers2026/BB26_Group_HalloweenSaturday.png` (prices from the owner's card only; QR opens the website).
+Rotate these three captions across groups; don't paste the same one twice in a day.
+
+**A · Neighborhood and moms groups**
+
+Halloween is Saturday this year. Hosting the costume party, the trunk-or-treat or family dinner?
+
+We deliver tables and chairs across Las Vegas and pick them up after. Chairs are $2, a table with 6 chairs is $22, and 8 tables with 48 chairs is $176. Delivery is quoted with your order. Call or text, or scan the code on the flyer.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**B · Party planning and event groups**
+
+Five nights to Halloween. If your guest list grew this week, the seating can grow with it.
+
+Folding chairs $2, table with 6 chairs $22, 48 seats for $176, delivered and picked up anywhere in Las Vegas. Would you rather not lift anything? Full-service setup and breakdown starts at $265.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**C · Short version (groups that prefer brief promo posts)**
+
+Halloween party this Saturday? Tables and chairs delivered and picked up in Las Vegas. Chairs $2, table plus 6 chairs $22.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com

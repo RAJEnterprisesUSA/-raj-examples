@@ -152,6 +152,28 @@ def venue(name, photo, headline_html, size=(1080, 1350)):
             + contact_bar())
     return render(name, body, size, css)
 
+def bento_promo(name, chip, headline_html, tiles, note_html, bg, glow, size=(1080, 1350), kicker='', uses=()):
+    """Generic promo: chip, big headline, 2x2 bento of real prices, one note line, contact bar.
+    tiles = [(label, number, tag_or_empty)], bg/glow = CSS colors for the gradient."""
+    cells = ''.join(f"<div class='tile glass'><div class='lbl'>{l}</div><div class='num'>{n}</div>"
+                    + (f"<div class='tag'>{tg}</div>" if tg else '') + "</div>" for l, n, tg in tiles)
+    css = """.bento{position:absolute;left:56px;right:56px;top:560px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .tile{position:relative;height:206px;padding:26px 30px}.lbl{font-size:27px;font-weight:600;opacity:.92}
+    .num{font-family:'Brico';font-weight:800;font-size:100px;letter-spacing:-.04em;line-height:1;margin-top:14px;color:#fff}
+    .tag{position:absolute;top:24px;right:22px;background:#E5B84B;color:#0f0a17;font-weight:800;font-size:16px;letter-spacing:.08em;
+    text-transform:uppercase;border-radius:999px;padding:8px 14px}
+    .kick{font-family:'Inter';font-weight:800;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:16px}
+    .note{position:absolute;left:56px;right:56px;top:1030px;font-size:25px;line-height:1.4;opacity:.94}
+    .note b{color:#E5B84B;font-weight:800}
+    .uses{position:absolute;left:56px;right:56px;top:440px;display:flex;flex-wrap:wrap;gap:12px}.uses .chip{height:52px;font-size:20px}"""
+    body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
+            + top_bar(f"<div class='chip gold'>{chip}</div>")
+            + f"<div style='position:absolute;left:56px;right:56px;top:165px'>{f'<div class=kick>{kicker}</div>' if kicker else ''}"
+              f"<div class='h1' style='font-size:98px'>{headline_html}</div></div>"
+            + ("<div class='uses'>" + ''.join(f"<div class='chip'>{u}</div>" for u in uses) + "</div>" if uses else '')
+            + f"<div class='bento'>{cells}</div><div class='note'>{note_html}</div>" + contact_bar())
+    return render(name, body, size, css)
+
 if __name__ == '__main__':
     print(price_it('BB26_PriceIt_HalloweenGala', BASE/'inspo/setup_halloweengala.png'))
     print(price_list('BB26_PriceList_Sample'))
