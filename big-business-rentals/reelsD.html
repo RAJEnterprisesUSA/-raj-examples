@@ -4332,6 +4332,175 @@ SHAKES[35]=[6.3,0.25,14];
 TAGLINES[35]='BIG BUSINESS. BIGGER PERSONALITIES.';
 window.ENDTIMES[35]=23.5;
 
+// ---------- UPGRADE Oct 27: word-by-word pop captions (native TikTok/Reels look) ----------
+// Each word scales in 0.07s after the last; the newest word flashes gold, then turns white.
+function captionPop(lines, y, t0, t, size){
+  const s=size||60; const el=t-t0; if(el<0) return;
+  ctx.save(); ctx.font=s+'px "Archivo Black"'; ctx.textBaseline='alphabetic'; ctx.textAlign='left';
+  const sp=ctx.measureText(' ').width; let idx=0;
+  lines.forEach((ln,li)=>{
+    const words=ln.split(' ');
+    const widths=words.map(w=>ctx.measureText(w).width);
+    let x=W/2-(widths.reduce((a,b)=>a+b,0)+sp*(words.length-1))/2;
+    const yy=y+li*(s*1.18);
+    words.forEach((w,wi)=>{
+      const k=(el-idx*0.07)/0.18;
+      if(k>0){
+        const sc=easeOutBack(Math.min(1,k));
+        const cx=x+widths[wi]/2;
+        ctx.save(); ctx.translate(cx,yy); ctx.scale(sc,sc);
+        ctx.lineWidth=16; ctx.strokeStyle=INK; ctx.lineJoin='round';
+        ctx.strokeText(w,-widths[wi]/2,0);
+        const fresh=(el-idx*0.07)<0.32;
+        ctx.fillStyle=fresh?'#ffd94d':'#fff'; ctx.fillText(w,-widths[wi]/2,0);
+        ctx.restore();
+      }
+      x+=widths[wi]+sp; idx++;
+    });
+  });
+  ctx.restore();
+}
+
+// ================= EP. 36 · THE WIND CHECK =================
+function backyardD(){
+  const g=ctx.createLinearGradient(0,0,0,FLOOR);
+  g.addColorStop(0,'#2b1140'); g.addColorStop(0.62,'#7a3a6a'); g.addColorStop(1,'#ff9a5a');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,FLOOR);
+  ctx.fillStyle='#3a1f48';
+  ctx.beginPath(); ctx.moveTo(0,FLOOR-330); ctx.lineTo(180,FLOOR-470); ctx.lineTo(330,FLOOR-380);
+  ctx.lineTo(520,FLOOR-560); ctx.lineTo(720,FLOOR-400); ctx.lineTo(900,FLOOR-500); ctx.lineTo(W,FLOOR-360);
+  ctx.lineTo(W,FLOOR); ctx.lineTo(0,FLOOR); ctx.closePath(); ctx.fill();
+  ctx.fillStyle='#5a3a2a'; ctx.strokeStyle=INK; ctx.lineWidth=5;
+  for(let x=0;x<W;x+=60){ ctx.fillRect(x,FLOOR-260,48,260); ctx.strokeRect(x,FLOOR-260,48,260); }
+  const fg=ctx.createLinearGradient(0,FLOOR,0,H);
+  fg.addColorStop(0,'#8a7a66'); fg.addColorStop(1,'#5a4e40');
+  ctx.fillStyle=fg; ctx.fillRect(0,FLOOR,W,H-FLOOR);
+  ctx.strokeStyle='rgba(36,26,16,.3)'; ctx.lineWidth=4;
+  for(let x=0;x<W;x+=120){ ctx.beginPath(); ctx.moveTo(x,FLOOR); ctx.lineTo(x-60,H); ctx.stroke(); }
+}
+function windLinenD(cx, flap, clipped){
+  const top=FLOOR-232, L=cx-330, R=cx+330;
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#fbfbf7';
+  ctx.beginPath(); ctx.moveTo(L,top-6); ctx.lineTo(R,top-6);
+  const hemR=top+120-flap*90, hemL=top+120-flap*30;
+  ctx.lineTo(R+flap*40,hemR);
+  for(let i=6;i>=0;i--){ const x=L+(R-L)*i/6; ctx.lineTo(x+flap*30, lerp(hemL,hemR,i/6)+Math.sin(i*1.7+flap*6)*10); }
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  if(clipped){ ctx.fillStyle=GOLD;
+    for(const x of [L+20,R-20]){ rr(x-14,top-20,28,40,6); ctx.fill(); ctx.stroke(); } }
+  ctx.restore();
+}
+function flyingLinenD(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot);
+  ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle='#fbfbf7';
+  ctx.beginPath(); ctx.moveTo(-200,-40); ctx.quadraticCurveTo(-60,-110,60,-50); ctx.quadraticCurveTo(160,-10,220,-70);
+  ctx.lineTo(200,60); ctx.quadraticCurveTo(80,100,-20,50); ctx.quadraticCurveTo(-120,20,-190,80); ctx.closePath();
+  ctx.fill(); ctx.stroke(); ctx.restore();
+}
+function ep36(t){
+  const FREEZES=[[11.0,11.8],[20.8,21.6]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  const gusts=[[2.4,3.6],[8.3,9.2],[10.5,11.6],[18.4,19.3],[19.9,20.9]];
+  let gust=0; for(const [a,b] of gusts){ if(tt>=a&&tt<b) gust=Math.sin(Math.PI*(tt-a)/(b-a)); }
+  const reverse=(tt>=19.9&&tt<20.9);
+  ctx.save();
+  if(fz){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-fz[0])/0.25));
+    const c=fz[0]<15?[200,1300]:[800,1300];
+    ctx.translate(c[0],c[1]); ctx.scale(z,z); ctx.translate(-c[0],-c[1]);
+  }
+  backyardD();
+  miniPumpkin(1020, FLOOR+88);
+  drawTable(590, gust*2, 0);
+  // the linen: on, blown away at 3.0, replaced and clipped at 7.0/7.4
+  if(tt<3.0) windLinenD(590, gust, false);
+  else if(tt<4.6){ const k=ease((tt-3.0)/1.6); flyingLinenD(lerp(610,W+300,k), lerp(FLOOR-300,FLOOR-900,k), k*3); }
+  if(tt>=7.0) windLinenD(590, tt>=8.3&&tt<9.2?gust*0.25:0, tt>=7.4);
+  // THE CAT: hops onto the table at 17.0 and becomes the paperweight
+  if(tt>=16.6&&tt<17.4) drawCatD(lerp(-160,560,ease((tt-16.6)/0.8)), lerp(FLOOR,FLOOR-250,ease((tt-17.1)/0.3)), {pose:'trot',face:1,t:t,s:1.3});
+  else if(tt>=17.4) drawCatD(560, FLOOR-250, {face:1,t:t,s:1.3});
+  // MRS. NEVER WRONG: brings a fresh linen and clips at 6.0
+  if(tt>=6.0&&tt<10.2){
+    const leaving=(tt>=9.2);
+    if(tt<7.0||leaving){
+      const k=leaving?ease((tt-9.2)/1.0):ease((tt-6.0)/1.0), step=Math.sin(tt*9);
+      drawMan({x:leaving?lerp(990,W+220,k):lerp(W+220,990,k), y:HIP_STAND-Math.abs(step)*9, face:leaving?1:-1,
+        legs:[{hip:22*step,knee:8},{hip:-22*step,knee:8}], arm:{sh:30,el:30}, mouth:'flat', style:STYLEW});
+    } else {
+      drawMan({x:990, y:HIP_STAND, face:-1, legs:[{hip:6,knee:8},{hip:-4,knee:8}],
+        arm:(tt<7.6)?{sh:80,el:-10}:{sh:150,el:-60}, mouth:'flat', style:STYLEW});
+    }
+  }
+  // TYLER: appears holding the far end of the table at 13.2, pops away at 16.4
+  if(tt>=13.2&&tt<16.4){
+    drawMan({x:985, y:HIP_STAND, face:-1, legs:[{hip:6,knee:6},{hip:-4,knee:6}],
+      arm:{sh:70,el:20}, mouth:(tt>=14.9)?'flat':'smile', headTilt:(tt>=14.9)?-10:0, style:STYLET});
+    if(tt<13.9) sparkleD(985,FLOOR-520,t);
+  }
+  // LIL WOBBLES: rolls in at 9.6, blown away at 10.6, blown BACK at 19.9, lands at the table
+  if(tt>=9.6&&tt<10.6) drawChair(lerp(-220,330,ease((tt-9.6)/1.0)), Math.sin(t*12)*7, 0, 0, RED23);
+  else if(tt>=10.6&&tt<11.9){
+    const k=ease((tt-10.6)/1.3);
+    ctx.save(); ctx.translate(lerp(330,-320,k), lerp(0,-520,Math.sin(Math.PI*k)));
+    drawChair(0, k*720, 0, 0, RED23); ctx.restore();
+  } else if(tt>=19.9&&tt<20.8){
+    const k=ease((tt-19.9)/0.9);
+    ctx.save(); ctx.translate(lerp(W+320,820,k), -lerp(0,420,Math.sin(Math.PI*k)));
+    drawChair(0, -(1-k)*720, 0, 0, RED23); ctx.restore();
+  } else if(tt>=20.8) drawChair(820, Math.sin(t*5)*4, 0, 0, RED23);
+  // MR. BIG BUSINESS
+  let mp;
+  if(tt<2.4){
+    mp={x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:72,el:-18}, mouth:'smile', style:STYLER};
+  } else if(tt<6.0){
+    const chase=(tt>=3.2), k=Math.sin((tt-3.2)*2.2), step=Math.sin(tt*14);
+    mp=chase?{x:150+k*120, y:HIP_STAND-Math.abs(step)*12, face:k>=0?1:-1, lean:10,
+      legs:[{hip:26*step,knee:10},{hip:-26*step,knee:10}], arm:{sh:150,el:-40}, mouth:'o', style:STYLER}
+      :{x:150, y:HIP_STAND, face:1, lean:-12, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:90,el:-20}, mouth:'o', eyes:'wide', style:STYLER};
+  } else if(tt<11.8){
+    mp={x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:50,el:20}, mouth:'flat', style:STYLER};
+  } else if(tt<13.2){
+    mp={x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:{sh:160,el:-30}, arm2:{sh:150,el:-40}, mouth:'smile', headTilt:Math.sin(t*6)*6, style:STYLER};
+  } else if(tt<20.8){
+    mp={x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:50,el:20}, mouth:'smile', style:STYLER};
+  } else {
+    mp={x:150, y:HIP_STAND, face:1, lean:14, legs:[{hip:10,knee:6},{hip:-8,knee:6}],
+      arm:{sh:18,el:76}, arm2:{sh:14,el:80}, mouth:'sad', eyes:(tt<21.6?'wide':undefined), headTilt:Math.sin(tt*4)*4, style:STYLER};
+  }
+  drawMan(mp);
+  // wind streaks and flying party bits during gusts
+  ctx.save(); if(reverse){ ctx.translate(W,0); ctx.scale(-1,1); }
+  windFx(t, gust); if(tt>=2.4&&tt<3.6) debris(t, gust);
+  ctx.restore();
+  ctx.restore();
+  if(t>=11.05&&t<11.8){const kk=easeOutBack(Math.min(1,(t-11.05)/0.25)); starburst(330,FLOOR-900,kk*0.9,'BYE.');}
+  if(t>=20.85&&t<21.6){const kk=easeOutBack(Math.min(1,(t-20.85)/0.25)); starburst(760,FLOOR-760,kk*0.85,'NO.');}
+  showBadge(36);
+  if(t<2.3) captionPop(["SATURDAY'S FORECAST:",'VEGAS WIND.'],340,0.05,t,48);
+  if(t>=2.6&&t<4.1) captionPop(['THE WIND HAS ENTERED','THE PARTY.'],340,2.6,t,46);
+  if(t>=4.4&&t<5.9) captionPop(['THE LINEN','HAS LEFT.'],340,4.4,t,52);
+  if(t>=6.3&&t<7.9) captionPop(['THE INSPECTOR','BROUGHT CLIPS.'],340,6.3,t,48);
+  if(t>=8.1&&t<9.5) captionPop(['TABLE CLIPS.','THE PRO MOVE.'],340,8.1,t,52);
+  if(t>=9.7&&t<10.9) captionPop(['UNINVITED GUEST','INCOMING.'],340,9.7,t,48);
+  if(t>=11.05&&t<11.8) captionPop(['GONE WITH','THE WIND.'],340,11.05,t,54);
+  if(t>=12.0&&t<13.1) captionPop(['ONE PROBLEM','SOLVED.'],340,12.0,t,52);
+  if(t>=13.4&&t<14.8) captionPop(['WHERE DID YOU EVEN','COME FROM?'],340,13.4,t,46);
+  if(t>=14.9&&t<16.3) captionPop(['...im the new intern.'],340,14.9,t,48);
+  if(t>=17.0&&t<18.3) captionPop(['THE CAT VOLUNTEERED','AS A PAPERWEIGHT.'],340,17.0,t,44);
+  if(t>=18.5&&t<19.8) captionPop(['UNMOVED.'],340,18.5,t,60);
+  if(t>=20.85&&t<22.2) captionPop(['THE WIND','BROUGHT HIM BACK.'],340,20.85,t,48);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHAT HAS THE WIND TAKEN','FROM YOUR PARTY?'],340,22.4,t,40);
+    caption(['MR. BIG BUSINESS RECORD: 3 W · 19 L'],1700,(t-22.4)/0.35,28);
+  }
+}
+REELS[36]=ep36;
+SHAKES[36]=[10.6,0.3,16];
+TAGLINES[36]='CLIP YOUR LINENS. BOOK YOUR CHAIRS.';
+window.ENDTIMES[36]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){

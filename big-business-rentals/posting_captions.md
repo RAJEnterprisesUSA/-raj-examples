@@ -2944,3 +2944,15 @@ by TREND REMIX #8 FAN TRANSITION (current Oct 2026 TikTok format: overhead camer
 the lens between looks; source newengen/signora October 2026 roundups). Ours: top-down venue floor,
 each blade pass adds tables, linens, chairs, details; a red cheap chair is caught and cut. reelH
 REELS[31], 17.2s. Captions in queue_mon26_t31.py. Owner may add the trending fan-transition sound in-app.
+
+## TUESDAY OCT 27 · TREND REMIX #9 CAT HANDSHAKE (5pm) + EP. 36 THE WIND CHECK (8pm), all four platforms
+Trend (current, late Oct 2026 roundups, ~534K videos): the AI cat that claps and offers the viewer a
+handshake. Ours: THE CAT (new front-facing drawing, catFrontH) claps and shakes on good party
+decisions (setup done early, chairs delivered and picked up, whole setup in one call), swats the
+cheap chair. reelH REELS[32], 17.2s. Owner may add the trending sound in-app.
+EP. 36: reelsD REELS[36], 26s, backyard at dusk: Vegas wind takes the linen, Mrs NW brings table
+clips (real party tip), Wobbles blown away then blown back to the table, Tyler appears holding the
+table, the cat is the paperweight. W-L 3-19.
+UPGRADES SHIPPED (upgrade rule): word-by-word pop captions (captionPop), 30 fps renders (was 35),
+instrument sound kit (FluidSynth + FluidR3 GM) for stingers. Renderer: audio/render30.py.
+Captions in queue_tue27.py.
