@@ -3118,3 +3118,4 @@ YT 8pm: "EP. 41: Meet the Family 🏡 Season Two premiere #Shorts" / ...and Vaeh
 Trend/news remixes are built the evening before they post (daily scheduled task 6:34pm Vegas into this session): fresh
 search, build, owner approval, queue for 5pm next day, so every remix is under ~24 h old. Episodes, promos and Guess the
 Theme stay batched. Week of Oct 26 to Nov 1 unchanged; first fresh build Sun Nov 1 evening for Mon Nov 2.
+Scheduled task created Oct 26: "Nightly fresh trend remix" (trig_0124EGoNwdrG5nWimzSQmEeC), daily 6:34pm Vegas into this session; skips while tomorrow <= Nov 1; first real build Sun Nov 1 evening for Mon Nov 2.
