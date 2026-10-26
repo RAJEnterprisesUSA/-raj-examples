@@ -13,6 +13,8 @@ CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
 BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
 SCRATCH = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
 FPS = 30
+# UPGRADE Oct 29: cinematic finish, a slight contrast and color lift, a soft vignette and fine moving grain
+FINISH = ',eq=contrast=1.04:saturation=1.10,vignette=PI/6,noise=alls=5:allf=t'
 
 def _env(n, a=0.008, r=0.3):
     e = np.ones(n); na, nr = min(n, max(1, int(a*SR))), min(n, max(1, int(r*SR)))
@@ -29,7 +31,7 @@ def noise(dur, vol=0.5, lp=1.0):
     if lp < 1.0: k = max(1, int(1/lp)); s = np.convolve(s, np.ones(k)/k, 'same')
     return s*_env(n, 0.004, dur*0.6)*vol
 
-def render_reel(html, reel, dur, fade_at, out, cues, work=None):
+def render_reel(html, reel, dur, fade_at, out, cues, work=None, finish=True):
     work = SCRATCH/(work or f'r30_{pathlib.Path(html).stem}_{reel}')
     frames = work/'frames'; frames.mkdir(parents=True, exist_ok=True)
     n = int(round(dur*FPS))
@@ -60,7 +62,7 @@ def render_reel(html, reel, dur, fade_at, out, cues, work=None):
     import imageio_ffmpeg
     FF = imageio_ffmpeg.get_ffmpeg_exe()
     cmd = [FF, '-y', '-framerate', str(FPS), '-i', str(frames/'%04d.png'), '-i', str(wav),
-           '-filter_complex', f'[0:v]scale=1080:1920:flags=lanczos[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={fade_at}:d={dur-fade_at:.2f}[a]',
+           '-filter_complex', f'[0:v]scale=1080:1920:flags=lanczos{FINISH if finish else ""}[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={fade_at}:d={dur-fade_at:.2f}[a]',
            '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '19', '-preset', 'medium',
            '-r', str(FPS), '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', '-t', str(dur), str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True)
