@@ -4902,6 +4902,126 @@ SHAKES[39]=[9.0,0.3,14];
 TAGLINES[39]='TOMORROW: THE HALLOWEEN PARTY. FULL CAST.';
 window.ENDTIMES[39]=23.5;
 
+// ================= EP. 40 · THE HALLOWEEN PARTY (SEASON ONE FINALE) =================
+function photoFrameD(k){
+  if(k<=0) return;
+  ctx.save(); ctx.globalAlpha=Math.min(1,k);
+  ctx.fillStyle='#fbf6ea';
+  ctx.fillRect(0,0,W,250); ctx.fillRect(0,H-470,W,470); ctx.fillRect(0,0,50,H); ctx.fillRect(W-50,0,50,H);
+  ctx.strokeStyle='rgba(0,0,0,.25)'; ctx.lineWidth=4; ctx.strokeRect(50,250,W-100,H-720);
+  ctx.fillStyle='#241a10'; ctx.font='46px "Archivo Black"'; ctx.textAlign='center';
+  ctx.fillText('HALLOWEEN 2026', W/2, H-330);
+  ctx.font='600 34px Oswald'; ctx.fillStyle='#6b5a44'; ctx.fillText('SEASON ONE · THE WHOLE CREW', W/2, H-270);
+  ctx.restore();
+}
+function ep40(t){
+  const FREEZES=[[8.8,9.6],[19.0,21.0]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz&&fz[0]<10){
+    const z=1+0.22*easeOutBack(Math.min(1,(t-fz[0])/0.25));
+    ctx.translate(200,1100); ctx.scale(z,z); ctx.translate(-200,-1100);
+  }
+  drawRoom();
+  lightStringD(0,330,W,300,120,true,t);
+  wallPumpkin(160,620,0.9,1); wallPumpkin(920,600,0.9,1);
+  miniPumpkin(1030, FLOOR+88);
+  if(tt<6.0){
+    // SCENE A: the guests arrive through the party door
+    partyDoorD();
+    const glow=Math.min(1,tt/0.5);
+    ctx.save(); ctx.fillStyle='rgba(255,214,120,'+(0.85*glow).toFixed(3)+')'; rr(790,FLOOR-620,170,620,8); ctx.fill(); ctx.restore();
+    drawMan({x:240, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:tt<2.4?150:120,el:-30}, mouth:'smile',
+      eyes:(tt>=4.4&&tt<5.2)?'wide':undefined, style:STYLER});
+    if(tt>=2.4){ // MRS. NEVER WRONG
+      const k=ease((tt-2.4)/0.9), step=Math.sin(tt*9)*(k<1?1:0);
+      const x=lerp(875,640,k);
+      drawMan({x:x, y:HIP_STAND, face:-1, legs:[{hip:20*step,knee:8},{hip:-20*step,knee:8}], arm:{sh:30,el:30}, mouth:'smile', style:STYLEW});
+      witchHat(x+4, HIP_STAND-400, 1, 0.05);
+    }
+    if(tt>=3.4){ // UNC
+      const k=ease((tt-3.4)/0.9), step=Math.sin(tt*9)*(k<1?1:0);
+      drawMan({x:lerp(875,860,k), y:HIP_STAND, face:-1, legs:[{hip:20*step,knee:8},{hip:-20*step,knee:8}], arm:{sh:60,el:30}, mouth:'smile', style:null});
+    }
+    if(tt>=4.4){ // TYLER: out of nowhere, as always
+      const kk=easeOutBack(Math.min(1,(tt-4.4)/0.25));
+      ctx.save(); ctx.translate(450,FLOOR); ctx.scale(kk,kk); ctx.translate(-450,-FLOOR);
+      drawMan({x:450, y:HIP_STAND, face:-1, legs:[{hip:6,knee:6},{hip:-4,knee:6}], arm:{sh:20,el:30},
+        mouth:(tt>=5.2)?'flat':'smile', headTilt:(tt>=5.2)?-10:0, style:STYLET});
+      ctx.restore();
+    }
+  } else {
+    // SCENE B: the party table. four chairs, four guests (the cat counts). Wide shot: everything at 0.82
+    ctx.save(); ctx.translate(540,FLOOR); ctx.scale(0.82,0.82); ctx.translate(-540,-FLOOR);
+    drawTable(760,0,0); miniPumpkin(760, FLOOR-250);
+    const CH=[480,660,840,1020];
+    CH.forEach(x=>drawChair(x,0,0,0));
+    drawMan(sitPose(480-24,STYLEW,{mouth:'smile'})); witchHat(430, HIP_SEAT-300, 1, -0.05);
+    drawMan(sitPose(660-24,null,{mouth:'smile'}));
+    drawMan(sitPose(840-24,STYLET,{mouth:'smile'}));
+    if(tt<16.6) drawCatD(1020, SEAT_TOP+4, {s:1.2, face:-1, t:t});
+    // LIL WOBBLES slides in from the left at 9.6, offers his seat, steps aside when the extra chair lands
+    if(tt>=9.6){
+      const wx=(tt<12.4)?lerp(-260,40,ease((tt-9.6)/0.8)):lerp(40,10,ease((tt-12.4)/0.4));
+      const wob=(tt<12.4)?Math.sin(t*10)*6:Math.sin(t*4)*3;
+      drawChair(wx, wob, 0, 0, RED23);
+      if(tt>=16.6){ // the cat hops onto Lil Wobbles. he holds.
+        const k=ease((tt-16.6)/0.5);
+        drawCatD(lerp(1020,wx,k), lerp(SEAT_TOP+4,SEAT_TOP+4,k)-Math.sin(Math.PI*k)*220, {s:1.2, face:-1, t:t});
+      }
+    }
+    // THE EXTRA CHAIR drops in from the truck at 12.4
+    let ecy=null;
+    if(tt>=12.4){ const k=Math.min(1,(tt-12.4)/0.35); ecy=lerp(-900,0,k*k);
+      ctx.save(); ctx.translate(0,ecy); drawChair(300,0,0,0); ctx.restore();
+      if(k>=1&&tt<13.2) dust(300,FLOOR,tt-12.75); }
+    // MR. BIG BUSINESS
+    if(tt<13.6){
+      drawMan({x:260, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+        arm:(tt>=7.6&&tt<9.6)?{sh:150,el:-150}:{sh:50,el:20},
+        mouth:(tt>=7.6&&tt<12.4)?'flat':'smile', eyes:(tt>=10.4&&tt<12.4)?'wide':undefined,
+        headTilt:(tt>=10.4&&tt<12.4)?-14:0, style:STYLER});
+      if(tt>=10.8&&tt<12.4) sweat(315, HIP_STAND-560, t);
+    } else {
+      const k=ease((tt-13.6)/0.7);
+      const cheer=(tt>=15.4)?{arm:{sh:165,el:-20}, arm2:{sh:160,el:-30}}:{};
+      drawMan(sitPose(300-24,STYLER,Object.assign({y:lerp(HIP_STAND,HIP_SEAT,k), mouth:'smile'},cheer)));
+    }
+    ctx.restore();
+  }
+  ctx.restore();
+  if(t>=6.0&&t<6.12){ ctx.save(); ctx.globalAlpha=1-(t-6.0)/0.12; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  if(t>=15.4) confettiBurst(t,15.4,300,900,90,2.8);
+  if(t>=8.85&&t<9.6){const kk=easeOutBack(Math.min(1,(t-8.85)/0.25)); starburst(560,FLOOR-980,kk*1.0,'NO SEAT.');}
+  if(t>=15.4&&t<16.4){const kk=easeOutBack(Math.min(1,(t-15.4)/0.25)); starburst(600,FLOOR-980,kk*1.0,'WIN!');}
+  // the group photo: flash, then the frame
+  if(t>=19.0&&t<19.25){ ctx.save(); ctx.globalAlpha=1-(t-19.0)/0.25; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  if(t>=19.0&&t<21.0) photoFrameD((t-19.0)/0.3);
+  if(!(t>=19.0&&t<21.0)) showBadge(40);
+  if(t<2.3) captionPop(['THE HALLOWEEN PARTY.','SEASON ONE FINALE.'],340,0.05,t,50);
+  if(t>=2.4&&t<4.3) captionPop(['THE GUESTS','ARRIVE.'],340,2.4,t,56);
+  if(t>=4.4&&t<5.2) captionPop(['WHERE DID YOU EVEN','COME FROM?'],340,4.4,t,46);
+  if(t>=5.2&&t<6.0) captionPop(['...im the new intern.'],340,5.2,t,48);
+  if(t>=6.1&&t<7.5) captionPop(['FOUR CHAIRS.','FOUR GUESTS.'],340,6.1,t,56);
+  if(t>=7.6&&t<8.8) captionPop(['WAIT. WHERE DOES','THE HOST SIT?'],340,7.6,t,48);
+  if(t>=9.7&&t<10.7) captionPop(['LIL WOBBLES','OFFERS HIS SEAT.'],340,9.7,t,50);
+  if(t>=10.8&&t<12.3) captionPop(['...NO THANK YOU.'],340,10.8,t,52);
+  if(t>=12.5&&t<15.3) captionPop(['THE EXTRA CHAIR.','ALWAYS ON THE TRUCK.'],340,12.5,t,48);
+  if(t>=15.5&&t<16.5) captionPop(['WIN No. 5.'],340,15.5,t,64);
+  if(t>=16.6&&t<18.9) captionPop(['AND LIL WOBBLES?','HE HELD THE CAT.'],340,16.6,t,48);
+  if(t>=19.2&&t<21.0) captionPop(['SEASON ONE:','COMPLETE.'],340,19.2,t,56);
+  if(t>=21.0&&t<22.3) captionPop(['THANK YOU FOR WATCHING.','SEASON TWO: COMING SOON.'],340,21.0,t,42);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHO SHOULD JOIN','SEASON TWO?'],340,22.4,t,48);
+    caption(['FINAL RECORD: 5 W · 21 L'],1700,(t-22.4)/0.35,30);
+  }
+}
+REELS[40]=ep40;
+SHAKES[40]=[12.75,0.25,12];
+TAGLINES[40]='THANK YOU FOR WATCHING SEASON ONE.';
+window.ENDTIMES[40]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){

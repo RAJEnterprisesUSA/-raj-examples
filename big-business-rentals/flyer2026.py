@@ -247,6 +247,28 @@ def referral(name, kicker, headline_html, steps, bg, glow, size=(1080, 1350), su
             + contact_bar())
     return render(name, body, size, css)
 
+def price_card(name, kicker, headline_html, tiles, note_html, bg, glow, size=(1080, 1350), chip='Real prices'):
+    """Sat PRICE LIST: kicker + headline, 2x2 bento of the owner's prices, delivery note, contact bar.
+    Flex column, so it fills both 1080x1350 (feed) and 1080x1920 (story, inside the IG safe zone)."""
+    w, h = size; tall = h > 1500
+    cells = ''.join(f"<div class='tile glass'><div class='lbl'>{l}</div><div class='num'>{n}</div>"
+                    + (f"<div class='tag'>{tg}</div>" if tg else '') + "</div>" for l, n, tg in tiles)
+    css = f""".col{{position:absolute;left:56px;right:56px;top:{290 if tall else 150}px;bottom:{440 if tall else 232}px;display:flex;flex-direction:column;justify-content:space-between}}
+    {'.top{top:200px}.contact{bottom:240px}' if tall else ''}
+    .kick{{font-family:'Inter';font-weight:800;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:14px}}
+    .bento{{display:grid;grid-template-columns:1fr 1fr;gap:{22 if tall else 18}px}}
+    .tile{{position:relative;height:{290 if tall else 200}px;padding:{'34px 32px' if tall else '24px 28px'}}}
+    .lbl{{font-size:{30 if tall else 26}px;font-weight:600;opacity:.92}}
+    .num{{font-family:'Brico';font-weight:800;font-size:{140 if tall else 104}px;letter-spacing:-.04em;line-height:1;margin-top:{22 if tall else 12}px;color:#fff}}
+    .tag{{position:absolute;top:24px;right:22px;background:#E5B84B;color:#0f0a17;font-weight:800;font-size:17px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:8px 14px}}
+    .note{{font-size:{28 if tall else 24}px;line-height:1.4;opacity:.94}}.note b{{color:#E5B84B;font-weight:800}}"""
+    body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
+            + top_bar(f"<div class='chip gold'>{chip}</div>")
+            + f"<div class='col'><div><div class='kick'>{kicker}</div><div class='h1' style='font-size:{118 if tall else 100}px'>{headline_html}</div></div>"
+              f"<div class='bento'>{cells}</div><div class='note'>{note_html}</div></div>"
+            + contact_bar())
+    return render(name, body, size, css)
+
 LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
 .chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
 box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}
