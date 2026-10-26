@@ -220,6 +220,20 @@ Folding chairs $2, 6 ft rectangle tables $10, 6 ft round tables $15. Delivered a
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
 
+**H-G**
+Saturday is the 31st. If the guest list keeps growing, so can the seating.
+
+We deliver tables and chairs across Las Vegas and pick them up after the party. A table with 6 chairs is $22, and 48 seats is $176. Call or scan the code on the flyer.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**H-H**
+Halloween party at your place this weekend? Skip borrowing chairs from the neighbors.
+
+Folding chairs are $2 and 6 ft tables start at $10, delivered and picked up anywhere in Las Vegas. Full-service setup is available from $265.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
 ### R · Party room captions
 
 **R-A**
