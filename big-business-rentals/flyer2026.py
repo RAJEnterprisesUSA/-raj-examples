@@ -114,6 +114,44 @@ def price_list(name, size=(1080, 1350)):
             + contact_bar())
     return render(name, body, size, css)
 
+def venue(name, photo, headline_html, size=(1080, 1350)):
+    """Tue VENUE FLYER: the REAL room as a rounded photo card, headline, two price tiles, fact chips."""
+    shutil.copy(photo, OUT/pathlib.Path(photo).name)
+    w, h = size; tall = h > 1500
+    ph_h = 560 if tall else 470
+    css = f""".photo{{position:absolute;left:56px;right:56px;top:140px;height:{ph_h}px;border-radius:36px;overflow:hidden;
+    box-shadow:0 30px 70px rgba(0,0,0,.55);background:url('{pathlib.Path(photo).name}') center 60%/cover}}
+    .photo .chip{{position:absolute;left:22px;bottom:22px;background:rgba(15,10,23,.78);border:1px solid rgba(229,184,75,.7);color:#fbf6ea}}
+    .photo .chip::before{{content:'';width:12px;height:12px;border-radius:50%;background:#E5B84B}}
+    .vh{{position:absolute;left:56px;right:56px;top:{140+ph_h+46}px}}
+    .tiles{{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:{38 if tall else 30}px}}
+    .tile{{padding:24px 28px}}.tile .k{{font-size:24px;font-weight:600;opacity:.9}}
+    .tile .v{{font-family:'Brico';font-weight:800;font-size:{100 if tall else 88}px;letter-spacing:-.04em;line-height:1;margin-top:8px}}
+    .tile .s{{font-size:21px;opacity:.8;margin-top:6px}}
+    .facts{{display:flex;gap:12px;flex-wrap:wrap;margin-top:{28 if tall else 22}px}}
+    .facts .chip{{height:50px;font-size:19px}}"""
+    if tall:
+        css += """/* story safe zone: IG covers ~250px top (profile row) and bottom (reply bar) */
+        .top{top:200px}.contact{bottom:240px}
+        .stack{position:absolute;left:56px;right:56px;top:290px;bottom:440px;display:flex;flex-direction:column;gap:44px}
+        .stack .photo{position:relative;left:auto;right:auto;top:auto;height:auto;flex:1}
+        .stack .vh{position:relative;left:auto;right:auto;top:auto}
+        .tile{padding:30px 32px}.tile .k{font-size:28px}.tile .s{font-size:24px}
+        .facts .chip{height:58px;font-size:22px}"""
+    body = ("<div class='bg' style='background:radial-gradient(110% 70% at 0% 0%,#4a1530 0%,#22101f 50%,#0f0a17 100%)'></div>"
+            "<div class='bg' style='background:radial-gradient(50% 35% at 100% 55%,rgba(229,184,75,.28),rgba(229,184,75,0))'></div>"
+            + top_bar("<div class='chip gold'>Private venue</div>")
+            + ("<div class='stack'>" if tall else '')
+            + "<div class='photo'><div class='chip'>The real room</div></div>"
+            + f"<div class='vh'><div class='h1' style='font-size:{104 if tall else 92}px'>{headline_html}</div>"
+              "<div class='tiles'><div class='tile glass'><div class='k'>3 hours</div><div class='v'>$625</div><div class='s'>up to 25 guests</div></div>"
+              "<div class='tile glass'><div class='k'>4 hours</div><div class='v'>$800</div><div class='s'>up to 40 guests</div></div></div>"
+              "<div class='facts'><div class='chip'>Seats 40</div><div class='chip'>Holds 80 standing</div>"
+              "<div class='chip'>Tables, chairs + setup included</div></div></div>"
+            + ('</div>' if tall else '')
+            + contact_bar())
+    return render(name, body, size, css)
+
 if __name__ == '__main__':
     print(price_it('BB26_PriceIt_HalloweenGala', BASE/'inspo/setup_halloweengala.png'))
     print(price_list('BB26_PriceList_Sample'))
