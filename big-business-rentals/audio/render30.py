@@ -14,7 +14,7 @@ BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
 SCRATCH = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
 FPS = 30
 # UPGRADE Oct 29: cinematic finish, a slight contrast and color lift, a soft vignette and fine moving grain
-FINISH = ',eq=contrast=1.04:saturation=1.10,vignette=PI/6,noise=alls=5:allf=t'
+FINISH = ',eq=contrast=1.04:saturation=1.10,vignette=PI/6,noise=alls=3'   # static fine grain (moving grain made files 20x larger)
 
 def _env(n, a=0.008, r=0.3):
     e = np.ones(n); na, nr = min(n, max(1, int(a*SR))), min(n, max(1, int(r*SR)))
@@ -63,7 +63,7 @@ def render_reel(html, reel, dur, fade_at, out, cues, work=None, finish=True):
     FF = imageio_ffmpeg.get_ffmpeg_exe()
     cmd = [FF, '-y', '-framerate', str(FPS), '-i', str(frames/'%04d.png'), '-i', str(wav),
            '-filter_complex', f'[0:v]scale=1080:1920:flags=lanczos{FINISH if finish else ""}[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={fade_at}:d={dur-fade_at:.2f}[a]',
-           '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '19', '-preset', 'medium',
+           '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-maxrate', '6M', '-bufsize', '12M', '-preset', 'medium',
            '-r', str(FPS), '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', '-t', str(dur), str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True)
     print(r.returncode, r.stderr[-300:] if r.returncode else 'encoded', out)
