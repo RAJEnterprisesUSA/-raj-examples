@@ -2968,3 +2968,14 @@ UPGRADE SHIPPED: designed covers (build_covers.py, covers/), canvas frame with c
 (window.NOCAP), gold kicker + two-line title inside the 3:4 grid-safe zone, sent as Buffer thumbnailUrl.
 Captions in queue_wed28.py.
 RESULT Oct 26: Buffer rejected thumbnailUrl on FB, IG, TikTok and YouTube ("Video thumbnailUrl is not supported"); all 8 posts queued without covers (8/8 OK). Covers saved in covers/ for the owner to set in-app.
+
+## THURSDAY OCT 29 · TREND REMIX #11 PUMPKIN HEAD ILLUSION (5pm) + EP. 38 THE DELIVERY (8pm), all four platforms
+Trend (current, late Oct 2026 roundups): the Pumpkin Head Illusion, forced perspective that makes a
+pumpkin look like a dancer's head. Ours: headless Mr. Big Business dances under a pumpkin, steps out,
+the camera pulls back to reveal the pumpkin is the centerpiece of a full party table in the back; the
+cat knocks it off. Payoff: "The illusion needs a table. We deliver those." reelH REELS[34], 17.2s.
+EP. 38: reelsD REELS[38], 26s: delivery day, Tyler wheels in the chairs, four chairs ordered but five
+in the row, the fifth is Wobbles under a sheet, Mrs NW unmasks him, Tyler wheels him out. WIN No. 4,
+W-L 4-20. The empty sheet floats off: "See you Saturday." Finale is EP. 40, Sat Oct 31.
+UPGRADES SHIPPED: confetti bursts (confettiBurst in reelH and reelsD) and the cinematic finish
+(render30 FINISH: contrast/saturation lift, vignette, moving grain). Captions in queue_thu29.py.
