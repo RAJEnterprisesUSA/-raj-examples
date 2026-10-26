@@ -29,7 +29,10 @@ SOUND KIT (free, Oct 25): big-business-rentals/audio/sfx_kit.py (FluidSynth + Fl
 replaces synth beeps in new renders; install each session: apt-get install -y fluidsynth fluid-soundfont-gm; pip install mido.
 EVERYWHERE RULE (owner Oct 24): every Chronicles episode and every trend remix video posts on ALL
 FOUR platforms (FB, IG, TikTok, YouTube) with each platform's caption rules; this overrides the
-per-platform caps for those two formats. Max 1 TikTok post a day while median views
+per-platform caps for those two formats.
+GUESS THE THEME (owner Oct 26, locked): weekly, clues Wed 1pm + answer Thu 1pm, TikTok + Instagram
+only (never Facebook), AI label on, built as a package and queued only after owner approval.
+FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day. Max 1 TikTok post a day while median views
 are under 100; first
 frame = punchline, loops, no phone/prices/"free"/sales lines in TikTok captions.
 INSTAGRAM CHARTER (owner-issued Oct 21, 2026): big-business-rentals/instagram/CHARTER.md GOVERNS ALL

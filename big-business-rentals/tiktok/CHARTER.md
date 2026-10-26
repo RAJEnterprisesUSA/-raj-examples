@@ -155,3 +155,7 @@ ONGOING
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
 - Oct 25/26, 2026, owner: "keep guess it on TikTok and ig not fb." Guess the Theme stays a TikTok
   format (Pt. 1 clues, Pt. 2 answer); AI label toggle on (photoreal AI images) plus the on-screen stamp.
+- Oct 26, 2026, owner: "Yes lock it in." GUESS THE THEME SCHEDULE: weekly, clues (Pt. 1) Wednesday 1pm,
+  answer (Pt. 2) Thursday 1pm, TikTok and Instagram only (never Facebook). Instagram runs as trial reels
+  the owner posts in the app until the format beats the account median; AI label on both platforms.
+  Each week's pair is built as a package and queued only after the owner approves it.
