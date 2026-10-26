@@ -174,9 +174,9 @@ Holiday party planning starts earlier than most small businesses assume (UK venu
 - US corporate data is old: Challenger, Gray & Christmas 2014: 89% of companies planned holiday parties — [Challenger, Gray & Christmas](https://www.challengergray.com/blog/2014-holiday-party-survey-nearly-90-companies-planning-parties-year/).
 
 ### Inferences
-- Fresh-start hooks to use (all calendar facts): "November starts Saturday" type posts, the Monday after Halloween, the first of December, and the New Year. Pair them with a planning action ("Pick the date. Count the guests. Send us both.").
+- Fresh-start hooks to use (all calendar facts, verified with Python datetime for 2026): "November starts Sunday" (Nov 1, 2026 is a Sunday) type posts, the Monday after Halloween, the first of December, and the New Year. Pair them with a planning action ("Pick the date. Count the guests. Send us both.").
 - The UK booking curve suggests that by late October many corporate December dates are already being decided; for families (Thanksgiving, Friendsgiving, posadas, Christmas Eve gatherings) there is no hard data, so lean on calendar framing ("Thanksgiving is Thursday, Nov 26" must be verified with a calendar; in 2026 Thanksgiving falls on Nov 26) rather than claims about how fast dates book.
-- Friday and Saturday demand is the honest scarcity: the venue has one Friday night and one Saturday night per week. Counting them ("5 Saturdays in December 2026") is truthful and loss-framed without inventing demand. Verify counts each time with a calendar script.
+- Friday and Saturday demand is the honest scarcity: the venue has one Friday night and one Saturday night per week. Counting them is truthful and loss-framed without inventing demand: December 2026 has exactly 4 Saturdays (Dec 5, 12, 19, 26) and 4 Fridays (Dec 4, 11, 18, 25), and Dec 25 and 26 are Christmas Day and the day after, so the practical pre-Christmas party Saturdays are Dec 5, 12 and 19 (computed with Python datetime). Verify counts each time with a calendar script.
 - Fold in the Spanish lane: posadas (Dec 16-24) are a defined window where calendar framing is natural.
 
 ### Gaps
