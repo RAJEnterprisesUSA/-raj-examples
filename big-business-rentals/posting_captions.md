@@ -3006,3 +3006,12 @@ UPGRADE: full-bleed 9:16 images, story-style progress bars, giant clue counter, 
 with word-pop captions, Pt. 2 zooms into the room to each clue with an inset, original nylon guitar + marimba bed.
 TT Pt. 1: Three clues, one party theme. Can you get it before clue 3? #guessthetheme #partytheme #partyinspo #lasvegas
 TT Pt. 2: Día de los Muertos, the celebration that honors the people we love. Marigold runners, papel picado and sugar skulls, all in one room. Who got it on clue 1? #guessthetheme #diadelosmuertos #partyinspo #lasvegas
+
+## THURSDAY OCT 29 · WEEKLY PROMOTION: REFERRAL FLYER (1pm, FB feed + IG Story), Flyer 2026, HAIR STYLISTS
+Images: flyers2026/BB26_Referral_Thu29.png (4:5) + BB26_Referral_Thu29_Story.png (9:16 story-safe). Dark emerald + gold,
+"Your clients tell you every party plan.", giant "Up to $100" panel, 3 steps, verbatim fine print, QR verified.
+Profession run: Barber, NailTech, DJ, Bartender, Photographer, PartyPlanner, Teacher, HairStylist (next: event coordinator).
+Owner approved "queue it for 1pm". Queued 2/2 OK (FB 6adfacfaed65e162d578cd2d, IG story 6adfacfdd8cf9332778d3551).
+UPGRADE: referral rebuilt in Flyer 2026 (glass reward panel with ghost $, flex layout that fills both 4:5 and 9:16).
+FB: Hair stylists in Las Vegas: your clients tell you about every party before anyone else hears about it. Point them to Big Business for their tables, chairs and setup, and you can earn up to $100 for every booking. The reward is based on booking size, there is no limit on referrals, and you get paid after their event is completed. Questions? The chat on our website answers right away. #LasVegasHairStylist #VegasStylist #LasVegasSalon #VegasPartyRentals #LasVegasEvents
+Pinned: FB follow-the-page comment. IG Story: no caption.

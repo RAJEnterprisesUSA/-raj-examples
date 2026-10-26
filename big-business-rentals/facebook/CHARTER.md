@@ -138,3 +138,4 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
   Wed Guess the Theme clues, Thu referral flyer + Guess the Theme answer, Fri save-worthy carousel, Sat price
   list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.
 - Oct 26, 2026, owner approved "queue it for 1pm": Tue Oct 27 1pm venue flyer (Flyer 2026) queued, FB feed post with the follow comment + IG Story (9:16, story-safe layout). 2/2 OK.
+- Oct 26, 2026, owner approved "queue it for 1pm": Thu Oct 29 1pm referral flyer (Flyer 2026, hair stylists) queued, FB feed post with the follow comment + IG Story (9:16). 2/2 OK.
