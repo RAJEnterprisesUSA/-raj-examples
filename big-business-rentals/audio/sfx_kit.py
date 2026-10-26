@@ -62,6 +62,24 @@ KIT = {
  "rimshot": [(0, 9, None, 38, 120, 0.1), (0.12, 9, None, 49, 100, 0.8)],
  "kick":    [(0, 9, None, 36, 120, 0.1)],
 }
+
+def bed(dur, bpm=100, style="groove"):
+    """Low background music loop under the SFX. groove = bass + hats; sneak = pizzicato + woodblock."""
+    beat = 60/bpm; ev = []; t = 0.0; i = 0
+    roots = [36, 36, 41, 43]
+    while t < dur:
+        bar = int(i // 4); r = roots[bar % 4]
+        if style == "groove":
+            ev.append((t, 8, "bass" if i == 0 else None, r if i % 2 == 0 else r+7, 80, beat*0.9))
+            ev.append((t + beat/2, 9, None, 42, 45, 0.05))
+            if i % 4 == 0: ev.append((t, 9, None, 36, 70, 0.1))
+            if i % 4 == 2: ev.append((t, 9, None, 38, 55, 0.1))
+        else:
+            ev.append((t, 8, "pizz" if i == 0 else None, r+12 if i % 2 == 0 else r+19, 70, beat*0.5))
+            if i % 2 == 0: ev.append((t, 9, None, 76, 45, 0.05))
+        t += beat; i += 1
+    return render_events(ev)
+
 _cache = {}
 def render(name):
     if name not in _cache: _cache[name] = render_events(KIT[name])

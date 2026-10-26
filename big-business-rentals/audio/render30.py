@@ -1,4 +1,4 @@
-"""Shared renderer, UPGRADE Oct 27: 30 fps (was a non-standard 35) and the instrument sound kit
+"""Shared renderer, UPGRADE Oct 27 (loudness: every mix normalized to -14 LUFS, the social standard): 30 fps (was a non-standard 35) and the instrument sound kit
 (sfx_kit.py) for stingers. Usage from a build script:
     from render30 import render_reel, kit, tone, noise
     render_reel('reelsD.html', 36, 26.0, 25.2, OUT, cues)   # cues(add) places sounds
@@ -7,7 +7,7 @@ import glob, pathlib, subprocess, wave, sys
 import numpy as np
 from playwright.sync_api import sync_playwright
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from sfx_kit import render as kit, SR
+from sfx_kit import render as kit, SR, bed
 
 CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
 BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
@@ -60,8 +60,28 @@ def render_reel(html, reel, dur, fade_at, out, cues, work=None):
     import imageio_ffmpeg
     FF = imageio_ffmpeg.get_ffmpeg_exe()
     cmd = [FF, '-y', '-framerate', str(FPS), '-i', str(frames/'%04d.png'), '-i', str(wav),
-           '-filter_complex', f'[0:v]scale=1080:1920:flags=lanczos[v];[1:a]afade=t=out:st={fade_at}:d={dur-fade_at:.2f}[a]',
+           '-filter_complex', f'[0:v]scale=1080:1920:flags=lanczos[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={fade_at}:d={dur-fade_at:.2f}[a]',
            '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '19', '-preset', 'medium',
            '-r', str(FPS), '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', '-t', str(dur), str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True)
     print(r.returncode, r.stderr[-300:] if r.returncode else 'encoded', out)
+
+
+def remaster(video_in, dur, fade_at, cues, out):
+    """Rebuild only the audio of an already-rendered video (picture copied untouched)."""
+    A = np.zeros(int(SR*dur))
+    def add(sig, at, gain=1.0):
+        i0 = int(at*SR); i1 = min(len(A), i0+len(sig))
+        if i1 > i0: A[i0:i1] += sig[:i1-i0]*gain
+    cues(add)
+    A = A/np.max(np.abs(A))*0.85
+    wav = SCRATCH/(pathlib.Path(out).stem+'_mix.wav')
+    with wave.open(str(wav), 'wb') as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((A*32767).astype(np.int16).tobytes())
+    import imageio_ffmpeg
+    FF = imageio_ffmpeg.get_ffmpeg_exe()
+    cmd = [FF, '-y', '-i', str(video_in), '-i', str(wav), '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
+           '-af', f'loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={fade_at}:d={dur-fade_at:.2f}',
+           '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', '-t', str(dur), str(out)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    print(r.returncode, r.stderr[-300:] if r.returncode else 'remastered', out)

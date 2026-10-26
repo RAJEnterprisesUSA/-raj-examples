@@ -2,7 +2,7 @@
 Check (reelsD REELS[36], 26s). Upgrades shipped: word-pop captions, 30 fps, instrument sound kit."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent/'audio'))
-from render30 import render_reel, kit, tone, noise, BASE
+from render30 import render_reel, remaster, kit, bed, tone, noise, BASE
 
 def drums(add, start, end, bpm=110, gain=0.5):
     beat = 60/bpm; t = start; i = 0
@@ -13,7 +13,7 @@ def drums(add, start, end, bpm=110, gain=0.5):
 
 def cues_t32(add):
     add(kit('theme'), 0.0)
-    drums(add, 0.6, 13.8, 104, 0.35)
+    add(bed(13.6, 104, 'groove'), 0.6, 0.55)
     for d in (2.2, 6.4, 11.4):                                # clap clap clap, then the handshake
         for c in range(3): add(noise(0.06, 0.45, lp=0.6), d+0.2+c*0.4); add(kit('pop2'), d+0.2+c*0.4, 0.35)
         add(kit('win'), d+1.25, 0.7)
@@ -24,6 +24,7 @@ def cues_t32(add):
 
 def cues_ep36(add):
     add(kit('theme'), 0.0)
+    add(bed(22.0, 96, 'sneak'), 0.6, 0.45)
     for a, b in ((2.4, 3.6), (8.3, 9.2), (10.5, 11.6), (18.4, 19.3), (19.9, 20.9)):   # gusts
         add(noise(b-a, 0.45, lp=0.02), a)
     add(kit('whoosh'), 3.0)                                   # linen flies off
@@ -41,6 +42,12 @@ def cues_ep36(add):
     add(kit('theme'), 22.5, 0.6)
 
 if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] == 'remaster':
+        import shutil
+        for src, dur, fade, cues in ((BASE/'halloween/BB_Trend_CatHandshake.mp4', 17.2, 16.7, cues_t32),
+                                     (BASE.parent/'fb_safe/BB_Chronicles_Ep36_TheWindCheck.mp4', 26.0, 25.2, cues_ep36)):
+            tmp = src.with_suffix('.tmp.mp4'); remaster(src, dur, fade, cues, tmp); shutil.move(tmp, src)
+        sys.exit(0)
     which = sys.argv[1] if len(sys.argv) > 1 else 'both'
     if which in ('t32', 'both'):
         render_reel('halloween/reelH.html', 32, 17.2, 16.7, BASE/'halloween/BB_Trend_CatHandshake.mp4', cues_t32)
