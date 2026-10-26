@@ -4739,6 +4739,63 @@ REELS[36]=reelT36;
 SHAKES[36]=[6.6,0.25,12];
 TAGLINES[36]='TWO TABLES. ONE BIG PARTY.';
 window.GAGENDS[36]=14.0;
+
+// ---------- T37: TREND REMIX · "POV: hosting Thanksgiving in 2026" (17s), Season Two look ----------
+// Trend (Oct 2026 roundups): the "POV: [ordinary thing] in 2026" exaggeration format. Ours: hosting Thanksgiving,
+// every beat more absurd, the payoff lands on one call for tables and chairs.
+function bubbleT37(x,y,txt,k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k); ctx.font='30px "Archivo Black"';
+  const w=ctx.measureText(txt).width+44;
+  ctx.fillStyle='#f6f1e4'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(-w/2,-34,w,64,26); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.textAlign='center'; ctx.fillText(txt,0,10); ctx.restore();
+}
+function counterT37(x,y,n,label){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#f6edd8'; rr(x-170,y-200,340,220,30); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=n>=40?'#d6312f':INK; ctx.font='120px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText(String(n),x,y-40);
+  ctx.fillStyle=INK; ctx.font='30px "Archivo Black"'; ctx.fillText(label,x,y-2); ctx.restore();
+}
+function turkeyT37(x,y,s){
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#c9772f'; ctx.beginPath(); ctx.ellipse(0,-50,90,58,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e8a35a'; [[-70,-20,-0.6],[70,-20,0.6]].forEach(([dx,dy,a])=>{ ctx.save(); ctx.translate(dx,dy); ctx.rotate(a);
+    ctx.beginPath(); ctx.ellipse(0,0,22,40,0,0,7); ctx.fill(); ctx.stroke(); ctx.fillStyle='#fbfbf7'; ctx.beginPath(); ctx.arc(0,-38,10,0,7); ctx.fill(); ctx.stroke(); ctx.restore(); ctx.fillStyle='#e8a35a'; });
+  ctx.fillStyle='rgba(255,255,255,.35)'; ctx.beginPath(); ctx.ellipse(-24,-74,30,12,-0.3,0,7); ctx.fill();
+  ctx.restore();
+}
+function reelT37(t){
+  drawRoomH(t);
+  const SEG=[1.8,4.2,6.6,9.0,11.4];
+  const i=(t<SEG[0])?-1:(t<SEG[1]?0:(t<SEG[2]?1:(t<SEG[3]?2:(t<SEG[4]?3:4))));
+  const vk=(i>=0)?easeOutBack(Math.min(1,(t-SEG[Math.min(i,4)])/0.3)):0;
+  ctx.save(); ctx.translate(760,FLOOR); ctx.scale(vk,vk); ctx.translate(-760,-FLOOR);
+  if(i===0){ const n=Math.min(47,Math.floor((t-SEG[0])*30)+1);
+    for(let b=0;b<Math.min(5,1+Math.floor((t-SEG[0])*3));b++) bubbleT37(760+((b%2)?60:-60), FLOOR-760+b*90, 'maybe?', 1);
+    counterT37(760, FLOOR-60, n, 'MAYBES'); }
+  if(i===1){ const steps=[12,18,31,44]; const n=steps[Math.min(3,Math.floor((t-SEG[1])/0.6))]; counterT37(760, FLOOR-380, n, 'GUESTS'); }
+  if(i===2){ drawCat(700, FLOOR, {pose:'sit', face:1, t:t, s:1.3}); drawCat(830, FLOOR, {pose:'sit', face:-1, t:t+1, s:1.0}); bubbleT37(830, FLOOR-260, '+1', 1); }
+  if(i===3){ drawChair(760,0,0,0); turkeyT37(770, FLOOR-190, 0.8); }
+  if(i===4){ drawVanH(690, FLOOR-10, 0, 0.8, 0, t); drawFoldedStack(925, FLOOR, 5, 0); }
+  ctx.restore();
+  // MR. BIG BUSINESS (Season Two look) gets more overwhelmed every beat, then relieved
+  const stress=Math.max(0,Math.min(3,i));
+  const relief=(i===4);
+  drawMan({x:260, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:relief?{sh:165,el:-20}:(i>=2?{sh:150,el:-150}:{sh:60,el:24}), arm2:relief?{sh:160,el:-30}:undefined,
+    mouth:relief?'smile':(i>=1?'o':'smile'), eyes:(i>=1&&!relief)?'wide':undefined, headTilt:(i===3)?-10:0, style:STYLER2});
+  if(i>=2&&!relief) sweat(320, HIP_STAND-560, t);
+  if(t>=12.0) confettiBurst(t,12.0,760,FLOOR-400,70,2.6);
+  if(t<SEG[0]) caption(['POV: HOSTING THANKSGIVING','IN 2026.'],300,1,46);
+  if(i===0) captionPop(['THE GROUP CHAT:','47 MAYBES.'],300,SEG[0]+0.05,t,52);
+  if(i===1) captionPop(['THE GUEST LIST UPDATES','EVERY FOUR MINUTES.'],300,SEG[1]+0.05,t,44);
+  if(i===2) captionPop(['EVERYONE BRINGS A PLUS-ONE.','EVEN THE CAT.'],300,SEG[2]+0.05,t,42);
+  if(i===3) captionPop(['THE TURKEY','HAS ITS OWN SEAT.'],300,SEG[3]+0.05,t,52);
+  if(i===4&&t<13.95) captionPop(['STILL ONE CALL:','TABLES AND CHAIRS, DELIVERED.'],300,SEG[4]+0.05,t,42);
+}
+REELS[37]=reelT37;
+SHAKES[37]=[9.0,0.2,8];
+TAGLINES[37]='ONE CALL. EVERY SEAT.';
+window.GAGENDS[37]=14.0;
 </script>
 </body></html>
 

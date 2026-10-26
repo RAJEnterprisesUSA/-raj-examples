@@ -269,6 +269,30 @@ def price_card(name, kicker, headline_html, tiles, note_html, bg, glow, size=(10
             + contact_bar())
     return render(name, body, size, css)
 
+def holiday(name, kicker, headline_html, date_chips, tiles, ask_html, note_html, bg, glow, size=(1080, 1350), chip='Holiday bookings'):
+    """Sun HOLIDAY BOOKING FLYER: fresh-start kicker, headline, TRUE calendar chips, real-price tiles (owner-approved math),
+    the single ask, delivery note, contact bar. Flex column for feed (4:5) and story (9:16, IG safe zone)."""
+    w, h = size; tall = h > 1500
+    cells = ''.join(f"<div class='tile glass'><div class='lbl'>{l}</div><div class='num'>{n}</div><div class='sub'>{sb}</div></div>" for l, n, sb in tiles)
+    chips = ''.join(f"<div class='chip'>{c}</div>" for c in date_chips)
+    css = f""".col{{position:absolute;left:56px;right:56px;top:{290 if tall else 150}px;bottom:{440 if tall else 232}px;display:flex;flex-direction:column;justify-content:space-between}}
+    {'.top{top:200px}.contact{bottom:240px}' if tall else ''}
+    .kick{{font-family:'Inter';font-weight:800;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:14px}}
+    .dates{{display:flex;flex-wrap:wrap;gap:10px;margin-top:{24 if tall else 18}px}}.dates .chip{{height:{54 if tall else 46}px;font-size:{20 if tall else 17}px}}
+    .bento{{display:grid;grid-template-columns:1fr 1fr 1fr;gap:{18 if tall else 14}px}}
+    .tile{{padding:{'28px 24px' if tall else '20px 20px'}}}.lbl{{font-size:{24 if tall else 20}px;font-weight:600;opacity:.92}}
+    .num{{font-family:'Brico';font-weight:800;font-size:{96 if tall else 72}px;letter-spacing:-.04em;line-height:1;margin-top:10px;color:#fff}}
+    .sub{{font-size:{21 if tall else 17}px;opacity:.85;margin-top:8px}}
+    .ask{{font-family:'Brico';font-weight:800;font-size:{52 if tall else 40}px;letter-spacing:-.02em;line-height:1.05}}.ask em{{font-family:'Serif';font-style:italic;font-weight:400;color:#E5B84B}}
+    .note{{font-size:{26 if tall else 22}px;line-height:1.4;opacity:.9;margin-top:12px}}.note b{{color:#E5B84B;font-weight:800}}"""
+    body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
+            + top_bar(f"<div class='chip gold'>{chip}</div>")
+            + f"<div class='col'><div><div class='kick'>{kicker}</div><div class='h1' style='font-size:{112 if tall else 92}px'>{headline_html}</div>"
+              f"<div class='dates'>{chips}</div></div>"
+              f"<div class='bento'>{cells}</div><div><div class='ask'>{ask_html}</div><div class='note'>{note_html}</div></div></div>"
+            + contact_bar())
+    return render(name, body, size, css)
+
 LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
 .chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
 box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}

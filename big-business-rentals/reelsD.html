@@ -5174,6 +5174,111 @@ REELS[90]=familySheet;
 SHAKES[90]=[99,0,0];
 window.ENDTIMES[90]=60;
 
+// ================= EP. 41 · MEET THE FAMILY (SEASON TWO PREMIERE) =================
+// Story rules applied: competence first (he sets a table in 3 seconds), complete punchline, ask only on the end card.
+function kidWithProp(p, s, prop){
+  ctx.save(); ctx.translate(p.x,FLOOR); ctx.scale(s,s); ctx.translate(-p.x,-FLOOR);
+  drawMan(Object.assign({y:HIP_STAND}, p));
+  if(prop) prop(p.x);
+  ctx.restore();
+}
+function dressedTableK(cx,k){
+  if(k<=0) return;
+  ctx.save(); ctx.globalAlpha=Math.min(1,k);
+  ctx.fillStyle='#fbfbf7'; ctx.strokeStyle=INK; ctx.lineWidth=7;
+  ctx.beginPath(); ctx.moveTo(cx-230,FLOOR-236); ctx.lineTo(cx+230,FLOOR-236); ctx.lineTo(cx+246,FLOOR-110); ctx.lineTo(cx-246,FLOOR-110); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.fillRect(cx-230,FLOOR-246,460,12);                                   // gold runner
+  [-150,-50,50,150].forEach(dx=>{ ctx.fillStyle='#fff'; ctx.beginPath(); ctx.ellipse(cx+dx,FLOOR-246,30,9,0,0,7); ctx.fill(); ctx.stroke(); });
+  miniPumpkin(cx, FLOOR-262);
+  ctx.restore();
+}
+function ep41(t){
+  const FREEZES=[[14.6,15.6]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.14*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(380,1250); ctx.scale(z,z); ctx.translate(-380,-1250); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  // the table Dad sets in 3 seconds (competence first)
+  const tk=easeOutBack(Math.min(1,Math.max(0,(tt-0.5)/0.35)));
+  ctx.save(); ctx.translate(880,FLOOR); ctx.scale(0.72,0.72); ctx.translate(-880,-FLOOR);
+  if(tk>0){ ctx.save(); ctx.translate(880,FLOOR); ctx.scale(tk,tk); ctx.translate(-880,-FLOOR); drawTable(880,0,0); ctx.restore(); }
+  // ...which Vaeh quietly dresses while everyone poses
+  if(tt>=18.8) dressedTableK(880, (tt-18.8)/0.4);
+  ctx.restore();
+  // PRINCESS's throne chair
+  if(tt>=7.2) drawChair(560,0,0,0);
+  // MR. BIG BUSINESS (Season Two look)
+  const pose=(tt>=13.2&&tt<15.6)?{arm:{sh:165,el:-20}}:{arm:{sh:60,el:24}};
+  let mp={x:130, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pose.arm, mouth:'smile', style:STYLER2};
+  if(tt<2.4) mp.arm={sh:120,el:-30};
+  if(tt>=19.6&&tt<21.4){ mp.eyes='wide'; mp.mouth='o'; }
+  drawMan(mp);
+  // LIL BIG BUSINESS: Dad's pose, Dad's chair carry
+  if(tt>=2.4){
+    const k=easeOutBack(Math.min(1,(tt-2.4)/0.3));
+    kidWithProp({x:290, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pose.arm, mouth:'smile', style:STYLELB}, KIDSCALE.lil*k,
+      null);
+  }
+  // BABY BIG BUSINESS: whatever big brother does
+  if(tt>=4.8){
+    const k=easeOutBack(Math.min(1,(tt-4.8)/0.3));
+    kidWithProp({x:420, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pose.arm, mouth:(tt>=13.2&&tt<15.6)?'o':'smile', style:STYLEBB}, KIDSCALE.baby*k,
+      null);
+  }
+  // PRINCESS: standing on her throne
+  if(tt>=7.2){
+    const k=easeOutBack(Math.min(1,(tt-7.2)/0.3)), s=KIDSCALE.princess*k;
+    const point=(tt>=17.2&&tt<18.8);
+    ctx.save(); ctx.translate(0, SEAT_TOP-FLOOR);
+    kidWithProp({x:560, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:point?{sh:95,el:-4}:{sh:150,el:-30}, mouth:point?'flat':'smile', style:STYLEPB}, s);
+    if(k>0.2) tiaraK(560, kidHeadY(s)+8, s*1.3);
+    ctx.restore();
+  }
+  // VAEH: slides in on her phone, never looks up
+  if(tt>=9.8){
+    const k=ease((tt-9.8)/0.6), x=lerp(1250,960,k);
+    kidWithProp({x:x, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, KIDSCALE.vaeh);
+    headphonesK(x, kidHeadY(KIDSCALE.vaeh), KIDSCALE.vaeh, -1);
+    phoneK(x-52*KIDSCALE.vaeh, FLOOR-470*KIDSCALE.vaeh, KIDSCALE.vaeh, true);
+  }
+  // THE CAT: walks up to the throne, Princess points, the cat leaves (the cat allows it)
+  if(tt>=15.6&&tt<18.8){
+    let cx=(tt<16.4)?lerp(1200,640,ease((tt-15.6)/0.8)):(tt<17.8?640:lerp(640,1250,ease((tt-17.8)/1.0)));
+    const walking=(tt<16.4||tt>=17.8);
+    drawCatD(cx, FLOOR, {pose:walking?'trot':'sit', face:(tt>=17.8)?1:-1, t:t, s:1.1});
+  }
+  ctx.restore();
+  // name cards while each one is introduced
+  if(t>=2.5&&t<13.0) nameCardK(300, FLOOR+40, 'LIL BIG BUSINESS', "10 · DAD'S MINI-ME");
+  if(t>=4.9&&t<13.0) nameCardK(450, FLOOR+130, 'BABY BIG BUSINESS', '5 · THE TUFF ONE');
+  if(t>=7.3&&t<13.0) nameCardK(640, FLOOR+40, 'PRINCESS', '6 · EVERY CHAIR = A THRONE');
+  if(t>=9.9&&t<13.0) nameCardK(920, FLOOR+130, 'VAEH', '17 · SO EMBARRASSED');
+  if(t>=14.6&&t<14.85){ ctx.save(); ctx.globalAlpha=1-(t-14.6)/0.25; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  if(t>=20.2&&t<21.0){const kk=easeOutBack(Math.min(1,(t-20.2)/0.25)); starburst(560,FLOOR-980,kk*1.0,'OOF.');}
+  if(t>=21.4) confettiBurst(t,21.4,540,FLOOR-500,60,2.4);
+  showBadge(41);
+  if(t<2.4) captionPop(['SEASON TWO.','HE SETS A TABLE IN 3 SECONDS.'],340,0.05,t,44);
+  if(t>=2.4&&t<4.7) captionPop(['MEET LIL BIG BUSINESS.',"DAD'S MINI-ME."],340,2.4,t,46);
+  if(t>=4.8&&t<7.1) captionPop(['BABY BIG BUSINESS DOES','WHATEVER BIG BRO DOES.'],340,4.8,t,42);
+  if(t>=7.2&&t<9.7) captionPop(['PRINCESS.','EVERY CHAIR IS A THRONE.'],340,7.2,t,48);
+  if(t>=9.8&&t<11.1) captionPop(['AND VAEH.'],340,9.8,t,60);
+  if(t>=11.2&&t<12.6) captionPop(['...this is SO embarrassing.'],340,11.2,t,46);
+  if(t>=12.7&&t<14.5) captionPop(['FAMILY PHOTO.','SAME POSE. THREE OF A KIND.'],340,12.7,t,44);
+  if(t>=15.7&&t<18.7) captionPop(['THE CAT LISTENS','TO ONE PERSON.'],340,15.7,t,50);
+  if(t>=18.8&&t<21.3) captionPop(['MEANWHILE, VAEH SET THE','WHOLE TABLE. NEVER LOOKED UP.'],340,18.8,t,40);
+  if(t>=21.4&&t<22.3) captionPop(['THE HOLIDAYS','ARE FOR FAMILY.'],340,21.4,t,52);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHICH KID','ARE YOU?'],340,22.4,t,56);
+    caption(['SEASON TWO RECORD: 0 W · 1 L'],1700,(t-22.4)/0.35,30);
+  }
+}
+REELS[41]=ep41;
+SHAKES[41]=[14.6,0.2,8];
+TAGLINES[41]='SEASON TWO. THE WHOLE FAMILY.';
+window.ENDTIMES[41]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
