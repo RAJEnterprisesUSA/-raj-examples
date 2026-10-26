@@ -123,3 +123,5 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
 - Oct 24, 2026 ~12:30pm PT, owner chose "Post them all now" for the week's backlog: 18/18 queued
   (queue_backlog_oct24.py). Sat FB+TT: EP. 29 1:30pm, EP. 30 2:30pm, EP. 31 3:30pm, EP. 32 6:30pm.
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
+- Oct 25/26, 2026, owner: "keep guess it on TikTok and ig not fb." Guess the Theme runs on Instagram
+  (AI label on; new formats start as trial reels the owner posts in the app) and TikTok, never Facebook.

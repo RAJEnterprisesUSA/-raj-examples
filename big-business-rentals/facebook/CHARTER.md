@@ -132,3 +132,5 @@ ONE-TIME SETUP CHECKLIST (ask the owner to confirm each)
 - Oct 24, 2026 ~12:30pm PT, owner chose "Post them all now" for the week's backlog: 18/18 queued
   (queue_backlog_oct24.py). Sat FB+TT: EP. 29 1:30pm, EP. 30 2:30pm, EP. 31 3:30pm, EP. 32 6:30pm.
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
+- Oct 25/26, 2026, owner: "Fb can have 3 feed post a day." FREQUENCY CHANGE: up to 3 Facebook feed
+  posts a day (replaces 1 to 2). Guess the Theme does NOT run on Facebook (owner: TikTok and IG only).

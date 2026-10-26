@@ -153,3 +153,5 @@ ONGOING
 - Oct 24, 2026 ~12:30pm PT, owner chose "Post them all now" for the week's backlog: 18/18 queued
   (queue_backlog_oct24.py). Sat FB+TT: EP. 29 1:30pm, EP. 30 2:30pm, EP. 31 3:30pm, EP. 32 6:30pm.
   Sun: Face Rating TT 9am; Getting Robbed 11am, Rocket Delivery 3pm, Cat Judges 5pm on FB+IG+TT.
+- Oct 25/26, 2026, owner: "keep guess it on TikTok and ig not fb." Guess the Theme stays a TikTok
+  format (Pt. 1 clues, Pt. 2 answer); AI label toggle on (photoreal AI images) plus the on-screen stamp.
