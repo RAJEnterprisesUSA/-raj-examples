@@ -235,8 +235,16 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    trend that is live THIS WEEK (this week's TikTok/IG trend roundups, this week's news); never a
    revival or nostalgia format (the Mannequin Challenge remix was pulled for this). Keep the trend's
    format recognizable and only adapt it so the payoff lands on the business.
+   NEWS TOO (owner Oct 26: "it should not only be social media trends, but news trends as well like
+   the release of new technology, stocks, company mergers or whatever, just something positive and
+   new"): every search covers BOTH this week's social formats AND this week's positive news (new tech
+   and product releases, record stock market days, company mergers and deals, space and science firsts,
+   sports milestones). Rotate between the two pools; the topic must be positive and new.
+   Stocks and mergers: celebrate the news only, never give investment advice, price predictions or
+   "buy" talk, and describe companies generically ("a giant chip merger") with no names, logos or tickers.
 2. PICK with guardrails: fun topics only, product launches, viral formats, pop culture, sports
-   moments, absurd stories. NEVER tragedies, deaths, disasters, politics, culture-war topics.
+   moments, absurd stories, positive business and tech news. NEVER tragedies, deaths, disasters,
+   politics, culture-war topics, layoffs, lawsuits or market crashes.
    Parody the IDEA, never the brand: no logos, trademarks, celebrity likenesses or implied
    affiliation (same spirit as the rodeo rule: ride the trend, not the brand). A "flying roadster"
    gag is fine, a Tesla logo is not. No licensed audio via API: remix the FORMAT with our own

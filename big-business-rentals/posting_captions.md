@@ -3040,3 +3040,11 @@ FB 8pm: the big business chronicles ep. 39: the night before the halloween party
 IG 8pm: The Big Business Chronicles EP. 39: the night before the Las Vegas Halloween party, one last flashlight check, and he was not alone. 🔦 #thebigbusinesschronicles #lasvegas #halloweenparty #comedy #animation
 TT 8pm: The Big Business Chronicles EP. 39: one last check the night before the party. He was not alone. 🔦 #thebigbusinesschronicles #halloween #comedy #animation
 YT 8pm: "EP. 39: The Night Before 🔦 he was not alone #Shorts" / ...and he was not alone. Next episode tomorrow: the finale. #thebigbusinesschronicles #halloween #comedy
+
+## RULE CHANGE Oct 26 (owner): TREND REMIX TOPICS INCLUDE NEWS
+"another thing about the trends, it should not only be social media trends, but news trends as well like the release
+of new technology, stocks, company mergers or whatever, just something positive and new."
+From the Saturday Oct 31 build: each trend search covers this week's social formats AND this week's positive news (tech
+and product releases, record market days, mergers and deals, space/science firsts, sports milestones); rotate between them.
+Guardrails: positive and new only; no investment advice, predictions or "buy" talk; companies described generically with
+no names, logos or tickers; never layoffs, lawsuits, crashes, politics or tragedies. Recorded in CLAUDE.md TREND REMIX LANE.
