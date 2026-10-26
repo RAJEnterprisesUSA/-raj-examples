@@ -22,6 +22,9 @@ ART, AI SKIT) stay too. Drawn rig animation never gets a label.
 AI SKIT RULE (owner Oct 20 night, all platforms): every AI skit revolves around the business
 (setups, teardowns, tent setups, linens, loading, deliveries) and its main character is always
 a Black man or woman, the competent pro; humor from the situation, never identity or stereotype.
+UPGRADE RULE (owner Oct 25: "i want to always upgrade something when ever we can"): every build ships
+at least one visible production upgrade over the last one (sound, captions, motion, covers, frame rate,
+resolution). Log the upgrade with the captions. Upgrade backlog + research: big-business-rentals/UPGRADES.md.
 EVERYWHERE RULE (owner Oct 24): every Chronicles episode and every trend remix video posts on ALL
 FOUR platforms (FB, IG, TikTok, YouTube) with each platform's caption rules; this overrides the
 per-platform caps for those two formats. Max 1 TikTok post a day while median views
