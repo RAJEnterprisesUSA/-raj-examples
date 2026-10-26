@@ -265,6 +265,13 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    the old gag slot, on all four channels: FB reel + IG reel + TikTok + YouTube (cat 23). The
    TikTok 4-post cap holds: PRICE IT + trend + pink + episode through Oct 31.
 5. LOG the day's topic, source and angle in posting_captions.md with the captions.
+6. FRESH NIGHTLY BUILD (owner Oct 26: "ok lets start doing that"): trend/news remixes are NO LONGER batched days ahead.
+   Each remix is built the evening before it posts (a daily scheduled task fires into the session at 6:34pm Vegas):
+   fresh extended search that day (alternate the social and positive-news pools), pick, script, 8-frame QA, render,
+   send the video + all four captions to the owner, and queue for 5pm the next day ONLY after he approves ("queue it").
+   Every remix is under ~24 hours old when it posts. Episodes, weekly promos and Guess the Theme stay batched ahead.
+   The week of Oct 26 to Nov 1 stays as already queued (owner: "keep this week the same"); the first fresh build is the
+   evening of Sun Nov 1 for Mon Nov 2. From Nov 1 remixes use the Season Two look (STYLER2).
 
 ## PSYCHOLOGY PLAYBOOK (owner Oct 26: "apply what needs to be applied", from reports/Psychology for social growth.md)
 LEADS FIRST (these beat anything for reach):

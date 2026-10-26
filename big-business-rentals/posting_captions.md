@@ -3113,3 +3113,8 @@ FB 8pm: the big business chronicles, season two, ep. 41: meet the family. vaeh, 
 IG 8pm: The Big Business Chronicles Season Two, EP. 41: meet the family. Mr. Big Business brought the kids for the Las Vegas holiday season. Which kid are you? 🏡 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles Season Two: meet the family. Which kid are you? 🏡 #thebigbusinesschronicles #seasontwo #family #comedy
 YT 8pm: "EP. 41: Meet the Family 🏡 Season Two premiere #Shorts" / ...and Vaeh set the whole table without looking up. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## RULE CHANGE Oct 26 (owner: "ok lets start doing that. and keep this week the same."): FRESH NIGHTLY TREND REMIX
+Trend/news remixes are built the evening before they post (daily scheduled task 6:34pm Vegas into this session): fresh
+search, build, owner approval, queue for 5pm next day, so every remix is under ~24 h old. Episodes, promos and Guess the
+Theme stay batched. Week of Oct 26 to Nov 1 unchanged; first fresh build Sun Nov 1 evening for Mon Nov 2.
