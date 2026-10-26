@@ -164,3 +164,4 @@ ONGOING
   list, Sun holiday booking flyer. Each built as a package and queued only after owner approval.
 - Oct 26, 2026, owner approved "queue both for 1pm": Guess the Theme No. 2 Día de los Muertos queued on TikTok, Pt. 1 Wed Oct 28 1pm (6adfa7733aaff6c7f599e6b0), Pt. 2 Thu Oct 29 1pm (6adfa7763aaff6c7f599e746), AI label ON verified. Script tiktok/queue_gtt2.py.
 - Oct 26, 2026, owner approved "queue friday": Fri Oct 30 queued (10/10 OK, queue_fri30.py): 1pm Holiday Seating Cheat Sheet carousel (FB album + IG carousel), 5pm trend remix #12 Be OK and 8pm EP. 39 The Night Before on FB, IG, TikTok and YouTube (drawn animation, no AI label).
+- Oct 26, 2026, owner approved "queue saturday": Sat Oct 31 queued (10/10 OK, queue_sat31.py): 1pm price list (FB feed + IG Story), 5pm trend remix #13 The Merger (first news remix) and 8pm EP. 40 The Halloween Party, the Season One finale, on FB, IG, TikTok and YouTube (drawn animation, no AI label).

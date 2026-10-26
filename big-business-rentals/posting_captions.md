@@ -3049,3 +3049,31 @@ and product releases, record market days, mergers and deals, space/science first
 Guardrails: positive and new only; no investment advice, predictions or "buy" talk; companies described generically with
 no names, logos or tickers; never layoffs, lawsuits, crashes, politics or tragedies. Recorded in CLAUDE.md TREND REMIX LANE.
 Owner follow-up Oct 26: "no advice. only ways to remix it to use it for my business." News is only the setup; the video never explains, rates or comments on the news, it only turns it into a party rental joke. Added to CLAUDE.md.
+
+## SATURDAY OCT 31 · PRICE LIST (1pm) + TREND REMIX #13 THE MERGER (5pm, first NEWS remix) + EP. 40 THE HALLOWEEN PARTY (8pm)
+Owner approved "queue saturday". Queued 10/10 OK (queue_sat31.py). Season One look kept on both videos (owner: "the new
+look is for the new season").
+PRICE LIST: flyers2026/BB26_PriceList_Sat31.png (FB feed) + _Story.png (IG Story), Flyer 2026 burgundy, owner's card prices
+only ($2 / $10 / $15 / $22 seats 6; delivered and picked up; full-service from $265). FB 6adfc332465475d2877671a6.
+TREND #13 BB_Trend_TheMerger (reelH REELS[36], 17.2s, GAGENDS 14.0). NEWS topic (rule change Oct 26): the week's big company
+mergers (e.g. a $50B+ all-stock energy deal announced Oct 26; sources stocktitan Oct 26 digest, CNBC Oct 25). No company names,
+logos, tickers or advice; the news is only the setup: Party A + Party B tables merge into one long table, Lil Wobbles' hostile
+takeover is DENIED, the cat "board" approves. Payoff "Two tables. One big party."
+EP. 40 THE HALLOWEEN PARTY, SEASON ONE FINALE (reelsD REELS[40], 26s): guests arrive (Mrs. Never Wrong in a witch hat, Unc,
+Tyler "...im the new intern."), four chairs four guests and no seat for the host, Lil Wobbles offers his seat ("...no thank you"),
+the extra chair from the truck lands, WIN No. 5, Wobbles holds the cat, group-photo freeze "SEASON ONE: COMPLETE.", "SEASON TWO:
+COMING SOON." FINAL SEASON ONE RECORD 5 W · 21 L.
+UPGRADE: wide-shot camera for the full cast + printed group-photo freeze frame; Flyer 2026 price card fills feed and story.
+FB 1pm: Real prices, no guessing. Folding chairs are $2, 6 ft rectangle tables are $10, 6 ft round tables are $15, or get a table with 6 chairs for $22. Everything is delivered and picked up across Las Vegas, and full-service setup starts at $265. Questions? The chat on our website answers right away. #LasVegas #PartyRentals #VegasEvents #TablesAndChairs #LasVegasParty
+FB 5pm: big merger news this week, party rental edition: two small parties, one long table. 🤝 #lasvegas #merger #partyrentals #animation #comedy
+IG 5pm: Big merger news this week, Las Vegas party rental edition: two small parties became one long table, and the board approved. 🤝 #merger #partyrentals #lasvegas #comedy #animation
+TT 5pm: Big merger news this week. Party rental edition. 🤝 #merger #businessnews #partyrentals #comedy
+YT 5pm: "The merger, party rental edition 🤝 #Shorts" / Two small parties merged into one long table, and the board approved. #merger #partyrentals #comedy
+FB 8pm: the big business chronicles ep. 40, the season one finale: the halloween party. full cast, one missing seat, and the extra chair on the truck. 🎃 #lasvegas #halloweenparty #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 40, the Season One finale: the whole cast at the Las Vegas Halloween party, and the extra chair saved the night. 🎃 #thebigbusinesschronicles #lasvegas #halloweenparty #seasonfinale #comedy
+TT 8pm: The Big Business Chronicles EP. 40, Season One finale: the host had no seat. The extra chair was on the truck. 🎃 #thebigbusinesschronicles #halloween #seasonfinale #comedy
+YT 8pm: "EP. 40: The Halloween Party 🎃 Season One finale #Shorts" / ...and the extra chair saved the night. Season Two is coming soon. #thebigbusinesschronicles #halloween #comedy
+
+## SEASON TWO FAMILY (owner Oct 26): Mr. Big Business's kids Vaeh (17), Lil Big Business (10), Princess (6), Baby Big Business (5);
+whole family light brown skin; MBB Season Two look = smooth slicked-back ponytail bun + beard, no mustache. Mrs. Never Wrong is NOT
+the kids' mom. New look + family start with Season Two in November. Bible: CAST.md.

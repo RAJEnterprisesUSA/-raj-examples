@@ -52,7 +52,10 @@ Humor always comes from the situation (family party chaos, setups, seating), nev
 - BABY BIG BUSINESS · 5, a boy, the youngest · rig STYLEBB: short locs, yellow tee, blue pants.
   THE TUFF ONE (owner Oct 26): does everything his big brother does. Lil Big Business carries a chair, Baby carries a
   chair. Lil jumps, Baby jumps higher. Never cries, never backs down, always one step behind his brother on purpose.
-OPEN QUESTION FOR THE OWNER: is Mrs. Never Wrong the kids' mom? Do not write her as their mother until he says so.
+MRS. NEVER WRONG IS NOT THE KIDS' MOM (owner Oct 26). Never write her as their mother. The kids' mom is not a character
+unless the owner adds one.
+TIMING (owner Oct 26): the new look and the family are for the NEW SEASON (Season Two, November). Season One episodes,
+including the EP. 40 finale, keep the Season One look.
 
 ## Voices (ElevenLabs, verified working Oct 5)
 Credential: environment credential "ElevenLabs" injects xi-api-key for api.elevenlabs.io (no env var needed).
