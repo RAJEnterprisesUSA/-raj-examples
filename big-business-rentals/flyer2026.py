@@ -152,7 +152,7 @@ def venue(name, photo, headline_html, size=(1080, 1350)):
             + contact_bar())
     return render(name, body, size, css)
 
-def bento_promo(name, chip, headline_html, tiles, note_html, bg, glow, size=(1080, 1350), kicker='', uses=()):
+def bento_promo(name, chip, headline_html, tiles, note_html, bg, glow, size=(1080, 1350), kicker='', uses=(), extra_css=''):
     """Generic promo: chip, big headline, 2x2 bento of real prices, one note line, contact bar.
     tiles = [(label, number, tag_or_empty)], bg/glow = CSS colors for the gradient."""
     cells = ''.join(f"<div class='tile glass'><div class='lbl'>{l}</div><div class='num'>{n}</div>"
@@ -172,7 +172,31 @@ def bento_promo(name, chip, headline_html, tiles, note_html, bg, glow, size=(108
               f"<div class='h1' style='font-size:98px'>{headline_html}</div></div>"
             + ("<div class='uses'>" + ''.join(f"<div class='chip'>{u}</div>" for u in uses) + "</div>" if uses else '')
             + f"<div class='bento'>{cells}</div><div class='note'>{note_html}</div>" + contact_bar())
+    return render(name, body, size, css + extra_css)
+
+def venue_full(name, photo, headline_html, size=(1080, 1350), sub=''):
+    """Group VENUE flyer: the REAL room full-bleed, headline over a dark fade, glass price strip, contact bar."""
+    shutil.copy(photo, OUT/pathlib.Path(photo).name)
+    css = """.vtiles{position:absolute;left:56px;right:56px;bottom:232px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .vt{padding:22px 26px}.vt .k{font-size:23px;font-weight:600;opacity:.92}
+    .vt .v{font-family:'Brico';font-weight:800;font-size:84px;letter-spacing:-.04em;line-height:1;margin-top:6px}
+    .vt .s{font-size:20px;opacity:.85;margin-top:4px}
+    .vfacts{position:absolute;left:56px;right:56px;bottom:452px;display:flex;gap:12px;flex-wrap:wrap}.vfacts .chip{height:50px;font-size:19px;background:rgba(15,10,23,.6)}
+    .shade2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,23,.9) 0%,rgba(15,10,23,.6) 30%,rgba(15,10,23,.12) 48%,rgba(15,10,23,.8) 66%,rgba(15,10,23,.97) 100%)}"""
+    body = (f"<div class='bg' style=\"background-image:url('{pathlib.Path(photo).name}');background-position:40% 60%\"></div><div class='shade2'></div>"
+            + top_bar("<div class='chip gold'>Private party room</div>")
+            + f"<div style='position:absolute;left:56px;right:56px;top:165px'><div class='h1' style='font-size:120px'>{headline_html}</div>"
+              + (f"<div style='margin-top:18px;font-size:34px;font-weight:600'>{sub}</div>" if sub else '') + "</div>"
+            + "<div class='vfacts'><div class='chip'>Seats 40</div><div class='chip'>Holds 80 standing</div><div class='chip'>Tables, chairs + setup included</div></div>"
+            + "<div class='vtiles'><div class='vt glass'><div class='k'>3 hours</div><div class='v'>$625</div><div class='s'>up to 25 guests</div></div>"
+              "<div class='vt glass'><div class='k'>4 hours</div><div class='v'>$800</div><div class='s'>up to 40 guests</div></div></div>"
+            + contact_bar())
     return render(name, body, size, css)
+
+LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
+.chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
+box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}
+.kick{color:#b8862a!important}.note b{color:#9a6b17!important}.grain{opacity:.07}.contact .ln,.scan{opacity:.8}"""
 
 if __name__ == '__main__':
     print(price_it('BB26_PriceIt_HalloweenGala', BASE/'inspo/setup_halloweengala.png'))

@@ -156,3 +156,140 @@ Folding chairs $2, table with 6 chairs $22, 48 seats for $176, delivered and pic
 Halloween party this Saturday? Tables and chairs delivered and picked up in Las Vegas. Chairs $2, table plus 6 chairs $22.
 
 📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+---
+
+## THE 88-GROUP PUSH (owner Oct 26: "2 more flyers. And the 3 will be spread across 88 fb groups")
+
+Three Flyer 2026 group flyers, all prices from the owner's card, QR verified to open the website:
+- **H** = `flyers2026/BB26_Group_HalloweenSaturday.png` (stop after Fri Oct 30)
+- **R** = `flyers2026/BB26_Group_PartyRoom.png` (the real room; $625 / $800 venue packages)
+- **X** = `flyers2026/BB26_Group_Holidays.png` (light cream; Thanksgiving, office parties, December)
+
+### Why it's spread over 8 days
+Posting the same flyer in dozens of groups in one sitting is the fastest way to get the account
+blocked from posting in groups, or to have the posts held as spam. About 11 groups a day, a few
+minutes apart, with a different caption each time, keeps it looking like a person and not a bot.
+
+| Day | H Halloween | R Party room | X Holidays | Total |
+|---|---|---|---|---|
+| Mon Oct 26 | 7 | 2 | 2 | 11 |
+| Tue Oct 27 | 7 | 2 | 2 | 11 |
+| Wed Oct 28 | 8 | 2 | 1 | 11 |
+| Thu Oct 29 | 7 | 2 | 2 | 11 |
+| Fri Oct 30 | 0 | 6 | 5 | 11 |
+| Sat Oct 31 | 0 | 5 | 6 | 11 |
+| Sun Nov 1 | 0 | 5 | 6 | 11 |
+| Mon Nov 2 | 0 | 5 | 6 | 11 |
+| **Total** | **29** | **29** | **30** | **88** |
+
+**Which flyer goes to which group:**
+- **H:** neighborhood, moms and local event groups.
+- **R:** birthday, baby shower, moms and "things to do" groups.
+- **X:** office, church, Latino and HOA groups, plus anything about Thanksgiving or the holidays.
+- The tracker (`community/groups_88_tracker.csv`) has a row for each of the 88 posts.
+  Fill in the group name, tick it off when posted, and note any calls or messages it brings.
+  Bring it Sunday and we'll keep the groups that produce leads and drop the rest.
+
+**Rules for every post:**
+- Read the group's rules first; some only allow business posts on a promo day or in a thread.
+- Rotate the caption numbers below; never the same caption twice in a day.
+- No buy-and-sell groups or Marketplace, since rentals and services break Meta's commerce rules.
+- Answer comments within the hour.
+
+### H · Halloween captions (H-A, H-B, H-C are above)
+
+**H-D**
+Throwing something for Halloween this weekend? Tables and chairs, delivered and picked up anywhere in Las Vegas.
+
+Chairs are $2 and a table with 6 chairs is $22. Eight sets seat 48 for $176. Scan the code on the flyer for a quote, or call.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**H-E**
+The candy is handled. Are the seats?
+
+If you are hosting this Saturday, we bring the tables and chairs and come back for them after. A table with 6 chairs is $22, and delivery is quoted with your order. Full-service setup starts at $265 if you would rather not lift a thing.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**H-F**
+Trunk-or-treat, block party or a costume party in the backyard? Las Vegas, we have you covered on seating.
+
+Folding chairs $2, 6 ft rectangle tables $10, 6 ft round tables $15. Delivered and picked up. Ask the chat on our website for a fast answer on your date.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+### R · Party room captions
+
+**R-A**
+Want to host the party without cleaning your house before and after?
+
+Our private party room in Las Vegas seats 40 and holds 80 standing. Three hours is $625 for up to 25 guests and four hours is $800 for up to 40, with tables, chairs and setup included.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**R-B**
+Birthdays, baby showers, team nights and holiday dinners: you bring the people, the room is ready.
+
+Private party room, seats 40, holds 80 standing. $625 for three hours (up to 25 guests) or $800 for four hours (up to 40). Tables, chairs and setup are included.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**R-C**
+Looking for a small event space in Las Vegas? This is the actual room in the photo.
+
+Seats 40, holds 80 standing, and tables, chairs and setup are included. Three hours is $625 and four hours is $800. Call to check a date, or scan the code on the flyer.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**R-D**
+Your house stays clean. The party still happens.
+
+Book our private room for three hours at $625 (up to 25 guests) or four hours at $800 (up to 40). Setup is included, so you just show up.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**R-E · Español**
+¿Quieres hacer la fiesta sin limpiar tu casa antes y después?
+
+Nuestro salón privado en Las Vegas tiene lugar para 40 sentados y 80 de pie. Tres horas cuestan $625 (hasta 25 invitados) y cuatro horas $800 (hasta 40), con mesas, sillas y montaje incluidos.
+
+📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
+
+### X · Holiday captions
+
+**X-A**
+Hosting Thanksgiving or Friendsgiving this year? We bring the seats.
+
+A table with 6 chairs is $22, and 8 tables with 48 chairs is $176, delivered and picked up anywhere in Las Vegas. Delivery is quoted with your order.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**X-B**
+Office holiday party on the calendar? We are booking November and December now.
+
+Tables and chairs delivered and picked up, or full-service setup and breakdown from $265 so your team never stacks a chair.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**X-C**
+The whole family is coming this year. Where is everybody sitting?
+
+6 ft round tables are $15, folding chairs are $2, and a table with 6 chairs is $22. Delivered and picked up across Las Vegas. The chat on our website answers questions right away.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**X-D**
+Church dinner, HOA party or a holiday potluck? Seating for 48 is $176.
+
+That is 8 tables and 48 chairs, delivered and picked up in Las Vegas. Full-service setup is available from $265.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**X-E · Español**
+¿Te toca la posada o la cena de Navidad este año? Nosotros llevamos las mesas y sillas.
+
+Una mesa con 6 sillas cuesta $22, y 8 mesas con 48 sillas $176. Te las llevamos y las recogemos en Las Vegas. También hay montaje completo desde $265.
+
+📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
