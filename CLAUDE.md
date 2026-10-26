@@ -119,8 +119,9 @@ Research backing the strategy: `reports/Party rental content strategy.md`.
    at 3pm Vegas, FB + IG feed (card or 4-5 slide carousel, same design system). NATIVE Spanish copy
    written for the audience, never a literal translation of an English post. Theme rotation:
    quinceañeras, posadas/December holiday bookings, el venue, referidos (hasta $100), Halloween dates,
-   services. CTA: phone + "Escríbenos al chat de bigbusinesspartyrentals.com" + "Envía esto a..."
-   share lines; NO Spanish keyword-DM CTAs until the owner confirms he answers Spanish DMs.
+   services. CTA: phone + "Escríbenos al chat de bigbusinesspartyrentals.com" + the single ask
+   "Mándanos tu fecha y número de invitados" ("Envía esto a..." share lines RETIRED Oct 26, see
+   PSYCHOLOGY PLAYBOOK); NO Spanish keyword-DM CTAs until the owner confirms he answers Spanish DMs.
    Hashtags Spanish + local, max 5. Spanish pinned comments for this lane's posts, verbatim:
    FB(ES): "¿Planeando una fiesta? Síguenos también en Instagram: montajes reales y fechas disponibles.\ninstagram.com/bigbusiness_rentals_events"
    IG(ES): "Sigue a @bigbusiness_rentals_events para ver montajes reales y fechas disponibles. También estamos en Facebook: facebook.com/profile.php?id=61589138907701" 
@@ -151,8 +152,9 @@ routed as story. FB posts may stay as feed posts. Trial Reels cannot be
 scheduled via API (manual only). All videos also go to YouTube Shorts and TikTok.
 HASHTAGS: HARD MAX 5 per caption (Instagram caps meaning at 5 since 2026); prefer local + niche mix.
 Captions: FB/IG version AND YouTube Shorts version (title + description + #Shorts) for every video.
-Caption style: first line = question or bold claim; include a "send this to..." share line and/or ONE keyword CTA
-("Comment VENUE and we will DM you..."); never engagement bait ("comment yes", "tag 3 friends").
+Caption style: first line = question or bold claim; ONE clear ask: "Message us your date and headcount" (or the
+website chat line). "Send this to..." share lines and "Comment WORD" keyword CTAs are RETIRED on every platform
+(owner Oct 26, PSYCHOLOGY PLAYBOOK); never engagement bait ("comment yes", "tag 3 friends").
 Weekly: all-new flyer designs and all-new reel material every week, nothing reused.
 WEEKLY ANALYTICS (Sundays): run big-business-rentals/build_weekly_report.py (pulls sent-post metrics from
 Buffer GraphQL, groups by lane). After 2+ weeks of data, let winning lanes/hooks steer content and times.
@@ -171,16 +173,16 @@ Thu 10/8 VGK home opener (verify vs NHL.com): Thursday 1pm PRICE IT stays Hockey
 Sat 10/10 World Mental Health Day (pair with pink lane); Sun 10/11 Raiders at New England 10am PT = brunch
 watch party angle; pitch Pinterest-trend "midnight masquerade" venue package for adult Halloween;
 F1 Vegas Nov 19-21 = corporate booking look-ahead.
-CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) require the owner to answer comment DMs daily
-(owner confirmed Oct 5 he sends the DMs; ready-made DM replies for each keyword are in chat history).
+CONVERSION NOTE: keyword CTAs (QUOTE/VENUE/SPOOKY) are RETIRED (Oct 26). Leads come in by DM, site chat and
+phone; reply templates live in big-business-rentals/playbook/reply_templates.md (one-hour reply standard).
 WEBSITE CHATBOT CTA (owner directive Oct 7 night, applies from the Friday Oct 9 build onward): the
 chatbot on bigbusinesspartyrentals.com is a third conversion path alongside keyword DMs and calls.
 Every day AT LEAST TWO captions direct people to it with a line like "Questions? The chat on
 bigbusinesspartyrentals.com answers right away." or "Skip the wait, chat with us at
 bigbusinesspartyrentals.com." Rotate the wording, never robotic-sounding, never replace the standing
 contact line (that stays verbatim). CTA slides may use "CHAT WITH US AT BIGBUSINESSPARTYRENTALS.COM"
-as the clear action in rotation with keyword CTAs and "send this to...". DM replies to keywords should
-also point people to the site chat for instant answers after hours. (Site unreachable from this
+as the clear action in rotation with "MESSAGE US YOUR DATE AND HEADCOUNT". DM replies should also point
+people to the site chat for instant answers after hours. (Site unreachable from this
 environment through the proxy; copy stays tool-agnostic, just "the chat on our website".)
 PRICE IT LANE (owner request Oct 5; made DAILY the same night): "How Much Would You Pay For This Setup?"
 engagement post EVERY DAY in the 1pm FEED slot (FB + IG). ALTERNATE INDOOR AND OUTDOOR setups day by day
@@ -220,7 +222,9 @@ Approved expansions ("ok"), live now:
   report; owner pastes it into business.google.com. No hashtags on Google. Pinned-comment texts
   are allowed on Google posts per the firstComment rule.
 - SUNDAY REPORT COUNTS LEADS: ask the owner each Sunday for rough call/DM/site-chat counts and
-  fold them into the weekly report; steer lanes by leads, not reach.
+  fold them into the weekly report; steer lanes by leads, not reach. From Nov 1 also ask (PSYCHOLOGY
+  PLAYBOOK): which post or source each lead mentioned, rough median reply time, referred vs not referred,
+  and new Google reviews this week. Compare leads from posts WITH prices vs WITHOUT prices.
 PENDING OWNER INPUT (ask when relevant, never invent): weekly OPEN DATES list (unlocks scarcity posts; becomes the
 countdown lane's replacement after Oct 31 as a December-dates countdown), SPANISH DM confirmation
 (unlocks "Comenta COTIZA" keyword CTAs in the español lane), weekly $5-10 boost pick (report names
@@ -262,6 +266,41 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    TikTok 4-post cap holds: PRICE IT + trend + pink + episode through Oct 31.
 5. LOG the day's topic, source and angle in posting_captions.md with the captions.
 
+## PSYCHOLOGY PLAYBOOK (owner Oct 26: "apply what needs to be applied", from reports/Psychology for social growth.md)
+LEADS FIRST (these beat anything for reach):
+- ONE-HOUR REPLY STANDARD for DMs, site chat and comments in business hours; after-hours chat reply asks for date +
+  headcount. Templates: big-business-rentals/playbook/reply_templates.md (EN + ES). Sign replies with a first name.
+- ONE ASK EVERYWHERE: "Message us your date and headcount" (ES: "Mándanos tu fecha y número de invitados"). Offer at most
+  2 to 3 options in any reply. The default answer is a number of $22 sets (table + 6 chairs).
+- PRICES: show real prices, then per-guest framing. OWNER-APPROVED DERIVED FIGURES (Oct 26, from his card; delivery
+  always "quoted with your order"): set = $10 table + 6 x $2 chairs = $22 = $3.67 per seated guest; 2 sets $44 (12 guests),
+  4 sets $88 (24), 6 sets $132 (36), 7 sets $154 (40, 42 seats), 8 sets $176 (48), 10 sets $220 (60); venue $625 / 25 =
+  $25 a guest (3 h) and $800 / 40 = $20 a guest (4 h). NEVER call the set a discount or "save" (it is the same price as
+  the parts). No decoys, no invented "regular price" anchors, never change the owner's prices.
+- REVIEWS: ask every completed customer for a Google review with the neutral script in playbook/review_ask.md; no reward,
+  no filtering; reply personally to every review naming the event type (FTC 2024 fake-review rule).
+- HONEST SCARCITY ONLY: real calendar facts (e.g. Dec 5, 12 and 19 are the pre-Christmas Saturdays); "booking up" or
+  "X dates left" only from the owner's real open-dates list.
+REFERRALS:
+- Present the up-to-$100 as a THANK-YOU after the event, not a commission; lead with the client's problem the pro solves;
+  keep the fine print verbatim; give referrers the pass-along facts in playbook/referral_partner_kit.md.
+- Public promotion by a paid referrer must carry a short disclosure ("I get a referral thank-you from them") per the FTC
+  Endorsement Guides; the kit says so.
+- No cash referral pitches to teachers or other school employees (school payment rules); teachers stay out of the
+  profession rotation unless the owner says otherwise.
+- A friend-side (two-sided) reward is NOT offered until the owner approves a specific one; never imply one.
+REACH:
+- Trend remix: frame one is already the funny situation with a 3 to 6 word question; publish within ~24 to 48 h of the
+  trend; the punchline must be the tables, chairs, linens, tents or delivery (if the gag works with any logo, rewrite it);
+  last frame matches the first so it loops.
+- Price It and Guess the Theme always CLOSE THE LOOP: Price It gets the real table-and-chair math in the reply or the next
+  post (never price decor); Guess the Theme answer opens on the reveal at second zero with a clue recap and credits correct
+  guessers by @name.
+- Chronicles: Mr. Big Business shows competence FIRST, then loses a side battle; he never loses the client's party. Every
+  episode lands a complete punchline for new viewers; the ask lives on the end card and caption, never inside the story.
+  Season Two builds toward a dated December family party. Lil Wobbles stays the generic cheap competitor chair.
+- Metrics: Instagram sends per reach (non-follower growth); YouTube "Stayed to watch" (hook) vs average % viewed (body).
+
 ## THE BIG BUSINESS CHRONICLES (the show; full bible in big-business-rentals/CAST.md)
 Star: MR. BIG BUSINESS (rig STYLER: slim, fade, green tee). Cast: MRS. NEVER WRONG (STYLEW),
 UNC (default cap style), TYLER THE INTERN (STYLET; running gag: appears from nowhere,
@@ -294,13 +333,13 @@ Every daily card post is a swipeable carousel of 4 to 6 slides at 1080x1350, one
 3. VALUE slides (1-3): ONE tip/number/step each; large gold number or keyword + max two sentences;
    ghost numeral or simple illustration behind.
 4. PAYOFF slide: the surprising result or "here is what to do", set BIGGER than value slides.
-5. CTA slide (last): one clear action (keyword comment CTA or "send this to..."), then logo LARGE,
+5. CTA slide (last): one clear action ("Message us your date and headcount" or the website chat), then logo LARGE,
    phone, site, IG, LAS VEGAS NV. Fine print here when required (referral).
 Design rules: ONE palette + font set across the whole carousel, different palette each day; heavy display
 type + italic serif accents + clean sans; gold accent, thin gold frame, film grain, soft vignette on EVERY
 slide; "n/N" counter + slim gold progress bar on every slide after the first; slides 1 and last must work
 standalone; small brand footer on every slide, large on CTA slide; no em dashes; no photos of real people.
-Caption: question/bold claim first line, then a swipe line, then "send this to..." or ONE keyword CTA,
+Caption: question/bold claim first line, then a swipe line, then the date-and-headcount ask,
 then contact line + hashtags.
 Build: big-business-rentals/build_mon_carousels.py is the reference generator (one HTML per carousel,
 .slide divs, Playwright element screenshots at dsf=2, LANCZOS downscale to 1080x1350).

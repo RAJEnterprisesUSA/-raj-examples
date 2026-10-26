@@ -57,6 +57,18 @@ unless the owner adds one.
 TIMING (owner Oct 26): the new look and the family are for the NEW SEASON (Season Two, November). Season One episodes,
 including the EP. 40 finale, keep the Season One look.
 
+## STORY RULES FROM THE PSYCHOLOGY REPORT (owner Oct 26: "apply what needs to be applied")
+- Competence first, then the loss: Mr. Big Business always looks good at the actual service (the setup, the delivery,
+  the extra chair on the truck). He loses the side battle (the cat, Wobbles, physics), never the client's party.
+  (Pratfall effect: a slip only makes a competent character more likable.)
+- Every episode lands a complete punchline for a brand-new viewer; callbacks and arcs are a bonus for regulars.
+- The ask never goes inside the story: it lives on the end card and in the caption.
+- Recurring true brand facts as callbacks ("the extra chair is always on the truck", delivered and picked up).
+- Lil Wobbles stays the unnamed, generic cheap competitor chair, never our own stock.
+- Season Two (November) builds toward a dated December family holiday party, matching December bookings.
+- Vaeh gets a range of reactions (annoyed, secretly impressed, quietly competent), never a one-note angry character.
+- End cards keep a question for comments and credit fan ideas by @name; count leads that mention the show on Sundays.
+
 ## Voices (ElevenLabs, verified working Oct 5)
 Credential: environment credential "ElevenLabs" injects xi-api-key for api.elevenlabs.io (no env var needed).
 Season One is NOT voiced (owner cancelled Oct 5). IDs kept on file for Season Two reference or promos if he changes his mind:

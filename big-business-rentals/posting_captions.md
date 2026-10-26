@@ -3077,3 +3077,15 @@ YT 8pm: "EP. 40: The Halloween Party 🎃 Season One finale #Shorts" / ...and th
 ## SEASON TWO FAMILY (owner Oct 26): Mr. Big Business's kids Vaeh (17), Lil Big Business (10), Princess (6), Baby Big Business (5);
 whole family light brown skin; MBB Season Two look = smooth slicked-back ponytail bun + beard, no mustache. Mrs. Never Wrong is NOT
 the kids' mom. New look + family start with Season Two in November. Bible: CAST.md.
+
+## RULE CHANGE Oct 26 (owner: "apply what needs to be applied except for number 4") · PSYCHOLOGY PLAYBOOK
+From reports/Psychology for social growth.md. Applied: (1) owner approved the derived price math (set = $10 + 6 x $2 = $22,
+$3.67 per seated guest, 4/7/8/10 sets = $88/$154/$176/$220, venue $25 vs $20 per guest), never a "discount" claim;
+(2) RETIRED "send this to..." share lines and "Comment WORD" keyword CTAs on every platform (handbook, Español lane, carousel
+CTA slide); the single ask is "Message us your date and headcount" / "Mándanos tu fecha y número de invitados";
+(3) referrals: thank-you framing, FTC disclosure line for partners who promote publicly, no cash pitches to teachers or
+school staff, no friend-side reward until the owner approves one. Also applied: one-hour reply standard + templates
+(playbook/reply_templates.md), neutral Google review ask (playbook/review_ask.md), referral partner kit
+(playbook/referral_partner_kit.md), Sunday report adds lead source / reply time / referred vs not / new reviews,
+Price It + Guess the Theme always close the loop, Chronicles competence-first rule (CAST.md). Not applied (owner): item 4,
+weekly open dates. Already-queued posts were not edited.
