@@ -4796,6 +4796,109 @@ REELS[37]=reelT37;
 SHAKES[37]=[9.0,0.2,8];
 TAGLINES[37]='ONE CALL. EVERY SEAT.';
 window.GAGENDS[37]=14.0;
+
+// ---------- UPGRADE Nov 2: a non-Halloween party room for Season Two remixes (warm plum wall, gold string lights,
+// window with a city-night skyline, wood floor; no moon, bats or pumpkins) ----------
+function roomS2(t){
+  const g=ctx.createLinearGradient(0,0,0,FLOOR); g.addColorStop(0,'#1a0f2b'); g.addColorStop(1,'#3a2148');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,FLOOR);
+  // window with the Vegas night skyline
+  ctx.save(); ctx.lineWidth=10; ctx.strokeStyle='#2a1a10'; ctx.fillStyle='#0d1730'; rr(640,420,360,420,18); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); rr(640,420,360,420,18); ctx.clip();
+  ctx.fillStyle='#1c2a50'; [[660,700,60,160],[730,640,50,220],[790,690,70,170],[870,600,44,260],[925,680,70,180]].forEach(([x,y,w,h])=>{ctx.fillRect(x,y,w,h);});
+  ctx.fillStyle='rgba(255,214,120,.8)'; for(let i=0;i<26;i++){ const x=670+(i*37)%320, y=650+((i*53)%170); if((i+Math.floor(t*2))%5) ctx.fillRect(x,y,8,10); }
+  ctx.restore();
+  ctx.strokeStyle='#2a1a10'; ctx.lineWidth=8; ctx.beginPath(); ctx.moveTo(820,420); ctx.lineTo(820,840); ctx.moveTo(640,630); ctx.lineTo(1000,630); ctx.stroke();
+  // gold string lights
+  ctx.strokeStyle='rgba(229,184,75,.55)'; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.moveTo(0,150); ctx.quadraticCurveTo(W/2,270,W,130); ctx.stroke();
+  for(let i=1;i<9;i++){ const x=i/9*W, y=150+Math.sin(i/9*Math.PI)*112;
+    ctx.fillStyle='rgba(229,184,75,.22)'; ctx.beginPath(); ctx.arc(x,y+10,26,0,7); ctx.fill();
+    ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(x,y+10,9,0,7); ctx.fill(); }
+  ctx.fillStyle='rgba(255,220,160,.05)'; ctx.beginPath(); ctx.moveTo(380,0); ctx.lineTo(720,0); ctx.lineTo(980,FLOOR); ctx.lineTo(140,FLOOR); ctx.closePath(); ctx.fill();
+  const fg=ctx.createLinearGradient(0,FLOOR,0,H); fg.addColorStop(0,'#6a4a2c'); fg.addColorStop(1,'#3a2817');
+  ctx.fillStyle=fg; ctx.fillRect(0,FLOOR,W,H-FLOOR);
+  ctx.strokeStyle='rgba(0,0,0,.25)'; ctx.lineWidth=5; for(let i=0;i<6;i++){ctx.beginPath();ctx.moveTo(0,FLOOR+40+i*60);ctx.lineTo(W,FLOOR+40+i*60);ctx.stroke();}
+}
+// ---------- T38: TREND REMIX · "why matter survived the Big Bang" (17s), NEWS pool ----------
+// News (Nov 1 2026, ScienceDaily): physicists say an overlooked particle may explain why a tiny bit of matter was left
+// over after the Big Bang. Remixed, never explained: one leftover spark of matter = the one extra chair on the truck.
+function spaceT38(t){
+  ctx.fillStyle='#05030c'; ctx.fillRect(0,0,W,H);
+  for(let i=0;i<120;i++){ const r1=Math.sin(i*12.9898)*43758.5453, r2=Math.sin(i*78.233)*12345.678; const fx=r1-Math.floor(r1), fy=r2-Math.floor(r2);
+    ctx.fillStyle='rgba(255,255,255,'+(0.3+0.5*Math.abs(Math.sin(t*2+i)))+')'; ctx.fillRect(fx*W, fy*H, 3, 3); }
+}
+function particlesT38(t){
+  // 0..2.2 the bang (already exploding at frame one), 2.2..5.0 gold vs purple annihilate, one gold spark remains
+  const cx=540, cy=900;
+  const flash=Math.max(0,1-t/0.9);
+  if(flash>0){ const g=ctx.createRadialGradient(cx,cy,10,cx,cy,700); g.addColorStop(0,'rgba(255,240,200,'+flash+')'); g.addColorStop(1,'rgba(255,140,46,0)'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H); }
+  const N=36;
+  for(let i=0;i<N;i++){
+    const a=i/N*Math.PI*2+Math.sin(i)*0.2, sp=260+((i*97)%140);
+    const r=Math.min(1,(t+0.6)/1.8)*sp;
+    const gold=(i%2===0), survivor=(i===0);
+    let alive=1;
+    if(t>2.4 && !survivor){ alive=Math.max(0,1-(t-2.4-(i%9)*0.18)/0.3); }
+    if(alive<=0) continue;
+    const px=cx+Math.cos(a)*r*(t>2.4&&!survivor?(1-0.4*(1-alive)):1), py=cy+Math.sin(a)*r;
+    ctx.save(); ctx.globalAlpha=alive;
+    if(survivor&&t>3.6){ const h=Math.min(1,(t-3.6)/0.6); const g=ctx.createRadialGradient(px,py,4,px,py,90); g.addColorStop(0,'rgba(255,230,150,'+(0.9*h)+')'); g.addColorStop(1,'rgba(255,200,80,0)'); ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,90,0,7); ctx.fill(); }
+    ctx.fillStyle=gold?'#E5B84B':'#9b6bff'; ctx.beginPath(); ctx.arc(px,py,survivor?18:13,0,7); ctx.fill();
+    if(alive<1){ ctx.strokeStyle='rgba(255,255,255,'+(1-alive)+')'; ctx.lineWidth=4; ctx.beginPath(); ctx.arc(px,py,13+30*(1-alive),0,7); ctx.stroke(); }
+    ctx.restore();
+  }
+}
+function tallyT38(x,y,guests,chairs){
+  const ok=chairs>=guests;
+  ctx.save(); ctx.lineWidth=7; ctx.strokeStyle=INK; ctx.fillStyle=ok?'#d9f5d0':'#f6edd8'; rr(x-210,y-120,420,150,26); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.font='40px "Archivo Black"'; ctx.textAlign='center';
+  ctx.fillText(guests+' GUESTS', x, y-58); ctx.fillStyle=ok?'#2f7d32':'#d6312f'; ctx.fillText(chairs+' CHAIRS', x, y-6); ctx.restore();
+}
+function reelT38(t){
+  if(t<7.4){
+    // SPACE: the bang, the annihilation, the one leftover spark; then zoom into the spark
+    // zoom INTO the surviving spark (it sits at 800,900) while sliding it to screen center
+    const zk=(t>=5.0)?ease((t-5.0)/2.0):0, z=1+zk*7;
+    ctx.save(); ctx.translate(lerp(800,540,zk), lerp(900,960,zk)); ctx.scale(z,z); ctx.translate(-800,-900);
+    spaceT38(t);
+    particlesT38(Math.min(t,5.0)+(t>=5.0?0:0));
+    ctx.restore();
+    if(t>=6.8){ ctx.save(); ctx.globalAlpha=(t-6.8)/0.6; ctx.fillStyle='#E5B84B'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  } else {
+    // PARTY PHYSICS: 13 guests, 12 chairs, the truck brings one more
+    roomS2(t);
+    const ROW=[300,420,540,660,780,900];
+    ROW.forEach((x,i)=>{ ctx.save(); ctx.translate(x,FLOOR); ctx.scale(0.62,0.62); ctx.translate(-x,-FLOOR); drawChair(x,0,0,0); ctx.restore(); });
+    ROW.forEach((x,i)=>{ ctx.save(); ctx.translate(x+60,FLOOR+90); ctx.scale(0.62,0.62); ctx.translate(-(x+60),-FLOOR); drawChair(x+60,0,0,0); ctx.restore(); });
+    let chairs=12;
+    if(t>=11.0){
+      const vx=lerp(1400,860,ease((t-11.0)/0.7));
+      if(t<12.6) drawVanH(vx, FLOOR-10, 0, 0.75, 0, t);
+      const k=Math.min(1,Math.max(0,(t-11.8)/0.4));
+      if(k>0){ const cy=lerp(-500,0,k*k); ctx.save(); ctx.translate(0,cy); ctx.save(); ctx.translate(1010,FLOOR+90); ctx.scale(0.62,0.62); ctx.translate(-1010,-FLOOR); drawChair(1010,0,0,0); ctx.restore(); ctx.restore(); }
+      if(k>=1){ chairs=13; if(t<12.8) dust(1010,FLOOR+90,t-12.2); }
+    }
+    const worried=(t>=8.6&&t<12.2);
+    drawMan({x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+      arm:(t>=12.2)?{sh:165,el:-20}:(worried?{sh:150,el:-150}:{sh:60,el:24}), arm2:(t>=12.2)?{sh:160,el:-30}:undefined,
+      mouth:worried?'o':'smile', eyes:worried?'wide':undefined, style:STYLER2});
+    if(worried) sweat(205, HIP_STAND-560, t);
+    tallyT38(640, FLOOR-560, 13, chairs);
+    if(t>=12.3) confettiBurst(t,12.3,640,FLOOR-500,70,2.6);
+  }
+  // captions: the hook is fully on screen at frame one
+  if(t<2.3) caption(['SCIENTISTS MAY KNOW WHY MATTER','SURVIVED THE BIG BANG.'],300,1,40);
+  if(t>=2.4&&t<4.9) captionPop(['ONE TINY BIT OF MATTER','WAS LEFT OVER.'],300,2.4,t,46);
+  if(t>=5.0&&t<7.3) captionPop(['PARTY PHYSICS','WORKS THE SAME WAY.'],300,5.0,t,52);
+  if(t>=7.5&&t<10.9) captionPop(['13 GUESTS SHOWED UP.','12 CHAIRS.'],300,7.5,t,50);
+  if(t>=11.0&&t<12.2) captionPop(['UNLESS...'],300,11.0,t,64);
+  if(t>=12.3&&t<13.95) captionPop(['THE EXTRA CHAIR IS','ALWAYS ON THE TRUCK.'],300,12.3,t,48);
+}
+REELS[38]=reelT38;
+SHAKES[38]=[0.0,0.4,18];
+TAGLINES[38]='ONE EXTRA CHAIR. EVERY TIME.';
+window.GAGENDS[38]=14.0;
 </script>
 </body></html>
 
