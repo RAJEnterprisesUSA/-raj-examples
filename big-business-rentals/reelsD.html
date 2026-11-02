@@ -5279,6 +5279,96 @@ SHAKES[41]=[14.6,0.2,8];
 TAGLINES[41]='SEASON TWO. THE WHOLE FAMILY.';
 window.ENDTIMES[41]=23.5;
 
+// ================= EP. 42 · THE CARRY (Season Two) =================
+// Competence first (Dad moves 8 chairs in one trip), Lil copies Dad, Baby copies Lil (but more), Dad's dolly saves it,
+// Princess turns the dolly into a carriage, Vaeh posts it anyway, the dated December family party is announced.
+function inviteCardK(k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(540,760); ctx.scale(easeOutBack(Math.min(1,k)),easeOutBack(Math.min(1,k))); ctx.rotate(-0.04);
+  ctx.fillStyle='#fbf6ea'; ctx.strokeStyle='#E5B84B'; ctx.lineWidth=10; rr(-330,-170,660,340,30); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#241a10'; ctx.textAlign='center';
+  ctx.font='600 30px Oswald'; ctx.fillText('YOU ARE INVITED', 0, -100);
+  ctx.font='52px "Archivo Black"'; ctx.fillText('THE FAMILY', 0, -30); ctx.fillText('HOLIDAY PARTY', 0, 32);
+  ctx.fillStyle='#b8862a'; ctx.font='40px "Archivo Black"'; ctx.fillText('SAT · DEC 19', 0, 110);
+  ctx.restore();
+}
+function ep42(t){
+  const FREEZES=[[9.6,10.4]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.22*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(300,1100); ctx.scale(z,z); ctx.translate(-300,-1100); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  // the dolly: Dad wheels in 8 chairs, later 3 more land on it, then Princess rides it
+  const dx=(tt<2.2)?lerp(1350,700,ease(tt/2.2)):(tt>=12.6&&tt<15.0?700+Math.sin((tt-12.6)*2.6)*60:700);
+  const n=(tt<10.9)?8:11;
+  drawDolly(dx, n);
+  // three chairs arc from Lil's head onto the dolly (10.4 to 10.9)
+  if(tt>=10.4&&tt<10.9){ const k=(tt-10.4)/0.5;
+    for(let i=0;i<3;i++){ const x=lerp(310,dx,k), y=lerp(FLOOR-430-i*80,FLOOR-260-i*30,k)-Math.sin(Math.PI*k)*160; drawMiniChair(x,y,0.55,'#f2f4f6'); } }
+  // PRINCESS rides the dolly like a carriage
+  if(tt>=11.4){ const k=easeOutBack(Math.min(1,(tt-11.4)/0.3)), s=KIDSCALE.princess*k;
+    ctx.save(); ctx.translate(0,-40);
+    kidWithProp({x:dx-95, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, s);
+    if(k>0.2) tiaraK(dx-95, kidHeadY(s)+8, s*1.3);
+    ctx.restore(); }
+  if(tt>=13.2&&tt<18.0) drawCatD(dx+80, FLOOR-40, {s:0.9, face:1, t:t});
+  // MR. BIG BUSINESS behind the dolly (competence first)
+  const cheer=(tt>=18.4);
+  drawMan({x:dx+200, y:HIP_STAND, face:-1, lean:(tt<2.2)?12:0, legs:(tt<2.2)?[{hip:18*Math.sin(tt*9),knee:8},{hip:-18*Math.sin(tt*9),knee:8}]:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:cheer?{sh:165,el:-20}:((tt>=18.0)?{sh:120,el:-40}:{sh:80,el:-10}), arm2:cheer?{sh:160,el:-30}:undefined,
+    mouth:'smile', eyes:(tt>=9.6&&tt<10.4)?'wide':undefined, style:STYLER2});
+  // LIL BIG BUSINESS: one chair overhead like Dad, then grabs a third and wobbles
+  if(tt>=2.4){
+    const k=easeOutBack(Math.min(1,(tt-2.4)/0.3));
+    const wob=(tt>=8.4&&tt<10.4)?Math.sin(t*14)*8:0;
+    const carry=(tt<10.4)?((tt>=8.4)?3:1):0;
+    kidWithProp({x:300, face:1, rot:wob*0.4, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:carry?{sh:170,el:-10}:(cheer?{sh:165,el:-20}:{sh:60,el:24}), arm2:carry?{sh:170,el:-10}:undefined,
+      mouth:(tt>=8.4&&tt<10.4)?'o':'smile', eyes:(tt>=8.4&&tt<10.4)?'wide':undefined, style:STYLELB}, KIDSCALE.lil*k,
+      carry?(x=>{ for(let i=0;i<carry;i++) drawMiniChair(x+10+wob*(i+1), HIP_STAND-440-i*120, 0.9); }):null);
+    if(tt>=8.6&&tt<10.4) sweat(360, FLOOR-480, t);
+  }
+  // BABY BIG BUSINESS: whatever big bro does, but two chairs, steady as a rock
+  if(tt>=5.2){
+    const k=easeOutBack(Math.min(1,(tt-5.2)/0.3));
+    const carry=(tt<18.0)?2:0;
+    kidWithProp({x:460, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:carry?{sh:170,el:-10}:{sh:165,el:-20}, arm2:carry?{sh:170,el:-10}:undefined,
+      mouth:'smile', style:STYLEBB}, KIDSCALE.baby*k,
+      carry?(x=>{ for(let i=0;i<carry;i++) drawMiniChair(x+10, HIP_STAND-440-i*120, 0.9); }):null);
+  }
+  // VAEH: films it, says it is embarrassing, posts it anyway
+  if(tt>=15.0){
+    const k=ease((tt-15.0)/0.6), x=lerp(-200,120,k);
+    kidWithProp({x:x, face:1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:120,el:-70}, mouth:'flat', style:STYLEVAEH}, KIDSCALE.vaeh);
+    headphonesK(x, kidHeadY(KIDSCALE.vaeh), KIDSCALE.vaeh, 1);
+    phoneK(x+110*KIDSCALE.vaeh, FLOOR-560*KIDSCALE.vaeh, KIDSCALE.vaeh, true);
+    hearts(t, 16.6, x+150, FLOOR-620);
+  }
+  ctx.restore();
+  if(t>=9.65&&t<10.4){const kk=easeOutBack(Math.min(1,(t-9.65)/0.25)); starburst(560,FLOOR-980,kk*1.0,'NOPE.');}
+  if(t>=18.0&&t<21.4) inviteCardK((t-18.0)/0.35);
+  if(t>=18.4) confettiBurst(t,18.4,540,700,80,2.8);
+  showBadge(42);
+  if(t<2.3) captionPop(['DAD: EIGHT CHAIRS.','ONE TRIP.'],340,0.05,t,54);
+  if(t>=2.4&&t<5.1) captionPop(['LIL BIG BUSINESS:','ONE CHAIR. VERY SERIOUS.'],340,2.4,t,46);
+  if(t>=5.2&&t<8.3) captionPop(['BABY DOES WHATEVER','BIG BRO DOES. BUT MORE.'],340,5.2,t,46);
+  if(t>=8.4&&t<9.6) captionPop(['SO LIL GRABS','A THIRD ONE.'],340,8.4,t,50);
+  if(t>=10.5&&t<11.3) captionPop(["DAD'S RULE:",'USE THE DOLLY.'],340,10.5,t,52);
+  if(t>=11.4&&t<14.9) captionPop(['PRINCESS: THE DOLLY','IS A CARRIAGE NOW.'],340,11.4,t,46);
+  if(t>=15.0&&t<16.5) captionPop(['...this is SO embarrassing.'],340,15.0,t,46);
+  if(t>=16.6&&t<17.9) captionPop(['SHE POSTED IT','ANYWAY.'],340,16.6,t,56);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],340,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHO CARRIES THE MOST','AT YOUR HOUSE?'],340,22.4,t,44);
+    caption(['SEASON TWO RECORD: 1 W · 1 L'],1700,(t-22.4)/0.35,30);
+  }
+}
+REELS[42]=ep42;
+SHAKES[42]=[10.4,0.25,10];
+TAGLINES[42]='EIGHT CHAIRS. ONE TRIP. EVERY TIME.';
+window.ENDTIMES[42]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
