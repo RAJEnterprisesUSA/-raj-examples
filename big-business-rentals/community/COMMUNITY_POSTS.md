@@ -327,3 +327,39 @@ Tables and chairs delivered and picked up across Las Vegas: $22 for a table with
 Una mesa con 6 sillas cuesta $22, y 8 mesas con 48 sillas $176. Te las llevamos y las recogemos en Las Vegas. También hay montaje completo desde $265.
 
 📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
+
+---
+
+## L · LABOR CREW flyer (owner Nov 1: "promotes my labor work setup and tear down for venues that need extra hands")
+Flyer: `flyers2026/BB26_Group_LaborCrew.png` (no labor prices on file: "quoted by crew size, hours and date"; no claims
+the owner has not given us, e.g. no "insured", no years in business). Best groups: event planners, wedding and quinceañera
+vendors, venue owners and managers, caterers, church and school event committees, HOA event boards. Not neighborhood or
+buy-and-sell groups. Rotate captions; never the same one twice in a day.
+
+**L-A**
+Venue owners and planners: short on hands this holiday season?
+
+Our crew handles setup and teardown in Las Vegas: tables, chairs and linens placed to your floor plan, then folded, stacked and cleared out after. Tents too. Quoted by crew size, hours and date.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**L-B**
+Back-to-back events this weekend and not enough crew to flip the room?
+
+We bring extra hands for setup and teardown, so your team can focus on the guests. Message your date, hours and crew size and we will send a quote.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**L-C**
+Planners and caterers: need a setup crew for your next event?
+
+We set tables, chairs and linens to your layout before doors open and break it all down after. Need the rentals too? We deliver those as well.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**L-D · Español**
+¿Te falta personal para montar y desmontar tus eventos?
+
+Nuestro equipo monta mesas, sillas y mantelería según tu plano, y lo desmonta y recoge al terminar. También carpas. Cotizamos según el tamaño del equipo, las horas y la fecha.
+
+📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
