@@ -3119,3 +3119,25 @@ Trend/news remixes are built the evening before they post (daily scheduled task 
 search, build, owner approval, queue for 5pm next day, so every remix is under ~24 h old. Episodes, promos and Guess the
 Theme stay batched. Week of Oct 26 to Nov 1 unchanged; first fresh build Sun Nov 1 evening for Mon Nov 2.
 Scheduled task created Oct 26: "Nightly fresh trend remix" (trig_0124EGoNwdrG5nWimzSQmEeC), daily 6:34pm Vegas into this session; skips while tomorrow <= Nov 1; first real build Sun Nov 1 evening for Mon Nov 2.
+
+## MONDAY NOV 2 · PRICE IT (1pm) + TREND REMIX #15 BIG BANG EXTRA CHAIR (5pm, FIRST FRESH NIGHTLY BUILD) + EP. 42 THE CARRY (8pm)
+Owner approved "Queue it". Queued 10/10 OK (queue_mon02.py), PST -08:00.
+PRICE IT: flyers2026/BB26_PriceIt_FriendsgivingYard.png (Flyer 2026 price_it), FRESH HF Z-Image outdoor Friendsgiving backyard
+at sunset, three long banquet tables, white folding chairs, seed 350769 (inspo/setup_friendsgiving_yard.png). FB + IG feed.
+CLOSE THE LOOP Tue (playbook): reply with the real math, 36 seats = 6 sets = $132 plus delivery.
+TREND #15 BB_Trend_BigBangExtraChair (reelH REELS[38], 17.2s): NEWS pool, Nov 1 2026 ScienceDaily, an overlooked particle may
+explain why matter survived the Big Bang (a tiny bit left over). Remixed only: 13 guests, 12 chairs, the extra chair on the
+truck. Built the evening of Sun Nov 1 (fresh nightly build). UPGRADE: roomS2 non-Halloween remix room + space-to-party zoom.
+EP. 42 THE CARRY (reelsD REELS[42], 26s): Dad moves 8 chairs in one trip; Lil carries one, Baby carries two; Lil's third
+chair wobbles ("NOPE."), Dad catches them on the dolly; Princess rides the dolly; Vaeh posts it anyway; in-story invite
+"The Family Holiday Party · Sat Dec 19" (December arc). End card "Who carries the most at your house?" Season Two 1 W · 1 L.
+FB 1pm: How much would you pay for this Friendsgiving setup? 🦃 Three long tables, string lights and a sunset over the mountains. The decor is inspo; the tables and chairs underneath it are the part we bring, delivered and picked up across Las Vegas. Message us your date and headcount. #LasVegas #Friendsgiving #Thanksgiving #PartyRentals #SetupInspo
+IG 1pm: How much would you pay for this Las Vegas Friendsgiving setup? Setup inspo: the tables and chairs underneath it are the part we bring. 🦃 #lasvegas #friendsgiving #thanksgiving #partyrentals #setupinspo
+FB 5pm: scientists may know why matter survived the big bang: a tiny bit was left over. party physics works the same way. 🌌 #lasvegas #science #bigbang #animation #partyrentals
+IG 5pm: Scientists may know why matter survived the Big Bang. Las Vegas party physics works the same way: one extra chair saves the night. 🌌 #bigbang #science #lasvegas #partyrentals #comedy
+TT 5pm: Party physics: one extra chair saves the night. 🌌 #science #bigbang #physics #comedy
+YT 5pm: "Why matter survived the Big Bang, party edition 🌌 #Shorts" / One tiny bit of matter was left over, and one extra chair saves the party. #science #bigbang #comedy
+FB 8pm: the big business chronicles ep. 42: dad moves eight chairs in one trip. the kids have other ideas. 🪑 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 42: Dad moves eight chairs in one trip, Lil copies Dad, and Baby copies Lil, but more. 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 42: Baby does whatever big bro does. But more. 🪑 #thebigbusinesschronicles #siblings #family #comedy
+YT 8pm: "EP. 42: The Carry 🪑 Baby does it bigger #Shorts" / ...and the family holiday party gets a date. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
