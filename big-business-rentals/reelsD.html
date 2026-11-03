@@ -5525,6 +5525,110 @@ SHAKES[43]=[9.4,0.25,10];
 TAGLINES[43]='ONE YANK. NOT ONE PLATE MOVED.';
 window.ENDTIMES[43]=23.5;
 
+// ================= EP. 44 · THE TEARDOWN (Season Two) =================
+// Competence first (Dad folds a table in 2 seconds, then steadies Baby's wobbling tower with one hand), Lil stacks four
+// perfectly, Baby stacks six, Princess finds the one they missed (the cat is in it), Dad loses three rounds to the cat,
+// Vaeh lifts the cat without looking up, teardown done: Dec 19 is ready.
+const C44X=[310,400,490,690,780,870], CAT44=590, TOW44=200, CS44=1.1, ST44=38;
+function chairPos44(i,tt){                 // where chair i is at time tt: [x, y, inTower]
+  const home=[C44X[i],FLOOR];
+  const t0=(i<4)?2.7+i*0.45:5.3+(i-4)*0.5;  // Lil grabs 0-3, Baby grabs 4-5
+  const k=(tt-t0)/0.4;
+  const slot=[TOW44,FLOOR-ST44*i];
+  if(k<=0) return [home[0],home[1],false];
+  if(k>=1) return [slot[0],slot[1],true];
+  return [lerp(home[0],slot[0],k), lerp(home[1],slot[1],k)-Math.sin(Math.PI*k)*220, false];
+}
+function ep44(t){
+  const FREEZES=[[7.6,8.3]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.2*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(TOW44+60,FLOOR-260); ctx.scale(z,z); ctx.translate(-(TOW44+60),-(FLOOR-260)); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  // the folded table leans on the wall after Dad folds it
+  if(tt>=1.2) drawFoldedFlat(1040, FLOOR-120, 84);
+  // chairs: the tower wobbles from 6.5 until Dad's one hand steadies it at 8.6
+  const wob=(tt>=6.5&&tt<8.6)?Math.sin(t*11)*(tt<8.3?1:Math.max(0,(8.6-tt)/0.3)):0;
+  const towerN=(tt>=19.0)?7:6;
+  for(let i=0;i<6;i++){
+    const [x,y,inT]=chairPos44(i,tt);
+    if(inT){ const k=(FLOOR-y)/ST44; ctx.save(); ctx.translate(TOW44,FLOOR); ctx.rotate(rad(wob*1.6*k/5)); ctx.translate(-TOW44,-FLOOR); drawMiniChair(x+wob*6*k,y,CS44); ctx.restore(); }
+    else drawMiniChair(x,y,CS44);
+  }
+  if(towerN===7) drawMiniChair(TOW44, FLOOR-ST44*6, CS44);
+  // the cat's chair (the one they missed)
+  if(tt<18.9) drawMiniChair(CAT44, FLOOR, CS44);
+  // the table, folding in 2 seconds (competence first)
+  if(tt<1.2) drawTable(560,0,ease((tt-0.3)/0.8));
+  // THE CAT: curled on the last chair, hisses three times, then gets lifted by Vaeh
+  const catHeld=(tt>=16.6);
+  if(!catHeld) drawCatD(CAT44, FLOOR-77, {pose:'sit', face:1, t:t, s:0.95});
+  // MR. BIG BUSINESS
+  let dx=960, darm={sh:60,el:24}, darm2, mouth='smile', eyes;
+  if(tt<1.2) darm={sh:80,el:-6};
+  else if(tt<2.5) { darm={sh:165,el:-20}; darm2={sh:160,el:-30}; }
+  if(tt>=8.0&&tt<9.4){ dx=lerp(960,400,ease((tt-8.0)/0.5)); darm={sh:95,el:-4}; }
+  else if(tt>=9.4&&tt<12.4){ dx=lerp(400,800,ease((tt-9.4)/0.6)); }
+  else if(tt>=12.4&&tt<16.0){ dx=800; const tries=[12.8,13.9,15.0]; tries.forEach(a=>{ if(tt>=a&&tt<a+0.45){ darm={sh:85,el:-4}; } if(tt>=a+0.45&&tt<a+1.0){ darm={sh:150,el:-30}; darm2={sh:150,el:-40}; eyes='wide'; mouth='o'; } }); }
+  else if(tt>=16.0&&tt<18.8){ dx=1010; darm={sh:150,el:-30}; darm2={sh:150,el:-40}; mouth='o'; }
+  else if(tt>=18.8&&tt<19.4){ dx=lerp(1010,900,ease((tt-18.8)/0.3)); darm={sh:85,el:-4}; }
+  else if(tt>=19.4){ dx=900; darm={sh:165,el:-20}; darm2={sh:160,el:-30}; }
+  drawMan({x:dx, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:darm, arm2:darm2, mouth:mouth, eyes:eyes, style:STYLER2});
+  const cheer=(tt>=19.4);
+  // LIL BIG BUSINESS: four chairs, perfect stack
+  if(tt>=2.5){
+    const k=easeOutBack(Math.min(1,(tt-2.5)/0.3)), grab=(tt>=2.7&&tt<4.6);
+    kidWithProp({x:70, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:cheer?{sh:165,el:-20}:(grab?{sh:100,el:-10}:{sh:60,el:24}), arm2:cheer?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLELB}, KIDSCALE.lil*k);
+  }
+  // BABY BIG BUSINESS: whatever big bro does, but more (two more on top, the tower wobbles)
+  if(tt>=5.1){
+    const k=easeOutBack(Math.min(1,(tt-5.1)/0.3)), bx=(tt<8.0)?390:lerp(390,470,ease((tt-8.0)/0.3));
+    const worry=(tt>=6.5&&tt<8.6);
+    kidWithProp({x:bx, face:-1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:(cheer||tt<6.4)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(cheer||tt<6.4)?{sh:160,el:-30}:undefined,
+      mouth:worry?'o':'smile', eyes:worry?'wide':undefined, style:STYLEBB}, KIDSCALE.baby*k);
+  }
+  // PRINCESS: the inspector. "You missed one."
+  if(tt>=9.6){
+    const k=easeOutBack(Math.min(1,(tt-9.6)/0.3)), s=KIDSCALE.princess*k, px=330;
+    const point=(tt<12.4);
+    kidWithProp({x:px, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:point?{sh:95,el:-4}:(cheer?{sh:165,el:-20}:{sh:150,el:-30}), mouth:point?'flat':'smile', style:STYLEPB}, s);
+    if(k>0.2) tiaraK(px, kidHeadY(s)+8, s*1.3);
+  }
+  // VAEH: slides in on her phone, lifts the cat with one hand, never looks up, leaves with it
+  if(tt>=16.0&&tt<19.6){
+    const s=KIDSCALE.vaeh, k=ease((tt-16.0)/0.4)-ease((tt-18.6)/0.8), x=lerp(1250,790,k);
+    kidWithProp({x:x, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, arm2:{sh:82,el:6}, mouth:'flat', style:STYLEVAEH}, s);
+    headphonesK(x, kidHeadY(s), s, -1);
+    phoneK(x-52*s, FLOOR-470*s, s, true);
+    if(catHeld){ const m=ease((tt-16.6)/0.3); drawCatD(lerp(CAT44,x-170,m), lerp(FLOOR-77,FLOOR-380,m), {pose:'sit', face:1, t:t, s:0.95}); }
+  }
+  ctx.restore();
+  if(t>=7.65&&t<8.3){const kk=easeOutBack(Math.min(1,(t-7.65)/0.25)); starburst(560,FLOOR-980,kk*1.0,'TIMBER?');}
+  [12.8,13.9,15.0].forEach(a=>{ if(t>=a+0.45&&t<a+1.0){const kk=easeOutBack(Math.min(1,(t-a-0.45)/0.2)); starburst(600,FLOOR-980,kk*0.9,'HSSS.');} });
+  if(t>=19.5) confettiBurst(t,19.5,540,FLOOR-500,60,2.4);
+  showBadge(44);
+  if(t<2.4) captionPop(['TEARDOWN. DAD FOLDS','A TABLE IN 2 SECONDS.'],340,0.05,t,48);
+  if(t>=2.5&&t<5.0) captionPop(['LIL: FOUR CHAIRS.','PERFECT STACK.'],340,2.5,t,52);
+  if(t>=5.1&&t<7.5) captionPop(['BABY: SIX.','BECAUSE BIG BRO DID FOUR.'],340,5.1,t,46);
+  if(t>=8.4&&t<9.5) captionPop(['DAD: ONE HAND.'],340,8.4,t,56);
+  if(t>=9.6&&t<12.3) captionPop(['PRINCESS:','YOU MISSED ONE.'],340,9.6,t,52);
+  if(t>=12.4&&t<15.9) captionPop(['DAD VS. THE CAT.','THREE ROUNDS.'],340,12.4,t,52);
+  if(t>=16.4&&t<17.8) captionPop(['VAEH NEVER','LOOKED UP.'],340,16.4,t,54);
+  if(t>=17.9&&t<19.3) captionPop(['...this is SO embarrassing.'],340,17.9,t,46);
+  if(t>=19.4&&t<21.3) captionPop(['TEARDOWN DONE.','DEC 19 IS READY.'],340,19.4,t,52);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],340,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHO FOLDS THE CHAIRS','AT YOUR HOUSE?'],340,22.4,t,46);
+    caption(['SEASON TWO RECORD: 2 W · 2 L'],1700,(t-22.4)/0.35,30);
+  }
+}
+REELS[44]=ep44;
+SHAKES[44]=[7.6,0.2,8];
+TAGLINES[44]='TABLE FOLDED IN 2 SECONDS. CAT UNDEFEATED.';
+window.ENDTIMES[44]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){

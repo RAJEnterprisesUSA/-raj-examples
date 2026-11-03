@@ -53,3 +53,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Nov 2 (Mon build: EP. 42): in-story invitation card reveal that dates the December family-party arc.
 - Nov 3 (fresh nightly remix, Reasons You Don't Need): numbered glass reason cards that slide in + a recap list struck through at the payoff.
 - Nov 3 (Tue build: EP. 43 The Tablecloth): first multi-object physics gag (four plates on staggered arcs that stack into a no-look catch) + a spin gag drawn with a live horizontal flip; venue holiday flyer uses the real room photo in a glass card.
+- Nov 4 (Wed build: GTT No. 3 + EP. 44): GTT theme motion layer (seeded looping snowfall), exact reveal-zoom focus math, winter harp + celesta bed; EP. 44 physics stack that sways more the higher each chair sits, then settles.

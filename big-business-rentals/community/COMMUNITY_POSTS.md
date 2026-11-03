@@ -363,3 +363,38 @@ We set tables, chairs and linens to your layout before doors open and break it a
 Nuestro equipo monta mesas, sillas y mantelería según tu plano, y lo desmonta y recoge al terminar. También carpas. Cotizamos según el tamaño del equipo, las horas y la fecha.
 
 📞 702-706-8287 · Cotiza gratis en bigbusinesspartyrentals.com
+
+## C · CREW ONLY flyer (owner Nov 2: "we are also now posting set up and tear down crews for people who have the equipment but no crew to set up")
+Flyer: `flyers2026/BB26_Group_CrewOnly.png` ("Got the gear? We bring the crew."). For people who already own or rented
+their tables, chairs or tents and only need hands. No crew prices on file: "quoted by crew size, hours and date"; no crew
+sizes, response times, insurance or years in business. Best groups: neighborhood and community groups, church and family
+reunion groups, HOA and block-party groups, quinceañera and birthday planning groups, buy-and-sell groups where people sell
+tables and chairs. Rotate captions; never the same one twice in a day.
+
+**C-A**
+Already have the tables and chairs but nobody to set them up?
+
+Our Las Vegas crew comes out, sets everything to your layout before guests arrive, then folds, stacks and clears it after the party. Quoted by crew size, hours and date.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**C-B**
+Borrowed the tables from church or family? You still need someone to set them up.
+
+We bring the crew for setup and teardown, your equipment, your layout. Tents too. Message us your date, hours and what you have.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**C-C**
+Hosting the holidays and dreading the setup?
+
+You have the gear, we have the hands. Our crew sets up before the party and breaks it all down after, anywhere in Las Vegas. Need a few more tables or chairs? We deliver those too.
+
+📞 702-706-8287 · Get your free quote at bigbusinesspartyrentals.com
+
+**C-D · Español**
+¿Ya tienes las mesas y las sillas pero nadie que las acomode?
+
+Nuestro equipo en Las Vegas llega, acomoda todo antes de que lleguen tus invitados y lo recoge después de la fiesta. Cotizamos según el tamaño del equipo, las horas y la fecha. Mándanos tu fecha y lo que tienes.
+
+📞 702-706-8287 · bigbusinesspartyrentals.com

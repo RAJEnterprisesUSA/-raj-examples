@@ -3175,3 +3175,23 @@ inspo/setup_december_yard.png). "Setup inspo" chip, tiles $22 table + 6 chairs (
 $265, chips Delivered + picked up · Tents + tent setup · Delivery quoted with your order. QR decodes on both.
 FB 1pm: Hosting the holidays this year? We bring the seating. Tables and chairs are delivered and picked up across Las Vegas: a 6 ft table with 6 chairs is $22, or $3.67 a seated guest, with delivery quoted with your order. Want it all handled? Full-service setup and breakdown packages start at $265, and we set up tents too. Thanksgiving, Friendsgiving and December parties. Message us your date and headcount. #LasVegasPartyRentals #Friendsgiving #ThanksgivingVegas #HolidayPartyVegas #TableAndChairRentals
 IG Story 1pm: image only.
+
+## RULE CHANGE Nov 2 night (owner: "we are also now posting set up and tear down crews for people who have the equipment but no crew to set up")
+New service line: CREW-ONLY setup and teardown for people who already have their tables, chairs or tents. No crew prices on
+file, "quoted by crew size, hours and date". Flyer flyers2026/BB26_Group_CrewOnly.png ("Got the gear? We bring the crew."),
+group captions C-A to C-D in community/COMMUNITY_POSTS.md. CLAUDE.md services list updated.
+
+## WEDNESDAY NOV 4 · GUESS THE THEME No. 3 WINTER WONDERLAND Pt. 1 (1pm, TikTok + IG Trial Reel) + EP. 44 THE TEARDOWN (8pm)
+BUILT Mon Nov 2 night, AWAITING OWNER APPROVAL (queue_wed04.py; --with-pt2 also queues Thu Pt. 2). 5pm remix = nightly task Tue evening.
+GTT No. 3: package tiktok/packages/GTT3_WinterWonderland_Nov4-5.md (HF Z-Image seeds 581870 / 834620 / 297281 / 301238,
+9:16 crops; clue 3 crop keeps a blurred background figure out of frame). AI label ON. Reveal under a party tent.
+EP. 44 THE TEARDOWN (reelsD REELS[44], 26s): Dad folds a table in 2 seconds; Lil stacks four, Baby stacks six, the tower
+wobbles ("TIMBER?"), Dad steadies it with one hand; Princess: "You missed one" (the cat is in it); Dad loses three rounds
+("HSSS."); Vaeh lifts the cat without looking up; "Teardown done. Dec 19 is ready." End card "Who folds the chairs at your
+house?" Season Two 2 W · 2 L. Ties into the crew-only service.
+TT 1pm (Pt. 1): Three clues, one party theme. Can you get it before clue 3? ❄️ #guessthetheme #partytheme #partyinspo #lasvegas
+IG 1pm (Pt. 1, Trial Reel, owner posts): Three clues, one party theme. Guess it before clue 3, the answer posts tomorrow. ❄️ #guessthetheme #partytheme #partyinspo #lasvegas #eventdecor
+FB 8pm: the big business chronicles ep. 44: dad folds a table in 2 seconds. the cat is undefeated. 🪑 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 44: Dad folds a table in 2 seconds, Baby stacks six chairs, and the cat wins three rounds. 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 44: she lifted the cat without looking up. 🪑 #thebigbusinesschronicles #siblings #teardown #comedy
+YT 8pm: "EP. 44: The Teardown 🪑 the cat is undefeated #Shorts" / The Big Business Chronicles EP. 44: Dad folds a table in 2 seconds, the kids race to stack chairs, and the cat claims the last one. Next episode tomorrow. #thebigbusinesschronicles #family #comedy

@@ -36,7 +36,10 @@ FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day.
 VENUE PROMOTION RETIRED (owner Nov 2: "we are not promoting the venue anymore, only our services"): no venue,
 private party room, room photos or venue prices ($625/$800, seats 40/holds 80) in any post, flyer, caption, carousel, skit
 punchline, group flyer or referral pass-along. Promote services only: table and chair rentals (delivered and picked up),
-full-service setup and breakdown (from $265), tents and tent setup, setup and teardown labor crews. Images for promos are
+full-service setup and breakdown (from $265), tents and tent setup, setup and teardown labor crews for venues, AND
+(owner Nov 2: "we are also now posting set up and tear down crews for people who have the equipment but no crew to set
+up") CREW-ONLY setup and teardown for people who already own or rented their tables, chairs or tents and just need hands.
+No crew prices on file: "quoted by crew size, hours and date"; never invent a crew rate, crew size or response time. Images for promos are
 fresh AI setup images (owner Nov 2: "generate pictures to replace the venue photo") with a "Setup inspo" chip. Answer a
 venue question only if a customer asks (reply_templates #4); never pitch it. The venue facts below stay as reference only.
 WEEKLY PROMOTIONS (owner Oct 26, locked; one a day, built as packages, queued only after owner approval):
