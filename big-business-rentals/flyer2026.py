@@ -313,6 +313,30 @@ def services(name, chip, kicker, headline_html, sub, tiles, ask_html, note_html,
             + contact_bar())
     return render(name, body, size, css)
 
+def venue_holiday(name, photo, kicker, headline_html, tiles, chips, ask_html, bg, glow, size=(1080, 1350)):
+    """Tue VENUE FLYER, holiday edition: kicker + headline, the REAL room as a rounded photo card that fills the space,
+    two per-guest price tiles (owner-approved math), fact chips, the single ask, contact bar. Feed 4:5 and story 9:16."""
+    shutil.copy(photo, OUT/pathlib.Path(photo).name)
+    w, h = size; tall = h > 1500
+    cells = ''.join(f"<div class='tile glass'><div class='k'>{a}</div><div class='v'>{b}</div><div class='s'>{c}</div></div>" for a, b, c in tiles)
+    ch = ''.join(f"<div class='chip'>{c}</div>" for c in chips)
+    css = f""".col{{position:absolute;left:56px;right:56px;top:{290 if tall else 150}px;bottom:{440 if tall else 232}px;display:flex;flex-direction:column;gap:{26 if tall else 18}px}}
+    {'.top{top:200px}.contact{bottom:240px}' if tall else ''}
+    .kick{{font-family:'Inter';font-weight:800;font-size:23px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:12px}}
+    .vph{{flex:1;border-radius:32px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.5);background:url('{pathlib.Path(photo).name}') center 60%/cover;position:relative}}
+    .vph .chip{{position:absolute;left:18px;bottom:18px;background:rgba(15,10,23,.78);border:1px solid rgba(229,184,75,.7)}}
+    .tiles{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.tile{{padding:{'22px 26px' if tall else '16px 22px'}}}
+    .k{{font-size:{24 if tall else 20}px;font-weight:600;opacity:.9}}.v{{font-family:'Brico';font-weight:800;font-size:{84 if tall else 64}px;letter-spacing:-.04em;line-height:1;margin-top:6px}}
+    .s{{font-size:{21 if tall else 18}px;opacity:.85;margin-top:6px}}
+    .chips{{display:flex;gap:10px;flex-wrap:wrap}}.chips .chip{{height:{50 if tall else 44}px;font-size:{19 if tall else 16}px}}
+    .ask{{font-family:'Brico';font-weight:800;font-size:{48 if tall else 36}px;letter-spacing:-.02em;line-height:1.05}}.ask em{{font-family:'Serif';font-style:italic;font-weight:400;color:#E5B84B}}"""
+    body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
+            + top_bar("<div class='chip gold'>Private party room</div>")
+            + f"<div class='col'><div><div class='kick'>{kicker}</div><div class='h1' style='font-size:{104 if tall else 84}px'>{headline_html}</div></div>"
+              f"<div class='vph'><div class='chip'>The real room</div></div><div class='tiles'>{cells}</div><div class='chips'>{ch}</div>"
+              f"<div class='ask'>{ask_html}</div></div>" + contact_bar())
+    return render(name, body, size, css)
+
 LIGHT_CSS = """.card{color:#1d1424}.chip{background:rgba(255,255,255,.7);border:1px solid rgba(29,20,36,.14);color:#1d1424}
 .chip.gold{background:#1d1424;color:#E5B84B}.h1 em{color:#b8862a}.glass{background:rgba(255,255,255,.62);border:1px solid rgba(29,20,36,.12);
 box-shadow:0 18px 40px rgba(90,60,20,.12)}.num{color:#1d1424!important}.tag{background:#1d1424!important;color:#E5B84B!important}

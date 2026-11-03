@@ -3141,3 +3141,24 @@ FB 8pm: the big business chronicles ep. 42: dad moves eight chairs in one trip. 
 IG 8pm: The Big Business Chronicles EP. 42: Dad moves eight chairs in one trip, Lil copies Dad, and Baby copies Lil, but more. 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles EP. 42: Baby does whatever big bro does. But more. 🪑 #thebigbusinesschronicles #siblings #family #comedy
 YT 8pm: "EP. 42: The Carry 🪑 Baby does it bigger #Shorts" / ...and the family holiday party gets a date. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## TUESDAY NOV 3 · VENUE FLYER (1pm) + TREND REMIX #16 REASONS YOU DON'T NEED (5pm, fresh nightly build) + EP. 43 THE TABLECLOTH (8pm)
+BUILT Mon Nov 2 evening, AWAITING OWNER APPROVAL (queue script: queue_tue03.py, 10 posts, PST -08:00).
+VENUE: flyers2026/BB26_Venue_Tue03.png (FB feed) + _Story.png (IG Story), Flyer 2026 venue_holiday template, Emerald, the real
+room photo ("The real room" chip), tiles $20 a guest ($800, 4 h, up to 40) and $25 a guest ($625, 3 h, up to 25), chips Seats 40 ·
+Holds 80 standing · Tables, chairs + setup included, ask "Message us your date and headcount." QR decodes. Fix: photo-card CSS
+class renamed (.vph) so it no longer covered the phone number in the contact bar.
+EP. 43 THE TABLECLOTH (reelsD REELS[43], 26s): Dad sets a table in 3 seconds and nails the tablecloth trick (freeze, NAILED.);
+Lil tries it, the plates fly, Vaeh catches every one without looking up ("...this is SO embarrassing."); Baby does it clean,
+then spins three times on purpose (TUFF.); Princess wears the cloth as a cape; the cat takes the last plate; Dad resets it all,
+"Practice round for the Dec 19 party." End card "Can you do the tablecloth trick?" Season Two 2 W · 1 L.
+FB 1pm: Host the holidays. Skip the cleanup. Our private party room in Las Vegas seats 40 and holds 80 standing, with tables, chairs and setup included. Four hours is $800 for up to 40 guests, $20 a guest, and three hours is $625 for up to 25, $25 a guest. Thanksgiving, Friendsgiving and December parties all fit. Message us your date and headcount. #LasVegasVenue #VegasEventSpace #Friendsgiving #HolidayPartyVegas #LasVegasParty
+IG Story 1pm: image only.
+FB 5pm: reasons you don't need to rent tables and chairs for thanksgiving. reason three is our favorite. 🦃 #lasvegas #thanksgiving #partyrentals #animation #comedy
+IG 5pm: Reasons you don't need to rent tables and chairs for Thanksgiving in Las Vegas. All four fall apart. 🦃 #thanksgiving #lasvegas #partyrentals #friendsgiving #comedy
+TT 5pm: Reasons you don't need to rent tables and chairs. 🦃 #reasonswhy #thanksgiving #hosting #comedy
+YT 5pm: "Reasons you don't need tables and chairs 🦃 #Shorts" / Four reasons you don't need to rent tables and chairs for Thanksgiving. All four fall apart. #thanksgiving #hosting #comedy
+FB 8pm: the big business chronicles ep. 43: dad nails the tablecloth trick. then the kids want a turn. 🍽️ #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 43: Dad nails the tablecloth trick, Lil sends the plates flying, and Vaeh catches every one without looking up. 🍽️ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 43: she caught every plate without looking up. 🍽️ #thebigbusinesschronicles #tableclothtrick #siblings #comedy
+YT 8pm: "EP. 43: The Tablecloth 🍽️ she never looked up #Shorts" / The Big Business Chronicles EP. 43: Dad nails the tablecloth trick, then every kid takes a turn. Next episode tomorrow. #thebigbusinesschronicles #family #comedy

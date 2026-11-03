@@ -5369,6 +5369,162 @@ SHAKES[42]=[10.4,0.25,10];
 TAGLINES[42]='EIGHT CHAIRS. ONE TRIP. EVERY TIME.';
 window.ENDTIMES[42]=23.5;
 
+// ================= EP. 43 · THE TABLECLOTH (Season Two) =================
+// Competence first (Dad sets a table in 3 seconds, then nails the tablecloth trick), Lil tries it and the plates fly
+// (Vaeh catches every one without looking up), Baby does it perfectly and spins three times on purpose, Princess
+// wears the cloth as a cape, the cat takes the last plate, Dad resets it all: practice round for the Dec 19 party.
+const T43X=560, T43P=[-210,-70,70,210];
+function plateT43(x,y,rot){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0); ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.fillStyle='#ffffff'; ctx.beginPath(); ctx.ellipse(0,0,36,11,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='#E5B84B'; ctx.lineWidth=3; ctx.beginPath(); ctx.ellipse(0,0,24,6.5,0,0,7); ctx.stroke();
+  ctx.restore();
+}
+function clothT43(k){                       // burgundy holiday cloth on the table (pops in with k)
+  if(k<=0) return;
+  ctx.save(); ctx.translate(T43X,FLOOR-246); ctx.scale(1,Math.min(1,k));
+  ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#8e2a3d';
+  ctx.beginPath(); ctx.moveTo(-330,-12); ctx.lineTo(330,-12); ctx.lineTo(352,118); ctx.lineTo(-352,118); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.fillRect(-348,100,696,10);
+  ctx.fillStyle='#a8384d'; ctx.fillRect(-326,-8,652,10);
+  ctx.restore();
+}
+function flyClothT43(k,dir,t){              // the yanked cloth flying off like a flag
+  if(k<=0||k>=1) return;
+  const x=T43X+dir*k*900, y=FLOOR-250-Math.sin(Math.PI*k)*120;
+  ctx.save(); ctx.translate(x,y); ctx.rotate(dir*k*0.5); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#8e2a3d';
+  ctx.beginPath(); ctx.moveTo(-dir*20,-30);
+  for(let i=0;i<=6;i++){ const xx=-dir*(20+i*70), yy=-30+Math.sin(t*30+i)*16; ctx.lineTo(xx,yy); }
+  for(let i=6;i>=0;i--){ const xx=-dir*(20+i*70), yy=60+Math.sin(t*30+i+1)*16; ctx.lineTo(xx,yy); }
+  ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore();
+}
+function capeT43(x,s,t){                    // Princess's tablecloth cape, drawn behind her (kid space)
+  ctx.save(); ctx.translate(x,FLOOR); ctx.scale(s,s); ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.fillStyle='#8e2a3d';
+  const w=Math.sin(t*6)*14;
+  ctx.beginPath(); ctx.moveTo(-60,-450); ctx.lineTo(60,-450); ctx.lineTo(150+w,-40); ctx.quadraticCurveTo(0,-10,-150-w,-40); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.beginPath(); ctx.moveTo(-145-w,-52); ctx.quadraticCurveTo(0,-22,145+w,-52); ctx.lineTo(148+w,-42); ctx.quadraticCurveTo(0,-10,-148-w,-42); ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+function ep43(t){
+  const FREEZES=[[6.6,7.4]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.22*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(T43X,FLOOR-260); ctx.scale(z,z); ctx.translate(-T43X,-(FLOOR-260)); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  drawTable(T43X,0,0);
+  // cloth states: on (set), yanked by Dad 6.2, back on 8.4, yanked by Lil 9.4, back on 11.9, yanked by Baby 12.6, new cloth 19.9
+  let clothOn=0;
+  if(tt<6.2) clothOn=ease((tt-0.3)/0.3);
+  else if(tt>=8.4&&tt<9.4) clothOn=easeOutBack(Math.min(1,(tt-8.4)/0.25));
+  else if(tt>=11.9&&tt<12.6) clothOn=easeOutBack(Math.min(1,(tt-11.9)/0.25));
+  else if(tt>=19.9) clothOn=easeOutBack(Math.min(1,(tt-19.9)/0.3));
+  clothT43(clothOn);
+  flyClothT43((tt-6.2)/0.35, 1, t);
+  flyClothT43((tt-9.4)/0.35, -1, t);
+  flyClothT43((tt-12.6)/0.35, -1, t);
+  // plates: Dad sets four (0.6 to 1.5), they stay through Dad's yank; Lil's yank sends them to Vaeh; back at 11.9; Baby's yank leaves them
+  const plateTop=FLOOR-262, catPlate=3;
+  const stackX=640, stackY=FLOOR-428;
+  T43P.forEach((dx,i)=>{
+    const px=T43X+dx;
+    let show=0, jig=0;
+    if(tt<9.4){ show=(tt<8.4||tt>=8.4)?easeOutBack(Math.min(1,Math.max(0,(tt-0.6-i*0.3)/0.2))):0;
+      if(tt>=6.2&&tt<6.6) jig=Math.sin((tt-6.2)*60)*3; }
+    if(tt>=9.4&&tt<11.9){                       // flying to Vaeh's hand, staggered
+      const k=Math.min(1,Math.max(0,(tt-9.45-i*0.18)/0.45));
+      if(k<1){ const x=lerp(px,stackX,k), y=lerp(plateTop,stackY-i*12,k)-Math.sin(Math.PI*k)*260; plateT43(x,y,k*6.3*(i%2?1:-1)); }
+      else plateT43(stackX, stackY-i*12, 0);
+      return;
+    }
+    if(tt>=11.9) show=1;
+    if(tt>=11.9&&tt<12.6) jig=0;
+    if(tt>=12.6&&tt<13.0) jig=Math.sin((tt-12.6)*60)*3;
+    if(show>0){ ctx.save(); ctx.translate(px+jig,plateTop); ctx.scale(show,show); plateT43(0,0,0); ctx.restore(); }
+  });
+  // THE CAT: trots in, hops onto the table, sits on the last plate
+  if(tt>=17.9){
+    let cx, cy=FLOOR, pose='trot';
+    if(tt<18.5){ cx=lerp(1250,930,ease((tt-17.9)/0.6)); }
+    else if(tt<18.9){ const k=(tt-18.5)/0.4; cx=lerp(930,T43X+T43P[catPlate],k); cy=lerp(FLOOR,plateTop+8,k)-Math.sin(Math.PI*k)*180; }
+    else { cx=T43X+T43P[catPlate]; cy=plateTop+8; pose='sit'; }
+    drawCatD(cx, cy, {pose:pose, face:-1, t:t, s:0.9});
+  }
+  // MR. BIG BUSINESS (Season Two look) on the right end: sets, grips, yanks, then steps back to watch
+  const back=(tt>=8.3)?ease((tt-8.3)/0.4):0;
+  const dadX=lerp(970,1030,back);
+  let darm={sh:60,el:24}, darm2;
+  if(tt<1.8) darm={sh:95,el:-10};
+  else if(tt>=5.0&&tt<6.2) darm={sh:70,el:-6};
+  else if(tt>=6.2&&tt<8.3){ darm={sh:150,el:-20}; darm2={sh:150,el:-30}; }
+  else if(tt>=19.9) { darm={sh:165,el:-20}; darm2={sh:160,el:-30}; }
+  drawMan({x:dadX, y:HIP_STAND, face:-1, lean:(tt>=5.0&&tt<6.2)?-8:0, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:darm, arm2:darm2,
+    mouth:(tt>=18.9&&tt<19.9)?'o':'smile', eyes:(tt>=18.9&&tt<19.9)?'wide':undefined, style:STYLER2});
+  // VAEH: slides in on her phone at 9.0, catches every plate without looking up
+  if(tt>=9.0&&tt<15.4){
+    const k=ease((tt-9.0)/0.4)-ease((tt-14.8)/0.6), x=lerp(1250,800,k), s=KIDSCALE.vaeh;
+    const holding=(tt>=9.4&&tt<11.9);
+    kidWithProp({x:x, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, arm2:holding?{sh:82,el:6}:undefined, mouth:'flat', style:STYLEVAEH}, s);
+    headphonesK(x, kidHeadY(s), s, -1);
+    phoneK(x-52*s, FLOOR-470*s, s, true);
+  }
+  // LIL BIG BUSINESS: asks for the trick, tries it, plates fly
+  if(tt>=2.6){
+    const k=easeOutBack(Math.min(1,(tt-2.6)/0.3));
+    const lx=(tt<8.4)?190:(tt<11.9?lerp(190,215,ease((tt-8.4)/0.3)):lerp(215,90,ease((tt-11.9)/0.4)));
+    const pull=(tt>=9.4&&tt<11.9);
+    const grip=(tt>=8.7&&tt<9.4);
+    kidWithProp({x:lx, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}],
+      arm:pull?{sh:150,el:-20}:(grip?{sh:75,el:-6}:{sh:60,el:24}), arm2:pull?{sh:150,el:-30}:undefined,
+      mouth:pull?'o':'smile', eyes:pull?'wide':undefined, style:STYLELB}, KIDSCALE.lil*k);
+  }
+  // BABY BIG BUSINESS: copies big bro, but more: clean yank, then three spins on purpose, then TUFF
+  if(tt>=3.8){
+    const k=easeOutBack(Math.min(1,(tt-3.8)/0.3));
+    const bx=(tt<11.9)?330:lerp(330,250,ease((tt-11.9)/0.4));
+    const spin=(tt>=12.6&&tt<13.8)?(tt-12.6)/1.2*Math.PI*6:0;
+    const tuff=(tt>=13.8);
+    ctx.save(); ctx.translate(bx,0); ctx.scale(Math.cos(spin)||0.05,1); ctx.translate(-bx,0);
+    kidWithProp({x:bx, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}],
+      arm:tuff?{sh:165,el:-60}:((tt>=12.2&&tt<12.6)?{sh:75,el:-6}:{sh:60,el:24}), arm2:tuff?{sh:160,el:-70}:undefined,
+      mouth:'smile', style:STYLEBB}, KIDSCALE.baby*k);
+    ctx.restore();
+  }
+  // PRINCESS: the tablecloth is a cape now
+  if(tt>=15.1){
+    const k=easeOutBack(Math.min(1,(tt-15.1)/0.3)), s=KIDSCALE.princess*k, px=470;
+    capeT43(px, s, t);
+    kidWithProp({x:px, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, s);
+    if(k>0.2) tiaraK(px, kidHeadY(s)+8, s*1.3);
+  }
+  ctx.restore();
+  if(t>=6.65&&t<7.4){const kk=easeOutBack(Math.min(1,(t-6.65)/0.25)); starburst(560,FLOOR-980,kk*1.0,'NAILED.');}
+  if(t>=13.85&&t<14.7){const kk=easeOutBack(Math.min(1,(t-13.85)/0.25)); starburst(560,FLOOR-980,kk*1.0,'TUFF.');}
+  if(t>=20.1) confettiBurst(t,20.1,540,FLOOR-500,60,2.4);
+  showBadge(43);
+  if(t<2.5) captionPop(['DAD SETS A TABLE','IN 3 SECONDS.'],340,0.05,t,54);
+  if(t>=2.6&&t<4.9) captionPop(['LIL: TEACH ME','THE TABLECLOTH TRICK.'],340,2.6,t,48);
+  if(t>=5.0&&t<6.5) captionPop(['DAD: WATCH THIS.'],340,5.0,t,56);
+  if(t>=7.5&&t<8.3) captionPop(['NOT ONE PLATE MOVED.'],340,7.5,t,50);
+  if(t>=8.4&&t<9.4) captionPop(['LIL TRIES IT.'],340,8.4,t,56);
+  if(t>=10.4&&t<11.8) captionPop(['...this is SO embarrassing.'],340,10.4,t,46);
+  if(t>=11.9&&t<12.6) captionPop(['BABY: MY TURN.'],340,11.9,t,56);
+  if(t>=12.7&&t<13.8) captionPop(['CLEAN. THEN THREE','SPINS. ON PURPOSE.'],340,12.7,t,48);
+  if(t>=15.1&&t<17.8) captionPop(['PRINCESS: THE TABLECLOTH','IS A CAPE NOW.'],340,15.1,t,44);
+  if(t>=17.9&&t<19.8) captionPop(['THE CAT TOOK','THE LAST PLATE.'],340,17.9,t,52);
+  if(t>=19.9&&t<21.3) captionPop(['PRACTICE ROUND FOR','THE DEC 19 PARTY.'],340,19.9,t,48);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],340,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['CAN YOU DO THE','TABLECLOTH TRICK?'],340,22.4,t,48);
+    caption(['SEASON TWO RECORD: 2 W · 1 L'],1700,(t-22.4)/0.35,30);
+  }
+}
+REELS[43]=ep43;
+SHAKES[43]=[9.4,0.25,10];
+TAGLINES[43]='ONE YANK. NOT ONE PLATE MOVED.';
+window.ENDTIMES[43]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
