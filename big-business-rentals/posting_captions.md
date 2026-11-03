@@ -3143,7 +3143,7 @@ TT 8pm: The Big Business Chronicles EP. 42: Baby does whatever big bro does. But
 YT 8pm: "EP. 42: The Carry 🪑 Baby does it bigger #Shorts" / ...and the family holiday party gets a date. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
 
 ## TUESDAY NOV 3 · VENUE FLYER (1pm) + TREND REMIX #16 REASONS YOU DON'T NEED (5pm, fresh nightly build) + EP. 43 THE TABLECLOTH (8pm)
-BUILT Mon Nov 2 evening, AWAITING OWNER APPROVAL (queue script: queue_tue03.py, 10 posts, PST -08:00).
+BUILT Mon Nov 2 evening. Owner approved "queue it" (after the services swap below): QUEUED 10/10 OK via queue_tue03.py, PST -08:00.
 VENUE: flyers2026/BB26_Venue_Tue03.png (FB feed) + _Story.png (IG Story), Flyer 2026 venue_holiday template, Emerald, the real
 room photo ("The real room" chip), tiles $20 a guest ($800, 4 h, up to 40) and $25 a guest ($625, 3 h, up to 25), chips Seats 40 ·
 Holds 80 standing · Tables, chairs + setup included, ask "Message us your date and headcount." QR decodes. Fix: photo-card CSS
