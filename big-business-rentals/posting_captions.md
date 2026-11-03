@@ -3182,7 +3182,7 @@ file, "quoted by crew size, hours and date". Flyer flyers2026/BB26_Group_CrewOnl
 group captions C-A to C-D in community/COMMUNITY_POSTS.md. CLAUDE.md services list updated.
 
 ## WEDNESDAY NOV 4 · GUESS THE THEME No. 3 WINTER WONDERLAND Pt. 1 (1pm, TikTok + IG Trial Reel) + EP. 44 THE TEARDOWN (8pm)
-BUILT Mon Nov 2 night, AWAITING OWNER APPROVAL (queue_wed04.py; --with-pt2 also queues Thu Pt. 2). 5pm remix = nightly task Tue evening.
+Owner approved "queue both": QUEUED 8/8 OK (queue_wed04.py --with-pt2: crew-only 11am FB+IG Story, GTT Pt. 1 Wed 1pm TT, GTT Pt. 2 Thu 1pm TT, EP. 44 8pm x4). IG Trial Reels: owner posts. 5pm remix = nightly task Tue evening.
 GTT No. 3: package tiktok/packages/GTT3_WinterWonderland_Nov4-5.md (HF Z-Image seeds 581870 / 834620 / 297281 / 301238,
 9:16 crops; clue 3 crop keeps a blurred background figure out of frame). AI label ON. Reveal under a party tent.
 EP. 44 THE TEARDOWN (reelsD REELS[44], 26s): Dad folds a table in 2 seconds; Lil stacks four, Baby stacks six, the tower

@@ -1,6 +1,6 @@
 # Guess the Theme No. 3 · Winter Wonderland · Wed Nov 4 + Thu Nov 5
 
-Status: BUILT Mon Nov 2 night, awaiting owner approval.
+Status: APPROVED Nov 2 ("queue both"). TikTok queued 2/2 with the AI label on. Instagram Trial Reels: owner posts in the app.
 Routing (locked Oct 26): TikTok + Instagram only, never Facebook. TikTok goes through Buffer with the AI label on.
 Instagram runs as a Trial Reel, which the owner posts in the app (the API can't make Trial Reels); turn on the AI label there too.
 
