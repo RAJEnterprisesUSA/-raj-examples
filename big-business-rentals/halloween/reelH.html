@@ -4899,6 +4899,87 @@ REELS[38]=reelT38;
 SHAKES[38]=[0.0,0.4,18];
 TAGLINES[38]='ONE EXTRA CHAIR. EVERY TIME.';
 window.GAGENDS[38]=14.0;
+
+// ---------- T39: TREND REMIX · "Reasons you don't need to..." (17s), SOCIAL pool ----------
+// Trend (early Nov 2026 roundups): reverse-psychology "reasons why you don't need to..." text overlays. Ours: four reasons
+// you don't need to rent tables and chairs for Thanksgiving, each one falls apart on screen.
+// UPGRADE: numbered glass reason cards that slide in, then a recap list that gets struck through at the payoff.
+function reasonCardT39(n, txt, k){
+  if(k<=0) return;
+  const x=lerp(W+40, 60, ease(k));
+  ctx.save(); ctx.translate(x, 420);
+  ctx.fillStyle='rgba(255,255,255,.12)'; ctx.strokeStyle='rgba(229,184,75,.85)'; ctx.lineWidth=4; rr(0,0,W-120,150,30); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.beginPath(); ctx.arc(76,75,46,0,7); ctx.fill();
+  ctx.fillStyle='#1a0f2b'; ctx.font='54px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText(String(n),76,94);
+  ctx.fillStyle='#fbf6ea'; ctx.textAlign='left'; ctx.font='34px "Archivo Black"';
+  const words=txt.split(' '); let line='', y=62, lines=[];
+  words.forEach(w=>{ const tst=line?line+' '+w:w; if(ctx.measureText(tst).width>W-330){ lines.push(line); line=w; } else line=tst; }); lines.push(line);
+  if(lines.length===1) y=88; lines.forEach((l,i)=>ctx.fillText(l,148,y+i*44));
+  ctx.restore();
+}
+function recapT39(k, strike){
+  if(k<=0) return;
+  const items=['Standing for three hours','The ironing board table','Lil Wobbles','Sharing the couch with the cat'];
+  ctx.save(); ctx.globalAlpha=Math.min(1,k);
+  ctx.fillStyle='rgba(15,10,23,.78)'; ctx.strokeStyle='rgba(229,184,75,.85)'; ctx.lineWidth=4; rr(150,410,780,330,28); ctx.fill(); ctx.stroke();
+  ctx.font='34px "Archivo Black"'; ctx.textAlign='left';
+  items.forEach((it,i)=>{ const y=480+i*70; ctx.fillStyle='#fbf6ea'; ctx.fillText((i+1)+'. '+it, 190, y);
+    const s=Math.min(1,Math.max(0,(strike-i*0.18)/0.25)); if(s>0){ const w=ctx.measureText((i+1)+'. '+it).width; ctx.strokeStyle='#ff4d4d'; ctx.lineWidth=8; ctx.beginPath(); ctx.moveTo(180,y-12); ctx.lineTo(180+(w+20)*s,y-12); ctx.stroke(); } });
+  ctx.restore();
+}
+function clockT39(x,y,t){
+  ctx.save(); ctx.translate(x,y); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#fbf6ea'; ctx.beginPath(); ctx.arc(0,0,110,0,7); ctx.fill(); ctx.stroke();
+  for(let i=0;i<12;i++){ const a=i/12*Math.PI*2; ctx.beginPath(); ctx.moveTo(Math.cos(a)*90,Math.sin(a)*90); ctx.lineTo(Math.cos(a)*100,Math.sin(a)*100); ctx.stroke(); }
+  ctx.lineCap='round'; ctx.lineWidth=10; ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(Math.cos(t*2-1.57)*55,Math.sin(t*2-1.57)*55); ctx.stroke();
+  ctx.lineWidth=6; ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(Math.cos(t*24-1.57)*85,Math.sin(t*24-1.57)*85); ctx.stroke();
+  ctx.restore();
+}
+function ironingBoardT39(x,wob){
+  ctx.save(); ctx.translate(x,FLOOR); ctx.rotate(rad(wob)); ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.beginPath(); ctx.moveTo(-120,0); ctx.lineTo(90,-300); ctx.moveTo(120,0); ctx.lineTo(-90,-300); ctx.stroke();
+  ctx.fillStyle='#bcd3e8'; ctx.beginPath(); ctx.moveTo(-230,-300); ctx.lineTo(170,-300); ctx.quadraticCurveTo(250,-300,250,-320); ctx.quadraticCurveTo(250,-340,170,-340); ctx.lineTo(-230,-340); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function couchT39(x){
+  ctx.save(); ctx.lineWidth=8; ctx.strokeStyle=INK; ctx.fillStyle='#7a4a6e';
+  rr(x-230,FLOOR-260,460,120,30); ctx.fill(); ctx.stroke();       // back
+  rr(x-250,FLOOR-170,500,110,26); ctx.fill(); ctx.stroke();       // seat
+  rr(x-290,FLOOR-210,70,170,24); ctx.fill(); ctx.stroke(); rr(x+220,FLOOR-210,70,170,24); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.fillRect(x-220,FLOOR-60,16,60); ctx.fillRect(x+204,FLOOR-60,16,60);
+  ctx.restore();
+}
+function reelT39(t){
+  roomS2(t);
+  const SEG=[1.9,4.3,6.7,9.1,11.5];
+  const i=(t<SEG[0])?-1:(t<SEG[1]?0:(t<SEG[2]?1:(t<SEG[3]?2:(t<SEG[4]?3:4))));
+  const vk=(i>=0)?easeOutBack(Math.min(1,(t-SEG[Math.min(i,4)])/0.3)):0;
+  ctx.save(); ctx.translate(760,FLOOR); ctx.scale(vk,vk); ctx.translate(-760,-FLOOR);
+  if(i===0) clockT39(760, FLOOR-420, t);
+  if(i===1){ const wob=Math.sin(t*9)*(t>5.6?6:2); ironingBoardT39(760, wob); turkeyT37(760, FLOOR-345, 0.7); }
+  if(i===2){ const br=(t>=8.2)?Math.min(1,(t-8.2)/0.3):0; drawChair(760, (t<8.2)?Math.sin(t*12)*7:0, br, br, {a:'#e05252',b:'#c94444',c:'#ef6d6d'}); }
+  if(i===3){ couchT39(760); drawCat(760, FLOOR-170, {pose:'sit', face:-1, t:t, s:1.6}); }
+  if(i===4){ drawVanH(690, FLOOR-10, 0, 0.8, 0, t); drawFoldedStack(925, FLOOR, 5, 0); }
+  ctx.restore();
+  // MR. BIG BUSINESS, deadpan through every "reason", then relieved
+  const relief=(i===4);
+  drawMan({x:250, y:HIP_STAND, face:1, legs:(i===0)?[{hip:12*Math.sin(t*3),knee:8},{hip:-12*Math.sin(t*3),knee:8}]:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:relief?{sh:165,el:-20}:{sh:60,el:24}, arm2:relief?{sh:160,el:-30}:undefined,
+    mouth:relief?'smile':'flat', eyes:(i===2&&t>=8.2)?'wide':undefined, headTilt:(i===2&&t>=8.2)?-10:0, style:STYLER2});
+  if(i===2&&t>=8.2) dust(760,FLOOR,t-8.2);
+  // the reason cards, then the struck-through recap
+  [['Your guests love standing for three hours.',0],['The ironing board is basically a table.',1],['Lil Wobbles is available.',2],['The cat will share the couch.',3]]
+    .forEach(([txt,n])=>{ if(i===n) reasonCardT39(n+1, txt, (t-SEG[n])/0.45); });
+  if(i===4){ recapT39((t-SEG[4])/0.3, (t-SEG[4]-0.4)/0.5); }
+  if(t>=12.9) confettiBurst(t,12.9,760,FLOOR-400,70,2.6);
+  // captions: hook fully on screen at frame one
+  if(t<SEG[0]) caption(["REASONS YOU DON'T NEED TO","RENT TABLES AND CHAIRS","FOR THANKSGIVING:"],300,1,40);
+  if(i>=0&&i<4){ ctx.save(); ctx.fillStyle='#E5B84B'; ctx.font='30px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText("REASONS YOU DON'T NEED US:",W/2,340); ctx.restore(); }
+  if(i===4&&t>=12.4&&t<13.95) captionPop(['OR: TABLES AND CHAIRS,','DELIVERED.'],300,12.4,t,48);
+}
+REELS[39]=reelT39;
+SHAKES[39]=[8.2,0.25,10];
+TAGLINES[39]='SKIP THE IRONING BOARD. CALL US.';
+window.GAGENDS[39]=14.0;
 </script>
 </body></html>
 

@@ -51,3 +51,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Nov 1 (Sun build: POV Thanksgiving + EP. 41): Season Two rig in production (STYLER2 + four kid rigs) and the psychology-playbook story rules; Flyer 2026 holiday template with true-calendar chips.
 - Nov 2 (first fresh nightly remix, Big Bang extra chair): non-Halloween Season Two remix room (roomS2: plum wall, gold string lights, Vegas skyline window) + space-to-party zoom transition.
 - Nov 2 (Mon build: EP. 42): in-story invitation card reveal that dates the December family-party arc.
+- Nov 3 (fresh nightly remix, Reasons You Don't Need): numbered glass reason cards that slide in + a recap list struck through at the payoff.
