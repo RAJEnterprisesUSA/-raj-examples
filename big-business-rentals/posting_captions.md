@@ -3195,3 +3195,13 @@ FB 8pm: the big business chronicles ep. 44: dad folds a table in 2 seconds. the 
 IG 8pm: The Big Business Chronicles EP. 44: Dad folds a table in 2 seconds, Baby stacks six chairs, and the cat wins three rounds. 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles EP. 44: she lifted the cat without looking up. 🪑 #thebigbusinesschronicles #siblings #teardown #comedy
 YT 8pm: "EP. 44: The Teardown 🪑 the cat is undefeated #Shorts" / The Big Business Chronicles EP. 44: Dad folds a table in 2 seconds, the kids race to stack chairs, and the cat claims the last one. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## RULE CHANGE Nov 2 night (owner: "i dont need one for groups i need those to be added into the rotation")
+Crew flyers move OUT of the Facebook-group plan and INTO the post rotation: the Tuesday SERVICES FLYER slot rotates weekly
+(rentals + full-service setup -> CREW ONLY -> LABOR CREW for venues -> TENTS). Group crew-only flyer and C captions removed.
+Built: flyers2026/BB26_CrewOnly.png + _Story.png ("Got the gear? We bring the crew.") and BB26_LaborCrew.png + _Story.png
+("Short on crew? We set up and tear down."). QR decodes on all four.
+WED NOV 4 ADD (pending approval, in queue_wed04.py): CREW ONLY 11am, FB feed + IG Story (FB feed count Wed = 3, at the cap).
+FB 11am: Already have the tables and chairs, but nobody to set them up? Our Las Vegas crew comes to you, sets everything to your layout before guests arrive, then folds, stacks and clears it after the party. Your equipment, your space, our hands. Tents too. Every job is quoted by crew size, hours and date. Message us your date, hours and what you have. #LasVegasEvents #PartySetup #EventCrew #VegasParty #SetupAndTeardown
+IG Story 11am: image only.
+LABOR CREW feed + story: next in the services rotation (Tue Nov 10 unless the owner picks another day).

@@ -46,7 +46,9 @@ No crew prices on file: "quoted by crew size, hours and date"; never invent a cr
 fresh AI setup images (owner Nov 2: "generate pictures to replace the venue photo") with a "Setup inspo" chip. Answer a
 venue question only if a customer asks (reply_templates #4); never pitch it. The venue facts below stay as reference only.
 WEEKLY PROMOTIONS (owner Oct 26, locked; one a day, built as packages, queued only after owner approval):
-Mon PRICE IT (fresh AI setup image, FB feed + IG feed) · Tue SERVICES FLYER (FB feed + IG Story; was VENUE FLYER) ·
+Mon PRICE IT (fresh AI setup image, FB feed + IG feed) · Tue SERVICES FLYER (FB feed + IG Story; was VENUE FLYER; ROTATES weekly, owner Nov 2 "i need those to be added into the
+rotation": rentals + full-service setup (Nov 3) -> CREW ONLY "Got the gear? We bring the crew." -> LABOR CREW for venues
+"Short on crew?" -> TENTS + tent setup -> repeat with fresh designs; crew flyers BB26_CrewOnly / BB26_LaborCrew, feed + story) ·
 Wed GUESS THE THEME clues (TikTok + IG, 1pm) · Thu REFERRAL FLYER (FB feed + IG Story) + GUESS THE THEME
 answer (TikTok + IG, 1pm) · Fri SAVE-WORTHY CAROUSEL (IG feed carousel + FB album) · Sat PRICE LIST
 (FB feed + IG Story) · Sun HOLIDAY BOOKING FLYER (FB feed + IG Story). Promo slot 1pm unless noted.

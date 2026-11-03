@@ -295,9 +295,11 @@ def holiday(name, kicker, headline_html, date_chips, tiles, ask_html, note_html,
 
 def services(name, chip, kicker, headline_html, sub, tiles, ask_html, note_html, bg, glow, size=(1080, 1350)):
     """Group SERVICE flyer (no prices): kicker + headline + sub, 2x2 bento of real services (title + one line), the ask,
-    a quote note, contact bar. Used for the labor crew flyer (setup and teardown for venues)."""
+    a quote note, contact bar. Used for the labor crew flyer (setup and teardown for venues) and the crew-only flyer.
+    Tall size (1080x1920) uses the IG story safe zone."""
     cells = ''.join(f"<div class='tile glass'><div class='n'>{i+1:02d}</div><div class='t'>{a}</div><div class='d'>{b}</div></div>" for i, (a, b) in enumerate(tiles))
-    css = """.col{position:absolute;left:56px;right:56px;top:150px;bottom:232px;display:flex;flex-direction:column;justify-content:space-between}
+    tall = size[1] > 1500
+    css = (".top{top:200px}.contact{bottom:240px}.col{top:300px!important;bottom:450px!important}.h1{font-size:112px!important}.sb{font-size:32px!important}.bento{gap:20px!important}.t{font-size:52px!important}.d{font-size:24px!important}.ask{font-size:46px!important}.tile{padding:28px 30px!important}" if tall else "") + """.col{position:absolute;left:56px;right:56px;top:150px;bottom:232px;display:flex;flex-direction:column;justify-content:space-between}
     .kick{font-family:'Inter';font-weight:800;font-size:23px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:14px}
     .sb{font-size:28px;font-weight:600;margin-top:16px;opacity:.92}
     .bento{display:grid;grid-template-columns:1fr 1fr;gap:16px}
