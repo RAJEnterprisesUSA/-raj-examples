@@ -33,6 +33,9 @@ per-platform caps for those two formats.
 GUESS THE THEME (owner Oct 26, locked): weekly, clues Wed 1pm + answer Thu 1pm, TikTok + Instagram
 only (never Facebook), AI label on, built as a package and queued only after owner approval.
 FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day.
+SHOW EVERYTHING BEFORE QUEUEING (owner Nov 2: "start showing me everything thats up to be queued" then "i dont need a
+page just show me the post"): before every approval ask, send each pending post's media in chat (SendUserFile) and list
+it in chat with day, time, platforms and every platform's exact caption. No web page or board.
 VENUE PROMOTION RETIRED (owner Nov 2: "we are not promoting the venue anymore, only our services"): no venue,
 private party room, room photos or venue prices ($625/$800, seats 40/holds 80) in any post, flyer, caption, carousel, skit
 punchline, group flyer or referral pass-along. Promote services only: table and chair rentals (delivered and picked up),
