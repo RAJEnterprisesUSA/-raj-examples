@@ -120,7 +120,7 @@ def venue(name, photo, headline_html, size=(1080, 1350)):
     w, h = size; tall = h > 1500
     ph_h = 560 if tall else 470
     css = f""".photo{{position:absolute;left:56px;right:56px;top:140px;height:{ph_h}px;border-radius:36px;overflow:hidden;
-    box-shadow:0 30px 70px rgba(0,0,0,.55);background:url('{pathlib.Path(photo).name}') center 60%/cover}}
+    box-shadow:0 30px 70px rgba(0,0,0,.55);background:url('{pathlib.Path(photo).name}') {pos}/cover}}
     .photo .chip{{position:absolute;left:22px;bottom:22px;background:rgba(15,10,23,.78);border:1px solid rgba(229,184,75,.7);color:#fbf6ea}}
     .photo .chip::before{{content:'';width:12px;height:12px;border-radius:50%;background:#E5B84B}}
     .vh{{position:absolute;left:56px;right:56px;top:{140+ph_h+46}px}}
@@ -142,7 +142,7 @@ def venue(name, photo, headline_html, size=(1080, 1350)):
             "<div class='bg' style='background:radial-gradient(50% 35% at 100% 55%,rgba(229,184,75,.28),rgba(229,184,75,0))'></div>"
             + top_bar("<div class='chip gold'>Private venue</div>")
             + ("<div class='stack'>" if tall else '')
-            + "<div class='photo'><div class='chip'>The real room</div></div>"
+            + "<div class='photo'><div class='chip'>{photo_chip}</div></div>"
             + f"<div class='vh'><div class='h1' style='font-size:{104 if tall else 92}px'>{headline_html}</div>"
               "<div class='tiles'><div class='tile glass'><div class='k'>3 hours</div><div class='v'>$625</div><div class='s'>up to 25 guests</div></div>"
               "<div class='tile glass'><div class='k'>4 hours</div><div class='v'>$800</div><div class='s'>up to 40 guests</div></div></div>"
@@ -184,7 +184,7 @@ def venue_full(name, photo, headline_html, size=(1080, 1350), sub=''):
     .vfacts{position:absolute;left:56px;right:56px;bottom:452px;display:flex;gap:12px;flex-wrap:wrap}.vfacts .chip{height:50px;font-size:19px;background:rgba(15,10,23,.6)}
     .shade2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,23,.9) 0%,rgba(15,10,23,.6) 30%,rgba(15,10,23,.12) 48%,rgba(15,10,23,.8) 66%,rgba(15,10,23,.97) 100%)}"""
     body = (f"<div class='bg' style=\"background-image:url('{pathlib.Path(photo).name}');background-position:40% 60%\"></div><div class='shade2'></div>"
-            + top_bar("<div class='chip gold'>Private party room</div>")
+            + top_bar(f"<div class='chip gold'>{top_chip}</div>")
             + f"<div style='position:absolute;left:56px;right:56px;top:165px'><div class='h1' style='font-size:120px'>{headline_html}</div>"
               + (f"<div style='margin-top:18px;font-size:34px;font-weight:600'>{sub}</div>" if sub else '') + "</div>"
             + "<div class='vfacts'><div class='chip'>Seats 40</div><div class='chip'>Holds 80 standing</div><div class='chip'>Tables, chairs + setup included</div></div>"
@@ -313,9 +313,12 @@ def services(name, chip, kicker, headline_html, sub, tiles, ask_html, note_html,
             + contact_bar())
     return render(name, body, size, css)
 
-def venue_holiday(name, photo, kicker, headline_html, tiles, chips, ask_html, bg, glow, size=(1080, 1350)):
+def venue_holiday(name, photo, kicker, headline_html, tiles, chips, ask_html, bg, glow, size=(1080, 1350),
+                  top_chip='Private party room', photo_chip='The real room', pos='center 60%'):
     """Tue VENUE FLYER, holiday edition: kicker + headline, the REAL room as a rounded photo card that fills the space,
-    two per-guest price tiles (owner-approved math), fact chips, the single ask, contact bar. Feed 4:5 and story 9:16."""
+    two per-guest price tiles (owner-approved math), fact chips, the single ask, contact bar. Feed 4:5 and story 9:16.
+    Nov 2: venue promotion RETIRED (owner: "only our services"); the layout lives on as the photo-card SERVICES flyer
+    via top_chip / photo_chip (AI setup images carry a "Setup inspo" chip)."""
     shutil.copy(photo, OUT/pathlib.Path(photo).name)
     w, h = size; tall = h > 1500
     cells = ''.join(f"<div class='tile glass'><div class='k'>{a}</div><div class='v'>{b}</div><div class='s'>{c}</div></div>" for a, b, c in tiles)
@@ -323,7 +326,7 @@ def venue_holiday(name, photo, kicker, headline_html, tiles, chips, ask_html, bg
     css = f""".col{{position:absolute;left:56px;right:56px;top:{290 if tall else 150}px;bottom:{440 if tall else 232}px;display:flex;flex-direction:column;gap:{26 if tall else 18}px}}
     {'.top{top:200px}.contact{bottom:240px}' if tall else ''}
     .kick{{font-family:'Inter';font-weight:800;font-size:23px;letter-spacing:.14em;text-transform:uppercase;color:#E5B84B;margin-bottom:12px}}
-    .vph{{flex:1;border-radius:32px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.5);background:url('{pathlib.Path(photo).name}') center 60%/cover;position:relative}}
+    .vph{{flex:1;border-radius:32px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.5);background:url('{pathlib.Path(photo).name}') {pos}/cover;position:relative}}
     .vph .chip{{position:absolute;left:18px;bottom:18px;background:rgba(15,10,23,.78);border:1px solid rgba(229,184,75,.7)}}
     .tiles{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.tile{{padding:{'22px 26px' if tall else '16px 22px'}}}
     .k{{font-size:{24 if tall else 20}px;font-weight:600;opacity:.9}}.v{{font-family:'Brico';font-weight:800;font-size:{84 if tall else 64}px;letter-spacing:-.04em;line-height:1;margin-top:6px}}
@@ -331,9 +334,9 @@ def venue_holiday(name, photo, kicker, headline_html, tiles, chips, ask_html, bg
     .chips{{display:flex;gap:10px;flex-wrap:wrap}}.chips .chip{{height:{50 if tall else 44}px;font-size:{19 if tall else 16}px}}
     .ask{{font-family:'Brico';font-weight:800;font-size:{48 if tall else 36}px;letter-spacing:-.02em;line-height:1.05}}.ask em{{font-family:'Serif';font-style:italic;font-weight:400;color:#E5B84B}}"""
     body = (f"<div class='bg' style='background:{bg}'></div><div class='bg' style='background:{glow}'></div>"
-            + top_bar("<div class='chip gold'>Private party room</div>")
+            + top_bar(f"<div class='chip gold'>{top_chip}</div>")
             + f"<div class='col'><div><div class='kick'>{kicker}</div><div class='h1' style='font-size:{104 if tall else 84}px'>{headline_html}</div></div>"
-              f"<div class='vph'><div class='chip'>The real room</div></div><div class='tiles'>{cells}</div><div class='chips'>{ch}</div>"
+              f"<div class='vph'><div class='chip'>{photo_chip}</div></div><div class='tiles'>{cells}</div><div class='chips'>{ch}</div>"
               f"<div class='ask'>{ask_html}</div></div>" + contact_bar())
     return render(name, body, size, css)
 

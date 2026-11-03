@@ -3162,3 +3162,16 @@ FB 8pm: the big business chronicles ep. 43: dad nails the tablecloth trick. then
 IG 8pm: The Big Business Chronicles EP. 43: Dad nails the tablecloth trick, Lil sends the plates flying, and Vaeh catches every one without looking up. 🍽️ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles EP. 43: she caught every plate without looking up. 🍽️ #thebigbusinesschronicles #tableclothtrick #siblings #comedy
 YT 8pm: "EP. 43: The Tablecloth 🍽️ she never looked up #Shorts" / The Big Business Chronicles EP. 43: Dad nails the tablecloth trick, then every kid takes a turn. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## RULE CHANGE Nov 2 night (owner: "we are not promoting the venue anymore, only our services." then "generate pictures to replace the venue photo.")
+Venue promotion RETIRED everywhere (posts, flyers, captions, carousels, group flyers, referral pass-along, skit punchlines).
+Tuesday promo slot becomes the SERVICES FLYER. Buffer scan at the time of the change: 0 scheduled posts, nothing queued to pull.
+Playbook: referral kit pass-along now lists tents + setup/teardown crews instead of the party room; reply template #4 kept
+for inbound venue questions only (never pitch). CLAUDE.md updated (VENUE PROMOTION RETIRED line, Tue SERVICES FLYER).
+TUESDAY NOV 3 CORRECTION: the venue flyer above (BB26_Venue_Tue03) is WITHDRAWN, never queued. Replacement:
+SERVICES FLYER flyers2026/BB26_Services_Tue03.png (FB feed; fresh HF Z-Image holiday dinner under a frame tent, seed 928822,
+inspo/setup_holiday_tent.png) + BB26_Services_Tue03_Story.png (IG Story; fresh December backyard party, seed 689750,
+inspo/setup_december_yard.png). "Setup inspo" chip, tiles $22 table + 6 chairs ($3.67 a seated guest) and full-service from
+$265, chips Delivered + picked up · Tents + tent setup · Delivery quoted with your order. QR decodes on both.
+FB 1pm: Hosting the holidays this year? We bring the seating. Tables and chairs are delivered and picked up across Las Vegas: a 6 ft table with 6 chairs is $22, or $3.67 a seated guest, with delivery quoted with your order. Want it all handled? Full-service setup and breakdown packages start at $265, and we set up tents too. Thanksgiving, Friendsgiving and December parties. Message us your date and headcount. #LasVegasPartyRentals #Friendsgiving #ThanksgivingVegas #HolidayPartyVegas #TableAndChairRentals
+IG Story 1pm: image only.

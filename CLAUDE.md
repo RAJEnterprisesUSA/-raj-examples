@@ -33,8 +33,14 @@ per-platform caps for those two formats.
 GUESS THE THEME (owner Oct 26, locked): weekly, clues Wed 1pm + answer Thu 1pm, TikTok + Instagram
 only (never Facebook), AI label on, built as a package and queued only after owner approval.
 FACEBOOK FEED (owner Oct 26): up to 3 feed posts a day.
+VENUE PROMOTION RETIRED (owner Nov 2: "we are not promoting the venue anymore, only our services"): no venue,
+private party room, room photos or venue prices ($625/$800, seats 40/holds 80) in any post, flyer, caption, carousel, skit
+punchline, group flyer or referral pass-along. Promote services only: table and chair rentals (delivered and picked up),
+full-service setup and breakdown (from $265), tents and tent setup, setup and teardown labor crews. Images for promos are
+fresh AI setup images (owner Nov 2: "generate pictures to replace the venue photo") with a "Setup inspo" chip. Answer a
+venue question only if a customer asks (reply_templates #4); never pitch it. The venue facts below stay as reference only.
 WEEKLY PROMOTIONS (owner Oct 26, locked; one a day, built as packages, queued only after owner approval):
-Mon PRICE IT (fresh AI setup image, FB feed + IG feed) · Tue VENUE FLYER (FB feed + IG Story) ·
+Mon PRICE IT (fresh AI setup image, FB feed + IG feed) · Tue SERVICES FLYER (FB feed + IG Story; was VENUE FLYER) ·
 Wed GUESS THE THEME clues (TikTok + IG, 1pm) · Thu REFERRAL FLYER (FB feed + IG Story) + GUESS THE THEME
 answer (TikTok + IG, 1pm) · Fri SAVE-WORTHY CAROUSEL (IG feed carousel + FB album) · Sat PRICE LIST
 (FB feed + IG Story) · Sun HOLIDAY BOOKING FLYER (FB feed + IG Story). Promo slot 1pm unless noted.
@@ -257,7 +263,7 @@ business ("teslas new flying roadster" was the owner's example). Mechanics, ever
    affiliation (same spirit as the rodeo rule: ride the trend, not the brand). A "flying roadster"
    gag is fine, a Tesla logo is not. No licensed audio via API: remix the FORMAT with our own
    SFX bed; note in the caption log when the owner should add the trending sound in-app.
-3. MAKE IT OURS: the punchline always lands on tables, chairs, linens, delivery or the venue.
+3. MAKE IT OURS: the punchline always lands on tables, chairs, linens, tents, setup or delivery (never the venue, retired Nov 2).
    Use whatever medium fits: the canvas rig cast (Wobbles/cat/Chronicles characters reacting to
    or living the trend), recut real footage with the cinematic pipeline, or AI imagery (HF quota
    permitting). Comedy length rule applies (~17s+). Naming: BB_Trend_*.
@@ -281,8 +287,8 @@ LEADS FIRST (these beat anything for reach):
   2 to 3 options in any reply. The default answer is a number of $22 sets (table + 6 chairs).
 - PRICES: show real prices, then per-guest framing. OWNER-APPROVED DERIVED FIGURES (Oct 26, from his card; delivery
   always "quoted with your order"): set = $10 table + 6 x $2 chairs = $22 = $3.67 per seated guest; 2 sets $44 (12 guests),
-  4 sets $88 (24), 6 sets $132 (36), 7 sets $154 (40, 42 seats), 8 sets $176 (48), 10 sets $220 (60); venue $625 / 25 =
-  $25 a guest (3 h) and $800 / 40 = $20 a guest (4 h). NEVER call the set a discount or "save" (it is the same price as
+  4 sets $88 (24), 6 sets $132 (36), 7 sets $154 (40, 42 seats), 8 sets $176 (48), 10 sets $220 (60); [venue $625 / 25 =
+  $25 a guest (3 h) and $800 / 40 = $20 a guest (4 h): RETIRED from promotion Nov 2, reference only]. NEVER call the set a discount or "save" (it is the same price as
   the parts). No decoys, no invented "regular price" anchors, never change the owner's prices.
 - REVIEWS: ask every completed customer for a Google review with the neutral script in playbook/review_ask.md; no reward,
   no filtering; reply personally to every review naming the event type (FTC 2024 fake-review rule).

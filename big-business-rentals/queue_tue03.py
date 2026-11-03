@@ -1,4 +1,4 @@
-"""Tuesday Nov 3 (PST -08:00): VENUE FLYER (1pm, FB feed + IG Story, Flyer 2026 holiday venue with the real room photo),
+"""Tuesday Nov 3 (PST -08:00): SERVICES FLYER (1pm, FB feed + IG Story; replaced the venue flyer, owner Nov 2: "only our services"; fresh AI setup images),
 TREND REMIX #16 Reasons You Don't Need (5pm, fresh nightly build, social pool) and EP. 43 The Tablecloth (8pm), videos
 on all four platforms. Run ONLY after the owner approves."""
 import time
@@ -8,14 +8,14 @@ F = RAW + "big-business-rentals/flyers2026/"
 T = "big-business-rentals/halloween/BB_Trend_ReasonsYouDontNeed.mp4"
 E = "fb_safe/BB_Chronicles_Ep43_TheTablecloth.mp4"
 D1, D5, D8 = "2026-11-03T13:00:00-08:00", "2026-11-03T17:00:00-08:00", "2026-11-03T20:00:00-08:00"
-FB_VENUE = ("Host the holidays. Skip the cleanup.\n\n"
-            "Our private party room in Las Vegas seats 40 and holds 80 standing, with tables, chairs and setup included. "
-            "Four hours is $800 for up to 40 guests, $20 a guest, and three hours is $625 for up to 25, $25 a guest. "
-            "Thanksgiving, Friendsgiving and December parties all fit. Message us your date and headcount.\n\n"
-            "#LasVegasVenue #VegasEventSpace #Friendsgiving #HolidayPartyVegas #LasVegasParty")
+FB_SERVICES = ("Hosting the holidays this year? We bring the seating.\n\n"
+            "Tables and chairs are delivered and picked up across Las Vegas: a 6 ft table with 6 chairs is $22, or $3.67 a seated guest, "
+            "with delivery quoted with your order. Want it all handled? Full-service setup and breakdown packages start at $265, "
+            "and we set up tents too. Thanksgiving, Friendsgiving and December parties. Message us your date and headcount.\n\n"
+            "#LasVegasPartyRentals #Friendsgiving #ThanksgivingVegas #HolidayPartyVegas #TableAndChairRentals")
 IMAGES = [
- ("fb", FB_VENUE, F + "BB26_Venue_Tue03.png", {"facebook": {"type": "post", "firstComment": FB_PIN}}),
- ("ig", "", F + "BB26_Venue_Tue03_Story.png", {"instagram": {"type": "story", "shouldShareToFeed": False}}),
+ ("fb", FB_SERVICES, F + "BB26_Services_Tue03.png", {"facebook": {"type": "post", "firstComment": FB_PIN}}),
+ ("ig", "", F + "BB26_Services_Tue03_Story.png", {"instagram": {"type": "story", "shouldShareToFeed": False}}),
 ]
 VIDEOS = [
  ("fb", D5, T, "reasons you don't need to rent tables and chairs for thanksgiving. reason three is our favorite. 🦃\n\n#lasvegas #thanksgiving #partyrentals #animation #comedy", None),

@@ -12,7 +12,7 @@ Big Business Party Rentals & Events · Las Vegas · 702-706-8287 · bigbusinessp
 - Tables and chairs delivered and picked up across Las Vegas (delivery quoted with the order)
 - Folding chair $2 · 6 ft rectangle table $10 · 6 ft round table $15 · table + 6 chairs $22 (seats 6)
 - Full-service setup and breakdown: packages from $265
-- Private party room: 3 hours $625 (up to 25 guests) · 4 hours $800 (up to 40 guests)
+- Tents and tent setup; setup and teardown crews (quoted by date and size)
 - Fastest way to a quote: message your date and headcount, or use the chat on the website
 
 ## Ready-to-send text a partner can forward to a client

@@ -8,7 +8,7 @@ Prices to use (owner's card + owner-approved math, Oct 26). Delivery is always q
 - Folding chair $2 · 6 ft rectangle table $10 · 6 ft round table $15 · table + 6 chairs set $22 (seats 6)
 - 4 sets $88 (24 guests) · 7 sets $154 (40 guests) · 8 sets $176 (48 guests) · 10 sets $220 (60 guests)
 - Full-service setup and breakdown: packages from $265
-- Private venue: 3 hours $625 (up to 25 guests) · 4 hours $800 (up to 40 guests) · seats 40, holds 80 standing
+- Private venue (answer only if asked, never pitch): 3 hours $625 (up to 25 guests) · 4 hours $800 (up to 40 guests) · seats 40, holds 80 standing
 - Never call the $22 set a discount. Never promise a date is open until you check.
 
 ---
@@ -27,7 +27,7 @@ Two easy ways to do it:
 2. Full-service: we set up and break down for you. Packages start at $265.
 Which sounds better? · [Name]
 
-## 4 · Venue question
+## 4 · Venue question (ONLY if a customer asks; venue promotion retired Nov 2, never pitch it)
 Our private room seats 40 and holds 80 standing. It's $625 for 3 hours (up to 25 guests) or $800 for 4 hours (up to
 40 guests), and the tables, chairs and setup are included. For [GUESTS] guests the [3 / 4]-hour package fits. What date
 are you looking at? · [Name]
