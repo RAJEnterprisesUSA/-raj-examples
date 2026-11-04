@@ -3222,7 +3222,7 @@ TT 5pm: The red party and the blue party both called. 🪑 #electionnight #redvs
 YT 5pm: "The red party and the blue party both called 🪑 #Shorts" / Six tables each, 36 seats each, and a tie. Everybody still needs a seat. #electionnight #comedy #partyrentals
 
 ## THURSDAY NOV 5 · REFERRAL FLYER EVENT COORDINATORS (1pm, FB feed + IG Story) + EP. 45 THE HEADCOUNT (8pm)
-BUILT Tue Nov 3 night, AWAITING OWNER APPROVAL (queue_thu05.py). Already queued Thu: GTT No. 3 Pt. 2 (1pm TikTok).
+Owner approved "queue it": QUEUED 6/6 OK (queue_thu05.py). Already queued Thu: GTT No. 3 Pt. 2 (1pm TikTok).
 5pm remix = Wednesday's nightly build (the back-burnered nuclear clock remix, news pool).
 REFERRAL: flyers2026/BB26_Referral_Thu05.png + _Story.png (Flyer 2026 referral, deep navy + gold), "Your clients ask you
 who does the tables.", services only (tables + chairs, tents, setup + teardown crews), steps "Send them our way with their
