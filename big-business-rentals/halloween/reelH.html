@@ -4980,6 +4980,94 @@ REELS[39]=reelT39;
 SHAKES[39]=[8.2,0.25,10];
 TAGLINES[39]='SKIP THE IRONING BOARD. CALL US.';
 window.GAGENDS[39]=14.0;
+
+// ---------- T40: TREND REMIX · "the red party and the blue party" (17s), election night, OWNER-PICKED Nov 3 ----------
+// Owner override of the no-politics guardrail for this one remix. Strictly nonpartisan: "red party" and "blue party" are
+// party THEMES (red decor, blue decor). No candidates, real party names, logos, results or voting info. Both sides get
+// identical treatment (same tables, same seats, same timing); Lil Wobbles (the red villain chair) sits this one out.
+// Payoff: the seat count is a tie, the divider lifts, one long table: everybody still needs a seat.
+const RED40='#c8323e', BLUE40='#2f5fc4';
+const L40=[[95,FLOOR-20],[260,FLOOR-20],[175,FLOOR-250],[340,FLOOR-250],[425,FLOOR-20],[10,FLOOR-250]];
+function clothTableT40(x,y,s,col){
+  if(s<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  drawMiniChair(-50,-6,0.62); drawMiniChair(50,-6,0.62);
+  ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#dfe2e6'; ctx.fillRect(-56,-40,10,40); ctx.fillRect(46,-40,10,40);
+  ctx.fillStyle=col; ctx.beginPath(); ctx.moveTo(-70,-120); ctx.lineTo(70,-120); ctx.lineTo(78,-30); ctx.lineTo(-78,-30); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=GOLD; ctx.fillRect(-76,-44,152,8);
+  ctx.fillStyle='#fff'; [-34,0,34].forEach(dx=>{ ctx.beginPath(); ctx.ellipse(dx,-120,15,5,0,0,7); ctx.fill(); });
+  ctx.restore();
+}
+function buntingT40(x0,x1,y,col,t){
+  ctx.save(); ctx.strokeStyle='rgba(255,255,255,.5)'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(x0,y); ctx.quadraticCurveTo((x0+x1)/2,y+60,x1,y); ctx.stroke();
+  for(let i=0;i<7;i++){ const f=(i+0.5)/7, x=x0+(x1-x0)*f, yy=y+Math.sin(f*Math.PI)*60*0.5*2*0.5+Math.sin(f*Math.PI)*30;
+    ctx.fillStyle=(i%2)?col:'#fbf6ea'; ctx.beginPath(); ctx.moveTo(x-22,yy); ctx.lineTo(x+22,yy); ctx.lineTo(x,yy+44+Math.sin(t*3+i)*3); ctx.closePath(); ctx.fill(); }
+  ctx.restore();
+}
+function tallyT40(x,label,col,n,k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,500); ctx.scale(easeOutBack(Math.min(1,k)),easeOutBack(Math.min(1,k)));
+  ctx.fillStyle=col; ctx.strokeStyle='#fbf6ea'; ctx.lineWidth=5; rr(-170,-80,340,170,26); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fbf6ea'; ctx.textAlign='center'; ctx.font='600 26px Oswald'; ctx.fillText(label,0,-38);
+  ctx.font='86px "Archivo Black"'; ctx.fillText(String(n),0,48);
+  ctx.font='600 22px Oswald'; ctx.fillText('SEATS',0,78);
+  ctx.restore();
+}
+function reelT40(t){
+  roomS2(t);
+  const merge=(t>=10.8)?ease((t-10.8)/0.7):0;
+  // the two themes: red wash left, blue wash right, fading to one room at the merge
+  ctx.save(); ctx.globalAlpha=0.32*(1-merge); ctx.fillStyle=RED40; ctx.fillRect(0,0,W/2,FLOOR); ctx.fillStyle=BLUE40; ctx.fillRect(W/2,0,W/2,FLOOR); ctx.restore();
+  if(merge<1){ ctx.save(); ctx.globalAlpha=1-merge; buntingT40(20,520,620,RED40,t); buntingT40(560,1060,620,BLUE40,t); ctx.restore(); }
+  else { buntingT40(20,1060,620,RED40,t); }
+  // the divider rope lifts at the merge
+  const dy=-merge*1400;
+  ctx.save(); ctx.translate(0,dy); ctx.strokeStyle=GOLD; ctx.lineWidth=8; ctx.setLineDash([26,18]); ctx.beginPath(); ctx.moveTo(W/2,640); ctx.lineTo(W/2,FLOOR); ctx.stroke(); ctx.restore();
+  // MR. BIG BUSINESS in the middle: sets the red side, then the blue side, the exact same way
+  const ptL=(t>=2.4&&t<5.4), ptR=(t>=5.4&&t<8.4), cheer=(t>=11.4);
+  drawMan({x:W/2, y:HIP_STAND, face:ptL?-1:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:cheer?{sh:165,el:-20}:((ptL||ptR)?{sh:95,el:-4}:{sh:60,el:24}), arm2:cheer?{sh:160,el:-30}:undefined,
+    mouth:'smile', eyes:(t>=9.4&&t<10.8)?'wide':undefined, style:STYLER2});
+  // six tables per side, same order, same timing (mirrored)
+  let nL=0, nR=0;
+  L40.forEach(([x,y],i)=>{
+    const kL=(t-(2.7+i*0.42))/0.3, kR=(t-(5.7+i*0.42))/0.3;
+    if(kL>0) nL++; if(kR>0) nR++;
+    const s=(y<FLOOR-100)?0.95:1.15, fade=1-merge;
+    if(fade>0){ ctx.save(); ctx.globalAlpha=fade;
+      clothTableT40(x, y, s*easeOutBack(Math.min(1,Math.max(0,kL))), RED40);
+      clothTableT40(W-x, y, s*easeOutBack(Math.min(1,Math.max(0,kR))), BLUE40);
+      ctx.restore(); }
+  });
+  // the long table: one table, both colors
+  if(merge>0){
+    const k=easeOutBack(Math.min(1,(t-10.9)/0.4));
+    ctx.save(); ctx.translate(W/2,FLOOR-20); ctx.scale(k,k);
+    for(let i=0;i<8;i++) drawMiniChair(-420+i*120,-60,0.85);
+    ctx.lineWidth=8; ctx.strokeStyle=INK;
+    for(let i=0;i<6;i++){ ctx.fillStyle=(i%2)?BLUE40:RED40; ctx.beginPath(); const x0=-480+i*160; ctx.moveTo(x0,-150); ctx.lineTo(x0+160,-150); ctx.lineTo(x0+160+(i===5?14:0),-50); ctx.lineTo(x0-(i===0?14:0),-50); ctx.closePath(); ctx.fill(); }
+    ctx.beginPath(); ctx.moveTo(-480,-150); ctx.lineTo(480,-150); ctx.lineTo(494,-50); ctx.lineTo(-494,-50); ctx.closePath(); ctx.stroke();
+    ctx.fillStyle=GOLD; ctx.fillRect(-492,-64,984,9);
+    ctx.fillStyle='#fff'; for(let i=0;i<10;i++){ ctx.beginPath(); ctx.ellipse(-430+i*96,-150,18,5,0,0,7); ctx.fill(); }
+    ctx.restore();
+  }
+  // the live seat counters (6 seats per table), tie at 36 each
+  if(t>=2.4&&t<10.8){ tallyT40(270,'RED PARTY',RED40,Math.min(36,nL*6),(t-2.4)/0.3); }
+  if(t>=5.4&&t<10.8){ tallyT40(810,'BLUE PARTY',BLUE40,Math.min(36,nR*6),(t-5.4)/0.3); }
+  if(t>=9.4&&t<10.7){ const kk=easeOutBack(Math.min(1,(t-9.4)/0.25)); starburst(540,520,kk*0.85,'TIE.'); }
+  if(t>=11.4) confettiBurst(t,11.4,540,FLOOR-500,70,2.6);
+  // captions: the hook is fully on screen at frame one
+  if(t<2.35) caption(['ELECTION NIGHT.','THE RED PARTY AND THE','BLUE PARTY BOTH CALLED.'],300,1,42);
+  if(t>=2.4&&t<5.3) captionPop(['RED PARTY:','SIX TABLES.'],300,2.4,t,52);
+  if(t>=5.4&&t<8.3) captionPop(['BLUE PARTY:','SIX TABLES.'],300,5.4,t,52);
+  if(t>=8.4&&t<10.7) captionPop(['THE SEAT COUNT','IS IN.'],300,8.4,t,52);
+  if(t>=10.8&&t<13.95) captionPop(['EVERYBODY STILL','NEEDS A SEAT.'],300,10.8,t,52);
+}
+REELS[40]=reelT40;
+SHAKES[40]=[9.4,0.2,8];
+TAGLINES[40]="WE DON'T PICK SIDES. WE BRING CHAIRS.";
+window.GAGENDS[40]=14.0;
 </script>
 </body></html>
 

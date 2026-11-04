@@ -3205,3 +3205,18 @@ WED NOV 4 ADD (pending approval, in queue_wed04.py): CREW ONLY 11am, FB feed + I
 FB 11am: Already have the tables and chairs, but nobody to set them up? Our Las Vegas crew comes to you, sets everything to your layout before guests arrive, then folds, stacks and clears it after the party. Your equipment, your space, our hands. Tents too. Every job is quoted by crew size, hours and date. Message us your date, hours and what you have. #LasVegasEvents #PartySetup #EventCrew #VegasParty #SetupAndTeardown
 IG Story 11am: image only.
 LABOR CREW feed + story: next in the services rotation (Tue Nov 10 unless the owner picks another day).
+
+## WEDNESDAY NOV 4 · TREND REMIX #17 THE RED PARTY AND THE BLUE PARTY (5pm, fresh nightly build)
+OWNER-PICKED (Tue Nov 3, Election Day, 5:40pm: "place that one on the back burner for a day, i want you to remix one about
+the elections the red party and the blue party"). One-time owner override of the no-politics guardrail; built strictly
+nonpartisan: "red party" and "blue party" are party THEMES (red decor, blue decor); no candidates, real party names, logos,
+results or voting information; both sides identical (six tables, 36 seats, same timing); Lil Wobbles (red villain chair)
+left out so red never reads as the bad side. Payoff: the seat count is a tie, the divider lifts, one long red-and-blue
+table: "Everybody still needs a seat." End card: "We don't pick sides. We bring chairs." Back-burnered: nuclear clock remix
+(news pool, Vienna self-stabilizing nuclear clock) moves to Thursday's build.
+BB_Trend_RedPartyBlueParty (reelH REELS[40], 17.2s). UPGRADE: live seat counters that tick up per table + split-screen
+color grade that merges into one room. AWAITING OWNER APPROVAL (queue_wed04_remix.py).
+FB 5pm: election night: the red party and the blue party both called. we set up both the exact same way. 🪑 #lasvegas #electionnight #partyrentals #animation #comedy
+IG 5pm: Election night in Las Vegas: the red party and the blue party both booked tables. Six each, 36 seats each. It's a tie, and everybody still needs a seat. 🪑 #electionnight #lasvegas #partyrentals #animation #comedy
+TT 5pm: The red party and the blue party both called. 🪑 #electionnight #redvsblue #partyrentals #comedy
+YT 5pm: "The red party and the blue party both called 🪑 #Shorts" / Six tables each, 36 seats each, and a tie. Everybody still needs a seat. #electionnight #comedy #partyrentals

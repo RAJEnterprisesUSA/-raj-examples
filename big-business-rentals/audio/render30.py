@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from sfx_kit import render as kit, SR, bed
 
-CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
+CHROME = (glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome') + glob.glob('/opt/pw-browsers/chromium-*/chrome-linux64/chrome'))[0]
 BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
 SCRATCH = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
 FPS = 30
