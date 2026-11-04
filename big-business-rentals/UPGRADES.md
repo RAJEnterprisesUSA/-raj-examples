@@ -55,3 +55,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Nov 3 (Tue build: EP. 43 The Tablecloth): first multi-object physics gag (four plates on staggered arcs that stack into a no-look catch) + a spin gag drawn with a live horizontal flip; venue holiday flyer uses the real room photo in a glass card.
 - Nov 4 (Wed build: GTT No. 3 + EP. 44): GTT theme motion layer (seeded looping snowfall), exact reveal-zoom focus math, winter harp + celesta bed; EP. 44 physics stack that sways more the higher each chair sits, then settles.
 - Nov 4 (fresh remix, Red Party Blue Party): live seat counters that tick up as each table lands + split-screen color grade that merges into one room.
+- Nov 5 (Thu build: EP. 45): live guest-list whiteboard with numbers that roll up in real time; referral flyer services-only copy.

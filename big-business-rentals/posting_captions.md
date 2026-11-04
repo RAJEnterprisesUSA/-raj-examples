@@ -3220,3 +3220,21 @@ FB 5pm: election night: the red party and the blue party both called. we set up 
 IG 5pm: Election night in Las Vegas: the red party and the blue party both booked tables. Six each, 36 seats each. It's a tie, and everybody still needs a seat. 🪑 #electionnight #lasvegas #partyrentals #animation #comedy
 TT 5pm: The red party and the blue party both called. 🪑 #electionnight #redvsblue #partyrentals #comedy
 YT 5pm: "The red party and the blue party both called 🪑 #Shorts" / Six tables each, 36 seats each, and a tie. Everybody still needs a seat. #electionnight #comedy #partyrentals
+
+## THURSDAY NOV 5 · REFERRAL FLYER EVENT COORDINATORS (1pm, FB feed + IG Story) + EP. 45 THE HEADCOUNT (8pm)
+BUILT Tue Nov 3 night, AWAITING OWNER APPROVAL (queue_thu05.py). Already queued Thu: GTT No. 3 Pt. 2 (1pm TikTok).
+5pm remix = Wednesday's nightly build (the back-burnered nuclear clock remix, news pool).
+REFERRAL: flyers2026/BB26_Referral_Thu05.png + _Story.png (Flyer 2026 referral, deep navy + gold), "Your clients ask you
+who does the tables.", services only (tables + chairs, tents, setup + teardown crews), steps "Send them our way with their
+date and headcount / We deliver and pick up. Setup crews available / Your thank-you is paid after their event", fine print
+verbatim, QR decodes. Profession run: ..., HairStylist, EventCoordinator (next: caterer).
+EP. 45 THE HEADCOUNT (reelsD REELS[45], 26s): Dec 19 guest list 30 -> 42 (Lil's team) -> 54 (Baby's team, he has no team)
+-> 60 (Princess's dolls) -> 100 (Vaeh posted it, 40 RSVPs) -> 101 (the cat RSVPed); Dad writes 5 -> 7 -> 9 -> 10 -> 17 tables
+each time, 102 seats, still enough. End card "What's your headcount this year?" Season Two 3 W · 2 L.
+UPGRADE: live guest-list whiteboard whose numbers roll up in real time.
+FB 1pm: Event coordinators in Las Vegas: your clients ask you who does the tables before anyone else hears about the party. Point them to Big Business for tables and chairs delivered and picked up, tents, and setup and teardown crews. When their event is done, we say thank you with up to $100 for every booking you send. The reward is based on booking size, there is no limit on referrals, and it is paid after the referred event is completed. Message us and we will get you set up. #LasVegasEvents #LasVegasEventPlanner #EventCoordinator #VegasPartyRentals #VegasEvents
+IG Story 1pm: image only.
+FB 8pm: the big business chronicles ep. 45: the guest list went from 30 to 101. dad did the math every time. 🪑 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 45: 30 guests became 100, plus a cat. Six seats a table, and Dad had the math done every time. What's your headcount this year? 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 45: she said nothing and posted it. 40 RSVPs. 🪑 #thebigbusinesschronicles #siblings #holidayparty #comedy
+YT 8pm: "EP. 45: The Headcount 🪑 she posted it #Shorts" / The Big Business Chronicles EP. 45: the family party guest list keeps growing and Dad does the math every time. Next episode tomorrow. #thebigbusinesschronicles #family #comedy

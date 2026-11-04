@@ -15,7 +15,7 @@ import qrcode
 BASE = pathlib.Path(__file__).parent
 OUT = BASE/'flyers2026'
 OUT.mkdir(exist_ok=True)
-CHROME = glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome')[0]
+CHROME = (glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome') + glob.glob('/opt/pw-browsers/chromium-*/chrome-linux64/chrome'))[0]
 if not (OUT/'fonts2026').exists(): shutil.copytree(BASE/'assets/fonts2026', OUT/'fonts2026')
 shutil.copy(BASE/'assets/bb_logo.png', OUT/'bb_logo.png')
 if not (OUT/'qr_site.png').exists():

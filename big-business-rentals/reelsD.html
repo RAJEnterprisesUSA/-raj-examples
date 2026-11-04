@@ -5629,6 +5629,99 @@ SHAKES[44]=[7.6,0.2,8];
 TAGLINES[44]='TABLE FOLDED IN 2 SECONDS. CAT UNDEFEATED.';
 window.ENDTIMES[44]=23.5;
 
+// ================= EP. 45 · THE HEADCOUNT (Season Two) =================
+// Competence first: Dad does the seating math in his head every time the guest list grows (6 seats a table).
+// Lil invites his whole team, Baby invites his whole team (he has no team), Princess invites her dolls, Vaeh says
+// nothing and posts it: 40 RSVPs. 100 guests, 17 tables, 102 seats. The cat RSVPs too: 101. Still enough seats. WIN.
+// The real ask lives on the end card: "What's your headcount this year?"
+const HC45=[[0,30],[1.2,30],[4.3,42],[7.3,54],[10.3,60],[12.85,100],[19.0,101]];
+function boardK45(t){
+  let g=30, gPrev=30, t0=-9;
+  for(const [a,v] of HC45){ if(t>=a){ gPrev=g; g=v; t0=a; } }
+  const tabs=Math.ceil(g/6), seats=tabs*6, k=Math.min(1,(t-t0)/0.35);
+  const shown=Math.round(gPrev+(g-gPrev)*ease(k)), tabsShown=Math.ceil(shown/6);
+  ctx.save(); ctx.translate(830,560);
+  ctx.fillStyle='#fbfbf7'; ctx.strokeStyle=INK; ctx.lineWidth=9; rr(-220,-190,440,380,22); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#8a6a3a'; ctx.fillRect(-150,190,300,14);
+  ctx.textAlign='center'; ctx.fillStyle='#b8862a'; ctx.font='600 30px Oswald'; ctx.fillText('SAT · DEC 19 · FAMILY PARTY',0,-138);
+  ctx.fillStyle=INK; ctx.font='34px "Archivo Black"'; ctx.fillText('GUESTS',-100,-70); ctx.fillText('TABLES',100,-70);
+  const pop=(t-t0<0.35)?1+0.25*Math.sin(Math.PI*k):1;
+  ctx.save(); ctx.translate(-100,30); ctx.scale(pop,pop); ctx.fillStyle=(t-t0<0.6&&t0>1)?'#c8323e':INK; ctx.font='96px "Archivo Black"'; ctx.fillText(String(shown),0,30); ctx.restore();
+  ctx.save(); ctx.translate(100,30); ctx.scale(pop,pop); ctx.fillStyle='#2a6b3f'; ctx.font='96px "Archivo Black"'; ctx.fillText(String(tabsShown),0,30); ctx.restore();
+  ctx.fillStyle='#555'; ctx.font='600 26px Oswald'; ctx.fillText(seats+' SEATS · 6 A TABLE',0,135);
+  if(g===101&&t>=19.0){ ctx.fillStyle='#c8323e'; ctx.font='600 24px Oswald'; ctx.fillText('(+ THE CAT)',-100,104); }
+  ctx.restore();
+}
+function rsvpBubbleK45(x,y,k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x,y); ctx.scale(easeOutBack(Math.min(1,k)),easeOutBack(Math.min(1,k)));
+  ctx.fillStyle='#ff3b5c'; ctx.strokeStyle='#fff'; ctx.lineWidth=5; rr(-120,-44,240,88,40); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.textAlign='center'; ctx.font='40px "Archivo Black"'; ctx.fillText('40 RSVPS',0,14);
+  ctx.restore();
+}
+function ep45(t){
+  const FREEZES=[[13.25,14.0]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.16*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(830,700); ctx.scale(z,z); ctx.translate(-830,-700); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  boardK45(tt);
+  // MR. BIG BUSINESS at the board: writes the new math the instant the list grows (competence first)
+  const writes=[1.2,4.3,7.3,10.3,14.1,19.0];
+  let writing=false; writes.forEach(a=>{ if(tt>=a-0.2&&tt<a+0.5) writing=true; });
+  const shock=(tt>=13.0&&tt<14.0), cheer=(tt>=20.0);
+  drawMan({x:520, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}],
+    arm:cheer?{sh:165,el:-20}:(writing?{sh:140,el:-20}:{sh:60,el:24}), arm2:cheer?{sh:160,el:-30}:undefined,
+    mouth:shock?'o':'smile', eyes:shock?'wide':undefined, style:STYLER2});
+  // the kids, one invite each
+  if(tt>=2.7){ const k=easeOutBack(Math.min(1,(tt-2.7)/0.3));
+    kidWithProp({x:110, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<4.6||cheer)?{sh:165,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, KIDSCALE.lil*k); }
+  if(tt>=5.7){ const k=easeOutBack(Math.min(1,(tt-5.7)/0.3));
+    kidWithProp({x:225, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:(tt<7.6||cheer)?{sh:165,el:-60}:{sh:60,el:24}, arm2:(tt<7.6||cheer)?{sh:160,el:-70}:undefined, mouth:'smile', style:STYLEBB}, KIDSCALE.baby*k); }
+  if(tt>=8.7){ const k=easeOutBack(Math.min(1,(tt-8.7)/0.3)), s=KIDSCALE.princess*k;
+    kidWithProp({x:335, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, s);
+    if(k>0.2) tiaraK(335, kidHeadY(s)+8, s*1.3);
+    for(let i=0;i<6;i++){ const dk=easeOutBack(Math.min(1,Math.max(0,(tt-9.0-i*0.15)/0.25))); if(dk>0){ const x=40+i*58, y=FLOOR+150;
+      ctx.save(); ctx.translate(x,y); ctx.scale(dk,dk); ctx.lineWidth=5; ctx.strokeStyle=INK; ctx.fillStyle=['#f4a6cf','#c58bf0','#ffd23f','#7fd3ff','#f4a6cf','#c58bf0'][i];
+      ctx.beginPath(); ctx.ellipse(0,-28,20,26,0,0,7); ctx.fill(); ctx.stroke(); ctx.fillStyle='#e8c39e'; ctx.beginPath(); ctx.arc(0,-66,16,0,7); ctx.fill(); ctx.stroke(); ctx.restore(); } } }
+  // VAEH: slides in on her phone, says nothing, posts it
+  if(tt>=11.7){ const s=KIDSCALE.vaeh, k=ease((tt-11.7)/0.4), x=lerp(1250,930,k);
+    kidWithProp({x:x, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, s);
+    headphonesK(x, kidHeadY(s), s, -1);
+    phoneK(x-52*s, FLOOR-470*s, s, true);
+    if(tt>=12.8) rsvpBubbleK45(x-40, FLOOR-640, (tt-12.8)/0.3); }
+  // 17 tables' worth of seats roll out in the foreground (two rows)
+  if(tt>=14.7){ for(let i=0;i<18;i++){ const r=Math.floor(i/9), c=i%9, ck=easeOutBack(Math.min(1,Math.max(0,(tt-14.8-i*0.08)/0.25)));
+    if(ck>0) drawMiniChair(430+c*72+r*36, FLOOR+190+r*130, 0.5*ck); } }
+  // THE CAT RSVPs: trots in and takes a foreground seat
+  if(tt>=18.1){ const k=Math.min(1,(tt-18.1)/0.8), seatX=430+8*72+36, seatY=FLOOR+320-35;
+    drawCatD(lerp(1250,seatX,ease(k)), (k<1)?FLOOR+320:seatY, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.7}); }
+  ctx.restore();
+  if(t>=13.3&&t<14.0){const kk=easeOutBack(Math.min(1,(t-13.3)/0.25)); starburst(300,FLOOR-960,kk*1.0,'100?!');}
+  if(t>=20.0) confettiBurst(t,20.0,540,FLOOR-500,60,2.4);
+  showBadge(45);
+  if(t<2.6) caption(['DAD PLANS DEC 19.','30 GUESTS. 5 TABLES. DONE.'],300,1,46);
+  if(t>=2.7&&t<5.6) captionPop(['LIL INVITED','HIS WHOLE TEAM.'],300,2.7,t,52);
+  if(t>=5.7&&t<8.6) captionPop(['BABY INVITED HIS WHOLE','TEAM TOO. HE HAS NO TEAM.'],300,5.7,t,44);
+  if(t>=8.7&&t<11.6) captionPop(['PRINCESS INVITED','HER DOLLS.'],300,8.7,t,52);
+  if(t>=11.7&&t<12.7) captionPop(['...this is SO embarrassing.'],300,11.7,t,46);
+  if(t>=14.0&&t<14.6) captionPop(['VAEH POSTED IT.'],300,14.0,t,54);
+  if(t>=14.7&&t<18.0) captionPop(['DAD: 17 TABLES.','102 SEATS. ON IT.'],300,14.7,t,52);
+  if(t>=18.1&&t<19.9) captionPop(['THE CAT RSVPED.'],300,18.1,t,54);
+  if(t>=20.0&&t<21.3) captionPop(['STILL ENOUGH SEATS.','HE PLANNED FOR THE CAT.'],300,20.0,t,44);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(["WHAT'S YOUR HEADCOUNT","THIS YEAR?"],300,22.4,t,48);
+    caption(['SEASON TWO RECORD: 3 W · 2 L'],1500,(t-22.4)/0.35,30);
+  }
+}
+REELS[45]=ep45;
+SHAKES[45]=[13.0,0.2,8];
+TAGLINES[45]='SIX SEATS A TABLE. HE DID THE MATH.';
+window.ENDTIMES[45]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
