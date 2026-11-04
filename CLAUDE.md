@@ -222,6 +222,8 @@ dinner at home): PRICE IT always promotes MEDIUM TO SEMI-LARGE SEATING ARRANGEME
 banquet halls, ballrooms, event spaces, multiple round tables of 8-10 or long banquet runs, visible
 floor space. A home setting is allowed ONLY as a very large dining room setup. No cozy family-dinner
 scenes. Outdoor setups follow the same spirit: party scale, not patio-for-four.
+SIZE NOTE (found Nov 3): gr2_z_image_turbo_generate takes a `resolution` enum string, e.g. "1104x1472 ( 3:4 )" or
+"864x1536 ( 9:16 )"; width/height arguments are ignored and the image comes back 1024x1024.
 QUOTA NOTE: the HF ZeroGPU image quota on the owner's free account is DAILY and small (~6-8 generations);
 generate 1-2 new setups per day during the nightly build, not in batches. If the day's quota is exhausted
 before the PRICE IT image is made, generate it first thing the next session, never fall back to the bank.
