@@ -3215,7 +3215,7 @@ left out so red never reads as the bad side. Payoff: the seat count is a tie, th
 table: "Everybody still needs a seat." End card: "We don't pick sides. We bring chairs." Back-burnered: nuclear clock remix
 (news pool, Vienna self-stabilizing nuclear clock) moves to Thursday's build.
 BB_Trend_RedPartyBlueParty (reelH REELS[40], 17.2s). UPGRADE: live seat counters that tick up per table + split-screen
-color grade that merges into one room. AWAITING OWNER APPROVAL (queue_wed04_remix.py).
+color grade that merges into one room. Owner approved "queue it"; first attempt failed (Buffer credential missing after a container restart; owner re-added it), then QUEUED 4/4 OK (queue_wed04_remix.py).
 FB 5pm: election night: the red party and the blue party both called. we set up both the exact same way. 🪑 #lasvegas #electionnight #partyrentals #animation #comedy
 IG 5pm: Election night in Las Vegas: the red party and the blue party both booked tables. Six each, 36 seats each. It's a tie, and everybody still needs a seat. 🪑 #electionnight #lasvegas #partyrentals #animation #comedy
 TT 5pm: The red party and the blue party both called. 🪑 #electionnight #redvsblue #partyrentals #comedy
