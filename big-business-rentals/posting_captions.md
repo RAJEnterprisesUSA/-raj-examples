@@ -3238,3 +3238,12 @@ FB 8pm: the big business chronicles ep. 45: the guest list went from 30 to 101. 
 IG 8pm: The Big Business Chronicles EP. 45: 30 guests became 100, plus a cat. Six seats a table, and Dad had the math done every time. What's your headcount this year? 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles EP. 45: she said nothing and posted it. 40 RSVPs. 🪑 #thebigbusinesschronicles #siblings #holidayparty #comedy
 YT 8pm: "EP. 45: The Headcount 🪑 she posted it #Shorts" / The Big Business Chronicles EP. 45: the family party guest list keeps growing and Dad does the math every time. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## PERFORMANCE NOTE Nov 3 night · BIG BANG EXTRA CHAIR = BEST REMIX SO FAR
+Buffer views 48 h after posting: YT 991 (12 reactions, 3 comments), FB 736, IG 149, TT 117 = ~1,990 total vs ~1,040 for
+the next best remix (POV Thanksgiving) and ~400 to 750 for the rest. Owner Nov 3: "we got a lot of reaction from the particle
+videos ... outside of the views it has likes and comments and a lot of people watched it to the end."
+Why it likely worked: a real, surprising science headline as the hook (curiosity), a big visual (space) that pays off on
+something ordinary (one extra chair), and the payoff held to the last seconds so people stay to the end.
+Action: build tomorrow's science remix (the nuclear clock) in the same structure as PARTY PHYSICS #2 (series title card +
+"Party Physics" in captions), pending the owner's OK to make it a series. Boost candidate this week: the Big Bang video on FB.
