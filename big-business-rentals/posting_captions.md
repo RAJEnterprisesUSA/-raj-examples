@@ -3247,3 +3247,17 @@ Why it likely worked: a real, surprising science headline as the hook (curiosity
 something ordinary (one extra chair), and the payoff held to the last seconds so people stay to the end.
 Action: build tomorrow's science remix (the nuclear clock) in the same structure as PARTY PHYSICS #2 (series title card +
 "Party Physics" in captions), pending the owner's OK to make it a series. Boost candidate this week: the Big Bang video on FB.
+
+## THURSDAY NOV 5 · TREND REMIX #18 PARTY PHYSICS #2 · A THIRD KIND OF MAGNETISM (5pm, fresh nightly build, NEWS pool)
+Built Wed Nov 4 evening (6:34pm task). The back-burnered nuclear clock story checked out as Oct 8 news (ScienceDaily, TU Wien),
+about four weeks old, so it failed the current-only rule and was dropped. Picked instead from this week's science listings:
+researchers confirmed altermagnetism, a third kind of magnetism after nearly 90 years of two (ScienceDaily top tech/physics
+listing + SLAC). Remixed, never explained: the three forces at a party are the food table, the dance floor and (new) the last
+empty chair; the whole family (and the cat) get pulled to one chair, "Strongest force in the universe", then the fix: enough
+chairs. Series format from the best remix so far (Big Bang extra chair). BB_Trend_PartyPhysics2_Magnetism (reelH REELS[41]).
+UPGRADES: Party Physics series chip, animated field lines with flowing charge dots, Season Two kid rigs ported into reelH.
+AWAITING OWNER APPROVAL (queue_thu05_remix.py).
+FB 5pm: party physics #2: scientists just confirmed a third kind of magnetism. every party already had three. 🧲 #lasvegas #science #partyphysics #animation #comedy
+IG 5pm: Party Physics #2: scientists just confirmed a third kind of magnetism. Every Las Vegas party already has three, and the strongest one is the last empty chair. 🧲 #partyphysics #science #lasvegas #partyrentals #comedy
+TT 5pm: Party Physics #2: the strongest force in the universe is the last empty chair. 🧲 #partyphysics #science #physics #comedy
+YT 5pm: "Party Physics #2: the third kind of magnetism 🧲 #Shorts" / Scientists confirmed a third kind of magnetism. At a party, it's the last empty chair. #science #partyphysics #comedy
