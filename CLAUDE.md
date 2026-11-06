@@ -346,6 +346,10 @@ braids, always annoyed, "...this is SO embarrassing."), LIL BIG BUSINESS (10, bo
 PRINCESS BIG BUSINESS (6, girl, slim, long braids, tiara), BABY BIG BUSINESS (5, boy, short locs, the tuff one who does
 everything his big brother does). Whole family light brown skin; Mr. Big Business's Season Two look = smooth hair in a ponytail
 tied into a bun (NOT locs) + beard, no mustache; Lil and Baby have locs (rig STYLER2; STYLER kept for Season One re-renders). Bible + rigs: CAST.md SEASON TWO FAMILY.
+FULL ENSEMBLE (owner Nov 5: "the former cast should also be in season two they were not canceled. everybody should be
+included in season 2 videos"): from EP. 46 EVERY Season Two episode includes everyone: Mr. Big Business, the four kids,
+Mrs. Never Wrong, Unc, Tyler the Intern (with his intro gag), Lil Wobbles and the cat, each with at least one visible beat;
+remixes use the full cast whenever the format allows. Details: CAST.md FULL ENSEMBLE IN SEASON TWO.
 
 ## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
 ## referral and countdown posts; videos and pre-built sets keep their formats)

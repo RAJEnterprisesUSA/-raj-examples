@@ -3261,3 +3261,10 @@ FB 5pm: party physics #2: scientists just confirmed a third kind of magnetism. e
 IG 5pm: Party Physics #2: scientists just confirmed a third kind of magnetism. Every Las Vegas party already has three, and the strongest one is the last empty chair. 🧲 #partyphysics #science #lasvegas #partyrentals #comedy
 TT 5pm: Party Physics #2: the strongest force in the universe is the last empty chair. 🧲 #partyphysics #science #physics #comedy
 YT 5pm: "Party Physics #2: the third kind of magnetism 🧲 #Shorts" / Scientists confirmed a third kind of magnetism. At a party, it's the last empty chair. #science #partyphysics #comedy
+
+## RULE CHANGE Nov 5 evening (owner: "the former cast should also be in season two they were not canceled. everybody should be included in season 2 videos")
+Season One cast is back for Season Two. From EP. 46 every episode includes everyone: Mr. Big Business, Vaeh, Lil Big Business,
+Princess, Baby Big Business, Mrs. Never Wrong, Unc, Tyler the Intern (intro gag every time he pops in), Lil Wobbles and the
+cat, each with at least one visible beat. Remixes use the full cast whenever the format allows. Mrs. Never Wrong is still not
+the kids' mom; the crew are work family and on the Dec 19 guest list. Season One looks unchanged. CAST.md + CLAUDE.md updated.
+EP. 41 to 45 (family only) were already built and queued before this rule.

@@ -56,6 +56,14 @@ MRS. NEVER WRONG IS NOT THE KIDS' MOM (owner Oct 26). Never write her as their m
 unless the owner adds one.
 TIMING (owner Oct 26): the new look and the family are for the NEW SEASON (Season Two, November). Season One episodes,
 including the EP. 40 finale, keep the Season One look.
+FULL ENSEMBLE IN SEASON TWO (owner Nov 5: "the former cast should also be in season two they were not canceled.
+everybody should be included in season 2 videos"): from EP. 46 every Season Two episode includes EVERYONE: Mr. Big Business
+(STYLER2), Vaeh, Lil Big Business, Princess, Baby Big Business, Mrs. Never Wrong (STYLEW), Unc (default rig), Tyler the
+Intern (STYLET, with his "WHERE DID YOU EVEN COME FROM?" / "...im the new intern." gag whenever he pops in), Lil Wobbles
+and the cat. Each one gets at least one visible beat on screen; the story can center on two or three of them. The Season One
+crew are Big Business's work crew and friends of the family (Mrs. Never Wrong is still NOT the kids' mom), and all of them
+are on the guest list for the Dec 19 family holiday party. Their Season One looks stay as they are. Trend remixes use the
+full cast whenever the format allows. EP. 41 to 45 (family only) shipped before this rule.
 
 ## STORY RULES FROM THE PSYCHOLOGY REPORT (owner Oct 26: "apply what needs to be applied")
 - Competence first, then the loss: Mr. Big Business always looks good at the actual service (the setup, the delivery,
