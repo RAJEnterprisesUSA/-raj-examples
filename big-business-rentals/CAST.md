@@ -62,7 +62,9 @@ everybody should be included in season 2 videos"): from EP. 46 every Season Two 
 Intern (STYLET, with his "WHERE DID YOU EVEN COME FROM?" / "...im the new intern." gag whenever he pops in), Lil Wobbles
 and the cat. Each one gets at least one visible beat on screen; the story can center on two or three of them. The Season One
 crew are Big Business's work crew and friends of the family (Mrs. Never Wrong is still NOT the kids' mom), and all of them
-are on the guest list for the Dec 19 family holiday party. Their Season One looks stay as they are. Trend remixes use the
+are on the guest list for the Dec 19 family holiday party. UNC IS FAMILY NOW (owner Nov 5, "ok" to the suggestion): Unc is Mr. Big
+Business's brother, the kids' actual uncle; they call him "Unc". Same look and habits (never listens, leans back in chairs,
+superstitious, carries everything the wrong way). Their Season One looks stay as they are. Trend remixes use the
 full cast whenever the format allows. EP. 41 to 45 (family only) shipped before this rule.
 
 ## STORY RULES FROM THE PSYCHOLOGY REPORT (owner Oct 26: "apply what needs to be applied")

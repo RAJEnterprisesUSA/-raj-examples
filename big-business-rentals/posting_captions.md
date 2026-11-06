@@ -3268,3 +3268,4 @@ Princess, Baby Big Business, Mrs. Never Wrong, Unc, Tyler the Intern (intro gag 
 cat, each with at least one visible beat. Remixes use the full cast whenever the format allows. Mrs. Never Wrong is still not
 the kids' mom; the crew are work family and on the Dec 19 guest list. Season One looks unchanged. CAST.md + CLAUDE.md updated.
 EP. 41 to 45 (family only) were already built and queued before this rule.
+UNC IS FAMILY (owner Nov 5, "ok"): Unc is Mr. Big Business's brother, the kids' uncle; same look and habits.
