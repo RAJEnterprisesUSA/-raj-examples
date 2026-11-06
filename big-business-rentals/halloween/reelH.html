@@ -5201,6 +5201,169 @@ REELS[41]=reelT41;
 SHAKES[41]=[9.6,0.2,8];
 TAGLINES[41]='PARTY PHYSICS: BRING ENOUGH CHAIRS.';
 window.GAGENDS[41]=14.0;
+
+// ---------- T42: TREND REMIX · "Race week vs. locals" (17s), COMMUNITY pick by the owner (Nov 5) ----------
+// News: the big race returns Nov 19 to 21; lane closures on the Strip now, full road closures and bus detours on race nights,
+// locals frustrated again (FOX5, KTNV, LVSportsBiz). Neutral: both teams get a side, no race name, logos or branding
+// ("the big race" phrasing only, same as the Oct corporate posts). Full Season Two cast (owner Nov 5 rule).
+// Payoff: the delivery still lands, the party moves home. "Skip the Strip. Party at home."
+function coneT42(x,s){ ctx.save(); ctx.translate(x,FLOOR-12); ctx.scale(s,s); ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.fillStyle='#ff7a1a'; ctx.beginPath(); ctx.moveTo(-34,0); ctx.lineTo(-10,-110); ctx.lineTo(10,-110); ctx.lineTo(34,0); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.fillRect(-22,-62,44,14); ctx.fillStyle='#2b2b30'; rr(-46,-6,92,16,4); ctx.fill(); ctx.stroke(); ctx.restore(); }
+function closedSignT42(x,k){ if(k<=0) return; ctx.save(); ctx.translate(x,FLOOR-12); ctx.scale(k,k); ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#ddd'; ctx.fillRect(-120,-150,12,150); ctx.fillRect(108,-150,12,150);
+  for(let i=0;i<6;i++){ ctx.fillStyle=(i%2)?'#fff':'#ff7a1a'; ctx.beginPath(); const x0=-150+i*50; ctx.moveTo(x0,-210); ctx.lineTo(x0+50,-210); ctx.lineTo(x0+30,-160); ctx.lineTo(x0-20,-160); ctx.closePath(); ctx.fill(); }
+  ctx.strokeRect(-150,-210,300,50);
+  ctx.fillStyle='#fff'; rr(-130,-330,260,100,12); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#c8323e'; ctx.textAlign='center'; ctx.font='44px "Archivo Black"'; ctx.fillText('ROAD',0,-285); ctx.fillText('CLOSED',0,-240);
+  ctx.restore(); }
+function checkerT42(x0,x1,y,t){ for(let i=0;i<9;i++){ const f=(i+0.5)/9, x=x0+(x1-x0)*f, yy=y+Math.sin(f*Math.PI)*40;
+  ctx.save(); ctx.translate(x,yy); ctx.rotate(Math.sin(t*3+i)*0.08); for(let a=0;a<3;a++) for(let b=0;b<3;b++){ ctx.fillStyle=((a+b)%2)?'#111':'#fff'; ctx.fillRect(-27+a*18,b*18,18,18); } ctx.restore(); } }
+function wandT42(x,y,t){ ctx.save(); ctx.translate(x,y); ctx.rotate(Math.sin(t*9)*0.6); ctx.fillStyle='#ff7a1a'; ctx.strokeStyle=INK; ctx.lineWidth=5; rr(-8,-90,16,90,6); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='rgba(255,140,40,.35)'; ctx.beginPath(); ctx.arc(0,-80,26,0,7); ctx.fill(); ctx.restore(); }
+function reelT42(t){
+  const A=2.6, B=5.4, C=7.8, D=10.4;
+  const kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh;
+  if(t<A){                                         // HOOK: two teams, split screen, fully on screen at frame one
+    roadSkyT27(t); roadStripT27(true);
+    ctx.save(); ctx.globalAlpha=0.28; ctx.fillStyle='#e5b84b'; ctx.fillRect(0,0,W/2,FLOOR); ctx.fillStyle='#4a6fa5'; ctx.fillRect(W/2,0,W/2,FLOOR); ctx.restore();
+    checkerT42(20,520,640,t);
+    ctx.strokeStyle=GOLD; ctx.lineWidth=8; ctx.setLineDash([26,18]); ctx.beginPath(); ctx.moveTo(W/2,620); ctx.lineTo(W/2,FLOOR); ctx.stroke(); ctx.setLineDash([]);
+    kidWithProp({x:150, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:165,el:-20}, arm2:{sh:160,el:-30}, mouth:'smile', style:STYLELB}, kL);
+    kidWithProp({x:330, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:165,el:-20}, arm2:{sh:160,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(330, kidHeadY(kP)+8, kP*1.3);
+    coneT42(580,1); coneT42(800,1);
+    drawMan({x:680, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:20,el:120}, arm2:{sh:20,el:120}, mouth:'flat'});             // UNC, arms crossed
+    drawMan({x:930, y:HIP_STAND, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:20,el:120}, mouth:'flat', style:STYLEW});                   // MRS. NEVER WRONG
+    ctx.save(); ctx.textAlign='center'; ctx.fillStyle='#fff'; ctx.font='34px "Archivo Black"';
+    ctx.fillText('TEAM LOVE THE RACE',W/4,560); ctx.fillText('TEAM JUST GET ME HOME',3*W/4,560); ctx.restore();
+    caption(['RACE WEEK IN VEGAS.','WHOSE SIDE ARE YOU ON?'],300,1,50);
+    return;
+  }
+  if(t<D){                                         // THE ROAD
+    roadSkyT27(t); roadStripT27(true);
+    const idle=Math.sin(t*10)*2;
+    drawCarH(1000, FLOOR-14+idle, 1.0, '#8a6f7d');
+    coneT42(700,0.9); coneT42(860,0.9);
+    const wobDown=(t>=9.4)?Math.min(1,(t-9.4)/0.3):0;
+    drawChair(900, (t>=8.6&&t<9.4)?Math.sin(t*14)*6:0, wobDown, wobDown, {a:'#e05252',b:'#c94444',c:'#ef6d6d'});       // LIL WOBBLES as the barrier
+    closedSignT42(780, (t<9.5)?easeOutBack(Math.min(1,(t-A-0.2)/0.3)):Math.max(0,1-(t-9.5)/0.25));
+    // the van: drives up, stops; Unc's "shortcut" = a full loop back to the same spot; then through once Wobbles folds
+    let vx=320, vrot=0;
+    if(t<B) vx=lerp(-200,320,ease((t-A)/1.2));
+    else if(t<C){ const k=(t-B-0.6)/1.6; if(k>0&&k<1){ vx=320+Math.sin(k*Math.PI*2)*-260; vrot=k*Math.PI*2; } }
+    else if(t>=9.8) vx=lerp(320,1500,ease((t-9.8)/0.6));
+    drawVanH(vx, FLOOR-125, vrot, 1.3, 0, t);
+    if(t>=B && t<C){ drawMan({x:150, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:120,el:-10}, mouth:'smile'}); }     // UNC points the "shortcut"
+    // TYLER appears from nowhere, directing traffic
+    if(t>=C){ const k=easeOutBack(Math.min(1,(t-C)/0.25));
+      ctx.save(); ctx.translate(600,FLOOR); ctx.scale(k,k); ctx.translate(-600,-FLOOR);
+      drawMan({x:600, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-20}, arm2:{sh:150,el:-30}, mouth:(t<9.0)?'smile':'flat', style:STYLET});
+      ctx.restore(); if(k>0.6){ wandT42(660,FLOOR-640,t); wandT42(540,FLOOR-640,t+1); } }
+    // THE CAT sits in the middle of the road
+    if(t>=C+0.5) drawCat(450, FLOOR, {pose:'sit', face:1, t:t, s:1.0});
+    if(t>=9.4&&t<10.2) dust(900,FLOOR,t-9.4);
+    if(t<B) captionPop(['THE DELIVERY VAN MEETS','A ROAD CLOSURE.'],300,A+0.05,t,46);
+    else if(t<6.8) captionPop(['UNC: I KNOW','A SHORTCUT.'],300,B+0.05,t,52);
+    else if(t<C) caption(['IT WAS NOT','A SHORTCUT.'],300,1,52);
+    else if(t<9.0) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,C+0.05,t,50);
+    else captionPop(['...im the new intern.'],300,9.0,t,48);
+    return;
+  }
+  // HOME: the whole family + crew, the party moved off the Strip; tables and chairs delivered
+  roomS2(t);
+  drawTable(540,0,0);
+  [250,830].forEach(x=>drawMiniChair(x,FLOOR,1.1));
+  const AS=0.86;   // adults a touch smaller so the whole cast fits the frame
+  kidWithProp({x:540, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:165,el:-20}, arm2:{sh:160,el:-30}, mouth:'smile', style:STYLER2}, AS);
+  kidWithProp({x:310, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEW}, AS);
+  kidWithProp({x:770, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-30}, mouth:'smile'}, AS);
+  kidWithProp({x:75, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:165,el:-20}, mouth:'smile', style:STYLELB}, kL);
+  kidWithProp({x:165, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:{sh:165,el:-60}, arm2:{sh:160,el:-70}, mouth:'smile', style:STYLEBB}, kB);
+  kidWithProp({x:905, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(905, kidHeadY(kP)+8, kP*1.3);
+  kidWithProp({x:1015, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.92);
+  headphonesK(1015, kidHeadY(kV*0.92), kV*0.92, -1); phoneK(1015-52*kV*0.92, FLOOR-470*kV*0.92, kV*0.92, true);
+  drawCat(640, FLOOR+150, {pose:'sit', face:-1, t:t, s:1.0});
+  if(t>=10.6) confettiBurst(t,10.6,540,FLOOR-500,60,2.4);
+  if(t<12.2) captionPop(['SKIP THE STRIP.','THROW THE PARTY AT HOME.'],300,D+0.05,t,46);
+  else captionPop(['RACE WEEK IS NOV 19 TO 21.','BOOK YOUR TABLES EARLY.'],300,12.2,t,44);
+}
+REELS[42]=reelT42;
+SHAKES[42]=[9.4,0.2,8];
+TAGLINES[42]='SKIP THE STRIP. PARTY AT HOME.';
+window.GAGENDS[42]=14.0;
+
+// ---------- T43: TREND REMIX · "The Recount" (17s), POLITICS pick by the owner (Nov 5), sequel to T40 ----------
+// Strictly nonpartisan, same rules as T40: "red party" / "blue party" are party THEMES; no candidates, real party names,
+// races, results, lawsuits or voting info; both sides get identical treatment; no character is placed on a side (the crew
+// serves both). Lil Wobbles is not from either party: he tries to sneak onto OUR truck and gets turned away.
+// Gag: Unc's "recount" comes up 35-35 because he is sitting on a chair on each count; Tyler appears and points it out.
+function clipboardT43(x,y){ ctx.save(); ctx.translate(x,y); ctx.lineWidth=5; ctx.strokeStyle=INK; ctx.fillStyle='#b98a52'; rr(-34,-46,68,92,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.fillRect(-26,-34,52,72); ctx.fillStyle='#999'; for(let i=0;i<4;i++) ctx.fillRect(-20,-24+i*16,40,4); ctx.restore(); }
+function reelT43(t){
+  const A=2.6, B=5.6, C=9.6, D=11.2;
+  const kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh, AS=0.86;
+  roomS2(t);
+  const merge=(t>=D)?ease((t-D)/0.6):0;
+  ctx.save(); ctx.globalAlpha=0.30*(1-merge); ctx.fillStyle=RED40; ctx.fillRect(0,0,W/2,FLOOR); ctx.fillStyle=BLUE40; ctx.fillRect(W/2,0,W/2,FLOOR); ctx.restore();
+  if(merge<1){ ctx.save(); ctx.globalAlpha=1-merge; buntingT40(20,520,620,RED40,t); buntingT40(560,1060,620,BLUE40,t);
+    ctx.strokeStyle=GOLD; ctx.lineWidth=8; ctx.setLineDash([26,18]); ctx.beginPath(); ctx.moveTo(W/2,640); ctx.lineTo(W/2,FLOOR); ctx.stroke(); ctx.setLineDash([]); ctx.restore(); }
+  // the returned chairs, identical on both sides (6 shown, the counters say 36)
+  if(t<D+0.4){ ctx.save(); ctx.globalAlpha=1-merge; [[270,RED40],[810,BLUE40]].forEach(([cx,col])=>{ for(let i=0;i<3;i++) drawMiniChair(cx-110+i*110, FLOOR-10, 0.8); ctx.fillStyle=col; rr(cx-170,FLOOR+18,340,24,10); ctx.fill(); }); ctx.restore(); }
+  // the count: identical counters, identical timing
+  let n=36, label='THE CHAIR COUNT';
+  if(t<A) n=36; else if(t<B) n=Math.min(36,Math.round(36*ease((t-A-0.3)/2.0)));
+  else if(t<C) n=(t<6.6||t>=8.6)?36:35;
+  if(t<D){ tallyT40(270,'RED PARTY',RED40,n,1); tallyT40(810,'BLUE PARTY',BLUE40,n,1); }
+  // UNC "recounts", sitting on a chair on each side (both come up 35)
+  if(t>=B&&t<8.6){ const ux=(t<7.1)?270:810;
+    kidWithProp({x:ux, face:1, legs:[{hip:80,knee:-80},{hip:70,knee:-80}], arm:{sh:110,el:-10}, mouth:(t>=6.6)?'o':'flat'}, AS); }
+  // TYLER pops up and points at Unc
+  if(t>=7.4&&t<C){ const k=easeOutBack(Math.min(1,(t-7.4)/0.25));
+    ctx.save(); ctx.translate(540,FLOOR); ctx.scale(k*AS,k*AS); ctx.translate(-540,-FLOOR);
+    drawMan({x:540, y:HIP_STAND, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:95,el:-4}, mouth:'flat', style:STYLET}); ctx.restore(); }
+  // MR. BIG BUSINESS and MRS. NEVER WRONG run the official count, one clipboard each, both sides the same
+  if(t<B){ kidWithProp({x:110, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:110,el:-60}, mouth:'flat', style:STYLER2}, AS); clipboardT43(150,FLOOR-430);
+    kidWithProp({x:970, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:110,el:-60}, mouth:'flat', style:STYLEW}, AS); clipboardT43(930,FLOOR-430); }
+  // LIL WOBBLES (from neither party) tries to sneak onto OUR truck; Princess turns him away
+  if(t>=C&&t<D){ const k=(t-C)/(D-C);
+    const dropY=-(1-ease(Math.min(1,k*2.5)))*900, br=(k>0.75)?Math.min(1,(k-0.75)*4):0;
+    ctx.save(); ctx.translate(540,FLOOR+dropY); ctx.scale(0.72,0.72); ctx.translate(-540,-FLOOR);
+    drawChair(540, Math.sin(t*12)*5, br, br, {a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore();
+    if(br>0) dust(540,FLOOR,(t-C)/(D-C)*4-3);
+    kidWithProp({x:360, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:95,el:-4}, mouth:'flat', style:STYLEPB}, kP); tiaraK(360, kidHeadY(kP)+8, kP*1.3); }
+  // THE PICKUP: one van, both sides, the whole cast loads it
+  if(t>=D){
+    drawVanH(lerp(1300,780,ease((t-D)/0.7)), FLOOR-125, 0, 1.3, 0, t);
+    drawFoldedStack(250, FLOOR, 4, 0);
+    kidWithProp({x:110, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:165,el:-20}, arm2:{sh:160,el:-30}, mouth:'smile', style:STYLER2}, AS);
+    kidWithProp({x:330, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEW}, AS);
+    kidWithProp({x:470, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:170,el:-10}, mouth:'smile'}, AS);
+    kidWithProp({x:590, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLET}, AS);
+    kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:170,el:-10}, mouth:'smile', style:STYLELB}, kL,
+      x=>drawMiniChair(x+10, HIP_STAND-440, 0.9));
+    kidWithProp({x:400, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:{sh:170,el:-10}, mouth:'smile', style:STYLEBB}, kB,
+      x=>drawMiniChair(x+10, HIP_STAND-440, 0.9));
+    kidWithProp({x:670, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(670, kidHeadY(kP)+8, kP*1.3);
+    kidWithProp({x:1010, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.92);
+    headphonesK(1010, kidHeadY(kV*0.92), kV*0.92, -1); phoneK(1010-52*kV*0.92, FLOOR-470*kV*0.92, kV*0.92, true);
+    drawCat(900, FLOOR-150, {pose:'sit', face:-1, t:t, s:0.8});
+    if(t>=11.6) confettiBurst(t,11.6,540,FLOOR-500,60,2.4);
+  }
+  if(t>=6.62&&t<7.4){ const kk=easeOutBack(Math.min(1,(t-6.62)/0.2)); starburst(540,880,kk*0.9,'35?!'); }
+  // captions: hook fully on screen at frame one
+  if(t<A) caption(["THE ELECTION'S OVER.",'SOMEBODY STILL HAS TO','RETURN THE CHAIRS.'],300,1,46);
+  else if(t<B) captionPop(['THE OFFICIAL','CHAIR COUNT.'],300,A+0.05,t,54);
+  else if(t<7.4) captionPop(['UNC DEMANDS','A RECOUNT.'],300,B+0.05,t,54);
+  else if(t<8.0) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.4,t,48);
+  else if(t<8.6) captionPop(['...im the new intern.'],300,8.0,t,48);
+  else if(t<C) captionPop(['UNC WAS SITTING ON ONE.','STILL 36 AND 36.'],300,8.6,t,44);
+  else if(t<D) captionPop(['NOT FROM EITHER PARTY.','NOT ON OUR TRUCK.'],300,C+0.05,t,44);
+  else captionPop(['36 AND 36.','EVERY CHAIR GOES HOME.'],300,D+0.05,t,50);
+}
+REELS[43]=reelT43;
+SHAKES[43]=[6.62,0.2,8];
+TAGLINES[43]='WE PICK UP FROM EVERY SIDE.';
+window.GAGENDS[43]=14.0;
 </script>
 </body></html>
 

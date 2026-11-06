@@ -3269,3 +3269,26 @@ cat, each with at least one visible beat. Remixes use the full cast whenever the
 the kids' mom; the crew are work family and on the Dec 19 guest list. Season One looks unchanged. CAST.md + CLAUDE.md updated.
 EP. 41 to 45 (family only) were already built and queued before this rule.
 UNC IS FAMILY (owner Nov 5, "ok"): Unc is Mr. Big Business's brother, the kids' uncle; same look and habits.
+
+## FRIDAY NOV 6 · TREND REMIX #19 RACE WEEK VS. LOCALS (5pm) + SATURDAY NOV 7 · TREND REMIX #20 THE RECOUNT (5pm)
+Owner asked for "something controversial" in "politics, finance, community"; offered one each (Recount / Family Reserve /
+Race week); owner picked "community one, and than politics one" (Nov 5 evening). Built Thu Nov 5 evening, both together
+(owner-directed, the Saturday one a day early). AWAITING OWNER APPROVAL (queue_fri06_sat07_remixes.py fri / sat).
+#19 BB_Trend_RaceWeekVsLocals (reelH REELS[42]): the big race returns Nov 19 to 21; lane closures on the Strip now, full
+closures and bus detours on race nights, locals frustrated (FOX5 Oct 29, KTNV, LVSportsBiz). No race name/logos/branding.
+Team Love the Race vs. Team Just Get Me Home; van meets a ROAD CLOSED barricade; Unc's shortcut is a full loop; Tyler pops up
+directing traffic ("...im the new intern."); Lil Wobbles is the barrier and folds; party moves home, full cast; "Skip the
+Strip. Throw the party at home." / "Race week is Nov 19 to 21. Book your tables early."
+#20 BB_Trend_TheRecount (reelH REELS[43]): owner-approved politics override, strictly nonpartisan (party THEMES only; no
+candidates, party names, races, results, lawsuits or voting info; both sides identical; no character on a side). Official
+chair count 36 and 36; Unc demands a recount, comes up 35 and 35 because he sits on a chair each time; Tyler points it out;
+Lil Wobbles "not from either party, not on our truck"; one van picks up from both sides, full cast.
+UPGRADES: full ensemble back in remixes; road-closure props; counters that drop and recover; Wobbles drop-in entrance.
+FB Fri 5pm: race week is back in vegas. team love the race or team just get me home? 🏁 #lasvegas #raceweek #vegaslocals #partyrentals #comedy
+IG Fri 5pm: Race week is back in Las Vegas: road closures, detours and one very confident uncle with a shortcut. Skip the Strip and throw the party at home. 🏁 #lasvegas #raceweek #vegaslocals #partyrentals #comedy
+TT Fri 5pm: Race week in Vegas. Whose side are you on? 🏁 #lasvegas #raceweek #vegaslocals #comedy
+YT Fri 5pm: "Race week in Vegas: whose side are you on? 🏁 #Shorts" / Road closures, a shortcut that wasn't, and a party that moved home. Skip the Strip. #lasvegas #raceweek #comedy
+FB Sat 5pm: the election's over. somebody still has to return the chairs. 36 and 36, every time. 🪑 #lasvegas #recount #partyrentals #animation #comedy
+IG Sat 5pm: The election's over, and somebody still has to return the chairs. The recount came out 36 and 36 once we found the chair Unc was sitting on. 🪑 #recount #lasvegas #partyrentals #animation #comedy
+TT Sat 5pm: The recount. Unc was sitting on one. 🪑 #recount #comedy #partyrentals #fyp
+YT Sat 5pm: "The recount: 36 and 36 🪑 #Shorts" / The red party and the blue party both returned their chairs. The recount is 36 and 36. #recount #comedy #partyrentals
