@@ -3292,3 +3292,6 @@ FB Sat 5pm: the election's over. somebody still has to return the chairs. 36 and
 IG Sat 5pm: The election's over, and somebody still has to return the chairs. The recount came out 36 and 36 once we found the chair Unc was sitting on. 🪑 #recount #lasvegas #partyrentals #animation #comedy
 TT Sat 5pm: The recount. Unc was sitting on one. 🪑 #recount #comedy #partyrentals #fyp
 YT Sat 5pm: "The recount: 36 and 36 🪑 #Shorts" / The red party and the blue party both returned their chairs. The recount is 36 and 36. #recount #comedy #partyrentals
+QUEUE UPDATE Sat Nov 7 morning: owner chose "1": #20 The Recount QUEUED 4/4 OK for Sat Nov 7 5pm (queue_fri06_sat07_remixes.py sat).
+#19 Race Week vs. Locals was never approved, so the Fri Nov 6 5pm slot went empty; it is still on file (relevant through Nov 21).
+Fri Nov 6 Buffer check: only an 11am FB labor-crew post went out (not queued from this session); no remix, no EP. 46, no carousel.
