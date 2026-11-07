@@ -3295,3 +3295,22 @@ YT Sat 5pm: "The recount: 36 and 36 🪑 #Shorts" / The red party and the blue p
 QUEUE UPDATE Sat Nov 7 morning: owner chose "1": #20 The Recount QUEUED 4/4 OK for Sat Nov 7 5pm (queue_fri06_sat07_remixes.py sat).
 #19 Race Week vs. Locals was never approved, so the Fri Nov 6 5pm slot went empty; it is still on file (relevant through Nov 21).
 Fri Nov 6 Buffer check: only an 11am FB labor-crew post went out (not queued from this session); no remix, no EP. 46, no carousel.
+QUEUE UPDATE Sat Nov 7: owner "1, 2, and 3": #19 Race Week vs. Locals QUEUED 4/4 OK for Sun Nov 8 5pm (key 'fri' re-dated).
+
+## SATURDAY NOV 7 · PRICE LIST (1pm, FB feed + IG Story) + EP. 46 THE CREW IS BACK (8pm) · The Recount 5pm already queued
+Owner: "1, 2, and 3" (Sat morning). BUILT Sat morning, AWAITING OWNER APPROVAL (queue_sat07.py).
+PRICE LIST: flyers2026/BB26_PriceList_Sat07.png + _Story.png (Flyer 2026 price_card, autumn copper + gold), new angle
+"Thanksgiving seating, priced by headcount": 12 guests $44 (2 sets) · 24 $88 (4) · 36 $132 (6) · 48 $176 (8); one set = 6 ft
+table + 6 chairs $22 ($3.67 a seated guest); chairs $2, rounds $15; delivered and picked up, delivery quoted; full-service
+from $265. Owner-approved derived figures only. QR decodes.
+EP. 46 THE CREW IS BACK (reelsD REELS[46], 26s): first full-ensemble Season Two episode (owner Nov 5). Dad sets the Dec 19
+table in 2 seconds; 101 guests needs the crew; Mrs. Never Wrong straightens the crooked place cards; Unc (the kids' uncle)
+carries a table the wrong way, hugs Vaeh ("...this is SO embarrassing."); Tyler ("...im the new intern." "(STILL.)"); Lil
+Wobbles sneaks in, Baby says no; the cat takes Dad's seat ("HIS SEAT."). "The whole crew. Dec 19." End card "Which one is
+your favorite?" Season Two 3 W · 3 L.
+FB 1pm: Hosting Thanksgiving? Here is the seating math. Every set is a 6 ft table and 6 chairs for $22, which works out to $3.67 a seated guest. Twelve guests is 2 sets for $44, twenty-four is 4 sets for $88, thirty-six is 6 sets for $132, and forty-eight is 8 sets for $176. Chairs are $2 each and round tables are $15. Everything is delivered and picked up across Las Vegas, delivery is quoted with your order, and full-service setup starts at $265. Message us your date and headcount. #LasVegasPartyRentals #ThanksgivingVegas #Friendsgiving #TableAndChairRentals #VegasEvents
+IG Story 1pm: image only.
+FB 8pm: the big business chronicles ep. 46: the whole crew is back. 🪑 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 46: the whole crew is back for Season Two. Mrs. Never Wrong, Unc, Tyler, Lil Wobbles and the cat, plus the family. Which one is your favorite? 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 46: he is still the new intern. 🪑 #thebigbusinesschronicles #thecrewisback #family #comedy
+YT 8pm: "EP. 46: The Crew Is Back 🪑 still the new intern #Shorts" / The Big Business Chronicles EP. 46: the whole Season One crew joins the family for the Dec 19 party. Next episode tomorrow. #thebigbusinesschronicles #family #comedy

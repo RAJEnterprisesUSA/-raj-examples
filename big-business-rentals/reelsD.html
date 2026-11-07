@@ -5722,6 +5722,86 @@ SHAKES[45]=[13.0,0.2,8];
 TAGLINES[45]='SIX SEATS A TABLE. HE DID THE MATH.';
 window.ENDTIMES[45]=23.5;
 
+// ================= EP. 46 · THE CREW IS BACK (Season Two, first full-ensemble episode) =================
+// Owner Nov 5: the Season One cast was never cancelled, everybody is in Season Two. Competence first: Dad sets the
+// Dec 19 table in 2 seconds, but 101 guests needs a crew. Mrs. Never Wrong returns (fixes the place cards, she was right),
+// Unc returns carrying a table the wrong way (he is the kids' uncle now; Vaeh: "...this is SO embarrassing."), Tyler
+// appears from nowhere (still the new intern), Lil Wobbles tries to sneak in and Baby stands tuff, the cat takes Dad's chair.
+function placeCardK46(x,y,k,wrong){ if(k<=0) return; ctx.save(); ctx.translate(x,y); ctx.scale(k,k); ctx.rotate(wrong?0.5:0);
+  ctx.fillStyle='#fff'; ctx.strokeStyle=INK; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(-26,0); ctx.lineTo(-18,-28); ctx.lineTo(18,-28); ctx.lineTo(26,0); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#b8862a'; ctx.fillRect(-12,-18,24,4); ctx.restore(); }
+function ep46(t){
+  const FREEZES=[[18.4,19.1]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(700,FLOOR-200); ctx.scale(z,z); ctx.translate(-700,-(FLOOR-200)); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh;
+  // MR. BIG BUSINESS behind the table (drawn first so the table sits in front of him)
+  const sad=(tt>=18.2&&tt<20.0), cheer=(tt>=20.0);
+  kidWithProp({x:520, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:cheer?{sh:165,el:-20}:((tt<2.6)?{sh:80,el:-6}:{sh:60,el:24}), arm2:cheer?{sh:160,el:-30}:undefined,
+    mouth:sad?'o':'smile', eyes:sad?'wide':undefined, style:STYLER2}, AS);
+  // the table Dad sets in 2 seconds, place cards (crooked until Mrs. Never Wrong fixes them)
+  const tk=easeOutBack(Math.min(1,Math.max(0,(tt-0.4)/0.35)));
+  if(tk>0){ ctx.save(); ctx.translate(520,FLOOR); ctx.scale(tk,tk); ctx.translate(-520,-FLOOR); drawTable(520,0,0); ctx.restore(); }
+  [-180,-60,60,180].forEach((dx,i)=>placeCardK46(520+dx, FLOOR-250, easeOutBack(Math.min(1,Math.max(0,(tt-1.0-i*0.15)/0.2))), tt<6.6));
+  // Dad's chair (the one the cat takes)
+  drawMiniChair(775, FLOOR, 1.15);
+  // the kids, there from the start
+  kidWithProp({x:55, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:cheer?{sh:165,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  const babyTuff=(tt>=14.4&&tt<17.0);
+  kidWithProp({x:135, face:-1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(babyTuff||cheer)?{sh:165,el:-60}:{sh:60,el:24}, arm2:(babyTuff||cheer)?{sh:160,el:-70}:undefined, mouth:'smile', style:STYLEBB}, kB);
+  kidWithProp({x:215, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:(tt>=11.2&&tt<12.4)?{sh:95,el:-4}:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP);
+  tiaraK(215, kidHeadY(kP)+8, kP*1.3);
+  // MRS. NEVER WRONG walks in, straightens every place card without a word
+  if(tt>=5.6){ const x=lerp(-150,345,ease((tt-5.6)/0.6));
+    kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=6.3&&tt<7.6)?{sh:95,el:-4}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // UNC carries a table in sideways, the wrong way, then hugs Vaeh
+  if(tt>=8.3){ const x=lerp(1300,860,ease((tt-8.3)/0.7));
+    kidWithProp({x:x, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<9.6)?{sh:150,el:-10}:{sh:110,el:40}, arm2:(tt<9.6)?{sh:150,el:-20}:undefined, mouth:'smile'}, AS,
+      (tt<9.6)?(px=>{ ctx.save(); ctx.translate(px,HIP_STAND-420); ctx.rotate(1.57); drawFoldedFlat(0,0,0); ctx.restore(); }):null); }
+  // VAEH, on her phone the whole time
+  kidWithProp({x:1010, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.85);
+  headphonesK(1010, kidHeadY(kV*0.85), kV*0.85, -1); phoneK(1010-52*kV*0.85, FLOOR-470*kV*0.85, kV*0.85, true);
+  // TYLER appears from nowhere
+  if(tt>=11.2){ const k=easeOutBack(Math.min(1,(tt-11.2)/0.25));
+    kidWithProp({x:690, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=12.4)?'flat':'smile', style:STYLET}, AS*k); }
+  // LIL WOBBLES slides in from the left, Baby stands tuff, Wobbles folds
+  if(tt>=14.2&&tt<17.4){ const k=(tt-14.2)/3.2, br=(k>0.7)?Math.min(1,(k-0.7)*4):0;
+    ctx.save(); ctx.translate(lerp(-150,40,Math.min(1,k*2.2)),0); ctx.translate(0,FLOOR); ctx.scale(0.62,0.62); ctx.translate(0,-FLOOR);
+    drawChair(0, Math.sin(t*12)*5, br, br, {a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore(); }
+  // THE CAT trots in and takes Dad's chair
+  if(tt>=17.2){ const k=Math.min(1,(tt-17.2)/0.9);
+    if(k<1) drawCatD(lerp(1250,775,ease(k)), FLOOR, {pose:'trot', face:-1, t:t, s:1.0});
+    else drawCatD(775, FLOOR-80, {pose:'sit', face:-1, t:t, s:0.95}); }
+  ctx.restore();
+  if(t>=18.45&&t<19.1){ const kk=easeOutBack(Math.min(1,(t-18.45)/0.25)); starburst(560,FLOOR-1000,kk*1.0,'HIS SEAT.'); }
+  if(t>=20.0) confettiBurst(t,20.0,540,FLOOR-500,70,2.6);
+  showBadge(46);
+  if(t<2.7) caption(['DAD SETS THE DEC 19','TABLE IN 2 SECONDS.'],300,1,48);
+  if(t>=2.8&&t<5.5) captionPop(['BUT 101 GUESTS?','HE NEEDS THE CREW.'],300,2.8,t,50);
+  if(t>=5.6&&t<8.2) captionPop(['MRS. NEVER WRONG IS BACK.','(THE CARDS WERE CROOKED.)'],300,5.6,t,40);
+  if(t>=8.3&&t<9.9) captionPop(['UNC IS BACK.','CARRYING IT WRONG.'],300,8.3,t,50);
+  if(t>=10.0&&t<11.1) captionPop(['...this is SO embarrassing.'],300,10.0,t,46);
+  if(t>=11.2&&t<12.3) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,11.2,t,50);
+  if(t>=12.4&&t<14.1) captionPop(['...im the new intern.','(STILL.)'],300,12.4,t,48);
+  if(t>=14.2&&t<17.1) captionPop(['LIL WOBBLES TRIED','TO SNEAK IN. BABY SAID NO.'],300,14.2,t,44);
+  if(t>=17.2&&t<18.4) captionPop(['AND THE CAT.'],300,17.2,t,56);
+  if(t>=19.1&&t<19.9) captionPop(['OF COURSE.'],300,19.1,t,56);
+  if(t>=20.0&&t<21.3) captionPop(['THE WHOLE CREW.','DEC 19.'],300,20.0,t,54);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['WHICH ONE IS','YOUR FAVORITE?'],300,22.4,t,52);
+    caption(['SEASON TWO RECORD: 3 W · 3 L'],1500,(t-22.4)/0.35,30);
+  }
+}
+REELS[46]=ep46;
+SHAKES[46]=[18.4,0.2,8];
+TAGLINES[46]='THE WHOLE CREW IS BACK.';
+window.ENDTIMES[46]=23.5;
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){

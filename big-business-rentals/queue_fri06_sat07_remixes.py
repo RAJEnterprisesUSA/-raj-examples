@@ -1,9 +1,10 @@
 """Trend remixes: Fri Nov 6 5pm "Race week vs. locals" and Sat Nov 7 5pm "The Recount", all four platforms (PST -08:00).
-Run ONLY after the owner approves. Pass 'fri' and/or 'sat' to queue only those days."""
+Run ONLY after the owner approves. Pass 'fri' and/or 'sat' to queue only those days.
+Nov 7: owner moved the race-week remix ("fri" key) to Sun Nov 8 5pm after the Friday slot went unapproved."""
 import sys, time
 from queue_everywhere_oct24 import CH, RAW, FB_PIN, IG_PIN_TREND, M, gql
 SETS = {
- "fri": ("2026-11-06T17:00:00-08:00", "big-business-rentals/halloween/BB_Trend_RaceWeekVsLocals.mp4", [
+ "fri": ("2026-11-08T17:00:00-08:00", "big-business-rentals/halloween/BB_Trend_RaceWeekVsLocals.mp4", [
    ("fb", "race week is back in vegas. team love the race or team just get me home? 🏁\n\n#lasvegas #raceweek #vegaslocals #partyrentals #comedy", None),
    ("ig", "Race week is back in Las Vegas: road closures, detours and one very confident uncle with a shortcut. Skip the Strip and throw the party at home. 🏁\n\n#lasvegas #raceweek #vegaslocals #partyrentals #comedy", IG_PIN_TREND),
    ("tt", "Race week in Vegas. Whose side are you on? 🏁\n\n#lasvegas #raceweek #vegaslocals #comedy", None),
