@@ -60,3 +60,13 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Nov 6-7 (remixes Race Week + The Recount): full Season One + Two ensemble back in remixes, road-closure props (barricade, cones, wands), live counters that drop and recover, Lil Wobbles drop-in entrance.
 - Nov 7 (Sat build: EP. 46 + price list): first ten-character Season Two frame with staged entrances; price list by headcount (bento of guest counts).
 - Nov 9 (fresh remix, It's Time): lights-on reveal from a dark first frame, real December 2026 calendar prop with circled Saturdays.
+
+## Nov 9 week builds (upgrades, one per build)
+- EP. 47 The Tent: wind-gust streaks + a tent that rises from the floor.
+- EP. 48 The Cocoa Bar: mid-air catch with a freeze-zoom on the save (scoreCard save/restore leak fixed during QA).
+- EP. 49 The Buffet Line: tablecloth skirt + chafing dishes with place cards that pop on.
+- EP. 50 The Floor Plan: a live plan board that flips rows, rounds and a U-shape, turns upside down and gets erased.
+- EP. 51 The Kids' Table: two-table Thanksgiving set with a mini kids' table.
+- EP. 52 The Calendar: true Dec 2026 calendar with an advent-window reveal.
+- GTT No. 4 Hot Cocoa: rising cocoa steam motion layer (was falling snow).
+- Fri Nov 13 carousel: drawn floor-plan diagrams on the layout slides.

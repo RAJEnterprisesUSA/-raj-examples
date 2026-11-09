@@ -3328,3 +3328,63 @@ FB 5pm: it's time. not for the tree, for the tables. the pre-christmas saturdays
 IG 5pm: It's time. Not for the tree, for the tables. The pre-Christmas Saturdays this year are Dec 5, 12 and 19. 🎄 #lasvegas #holidayparty #partyrentals #animation #comedy
 TT 5pm: It's time. 🎄 #itstime #holidayseason #christmas #comedy
 YT 5pm: "It's time. 🎄 #Shorts" / Not for the tree. For the December tables: Dec 5, 12 and 19. #holidays #comedy #partyrentals
+
+## WEEK OF MON NOV 9 TO SUN NOV 15 · BUILT AHEAD (owner Nov 8: "lets get ready for this week."), WAITING ON APPROVAL
+Queue script: queue_week_nov09.py (run per approved day: `python3 queue_week_nov09.py mon`). PST -08:00. 1pm weekly promotion +
+8pm Chronicles episode each day; 5pm remixes stay fresh nightly builds (Mon: queue_mon09_remix.py, It's Time).
+Episodes are FULL ENSEMBLE (owner Nov 5). Season Two record after EP. 52: 7 W · 5 L. Arc: everything builds to the Dec 19 family party.
+EP. 47 The Tent (Tue, W, 4-3) · EP. 48 The Cocoa Bar (Wed, W, 5-3, pairs with GTT No. 4) · EP. 49 The Buffet Line (Thu, L, 5-4,
+pairs with the caterer referral) · EP. 50 The Floor Plan (Fri, W, 6-4, pairs with the 3-layouts carousel) · EP. 51 The Kids' Table
+(Sat, L, 6-5, pairs with the Thanksgiving price list) · EP. 52 The Calendar (Sun, W, 7-5, pairs with the Dec 5/12/19 holiday flyer).
+EP. 46 The Crew Is Back moves to Mon Nov 9 8pm (its Sat Nov 7 slot passed without approval); the Sat Nov 7 price list moves to Sat Nov 14.
+GTT No. 4 Hot Cocoa Party: tiktok/packages/GTT4_HotCocoa_Nov11-12.md (TikTok via Buffer with the AI label; IG Trial Reels by the owner).
+Calendar checked with python: Nov 9 = Mon, Nov 15 = Sun, Dec 5/12/19 = Sat, Dec 25 = Fri (EP. 52 calendar starts Dec 1 on a Tuesday).
+CLOSE THE LOOP: Mon Price It gets the real table-and-chair math in replies Tuesday; GTT No. 4 guessers credited by @name Thursday.
+MON 2026-11-09:
+  FB 1pm (post, BB26_PriceIt_ThanksgivingHall.png): How much would you pay for this Thanksgiving setup? 🦃 Four long banquet tables, white chairs and room for the whole family. The decor is inspo; the tables and chairs underneath it are the part we bring, delivered and picked up across Las Vegas. Message us your date and headcount. #LasVegas #Thanksgiving #Friendsgiving #PartyRentals #SetupInspo
+  IG 1pm (post, BB26_PriceIt_ThanksgivingHall.png): How much would you pay for this Las Vegas Thanksgiving setup? 🦃 Setup inspo: four long tables and white chairs. The tables and chairs underneath it are the part we bring. Message us your date and headcount. #lasvegas #thanksgiving #friendsgiving #partyrentals #setupinspo
+  FB 8pm (BB_Chronicles_Ep46_TheCrewIsBack.mp4): the big business chronicles ep. 46: the whole crew is back. 🪑 #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep46_TheCrewIsBack.mp4): The Big Business Chronicles EP. 46: the whole crew is back for Season Two. Mrs. Never Wrong, Unc, Tyler, Lil Wobbles and the cat, plus the family. Which one is your favorite? 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep46_TheCrewIsBack.mp4): The Big Business Chronicles EP. 46: he is still the new intern. 🪑 #thebigbusinesschronicles #thecrewisback #family #comedy
+  YT 8pm (BB_Chronicles_Ep46_TheCrewIsBack.mp4): "EP. 46: The Crew Is Back 🪑 still the new intern #Shorts" / The Big Business Chronicles EP. 46: the whole Season One crew joins the family for the Dec 19 party. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+TUE 2026-11-10:
+  FB 1pm (post, BB26_LaborCrew.png): Short on crew for a big event? Our Las Vegas setup and teardown crews work for venues, planners and hosts who already have the tables, chairs or tents. We set everything to your layout before doors open, then fold, stack and clear it after. Every job is quoted by crew size, hours and date. Message us your date, hours and what needs to be set. #LasVegasEvents #EventCrew #SetupAndTeardown #VegasVenues #EventPlanning
+  IG 1pm (story, BB26_LaborCrew_Story.png): image only.
+  FB 8pm (BB_Chronicles_Ep47_TheTent.mp4): the big business chronicles ep. 47: dad raises the tent in seconds. lil wobbles is not a good weight. ⛺ #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep47_TheTent.mp4): The Big Business Chronicles EP. 47: Dad raises the Dec 19 tent in seconds, Mrs. Never Wrong adds the weights, and the wind takes care of Lil Wobbles. Tent or no tent? ⛺ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep47_TheTent.mp4): The Big Business Chronicles EP. 47: she added the weights before anyone asked. ⛺ #thebigbusinesschronicles #tent #family #comedy
+  YT 8pm (BB_Chronicles_Ep47_TheTent.mp4): "EP. 47: The Tent ⛺ she was right #Shorts" / The Big Business Chronicles EP. 47: Dad raises the Dec 19 party tent, the wind shows up, and Mrs. Never Wrong was right. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+WED 2026-11-11:
+  TT 1pm (TT_GuessTheTheme_HotCocoa_Pt1.mp4, AI label on): Three clues, one party theme. Can you get it before clue 3? ☕ #guessthetheme #partytheme #partyinspo #lasvegas
+  FB 8pm (BB_Chronicles_Ep48_TheCocoaBar.mp4): the big business chronicles ep. 48: the cocoa bar. dad made the catch. ☕ #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep48_TheCocoaBar.mp4): The Big Business Chronicles EP. 48: Dad sets the Dec 19 cocoa bar in seconds, Unc fills the marshmallow jar with chairs, and somebody put the pot on Lil Wobbles. Marshmallows or whipped cream? ☕ #thebigbusinesschronicles #seasontwo #hotcocoa #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep48_TheCocoaBar.mp4): The Big Business Chronicles EP. 48: Baby got the bigger whipped cream beard. ☕ #thebigbusinesschronicles #hotcocoa #family #comedy
+  YT 8pm (BB_Chronicles_Ep48_TheCocoaBar.mp4): "EP. 48: The Cocoa Bar ☕ not one spill #Shorts" / The Big Business Chronicles EP. 48: a cocoa bar for Dec 19, a pot on the wrong chair and one big save. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+THU 2026-11-12:
+  FB 1pm (post, BB26_Referral_Thu12.png): Caterers: your clients always ask who to call for tables and chairs. Send them our way with their date and headcount. We deliver and pick up across Las Vegas, and setup crews are available. When their event is done, you get a thank-you from us. Reward based on booking size, up to $100 · No limit on referrals · Paid after the referred event is completed. Message us and we will send you the details. #LasVegasCaterers #VegasCatering #LasVegasEvents #EventPros #PartyRentals
+  IG 1pm (story, BB26_Referral_Thu12_Story.png): image only.
+  TT 1pm (TT_GuessTheTheme_HotCocoa_Pt2.mp4, AI label on): Hot Cocoa Party: marshmallow jars, peppermint sticks and a long cocoa bar. Who got it on clue 1? ☕ #guessthetheme #hotcocoa #partyinspo #lasvegas
+  FB 8pm (BB_Chronicles_Ep49_TheBuffetLine.mp4): the big business chronicles ep. 49: dad built the buffet line. dad is last in it. 🍽️ #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep49_TheBuffetLine.mp4): The Big Business Chronicles EP. 49: the caterer brings the food, Dad builds the buffet line, Baby cuts in front, and the cat is first in line. First in line or last? 🍽️ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep49_TheBuffetLine.mp4): The Big Business Chronicles EP. 49: Baby cut the line. 🍽️ #thebigbusinesschronicles #buffet #siblings #comedy
+  YT 8pm (BB_Chronicles_Ep49_TheBuffetLine.mp4): "EP. 49: The Buffet Line 🍽️ dad is last in it #Shorts" / The Big Business Chronicles EP. 49: Dad builds the buffet line in seconds and still ends up last in it. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+FRI 2026-11-13:
+  FB album + IG carousel 1pm (BB26_Carousel_Fri13_1..6): 3 ways to seat 24 for Thanksgiving. Swipe for the floor plans. 🦃 One long table, two long rows, or a grown-ups table plus a kids' table. Every layout is 4 sets, a 6 ft table and 6 chairs each, for $88 total, delivered and picked up across Las Vegas with delivery quoted with your order. Want us to set it up? Full-service starts at $265. Save this for Thanksgiving, then message us your date and headcount. #ThanksgivingVegas #Friendsgiving #LasVegasPartyRentals #TableAndChairRentals #HostingTips
+  FB 8pm (BB_Chronicles_Ep50_TheFloorPlan.mp4): the big business chronicles ep. 50: rows, rounds or u-shape. the cat approved it. 📐 #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep50_TheFloorPlan.mp4): The Big Business Chronicles EP. 50: Dad draws the Dec 19 floor plan in seconds, Mrs. Never Wrong moves one table one inch (it blocked the door), and somebody drew Lil Wobbles in. Rows, rounds or U-shape? 📐 #thebigbusinesschronicles #seasontwo #floorplan #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep50_TheFloorPlan.mp4): The Big Business Chronicles EP. 50: Unc is reading it upside down. 📐 #thebigbusinesschronicles #floorplan #family #comedy
+  YT 8pm (BB_Chronicles_Ep50_TheFloorPlan.mp4): "EP. 50: The Floor Plan 📐 she was right again #Shorts" / The Big Business Chronicles EP. 50: three layouts, one inch and a door nobody else saw. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+SAT 2026-11-14:
+  FB 1pm (post, BB26_PriceList_Sat07.png): Hosting Thanksgiving? Here is the seating math. Every set is a 6 ft table and 6 chairs for $22, which works out to $3.67 a seated guest. Twelve guests is 2 sets for $44, twenty-four is 4 sets for $88, thirty-six is 6 sets for $132, and forty-eight is 8 sets for $176. Chairs are $2 each and round tables are $15. Everything is delivered and picked up across Las Vegas, delivery is quoted with your order, and full-service setup starts at $265. Message us your date and headcount. #LasVegasPartyRentals #ThanksgivingVegas #Friendsgiving #TableAndChairRentals #VegasEvents
+  IG 1pm (story, BB26_PriceList_Sat07_Story.png): image only.
+  FB 8pm (BB_Chronicles_Ep51_TheKidsTable.mp4): the big business chronicles ep. 51: everybody has a seat. dad got the kids' table. 🦃 #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep51_TheKidsTable.mp4): The Big Business Chronicles EP. 51: Dad sets the big table and the kids' table, Unc sits on Lil Wobbles, and Baby moves himself up. Big table or kids' table? 🦃 #thebigbusinesschronicles #seasontwo #thanksgiving #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep51_TheKidsTable.mp4): The Big Business Chronicles EP. 51: she will not sit at the kids' table. 🦃 #thebigbusinesschronicles #kidstable #thanksgiving #comedy
+  YT 8pm (BB_Chronicles_Ep51_TheKidsTable.mp4): "EP. 51: The Kids' Table 🦃 dad got demoted #Shorts" / The Big Business Chronicles EP. 51: two tables for Thanksgiving, one seat left, and it is at the kids' table. Next episode tomorrow. #thebigbusinesschronicles #thanksgiving #comedy
+SUN 2026-11-15:
+  FB 1pm (post, BB26_Holiday_Sun15.png): Only three Saturdays before Christmas: Dec 5, 12 and 19. 🎄 Hosting the family or the office this year? 36 guests is 6 tables and 36 chairs for $132, 60 guests is 10 tables and 60 chairs for $220, and full-service setup starts at $265. Everything is delivered and picked up across Las Vegas, with delivery quoted with your order. Message us your date and headcount. #LasVegasHolidayParty #ChristmasParty #VegasEvents #PartyRentals #HolidayParty
+  IG 1pm (story, BB26_Holiday_Sun15_Story.png): image only.
+  FB 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): the big business chronicles ep. 52: dec 19. locked in. 📅 #lasvegas #family #animation #comedy
+  IG 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): The Big Business Chronicles EP. 52: Dad circles Dec 19 in one stroke, Mrs. Never Wrong circles the 5th and 12th, and Tyler pops out of the 25th. Which Saturday is yours? 📅 #thebigbusinesschronicles #seasontwo #holidayparty #lasvegas #comedy
+  TT 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): The Big Business Chronicles EP. 52: where did he even come from? 📅 #thebigbusinesschronicles #december #family #comedy
+  YT 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): "EP. 52: The Calendar 📅 dec 19 locked in #Shorts" / The Big Business Chronicles EP. 52: three Saturdays, one circled date and an intern in the advent calendar. Next episode tomorrow. #thebigbusinesschronicles #family #comedy

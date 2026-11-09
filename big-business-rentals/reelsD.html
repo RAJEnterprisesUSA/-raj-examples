@@ -5802,6 +5802,473 @@ SHAKES[46]=[18.4,0.2,8];
 TAGLINES[46]='THE WHOLE CREW IS BACK.';
 window.ENDTIMES[46]=23.5;
 
+// ================= EP. 47 · THE TENT (Season Two, full ensemble) =================
+// Competence first: Dad raises the Dec 19 party tent in seconds. Unc holds a pole the wrong way, Mrs. Never Wrong adds
+// weights before anyone asks (she was right), a gust proves Lil Wobbles is not a good weight, Tyler appears ON the tent,
+// the kids hang lights (Baby higher), Vaeh: "...this is SO embarrassing.", the cat takes the middle seat. WIN: the tent holds.
+function tentK47(k,lift,t){ if(k<=0) return; ctx.save(); ctx.translate(540,FLOOR); ctx.scale(1,Math.min(1,k)); ctx.translate(-540,-FLOOR);
+  const y0=FLOOR-560-lift, pk=FLOOR-800-lift; ctx.lineWidth=9; ctx.strokeStyle=INK;
+  ctx.fillStyle='#d8dde4'; [150,540,930].forEach(x=>{ ctx.fillRect(x-9,y0,18,FLOOR-y0); ctx.strokeRect(x-9,y0,18,FLOOR-y0); });
+  ctx.fillStyle='#fbfbf7'; ctx.beginPath(); ctx.moveTo(110,y0); ctx.lineTo(540,pk); ctx.lineTo(970,y0); ctx.closePath(); ctx.fill(); ctx.stroke();
+  for(let i=0;i<10;i++){ const x=110+i*86; ctx.fillStyle=(i%2)?'#fbfbf7':'#E5B84B'; ctx.beginPath(); ctx.moveTo(x,y0); ctx.lineTo(x+86,y0); ctx.quadraticCurveTo(x+43,y0+50,x,y0); ctx.fill(); ctx.stroke(); }
+  ctx.restore(); }
+function sandbagK47(x,k){ if(k<=0) return; ctx.save(); ctx.translate(x,FLOOR); ctx.scale(k,k); ctx.fillStyle='#c9a46a'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(-34,-40,68,40,12); ctx.fill(); ctx.stroke(); ctx.restore(); }
+function bulbsK47(n,t){ for(let i=0;i<n;i++){ const x=170+i*75, y=FLOOR-520+Math.sin(i*0.7)*18; ctx.fillStyle=['#ffd23f','#ff8ad8','#7fd3ff'][i%3]; ctx.globalAlpha=0.8+0.2*Math.sin(t*6+i); ctx.beginPath(); ctx.arc(x,y,11,0,7); ctx.fill(); ctx.globalAlpha=1; } }
+function windK47(t,k){ ctx.save(); ctx.strokeStyle='rgba(255,255,255,'+(0.5*k)+')'; ctx.lineWidth=6; ctx.lineCap='round';
+  for(let i=0;i<6;i++){ const y=520+i*130, x=((t*900+i*260)%1400)-200; ctx.beginPath(); ctx.moveTo(x,y); ctx.quadraticCurveTo(x+80,y-30,x+180,y); ctx.stroke(); } ctx.restore(); }
+function ep47(t){
+  const FREEZES=[[9.4,10.1]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(200,FLOOR-500); ctx.scale(z,z); ctx.translate(-200,-(FLOOR-500)); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh;
+  const gust=(tt>=8.1&&tt<10.6)?Math.min(1,(tt-8.1)/0.3):0;
+  if(gust>0) windK47(t,gust);
+  const sag=(tt>=2.7&&tt<5.4)?Math.sin(Math.min(1,(tt-2.7)/0.4)*Math.PI/2)*40:0;
+  tentK47(easeOutBack(Math.min(1,Math.max(0,(tt-0.3)/0.6))), gust*Math.abs(Math.sin(t*9))*16 - sag*0, t);
+  if(tt>=13.5) bulbsK47(Math.min(11,Math.floor((tt-13.5)/0.18)+1),t);
+  // weights Mrs. Never Wrong sets
+  [150,930].forEach((x,i)=>sandbagK47(x, easeOutBack(Math.min(1,Math.max(0,(tt-6.2-i*0.4)/0.25)))));
+  // tables + chairs pop under the tent at the end
+  if(tt>=16.3){ [330,750].forEach((x,i)=>{ const k=easeOutBack(Math.min(1,Math.max(0,(tt-16.3-i*0.3)/0.3))); if(k>0){ ctx.save(); ctx.translate(x,FLOOR); ctx.scale(0.55*k,0.55*k); ctx.translate(-x,-FLOOR); drawTable(x,0,0); ctx.restore(); } }); }
+  // MR. BIG BUSINESS raises it (competence), center
+  kidWithProp({x:540, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<1.0||tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt<1.0||tt>=19.6)?{sh:160,el:-30}:undefined,
+    mouth:'smile', eyes:(tt>=9.4&&tt<10.1)?'wide':undefined, style:STYLER2}, AS);
+  // UNC holds a pole the wrong way (horizontal)
+  if(tt>=2.7){ const x=lerp(1300,860,ease((tt-2.7)/0.6));
+    kidWithProp({x:x, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:95,el:-4}, arm2:{sh:95,el:-10}, mouth:'smile'}, AS,
+      (tt<5.4)?(px=>{ ctx.save(); ctx.fillStyle='#d8dde4'; ctx.strokeStyle=INK; ctx.lineWidth=6; ctx.fillRect(px-260,HIP_STAND-250,240,16); ctx.strokeRect(px-260,HIP_STAND-250,240,16); ctx.restore(); }):null); }
+  // MRS. NEVER WRONG
+  if(tt>=5.5){ const x=lerp(-200,330,ease((tt-5.5)/0.6)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<8.0)?{sh:95,el:-4}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // LIL WOBBLES as a "weight": blows away in the gust
+  if(tt>=6.6&&tt<10.6){ const fly=(tt>=8.4)?ease((tt-8.4)/1.4):0; ctx.save(); ctx.translate(lerp(700,1400,fly), -fly*500); ctx.rotate(fly*3);
+    ctx.translate(0,FLOOR); ctx.scale(0.5,0.5); ctx.translate(0,-FLOOR); drawChair(0,0,0,0,{a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore(); }
+  // TYLER appears ON TOP of the tent
+  if(tt>=10.7){ const k=easeOutBack(Math.min(1,(tt-10.7)/0.25)); ctx.save(); ctx.translate(0,-(FLOOR-800+40)+0); ctx.restore();
+    ctx.save(); ctx.translate(540,FLOOR-800); ctx.scale(AS*0.75*k,AS*0.75*k); ctx.translate(-540,-FLOOR);
+    drawMan({x:540, y:HIP_STAND, face:1, legs:[{hip:20,knee:6},{hip:-20,knee:6}], arm:{sh:150,el:-20}, mouth:(tt>=11.9)?'flat':'smile', style:STYLET}); ctx.restore(); }
+  // the kids: Lil and Baby hang lights (Baby higher), Princess, Vaeh
+  kidWithProp({x:70, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=13.5)?{sh:170,el:-10}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  ctx.save(); const bj=(tt>=13.5&&tt<16.2)?-Math.abs(Math.sin((tt-13.5)*5))*60:0; ctx.translate(0,bj);
+  kidWithProp({x:180, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(tt>=13.5)?{sh:170,el:-10}:{sh:165,el:-60}, mouth:'smile', style:STYLEBB}, kB); ctx.restore();
+  kidWithProp({x:440, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(440, kidHeadY(kP)+8, kP*1.3);
+  kidWithProp({x:1010, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.85);
+  headphonesK(1010, kidHeadY(kV*0.85), kV*0.85, -1); phoneK(1010-52*kV*0.85, FLOOR-470*kV*0.85, kV*0.85, true);
+  // THE CAT takes the middle seat under the tent
+  if(tt>=17.4){ const k=Math.min(1,(tt-17.4)/0.8); drawCatD(lerp(1250,640,ease(k)), (k<1)?FLOOR:FLOOR-130, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.85}); }
+  ctx.restore();
+  if(t>=9.45&&t<10.1){ const kk=easeOutBack(Math.min(1,(t-9.45)/0.25)); starburst(560,FLOOR-1060,kk*1.0,'BYE.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,60,2.4);
+  showBadge(47);
+  if(t<2.6) caption(['DEC 19 IS OUTSIDE.','DAD RAISES THE TENT.'],300,1,50);
+  if(t>=2.7&&t<5.4) captionPop(['UNC IS HOLDING','THE POLE. SIDEWAYS.'],300,2.7,t,50);
+  if(t>=5.5&&t<8.0) captionPop(['MRS. NEVER WRONG','ADDED WEIGHTS.'],300,5.5,t,50);
+  if(t>=8.1&&t<9.4) captionPop(['THEN THE WIND CAME.'],300,8.1,t,52);
+  if(t>=10.1&&t<10.6) captionPop(['SHE WAS RIGHT.'],300,10.1,t,52);
+  if(t>=10.7&&t<11.9) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,10.7,t,50);
+  if(t>=11.9&&t<13.4) captionPop(['...im the new intern.'],300,11.9,t,48);
+  if(t>=13.5&&t<14.9) captionPop(['THE KIDS HANG THE LIGHTS.','BABY HANGS THEM HIGHER.'],300,13.5,t,42);
+  if(t>=15.0&&t<16.2) captionPop(['...this is SO embarrassing.'],300,15.0,t,46);
+  if(t>=16.3&&t<19.5) captionPop(['TABLES UNDER THE TENT.','THE CAT TOOK THE MIDDLE.'],300,16.3,t,44);
+  if(t>=19.6&&t<21.3) captionPop(['DEC 19:','READY FOR WEATHER.'],300,19.6,t,54);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['TENT OR','NO TENT?'],300,22.4,t,58);
+    caption(['SEASON TWO RECORD: 4 W · 3 L'],1500,(t-22.4)/0.35,30);
+  }
+}
+REELS[47]=ep47;
+SHAKES[47]=[9.4,0.2,8];
+TAGLINES[47]='TENTS, TABLES, CHAIRS. RAIN OR SHINE.';
+window.ENDTIMES[47]=23.5;
+
+// ================= EP. 48 · THE COCOA BAR (Season Two, full ensemble) =================
+// Pairs with Wednesday's Guess the Theme (Hot Cocoa Party). Competence first: Dad sets up the Dec 19 cocoa bar table in
+// seconds. Mrs. Never Wrong judges (one eyebrow = 10/10), Unc fills the marshmallow jar with mini chairs (wrong box), Tyler
+// pops out of the supply box, Lil gets a whipped cream beard and Baby gets a bigger one, Princess crowns the mug, Vaeh is
+// embarrassed, Lil Wobbles gives out under the cocoa pot and Dad catches it. The cat sleeps in the empty marshmallow box.
+// (The cat never drinks cocoa.) WIN: no spill.
+function cocoaPotK48(x,y,s){ ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=7; ctx.strokeStyle=INK;
+  ctx.fillStyle='#2b2b30'; rr(-50,-12,100,24,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#8a5a3a'; rr(-42,-150,84,140,14); ctx.fill(); ctx.stroke(); ctx.fillStyle='rgba(255,255,255,.35)'; ctx.fillRect(-30,-140,14,120);
+  ctx.fillStyle='#2b2b30'; rr(-46,-168,92,22,8); ctx.fill(); ctx.stroke(); ctx.restore(); }
+function mugK48(x,y,s,stripe){ ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='#fff';
+  rr(-26,-56,52,56,8); ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.arc(30,-28,14,-1.4,1.4); ctx.stroke();
+  if(stripe){ ctx.strokeStyle='#c8323e'; ctx.lineWidth=5; for(let i=0;i<3;i++){ ctx.beginPath(); ctx.moveTo(-22,-48+i*16); ctx.lineTo(22,-38+i*16); ctx.stroke(); } }
+  ctx.fillStyle='#fff'; ctx.strokeStyle=INK; ctx.lineWidth=5; ctx.beginPath(); ctx.arc(-10,-60,12,0,7); ctx.arc(8,-62,12,0,7); ctx.fill(); ctx.restore(); }
+function jarK48(x,y,s,chairs){ ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='rgba(220,240,255,.5)';
+  rr(-34,-110,68,110,14); ctx.fill(); ctx.stroke();
+  if(chairs){ for(let i=0;i<3;i++) drawMiniChair(-14+i*14,-8-i*28,0.22,'#f2f4f6'); } else { ctx.fillStyle='#fff'; for(let i=0;i<9;i++){ ctx.beginPath(); ctx.arc(-18+(i%3)*18,-20-Math.floor(i/3)*24,9,0,7); ctx.fill(); } }
+  ctx.restore(); }
+function beardK48(x,y,s){ ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.fillStyle='#fff'; ctx.strokeStyle=INK; ctx.lineWidth=4;
+  ctx.beginPath(); ctx.arc(-18,0,16,0,7); ctx.arc(0,8,18,0,7); ctx.arc(18,0,16,0,7); ctx.fill(); ctx.stroke(); ctx.restore(); }
+function ep48(t){
+  const FREEZES=[[16.0,16.7]];
+  let tt=t, fz=null;
+  for(const f of FREEZES){ if(t>=f[0]&&t<f[1]){ tt=f[0]; fz=f; } }
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(540,FLOOR-300); ctx.scale(z,z); ctx.translate(-540,-(FLOOR-300)); }
+  drawRoom();
+  miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh;
+  // Dad behind the cocoa bar (drawn first)
+  const caught=(tt>=15.6);
+  kidWithProp({x:560, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=15.4&&tt<17.0)?{sh:100,el:-6}:((tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}), arm2:(tt>=19.6)?{sh:160,el:-30}:undefined,
+    mouth:'smile', eyes:(tt>=15.4&&tt<16.0)?'wide':undefined, style:STYLER2}, AS);
+  // TYLER pops up from behind the cocoa bar
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); kidWithProp({x:740, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-20}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, AS*k); }
+  // the cocoa bar table, set in seconds
+  const tk=easeOutBack(Math.min(1,Math.max(0,(tt-0.3)/0.35)));
+  if(tk>0){ ctx.save(); ctx.translate(560,FLOOR); ctx.scale(tk,tk); ctx.translate(-560,-FLOOR); drawTable(560,0,0); ctx.restore(); }
+  const top=FLOOR-250;
+  // pot: on Lil Wobbles (red chair) at the right end until he folds; Dad catches it
+  const wobBr=(tt>=15.0)?Math.min(1,(tt-15.0)/0.3):0;
+  if(tt>=0.9&&(tt<12.5||caught)) cocoaPotK48(caught?520:500, top, 0.9);
+  [560,620,680].forEach((x,i)=>{ if(tt>=1.2+i*0.15) mugK48(x, top, 0.9, i%2===0); });
+  if(tt>=1.6) jarK48(760, top, 1.0, tt>=5.0&&tt<17.0);
+  // MRS. NEVER WRONG judges: one raised eyebrow, a 10 card
+  if(tt>=2.8){ const x=lerp(-200,330,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=3.6&&tt<5.0)?{sh:110,el:-60}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS);
+    if(tt>=3.6&&tt<5.0){ ctx.save(); ctx.translate(x+60,FLOOR-620); ctx.scale(0.6,0.6); scoreCard(0,0,'10',easeOutBack(Math.min(1,(tt-3.6)/0.3))); ctx.restore(); } }
+  // UNC: filled the marshmallow jar with mini chairs
+  if(tt>=5.0){ const x=lerp(1300,880,ease((tt-5.0)/0.6)); kidWithProp({x:x, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS); }
+  // the kids: whipped cream beards (Lil, then Baby bigger), Princess crowns the mug, Vaeh
+  kidWithProp({x:70, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  kidWithProp({x:175, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(tt>=11.0)?{sh:165,el:-60}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  if(tt>=10.0) beardK48(70+44*kL, kidHeadY(kL)+150*kL, 0.8);
+  if(tt>=11.0) beardK48(175+44*kB, kidHeadY(kB)+150*kB, 1.4);
+  kidWithProp({x:450, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(450, kidHeadY(kP)+8, kP*1.3);
+  if(tt>=17.2) tiaraK(620, top-80, 0.5);
+  kidWithProp({x:1010, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.85);
+  headphonesK(1010, kidHeadY(kV*0.85), kV*0.85, -1); phoneK(1010-52*kV*0.85, FLOOR-470*kV*0.85, kV*0.85, true);
+  // LIL WOBBLES holding the cocoa pot, foreground; folds at 15.0, Dad catches the pot
+  if(tt>=12.5&&tt<18.0){ ctx.save(); ctx.translate(900,FLOOR+120); ctx.scale(0.6,0.6); ctx.translate(-900,-FLOOR); drawChair(900,(tt<15.0)?Math.sin(t*14)*4:0,wobBr,wobBr,{a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore();
+    if(!caught) cocoaPotK48(900, FLOOR+120-110+wobBr*60, 0.9); }
+  // THE CAT sleeps in the empty marshmallow box (never near the cocoa)
+  if(tt>=18.0){ ctx.save(); ctx.fillStyle='#e9e2cf'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(230,FLOOR-80,150,80,8); ctx.fill(); ctx.stroke(); ctx.restore(); drawCatD(305, FLOOR-60, {pose:'sit', face:1, t:t, s:0.7}); }
+  ctx.restore();
+  if(t>=16.05&&t<16.7){ const kk=easeOutBack(Math.min(1,(t-16.05)/0.25)); starburst(560,FLOOR-1060,kk*1.0,'SAVED.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,60,2.4);
+  showBadge(48);
+  if(t<2.7) caption(['DEC 19 GETS A','COCOA BAR. SET IN SECONDS.'],300,1,46);
+  if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','GIVES IT A 10.'],300,2.8,t,50);
+  if(t>=5.0&&t<7.5) captionPop(['UNC FILLED THE MARSHMALLOW','JAR WITH CHAIRS.'],300,5.0,t,42);
+  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
+  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=10.0&&t<12.4) captionPop(['LIL GOT A WHIPPED CREAM BEARD.','BABY GOT A BIGGER ONE.'],300,10.0,t,38);
+  if(t>=12.5&&t<14.9) captionPop(['WHO PUT THE POT','ON LIL WOBBLES?'],300,12.5,t,50);
+  if(t>=17.0&&t<19.5) captionPop(['PRINCESS CROWNED THE MUG.','THE CAT CHOSE THE BOX.'],300,17.0,t,40);
+  if(t>=19.6&&t<21.3) captionPop(['DEC 19.','NOT ONE SPILL.'],300,19.6,t,56);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){
+    captionPop(['MARSHMALLOWS OR','WHIPPED CREAM?'],300,22.4,t,50);
+    caption(['SEASON TWO RECORD: 5 W · 3 L'],1500,(t-22.4)/0.35,30);
+  }
+}
+REELS[48]=ep48;
+SHAKES[48]=[15.0,0.2,8];
+TAGLINES[48]='THE COCOA BAR NEEDS A TABLE. WE BRING IT.';
+window.ENDTIMES[48]=23.5;
+
+// ---- shared Season Two ensemble pieces (EP. 49+) ----
+function vaehK(x,s,mouth){ kidWithProp({x:x, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:mouth||'flat', style:STYLEVAEH}, s);
+  headphonesK(x, kidHeadY(s), s, -1); phoneK(x-52*s, FLOOR-470*s, s, true); }
+function princessK(x,arm){ const kP=KIDSCALE.princess; kidWithProp({x:x, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:arm||{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(x, kidHeadY(kP)+8, kP*1.3); }
+function wobblesK(x,s,wob,br){ ctx.save(); ctx.translate(x,FLOOR); ctx.scale(s,s); ctx.translate(-x,-FLOOR); drawChair(x,wob,br,br,{a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore(); }
+function freezeOf(t,FZ){ for(const f of FZ){ if(t>=f[0]&&t<f[1]) return f; } return null; }
+
+// ================= EP. 49 · THE BUFFET LINE (Season Two, full ensemble) =================
+// Pairs with Thursday's caterer referral. Competence first: the caterer brings the food, Dad builds the Dec 19 buffet line in
+// seconds. Mrs. Never Wrong labels every dish, Unc puts a chair IN the line, Tyler crawls out from under the tablecloth, Baby
+// cuts in front of Lil, Lil Wobbles tries to be a serving station and folds ("NOPE."), Vaeh is embarrassed, the cat sits at
+// the front of the line (it eats cat food). LOSS: Dad built the line and ends up last in it.
+function chaferK49(x,y,k,lab){ if(k<=0) return; ctx.save(); ctx.translate(x,y); ctx.scale(k,k); ctx.lineWidth=6; ctx.strokeStyle=INK;
+  ctx.fillStyle='#c9ced6'; rr(-60,-34,120,34,6); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e6e9ee'; ctx.beginPath(); ctx.ellipse(0,-34,60,26,0,Math.PI,0); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.beginPath(); ctx.arc(0,-62,7,0,7); ctx.fill();
+  if(lab>0){ ctx.save(); ctx.globalAlpha=Math.min(1,lab); ctx.fillStyle='#fff'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(-26,26); ctx.lineTo(-20,4); ctx.lineTo(20,4); ctx.lineTo(26,26); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#b8862a'; ctx.fillRect(-12,12,24,4); ctx.restore(); }
+  ctx.restore(); }
+function skirtK49(x0,x1){ ctx.save(); ctx.fillStyle='#fbfbf7'; ctx.strokeStyle=INK; ctx.lineWidth=7; ctx.beginPath(); ctx.moveTo(x0,FLOOR-240);
+  for(let x=x0;x<=x1;x+=40){ ctx.lineTo(x,FLOOR-240); } ctx.lineTo(x1,FLOOR-10); for(let x=x1;x>=x0;x-=31){ ctx.lineTo(x,FLOOR-10-((x/31)%2?8:0)); } ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle='rgba(0,0,0,.08)'; ctx.lineWidth=4; for(let x=x0+40;x<x1;x+=60){ ctx.beginPath(); ctx.moveTo(x,FLOOR-230); ctx.lineTo(x,FLOOR-20); ctx.stroke(); } ctx.restore(); }
+function ep49(t){
+  const fz=freezeOf(t,[[14.6,15.3]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(900,FLOOR-200); ctx.scale(z,z); ctx.translate(-900,-(FLOOR-200)); }
+  drawRoom(); miniPumpkin(40, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  const last=(tt>=19.6);
+  // Dad behind the buffet (drawn first); at the end he is LAST in line, far right
+  if(!last) kidWithProp({x:560, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<1.2)?{sh:100,el:-6}:{sh:60,el:24}, mouth:'smile', style:STYLER2}, AS);
+  // the buffet: table + skirt + three chafers
+  const tk=easeOutBack(Math.min(1,Math.max(0,(tt-0.3)/0.35)));
+  if(tk>0){ ctx.save(); ctx.translate(560,FLOOR); ctx.scale(0.8*tk,tk); ctx.translate(-560,-FLOOR); drawTable(560,0,0); skirtK49(250,870); ctx.restore(); }
+  [420,560,700].forEach((x,i)=>chaferK49(x, FLOOR-245, easeOutBack(Math.min(1,Math.max(0,(tt-0.9-i*0.15)/0.25)))*0.9, (tt>=3.4+i*0.3)?(tt-3.4-i*0.3)/0.2:0));
+  // TYLER crawls out from under the tablecloth (right end)
+  if(tt>=7.6){ const k=Math.min(1,(tt-7.6)/0.35); ctx.save(); ctx.beginPath(); ctx.rect(808,0,W,H); ctx.clip();
+    kidWithProp({x:lerp(720,880,ease(k)), face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, AS*0.92); ctx.restore(); }
+  // MRS. NEVER WRONG labels every dish
+  if(tt>=2.8){ const x=lerp(-200,250,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=3.3&&tt<4.6)?{sh:100,el:-10}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // UNC puts a chair IN the line
+  if(tt>=5.0){ const k=Math.min(1,(tt-5.0)/0.6), x=lerp(1300,880,ease(k));
+    if(tt>=5.8) drawMiniChair(185, FLOOR, 0.85);
+    kidWithProp({x:x, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<5.8)?{sh:110,el:-20}:{sh:60,el:24}, mouth:'smile'}, AS*0.95,
+      (tt<5.8)?(px=>{ drawMiniChair(px-140, HIP_STAND-150, 0.8); }):null); }
+  // LIL WOBBLES tries to be a serving station, a tray lands on him, he folds
+  if(tt>=12.5&&tt<17.0){ const br=(tt>=14.2)?Math.min(1,(tt-14.2)/0.3):0, x=lerp(1250,975,ease(Math.min(1,(tt-12.5)/0.7)));
+    wobblesK(x,0.6,(tt<14.2)?Math.sin(t*14)*4:0,br);
+    if(tt>=13.6) chaferK49(x, FLOOR-120+br*60, 0.7, 0); }
+  // the kids: Lil first in line, Baby cuts in front of him
+  const cut=(tt>=10.0)?ease(Math.min(1,(tt-10.0)/0.5)):0;
+  kidWithProp({x:lerp(100,60,cut), face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=10.6&&tt<12.4)?{sh:110,el:40}:{sh:60,el:24}, mouth:(tt>=10.6&&tt<12.4)?'o':'smile', style:STYLELB}, kL);
+  princessK(lerp(330,340,cut));
+  kidWithProp({x:lerp(30,150,cut), face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(cut>0)?{sh:165,el:-60}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  vaehK(1040, kV*0.85);
+  // THE CAT sits at the very front of the line
+  if(tt>=17.0){ const k=Math.min(1,(tt-17.0)/0.9); drawCatD(lerp(-120,215,ease(k)), FLOOR, {pose:(k<1)?'trot':'sit', face:1, t:t, s:0.75}); }
+  // Dad: last in line, holding an empty plate
+  if(last){ kidWithProp({x:965, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:95,el:-4}, mouth:'flat', eyes:'wide', style:STYLER2}, AS,
+    px=>{ plateT43(px-240, HIP_STAND-260, 0); }); }
+  ctx.restore();
+  if(t>=14.65&&t<15.3){ const kk=easeOutBack(Math.min(1,(t-14.65)/0.25)); starburst(560,FLOOR-1060,kk*1.0,'NOPE.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,40,2.0);
+  showBadge(49);
+  if(t<2.7) caption(['THE CATERER BRINGS THE FOOD.','DAD BUILDS THE BUFFET LINE.'],300,1,40);
+  if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','LABELED EVERY DISH.'],300,2.8,t,50);
+  if(t>=5.0&&t<7.5) captionPop(['UNC PUT A CHAIR','IN THE BUFFET LINE.'],300,5.0,t,50);
+  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
+  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=10.0&&t<12.4) captionPop(['LIL WAS FIRST IN LINE.','BABY CUT HIM.'],300,10.0,t,50);
+  if(t>=12.5&&t<14.5) captionPop(['LIL WOBBLES WANTS TO BE','A SERVING TABLE.'],300,12.5,t,42);
+  if(t>=15.4&&t<16.9) captionPop(['...this is SO embarrassing.'],300,15.4,t,46);
+  if(t>=17.0&&t<19.5) captionPop(['THE CAT IS FIRST IN LINE.','(IT EATS CAT FOOD.)'],300,17.0,t,44);
+  if(t>=19.6&&t<21.3) captionPop(['DAD BUILT THE LINE.','DAD IS LAST IN IT.'],300,19.6,t,52);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){ captionPop(['FIRST IN LINE','OR LAST?'],300,22.4,t,58); caption(['SEASON TWO RECORD: 5 W · 4 L'],1500,(t-22.4)/0.35,30); }
+}
+REELS[49]=ep49; SHAKES[49]=[14.6,0.2,8]; TAGLINES[49]='THE CATERER BRINGS THE FOOD. WE BRING THE TABLES.'; window.ENDTIMES[49]=23.5;
+
+// ================= EP. 50 · THE FLOOR PLAN (Season Two, full ensemble) =================
+// Pairs with Friday's 3-layouts carousel. Competence first: Dad draws the Dec 19 floor plan in seconds and flips it through
+// rows, rounds and a U-shape. Mrs. Never Wrong moves one table one inch (it blocked the door: she was right), Unc reads the plan
+// upside down, Tyler pops out from behind the board, Princess draws a throne and Baby a bigger one, somebody drew Lil Wobbles
+// in (Dad erases him: "ERASED."), Vaeh is embarrassed, the cat sits on top of the board. WIN: the plan is approved.
+function planBoardK50(t,o){ const bx=540, by=760, w=720, h=520; ctx.save(); ctx.translate(bx,by); ctx.rotate(o.flip*Math.PI);
+  ctx.fillStyle='#fbfbf7'; ctx.strokeStyle=INK; ctx.lineWidth=10; rr(-w/2,-h/2,w,h,18); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#1d4f8f'; ctx.font='600 30px Oswald'; ctx.textAlign='center'; ctx.fillText(o.title,0,-h/2+46);
+  // door, bottom right
+  ctx.strokeStyle='#c8323e'; ctx.lineWidth=6; ctx.beginPath(); ctx.moveTo(w/2-150,h/2-6); ctx.lineTo(w/2-60,h/2-6); ctx.stroke();
+  ctx.beginPath(); ctx.arc(w/2-150,h/2-6,90,-Math.PI/2,0); ctx.setLineDash([8,8]); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#c8323e'; ctx.font='600 22px Oswald'; ctx.fillText('DOOR',w/2-105,h/2-24);
+  ctx.strokeStyle='#1d4f8f'; ctx.fillStyle='rgba(29,79,143,.12)'; ctx.lineWidth=5;
+  const draw=o.draw;
+  if(o.layout==='rows'){ for(let r=0;r<3;r++) for(let c=0;c<2;c++){ const i=r*2+c; if(i>=draw) continue; let x=-200+c*300, y=-120+r*110; if(i===5) x+=o.nudge;
+      ctx.fillRect(x-110,y-22,220,44); ctx.strokeRect(x-110,y-22,220,44); for(let k=0;k<5;k++){ ctx.beginPath(); ctx.arc(x-88+k*44,y-36,9,0,7); ctx.stroke(); ctx.beginPath(); ctx.arc(x-88+k*44,y+36,9,0,7); ctx.stroke(); } } }
+  if(o.layout==='rounds'){ for(let r=0;r<2;r++) for(let c=0;c<3;c++){ const x=-220+c*220, y=-60+r*170; ctx.beginPath(); ctx.arc(x,y,44,0,7); ctx.fill(); ctx.stroke();
+      for(let k=0;k<8;k++){ const a=k*Math.PI/4; ctx.beginPath(); ctx.arc(x+Math.cos(a)*64,y+Math.sin(a)*64,9,0,7); ctx.stroke(); } } }
+  if(o.layout==='u'){ ctx.fillRect(-240,-150,480,44); ctx.strokeRect(-240,-150,480,44); ctx.fillRect(-240,-106,44,240); ctx.strokeRect(-240,-106,44,240); ctx.fillRect(196,-106,44,240); ctx.strokeRect(196,-106,44,240);
+    for(let k=0;k<9;k++){ ctx.beginPath(); ctx.arc(-200+k*50,-80,9,0,7); ctx.stroke(); } for(let k=0;k<4;k++){ ctx.beginPath(); ctx.arc(-170,-60+k*50,9,0,7); ctx.stroke(); ctx.beginPath(); ctx.arc(170,-60+k*50,9,0,7); ctx.stroke(); } }
+  // crowns (Princess, then Baby bigger) on the head table
+  const crown=(cx,cy,s)=>{ ctx.save(); ctx.translate(cx,cy); ctx.scale(s,s); ctx.fillStyle='#E5B84B'; ctx.strokeStyle=INK; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(-30,14); ctx.lineTo(-30,-14); ctx.lineTo(-15,2); ctx.lineTo(0,-20); ctx.lineTo(15,2); ctx.lineTo(30,-14); ctx.lineTo(30,14); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); };
+  if(o.crowns>=1) crown(-60,-h/2+90,0.8); if(o.crowns>=2) crown(80,-h/2+96,1.4);
+  // Lil Wobbles doodle, then erased
+  if(o.wob>0){ ctx.save(); ctx.globalAlpha=o.wob; ctx.strokeStyle='#e05252'; ctx.lineWidth=7; ctx.beginPath(); ctx.rect(-300,150,50,50); ctx.moveTo(-300,200); ctx.lineTo(-310,240); ctx.moveTo(-250,200); ctx.lineTo(-240,240); ctx.moveTo(-300,150); ctx.lineTo(-300,110); ctx.lineTo(-250,110); ctx.lineTo(-250,150); ctx.stroke();
+    ctx.fillStyle='#e05252'; ctx.font='600 22px Oswald'; ctx.textAlign='left'; ctx.fillText('TABLE 9?',-230,190); ctx.restore(); }
+  ctx.restore(); }
+function ep50(t){
+  const fz=freezeOf(t,[[14.0,14.7]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.16*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(540,900); ctx.scale(z,z); ctx.translate(-540,-900); }
+  drawRoom(); miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  // the board: easel legs, then the plan
+  const bk=easeOutBack(Math.min(1,Math.max(0,(tt-0.2)/0.35)));
+  if(bk>0){ ctx.save(); ctx.strokeStyle=INK; ctx.lineWidth=12; ctx.beginPath(); ctx.moveTo(380,FLOOR); ctx.lineTo(440,1000); ctx.moveTo(700,FLOOR); ctx.lineTo(640,1000); ctx.stroke(); ctx.restore();
+    const layout=(tt<1.3)?'rows':(tt<1.9)?'rounds':(tt<2.5)?'u':'rows';
+    const flip=(tt>=5.6&&tt<7.4)?ease(Math.min(1,(tt-5.6)/0.4)):(tt>=7.4&&tt<7.8)?1-ease((tt-7.4)/0.4):0;
+    const wob=(tt>=12.5&&tt<14.7)?Math.min(1,(tt-12.5)/0.3):(tt>=14.7&&tt<15.3)?1-(tt-14.7)/0.6:0;
+    ctx.save(); ctx.translate(540,760); ctx.scale(bk,bk); ctx.translate(-540,-760);
+    planBoardK50(t,{layout:layout, draw:Math.min(6,Math.floor((tt-0.3)/0.12)+1), nudge:(tt>=3.6)?-ease(Math.min(1,(tt-3.6)/0.3))*60:0, flip:flip,
+      title:'DEC 19 · FLOOR PLAN', crowns:(tt>=11.0)?2:(tt>=10.0)?1:0, wob:wob});
+    ctx.restore(); }
+  // eraser wipe
+  if(tt>=14.7&&tt<15.3){ ctx.save(); ctx.fillStyle='#c94444'; ctx.strokeStyle=INK; ctx.lineWidth=5; const ex=260+Math.sin((tt-14.7)*30)*40; rr(ex-30,920,60,34,6); ctx.fill(); ctx.stroke(); ctx.restore(); }
+  // the cat on top of the board
+  if(tt>=17.0){ const k=Math.min(1,(tt-17.0)/0.7); drawCatD(lerp(1250,560,ease(k)), (k<1)?FLOOR:500, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.75}); }
+  // TYLER pops out from behind the board
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); ctx.save(); ctx.beginPath(); ctx.rect(0,0,W,500); ctx.rect(0,1020,W,H); ctx.rect(900,0,W,H); ctx.clip();
+    kidWithProp({x:lerp(700,920,k), face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-20}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, AS*0.9); ctx.restore(); }
+  // Dad with the marker (competence), left of the board
+  kidWithProp({x:330, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<2.6||(tt>=14.0&&tt<15.3))?{sh:110,el:-30}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt>=19.6)?{sh:160,el:-30}:undefined,
+    mouth:'smile', eyes:(tt>=12.5&&tt<14.0)?'wide':undefined, style:STYLER2}, AS);
+  // MRS. NEVER WRONG nudges one table
+  if(tt>=2.8){ const x=lerp(-200,170,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=3.4&&tt<4.6)?{sh:110,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // UNC grabs it upside down
+  if(tt>=5.0){ const x=lerp(1300,800,ease((tt-5.0)/0.5)); kidWithProp({x:x, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=5.5&&tt<7.6)?{sh:120,el:-10}:{sh:60,el:24}, mouth:'smile'}, AS); }
+  // the kids
+  kidWithProp({x:50, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  princessK(470, (tt>=10.0&&tt<11.0)?{sh:120,el:-20}:undefined);
+  kidWithProp({x:610, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(tt>=11.0)?{sh:165,el:-60}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  vaehK(1030, kV*0.85);
+  ctx.restore();
+  if(t>=14.05&&t<14.7){ const kk=easeOutBack(Math.min(1,(t-14.05)/0.25)); starburst(540,360,kk*0.9,'ERASED.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,60,2.4);
+  showBadge(50);
+  if(t<2.7) caption(['DAD DREW THE DEC 19','FLOOR PLAN IN SECONDS.'],300,1,48);
+  if(t>=2.8&&t<4.4) captionPop(['MRS. NEVER WRONG MOVED','ONE TABLE ONE INCH.'],300,2.8,t,44);
+  if(t>=4.4&&t<4.95) captionPop(['(IT BLOCKED THE DOOR.)'],300,4.4,t,46);
+  if(t>=5.0&&t<7.5) captionPop(['UNC IS READING IT','UPSIDE DOWN.'],300,5.0,t,52);
+  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
+  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=10.0&&t<12.4) captionPop(['PRINCESS DREW A THRONE.','BABY DREW A BIGGER ONE.'],300,10.0,t,44);
+  if(t>=12.5&&t<14.0) captionPop(['WHO DREW','LIL WOBBLES IN?'],300,12.5,t,52);
+  if(t>=15.4&&t<16.9) captionPop(['...this is SO embarrassing.'],300,15.4,t,46);
+  if(t>=17.0&&t<19.5) captionPop(['THE CAT','APPROVED IT.'],300,17.0,t,56);
+  if(t>=19.6&&t<21.3) captionPop(['ROWS. ROUNDS. U-SHAPE.','DEC 19 IS PLANNED.'],300,19.6,t,44);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){ captionPop(['ROWS, ROUNDS','OR U-SHAPE?'],300,22.4,t,56); caption(['SEASON TWO RECORD: 6 W · 4 L'],1500,(t-22.4)/0.35,30); }
+}
+REELS[50]=ep50; SHAKES[50]=[14.0,0.2,8]; TAGLINES[50]='ROWS, ROUNDS OR U-SHAPE. WE SET ALL THREE.'; window.ENDTIMES[50]=23.5;
+
+// ================= EP. 51 · THE KIDS' TABLE (Season Two, full ensemble) =================
+// Pairs with Saturday's Thanksgiving headcount price list. Competence first: Dad sets the big table AND the kids' table in
+// seconds. Mrs. Never Wrong counts every seat, Unc sits at the kids' table on a red chair (it is Lil Wobbles: he folds, "NOPE."),
+// Tyler is under the kids' table, Vaeh refuses the kids' table, Baby climbs up to the big table, the cat takes the head seat.
+// LOSS: everybody has a seat, Dad ends up at the kids' table.
+function bigTableK51(k){ if(k<=0) return; ctx.save(); ctx.translate(330,FLOOR); ctx.scale(0.72*k,0.72*k); ctx.translate(-330,-FLOOR); drawTable(330,0,0); ctx.restore();
+  for(let i=0;i<4;i++) plateT43(190+i*95, FLOOR-188, 0); }
+function kidsTableK51(k){ if(k<=0) return; ctx.save(); ctx.translate(800,FLOOR); ctx.scale(0.45*k,0.45*k); ctx.translate(-800,-FLOOR); drawTable(800,0,0); ctx.restore();
+  for(let i=0;i<3;i++){ ctx.save(); ctx.fillStyle='#fff'; ctx.strokeStyle=INK; ctx.lineWidth=4; ctx.beginPath(); ctx.ellipse(720+i*80, FLOOR-120, 24, 8, 0, 0, 7); ctx.fill(); ctx.stroke(); ctx.restore(); } }
+function ep51(t){
+  const fz=freezeOf(t,[[6.6,7.3]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(900,FLOOR-150); ctx.scale(z,z); ctx.translate(-900,-(FLOOR-150)); }
+  drawRoom(); miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  const end=(tt>=19.6);
+  // Dad behind the big table (start), then squeezed in at the kids' table (end)
+  if(!end) kidWithProp({x:330, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<1.4)?{sh:100,el:-6}:{sh:60,el:24}, mouth:'smile', style:STYLER2}, AS);
+  // Mrs. Never Wrong behind the big table, counting
+  if(tt>=2.8){ const x=lerp(-200,170,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=3.3&&tt<4.9)?{sh:100+Math.sin(t*10)*12,el:-10}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  bigTableK51(easeOutBack(Math.min(1,Math.max(0,(tt-0.3)/0.35))));
+  // Baby climbs up to the big table
+  const climb=(tt>=13.0)?ease(Math.min(1,(tt-13.0)/0.5)):0;
+  // THE CAT takes the head seat of the big table
+  if(tt>=16.0){ const k=Math.min(1,(tt-16.0)/0.8); if(k>=1) drawMiniChair(560, FLOOR, 1.0); drawCatD(lerp(-120,560,ease(k)), (k<1)?FLOOR:FLOOR-78, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.8}); }
+  // the kids behind the kids' table
+  kidWithProp({x:690, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  princessK(800);
+  ctx.save(); ctx.translate(0,-climb*150);
+  kidWithProp({x:lerp(600,480,climb), face:-1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(climb>0)?{sh:165,el:-60}:{sh:60,el:24}, arm2:(climb>0)?{sh:160,el:-70}:undefined, mouth:'smile', style:STYLEBB}, kB); ctx.restore();
+  if(climb>0) drawMiniChair(480, FLOOR, 0.75);
+  vaehK(1040, kV*0.85, (tt>=10.0&&tt<12.4)?'o':'flat');
+  // TYLER sitting under the kids' table
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); ctx.save(); ctx.translate(760,FLOOR); ctx.scale(0.42*k,0.42*k); ctx.translate(-760,-FLOOR);
+    drawMan(sitPose(760,STYLET,{y:FLOOR-150, face:1, lean:-10, mouth:(tt>=8.8)?'flat':'smile', legs:[{hip:90,knee:-90},{hip:84,knee:-84}]})); ctx.restore(); }
+  kidsTableK51(easeOutBack(Math.min(1,Math.max(0,(tt-0.7)/0.35))));
+  // UNC sits on the red chair: it is Lil Wobbles. After the fold he stands behind, laughing
+  if(tt>=5.0){ const br=(tt>=6.4)?Math.min(1,(tt-6.4)/0.25):0;
+    if(tt<12.0){ wobblesK(950,0.55,(tt<6.4)?Math.sin(t*16)*5:0,br); }
+    const walk=Math.min(1,(tt-5.0)/0.6);
+    if(walk<1) kidWithProp({x:lerp(1300,950,ease(walk)), face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS);
+    else if(tt<12.0){ const drop=br*70; kidWithProp(sitPose(950,undefined,{y:HIP_SEAT+70+drop, mouth:(br>0)?'o':'smile', eyes:(br>0)?'wide':undefined}), AS*0.95); }
+    else kidWithProp({x:960, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS); }
+  // END: Dad squeezed onto a mini chair at the kids' table
+  if(end){ drawMiniChair(880, FLOOR, 0.8); kidWithProp(sitPose(900,STYLER2,{y:HIP_SEAT+90, mouth:'flat', eyes:'wide', arm:{sh:20,el:30}}), AS*0.95); }
+  ctx.restore();
+  if(t>=6.65&&t<7.3){ const kk=easeOutBack(Math.min(1,(t-6.65)/0.25)); starburst(800,FLOOR-1000,kk*1.0,'NOPE.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,40,2.0);
+  showBadge(51);
+  if(t<2.7) caption(['THANKSGIVING: THE BIG TABLE','AND THE KIDS\' TABLE.'],300,1,42);
+  if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','COUNTED EVERY SEAT.'],300,2.8,t,50);
+  if(t>=5.0&&t<6.6) captionPop(['UNC SAT AT','THE KIDS\' TABLE.'],300,5.0,t,52);
+  if(t>=7.3&&t<7.6) captionPop(['ON LIL WOBBLES.'],300,7.3,t,52);
+  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
+  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=10.0&&t<11.2) captionPop(['VAEH WILL NOT SIT','AT THE KIDS\' TABLE.'],300,10.0,t,46);
+  if(t>=11.2&&t<12.9) captionPop(['...this is SO embarrassing.'],300,11.2,t,46);
+  if(t>=13.0&&t<15.9) captionPop(['BABY MOVED HIMSELF','TO THE BIG TABLE.'],300,13.0,t,46);
+  if(t>=16.0&&t<19.5) captionPop(['THE CAT TOOK','THE HEAD OF THE TABLE.'],300,16.0,t,48);
+  if(t>=19.6&&t<21.3) captionPop(['EVERYBODY HAS A SEAT.','DAD GOT THE KIDS\' TABLE.'],300,19.6,t,42);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){ captionPop(['BIG TABLE OR','KIDS\' TABLE?'],300,22.4,t,56); caption(['SEASON TWO RECORD: 6 W · 5 L'],1500,(t-22.4)/0.35,30); }
+}
+REELS[51]=ep51; SHAKES[51]=[6.6,0.2,8]; TAGLINES[51]='THE BIG TABLE AND THE KIDS\' TABLE. WE BRING BOTH.'; window.ENDTIMES[51]=23.5;
+
+// ================= EP. 52 · THE CALENDAR (Season Two, full ensemble) =================
+// Pairs with Sunday's holiday flyer (Dec 5, 12, 19). Competence first: Dad hangs the December calendar and circles the 19th in
+// one stroke. Mrs. Never Wrong circles the 5th and 12th too (all Saturdays: she was right), Unc stands on Lil Wobbles to hang it
+// higher (he folds, "NOPE."), Tyler pops out of the advent window on the 25th, the kids mark the 19th (Lil a star, Princess a
+// crown, Baby a bigger crown), Vaeh is embarrassed, the cat sits on top of the calendar. WIN: Dec 19 is locked in.
+function calK52(o){ const cx=540, cy=760; ctx.save(); ctx.translate(cx,cy+o.drop); ctx.rotate(o.rot); ctx.scale(o.k,o.k);
+  ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=9; rr(-330,-260,660,500,24); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#c8323e'; rr(-330,-260,660,90,24); ctx.fill(); ctx.fillRect(-330,-200,660,30);
+  ctx.fillStyle='#fff'; ctx.textAlign='center'; ctx.font='50px "Archivo Black"'; ctx.fillText('DECEMBER',0,-196);
+  ctx.fillStyle=INK; ctx.font='600 24px Oswald'; ['SUN','MON','TUE','WED','THU','FRI','SAT'].forEach((d,i)=>ctx.fillText(d,-270+i*90,-136));
+  ctx.font='30px "Archivo Black"';
+  for(let d=1;d<=31;d++){ const idx=d+1, c=idx%7, r=Math.floor(idx/7), x=-270+c*90, y=-86+r*62;   // Dec 2026 starts on a Tuesday
+    const ring=(d===19&&o.c19)||((d===5||d===12)&&o.c512);
+    if(ring){ ctx.strokeStyle='#c8323e'; ctx.lineWidth=6; ctx.beginPath(); ctx.arc(x,y-11,29,0,Math.PI*2*Math.min(1,(d===19?o.c19:o.c512))); ctx.stroke(); }
+    ctx.fillStyle=ring?'#c8323e':INK; ctx.fillText(String(d),x,y);
+    if(d===19){ if(o.star){ ctx.save(); ctx.fillStyle='#ffd23f'; ctx.strokeStyle=INK; ctx.lineWidth=3; ctx.beginPath(); for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, rr2=i%2?7:16; ctx.lineTo(x+44+Math.cos(a)*rr2, y-12+Math.sin(a)*rr2); } ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); }
+      if(o.crowns>=1){ tiaraK(x-50, y-30, 0.3); } if(o.crowns>=2){ tiaraK(x-4, y-38, 0.55); } }
+    if(d===25){ const ox=x, oy=y-11; ctx.save(); ctx.fillStyle='#2f7d4a'; ctx.strokeStyle=INK; ctx.lineWidth=4; const op=o.door; if(op>0){ ctx.fillStyle='#1b1430'; ctx.fillRect(ox-38,oy-30,76,60); ctx.fillStyle='#2f7d4a'; ctx.fillRect(ox-38-op*46,oy-30,op*46,60); ctx.strokeRect(ox-38-op*46,oy-30,op*46,60); } ctx.restore(); }
+  }
+  ctx.restore(); }
+function ep52(t){
+  const fz=freezeOf(t,[[6.6,7.3]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(880,FLOOR-200); ctx.scale(z,z); ctx.translate(-880,-(FLOOR-200)); }
+  drawRoom(); miniPumpkin(1030, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  const ck=easeOutBack(Math.min(1,Math.max(0,(tt-0.2)/0.35)));
+  const fall=(tt>=6.6&&tt<9.6)?1:0;   // calendar tilts when Unc's chair folds, straightened by Mrs. Never Wrong at 9.6
+  const door=(tt>=7.6)?Math.min(1,(tt-7.6)/0.25):0;
+  if(ck>0) calK52({k:ck, rot:fall*0.12, drop:fall*30, c19:(tt>=1.0)?Math.min(1,(tt-1.0)/0.4):0, c512:(tt>=3.4)?Math.min(1,(tt-3.4)/0.5):0,
+    star:tt>=10.0, crowns:(tt>=11.2)?2:(tt>=10.6)?1:0, door:door});
+  // TYLER peeks out of the advent window on the 25th (Dec 25 = Fri: col 5, row 3)
+  if(door>0){ const wx=540+(-270+5*90), wy=760+(-86+3*62)-11; ctx.save(); ctx.beginPath(); ctx.rect(wx-38,wy-30,76,60); ctx.clip();
+    ctx.translate(wx,wy+70-door*40); ctx.scale(0.22,0.22); ctx.translate(-wx,-FLOOR+160); kidWithProp({x:wx, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, 1); ctx.restore(); }
+  // the cat on top of the calendar
+  if(tt>=15.0){ const k=Math.min(1,(tt-15.0)/0.7); drawCatD(lerp(1250,540,ease(k)), (k<1)?FLOOR:500, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.75}); }
+  // Dad with the marker (competence)
+  kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=0.8&&tt<1.6)?{sh:120,el:-20}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt>=19.6)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  // MRS. NEVER WRONG circles the 5th and 12th, later straightens the calendar
+  if(tt>=2.8){ const x=lerp(-200,380,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:((tt>=3.3&&tt<4.6)||(tt>=9.4&&tt<10.0))?{sh:125,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // UNC stands on Lil Wobbles to hang it higher; Wobbles folds
+  if(tt>=5.0&&tt<12.0){ const br=(tt>=6.4)?Math.min(1,(tt-6.4)/0.25):0, k=Math.min(1,(tt-5.0)/0.5);
+    wobblesK(860,0.6,(tt<6.4&&k>=1)?Math.sin(t*18)*5:0,br);
+    const lift=(k>=1)?(1-br)*120:0;
+    ctx.save(); ctx.translate(0,-lift); kidWithProp({x:lerp(1300,860,ease(k)), face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(k>=1&&br<1)?{sh:150,el:-20}:{sh:60,el:24}, mouth:(br>0)?'o':'smile', eyes:(br>0)?'wide':undefined}, AS); ctx.restore(); }
+  if(tt>=12.0) kidWithProp({x:880, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS);
+  // the kids mark the 19th
+  kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=10.0&&tt<10.6)?{sh:150,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  princessK(560, (tt>=10.6&&tt<11.2)?{sh:160,el:-20}:undefined);
+  kidWithProp({x:660, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(tt>=11.2)?{sh:165,el:-60}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  vaehK(1030, kV*0.85);
+  ctx.restore();
+  if(t>=6.65&&t<7.3){ const kk=easeOutBack(Math.min(1,(t-6.65)/0.25)); starburst(860,FLOOR-1000,kk*0.9,'NOPE.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,70,2.6);
+  showBadge(52);
+  if(t<2.7) caption(['DAD CIRCLED DEC 19.','ONE STROKE.'],300,1,54);
+  if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG: THE 5TH','AND 12TH ARE SATURDAYS TOO.'],300,2.8,t,38);
+  if(t>=5.0&&t<6.6) captionPop(['UNC WANTS IT HIGHER.'],300,5.0,t,52);
+  if(t>=7.3&&t<7.6) captionPop(['ON LIL WOBBLES.'],300,7.3,t,52);
+  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
+  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=10.0&&t<12.9) captionPop(['LIL ADDED A STAR. PRINCESS','A CROWN. BABY A BIGGER ONE.'],300,10.0,t,38);
+  if(t>=13.0&&t<14.9) captionPop(['...this is SO embarrassing.'],300,13.0,t,46);
+  if(t>=15.0&&t<19.5) captionPop(['THE CAT IS GUARDING','THE CALENDAR.'],300,15.0,t,50);
+  if(t>=19.6&&t<21.3) captionPop(['DEC 19.','LOCKED IN.'],300,19.6,t,58);
+  if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
+  if(t>=22.4&&t<23.45){ captionPop(['WHICH SATURDAY','IS YOURS?'],300,22.4,t,56); caption(['SEASON TWO RECORD: 7 W · 5 L'],1500,(t-22.4)/0.35,30); }
+}
+REELS[52]=ep52; SHAKES[52]=[6.6,0.2,8]; TAGLINES[52]='DEC 5 · 12 · 19. PICK YOUR SATURDAY.'; window.ENDTIMES[52]=23.5;
+
+
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
 function tkTag(label){
