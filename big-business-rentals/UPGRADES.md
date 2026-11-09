@@ -59,3 +59,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - Nov 5 (fresh remix, Party Physics #2): series title chip, animated magnetic field lines with flowing charge dots, Season Two kid rigs ported into reelH (first remix with the whole family).
 - Nov 6-7 (remixes Race Week + The Recount): full Season One + Two ensemble back in remixes, road-closure props (barricade, cones, wands), live counters that drop and recover, Lil Wobbles drop-in entrance.
 - Nov 7 (Sat build: EP. 46 + price list): first ten-character Season Two frame with staged entrances; price list by headcount (bento of guest counts).
+- Nov 9 (fresh remix, It's Time): lights-on reveal from a dark first frame, real December 2026 calendar prop with circled Saturdays.

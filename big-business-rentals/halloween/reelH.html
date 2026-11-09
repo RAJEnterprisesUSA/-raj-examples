@@ -5364,6 +5364,73 @@ REELS[43]=reelT43;
 SHAKES[43]=[6.62,0.2,8];
 TAGLINES[43]='WE PICK UP FROM EVERY SIDE.';
 window.GAGENDS[43]=14.0;
+
+// ---------- T44: TREND REMIX · "It's time." (17s), SOCIAL pool, fresh nightly build Sun Nov 8 ----------
+// Trend (NewEngen Nov 2026 roundup): creators use an "It's time" moment to declare the holiday season open and put the
+// decorations up. Format only: no celebrity likeness, no licensed audio (owner can add the trending sound in-app).
+// Full cast. Payoff: it is not time for the tree, it is time to book December tables (Dec 5, 12, 19 = the real
+// pre-Christmas Saturdays, honest calendar scarcity only).
+function treeT44(x,k,rot){ if(k<=0) return; ctx.save(); ctx.translate(x,FLOOR); ctx.rotate(rot||0); ctx.scale(k,k); ctx.lineWidth=8; ctx.strokeStyle=INK;
+  ctx.fillStyle='#6a4a2c'; ctx.fillRect(-22,-60,44,60); ctx.strokeRect(-22,-60,44,60);
+  [[-200,-60,-120],[-160,-260,-230],[-120,-430,-330]].forEach(([w,y,h])=>{ ctx.fillStyle='#2f7d4a'; ctx.beginPath(); ctx.moveTo(w,y); ctx.lineTo(-w,y); ctx.lineTo(0,y+h-130); ctx.closePath(); ctx.fill(); ctx.stroke(); });
+  ['#ff5a5a','#ffd23f','#7fd3ff','#ff8ad8'].forEach((c,i)=>{ for(let j=0;j<3;j++){ ctx.fillStyle=c; ctx.beginPath(); ctx.arc(-110+j*90+i*12,-120-i*110-j*8,11,0,7); ctx.fill(); } });
+  ctx.fillStyle='#ffd23f'; ctx.beginPath(); for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, r=i%2?18:40; ctx.lineTo(Math.cos(a)*r, -700+Math.sin(a)*r); } ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore(); }
+function lightsT44(on,t){ const n=14; for(let i=0;i<n;i++){ const f=(i+0.5)/n, x=f*W, y=210+Math.sin(f*Math.PI)*90;
+  ctx.fillStyle=on?['#ff5a5a','#ffd23f','#7fd3ff','#9fe24f'][i%4]:'#4a3a5a'; ctx.globalAlpha=on?(0.75+0.25*Math.sin(t*8+i)):1;
+  ctx.beginPath(); ctx.arc(x,y,13,0,7); ctx.fill(); if(on){ ctx.globalAlpha=0.25; ctx.beginPath(); ctx.arc(x,y,34,0,7); ctx.fill(); } ctx.globalAlpha=1; } }
+function calendarT44(k){ if(k<=0) return; ctx.save(); ctx.translate(540,760); const s=easeOutBack(Math.min(1,k)); ctx.scale(s,s);
+  ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=9; rr(-330,-230,660,460,26); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#c8323e'; rr(-330,-230,660,90,26); ctx.fill(); ctx.fillRect(-330,-170,660,30);
+  ctx.fillStyle='#fff'; ctx.textAlign='center'; ctx.font='52px "Archivo Black"'; ctx.fillText('DECEMBER',0,-165);
+  ctx.fillStyle=INK; ctx.font='600 26px Oswald'; ['SUN','MON','TUE','WED','THU','FRI','SAT'].forEach((d,i)=>ctx.fillText(d,-270+i*90,-100));
+  // Dec 2026 starts on a Tuesday
+  ctx.font='34px "Archivo Black"'; for(let d=1;d<=31;d++){ const idx=d+1, c=idx%7, r=Math.floor(idx/7); const x=-270+c*90, y=-50+r*56;
+    const hot=(d===5||d===12||d===19); if(hot){ ctx.strokeStyle='#c8323e'; ctx.lineWidth=6; ctx.beginPath(); ctx.arc(x,y-12,30,0,7); ctx.stroke(); }
+    ctx.fillStyle=hot?'#c8323e':INK; ctx.fillText(String(d),x,y); }
+  ctx.restore(); }
+function reelT44(t){
+  const A=2.6, B=5.0, C=7.6, D=10.0, E=12.0;
+  const kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh, AS=0.8;
+  roomS2(t);
+  const on=(t>=A);
+  if(!on){ ctx.save(); ctx.fillStyle='rgba(5,3,15,.55)'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  lightsT44(on,t);
+  if(t>=A&&t<A+0.2){ ctx.save(); ctx.globalAlpha=1-(t-A)/0.2; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  // the tree: Unc brings it in, the cat knocks it over onto Lil Wobbles at D
+  const treeX=(t<A+0.4)?-400:lerp(-400,800,ease((t-A-0.4)/1.0));
+  const treeRot=(t>=D)?-Math.min(1.45,(t-D)*3):0;
+  if(t>=A&&t<E) treeT44(treeX, 0.85, treeRot);
+  if(t>=D&&t<E){ const br=Math.min(1,(t-D-0.4)/0.3); if(br>0){ ctx.save(); ctx.translate(560,FLOOR); ctx.scale(0.6,0.6); ctx.translate(-560,-FLOOR); drawChair(560,0,br,br,{a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore(); dust(560,FLOOR,t-D-0.4); } }
+  // the table with the turkey (Mrs. Never Wrong: not until Thanksgiving)
+  // cast
+  kidWithProp({x:130, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t<A)?{sh:100,el:-10}:{sh:165,el:-20}, arm2:(t>=E)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);   // Dad at the switch
+  if(t<A){ ctx.save(); ctx.fillStyle='#e9e2cf'; ctx.strokeStyle=INK; ctx.lineWidth=5; rr(205,FLOOR-560,40,64,8); ctx.fill(); ctx.stroke(); ctx.restore(); }
+  if(t>=A) kidWithProp({x:lerp(-300,690,ease((t-A-0.2)/1.0)), face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:{sh:120,el:-10}, mouth:'smile'}, AS);                                   // Unc pushing the tree
+  if(t>=B) kidWithProp({x:lerp(-200,470,ease((t-B)/0.5)), face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:95,el:-4}, mouth:'flat', style:STYLEW}, AS);                               // Mrs. Never Wrong
+  if(t>=C){ const k=easeOutBack(Math.min(1,(t-C)/0.25)); kidWithProp({x:930, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(t>=8.8)?'flat':'smile', style:STYLET}, AS*k);
+    if(k>0.6){ ctx.save(); ctx.strokeStyle='#9fe24f'; ctx.lineWidth=6; ctx.beginPath(); for(let i=0;i<6;i++){ const y=FLOOR-120-i*60; ctx.moveTo(870,y); ctx.quadraticCurveTo(930,y-30,990,y); } ctx.stroke(); ctx.restore(); } }  // wrapped in lights
+  kidWithProp({x:250, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(250, kidHeadY(kP)+8, kP*1.3);
+  kidWithProp({x:40, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLELB}, kL);
+  kidWithProp({x:330, face:1, legs:[{hip:10,knee:8},{hip:-8,knee:8}], arm:{sh:165,el:-60}, mouth:'smile', style:STYLEBB}, kB);
+  kidWithProp({x:1030, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV*0.85);
+  headphonesK(1030, kidHeadY(kV*0.85), kV*0.85, -1); phoneK(1030-52*kV*0.85, FLOOR-470*kV*0.85, kV*0.85, true);
+  if(t>=D-0.6&&t<E) drawCat((t<D)?lerp(1200,860,(t-D+0.6)/0.6):860, FLOOR, {pose:(t<D)?'trot':'sit', face:-1, t:t, s:1.0});
+  if(t>=E){ calendarT44((t-E)/0.35); drawCat(860, FLOOR, {pose:'sit', face:-1, t:t, s:1.0}); if(t>=12.6) confettiBurst(t,12.6,540,FLOOR-500,60,2.4); }
+  if(t>=D+0.3&&t<D+1.1){ const kk=easeOutBack(Math.min(1,(t-D-0.3)/0.2)); starburst(540,560,kk*0.9,'OOF.'); }
+  // captions: hook fully on screen at frame one
+  if(t<A) caption(['NOVEMBER.','DAD SAYS: "IT\'S TIME."'],300,1,52);
+  else if(t<B) captionPop(['UNC BROUGHT','THE TREE.'],300,A+0.05,t,54);
+  else if(t<C) captionPop(['MRS. NEVER WRONG:','NOT UNTIL AFTER THANKSGIVING.'],300,B+0.05,t,42);
+  else if(t<8.8) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,C+0.05,t,50);
+  else if(t<D) captionPop(['...im the new intern.'],300,8.8,t,48);
+  else if(t<E) captionPop(['THE CAT DECIDED.'],300,D+0.05,t,54);
+  else captionPop(["IT'S TIME... TO BOOK","YOUR DECEMBER TABLES."],300,E+0.05,t,46);
+}
+REELS[44]=reelT44;
+SHAKES[44]=[10.3,0.25,10];
+TAGLINES[44]="DEC 5 · 12 · 19. IT'S TIME.";
+window.GAGENDS[44]=14.0;
 </script>
 </body></html>
 

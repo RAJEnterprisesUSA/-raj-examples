@@ -3314,3 +3314,17 @@ FB 8pm: the big business chronicles ep. 46: the whole crew is back. 🪑 #lasveg
 IG 8pm: The Big Business Chronicles EP. 46: the whole crew is back for Season Two. Mrs. Never Wrong, Unc, Tyler, Lil Wobbles and the cat, plus the family. Which one is your favorite? 🪑 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
 TT 8pm: The Big Business Chronicles EP. 46: he is still the new intern. 🪑 #thebigbusinesschronicles #thecrewisback #family #comedy
 YT 8pm: "EP. 46: The Crew Is Back 🪑 still the new intern #Shorts" / The Big Business Chronicles EP. 46: the whole Season One crew joins the family for the Dec 19 party. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## MONDAY NOV 9 · TREND REMIX #21 IT'S TIME (5pm, fresh nightly build Sun Nov 8, SOCIAL pool)
+Trend: the "It's time" moment used to declare the holiday season open and put decorations up (NewEngen November 2026 TikTok
+roundup; SocialPilot / Revid listings checked Nov 7-8). Format only, no celebrity likeness, no licensed audio (owner may add
+the trending sound in-app). BB_Trend_ItsTime (reelH REELS[44], 17.2s, full cast): dark frame, Dad flips the switch, lights on;
+Unc brings the tree; Mrs. Never Wrong: not until after Thanksgiving; Tyler appears wrapped in lights ("...im the new intern.");
+the cat knocks the tree onto Lil Wobbles ("OOF."); payoff "It's time... to book your December tables" with a December 2026
+calendar, Dec 5, 12, 19 circled (verified Saturdays). UPGRADES: lights-on reveal, real calendar prop.
+AWAITING OWNER APPROVAL (queue_mon09_remix.py). Also still awaiting: EP. 46 + Thanksgiving price list (queue_sat07.py, times
+to be re-set; Sat slots passed).
+FB 5pm: it's time. not for the tree, for the tables. the pre-christmas saturdays this year are dec 5, 12 and 19. 🎄 #lasvegas #holidayparty #partyrentals #animation #comedy
+IG 5pm: It's time. Not for the tree, for the tables. The pre-Christmas Saturdays this year are Dec 5, 12 and 19. 🎄 #lasvegas #holidayparty #partyrentals #animation #comedy
+TT 5pm: It's time. 🎄 #itstime #holidayseason #christmas #comedy
+YT 5pm: "It's time. 🎄 #Shorts" / Not for the tree. For the December tables: Dec 5, 12 and 19. #holidays #comedy #partyrentals
