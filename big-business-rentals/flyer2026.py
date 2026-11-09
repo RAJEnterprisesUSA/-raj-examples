@@ -88,7 +88,7 @@ def price_it(name, img, size=(1080, 1350)):
             + f"<div style='position:absolute;left:56px;right:56px;bottom:{'440' if tall else '232'}px'>"
               "<div class='h1' style='font-size:118px'>How much would you <em>pay</em> for this setup?</div>"
               "<div class='glass' style='margin-top:30px;padding:24px 30px;font-size:29px;line-height:1.35;display:inline-block'>"
-              "The tables, the chairs and the room underneath it: <b style=\"font-weight:800;color:#E5B84B\">that part is us.</b></div></div>"
+              "The tables and chairs underneath it all: <b style=\"font-weight:800;color:#E5B84B\">that part is us.</b></div></div>"
             + contact_bar())
     return render(name, body, size)
 
