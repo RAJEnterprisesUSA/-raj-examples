@@ -3415,3 +3415,9 @@ FB 5pm: one table. five parties. birthday, friendsgiving, game day, baby shower 
 IG 5pm: One table. Five parties. Birthday, Friendsgiving, game day, baby shower and office party, all on one 6 ft table. Which look is yours? 🪑 #lasvegas #partyrentals #eventdecor #animation #comedy
 TT 5pm: One table, five looks. 🪑 #onetablefiveways #partyideas #styling #comedy
 YT 5pm: "One table. Five parties. 🪑 #Shorts" / Birthday, Friendsgiving, game day, baby shower and office party. One 6 ft table. #partyideas #comedy #partyrentals
+
+## QUEUED Nov 8 night (owner: "queue both" = Monday + Tuesday as shown in chat)
+queue_week_nov09.py mon tue: 12/12 OK, PST -08:00.
+MON Nov 9: Price It Thanksgiving Hall 1pm FB feed + IG feed; EP. 46 The Crew Is Back 8pm FB/IG/TT/YT.
+TUE Nov 10: Labor Crew 1pm FB feed + IG Story; EP. 47 The Tent 8pm FB/IG/TT/YT.
+NOT queued: Mon 5pm remix. "It's Time" is pulled; its replacement "One table, five parties" is rendering and waits for its own approval.
