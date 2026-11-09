@@ -350,6 +350,11 @@ FULL ENSEMBLE (owner Nov 5: "the former cast should also be in season two they w
 included in season 2 videos"): from EP. 46 EVERY Season Two episode includes everyone: Mr. Big Business, the four kids,
 Mrs. Never Wrong, Unc, Tyler the Intern (with his intro gag), Lil Wobbles and the cat, each with at least one visible beat;
 remixes use the full cast whenever the format allows. Details: CAST.md FULL ENSEMBLE IN SEASON TWO.
+NO CHRISTMAS-CELEBRATION VIDEOS (owner Nov 8: "i dont want a video of a christmas celebration"): no trees, ornaments, advent
+calendars, Santa or Christmas-party scenes in remixes or episodes (the "It's Time" tree remix was pulled). December content stays
+on the booking: tables, chairs, tents, setup, real Saturday dates. The Dec 19 party is "the family holiday party".
+BUSINESS ON SCREEN (owner Nov 8 check, "is ep 52 pertaining to the business."): every episode's competence beat AND payoff must
+show tables, chairs, tents, linens or setup on screen, not just a date or a prop.
 
 ## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
 ## referral and countdown posts; videos and pre-built sets keep their formats)

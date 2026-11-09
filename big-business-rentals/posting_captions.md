@@ -3388,3 +3388,30 @@ SUN 2026-11-15:
   IG 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): The Big Business Chronicles EP. 52: Dad circles Dec 19 in one stroke, Mrs. Never Wrong circles the 5th and 12th, and Tyler pops out of the 25th. Which Saturday is yours? 📅 #thebigbusinesschronicles #seasontwo #holidayparty #lasvegas #comedy
   TT 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): The Big Business Chronicles EP. 52: where did he even come from? 📅 #thebigbusinesschronicles #december #family #comedy
   YT 8pm (BB_Chronicles_Ep52_TheCalendar.mp4): "EP. 52: The Calendar 📅 dec 19 locked in #Shorts" / The Big Business Chronicles EP. 52: three Saturdays, one circled date and an intern in the advent calendar. Next episode tomorrow. #thebigbusinesschronicles #family #comedy
+
+## RULE CHANGE Nov 8 night (owner: "i dont want a video of a christmas celebration")
+No Christmas-celebration videos: no trees, ornaments, advent calendars, Santa or Christmas-party scenes in remixes or episodes.
+Actions: Mon Nov 9 5pm remix T44 "It's Time" (Christmas tree) PULLED, never queued; a replacement remix is being built.
+EP. 52 The Calendar: advent window on the 25th removed (Tyler pops up from behind the calendar instead).
+Booking flyers that name the real calendar fact ("three Saturdays before Christmas: Dec 5, 12, 19") are not celebration videos;
+kept unless the owner says otherwise. The Dec 19 party stays "the family holiday party".
+## OWNER CHECK Nov 8 night ("is ep 52 pertaining to the business.")
+EP. 52 as first drafted only tied to the business through the dates. Reworked: competence = Dad stacks the Dec 19 order
+(10 tables, 60 chairs) in seconds, the order is written on the calendar ("DEC 19 ORDER · 10 TABLES · 60 CHAIRS"), the cat guards
+the chair stack, payoff "10 TABLES. 60 CHAIRS. DEC 19 IS LOCKED IN." Captions updated in queue_week_nov09.py (sun).
+Rule going forward: every episode's competence beat AND payoff show tables, chairs, tents or setup on screen.
+
+## MONDAY NOV 9 · TREND REMIX #21 REPLACED: "ONE TABLE, FIVE PARTIES" (5pm, fresh build Sun Nov 8 night)
+"It's time" (T44, tree) pulled on the owner's no-Christmas rule; never queued. News pool checked first (Nov 6-8 roundups): the
+Mars rover distance record and the 300-attosecond X-ray record were both about four weeks old (current-only rule), so the SOCIAL
+pool was used again. Trend: fashion's "one hero piece, many outfits fast" format (tryvolume.app tracker measured Nov 8 2026,
+15 accounts at ~7x their usual views). Remix: ONE 6 ft table styled five ways fast (birthday, Friendsgiving, game day, baby shower,
+office party) with spin-change transitions and a LOOK n/5 counter. Full cast: Dad swaps every look, Princess / Mrs. Never Wrong / Unc
+approve, Vaeh "...this is SO embarrassing." at the baby shower, Tyler pops up from under the office-party table, Lil Wobbles wants a
+look too (NOPE.), the cat takes the table. Payoff: "ONE TABLE. EVERY PARTY. WE DELIVER IT." reelH REELS[45], GAGENDS 14.0,
+build_mon09_remix.py -> halloween/BB_Trend_OneTableFiveParties.mp4. Owner may add a trending sound in-app (no licensed audio via API).
+UPGRADE: spin-change look transitions with a flash + on-screen look counter.
+FB 5pm: one table. five parties. birthday, friendsgiving, game day, baby shower and office party. 🪑 #lasvegas #partyrentals #tablerentals #animation #comedy
+IG 5pm: One table. Five parties. Birthday, Friendsgiving, game day, baby shower and office party, all on one 6 ft table. Which look is yours? 🪑 #lasvegas #partyrentals #eventdecor #animation #comedy
+TT 5pm: One table, five looks. 🪑 #onetablefiveways #partyideas #styling #comedy
+YT 5pm: "One table. Five parties. 🪑 #Shorts" / Birthday, Friendsgiving, game day, baby shower and office party. One 6 ft table. #partyideas #comedy #partyrentals

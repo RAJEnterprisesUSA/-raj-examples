@@ -1,13 +1,14 @@
-"""Monday Nov 9 5pm TREND REMIX #21 "It's time." on all four platforms (PST -08:00). Run ONLY after the owner approves."""
+"""Monday Nov 9 5pm TREND REMIX #21 "One table, five parties" on all four platforms (PST -08:00). Replaces the pulled "It's
+time" tree remix (owner Nov 8: no Christmas-celebration videos). Run ONLY after the owner approves."""
 import time
 from queue_everywhere_oct24 import CH, RAW, FB_PIN, IG_PIN_TREND, M, gql
-T = "big-business-rentals/halloween/BB_Trend_ItsTime.mp4"
+T = "big-business-rentals/halloween/BB_Trend_OneTableFiveParties.mp4"
 D5 = "2026-11-09T17:00:00-08:00"
 VIDEOS = [
- ("fb", "it's time. not for the tree, for the tables. the pre-christmas saturdays this year are dec 5, 12 and 19. 🎄\n\n#lasvegas #holidayparty #partyrentals #animation #comedy", None),
- ("ig", "It's time. Not for the tree, for the tables. The pre-Christmas Saturdays this year are Dec 5, 12 and 19. 🎄\n\n#lasvegas #holidayparty #partyrentals #animation #comedy", IG_PIN_TREND),
- ("tt", "It's time. 🎄\n\n#itstime #holidayseason #christmas #comedy", None),
- ("yt", "Not for the tree. For the December tables: Dec 5, 12 and 19.\n\n#holidays #comedy #partyrentals", "It's time. 🎄 #Shorts"),
+ ("fb", "one table. five parties. birthday, friendsgiving, game day, baby shower and office party. 🪑\n\n#lasvegas #partyrentals #tablerentals #animation #comedy", None),
+ ("ig", "One table. Five parties. Birthday, Friendsgiving, game day, baby shower and office party, all on one 6 ft table. Which look is yours? 🪑\n\n#lasvegas #partyrentals #eventdecor #animation #comedy", IG_PIN_TREND),
+ ("tt", "One table, five looks. 🪑\n\n#onetablefiveways #partyideas #styling #comedy", None),
+ ("yt", "Birthday, Friendsgiving, game day, baby shower and office party. One 6 ft table.\n\n#partyideas #comedy #partyrentals", "One table. Five parties. 🪑 #Shorts"),
 ]
 if __name__ == "__main__":
     ok = 0

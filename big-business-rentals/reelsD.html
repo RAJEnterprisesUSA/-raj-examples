@@ -6199,10 +6199,10 @@ function ep51(t){
 REELS[51]=ep51; SHAKES[51]=[6.6,0.2,8]; TAGLINES[51]='THE BIG TABLE AND THE KIDS\' TABLE. WE BRING BOTH.'; window.ENDTIMES[51]=23.5;
 
 // ================= EP. 52 · THE CALENDAR (Season Two, full ensemble) =================
-// Pairs with Sunday's holiday flyer (Dec 5, 12, 19). Competence first: Dad hangs the December calendar and circles the 19th in
-// one stroke. Mrs. Never Wrong circles the 5th and 12th too (all Saturdays: she was right), Unc stands on Lil Wobbles to hang it
-// higher (he folds, "NOPE."), Tyler pops out of the advent window on the 25th, the kids mark the 19th (Lil a star, Princess a
-// crown, Baby a bigger crown), Vaeh is embarrassed, the cat sits on top of the calendar. WIN: Dec 19 is locked in.
+// Pairs with Sunday's holiday flyer (Dec 5, 12, 19). Competence first: Dad stacks the Dec 19 order (10 tables, 60 chairs) in
+// seconds and it goes on the calendar. Mrs. Never Wrong circles the 5th and 12th too (all Saturdays: she was right), Unc stands on Lil Wobbles to hang it
+// higher (he folds, "NOPE."), Tyler pops up from behind the calendar, the kids mark the 19th (Lil a star, Princess a
+// crown, Baby a bigger crown), Vaeh is embarrassed, the cat guards the chair stack. WIN: Dec 19 is locked in. (No Christmas imagery, owner Nov 8.)
 function calK52(o){ const cx=540, cy=760; ctx.save(); ctx.translate(cx,cy+o.drop); ctx.rotate(o.rot); ctx.scale(o.k,o.k);
   ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=9; rr(-330,-260,660,500,24); ctx.fill(); ctx.stroke();
   ctx.fillStyle='#c8323e'; rr(-330,-260,660,90,24); ctx.fill(); ctx.fillRect(-330,-200,660,30);
@@ -6213,9 +6213,9 @@ function calK52(o){ const cx=540, cy=760; ctx.save(); ctx.translate(cx,cy+o.drop
     const ring=(d===19&&o.c19)||((d===5||d===12)&&o.c512);
     if(ring){ ctx.strokeStyle='#c8323e'; ctx.lineWidth=6; ctx.beginPath(); ctx.arc(x,y-11,29,0,Math.PI*2*Math.min(1,(d===19?o.c19:o.c512))); ctx.stroke(); }
     ctx.fillStyle=ring?'#c8323e':INK; ctx.fillText(String(d),x,y);
+    if(d===19&&o.order>0){ ctx.save(); ctx.globalAlpha=Math.min(1,o.order); ctx.fillStyle='#c8323e'; ctx.font='600 30px Oswald'; ctx.textAlign='center'; ctx.fillText('DEC 19 ORDER · 10 TABLES · 60 CHAIRS',0,222); ctx.restore(); ctx.font='30px "Archivo Black"'; }
     if(d===19){ if(o.star){ ctx.save(); ctx.fillStyle='#ffd23f'; ctx.strokeStyle=INK; ctx.lineWidth=3; ctx.beginPath(); for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, rr2=i%2?7:16; ctx.lineTo(x+44+Math.cos(a)*rr2, y-12+Math.sin(a)*rr2); } ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); }
       if(o.crowns>=1){ tiaraK(x-50, y-30, 0.3); } if(o.crowns>=2){ tiaraK(x-4, y-38, 0.55); } }
-    if(d===25){ const ox=x, oy=y-11; ctx.save(); ctx.fillStyle='#2f7d4a'; ctx.strokeStyle=INK; ctx.lineWidth=4; const op=o.door; if(op>0){ ctx.fillStyle='#1b1430'; ctx.fillRect(ox-38,oy-30,76,60); ctx.fillStyle='#2f7d4a'; ctx.fillRect(ox-38-op*46,oy-30,op*46,60); ctx.strokeRect(ox-38-op*46,oy-30,op*46,60); } ctx.restore(); }
   }
   ctx.restore(); }
 function ep52(t){
@@ -6226,16 +6226,14 @@ function ep52(t){
   const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
   const ck=easeOutBack(Math.min(1,Math.max(0,(tt-0.2)/0.35)));
   const fall=(tt>=6.6&&tt<9.6)?1:0;   // calendar tilts when Unc's chair folds, straightened by Mrs. Never Wrong at 9.6
-  const door=(tt>=7.6)?Math.min(1,(tt-7.6)/0.25):0;
+  // TYLER pops up from behind the calendar (drawn first, so the calendar hides his body)
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); ctx.save(); ctx.translate(0,-k*690);
+    kidWithProp({x:780, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:150,el:-20}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, 0.7); ctx.restore(); }
   if(ck>0) calK52({k:ck, rot:fall*0.12, drop:fall*30, c19:(tt>=1.0)?Math.min(1,(tt-1.0)/0.4):0, c512:(tt>=3.4)?Math.min(1,(tt-3.4)/0.5):0,
-    star:tt>=10.0, crowns:(tt>=11.2)?2:(tt>=10.6)?1:0, door:door});
-  // TYLER peeks out of the advent window on the 25th (Dec 25 = Fri: col 5, row 3)
-  if(door>0){ const wx=540+(-270+5*90), wy=760+(-86+3*62)-11; ctx.save(); ctx.beginPath(); ctx.rect(wx-38,wy-30,76,60); ctx.clip();
-    ctx.translate(wx,wy+70-door*40); ctx.scale(0.22,0.22); ctx.translate(-wx,-FLOOR+160); kidWithProp({x:wx, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, 1); ctx.restore(); }
-  // the cat on top of the calendar
-  if(tt>=15.0){ const k=Math.min(1,(tt-15.0)/0.7); drawCatD(lerp(1250,540,ease(k)), (k<1)?FLOOR:500, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.75}); }
+    star:tt>=10.0, crowns:(tt>=11.2)?2:(tt>=10.6)?1:0, order:(tt>=1.6)?(tt-1.6)/0.3:0});
+
   // Dad with the marker (competence)
-  kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=0.8&&tt<1.6)?{sh:120,el:-20}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt>=19.6)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=0.3&&tt<1.6)?{sh:150+Math.sin(t*16)*20,el:-20}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt>=19.6)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
   // MRS. NEVER WRONG circles the 5th and 12th, later straightens the calendar
   if(tt>=2.8){ const x=lerp(-200,380,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:((tt>=3.3&&tt<4.6)||(tt>=9.4&&tt<10.0))?{sh:125,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
   // UNC stands on Lil Wobbles to hang it higher; Wobbles folds
@@ -6248,12 +6246,16 @@ function ep52(t){
   kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=10.0&&tt<10.6)?{sh:150,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
   princessK(560, (tt>=10.6&&tt<11.2)?{sh:160,el:-20}:undefined);
   kidWithProp({x:660, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:(tt>=11.2)?{sh:165,el:-60}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  // the Dec 19 chair stack Dad builds in seconds (foreground); the cat guards it
+  const nSt=(tt>=0.3)?Math.min(10,Math.floor((tt-0.3)/0.12)+1):0;
+  if(nSt>0){ ctx.save(); ctx.translate(135,FLOOR); ctx.scale(0.62,0.62); drawFoldedStack(0,0,nSt,0); ctx.restore(); }
+  if(tt>=15.0){ const k=Math.min(1,(tt-15.0)/0.7); drawCatD(lerp(1250,135,ease(k)), (k<1)?FLOOR:FLOOR-250, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.7}); }
   vaehK(1030, kV*0.85);
   ctx.restore();
   if(t>=6.65&&t<7.3){ const kk=easeOutBack(Math.min(1,(t-6.65)/0.25)); starburst(860,FLOOR-1000,kk*0.9,'NOPE.'); }
   if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,70,2.6);
   showBadge(52);
-  if(t<2.7) caption(['DAD CIRCLED DEC 19.','ONE STROKE.'],300,1,54);
+  if(t<2.7) caption(['DEC 19 IS BOOKED.','DAD STACKED THE CHAIRS ALREADY.'],300,1,46);
   if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG: THE 5TH','AND 12TH ARE SATURDAYS TOO.'],300,2.8,t,38);
   if(t>=5.0&&t<6.6) captionPop(['UNC WANTS IT HIGHER.'],300,5.0,t,52);
   if(t>=7.3&&t<7.6) captionPop(['ON LIL WOBBLES.'],300,7.3,t,52);
@@ -6261,12 +6263,12 @@ function ep52(t){
   if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
   if(t>=10.0&&t<12.9) captionPop(['LIL ADDED A STAR. PRINCESS','A CROWN. BABY A BIGGER ONE.'],300,10.0,t,38);
   if(t>=13.0&&t<14.9) captionPop(['...this is SO embarrassing.'],300,13.0,t,46);
-  if(t>=15.0&&t<19.5) captionPop(['THE CAT IS GUARDING','THE CALENDAR.'],300,15.0,t,50);
-  if(t>=19.6&&t<21.3) captionPop(['DEC 19.','LOCKED IN.'],300,19.6,t,58);
+  if(t>=15.0&&t<19.5) captionPop(['THE CAT IS GUARDING','THE CHAIRS.'],300,15.0,t,52);
+  if(t>=19.6&&t<21.3) captionPop(['10 TABLES. 60 CHAIRS.','DEC 19 IS LOCKED IN.'],300,19.6,t,48);
   if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
   if(t>=22.4&&t<23.45){ captionPop(['WHICH SATURDAY','IS YOURS?'],300,22.4,t,56); caption(['SEASON TWO RECORD: 7 W · 5 L'],1500,(t-22.4)/0.35,30); }
 }
-REELS[52]=ep52; SHAKES[52]=[6.6,0.2,8]; TAGLINES[52]='DEC 5 · 12 · 19. PICK YOUR SATURDAY.'; window.ENDTIMES[52]=23.5;
+REELS[52]=ep52; SHAKES[52]=[6.6,0.2,8]; TAGLINES[52]='DEC 5 · 12 · 19. WE BRING THE TABLES AND CHAIRS.'; window.ENDTIMES[52]=23.5;
 
 
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================

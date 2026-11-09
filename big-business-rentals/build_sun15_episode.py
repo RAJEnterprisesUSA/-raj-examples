@@ -1,7 +1,7 @@
 """Sunday Nov 15 EP. 52 The Calendar (reelsD REELS[52], 26s, full ensemble; record 7 W · 5 L). Pairs with the holiday flyer
-(Dec 5, 12, 19): Dad circles the 19th in one stroke, Mrs. Never Wrong circles the 5th and 12th (all Saturdays), Unc stands on
-Lil Wobbles to hang it higher (NOPE.), Tyler peeks out of the advent window on the 25th, the kids mark the 19th, Vaeh is
-embarrassed, the cat guards the calendar. WIN: Dec 19 locked in. Upgrade: advent-window reveal."""
+(Dec 5, 12, 19): Dad stacks the Dec 19 order (10 tables, 60 chairs) and books it on the calendar, Mrs. Never Wrong circles the 5th and 12th (all Saturdays), Unc stands on
+Lil Wobbles to hang it higher (NOPE.), Tyler pops up from behind the calendar, the kids mark the 19th, Vaeh is
+embarrassed, the cat guards the chair stack. WIN: Dec 19 locked in. Upgrade: pop-up from behind the calendar (no Christmas imagery)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent/'audio'))
 from render30 import render_reel, kit, bed, tone, noise, BASE

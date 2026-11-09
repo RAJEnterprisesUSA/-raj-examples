@@ -107,11 +107,11 @@ DAYS = {
                "#LasVegasHolidayParty #ChristmasParty #VegasEvents #PartyRentals #HolidayParty",
                F + "BB26_Holiday_Sun15.png", F + "BB26_Holiday_Sun15_Story.png"),
    episode=ep("fb_safe/BB_Chronicles_Ep52_TheCalendar.mp4",
-     "the big business chronicles ep. 52: dec 19. locked in. 📅" + H_EP,
-     "The Big Business Chronicles EP. 52: Dad circles Dec 19 in one stroke, Mrs. Never Wrong circles the 5th and 12th, and Tyler pops out of the 25th. Which Saturday is yours? 📅\n\n#thebigbusinesschronicles #seasontwo #holidayparty #lasvegas #comedy",
-     "The Big Business Chronicles EP. 52: where did he even come from? 📅\n\n#thebigbusinesschronicles #december #family #comedy",
-     "The Big Business Chronicles EP. 52: three Saturdays, one circled date and an intern in the advent calendar. Next episode tomorrow.\n\n#thebigbusinesschronicles #family #comedy",
-     "EP. 52: The Calendar 📅 dec 19 locked in #Shorts")),
+     "the big business chronicles ep. 52: 10 tables, 60 chairs. dec 19 is locked in. 🪑" + H_EP,
+     "The Big Business Chronicles EP. 52: Dad stacks the Dec 19 order before anyone asks, 10 tables and 60 chairs. Unc stands on Lil Wobbles, Tyler pops up from behind the calendar, and the cat guards the chairs. Which Saturday is yours? 🪑\n\n#thebigbusinesschronicles #seasontwo #holidayparty #lasvegas #comedy",
+     "The Big Business Chronicles EP. 52: the cat is guarding the chairs. 🪑\n\n#thebigbusinesschronicles #december #family #comedy",
+     "The Big Business Chronicles EP. 52: three Saturdays, one Dec 19 order of 10 tables and 60 chairs, and a cat guarding the stack. Next episode tomorrow.\n\n#thebigbusinesschronicles #family #comedy",
+     "EP. 52: The Calendar 🪑 60 chairs, locked in #Shorts")),
 }
 
 def post(inp, label):
