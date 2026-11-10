@@ -3462,3 +3462,9 @@ end-card tagline shortened to "NEW LEADERSHIP. SAME TABLES." (the long one ran o
 halloween/BB_Trend_TheGavelChangedHands_Readable.mp4; queue_remix_gavel_readable.py <dueAt> (same captions). Waiting on the
 owner: replace the fast posts or not (YouTube charter: never delete and re-upload a Short).
 RULE (from this feedback): every on-screen caption holds at least ~1.8 s (two-line captions ~2.2 s+); check hold times in QA.
+OWNER Nov 9 ~5:40pm: "Delete the queue / Delete the post for 5:34". Buffer deletePost refused all four ("Account is not allowed to
+perform this action on post"): the posts were already published (FB sent 5:34:09, TikTok sent 5:34:43, YouTube sent 5:34:02,
+Instagram still "sending"). Buffer cannot delete published posts; owner deletes them in each app:
+FB https://facebook.com/1086508827876259_122127865191304630 · TT https://tiktok.com/@rashad_abdulwali/video/7706350010664783117 ·
+YT https://www.youtube.com/watch?v=tVVimI93C5s · IG: newest reel on @bigbusiness_rentals_events once it finishes posting.
+Nothing else in the queue was touched (EP. 46 8pm and Tuesday's posts stay).
