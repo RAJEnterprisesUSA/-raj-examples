@@ -70,3 +70,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - EP. 52 The Calendar: true Dec 2026 calendar with an advent-window reveal.
 - GTT No. 4 Hot Cocoa: rising cocoa steam motion layer (was falling snow).
 - Fri Nov 13 carousel: drawn floor-plan diagrams on the layout slides.
+- T46 The New Majority: live on-screen vote tally board.

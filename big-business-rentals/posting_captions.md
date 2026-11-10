@@ -3421,3 +3421,19 @@ queue_week_nov09.py mon tue: 12/12 OK, PST -08:00.
 MON Nov 9: Price It Thanksgiving Hall 1pm FB feed + IG feed; EP. 46 The Crew Is Back 8pm FB/IG/TT/YT.
 TUE Nov 10: Labor Crew 1pm FB feed + IG Story; EP. 47 The Tent 8pm FB/IG/TT/YT.
 NOT queued: Mon 5pm remix. "It's Time" is pulled; its replacement "One table, five parties" is rendering and waits for its own approval.
+
+## TREND REMIX #22 "THE NEW MAJORITY" (CONTROVERSY lane, built Mon Nov 9 evening, waiting on approval + post time)
+Owner Nov 9 5:20pm: "I want one based of controversy" (after the One Table remix was offered for tonight). Searched Nov 9:
+the week's controversies were mostly unusable (a shooting abroad, a far-right march, espionage reports, named politicians);
+the usable one is the Nov 3 midterms: control of Congress changed hands (House flip widely reported; Senate reported but less
+settled, so the video only says "the majority flipped"). Built strictly NONPARTISAN like T40/T43: no parties, colors, names,
+results talk or opinions. Remix: the power shift happens at the family table. Kids win the table vote 4-3, pass their first bill
+(kids get the big table, Dad gets the tiny chair), Vaeh "...this is SO embarrassing.", Mrs. Never Wrong holds up NO, Tyler
+rises from behind the table and ties it 4-4, the cat breaks the tie. Payoff: "WHOEVER HAS THE MAJORITY, EVERYBODY GETS A SEAT."
+Lil Wobbles (red) left out so red never reads as a side. reelH REELS[46], GAGENDS 14.0, build_remix_newmajority.py ->
+halloween/BB_Trend_TheNewMajority.mp4 (17.2s). Queue: queue_remix_newmajority.py <approved dueAt>.
+UPGRADE: live vote tally board that updates on every beat. "One table, five parties" stays ready for another slot.
+FB: the majority flipped. at our house, the kids have the votes. 🪑 #lasvegas #family #animation #comedy #partyrentals
+IG: The majority flipped. At our house the kids have the votes, Dad got the tiny chair, and the cat broke the tie. Whoever has the majority, everybody still gets a seat. 🪑 #midterms #family #lasvegas #comedy #partyrentals
+TT: The majority flipped at our house. 🪑 #midterms #family #kids #comedy
+YT: "The majority flipped. Who runs the table now? 🪑 #Shorts" / The kids have the votes, Dad gets the tiny chair, and the cat breaks the tie. #comedy #family #partyrentals
