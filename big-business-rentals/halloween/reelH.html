@@ -5645,6 +5645,17 @@ SHAKES[47]=[10.7,0.15,5];
 TAGLINES[47]='NEW LEADERSHIP. SAME TABLES. WE SET THE ROOM.';
 window.GAGENDS[47]=14.0;
 
+// ---------- T48: "The Gavel Changed Hands" READABLE CUT (owner Nov 9: "That's moving to fast for anyone to read the captions") ----------
+// Same scene as T47, re-timed so every caption holds 1.8 to 3.0 s (was as short as 0.8 s). Piecewise time map: real time -> T47 story time.
+const MAP48=[[0,0],[2.6,2.4],[5.2,4.4],[7.4,5.6],[9.4,6.6],[11.8,7.8],[13.6,8.6],[15.4,9.6],[17.2,10.6],[19.4,12.2],[22.4,14.0]];
+function storyT48(T){ for(let i=1;i<MAP48.length;i++){ const [a0,s0]=MAP48[i-1],[a1,s1]=MAP48[i]; if(T<=a1) return s0+(s1-s0)*(T-a0)/(a1-a0); } return 14.0; }
+function reelT48(T){ reelT47(storyT48(T)); }
+REELS[48]=reelT48;
+SHAKES[48]=[17.3,0.15,5];
+TAGLINES[48]='NEW LEADERSHIP. SAME TABLES.';
+window.GAGENDS[48]=22.4;
+
+
 
 
 </script>

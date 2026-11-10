@@ -3455,3 +3455,10 @@ TT: The head of the table is under new leadership. 🪑 #newleadership #seatingc
 YT: "435 chairs. New seating chart. 🪑 #Shorts" / The gavel changed hands, everybody switched sides of the aisle, and the cat took the big chair. #comedy #family #partyrentals
 
 QUEUED Mon Nov 9 (owner: "Post it now"): "The Gavel Changed Hands" 4/4 OK at 2026-11-09T17:34:00-08:00 (5 minutes out), FB reel + IG reel + TikTok + YouTube.
+OWNER Nov 9 5:30pm: "That's moving to fast for anyone to read the captions". Tried to pull the 4 scheduled posts before 5:34;
+the delete was blocked pending the owner's explicit OK, so the fast cut went out at 5:34 as scheduled. Built the READABLE CUT:
+reelH REELS[48] (T47 re-timed with a piecewise time map so every caption holds 1.8 to 3.0 s; action to 22.4 s, 25.6 s total),
+end-card tagline shortened to "NEW LEADERSHIP. SAME TABLES." (the long one ran off both edges). build_remix_gavel_readable.py ->
+halloween/BB_Trend_TheGavelChangedHands_Readable.mp4; queue_remix_gavel_readable.py <dueAt> (same captions). Waiting on the
+owner: replace the fast posts or not (YouTube charter: never delete and re-upload a Short).
+RULE (from this feedback): every on-screen caption holds at least ~1.8 s (two-line captions ~2.2 s+); check hold times in QA.
