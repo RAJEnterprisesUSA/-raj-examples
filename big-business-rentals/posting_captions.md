@@ -3453,3 +3453,5 @@ FB: the head of the table is under new leadership. 435 chairs, everybody switch 
 IG: 435 chairs. New seating chart. The head of the table is under new leadership, everybody switched sides of the aisle, and the cat took the big chair. The seats didn't change, who sits in them did. 🪑 #newleadership #seatingchart #family #lasvegas #comedy
 TT: The head of the table is under new leadership. 🪑 #newleadership #seatingchart #family #comedy
 YT: "435 chairs. New seating chart. 🪑 #Shorts" / The gavel changed hands, everybody switched sides of the aisle, and the cat took the big chair. #comedy #family #partyrentals
+
+QUEUED Mon Nov 9 (owner: "Post it now"): "The Gavel Changed Hands" 4/4 OK at 2026-11-09T17:34:00-08:00 (5 minutes out), FB reel + IG reel + TikTok + YouTube.
