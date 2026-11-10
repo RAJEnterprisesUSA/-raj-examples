@@ -3437,3 +3437,19 @@ FB: the majority flipped. at our house, the kids have the votes. 🪑 #lasvegas 
 IG: The majority flipped. At our house the kids have the votes, Dad got the tiny chair, and the cat broke the tie. Whoever has the majority, everybody still gets a seat. 🪑 #midterms #family #lasvegas #comedy #partyrentals
 TT: The majority flipped at our house. 🪑 #midterms #family #kids #comedy
 YT: "The majority flipped. Who runs the table now? 🪑 #Shorts" / The kids have the votes, Dad gets the tiny chair, and the cat breaks the tie. #comedy #family #partyrentals
+
+## TREND REMIX #23 "THE GAVEL CHANGED HANDS" (CONTROVERSY lane, built Mon Nov 9 evening, waiting on approval + post time)
+Owner asked for ideas where "it has to almost be obvious it's about the congress flip without stating the obvious"; six pitched
+(435 Chairs, The Gavel Changed Hands, Moving Day Jan. 3, Across the Aisle, New Member Orientation, Both Chambers); owner:
+"I like 2" then "Can you combine 1 and 2?". Built from the tells only: 435 chairs in a chamber half-circle with a center aisle,
+a gavel on the head table that crosses the aisle ("THE HEAD OF THE TABLE IS UNDER NEW LEADERSHIP."), "EVERYBODY SWITCH SIDES OF
+THE AISLE." (Unc goes the wrong way), Mrs. Never Wrong reads the new seating chart, Vaeh "...this is SO embarrassing.", Tyler
+"...im the new intern.", Baby found the gavel (BANG), the cat takes the big gold chair. Payoff: "THE SEATS DIDN'T CHANGE. WHO SITS
+IN THEM DID." End card tagline: "NEW LEADERSHIP. SAME TABLES. WE SET THE ROOM." Strictly nonpartisan: no parties, red/blue, names,
+results or opinions; captions never say Congress or midterms either. Lil Wobbles (red) left out. reelH REELS[47], GAGENDS 14.0,
+build_remix_gavel.py -> halloween/BB_Trend_TheGavelChangedHands.mp4 (17.2s); queue_remix_gavel.py <approved dueAt>.
+Supersedes "The New Majority" (#22, kept on file, not queued). UPGRADE: 435-chair chamber set + live seat counter.
+FB: the head of the table is under new leadership. 435 chairs, everybody switch sides. 🪑 #lasvegas #family #animation #comedy #partyrentals
+IG: 435 chairs. New seating chart. The head of the table is under new leadership, everybody switched sides of the aisle, and the cat took the big chair. The seats didn't change, who sits in them did. 🪑 #newleadership #seatingchart #family #lasvegas #comedy
+TT: The head of the table is under new leadership. 🪑 #newleadership #seatingchart #family #comedy
+YT: "435 chairs. New seating chart. 🪑 #Shorts" / The gavel changed hands, everybody switched sides of the aisle, and the cat took the big chair. #comedy #family #partyrentals

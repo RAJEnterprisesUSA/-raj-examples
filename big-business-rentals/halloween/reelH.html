@@ -5566,6 +5566,86 @@ SHAKES[46]=[10.8,0.15,6];
 TAGLINES[46]='MAJORITIES CHANGE. EVERYBODY STILL NEEDS A SEAT.';
 window.GAGENDS[46]=14.0;
 
+// ---------- T47: TREND REMIX · "The Gavel Changed Hands" (17.2s), CONTROVERSY lane (owner Nov 9 picked ideas 1 + 2 combined) ----------
+// Topic: control of Congress changed hands (Nov 3 2026 midterms). The tells do the talking, never the words: 435 chairs set in a
+// chamber half-circle with a center aisle, a gavel on the head table, "the head of the table is under new leadership", everybody
+// switches sides of the aisle. STRICTLY NONPARTISAN: no parties, red/blue, names, results or opinions; both sides identical.
+// Lil Wobbles (red) left out so red never reads as a side. Payoff: the seats didn't change, who sits in them did. We set the room.
+const DAIS47={x:540,y:770};
+function gavelT47(x,y,rot,s){ ctx.save(); ctx.translate(x,y); ctx.rotate(rot||0); ctx.scale(s||1,s||1); ctx.lineWidth=5; ctx.strokeStyle=INK;
+  ctx.fillStyle='#8a5a3a'; rr(-6,-6,70,12,5); ctx.fill(); ctx.stroke(); rr(-30,-22,36,44,8); ctx.fillStyle='#6a3e22'; ctx.fill(); ctx.stroke(); ctx.restore(); }
+function chamberT47(t,k){
+  // chairs in three half-circle rows facing the dais, center aisle left open
+  let n=0; const tot=Math.floor(k*72);
+  for(let r=0;r<3;r++){ const rx=250+r*130, ry=70+r*48, m=9+r*3;
+    for(const side of [-1,1]) for(let i=0;i<m;i++){ const a=(8+i*(78/(m-1)))*Math.PI/180; if(n++>=tot) continue;
+      const x=DAIS47.x+side*Math.cos(Math.PI/2-a)*0+side*Math.sin(a)*rx, y=DAIS47.y+40+Math.cos(a)*0+Math.abs(Math.sin(a))*0+ry*Math.cos(a)*0.0+ry*(1-Math.cos(a))*0+ry*Math.cos(a-Math.PI/2)*0+ry*Math.sin(Math.PI/2- a)*0+ry*(Math.cos(a))*1.0;
+      drawMiniChair(x, y, 0.3); } }
+  // aisle runner
+  ctx.save(); ctx.fillStyle='rgba(251,246,234,.18)'; ctx.fillRect(DAIS47.x-22,DAIS47.y+30,44,260); ctx.restore();
+}
+function daisT47(t,gx,gy,grot){
+  ctx.save(); ctx.fillStyle='#6a4a2c'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(DAIS47.x-200,DAIS47.y-6,400,30,8); ctx.fill(); ctx.stroke(); ctx.restore();
+  ctx.save(); ctx.translate(DAIS47.x,DAIS47.y); ctx.scale(0.42,0.42); ctx.translate(-DAIS47.x,-FLOOR); drawChair(DAIS47.x,0,0,0,{a:GOLD,b:GOLD2,c:'#f2d27a'}); ctx.restore();
+  ctx.save(); ctx.translate(DAIS47.x,DAIS47.y); ctx.scale(0.5,0.4); ctx.translate(-DAIS47.x,-FLOOR); drawTable(DAIS47.x,0,0); ctx.restore();
+  if(gx!==null) gavelT47(gx,gy,grot,0.9);
+}
+function reelT47(t){
+  const kL=KIDSCALE.lil*0.8, kB=KIDSCALE.baby*0.8, kP=KIDSCALE.princess*0.8, kV=KIDSCALE.vaeh*0.8, AS=0.62;
+  roomS2(t);
+  // 435 chairs, already mostly set at frame one (competence)
+  chamberT47(t, Math.min(1, 0.7+t/2.0));
+  // gavel: on the head table, then it changes hands across the aisle (2.4-4.4), then Baby has it (10.6+)
+  const top=DAIS47.y-100; let gx=DAIS47.x-90, gy=top, grot=0;
+  if(t>=2.6&&t<3.6){ const k=ease((t-2.6)/1.0); gx=lerp(DAIS47.x-90,DAIS47.x+90,k); gy=top-Math.sin(k*Math.PI)*120; grot=k*Math.PI*2; }
+  else if(t>=3.6) gx=DAIS47.x+90;
+  daisT47(t, (t<10.6)?gx:null, gy, grot);
+  if(t>=2.4&&t<4.4){ ctx.save(); ctx.globalAlpha=0.22; ctx.fillStyle='#fff6c8'; ctx.beginPath(); ctx.moveTo(DAIS47.x-40,0); ctx.lineTo(DAIS47.x+40,0); ctx.lineTo(DAIS47.x+180,DAIS47.y); ctx.lineTo(DAIS47.x-180,DAIS47.y); ctx.closePath(); ctx.fill(); ctx.restore(); }
+  // THE CAT takes the big chair at the end
+  if(t>=12.2){ const k=Math.min(1,(t-12.2)/0.7); drawCat(lerp(1250,DAIS47.x,ease(k)), (k<1)?FLOOR:DAIS47.y-92, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:(k<1)?0.7:0.5}); }
+  // foreground: everybody switches sides of the aisle at 4.4 (Unc goes the wrong way)
+  const sw=(t>=4.4)?ease(Math.min(1,(t-4.4)/1.2)):0;
+  const L=(a,b)=>lerp(a,b,sw);
+  // Dad, the host, center
+  kidWithProp({x:540, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t<1.6||t>=12.2)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(t<1.6||t>=12.2)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  // left side team -> right
+  kidWithProp({x:L(230,860), face:(sw>0&&sw<1)?1:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t>=6.6&&t<7.8)?{sh:95,el:-4}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS,
+    (t>=6.6&&t<7.8)?(px=>{ ctx.save(); ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=7; rr(px+70,HIP_STAND-330,150,190,10); ctx.fill(); ctx.stroke(); ctx.fillStyle=INK; for(let i=0;i<5;i++) ctx.fillRect(px+92,HIP_STAND-300+i*30,100,8); ctx.restore(); }):null);
+  kidWithProp({x:L(70,700), face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  kidWithProp({x:L(360,960), face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(L(360,960), kidHeadY(kP)+8, kP*1.3);
+  // right side team -> left
+  const bx=L(760,330), bang=(t>=10.6&&t<12.2);
+  kidWithProp({x:bx, face:-1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:bang?{sh:150+Math.sin(t*22)*25,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLEBB}, kB);
+  if(bang){ const bh=kidHeadY(kB); gavelT47(bx-30, bh-30+Math.sin(t*22)*14, -0.6+Math.sin(t*22)*0.5, 0.9);
+    if(Math.sin(t*22)>0.6){ ctx.save(); ctx.font='34px "Archivo Black"'; ctx.textAlign='center'; ctx.fillStyle=GOLD; ctx.fillText('BANG',bx-40,bh-90); ctx.restore(); } }
+  kidWithProp({x:L(1020,160), face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:'flat', style:STYLEVAEH}, kV);
+  headphonesK(L(1020,160), kidHeadY(kV), kV, -1); phoneK(L(1020,160)-52*kV, FLOOR-470*kV, kV, true);
+  // UNC: walks the wrong way (off right), comes back in from the left
+  const ux=(t<4.4)?900:(t<5.8)?lerp(900,1300,ease((t-4.4)/1.2)):(t<6.4)?-300:lerp(-300,60,ease(Math.min(1,(t-6.4)/0.8)));
+  kidWithProp({x:ux, face:(t>=4.4&&t<5.8)?1:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS);
+  // TYLER pops up front and center
+  if(t>=8.6){ const k=easeOutBack(Math.min(1,(t-8.6)/0.3)); kidWithProp({x:640, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t<9.6)?{sh:150,el:-20}:{sh:60,el:24}, mouth:(t>=9.6)?'flat':'smile', style:STYLET}, AS*0.95*k); }
+  // 435 counter chip
+  ctx.save(); ctx.font='600 34px Oswald'; ctx.textAlign='center'; ctx.fillStyle=GOLD; ctx.fillText(Math.min(435,Math.floor(lerp(380,435,Math.min(1,t/1.6))))+' CHAIRS',540,470); ctx.restore();
+  if(t>=12.3) confettiBurst(t,12.3,540,FLOOR-600,50,2.0);
+  // captions: hook on screen at frame one
+  if(t<2.4) caption(['435 CHAIRS.','NEW SEATING CHART.'],300,1,58);
+  else if(t<4.4) captionPop(['THE HEAD OF THE TABLE IS','UNDER NEW LEADERSHIP.'],300,2.45,t,44);
+  else if(t<5.6) captionPop(['EVERYBODY SWITCH','SIDES OF THE AISLE.'],300,4.45,t,50);
+  else if(t<6.6) captionPop(['UNC WENT','THE WRONG WAY.'],300,5.6,t,54);
+  else if(t<7.8) captionPop(['MRS. NEVER WRONG READS','THE NEW SEATING CHART.'],300,6.65,t,44);
+  else if(t<8.6) captionPop(['...this is SO embarrassing.'],300,7.8,t,46);
+  else if(t<9.6) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,8.65,t,50);
+  else if(t<10.6) captionPop(['...im the new intern.'],300,9.6,t,48);
+  else if(t<12.2) captionPop(['BABY FOUND','THE GAVEL.'],300,10.65,t,56);
+  else captionPop(['THE SEATS DIDN\'T CHANGE.','WHO SITS IN THEM DID.'],300,12.25,t,46);
+}
+REELS[47]=reelT47;
+SHAKES[47]=[10.7,0.15,5];
+TAGLINES[47]='NEW LEADERSHIP. SAME TABLES. WE SET THE ROOM.';
+window.GAGENDS[47]=14.0;
+
+
 
 </script>
 </body></html>

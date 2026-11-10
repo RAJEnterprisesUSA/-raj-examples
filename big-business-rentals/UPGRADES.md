@@ -71,3 +71,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - GTT No. 4 Hot Cocoa: rising cocoa steam motion layer (was falling snow).
 - Fri Nov 13 carousel: drawn floor-plan diagrams on the layout slides.
 - T46 The New Majority: live on-screen vote tally board.
+- T47 The Gavel Changed Hands: 435-chair chamber set (half-circle rows, center aisle, gold head chair) + live seat counter.
