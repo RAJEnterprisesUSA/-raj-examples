@@ -3468,3 +3468,19 @@ Instagram still "sending"). Buffer cannot delete published posts; owner deletes 
 FB https://facebook.com/1086508827876259_122127865191304630 · TT https://tiktok.com/@rashad_abdulwali/video/7706350010664783117 ·
 YT https://www.youtube.com/watch?v=tVVimI93C5s · IG: newest reel on @bigbusiness_rentals_events once it finishes posting.
 Nothing else in the queue was touched (EP. 46 8pm and Tuesday's posts stay).
+
+## TUE NOV 10 · NO 5PM REMIX WENT OUT (two finished remixes were waiting on the owner's pick; the nightly build held)
+## TREND REMIX #24 "WE LET THE AI PLAN THE PARTY" (CONTROVERSY lane, built Tue Nov 10 ~6:40pm, waiting on approval)
+Owner 6:35pm: "Let's post a remix for tonight. Whats controversial right now today". Searched Nov 10: today's controversies were a
+tech CEO affair/spy probe, an impeachment push, a monument lawsuit and a fraternity hazing case (all off-limits: named people,
+politics, lawsuits, harm) plus the usable one: backlash over a new AI app that reads your camera roll to help "run your family"
+(critics: outsourcing parenting to AI; The Week, Nov 10 2026). No app, company or founder named. Remix: the AI plans the family
+party, scans the photos (Vaeh "...this is SO embarrassing."), orders ONE chair for nine (it is Lil Wobbles, NOPE.), Mrs. Never Wrong
+holds up 9, Tyler "...im the new intern.", the AI seats the cat at the head of the table, Unc and the crew bring nine chairs.
+Payoff: "AI CAN PLAN THE PARTY. IT CAN'T CARRY THE CHAIRS." End card: "AI PLANS. WE DELIVER." reelH REELS[49], GAGENDS 21.0,
+24.2s, every caption holds >= 1.8 s. build_remix_aiplanner.py -> halloween/BB_Trend_AIPlansTheParty.mp4; queue_remix_aiplanner.py <dueAt>.
+UPGRADE: AI planner panel with a live scan bar + readable caption holds.
+FB: an ai to help run your family? we let it plan the party. it ordered one chair for nine. 🪑 #lasvegas #ai #family #comedy #partyrentals
+IG: An AI to help run your family? We let it plan the party. It scanned the photos, ordered one chair for nine guests, and seated the cat at the head of the table. AI can plan the party. It can't carry the chairs. 🪑 #ai #family #lasvegas #comedy #partyrentals
+TT: We let the AI plan the party. 🪑 #ai #aiapp #family #comedy
+YT: "We let the AI plan the party. 🪑 #Shorts" / It ordered one chair for nine guests and seated the cat at the head of the table. #ai #comedy #partyrentals
