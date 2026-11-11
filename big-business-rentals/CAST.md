@@ -98,3 +98,8 @@ Fallback if ElevenLabs is down: Piper TTS per CLAUDE.md (ryan-high / amy-low / d
 - Hidden pumpkin in every episode (tell the audience once, let them hunt)
 - End cards: episode question to the audience + credit fan ideas by @name in later episodes
 - Reply to comments as Mr. Big Business sometimes
+
+## SPEECH CLOUDS (owner Nov 10)
+Character dialogue appears in a cloud above the speaker's head (speakCloud helper in reelsD.html and halloween/reelH.html);
+narration stays as top captions. Running lines that are always clouds: Vaeh "...this is SO embarrassing.", whoever asks
+"WHERE DID YOU EVEN COME FROM?", Tyler "...im the new intern.". Every caption or cloud holds at least ~1.8 s.

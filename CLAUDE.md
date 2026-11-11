@@ -355,6 +355,13 @@ calendars, Santa or Christmas-party scenes in remixes or episodes (the "It's Tim
 on the booking: tables, chairs, tents, setup, real Saturday dates. The Dec 19 party is "the family holiday party".
 BUSINESS ON SCREEN (owner Nov 8 check, "is ep 52 pertaining to the business."): every episode's competence beat AND payoff must
 show tables, chairs, tents, linens or setup on screen, not just a date or a prop.
+SPEECH CLOUDS (owner Nov 10: "if it's a character speaking it should pop up as caption above there head in an almost cloud thought
+like, so the viewers know exactly who's talking. General captions, can continue as normal."): every line a CHARACTER says (Vaeh's
+"...this is SO embarrassing.", "WHERE DID YOU EVEN COME FROM?", Tyler's "...im the new intern.", interview answers) renders with
+speakCloud(x, headY, lines, t0, t, size, maxBottom) in reelsD.html / halloween/reelH.html: a scalloped white cloud above the
+speaker's head with a two-bubble trail. Narration and the hook stay as top captions (caption/captionPop). When two speakers talk
+back to back, both clouds may stay up together (stack them with maxBottom). READABILITY (owner Nov 9: "That's moving to fast for
+anyone to read the captions"): every caption or cloud holds at least ~1.8 s (two lines ~2.2 s+); check hold times in QA.
 
 ## DAILY CAROUSEL SYSTEM (owner directive Oct 5, REPLACES single static cards for tip, business,
 ## referral and countdown posts; videos and pre-built sets keep their formats)

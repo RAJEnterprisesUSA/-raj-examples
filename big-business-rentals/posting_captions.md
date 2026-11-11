@@ -3499,3 +3499,14 @@ FB: answer in one word: who runs this family? 🪑 #lasvegas #family #animation 
 IG: Answer in one word. Who runs this family? How does Unc carry a table? Who brings the tables and chairs? 🪑 #answerinoneword #family #lasvegas #comedy #partyrentals
 TT: Answer in one word: who runs this family? 🪑 #answerinoneword #oneword #family #comedy
 YT: "Answer in one word: who runs this family? 🪑 #Shorts" / The whole cast gets one word each. Dad's answer: us. #answerinoneword #comedy #family
+
+## RULE CHANGE Tue Nov 10 night (owner: "When making the captions, if it's a character speaking it should pop up as caption above
+## there head in an almost cloud thought like, so the viewers know exactly who's talking. General captions, can continue as normal.")
+Added speakCloud() to reelsD.html and halloween/reelH.html (scalloped white cloud + two-bubble trail to the speaker's head,
+frame-clamped, pops in over 0.2 s, optional maxBottom to stack two speakers). Applied before anything posts:
+- Wed remix "Answer in One Word": Lil's questions float in his cloud (higher, trail down to him), each one-word answer in a cloud
+  over the speaker; "ANSWER IN ONE WORD" stays as the top caption (format chip removed). Re-rendered.
+- EP. 48-52: "WHERE DID YOU EVEN COME FROM?" is Dad's cloud (7.6-9.9 s, stacked high), "...im the new intern." is Tyler's cloud
+  (8.8-10.9 s, so the exchange reads as a conversation and each line now holds 2+ s), Vaeh's line is her cloud (2.2 s). Narration
+  captions unchanged. Re-rendered (same file names).
+Already posted (not changed): EP. 46, EP. 47 (8pm tonight), the Gavel and AI remixes.

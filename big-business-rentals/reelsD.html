@@ -4427,6 +4427,29 @@ window.ENDTIMES[35]=23.5;
 
 // ---------- UPGRADE Oct 27: word-by-word pop captions (native TikTok/Reels look) ----------
 // Each word scales in 0.07s after the last; the newest word flashes gold, then turns white.
+// ---- SPEECH CLOUD (owner Nov 10: "if it's a character speaking it should pop up as caption above there head in an almost cloud
+// thought like, so the viewers know exactly who's talking. General captions can continue as normal.") ----
+// speakCloud(x, headY, lines, t0, t, size): a scalloped cloud above the speaker's head with a two-bubble trail down to the head.
+// Clamped inside the frame and below the top caption band; pops in over 0.2 s.
+function speakCloud(x, headY, lines, t0, t, size, maxBottom){
+  if(window.NOCAP) return; const el=t-t0; if(el<0) return;
+  const s=size||40; ctx.save(); ctx.font=s+'px "Archivo Black"';
+  const tw=Math.max(...lines.map(l=>ctx.measureText(l).width)), w=tw+70, h=lines.length*s*1.2+44;
+  let cx=Math.max(w/2+30, Math.min(W-w/2-30, x)); let by=Math.min(headY-70, maxBottom||1e9); let ty=by-h; const minTop=430;
+  if(ty<minTop){ ty=minTop; by=ty+h; }
+  const k=easeOutBack(Math.min(1,el/0.2)); ctx.translate(cx,(ty+by)/2); ctx.scale(k,k); ctx.translate(-cx,-(ty+by)/2);
+  const r=Math.min(30,h*0.32), pts=[];
+  for(let xx=cx-w/2+r; xx<=cx+w/2-r+1; xx+=r*1.25){ pts.push([xx,ty+r*0.55]); pts.push([xx,by-r*0.55]); }
+  for(let yy=ty+r; yy<=by-r+1; yy+=r*1.25){ pts.push([cx-w/2+r*0.55,yy]); pts.push([cx+w/2-r*0.55,yy]); }
+  const tail=[[x+(cx-x)*0.25, by+(headY-by)*0.45, 12],[x+(cx-x)*0.1, by+(headY-by)*0.75, 7]];
+  ctx.fillStyle=INK; pts.forEach(([a,b])=>{ ctx.beginPath(); ctx.arc(a,b,r+6,0,7); ctx.fill(); }); ctx.fillRect(cx-w/2+r*0.5,ty+r*0.5,w-r,h-r);
+  tail.forEach(([a,b,rr2])=>{ ctx.beginPath(); ctx.arc(a,b,rr2+5,0,7); ctx.fill(); });
+  ctx.fillStyle='#fff'; pts.forEach(([a,b])=>{ ctx.beginPath(); ctx.arc(a,b,r,0,7); ctx.fill(); }); ctx.fillRect(cx-w/2+r*0.5,ty+r*0.5,w-r,h-r);
+  tail.forEach(([a,b,rr2])=>{ ctx.beginPath(); ctx.arc(a,b,rr2,0,7); ctx.fill(); });
+  ctx.fillStyle=INK; ctx.textAlign='center'; ctx.textBaseline='middle';
+  lines.forEach((l,i)=>ctx.fillText(l,cx,(ty+by)/2+(i-(lines.length-1)/2)*s*1.2));
+  ctx.restore(); }
+
 function captionPop(lines, y, t0, t, size){
   if(window.NOCAP) return;
   const s=size||60; const el=t-t0; if(el<0) return;
@@ -5955,8 +5978,8 @@ function ep48(t){
   if(t<2.7) caption(['DEC 19 GETS A','COCOA BAR. SET IN SECONDS.'],300,1,46);
   if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','GIVES IT A 10.'],300,2.8,t,50);
   if(t>=5.0&&t<7.5) captionPop(['UNC FILLED THE MARSHMALLOW','JAR WITH CHAIRS.'],300,5.0,t,42);
-  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
-  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=7.6&&t<9.9) speakCloud(560, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(740, kidHeadY(0.78), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
   if(t>=10.0&&t<12.4) captionPop(['LIL GOT A WHIPPED CREAM BEARD.','BABY GOT A BIGGER ONE.'],300,10.0,t,38);
   if(t>=12.5&&t<14.9) captionPop(['WHO PUT THE POT','ON LIL WOBBLES?'],300,12.5,t,50);
   if(t>=17.0&&t<19.5) captionPop(['PRINCESS CROWNED THE MUG.','THE CAT CHOSE THE BOX.'],300,17.0,t,40);
@@ -6039,11 +6062,11 @@ function ep49(t){
   if(t<2.7) caption(['THE CATERER BRINGS THE FOOD.','DAD BUILDS THE BUFFET LINE.'],300,1,40);
   if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','LABELED EVERY DISH.'],300,2.8,t,50);
   if(t>=5.0&&t<7.5) captionPop(['UNC PUT A CHAIR','IN THE BUFFET LINE.'],300,5.0,t,50);
-  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
-  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=7.6&&t<9.9) speakCloud(560, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(880, kidHeadY(0.78*0.92), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
   if(t>=10.0&&t<12.4) captionPop(['LIL WAS FIRST IN LINE.','BABY CUT HIM.'],300,10.0,t,50);
   if(t>=12.5&&t<14.5) captionPop(['LIL WOBBLES WANTS TO BE','A SERVING TABLE.'],300,12.5,t,42);
-  if(t>=15.4&&t<16.9) captionPop(['...this is SO embarrassing.'],300,15.4,t,46);
+  if(t>=15.4&&t<17.6) speakCloud(1040, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 15.4, t, 40);   // Vaeh
   if(t>=17.0&&t<19.5) captionPop(['THE CAT IS FIRST IN LINE.','(IT EATS CAT FOOD.)'],300,17.0,t,44);
   if(t>=19.6&&t<21.3) captionPop(['DAD BUILT THE LINE.','DAD IS LAST IN IT.'],300,19.6,t,52);
   if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
@@ -6121,11 +6144,11 @@ function ep50(t){
   if(t>=2.8&&t<4.4) captionPop(['MRS. NEVER WRONG MOVED','ONE TABLE ONE INCH.'],300,2.8,t,44);
   if(t>=4.4&&t<4.95) captionPop(['(IT BLOCKED THE DOOR.)'],300,4.4,t,46);
   if(t>=5.0&&t<7.5) captionPop(['UNC IS READING IT','UPSIDE DOWN.'],300,5.0,t,52);
-  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
-  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=7.6&&t<9.9) speakCloud(330, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(920, kidHeadY(0.78*0.9), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
   if(t>=10.0&&t<12.4) captionPop(['PRINCESS DREW A THRONE.','BABY DREW A BIGGER ONE.'],300,10.0,t,44);
   if(t>=12.5&&t<14.0) captionPop(['WHO DREW','LIL WOBBLES IN?'],300,12.5,t,52);
-  if(t>=15.4&&t<16.9) captionPop(['...this is SO embarrassing.'],300,15.4,t,46);
+  if(t>=15.4&&t<17.6) speakCloud(1030, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 15.4, t, 40);   // Vaeh
   if(t>=17.0&&t<19.5) captionPop(['THE CAT','APPROVED IT.'],300,17.0,t,56);
   if(t>=19.6&&t<21.3) captionPop(['ROWS. ROUNDS. U-SHAPE.','DEC 19 IS PLANNED.'],300,19.6,t,44);
   if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
@@ -6186,10 +6209,10 @@ function ep51(t){
   if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG','COUNTED EVERY SEAT.'],300,2.8,t,50);
   if(t>=5.0&&t<6.6) captionPop(['UNC SAT AT','THE KIDS\' TABLE.'],300,5.0,t,52);
   if(t>=7.3&&t<7.6) captionPop(['ON LIL WOBBLES.'],300,7.3,t,52);
-  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
-  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=7.6&&t<9.9) speakCloud(330, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(760, (FLOOR-250), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
   if(t>=10.0&&t<11.2) captionPop(['VAEH WILL NOT SIT','AT THE KIDS\' TABLE.'],300,10.0,t,46);
-  if(t>=11.2&&t<12.9) captionPop(['...this is SO embarrassing.'],300,11.2,t,46);
+  if(t>=11.2&&t<13.4) speakCloud(1040, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 11.2, t, 40);   // Vaeh
   if(t>=13.0&&t<15.9) captionPop(['BABY MOVED HIMSELF','TO THE BIG TABLE.'],300,13.0,t,46);
   if(t>=16.0&&t<19.5) captionPop(['THE CAT TOOK','THE HEAD OF THE TABLE.'],300,16.0,t,48);
   if(t>=19.6&&t<21.3) captionPop(['EVERYBODY HAS A SEAT.','DAD GOT THE KIDS\' TABLE.'],300,19.6,t,42);
@@ -6259,10 +6282,10 @@ function ep52(t){
   if(t>=2.8&&t<4.9) captionPop(['MRS. NEVER WRONG: THE 5TH','AND 12TH ARE SATURDAYS TOO.'],300,2.8,t,38);
   if(t>=5.0&&t<6.6) captionPop(['UNC WANTS IT HIGHER.'],300,5.0,t,52);
   if(t>=7.3&&t<7.6) captionPop(['ON LIL WOBBLES.'],300,7.3,t,52);
-  if(t>=7.6&&t<8.7) captionPop(['WHERE DID YOU','EVEN COME FROM?'],300,7.6,t,50);
-  if(t>=8.8&&t<9.9) captionPop(['...im the new intern.'],300,8.8,t,48);
+  if(t>=7.6&&t<9.9) speakCloud(220, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(780, (kidHeadY(0.7)-690), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
   if(t>=10.0&&t<12.9) captionPop(['LIL ADDED A STAR. PRINCESS','A CROWN. BABY A BIGGER ONE.'],300,10.0,t,38);
-  if(t>=13.0&&t<14.9) captionPop(['...this is SO embarrassing.'],300,13.0,t,46);
+  if(t>=13.0&&t<15.2) speakCloud(1030, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 13.0, t, 40);   // Vaeh
   if(t>=15.0&&t<19.5) captionPop(['THE CAT IS GUARDING','THE CHAIRS.'],300,15.0,t,52);
   if(t>=19.6&&t<21.3) captionPop(['10 TABLES. 60 CHAIRS.','DEC 19 IS LOCKED IN.'],300,19.6,t,48);
   if(t>=21.4&&t<22.3) captionPop(['SEE YOU','TOMORROW.'],300,21.4,t,56);
