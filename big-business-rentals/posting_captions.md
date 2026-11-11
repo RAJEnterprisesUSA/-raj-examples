@@ -3484,3 +3484,4 @@ FB: an ai to help run your family? we let it plan the party. it ordered one chai
 IG: An AI to help run your family? We let it plan the party. It scanned the photos, ordered one chair for nine guests, and seated the cat at the head of the table. AI can plan the party. It can't carry the chairs. 🪑 #ai #family #lasvegas #comedy #partyrentals
 TT: We let the AI plan the party. 🪑 #ai #aiapp #family #comedy
 YT: "We let the AI plan the party. 🪑 #Shorts" / It ordered one chair for nine guests and seated the cat at the head of the table. #ai #comedy #partyrentals
+QUEUED Tue Nov 10 (owner: "Post it now"): "We Let the AI Plan the Party" 4/4 OK at 2026-11-10T18:44:00-08:00, FB reel + IG reel + TikTok + YouTube.
