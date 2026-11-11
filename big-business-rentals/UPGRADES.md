@@ -73,3 +73,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - T46 The New Majority: live on-screen vote tally board.
 - T47 The Gavel Changed Hands: 435-chair chamber set (half-circle rows, center aisle, gold head chair) + live seat counter.
 - T49 We Let the AI Plan the Party: on-screen AI planner panel with live scan bar; every caption held >= 1.8 s.
+- T50 Answer in One Word: per-answer spotlight, speech bubbles that auto-fit the frame, format chip.

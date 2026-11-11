@@ -3485,3 +3485,17 @@ IG: An AI to help run your family? We let it plan the party. It scanned the phot
 TT: We let the AI plan the party. 🪑 #ai #aiapp #family #comedy
 YT: "We let the AI plan the party. 🪑 #Shorts" / It ordered one chair for nine guests and seated the cat at the head of the table. #ai #comedy #partyrentals
 QUEUED Tue Nov 10 (owner: "Post it now"): "We Let the AI Plan the Party" 4/4 OK at 2026-11-10T18:44:00-08:00, FB reel + IG reel + TikTok + YouTube.
+
+## WEDNESDAY NOV 11 · TREND REMIX #25 "ANSWER IN ONE WORD" (5pm, fresh build Tue Nov 10 night, waiting on approval)
+Owner Tue 6:50pm: "Build a fresh wed remix". Search Nov 10: news pool had a California launch-count record (72nd launch of 2026,
+more than all of 2025); social pool had TikTok's "Answer in One Word" format (questions answered with one word only; trackers,
+week of Nov 10). Picked the SOCIAL format (cast-friendly, one-word answers are readable). Lil Big Business holds the mic and
+interviews the full cast under a spotlight: CAT. / NO. (Mrs. Never Wrong) / SIDEWAYS. (Unc) / INTERN. (Tyler) / EMBARRASSING. (Vaeh) /
+ALL. (Baby, chair stack) / NOPE. (Lil Wobbles folds) / THRONE. (Princess) / US. (Dad: who brings the tables and chairs?) + nine chairs.
+reelH REELS[50], GAGENDS 22.0, 25.2s, each question ~2.4 s with the answer after 0.9 s. build_wed11_remix.py ->
+halloween/BB_Trend_AnswerInOneWord.mp4; queue_wed11_remix.py 2026-11-11T17:00:00-08:00 after approval.
+UPGRADE: per-answer spotlight + auto-fit speech bubbles + format chip.
+FB: answer in one word: who runs this family? 🪑 #lasvegas #family #animation #comedy #partyrentals
+IG: Answer in one word. Who runs this family? How does Unc carry a table? Who brings the tables and chairs? 🪑 #answerinoneword #family #lasvegas #comedy #partyrentals
+TT: Answer in one word: who runs this family? 🪑 #answerinoneword #oneword #family #comedy
+YT: "Answer in one word: who runs this family? 🪑 #Shorts" / The whole cast gets one word each. Dad's answer: us. #answerinoneword #comedy #family
