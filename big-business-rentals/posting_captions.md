@@ -3532,3 +3532,25 @@ QUEUED Wed Nov 11 (owner: "EP 48 tonight", arrived 9:00pm after the 8pm slot pas
 1pm caterer referral (BB26_Referral_Thu12) FB feed + IG Story · 5pm Party Physics #3 "Once in 10 Billion" FB/IG/TT/YT ·
 8pm EP. 49 The Buffet Line FB/IG/TT/YT. GTT No. 4 answer SKIPPED (its clues never posted Wednesday); GTT No. 4 can run as a
 full pair next Wed/Thu or be retired.
+
+## RULE CHANGE Thu Nov 12 (owner: "when making these videos you don't have to always put every character we have in every video")
+Revises FULL ENSEMBLE (Nov 5): cast each video by story; rotate everyone across the week; every character on screen gets a real
+beat. Logged in CLAUDE.md (CAST BY STORY) and CAST.md.
+## TREND REMIX #27 "HE HAD NO IDEA SHE WAS A SPY" (OWNER-PICKED topic, built Thu Nov 12, waiting on approval + post time)
+Owner: "I want to do a remix about the nvidia guy cheating and crashing the stock market, and how we won't cheat them", then "It has
+to be some type of relationship cheating, even if you have to add new characters for the script, it has to be funny so people have
+to know who we are talking about without naming them." Advised against naming/depicting the real person (allegations under FBI
+review + a shareholder suit; Nevada right of publicity in ads); built as a PARODY OF THE HEADLINE only. Facts checked (AP and
+others, Nov 9-11 2026): a chip-company CEO's affair with an alleged foreign agent; officials said he "had absolutely no idea" she was
+a spy; the stock fell ~4% Monday (~11% on the week, a drop, not a crash). Two ORIGINAL characters: THE TECH BOSS (black jacket, a
+computer chip) and THE SPY (trench coat, hat, dark glasses, face hidden, no nationality/ethnicity cues). No names, company, logo,
+ticker, real face or new claims in the video or captions. Cast by story: Dad (waiter who set the dinner table), Mrs. Never Wrong
+("SHE WAS WEARING A SPY HAT."), Tyler (pops up in matching spy glasses, "...im the new intern."), Unc ("I KNEW IT THE WHOLE TIME."),
+Lil Wobbles ("MEANWHILE, HIS STOCK:" he folds, OOF.), the cat takes the spy's empty chair. Payoff: "SOME PEOPLE CHEAT. WE WON'T CHEAT
+ON YOU." + Dad's cloud "EVERY CHAIR WE QUOTE SHOWS UP." + nine chairs. reelH REELS[52], GAGENDS 21.0, 24.2s.
+build_remix_spy.py -> halloween/BB_Trend_NoIdeaSheWasASpy.mp4; queue_remix_spy.py <approved dueAt>.
+UPGRADE: two new characters with on-screen name chips + camera-flash gag.
+FB: the tech boss had no idea his date was a spy. some people cheat. we won't cheat on you. 🕵️ #lasvegas #comedy #animation #partyrentals #techboss
+IG: The Tech Boss had no idea his date was a spy. Some people cheat. We won't cheat on you: every chair we quote shows up. 🕵️ #techboss #spy #lasvegas #comedy #partyrentals
+TT: He had no idea she was a spy. 🕵️ #techboss #spy #cheating #comedy
+YT: "He had no idea his date was a spy 🕵️ #Shorts" / Some people cheat. We won't cheat on you: every chair we quote shows up. #comedy #spy #partyrentals

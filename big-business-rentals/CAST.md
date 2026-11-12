@@ -103,3 +103,7 @@ Fallback if ElevenLabs is down: Piper TTS per CLAUDE.md (ryan-high / amy-low / d
 Character dialogue appears in a cloud above the speaker's head (speakCloud helper in reelsD.html and halloween/reelH.html);
 narration stays as top captions. Running lines that are always clouds: Vaeh "...this is SO embarrassing.", whoever asks
 "WHERE DID YOU EVEN COME FROM?", Tyler "...im the new intern.". Every caption or cloud holds at least ~1.8 s.
+
+## CAST BY STORY (owner Nov 12, revises FULL ENSEMBLE IN SEASON TWO)
+"When making these videos you don't have to always put every character we have in every video." Cast each episode and remix by
+story; rotate everyone across the week; every character on screen gets a real beat.

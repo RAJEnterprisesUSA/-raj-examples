@@ -350,6 +350,10 @@ FULL ENSEMBLE (owner Nov 5: "the former cast should also be in season two they w
 included in season 2 videos"): from EP. 46 EVERY Season Two episode includes everyone: Mr. Big Business, the four kids,
 Mrs. Never Wrong, Unc, Tyler the Intern (with his intro gag), Lil Wobbles and the cat, each with at least one visible beat;
 remixes use the full cast whenever the format allows. Details: CAST.md FULL ENSEMBLE IN SEASON TWO.
+CAST BY STORY (owner Nov 12, REVISES the full-ensemble rule: "when making these videos you don't have to always put every character
+we have in every video"): pick only the characters the story needs; no one has to appear in every video. Nobody was cancelled, so
+rotate the cast across the week so everyone keeps showing up, and give each character on screen a real beat. Fewer characters =
+cleaner frames.
 NO CHRISTMAS-CELEBRATION VIDEOS (owner Nov 8: "i dont want a video of a christmas celebration"): no trees, ornaments, advent
 calendars, Santa or Christmas-party scenes in remixes or episodes (the "It's Time" tree remix was pulled). December content stays
 on the booking: tables, chairs, tents, setup, real Saturday dates. The Dec 19 party is "the family holiday party".
