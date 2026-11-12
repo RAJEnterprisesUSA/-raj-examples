@@ -6011,6 +6011,12 @@ REELS[53]=reelT53;
 SHAKES[53]=[6.6,0.2,8];
 TAGLINES[53]='NO SECRETS. JUST GREAT SETUPS.';
 window.GAGENDS[53]=19.8;
+// ---------- SLOW CUTS of the Spy two-parter (owner Thu Nov 12: "The first video still moves to fast.") ----------
+// Same scenes as T52 / T53 played 35% slower: every caption and speech cloud holds ~3 s.
+const SLOW54=1.35;
+REELS[54]=T=>reelT52(T/SLOW54); SHAKES[54]=[8.2*SLOW54,0.15,6]; TAGLINES[54]="WE WON'T CHEAT ON YOU."; window.GAGENDS[54]=21.0*SLOW54;
+REELS[55]=T=>reelT53(T/SLOW54); SHAKES[55]=[6.6*SLOW54,0.2,8]; TAGLINES[55]='NO SECRETS. JUST GREAT SETUPS.'; window.GAGENDS[55]=19.8*SLOW54;
+
 
 
 

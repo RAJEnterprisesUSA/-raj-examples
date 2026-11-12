@@ -3570,3 +3570,10 @@ FB: part 2: the spy's next target was big business. it did not go well for her. 
 IG: Part 2: the Spy's next target was Big Business. A fake mustache, a chair disguise and the top secret plans... it was a seating chart. Spy 0, Big Business 1. 🕵️ #spy #part2 #lasvegas #comedy #partyrentals
 TT: Part 2: she picked the wrong business. 🕵️ #spy #part2 #techboss #comedy
 YT: "Part 2: the spy picked the wrong business 🕵️ #Shorts" / Every disguise failed, and the top secret plans were just a seating chart. #comedy #spy #partyrentals
+
+## Thu Nov 12 ~2:30pm: SPY TWO-PARTER SLOWED + SCHEDULE (owner: "Yes at 5" / "The first video still moves to fast."; picked "Spy 1 today 5pm, Spy 2 Fri 5pm")
+Slow cuts: reelH REELS[54] (Part 1) and REELS[55] (Part 2) play T52/T53 35% slower so every caption and speech cloud holds ~3 s
+(new minimum pace). build_remix_spy_slow.py -> halloween/BB_Trend_NoIdeaSheWasASpy_Slow.mp4 (31.55s) and
+BB_Trend_SpyPart2_TargetBigBusiness_Slow.mp4 (29.93s); queue scripts queue_remix_spy_slow.py / queue_remix_spy2_slow.py (same captions).
+Party Physics #3 MOVED (editPost, 4/4 OK) from Thu Nov 12 5pm to SAT NOV 14 5pm. Plan: Spy Part 1 Thu 5pm, Spy Part 2 Fri 5pm.
+RULE: on-screen caption/cloud minimum hold is now ~3 s (owner found ~2.2 s still too fast).
