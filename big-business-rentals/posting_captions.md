@@ -3577,3 +3577,4 @@ Slow cuts: reelH REELS[54] (Part 1) and REELS[55] (Part 2) play T52/T53 35% slow
 BB_Trend_SpyPart2_TargetBigBusiness_Slow.mp4 (29.93s); queue scripts queue_remix_spy_slow.py / queue_remix_spy2_slow.py (same captions).
 Party Physics #3 MOVED (editPost, 4/4 OK) from Thu Nov 12 5pm to SAT NOV 14 5pm. Plan: Spy Part 1 Thu 5pm, Spy Part 2 Fri 5pm.
 RULE: on-screen caption/cloud minimum hold is now ~3 s (owner found ~2.2 s still too fast).
+QUEUED Thu Nov 12 2:40pm: Spy Part 1 SLOW 4/4 at 2026-11-12T17:00-08:00; Spy Part 2 SLOW 4/4 at 2026-11-13T17:00-08:00 (FB reel, IG reel, TikTok, YouTube).
