@@ -75,3 +75,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - T49 We Let the AI Plan the Party: on-screen AI planner panel with live scan bar; every caption held >= 1.8 s.
 - T50 Answer in One Word: per-answer spotlight, speech bubbles that auto-fit the frame, format chip.
 - Nov 10: speakCloud speech clouds over the speaking character (owner rule); applied to the Wed remix + EP. 48-52.
+- T51 Party Physics #3 Once in 10 Billion: live odds meter on every beat, space-to-room flash open, speech clouds.

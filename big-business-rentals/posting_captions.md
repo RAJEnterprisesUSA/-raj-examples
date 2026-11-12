@@ -3510,3 +3510,18 @@ frame-clamped, pops in over 0.2 s, optional maxBottom to stack two speakers). Ap
   (8.8-10.9 s, so the exchange reads as a conversation and each line now holds 2+ s), Vaeh's line is her cloud (2.2 s). Narration
   captions unchanged. Re-rendered (same file names).
 Already posted (not changed): EP. 46, EP. 47 (8pm tonight), the Gavel and AI remixes.
+
+## WED NOV 11: NOTHING POSTED (Wednesday's 1pm GTT No. 4 clues, 5pm "Answer in One Word" and 8pm EP. 48 were never approved)
+## THURSDAY NOV 12 · TREND REMIX #26 PARTY PHYSICS #3 "ONCE IN 10 BILLION" (5pm, fresh nightly build Wed Nov 11, waiting on approval)
+NEWS pool (last remix was social). ScienceDaily (Nov 9 2026): physicists at the world's biggest particle lab found evidence of a
+particle decay that happens about once in 10 billion decays. No lab, logo or names on screen. Remix: the family runs its own
+rare-event experiment with a live ODDS meter: Unc carries a table the right way (1 in 1,000, then it tips sideways), Vaeh smiles
+(1 in 1,000,000; then her cloud "...this is SO embarrassing."), Tyler appears from nowhere (1 in 1; Dad's and Tyler's clouds),
+Lil Wobbles holds a guest (NEVER: Baby sits, NOPE.), Mrs. Never Wrong was wrong (NOT DETECTED). Payoff: "THE RAREST EVENT: EVERY GUEST
+HAS A CHAIR." odds "WITH US: EVERY TIME", nine chairs, the cat takes the last one. End card "EVERY GUEST GETS A CHAIR."
+reelH REELS[51], GAGENDS 21.0, 24.2s, every caption/cloud >= 1.8 s. build_thu12_remix.py -> halloween/BB_Trend_OnceInTenBillion.mp4;
+queue_thu12_remix.py 2026-11-12T17:00:00-08:00 after approval. UPGRADE: live odds meter + space-to-room flash open + speech clouds.
+FB: physicists saw something that happens 1 in 10 billion. rarer: a party where every guest has a chair. 🌌 #lasvegas #science #physics #animation #partyrentals
+IG: Physicists finally saw something that happens 1 in 10 billion. We ran our own experiment. The rarest event of all: a party where every guest has a chair. With us, every time. 🌌 #partyphysics #science #lasvegas #comedy #partyrentals
+TT: Party physics #3: 1 in 10 billion. 🌌 #science #physics #partyphysics #comedy
+YT: "1 in 10 billion: party physics edition 🌌 #Shorts" / Unc carried a table the right way, Vaeh smiled, and every guest got a chair. #science #comedy #partyrentals

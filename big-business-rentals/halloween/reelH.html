@@ -5807,6 +5807,73 @@ SHAKES[50]=[15.5,0.15,6];
 TAGLINES[50]='ONE WORD: DELIVERED.';
 window.GAGENDS[50]=22.0;
 
+// ---------- T51: TREND REMIX · PARTY PHYSICS #3 "Once in 10 Billion" (24.2s, readable holds + speech clouds), NEWS pool ----------
+// News (ScienceDaily, Nov 9 2026): physicists at the world's biggest particle lab found evidence of a particle decay so rare it
+// happens about once in 10 billion decays. No lab, logo or names on screen; the news is only the setup. The family runs its own
+// rare-event experiment with a live ODDS meter: Unc carries a table the right way (1 in 1,000), Vaeh smiles (1 in 1 million),
+// Tyler appears from nowhere (1 in 1), Lil Wobbles holds a guest (never), Mrs. Never Wrong is wrong (not detected). Payoff: the rarest
+// event of all, a party where every guest has a chair. With us: every time. Series chip "PARTY PHYSICS #3" (Big Bang = #1).
+function oddsT51(label,k){ if(k<=0) return; ctx.save(); ctx.translate(540,500); const s=easeOutBack(Math.min(1,k)); ctx.scale(s,s);
+  ctx.fillStyle='rgba(10,8,30,.9)'; ctx.strokeStyle='#7fd3ff'; ctx.lineWidth=6; rr(-300,-56,600,112,24); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#7fd3ff'; ctx.font='600 26px Oswald'; ctx.textAlign='center'; ctx.fillText('ODDS',0,-18);
+  ctx.fillStyle='#fff'; ctx.font='40px "Archivo Black"'; ctx.fillText(label,0,32); ctx.restore(); }
+function reelT51(t){
+  const kL=KIDSCALE.lil, kB=KIDSCALE.baby, kP=KIDSCALE.princess, kV=KIDSCALE.vaeh, AS=0.78;
+  // hook: the collision in space (frame one already flashing)
+  if(t<2.6){ spaceT38(t); particlesT38(Math.min(t*0.6,1.2)); oddsT51('1 IN 10,000,000,000',1);
+    caption(['PHYSICISTS FINALLY SAW SOMETHING','THAT HAPPENS 1 IN 10 BILLION.'],300,1,40);
+    ctx.save(); ctx.fillStyle=GOLD; rr(370,1700,340,52,26); ctx.fill(); ctx.fillStyle=INK; ctx.font='600 30px Oswald'; ctx.textAlign='center'; ctx.fillText('PARTY PHYSICS #3',540,1737); ctx.restore(); return; }
+  roomS2(t);
+  if(t<2.8){ ctx.save(); ctx.globalAlpha=1-(t-2.6)/0.2; ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H); ctx.restore(); }
+  const pay=(t>=17.0);
+  // Dad, the scientist with a clipboard (competence: he logs every result, then seats everyone)
+  kidWithProp({x:560, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pay?{sh:165,el:-20}:{sh:95,el:-20}, arm2:pay?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS,
+    pay?null:(px=>{ ctx.save(); ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=7; rr(px+80,HIP_STAND-360,120,160,10); ctx.fill(); ctx.stroke(); ctx.fillStyle=INK; for(let i=0;i<4;i++) ctx.fillRect(px+98,HIP_STAND-330+i*30,84,7); ctx.restore(); }));
+  // Mrs. Never Wrong (14.6: "was she wrong?" not detected)
+  kidWithProp({x:360, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t>=14.6&&t<17.0)?{sh:110,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS);
+  // TYLER pops up from behind the table
+  if(t>=9.8){ const k=easeOutBack(Math.min(1,(t-9.8)/0.3)); ctx.save(); ctx.beginPath(); ctx.rect(0,0,W,FLOOR-246); ctx.clip(); ctx.translate(0,(1-k)*400);
+    kidWithProp({x:700, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(t>=10.9)?'flat':'smile', style:STYLET}, AS*0.85); ctx.restore(); }
+  ctx.save(); ctx.translate(540,FLOOR); ctx.scale(0.8,1); ctx.translate(-540,-FLOOR); drawTable(540,0,0); ctx.restore();
+  // UNC carries a table the RIGHT way (flat), then it tips sideways again
+  const uncRight=(t>=5.0&&t<7.4);
+  kidWithProp({x:870, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:uncRight?{sh:150,el:-10}:(pay?{sh:120,el:-10}:{sh:60,el:24}), arm2:uncRight?{sh:150,el:-20}:undefined, mouth:'smile'}, AS,
+    uncRight?(px=>{ const tip=(t>=6.8)?Math.min(1,(t-6.8)/0.3)*1.57:0; ctx.save(); ctx.translate(px,HIP_STAND-470); ctx.rotate(tip); ctx.fillStyle='#e8eaee'; ctx.strokeStyle=INK; ctx.lineWidth=10; rr(-170,-18,340,36,10); ctx.fill(); ctx.stroke(); ctx.restore(); })
+    :(pay?(px=>{ ctx.save(); ctx.translate(px-140,HIP_STAND-200); ctx.scale(0.5,0.5); drawFoldedStack(0,0,6,0); ctx.restore(); }):null));
+  // LIL WOBBLES tries to hold a guest (Baby sits), folds
+  const wob=(t>=12.2&&t<14.6), br=(t>=13.2)?Math.min(1,(t-13.2)/0.25):0;
+  if(wob){ ctx.save(); ctx.translate(250,FLOOR); ctx.scale(0.55,0.55); ctx.translate(-250,-FLOOR); drawChair(250,(t<13.2)?Math.sin(t*16)*5:0,br,br,{a:'#e05252',b:'#c94444',c:'#ef6d6d'}); ctx.restore(); }
+  // the kids
+  kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pay?{sh:165,el:-20}:{sh:60,el:24}, mouth:'smile', style:STYLELB}, kL);
+  ctx.save(); if(wob) ctx.translate(0,(t<13.2)?-110:-110+br*110);
+  kidWithProp({x:wob?250:150, face:1, legs:wob?[{hip:84,knee:-86},{hip:78,knee:-80}]:[{hip:12,knee:8},{hip:-10,knee:8}], arm:pay?{sh:170,el:-10}:{sh:60,el:24}, mouth:(wob&&br>0)?'o':'smile', style:STYLEBB}, kB); ctx.restore();
+  kidWithProp({x:230, face:1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(230, kidHeadY(kP)+8, kP*1.3);
+  kidWithProp({x:1030, face:-1, legs:[{hip:4,knee:4},{hip:-4,knee:4}], arm:{sh:30,el:110}, mouth:(t>=7.4&&t<8.6)?'smile':'flat', style:STYLEVAEH}, kV*0.85);
+  headphonesK(1030, kidHeadY(kV*0.85), kV*0.85, -1); phoneK(1030-52*kV*0.85, FLOOR-470*kV*0.85, kV*0.85, true);
+  // PAYOFF: every guest gets a chair; the cat takes the last one
+  if(pay){ for(let i=0;i<9;i++){ const k=easeOutBack(Math.min(1,Math.max(0,(t-17.2-i*0.1)/0.25))); if(k<=0) continue; const x=90+i*112;
+      ctx.save(); ctx.translate(x,FLOOR+40); ctx.scale(0.3*k,0.3*k); ctx.translate(-x,-FLOOR); drawChair(x,0,0,0); ctx.restore(); }
+    if(t>=18.4) drawCat(1000, FLOOR-24, {pose:'sit', face:-1, t:t, s:0.5});
+    confettiBurst(t,17.3,540,FLOOR-500,50,2.0); }
+  if(t>=13.2&&t<14.2) starburst(250,880,easeOutBack(Math.min(1,(t-13.2)/0.2))*0.8,'NOPE.');
+  // odds meter + general captions
+  const B=[[2.6,'1 IN 10,000,000,000',['WE RAN OUR OWN','RARE-EVENT EXPERIMENT.']],[5.0,'1 IN 1,000',['UNC CARRIED A TABLE','THE RIGHT WAY.']],
+    [7.4,'1 IN 1,000,000',['VAEH SMILED.']],[9.8,'1 IN 1',['TYLER APPEARED','FROM NOWHERE.']],[12.2,'NEVER',['LIL WOBBLES','HELD A GUEST.']],
+    [14.6,'NOT DETECTED',['MRS. NEVER WRONG','WAS WRONG.']],[17.0,'WITH US: EVERY TIME',['THE RAREST EVENT:','EVERY GUEST HAS A CHAIR.']]];
+  let bi=0; for(let i=0;i<B.length;i++) if(t>=B[i][0]) bi=i; const b=B[bi];
+  oddsT51(b[1],(t-b[0]-0.6)/0.25);
+  captionPop(b[2],300,b[0]+0.05,t,(b[2][0].length>18||(b[2][1]||'').length>18)?42:52);
+  // speech clouds (character lines)
+  if(t>=8.4&&t<10.4) speakCloud(1030, kidHeadY(kV*0.85), ['...this is SO','embarrassing.'], 8.4, t, 40);
+  if(t>=9.8&&t<12.0) speakCloud(560, kidHeadY(AS), ['WHERE DID YOU','EVEN COME FROM?'], 9.8, t, 40, 860);
+  if(t>=10.9&&t<12.9) speakCloud(700, kidHeadY(AS*0.85), ['...im the new intern.'], 10.9, t, 40);
+}
+REELS[51]=reelT51;
+SHAKES[51]=[13.2,0.15,6];
+TAGLINES[51]='EVERY GUEST GETS A CHAIR.';
+window.GAGENDS[51]=21.0;
+
+
 
 
 
