@@ -3525,3 +3525,5 @@ FB: physicists saw something that happens 1 in 10 billion. rarer: a party where 
 IG: Physicists finally saw something that happens 1 in 10 billion. We ran our own experiment. The rarest event of all: a party where every guest has a chair. With us, every time. 🌌 #partyphysics #science #lasvegas #comedy #partyrentals
 TT: Party physics #3: 1 in 10 billion. 🌌 #science #physics #partyphysics #comedy
 YT: "1 in 10 billion: party physics edition 🌌 #Shorts" / Unc carried a table the right way, Vaeh smiled, and every guest got a chair. #science #comedy #partyrentals
+
+QUEUED Wed Nov 11 (owner: "EP 48 tonight", arrived 9:00pm after the 8pm slot passed): EP. 48 The Cocoa Bar 4/4 at 2026-11-11T21:06:00-08:00, FB/IG/TT/YT, captions as listed for WED in queue_week_nov09.py.
