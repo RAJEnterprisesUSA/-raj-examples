@@ -3554,3 +3554,19 @@ FB: the tech boss had no idea his date was a spy. some people cheat. we won't ch
 IG: The Tech Boss had no idea his date was a spy. Some people cheat. We won't cheat on you: every chair we quote shows up. 🕵️ #techboss #spy #lasvegas #comedy #partyrentals
 TT: He had no idea she was a spy. 🕵️ #techboss #spy #cheating #comedy
 YT: "He had no idea his date was a spy 🕵️ #Shorts" / Some people cheat. We won't cheat on you: every chair we quote shows up. #comedy #spy #partyrentals
+
+## TREND REMIX #28 "THE SPY, PART 2: TARGET BIG BUSINESS" (owner idea Thu Nov 12, built same day, waiting on approval + post time)
+Owner: "then we will do a part two of this video, of a spy trying to infiltrate big business. But is not successful. And that'll be a
+win for Mr. Big Business." Original THE SPY returns (face hidden, no nationality/ethnicity cues). Cast by story: Dad, Mrs. Never
+Wrong, Tyler, Baby, the cat. Beats: hook "PART 2: THE SPY'S NEXT TARGET: BIG BUSINESS." (she peeks in with binoculars); mustache
+disguise, Spy cloud "HELLO. I AM A NORMAL GUEST." / Mrs. Never Wrong cloud "NORMAL GUESTS DON'T WEAR A SPY HAT."; "DISGUISE #2: A
+CHAIR." the cat sits on her, ACHOO!; TOP SECRET plans = a seating chart, Spy "WHERE ARE THE SECRETS?" / Dad "NO SECRETS. EVERYTHING'S
+ON OUR PRICE CARD."; the Spy asks Tyler "WHERE DID YOU EVEN COME FROM?" / "...im the new intern."; "BABY STANDS TUFF." at the door;
+Spy "...CAN I BOOK A TABLE?" holding BOOKED. Payoff "NO SECRETS. JUST TABLES AND CHAIRS." + scoreboard SPY: 0 · BIG BUSINESS: 1
+(a WIN for Mr. Big Business; remix, not counted in the episode W-L). No prices on screen. End card "NO SECRETS. JUST GREAT SETUPS."
+reelH REELS[53], GAGENDS 19.8, 23.0s. build_remix_spy2.py -> halloween/BB_Trend_SpyPart2_TargetBigBusiness.mp4; queue_remix_spy2.py <dueAt>.
+UPGRADE: disguise gags + live scoreboard; first two-part remix.
+FB: part 2: the spy's next target was big business. it did not go well for her. 🕵️ #lasvegas #comedy #animation #partyrentals #techboss
+IG: Part 2: the Spy's next target was Big Business. A fake mustache, a chair disguise and the top secret plans... it was a seating chart. Spy 0, Big Business 1. 🕵️ #spy #part2 #lasvegas #comedy #partyrentals
+TT: Part 2: she picked the wrong business. 🕵️ #spy #part2 #techboss #comedy
+YT: "Part 2: the spy picked the wrong business 🕵️ #Shorts" / Every disguise failed, and the top secret plans were just a seating chart. #comedy #spy #partyrentals

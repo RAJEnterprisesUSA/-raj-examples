@@ -5945,6 +5945,74 @@ SHAKES[52]=[8.2,0.15,6];
 TAGLINES[52]='WE WON\'T CHEAT ON YOU.';
 window.GAGENDS[52]=21.0;
 
+// ---------- T53: "THE SPY, PART 2: Target Big Business" (23.0s, speech clouds, cast by story) · owner Thu Nov 12 ----------
+// Owner: "then we will do a part two of this video, of a spy trying to infiltrate big business. But is not successful. And that'll
+// be a win for Mr. Big Business." Original character THE SPY returns (face hidden, no nationality/ethnicity cues). Cast by story:
+// Dad, Mrs. Never Wrong, Tyler, Baby, the cat. Every disguise fails; the plans are just a seating chart; she books a table instead.
+// Payoff: SPY 0, MR. BIG BUSINESS 1 (a WIN). No prices on screen (it also posts to TikTok).
+function mustacheT53(x,s){ const top=kidHeadY(s); ctx.save(); ctx.translate(x,top); ctx.scale(s,s); ctx.fillStyle='#2a1c12'; ctx.beginPath();
+  ctx.moveTo(-40,128); ctx.quadraticCurveTo(-20,108,0,122); ctx.quadraticCurveTo(20,108,40,128); ctx.quadraticCurveTo(20,122,0,132); ctx.quadraticCurveTo(-20,122,-40,128); ctx.fill(); ctx.restore(); }
+function plansT53(x,y,open){ ctx.save(); ctx.translate(x,y); ctx.lineWidth=6; ctx.strokeStyle=INK;
+  if(!open){ ctx.fillStyle='#cfe3ff'; rr(-20,-90,40,180,16); ctx.fill(); ctx.stroke(); ctx.fillStyle='#c8323e'; ctx.font='600 20px Oswald'; ctx.save(); ctx.rotate(-Math.PI/2); ctx.textAlign='center'; ctx.fillText('TOP SECRET',0,8); ctx.restore(); }
+  else { ctx.fillStyle='#cfe3ff'; rr(-160,-110,320,220,12); ctx.fill(); ctx.stroke(); ctx.fillStyle='#1d4f8f'; ctx.font='600 24px Oswald'; ctx.textAlign='center'; ctx.fillText('SEATING CHART',0,-74);
+    ctx.strokeStyle='#1d4f8f'; ctx.lineWidth=4; for(let r=0;r<2;r++) for(let c=0;c<2;c++){ const tx=-70+c*140, ty=-20+r*80; ctx.strokeRect(tx-50,ty-12,100,24); for(let k=0;k<3;k++){ ctx.beginPath(); ctx.arc(tx-34+k*34,ty-24,7,0,7); ctx.stroke(); ctx.beginPath(); ctx.arc(tx-34+k*34,ty+24,7,0,7); ctx.stroke(); } } }
+  ctx.restore(); }
+function scoreT53(k){ if(k<=0) return; ctx.save(); ctx.translate(540,520); const s=easeOutBack(Math.min(1,k)); ctx.scale(s,s);
+  ctx.fillStyle='rgba(10,8,30,.92)'; ctx.strokeStyle=GOLD; ctx.lineWidth=6; rr(-380,-60,760,120,24); ctx.fill(); ctx.stroke();
+  ctx.font='40px "Archivo Black"'; ctx.textAlign='center'; ctx.fillStyle='#ff8a8a'; ctx.fillText('SPY: 0',-230,16); ctx.fillStyle='#fff'; ctx.fillText('·',-120,16); ctx.fillStyle='#9fe24f'; ctx.fillText('BIG BUSINESS: 1',90,16); ctx.restore(); }
+function reelT53(t){
+  const kB=KIDSCALE.baby, AS=0.78;
+  roomS2(t);
+  const pay=(t>=17.0);
+  // the door on the right (Baby guards it later)
+  ctx.save(); ctx.fillStyle='#5a3f2c'; ctx.strokeStyle=INK; ctx.lineWidth=8; rr(930,FLOOR-520,150,520,8); ctx.fill(); ctx.stroke(); ctx.fillStyle=GOLD; ctx.beginPath(); ctx.arc(955,FLOOR-260,10,0,7); ctx.fill(); ctx.restore();
+  // Mrs. Never Wrong and Dad behind the table
+  kidWithProp({x:200, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t>=2.6&&t<5.0)?{sh:110,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS);
+  kidWithProp({x:420, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:pay?{sh:165,el:-20}:((t>=7.4&&t<9.8)?{sh:95,el:-10}:{sh:60,el:24}), arm2:pay?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  // TYLER pops up from behind the table (9.8)
+  if(t>=9.8){ const k=easeOutBack(Math.min(1,(t-9.8)/0.3)); ctx.save(); ctx.beginPath(); ctx.rect(0,0,W,FLOOR-246); ctx.clip(); ctx.translate(0,(1-k)*400);
+    kidWithProp({x:560, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(t>=10.9)?'flat':'smile', style:STYLET}, AS*0.85); ctx.restore(); }
+  ctx.save(); ctx.translate(460,FLOOR); ctx.scale(0.7,1); ctx.translate(-460,-FLOOR); drawTable(460,0,0); ctx.restore();
+  // THE SPY: peeking (0-2.6), mustache guest (2.6-5.0), chair disguise (5.0-7.4), grabs the plans (7.4-9.8), meets Tyler, Baby blocks the door, books a table
+  const chairMode=(t>=5.0&&t<6.9);
+  let sx=760; if(t<2.6) sx=lerp(1000,880,ease(Math.min(1,t/1.4))); else if(t>=12.2&&t<13.4) sx=lerp(760,880,ease((t-12.2)/0.6)); else if(t>=13.4&&t<14.6) sx=lerp(880,760,ease((t-13.4)/0.6));
+  if(chairMode){ ctx.save(); ctx.translate(760,FLOOR); ctx.scale(0.62,0.62); ctx.translate(-760,-FLOOR); drawChair(760,0,0,0,{a:'#b8925a',b:'#a07c48',c:'#caa36a'}); ctx.restore();
+    ctx.save(); ctx.translate(760,FLOOR-300); ctx.scale(0.8,0.8); ctx.fillStyle='#2b2b30'; ctx.strokeStyle=INK; ctx.lineWidth=6; ctx.beginPath(); ctx.ellipse(0,0,80,14,0,0,7); ctx.fill(); ctx.stroke(); rr(-46,-52,92,52,12); ctx.fill(); ctx.stroke(); ctx.fillStyle='#c8323e'; ctx.fillRect(-46,-16,92,10); ctx.restore();
+    if(t>=5.6){ const k=Math.min(1,(t-5.6)/0.5); drawCat(lerp(1250,760,ease(k)), (k<1)?FLOOR:FLOOR-120, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.75}); } }
+  else {
+    const arm=(t>=7.4&&t<9.8)?{sh:120,el:-20}:((t>=14.6)?{sh:100,el:-30}:{sh:60,el:24});
+    kidWithProp({x:sx, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:arm, mouth:'flat', style:STYLESPY}, AS,
+      (t<2.6)?(px=>{ ctx.save(); ctx.fillStyle='#2b2b30'; ctx.strokeStyle=INK; ctx.lineWidth=6; rr(px-120,HIP_STAND-470,80,40,12); ctx.fill(); ctx.stroke(); ctx.restore(); }):
+      (t>=7.4&&t<9.8)?(px=>{ plansT53(px-230,HIP_STAND-330,t>=8.4); }):
+      (t>=14.6)?(px=>{ ctx.save(); ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=7; rr(px-250,HIP_STAND-380,170,120,12); ctx.fill(); ctx.stroke(); ctx.fillStyle=INK; ctx.font='30px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText('BOOKED',px-165,HIP_STAND-312); ctx.restore(); }):null);
+    spyGearT52(sx,AS,false); if(t>=2.6&&t<5.0) mustacheT53(sx,AS); }
+  if(t>=6.6&&t<7.4) starburst(760,900,easeOutBack(Math.min(1,(t-6.6)/0.2))*0.85,'ACHOO!');
+  // BABY stands tuff at the door (12.2-14.6)
+  if(t>=11.8) kidWithProp({x:1000, face:-1, legs:[{hip:14,knee:4},{hip:-14,knee:4}], arm:(t>=12.2&&t<14.6)?{sh:95,el:-4}:{sh:60,el:24}, arm2:(t>=12.2&&t<14.6)?{sh:95,el:-10}:undefined, mouth:'flat', style:STYLEBB}, kB);
+  // the cat ends up on the table
+  if(t>=7.4) drawCat(300, FLOOR-262, {pose:'sit', face:1, t:t, s:0.7});
+  // PAYOFF
+  if(pay){ scoreT53((t-17.1)/0.3); confettiBurst(t,17.2,540,FLOOR-500,70,2.6); }
+  // general captions
+  if(t<2.6) caption(['PART 2: THE SPY\'S NEXT TARGET:','BIG BUSINESS.'],300,1,46);
+  else if(t>=5.0&&t<7.4) captionPop(['DISGUISE #2:','A CHAIR.'],300,5.05,t,56);
+  else if(t>=12.2&&t<14.6) captionPop(['BABY STANDS TUFF.'],300,12.25,t,56);
+  else if(pay) captionPop(['NO SECRETS.','JUST TABLES AND CHAIRS.'],300,17.05,t,48);
+  // speech clouds
+  if(t>=2.6&&t<5.0) speakCloud(760, kidHeadY(AS), ['HELLO. I AM A','NORMAL GUEST.'], 2.6, t, 40, 860);
+  if(t>=3.5&&t<5.0) speakCloud(200, kidHeadY(AS), ['NORMAL GUESTS DON\'T','WEAR A SPY HAT.'], 3.5, t, 38);
+  if(t>=7.4&&t<9.8) speakCloud(760, kidHeadY(AS), ['WHERE ARE','THE SECRETS?'], 7.4, t, 40, 860);
+  if(t>=8.4&&t<9.8) speakCloud(420, kidHeadY(AS), ['NO SECRETS. EVERYTHING\'S','ON OUR PRICE CARD.'], 8.4, t, 36);
+  if(t>=9.8&&t<12.0) speakCloud(760, kidHeadY(AS), ['WHERE DID YOU','EVEN COME FROM?'], 9.8, t, 40, 860);
+  if(t>=10.9&&t<12.9) speakCloud(560, kidHeadY(AS*0.85), ['...im the new intern.'], 10.9, t, 40);
+  if(t>=14.6&&t<17.0) speakCloud(760, kidHeadY(AS), ['...CAN I BOOK','A TABLE?'], 14.6, t, 44);
+}
+REELS[53]=reelT53;
+SHAKES[53]=[6.6,0.2,8];
+TAGLINES[53]='NO SECRETS. JUST GREAT SETUPS.';
+window.GAGENDS[53]=19.8;
+
+
 
 
 
