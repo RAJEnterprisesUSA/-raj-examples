@@ -3527,3 +3527,8 @@ TT: Party physics #3: 1 in 10 billion. 🌌 #science #physics #partyphysics #com
 YT: "1 in 10 billion: party physics edition 🌌 #Shorts" / Unc carried a table the right way, Vaeh smiled, and every guest got a chair. #science #comedy #partyrentals
 
 QUEUED Wed Nov 11 (owner: "EP 48 tonight", arrived 9:00pm after the 8pm slot passed): EP. 48 The Cocoa Bar 4/4 at 2026-11-11T21:06:00-08:00, FB/IG/TT/YT, captions as listed for WED in queue_week_nov09.py.
+
+## QUEUED Thu Nov 12 8:34am (owner: "queue Thursday"): 10/10 OK, PST -08:00
+1pm caterer referral (BB26_Referral_Thu12) FB feed + IG Story · 5pm Party Physics #3 "Once in 10 Billion" FB/IG/TT/YT ·
+8pm EP. 49 The Buffet Line FB/IG/TT/YT. GTT No. 4 answer SKIPPED (its clues never posted Wednesday); GTT No. 4 can run as a
+full pair next Wed/Thu or be retired.
