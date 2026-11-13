@@ -3578,3 +3578,5 @@ BB_Trend_SpyPart2_TargetBigBusiness_Slow.mp4 (29.93s); queue scripts queue_remix
 Party Physics #3 MOVED (editPost, 4/4 OK) from Thu Nov 12 5pm to SAT NOV 14 5pm. Plan: Spy Part 1 Thu 5pm, Spy Part 2 Fri 5pm.
 RULE: on-screen caption/cloud minimum hold is now ~3 s (owner found ~2.2 s still too fast).
 QUEUED Thu Nov 12 2:40pm: Spy Part 1 SLOW 4/4 at 2026-11-12T17:00-08:00; Spy Part 2 SLOW 4/4 at 2026-11-13T17:00-08:00 (FB reel, IG reel, TikTok, YouTube).
+
+## QUEUED Fri Nov 13 ~9am (owner: "queue Friday"): 6/6 OK. 1pm "3 ways to seat 24" carousel (6 slides) FB album + IG carousel; 8pm EP. 50 The Floor Plan FB/IG/TT/YT. Spy Part 2 already at 5pm.
