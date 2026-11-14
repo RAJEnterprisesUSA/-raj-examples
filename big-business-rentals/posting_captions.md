@@ -3580,3 +3580,5 @@ RULE: on-screen caption/cloud minimum hold is now ~3 s (owner found ~2.2 s still
 QUEUED Thu Nov 12 2:40pm: Spy Part 1 SLOW 4/4 at 2026-11-12T17:00-08:00; Spy Part 2 SLOW 4/4 at 2026-11-13T17:00-08:00 (FB reel, IG reel, TikTok, YouTube).
 
 ## QUEUED Fri Nov 13 ~9am (owner: "queue Friday"): 6/6 OK. 1pm "3 ways to seat 24" carousel (6 slides) FB album + IG carousel; 8pm EP. 50 The Floor Plan FB/IG/TT/YT. Spy Part 2 already at 5pm.
+
+## QUEUED Fri Nov 13 10pm (owner: "queue the weekend"): 12/12 OK. SAT Nov 14: 1pm Thanksgiving price list (FB feed + IG Story), 8pm EP. 51 The Kids' Table (FB/IG/TT/YT); Party Physics #3 already at 5pm. SUN Nov 15: 1pm holiday booking flyer Dec 5/12/19 (FB feed + IG Story; caption keeps "Christmas" + #ChristmasParty as shown, owner did not ask to change it), 8pm EP. 52 The Calendar (reworked) FB/IG/TT/YT. Sun 5pm remix = fresh build Sat evening.
