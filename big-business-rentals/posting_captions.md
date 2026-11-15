@@ -3582,3 +3582,18 @@ QUEUED Thu Nov 12 2:40pm: Spy Part 1 SLOW 4/4 at 2026-11-12T17:00-08:00; Spy Par
 ## QUEUED Fri Nov 13 ~9am (owner: "queue Friday"): 6/6 OK. 1pm "3 ways to seat 24" carousel (6 slides) FB album + IG carousel; 8pm EP. 50 The Floor Plan FB/IG/TT/YT. Spy Part 2 already at 5pm.
 
 ## QUEUED Fri Nov 13 10pm (owner: "queue the weekend"): 12/12 OK. SAT Nov 14: 1pm Thanksgiving price list (FB feed + IG Story), 8pm EP. 51 The Kids' Table (FB/IG/TT/YT); Party Physics #3 already at 5pm. SUN Nov 15: 1pm holiday booking flyer Dec 5/12/19 (FB feed + IG Story; caption keeps "Christmas" + #ChristmasParty as shown, owner did not ask to change it), 8pm EP. 52 The Calendar (reworked) FB/IG/TT/YT. Sun 5pm remix = fresh build Sat evening.
+
+## SUNDAY NOV 15 · TREND REMIX #29 "THE TURKEY FLOOR PLAN" (5pm, fresh nightly build Sat Nov 14, waiting on approval)
+SOCIAL pool (last remix built was news/owner-picked). Trend: turkey-shaped charcuterie/snack boards for Thanksgiving (NewEngen,
+"TikTok Trends: November 2026"); other picks seen Nov 13: Ba Ba Ba duo dance, photo trends (declining). Remix: Mrs. Never Wrong's
+turkey snack board (hook "TURKEY-SHAPED SNACK BOARDS ARE EVERYWHERE THIS WEEK."), Dad's cloud "CUTE. NOW WATCH THIS.", the board
+becomes "THE TURKEY-SHAPED FLOOR PLAN." (five 6 ft tables as tail feathers x 6 chairs + round body table x 6 = SEATS 36, live
+counter), Princess "IT NEEDS A CROWN.", "LIL WOBBLES WANTS TO BE THE WATTLE." / Mrs. Never Wrong "ABSOLUTELY NOT.", "THE CAT TOOK
+THE BEST SEAT IN THE HOUSE.", payoff "SNACK BOARD: SERVES 6. FLOOR PLAN: SEATS 36." End card "THANKSGIVING SEATING. ANY SHAPE."
+Cast by story; ~3 s holds; no prices on screen. reelH REELS[56], GAGENDS 23.0, 26.2s. build_sun15_remix.py ->
+halloween/BB_Trend_TurkeyFloorPlan.mp4; queue_sun15_remix.py 2026-11-15T17:00:00-08:00 after approval.
+UPGRADE: snack board morphs into an overhead floor plan with a live seat counter.
+FB: turkey-shaped snack boards are everywhere. we made a turkey-shaped floor plan that seats 36. 🦃 #lasvegas #thanksgiving #friendsgiving #partyrentals #comedy
+IG: Turkey-shaped snack boards are everywhere this week. We made a turkey-shaped floor plan instead: five tables for the tail feathers and a round table for the body. Seats 36. Message us your date and headcount. 🦃 #thanksgiving #friendsgiving #lasvegas #partyrentals #comedy
+TT: Turkey snack board, but make it a floor plan. 🦃 #thanksgiving #turkeyboard #friendsgiving #comedy
+YT: "Turkey snack board vs turkey floor plan 🦃 #Shorts" / Five tables for the tail feathers, one round table for the body, seats 36. #thanksgiving #comedy #partyrentals

@@ -6017,6 +6017,74 @@ const SLOW54=1.35;
 REELS[54]=T=>reelT52(T/SLOW54); SHAKES[54]=[8.2*SLOW54,0.15,6]; TAGLINES[54]="WE WON'T CHEAT ON YOU."; window.GAGENDS[54]=21.0*SLOW54;
 REELS[55]=T=>reelT53(T/SLOW54); SHAKES[55]=[6.6*SLOW54,0.2,8]; TAGLINES[55]='NO SECRETS. JUST GREAT SETUPS.'; window.GAGENDS[55]=19.8*SLOW54;
 
+// ---------- T56: TREND REMIX · "The Turkey Floor Plan" (26.2s, ~3 s holds, speech clouds, cast by story), SOCIAL pool ----------
+// Trend (NewEngen "TikTok Trends: November 2026"): turkey-shaped charcuterie/snack boards for Thanksgiving. Remix: the snack board
+// becomes a turkey-shaped FLOOR PLAN: five 6 ft tables fanned as tail feathers (6 chairs each) + a round body table (6 chairs) =
+// seats 36. Cast by story: Mrs. Never Wrong (brought the board), Dad, Princess, Lil Wobbles, the cat. No prices on screen.
+const TK56={cx:540, cy:900};
+function turkeyPlanT56(mode,t,k,crown,wobX){ // mode 'snack' | 'tables'
+  const cx=TK56.cx, cy=TK56.cy, snack=(mode==='snack');
+  const fcol=snack?['#e8c27a','#c8323e','#f2d27a','#8a5a3a','#e8c27a']:['#d9822b','#E5B84B','#8a5a3a','#c8501e','#E5B84B'];
+  ctx.save();
+  // tail feathers: 5 long tables fanned behind the body
+  for(let i=0;i<5;i++){ const kk=Math.min(1,Math.max(0,(k*6-i*0.6))); if(kk<=0) continue; const a=-Math.PI*(0.88-i*0.19);
+    ctx.save(); ctx.translate(cx+Math.cos(a)*200, cy+Math.sin(a)*200); ctx.rotate(a+Math.PI/2); ctx.scale(easeOutBack(kk),easeOutBack(kk));
+    ctx.fillStyle=fcol[i]; ctx.strokeStyle=INK; ctx.lineWidth=5; rr(-30,-95,60,190,snack?28:8); ctx.fill(); ctx.stroke();
+    if(!snack){ ctx.fillStyle='#fbf6ea'; for(let j=0;j<3;j++){ [-1,1].forEach(sd=>{ ctx.beginPath(); ctx.arc(sd*48,-62+j*62,13,0,7); ctx.fill(); ctx.stroke(); }); } }
+    else { ctx.fillStyle='rgba(255,255,255,.5)'; for(let j=0;j<4;j++){ ctx.beginPath(); ctx.arc(0,-66+j*44,10,0,7); ctx.fill(); } }
+    ctx.restore(); }
+  // body: round table with 6 chairs
+  const bk=Math.min(1,Math.max(0,k*6-3.2)); if(bk>0){ ctx.save(); ctx.translate(cx,cy); ctx.scale(easeOutBack(bk),easeOutBack(bk));
+    if(!snack){ ctx.fillStyle='#fbf6ea'; ctx.strokeStyle=INK; ctx.lineWidth=5; for(let j=0;j<6;j++){ const a=j*Math.PI/3+Math.PI/6; ctx.beginPath(); ctx.arc(Math.cos(a)*108,Math.sin(a)*108,14,0,7); ctx.fill(); ctx.stroke(); } }
+    ctx.fillStyle=snack?'#f2d27a':'#6a3e22'; ctx.strokeStyle=INK; ctx.lineWidth=6; ctx.beginPath(); ctx.arc(0,0,82,0,7); ctx.fill(); ctx.stroke();
+    if(snack){ ctx.fillStyle='#c8323e'; for(let j=0;j<7;j++){ ctx.beginPath(); ctx.arc(Math.cos(j)*40,Math.sin(j*1.7)*40,10,0,7); ctx.fill(); } }
+    ctx.restore(); }
+  // head (small round), eyes, beak, wattle
+  const hk=Math.min(1,Math.max(0,k*6-4.0)); if(hk>0){ ctx.save(); ctx.translate(cx,cy-112); ctx.scale(easeOutBack(hk),easeOutBack(hk));
+    ctx.fillStyle=snack?'#e8c27a':'#8a5a3a'; ctx.strokeStyle=INK; ctx.lineWidth=5; ctx.beginPath(); ctx.arc(0,0,40,0,7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(-14,-8,9,0,7); ctx.arc(14,-8,9,0,7); ctx.fill(); ctx.fillStyle=INK; ctx.beginPath(); ctx.arc(-14,-8,4,0,7); ctx.arc(14,-8,4,0,7); ctx.fill();
+    ctx.fillStyle='#f2a93b'; ctx.beginPath(); ctx.moveTo(-9,4); ctx.lineTo(9,4); ctx.lineTo(0,20); ctx.closePath(); ctx.fill(); ctx.stroke();
+    if(wobX===null){ ctx.fillStyle='#c8323e'; ctx.beginPath(); ctx.ellipse(10,30,8,14,0,0,7); ctx.fill(); }
+    ctx.restore(); if(crown) tiaraK(cx, cy-112-62, 0.42); }
+  ctx.restore(); }
+function reelT56(t){
+  const kP=KIDSCALE.princess, AS=0.78;
+  roomS2(t);
+  const snack=(t<6.0), pay=(t>=19.2);
+  // the plan area: a soft "overhead" panel so the layout reads as seen from above
+  ctx.save(); ctx.fillStyle=snack?'rgba(60,36,20,.55)':'rgba(120,78,44,.55)'; ctx.strokeStyle='rgba(229,184,75,.6)'; ctx.lineWidth=4; rr(70,520,940,640,40); ctx.fill(); ctx.stroke(); ctx.restore();
+  // Lil Wobbles wants to be the wattle (12.0-15.2)
+  const wob=(t>=12.0&&t<15.2), wobX=wob?(t<14.6?0:lerp(0,700,ease((t-14.6)/0.6))):null;
+  ctx.save(); ctx.translate(540,840); ctx.scale(1.3,1.3); ctx.translate(-540,-840);
+  turkeyPlanT56(snack?'snack':'tables', t, snack?1:Math.min(1,(t-6.0)/1.8), t>=10.0, wob?wobX:null);
+  if(wob){ ctx.save(); ctx.translate(TK56.cx+12+wobX, TK56.cy-72+Math.sin(t*14)*3); ctx.rotate(Math.sin(t*12)*0.15); ctx.fillStyle='#e05252'; ctx.strokeStyle=INK; ctx.lineWidth=4; rr(-22,-22,44,44,6); ctx.fill(); ctx.stroke(); ctx.fillStyle='#c94444'; ctx.fillRect(-22,-32,44,10); ctx.strokeRect(-22,-32,44,10); ctx.restore(); }
+  ctx.restore();
+  if(!snack&&t<9.0){ ctx.save(); ctx.font='600 34px Oswald'; ctx.textAlign='center'; ctx.fillStyle=GOLD; ctx.fillText('SEATS '+Math.min(36,Math.floor((t-6.0)/2.6*36)),540,575); ctx.restore(); }
+  if(t>=9.0){ ctx.save(); ctx.font='600 34px Oswald'; ctx.textAlign='center'; ctx.fillStyle=GOLD; ctx.fillText('SEATS 36',540,575); ctx.restore(); }
+  // THE CAT takes the best seat (16.2+)
+  if(t>=16.2){ const k=Math.min(1,(t-16.2)/0.8); drawCat(lerp(1150,TK56.cx,ease(k)), lerp(FLOOR,840+(TK56.cy+30-840)*1.3,ease(k)), {pose:(k<1)?'trot':'sit', face:-1, t:t, s:lerp(0.7,0.6,ease(k))}); }
+  // cast at the bottom, looking up at the plan
+  kidWithProp({x:200, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t<3.0)?{sh:100,el:-20}:((t>=13.8&&t<16.2)?{sh:110,el:-20}:{sh:60,el:24}), mouth:'flat', style:STYLEW}, AS);
+  kidWithProp({x:440, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(t>=6.0&&t<9.0)||pay?{sh:165,el:-20}:{sh:60,el:24}, arm2:(t>=6.0&&t<9.0)||pay?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  kidWithProp({x:700, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:(t>=9.0&&t<12.0)?{sh:165,el:-20}:{sh:150,el:-30}, mouth:'smile', style:STYLEPB}, kP); tiaraK(700, kidHeadY(kP)+8, kP*1.3);
+  if(pay) confettiBurst(t,19.3,540,FLOOR-600,60,2.4);
+  // general captions (each holds ~3 s)
+  if(t<3.0) caption(['TURKEY-SHAPED SNACK BOARDS','ARE EVERYWHERE THIS WEEK.'],300,1,44);
+  else if(t>=6.0&&t<9.0) captionPop(['THE TURKEY-SHAPED','FLOOR PLAN.'],300,6.05,t,54);
+  else if(t>=12.0&&t<15.2) captionPop(['LIL WOBBLES WANTS','TO BE THE WATTLE.'],300,12.05,t,50);
+  else if(t>=16.2&&t<19.2) captionPop(['THE CAT TOOK THE','BEST SEAT IN THE HOUSE.'],300,16.25,t,46);
+  else if(pay) captionPop(['SNACK BOARD: SERVES 6.','FLOOR PLAN: SEATS 36.'],300,19.25,t,48);
+  // speech clouds
+  if(t>=3.0&&t<6.0) speakCloud(440, kidHeadY(AS), ['CUTE.','NOW WATCH THIS.'], 3.0, t, 44, 1000);
+  if(t>=9.0&&t<12.0) speakCloud(700, kidHeadY(kP), ['IT NEEDS','A CROWN.'], 9.0, t, 44, 1150);
+  if(t>=13.8&&t<16.2) speakCloud(200, kidHeadY(AS), ['ABSOLUTELY','NOT.'], 13.8, t, 46, 1000);
+}
+REELS[56]=reelT56;
+SHAKES[56]=[14.6,0.12,5];
+TAGLINES[56]='THANKSGIVING SEATING. ANY SHAPE.';
+window.GAGENDS[56]=23.0;
+
+
 
 
 

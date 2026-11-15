@@ -78,3 +78,4 @@ One visible upgrade per build. Ordered by impact per effort. Status updated as e
 - T51 Party Physics #3 Once in 10 Billion: live odds meter on every beat, space-to-room flash open, speech clouds.
 - T52 He Had No Idea She Was a Spy: two new characters (Tech Boss, Spy) with on-screen name chips + camera-flash gag; cast by story.
 - T53 The Spy, Part 2: disguise gags (mustache, chair), live SPY vs BIG BUSINESS scoreboard; first two-part remix.
+- T56 The Turkey Floor Plan: snack board morphs into an overhead floor plan with a live seat counter; ~3 s holds.
