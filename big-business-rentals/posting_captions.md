@@ -3597,3 +3597,6 @@ FB: turkey-shaped snack boards are everywhere. we made a turkey-shaped floor pla
 IG: Turkey-shaped snack boards are everywhere this week. We made a turkey-shaped floor plan instead: five tables for the tail feathers and a round table for the body. Seats 36. Message us your date and headcount. 🦃 #thanksgiving #friendsgiving #lasvegas #partyrentals #comedy
 TT: Turkey snack board, but make it a floor plan. 🦃 #thanksgiving #turkeyboard #friendsgiving #comedy
 YT: "Turkey snack board vs turkey floor plan 🦃 #Shorts" / Five tables for the tail feathers, one round table for the body, seats 36. #thanksgiving #comedy #partyrentals
+
+## SUN NOV 15: no 5pm remix went out (Turkey Floor Plan built Sat night, not approved in time). Weekly report No. 4 +
+## GBP pack #3 written: reports/WEEKLY_REPORT_No4_Nov9-15.md, gbp/GBP_Pack_3_week_of_Nov16.txt (services only, no venue).
