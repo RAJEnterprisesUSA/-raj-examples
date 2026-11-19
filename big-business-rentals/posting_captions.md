@@ -3666,3 +3666,10 @@ QUEUED all at 2026-11-19T20:00:00-08:00 (2026-11-20T04:00Z): FB 6afe86b959eff0b6
 Open items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); pinning the FB comment is manual.
 Also noted: the Thu Nov 19 5pm remix YouTube Short (approval 22) was blocked earlier on the category error; the category field works now, queue_thu19_remix_yt.py can be re-run or the Short queued with yt_category_id 23 before 5pm.
 FOLLOW-UP Nov 18 ~9:20pm Vegas: the blocked YouTube Short for the Thu Nov 19 5pm remix "Push It 7 Inches" is now QUEUED (yt_category_id 23 accepted), due 2026-11-19T17:00:00-08:00, Buffer id 6afe86d646636f319e8ce31d, caption as in the Push It entry. Supersedes approval 22.
+
+## THURSDAY NOV 19 · 1pm PROMO RUN (Hail, 5am Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Today's rotating slot is Thursday = Referral Flyer (OPERATOR.md / CLAUDE.md weekly promotions). That flyer (florists, BB26_Referral_Thu19 + _Story) was already built
+and queued on Nov 18 for 2026-11-19T13:00:00-08:00: FB feed 6afe725259eff0b616da6c10, IG Story 6afe725446636f319e85f8d1 (approvals 17, 18). Queueing another
+promo into the same 1pm slot would double-post or push out a different type of content, and recent days already covered Price List (Sat), Holiday Booking (Sun),
+Services/Labor Crew (Tue), Save-Worthy carousel (Fri). Guess the Theme answer is owner-approval only and no approved package exists. No new assets, no new approvals.
+Open manual item carried over: FB pinned first comment for the florist flyer is not attached by the tool, add by hand.
