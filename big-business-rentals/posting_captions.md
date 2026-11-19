@@ -3600,3 +3600,14 @@ YT: "Turkey snack board vs turkey floor plan 🦃 #Shorts" / Five tables for the
 
 ## SUN NOV 15: no 5pm remix went out (Turkey Floor Plan built Sat night, not approved in time). Weekly report No. 4 +
 ## GBP pack #3 written: reports/WEEKLY_REPORT_No4_Nov9-15.md, gbp/GBP_Pack_3_week_of_Nov16.txt (services only, no venue).
+
+## THURSDAY NOV 19 · WEEKLY PROMOTION: REFERRAL FLYER FLORISTS (1pm, FB feed + IG Story): BUILT, NOT QUEUED (push blocked)
+Images: flyers2026/BB26_Referral_Thu19.png (4:5) + BB26_Referral_Thu19_Story.png (9:16). build_thu19_referral.py. Deep rose-wine + gold,
+headline "Every centerpiece needs a table.", giant "Up to $100" panel, 3 steps, verbatim fine print. Layout measured in DOM (no overlap,
+no clipped text). Profession run: Barber, NailTech, DJ, Bartender, Photographer, PartyPlanner, Teacher, HairStylist, EventCoordinator,
+Caterer, Florist (next: realtor or wedding officiant). Rotation check: Thu = referral per weekly promotions; GTT answer is owner-approval only.
+BLOCKER: git push returned 403 (token has no write permission on the repo), so the raw GitHub URLs for the images are not live.
+Nothing was queued to Buffer and no approval record filed. Local commit d10eada holds the assets; push it, then queue the draft below.
+Also: flyer2026.py got a chrome path fallback to ~/.cache/ms-playwright; qrcode pip package was missing and was installed.
+Draft FB (due 2026-11-19T13:00:00-08:00, type post, FB pinned comment): Florists in Las Vegas: you hear about the wedding, the quince and the baby shower long before anyone starts counting chairs. Every arrangement ends up on a table, so point your clients to Big Business for tables and chairs delivered and picked up across Las Vegas, tents, and setup and teardown crews. When their event is done, we say thank you with up to $100 for every booking you send. The reward is based on booking size, there is no limit on referrals, and it is paid after the referred event is completed. Message us and we will send you the details. #LasVegasFlorist #VegasWeddings #LasVegasEvents #VegasPartyRentals #EventPros
+Draft IG Story (same time, story, shouldShareToFeed false): image only.
