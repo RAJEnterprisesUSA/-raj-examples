@@ -3689,3 +3689,9 @@ Today's 5pm Las Vegas Trend Remix slot is already filled on all four platforms: 
 queued Nov 18 for 2026-11-19T17:00:00-08:00: FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708, YT 6afe86d646636f319e8ce31d (approvals 19, 20, 21, 27; 22 superseded).
 Queueing another remix into the same 5pm slot would double-post two remixes at once, and a second same-day trend piece would repeat the angle. No new assets, no new approvals.
 Open manual items carried over: IG pinned first comment is not supported by the queue tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
+
+## THURSDAY NOV 19 · 8pm CHRONICLES RUN (Hail, noon Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Tonight's 8pm Las Vegas Chronicles slot is already filled on all four platforms: EP. 53 "The Walkthrough" (fb_safe/BB_Chronicles_Ep53_TheWalkthrough.mp4, committed and pushed),
+queued Nov 18 for 2026-11-19T20:00:00-08:00: FB 6afe86b959eff0b616e169a4, IG 6afe86ba3802f5b9fc6cb358, TT 6afe86ba46636f319e8cdbe0, YT 6afe86ba3802f5b9fc6cb38e (approvals 23, 24, 25, 26, all approved in the ledger).
+Queueing EP. 54 into the same 8pm slot would double-post two episodes at once. The next new episode is EP. 54 for the next open evening slot (Fri Nov 20 8pm unless it is already queued).
+No new assets, no new approvals. Open manual items carried over: IG pinned first comment is not supported by the queue tool; confirm the FB pinned comment attached.
