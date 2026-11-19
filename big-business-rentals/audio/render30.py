@@ -9,9 +9,15 @@ from playwright.sync_api import sync_playwright
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from sfx_kit import render as kit, SR, bed
 
-CHROME = (glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome') + glob.glob('/opt/pw-browsers/chromium-*/chrome-linux64/chrome'))[0]
-BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
-SCRATCH = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
+_HOME = str(pathlib.Path.home())
+CHROME = (glob.glob('/opt/pw-browsers/chromium-*/chrome-linux/chrome') + glob.glob('/opt/pw-browsers/chromium-*/chrome-linux64/chrome')
+          + glob.glob(_HOME+'/.cache/ms-playwright/chromium-*/chrome-linux*/chrome')
+          + glob.glob(_HOME+'/.cache/ms-playwright/chromium_headless_shell-*/chrome-linux*/headless_shell'))[0]   # portable fallback (Hail host)
+_OLD_BASE = pathlib.Path('/home/user/-raj-examples/big-business-rentals')
+BASE = _OLD_BASE if _OLD_BASE.exists() else pathlib.Path(__file__).resolve().parent.parent
+_OLD_SCR = pathlib.Path('/tmp/claude-0/-home-user--raj-examples/f1b174bd-2cbb-57de-a5ad-e48edd214237/scratchpad')
+SCRATCH = _OLD_SCR if _OLD_SCR.exists() else pathlib.Path('/tmp/hail_scratch')
+SCRATCH.mkdir(parents=True, exist_ok=True)
 FPS = 30
 # UPGRADE Oct 29: cinematic finish, a slight contrast and color lift, a soft vignette and fine moving grain
 FINISH = ',eq=contrast=1.04:saturation=1.10,vignette=PI/6,noise=alls=3'   # static fine grain (moving grain made files 20x larger)

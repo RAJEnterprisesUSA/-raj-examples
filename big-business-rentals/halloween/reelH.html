@@ -6094,6 +6094,89 @@ window.GAGENDS[56]=23.0;
 
 
 
+// ---------- T57: TREND REMIX · "Push It 7 Inches" (24.2s, ~3 s holds, speech clouds, cast by story), SOCIAL pool ----------
+// Trend (week of Nov 12-18 2026, many outlets): crowds gather to "push" famous landmarks "7 inches to the left", a stunt that began
+// with a famous Chicago sculpture and spread to other cities' landmarks and campuses. No landmark, city or person named here: a generic
+// chrome dome on a stone base. Remix: the family pushes the landmark (0 inches; Unc pushes from the other side), then ONE gentle push
+// slides a banquet table exactly 7 inches. Business tie: we set it up, we move it. Cast by story: Dad, Lil, Baby, Unc, the cat.
+const IN57=12;                                           // 1 "inch" = 12 px on screen
+function ghostT57(x,y,w,h,r){ ctx.save(); ctx.setLineDash([16,12]); ctx.lineWidth=5; ctx.strokeStyle='rgba(229,184,75,.8)'; rr(x,y,w,h,r); ctx.stroke(); ctx.restore(); }
+function monumentT57(x,jit){                             // chrome dome on a stone base
+  ctx.save(); ctx.translate(x+jit,0); ctx.lineWidth=9; ctx.strokeStyle=INK; ctx.lineJoin='round';
+  ctx.fillStyle='#b9b2a6'; rr(-120,FLOOR-230,240,230,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#cfc9bd'; rr(-120,FLOOR-230,240,36,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=GOLD; rr(-86,FLOOR-140,172,50,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=INK; ctx.font='26px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText('LANDMARK',0,FLOOR-104);
+  const g=ctx.createRadialGradient(-70,FLOOR-410,20,0,FLOOR-330,230); g.addColorStop(0,'#ffffff'); g.addColorStop(0.45,'#cfd9e4'); g.addColorStop(1,'#6f8199');
+  ctx.fillStyle=g; ctx.beginPath(); ctx.ellipse(0,FLOOR-345,185,125,0,0,7); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='rgba(255,255,255,.75)'; ctx.beginPath(); ctx.ellipse(-70,FLOOR-405,56,22,-0.5,0,7); ctx.fill();
+  ctx.strokeStyle='rgba(36,26,16,.35)'; ctx.lineWidth=4; ctx.beginPath(); ctx.ellipse(0,FLOOR-345,185,125,0,0.2,Math.PI-0.2); ctx.stroke();
+  ctx.restore(); }
+function rulerT57(xr,xl){                                // 7-inch ruler on the floor, right end = where it is now, left end = target
+  const y=FLOOR+62; ctx.save(); ctx.strokeStyle=GOLD; ctx.fillStyle=GOLD; ctx.lineWidth=5; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(xr,y); ctx.lineTo(xl,y); ctx.stroke();
+  for(let i=0;i<=7;i++){ const x=xr-i*IN57; ctx.beginPath(); ctx.moveTo(x,y-12); ctx.lineTo(x,y+12); ctx.stroke(); }
+  ctx.font='600 30px Oswald'; ctx.textAlign='center'; ctx.fillText('7 INCHES',(xr+xl)/2,y+50);
+  ctx.beginPath(); ctx.moveTo(xl-26,y); ctx.lineTo(xl-6,y-14); ctx.lineTo(xl-6,y+14); ctx.closePath(); ctx.fill(); ctx.restore(); }
+function tableSetT57(cx){                                // banquet table (scaled 0.8) with two chairs behind it
+  ctx.save(); ctx.translate(cx,FLOOR); ctx.scale(0.8,0.8); ctx.translate(-cx,-FLOOR);
+  drawChair(cx-150,0,0,0); drawChair(cx+150,0,0,0); drawTable(cx,0,0);
+  ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='#fff';
+  [-170,0,170].forEach(dx=>{ ctx.beginPath(); ctx.ellipse(cx+dx,FLOOR-236,46,11,0,0,7); ctx.fill(); ctx.stroke(); });
+  ctx.restore(); }
+function sweatT57(x,y,t,n){ ctx.save(); ctx.fillStyle='#8fdcff'; ctx.strokeStyle=INK; ctx.lineWidth=3;
+  for(let i=0;i<n;i++){ const u=((t*1.3+i*0.37)%1), px=x+Math.sin(i*2.1)*26+u*22*(i%2?1:-1), py=y-u*10+u*u*70;
+    ctx.beginPath(); ctx.ellipse(px,py,6,9,0,0,7); ctx.fill(); ctx.stroke(); } ctx.restore(); }
+function reelT57(t){
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby;
+  roomS2(t);
+  const MX=380, TX0=400, TX1=316;
+  const push=(t>=4.8&&t<12.0), swap=(t>=12.0), slide=ease((t-15.3)/1.2);
+  const wig=Math.sin(t*9);
+  // THE LANDMARK (0-12.9), slides out left when the table arrives
+  if(t<13.0){ const out=ease((t-12.0)/0.9); const jit=push?Math.sin(t*37)*2.2:0;
+    if(t<12.0){ ghostT57(MX-7*IN57-185,FLOOR-470,370,470,40); rulerT57(MX,MX-7*IN57); }
+    monumentT57(MX-out*820,jit); }
+  // THE TABLE (12.3+)
+  if(t>=12.3){ const arr=ease((t-12.3)/0.8); const tx=(t<15.3)?lerp(-420,TX0,arr):TX0-(TX0-TX1)*slide;
+    if(t>=13.2&&t<15.3){ ghostT57(TX0-7*IN57-248,FLOOR-200,496,200,12); rulerT57(TX0,TX0-7*IN57); }
+    tableSetT57(tx); }
+  // distance counter
+  const inches=(t<15.3)?0:Math.round(7*slide);
+  ctx.save(); ctx.fillStyle='rgba(26,15,43,.88)'; ctx.strokeStyle=GOLD; ctx.lineWidth=4; rr(540-190,440,380,66,33); ctx.fill(); ctx.stroke();
+  ctx.font='600 40px Oswald'; ctx.textAlign='center'; ctx.fillStyle=(inches===7)?'#ffffff':GOLD; ctx.fillText('MOVED: '+inches+' IN',540,487); ctx.restore();
+  // UNC: pushes from the OTHER side (face right), then wanders off left at the swap
+  const uOff=ease((t-12.0)/1.1), ux=lerp(62,-260,uOff);
+  if(t<13.2) kidWithProp({x:ux, face:(t<12.0)?1:-1, lean:push?12+3*wig:0, legs:[{hip:push?-22:10*Math.sin(t*10),knee:4},{hip:push?16:-10*Math.sin(t*10),knee:4}], arm:push?{sh:95,el:-4}:{sh:60,el:24}, arm2:push?{sh:95,el:-4}:undefined, mouth:'smile'}, AS);
+  // the chain: Baby pushes Lil, Lil pushes Dad, Dad pushes the landmark
+  const dx=(t<12.0)?715:(t<13.0)?lerp(715,740,ease((t-12.0)/1.0)):(t<15.3)?740:740-(740-656)*slide;
+  const lean=push?16+4*wig:(t>=15.3&&t<16.6?6:0);
+  const dadArm=push?{sh:95,el:-4}:((t>=15.0&&t<17.0)?{sh:25,el:-5}:(t>=17.0?{sh:12,el:6}:{sh:60,el:24}));
+  kidWithProp({x:1005, face:-1, lean:push?18+4*Math.sin(t*9+1):0, legs:[{hip:push?-28:6,knee:4},{hip:push?18:-6,knee:4}], arm:push?{sh:95,el:-4}:{sh:60,el:24}, arm2:push?{sh:95,el:-4}:undefined, mouth:push?'o':'smile', style:STYLEBB}, kB);
+  kidWithProp({x:880, face:-1, lean:push?18+4*Math.sin(t*9+0.5):0, legs:[{hip:push?-28:6,knee:4},{hip:push?18:-6,knee:4}], arm:push?{sh:95,el:-4}:{sh:60,el:24}, arm2:push?{sh:95,el:-4}:undefined, mouth:push?'o':'smile', style:STYLELB}, kL);
+  kidWithProp({x:dx, face:-1, lean:lean, legs:[{hip:push?-28:(((swap&&t<13.0)||(t>=15.3&&t<16.5))?10*Math.sin(t*12):6),knee:4},{hip:push?18:(((swap&&t<13.0)||(t>=15.3&&t<16.5))?-10*Math.sin(t*12):-6),knee:4}], arm:dadArm, arm2:push?{sh:95,el:-4}:undefined, mouth:(t>=12.0)?'smile':(push?'o':'smile'), style:STYLER2}, AS);
+  if(push&&t>=6.0) sweatT57(dx-8,kidHeadY(AS)+20,t,3);
+  // Unc arrow (9-12)
+  if(t>=9.0&&t<12.0){ const bob=Math.sin(t*8)*10; ctx.save(); ctx.fillStyle=GOLD; ctx.strokeStyle=INK; ctx.lineWidth=6;
+    ctx.beginPath(); ctx.moveTo(62,kidHeadY(AS)-30+bob); ctx.lineTo(22,kidHeadY(AS)-90+bob); ctx.lineTo(46,kidHeadY(AS)-90+bob); ctx.lineTo(46,kidHeadY(AS)-150+bob); ctx.lineTo(78,kidHeadY(AS)-150+bob); ctx.lineTo(78,kidHeadY(AS)-90+bob); ctx.lineTo(102,kidHeadY(AS)-90+bob); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); }
+  // THE CAT takes the table (16.4+)
+  if(t>=16.4){ const k=Math.min(1,(t-16.4)/1.0); drawCat(lerp(1150,TX1+175,ease(k)), lerp(FLOOR,FLOOR-199,ease(k)), {pose:(k<1)?'trot':'sit', face:-1, t:t, s:lerp(0.7,0.55,ease(k))}); }
+  if(t>=18.0) confettiBurst(t,18.1,540,FLOOR-640,60,2.4);
+  // general captions (each holds ~3 s)
+  if(t<3.0) caption(['EVERYONE IS PUSHING LANDMARKS','7 INCHES TO THE LEFT.'],300,1,44);
+  else if(t>=6.0&&t<9.0) captionPop(['THE LANDMARK MOVED','0 INCHES.'],300,6.05,t,54);
+  else if(t>=9.0&&t<12.0) captionPop(['UNC WAS PUSHING','FROM THE OTHER SIDE.'],300,9.05,t,50);
+  else if(t>=15.0&&t<18.0) captionPop(['OUR TABLES MOVE 7 INCHES.','ONE GENTLE PUSH.'],300,15.05,t,46);
+  else if(t>=18.0) captionPop(['LANDMARK: 0 INCHES.','OUR TABLE: 7 INCHES.'],300,18.05,t,48);
+  // speech clouds
+  if(t>=3.0&&t<6.0) speakCloud(715, kidHeadY(AS), ['3, 2, 1,','PUSH!'], 3.0, t, 46, 1000);
+  if(t>=12.0&&t<15.0) speakCloud(740, kidHeadY(AS), ['WRONG','TARGET.'], 12.0, t, 46, 1000);
+}
+REELS[57]=reelT57;
+SHAKES[57]=[4.8,0.35,8];
+TAGLINES[57]='WE SET IT UP. WE MOVE IT.';
+window.GAGENDS[57]=21.0;
+
 </script>
 </body></html>
 
