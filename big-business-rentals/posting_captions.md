@@ -3646,3 +3646,23 @@ YT: "Everyone is pushing landmarks 7 inches. We tried a table 😄 #Shorts" / Th
 QUEUED all at 2026-11-19T17:00:00-08:00 (2026-11-20T01:00Z): FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708. Approval ids 19, 20, 21.
 BLOCKED: YouTube. buffer_queue_post answered "YouTube posts require a category" (2 attempts) and has no category field. Approval 22 records it as not queued.
 To post it, run queue_thu19_remix_yt.py 2026-11-19T17:00:00-08:00 (categoryId 23) with direct Buffer access, or add the YouTube Short by hand. IG pinned first comment is also not supported by the tool (add "Follow for more Las Vegas party life." by hand).
+
+## THURSDAY NOV 19 · EP. 53 THE WALKTHROUGH (8pm, FB reel + IG reel + TikTok + YouTube Short; 26s, SFX only; built and queued by Hail Nov 18 ~9:15pm Vegas)
+Episode check: fb_safe held Ep46 to Ep52 (Nov 15) and nothing newer, so this is the next number, EP. 53. Season Two record after this one: 8 W · 5 L.
+Story (reelsD REELS[53], build_thu19_episode.py -> fb_safe/BB_Chronicles_Ep53_TheWalkthrough.mp4): Dad walks the Dec 19 room with a tape measure (Lil holds
+the zero end, Unc the far end, a live FT tag rides the tape) and marks 10 numbered table spots on the floor in seconds. Mrs. Never Wrong: "DON'T LET GO."
+Unc lets go, the tape whips back and folds Lil Wobbles (NOPE., freeze frame). Tyler pops up (WHERE DID YOU EVEN COME FROM? / ...im the new intern.), Lil then
+Baby each carry a chair, Vaeh sighs "...this is SO embarrassing.", the cat claims table 7. Payoff: every spot fills with a real table and chairs,
+"10 TABLES. 60 CHAIRS. IT ALL FITS." (Vaeh smiles). End card question "TAPE MEASURE OR EYEBALL IT?", tagline "WE MEASURE THE ROOM. WE SET THE TABLES."
+Cast by story (no Princess). No Christmas imagery, no prices, "Next episode tomorrow" left out (nothing aired Nov 16 to 18). UPGRADE: floor-plan marks on the stage floor + live tape reading.
+Rotation check: not a repeat of Floor Plan (50), Calendar (52), Tent (47), Cocoa Bar (48), Buffet Line (49) or Kids' Table (51); Wobbles fold is a new cause (tape whip), the cat beat is new.
+QA: no image viewer in this run, so numeric: 12-frame contact sheet (daily-posts/qa_ep53_contact.png), caption and cloud bands measured per frame, hold times
+checked (captions 1.8 s or more, clouds 2.1 to 2.3 s), video 1080x1920, 30fps, 26.0s, audio max -1.3 dB. Please eyeball once.
+FB 8pm: the big business chronicles ep. 53: the walkthrough. dad marked 10 tables in seconds. unc let go of the tape. 📏 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 53: Dad walks the Dec 19 room and marks 10 tables in seconds, Mrs. Never Wrong says do not let go, and Unc lets go. Tape measure or eyeball it? 📏 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 53: the tape measure won. 📏 #thebigbusinesschronicles #walkthrough #family #comedy
+YT 8pm: "EP. 53: The Walkthrough 📏 10 tables marked #Shorts" / The Big Business Chronicles EP. 53: Dad marks 10 tables in seconds, Mrs. Never Wrong says do not let go, and the tape measure takes out Lil Wobbles. #thebigbusinesschronicles #family #comedy
+QUEUED all at 2026-11-19T20:00:00-08:00 (2026-11-20T04:00Z): FB 6afe86b959eff0b616e169a4 (fb_first_comment set), IG 6afe86ba3802f5b9fc6cb358, TT 6afe86ba46636f319e8cdbe0, YT 6afe86ba3802f5b9fc6cb38e (category 23 worked). Approval ids 23, 24, 25, 26.
+Open items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); pinning the FB comment is manual.
+Also noted: the Thu Nov 19 5pm remix YouTube Short (approval 22) was blocked earlier on the category error; the category field works now, queue_thu19_remix_yt.py can be re-run or the Short queued with yt_category_id 23 before 5pm.
+FOLLOW-UP Nov 18 ~9:20pm Vegas: the blocked YouTube Short for the Thu Nov 19 5pm remix "Push It 7 Inches" is now QUEUED (yt_category_id 23 accepted), due 2026-11-19T17:00:00-08:00, Buffer id 6afe86d646636f319e8ce31d, caption as in the Push It entry. Supersedes approval 22.
