@@ -3611,3 +3611,12 @@ Nothing was queued to Buffer and no approval record filed. Local commit d10eada 
 Also: flyer2026.py got a chrome path fallback to ~/.cache/ms-playwright; qrcode pip package was missing and was installed.
 Draft FB (due 2026-11-19T13:00:00-08:00, type post, FB pinned comment): Florists in Las Vegas: you hear about the wedding, the quince and the baby shower long before anyone starts counting chairs. Every arrangement ends up on a table, so point your clients to Big Business for tables and chairs delivered and picked up across Las Vegas, tents, and setup and teardown crews. When their event is done, we say thank you with up to $100 for every booking you send. The reward is based on booking size, there is no limit on referrals, and it is paid after the referred event is completed. Message us and we will send you the details. #LasVegasFlorist #VegasWeddings #LasVegasEvents #VegasPartyRentals #EventPros
 Draft IG Story (same time, story, shouldShareToFeed false): image only.
+
+## THURSDAY NOV 19 · REFERRAL FLYER FLORISTS (1pm): ASSETS LIVE, QUEUE BLOCKED (Buffer token invalid), Hail run Nov 18 7:50pm Vegas
+Re-verified the earlier build: git push now works (origin branch == local HEAD, both PNGs tracked), raw GitHub URLs return HTTP 200
+for BB26_Referral_Thu19.png (1080x1350) and BB26_Referral_Thu19_Story.png (1080x1920), QR on both decodes to https://bigbusinesspartyrentals.com.
+No "free", no em dashes, up to $100 fine print verbatim, FB/IG only (no TikTok).
+BLOCKER: buffer_queue_post on fb and ig (3 attempts) returned "Access token is not valid" (UNAUTHENTICATED). NOTHING was queued, no approval
+for a live post exists. The owner must re-add the Buffer secret in the environment network settings, then queue the FB post
+(type post, FB pinned comment, due 2026-11-19T13:00:00-08:00, caption = the draft above) and the IG Story (image only, shouldShareToFeed false).
+Rotation check: Thu = referral per weekly schedule; florists is the next profession in the run; not a repeat of any earlier hook.
