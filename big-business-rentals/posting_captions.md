@@ -3683,3 +3683,9 @@ Headline: YOUR PARTY. OUR SETUP. (picked option 2; option 1 "Welcome to Party Ci
 No prices, no counts, no "free", no em dashes.
 QA: no image viewer in this run, so numeric: all text boxes measured inside 1080x1350 and no overlaps, color samples on roof/tables/chairs/sun/sky, sprites loaded. Please eyeball once.
 Suggested caption (for Rashad's own use): Your party, but make it a sunset poster. Tents, tables, and chairs set up and torn down by our crew. Big Business Party Rentals And Events Specialist, Las Vegas. 702-706-8287 or bigbusinesspartyrentals.com
+
+## THURSDAY NOV 19 · 5pm TREND REMIX RUN (Hail, 9am Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Today's 5pm Las Vegas Trend Remix slot is already filled on all four platforms: "Push It 7 Inches" (trend: crowds pushing landmarks 7 inches to the left, coverage dated Nov 12-18 2026),
+queued Nov 18 for 2026-11-19T17:00:00-08:00: FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708, YT 6afe86d646636f319e8ce31d (approvals 19, 20, 21, 27; 22 superseded).
+Queueing another remix into the same 5pm slot would double-post two remixes at once, and a second same-day trend piece would repeat the angle. No new assets, no new approvals.
+Open manual items carried over: IG pinned first comment is not supported by the queue tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
