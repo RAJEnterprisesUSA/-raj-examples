@@ -3673,3 +3673,13 @@ and queued on Nov 18 for 2026-11-19T13:00:00-08:00: FB feed 6afe725259eff0b616da
 promo into the same 1pm slot would double-post or push out a different type of content, and recent days already covered Price List (Sat), Holiday Booking (Sun),
 Services/Labor Crew (Tue), Save-Worthy carousel (Fri). Guess the Theme answer is owner-approval only and no approved package exists. No new assets, no new approvals.
 Open manual item carried over: FB pinned first comment for the florist flyer is not attached by the tool, add by hand.
+
+## CHAT REQUEST (Rashad, live in CRM chat) · SUNSET-POSTER FLYER "YOUR PARTY. OUR SETUP." (Hail; NOT queued, NOT a scheduled slot)
+Request: a GTA 6 looking flyer with tents, tables and chairs in them. Built for Rashad's direct use (Marketplace, past clients). Nothing sent to Buffer, no queue_post approval filed.
+Build: build_sunset_setup_flyer.py -> flyers2026/BB26_SunsetSetup_Flyer.png (1080x1350) and BB26_SunsetSetup_Flyer_2160.png. Hand-built vector scene (not AI imagery, so no AI chip).
+Look: hot pink / orange / purple sunset sky, striped sun, skyline, palms, three lit event tents (white roofs, neon pink edge, string lights) with round linen tables, centerpieces and gold chairs,
+4-panel cast collage (Mr. Big Business, Mrs. Never Wrong, Unc, Tyler) from examples/sp_*.png. Own lettering only: no game name, no studio name, no logo or marks on the flyer.
+Headline: YOUR PARTY. OUR SETUP. (picked option 2; option 1 "Welcome to Party City" skipped because Party City is a real retail chain). Line: TENTS · TABLES · CHAIRS, "Setup and teardown by our crew", 702-706-8287, bigbusinesspartyrentals.com.
+No prices, no counts, no "free", no em dashes.
+QA: no image viewer in this run, so numeric: all text boxes measured inside 1080x1350 and no overlaps, color samples on roof/tables/chairs/sun/sky, sprites loaded. Please eyeball once.
+Suggested caption (for Rashad's own use): Your party, but make it a sunset poster. Tents, tables, and chairs set up and torn down by our crew. Big Business Party Rentals And Events Specialist, Las Vegas. 702-706-8287 or bigbusinesspartyrentals.com
