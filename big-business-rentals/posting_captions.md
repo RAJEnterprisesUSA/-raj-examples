@@ -3620,3 +3620,8 @@ BLOCKER: buffer_queue_post on fb and ig (3 attempts) returned "Access token is n
 for a live post exists. The owner must re-add the Buffer secret in the environment network settings, then queue the FB post
 (type post, FB pinned comment, due 2026-11-19T13:00:00-08:00, caption = the draft above) and the IG Story (image only, shouldShareToFeed false).
 Rotation check: Thu = referral per weekly schedule; florists is the next profession in the run; not a repeat of any earlier hook.
+
+## THURSDAY NOV 19 · REFERRAL FLYER FLORISTS (1pm): QUEUED (Hail run Nov 18 ~7:55pm Vegas)
+Buffer token works again. FB feed post id 6afe725259eff0b616da6c10 and IG Story id 6afe725446636f319e85f8d1, both due 2026-11-19T13:00:00-08:00 (21:00Z).
+Media flyers2026/BB26_Referral_Thu19.png and BB26_Referral_Thu19_Story.png, caption as in the draft above. Note: the repo-relative image path needed the big-business-rentals/ prefix.
+Not done: the FB pinned first comment (buffer_queue_post has no firstComment field), add it by hand. Approval records filed for both posts (supersede record 16).
