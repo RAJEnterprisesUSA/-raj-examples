@@ -6293,6 +6293,104 @@ function ep52(t){
 }
 REELS[52]=ep52; SHAKES[52]=[6.6,0.2,8]; TAGLINES[52]='DEC 5 · 12 · 19. WE BRING THE TABLES AND CHAIRS.'; window.ENDTIMES[52]=23.5;
 
+// ================= EP. 53 · THE WALKTHROUGH (Season Two, cast by story) =================
+// Competence first: Dad walks the Dec 19 room with a tape measure and marks all 10 table spots in seconds (Lil holds the zero end,
+// Unc holds the far end). Mrs. Never Wrong: "DON'T LET GO." Unc lets go, the tape whips back and folds Lil Wobbles (NOPE.).
+// Tyler pops up (gag), Lil and Baby each carry a chair, Vaeh sighs, the cat claims table 7. WIN: every spot fills with a real
+// table and chairs, 10 tables 60 chairs, it all fits. Cast: Dad, Lil, Baby, Mrs. Never Wrong, Unc, Tyler, Vaeh, Wobbles, cat.
+function planK53(tt, solidAt){
+  for(let i=0;i<10;i++){
+    const row=Math.floor(i/5), col=i%5, cx=140+col*190, top=row?1745:1640;
+    const t0=1.4+i*0.12, k=easeOutBack(Math.min(1,Math.max(0,(tt-t0)/0.25)));
+    if(k<=0) continue;
+    const s0=solidAt+i*0.1, solid=tt>=s0, ks=solid?easeOutBack(Math.min(1,(tt-s0)/0.25)):0;
+    ctx.save(); ctx.translate(cx,top+22); ctx.scale(k,k); ctx.translate(-cx,-(top+22));
+    if(!solid){
+      ctx.setLineDash([14,10]); ctx.strokeStyle='#E5B84B'; ctx.lineWidth=5; ctx.fillStyle='rgba(229,184,75,.14)';
+      rr(cx-65,top,130,44,8); ctx.fill(); ctx.stroke(); ctx.setLineDash([]);
+    } else {
+      ctx.save(); ctx.translate(cx,top+22); ctx.scale(0.9+0.1*ks,0.9+0.1*ks); ctx.translate(-cx,-(top+22));
+      ctx.lineWidth=4; ctx.strokeStyle=INK; ctx.fillStyle='#f2f4f6';
+      [[cx-30,top-24],[cx+30,top-24],[cx-30,top+46],[cx+30,top+46],[cx-65-26,top+11],[cx+65+4,top+11]].forEach(([a,b])=>{ rr(a-11,b,22,22,5); ctx.fill(); ctx.stroke(); });
+      ctx.lineWidth=5; ctx.fillStyle='#fbfbf7'; rr(cx-65,top,130,44,8); ctx.fill(); ctx.stroke();
+      ctx.restore();
+    }
+    ctx.fillStyle=solid?INK:'#E5B84B'; ctx.font='600 28px Oswald'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText(String(i+1),cx,top+23); ctx.textBaseline='alphabetic';
+    ctx.restore();
+  }
+}
+function tapeK53(x0,x1){
+  if(x1-x0<14) return;
+  const y=FLOOR+22; ctx.save(); ctx.lineJoin='round';
+  ctx.fillStyle='#f2c230'; ctx.strokeStyle=INK; ctx.lineWidth=6;
+  ctx.fillRect(x0,y-9,x1-x0,18); ctx.strokeRect(x0,y-9,x1-x0,18);
+  ctx.lineWidth=3; let n=0;
+  for(let x=x0+28;x<x1-6;x+=28,n++){ ctx.beginPath(); ctx.moveTo(x,y-9); ctx.lineTo(x,y-9+((n%5===4)?16:9)); ctx.stroke(); }
+  ctx.fillStyle='#c9ced4'; ctx.lineWidth=5; rr(x1-4,y-24,16,48,4); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#f2c230'; rr(x0-40,y-28,50,56,10); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function tapeTag53(x0,x1){
+  if(x1-x0<60) return;
+  const ft=Math.round((x1-x0)/28), mx=(x0+x1)/2, y=FLOOR+22;
+  ctx.save(); ctx.font='30px "Archivo Black"'; const txt=ft+' FT', w=ctx.measureText(txt).width+34;
+  ctx.fillStyle='rgba(36,18,67,.94)'; ctx.strokeStyle=GOLD; ctx.lineWidth=4; rr(mx-w/2,y-24,w,48,16); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=GOLD; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(txt,mx,y+2); ctx.restore();
+}
+function ep53(t){
+  const fz=freezeOf(t,[[6.6,7.3]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(500,FLOOR-200); ctx.scale(z,z); ctx.translate(-500,-(FLOOR-200)); }
+  drawRoom(); miniPumpkin(1040, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  planK53(tt, 19.6);
+  // the tape: zero end held by Lil (x 110), far end held by Unc (x 820); Unc lets go at 6.3 and it whips back
+  const X0=110, XU=820; let x1=0;
+  if(tt>=0.3&&tt<6.3) x1=lerp(X0,XU,ease((tt-0.3)/1.1)); else if(tt>=6.3&&tt<6.9) x1=lerp(XU,X0,ease((tt-6.3)/0.55));
+  tapeK53(X0,x1);
+  // LIL WOBBLES slides in at 5.0, the tape hits it at ~6.5
+  if(tt>=5.0&&tt<12.0){ const br=(tt>=6.55)?Math.min(1,(tt-6.55)/0.25):0, k=Math.min(1,(tt-5.0)/1.0);
+    wobblesK(lerp(-150,520,ease(k)), 0.6, (br<1&&k<1)?Math.sin(t*20)*5:(tt<6.55&&k>=1)?Math.sin(t*18)*3:0, br); }
+  // Dad marks the 10 spots, later cheers
+  kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=1.4&&tt<2.7)?{sh:150+Math.sin(t*16)*20,el:-20}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:(tt>=19.6)?{sh:160,el:-30}:undefined, mouth:'smile', style:STYLER2}, AS);
+  // Lil holds the zero end, then carries a chair like Dad
+  const carL=(tt>=10.0&&tt<19.6)?1:0;
+  kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:carL?{sh:170,el:-10}:(tt>=19.6)?{sh:165,el:-20}:{sh:60,el:24}, arm2:carL?{sh:170,el:-10}:undefined, mouth:'smile', style:STYLELB}, kL,
+    carL?(x=>drawMiniChair(x+10, HIP_STAND-440, 0.9)):null);
+  // MRS. NEVER WRONG walks in, raises a hand at "don't let go"
+  if(tt>=2.8){ const x=lerp(-200,380,ease((tt-2.8)/0.5)); kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt>=4.8&&tt<6.4)?{sh:125,el:-20}:{sh:60,el:24}, mouth:'flat', style:STYLEW}, AS); }
+  // Baby carries a chair a beat after Lil
+  const carB=(tt>=10.6&&tt<19.6)?1:0;
+  kidWithProp({x:655, face:1, legs:[{hip:12,knee:8},{hip:-10,knee:8}], arm:carB?{sh:170,el:-10}:(tt>=19.6)?{sh:165,el:-60}:{sh:60,el:24}, arm2:carB?{sh:170,el:-10}:undefined, mouth:'smile', style:STYLEBB}, kB,
+    carB?(x=>drawMiniChair(x+10, HIP_STAND-440, 0.9)):null);
+  // TYLER pops up out of nowhere
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); ctx.save(); ctx.translate(765,FLOOR); ctx.scale(k,k); ctx.translate(-765,-FLOOR);
+    kidWithProp({x:765, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, 0.7); ctx.restore(); }
+  // UNC holds the far end, lets go at 6.3, laughs after
+  kidWithProp({x:890, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:(tt<6.3)?{sh:95,el:-10}:{sh:60,el:24}, mouth:(tt>=6.3&&tt<9.0)?'o':'smile', eyes:(tt>=6.5&&tt<9.0)?'wide':undefined}, AS);
+  // VAEH
+  vaehK(1030, kV*0.85, (tt>=19.6)?'smile':'flat');
+  // THE CAT claims table 7
+  if(tt>=15.0){ const k=Math.min(1,(tt-15.0)/1.6); drawCatD(lerp(1250,330,ease(k)), FLOOR+229, {pose:(k<1)?'trot':'sit', face:-1, t:t, s:0.7}); }
+  tapeTag53(X0,x1);
+  ctx.restore();
+  if(t>=6.65&&t<7.3){ const kk=easeOutBack(Math.min(1,(t-6.65)/0.25)); starburst(500,FLOOR-1000,kk*0.9,'NOPE.'); }
+  if(t>=19.6) confettiBurst(t,19.6,540,FLOOR-500,70,2.6);
+  showBadge(53);
+  if(t<2.7) caption(['DEC 19 WALKTHROUGH.','WILL 10 TABLES FIT?'],300,1,46);
+  if(t>=2.8&&t<4.7) captionPop(['10 TABLES MARKED.','IN SECONDS.'],300,2.8,t,50);
+  if(t>=4.8&&t<6.6) captionPop(['MRS. NEVER WRONG:','"DON\'T LET GO."'],300,4.8,t,46);
+  if(t>=7.6&&t<9.9) speakCloud(220, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(765, kidHeadY(0.7), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
+  if(t>=10.0&&t<12.9) captionPop(['LIL CARRIED A CHAIR.','BABY CARRIED ONE TOO.'],300,10.0,t,40);
+  if(t>=13.0&&t<15.2) speakCloud(1030, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 13.0, t, 40);   // Vaeh
+  if(t>=15.0&&t<19.5) captionPop(['THE CAT CLAIMED','TABLE 7.'],300,15.0,t,52);
+  if(t>=19.6&&t<21.4) captionPop(['10 TABLES. 60 CHAIRS.','IT ALL FITS.'],300,19.6,t,48);
+  if(t>=21.5&&t<23.45){ captionPop(['TAPE MEASURE OR','EYEBALL IT?'],300,21.5,t,56); caption(['SEASON TWO RECORD: 8 W · 5 L'],1500,(t-21.5)/0.35,30); }
+}
+REELS[53]=ep53; SHAKES[53]=[6.6,0.2,8]; TAGLINES[53]='WE MEASURE THE ROOM. WE SET THE TABLES.'; window.ENDTIMES[53]=23.5;
+
 
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
