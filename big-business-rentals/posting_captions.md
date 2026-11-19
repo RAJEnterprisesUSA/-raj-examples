@@ -3625,3 +3625,24 @@ Rotation check: Thu = referral per weekly schedule; florists is the next profess
 Buffer token works again. FB feed post id 6afe725259eff0b616da6c10 and IG Story id 6afe725446636f319e85f8d1, both due 2026-11-19T13:00:00-08:00 (21:00Z).
 Media flyers2026/BB26_Referral_Thu19.png and BB26_Referral_Thu19_Story.png, caption as in the draft above. Note: the repo-relative image path needed the big-business-rentals/ prefix.
 Not done: the FB pinned first comment (buffer_queue_post has no firstComment field), add it by hand. Approval records filed for both posts (supersede record 16).
+
+## THURSDAY NOV 19 · TREND REMIX #30 "PUSH IT 7 INCHES" (5pm, fresh build by Hail Nov 18 evening, SOCIAL pool): FB/IG/TT QUEUED, YT BLOCKED
+Trend (Google News search Nov 18 2026, coverage dated Nov 12-18): crowds gather to "push" famous landmarks "7 inches to the left", started with a
+well known Chicago sculpture, then St. Louis, Kansas City, a university campus and London. No landmark, city or person named on screen: a generic
+chrome dome on a stone base labeled LANDMARK. Remix: Dad, Lil and Baby push in a chain (Baby pushes Lil, Lil pushes Dad, Dad pushes), Dad's cloud
+"3, 2, 1, PUSH!", caption "THE LANDMARK MOVED 0 INCHES.", then "UNC WAS PUSHING FROM THE OTHER SIDE." (gold arrow on Unc). Swap: Dad "WRONG TARGET.",
+a banquet table with two chairs slides in, one gentle push moves it exactly 7 inches (floor ruler, dashed target, live MOVED counter), the cat takes
+the table. Payoff "LANDMARK: 0 INCHES. OUR TABLE: 7 INCHES." End card "WE SET IT UP. WE MOVE IT." Cast by story; ~3 s holds; no prices on screen.
+reelH REELS[57], GAGENDS 21.0, 24.2s. build_thu19_remix.py -> halloween/BB_Trend_PushSevenInches.mp4. Rotation check: no repeat of Spy, Answer in One Word, Party Physics
+or the never-posted Turkey Floor Plan. UPGRADE: floor ruler + ghost target, live distance counter, push chain.
+Environment notes: audio/render30.py now falls back to the repo folder, ~/.cache/ms-playwright chromium and /tmp/hail_scratch when the old /home/user paths are
+missing; halloween/fonts is a symlink to assets/fonts (reelH.html loads fonts/ relative to halloween/); pip installed mido and imageio-ffmpeg, apt fluidsynth.
+QA: no image viewer in this run, so QA was numeric (hand positions logged per frame: Unc and Dad touch the dome, Lil/Baby touch backs, Dad's hand meets the table
+edge; every caption and cloud width measured under 900 px; 8 video frames extracted, luminance and ASCII layout checks, audio -14.4 dB mean). Please eyeball once.
+FB (reel, fb_first_comment = FB_PIN): everybody is pushing landmarks 7 inches to the left this week. we tried it. the landmark moved 0 inches, and Unc was pushing from the other side. our tables move exactly 7 inches when you ask. 😄 #lasvegas #partyrentals #comedy #animation #setupcrew
+IG (reel): Everyone is pushing famous landmarks 7 inches to the left this week, so the family gave it a shot. Result: 0 inches, and Unc was pushing from the other side. Our tables are easier. Setup and teardown crews move things 7 inches on request all day. Message us your date and headcount. 😄 #lasvegas #partyrentals #setupcrew #comedy #7inchestotheleft
+TT (reel): 7 inches to the left: the landmark said no, the table said sure. 😄 #7inchestotheleft #pushtrend #lasvegas #comedy
+YT: "Everyone is pushing landmarks 7 inches. We tried a table 😄 #Shorts" / The landmark moved 0 inches. Our table moved 7. Setup and teardown crews move things on request all day. #comedy #partyrentals #lasvegas
+QUEUED all at 2026-11-19T17:00:00-08:00 (2026-11-20T01:00Z): FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708. Approval ids 19, 20, 21.
+BLOCKED: YouTube. buffer_queue_post answered "YouTube posts require a category" (2 attempts) and has no category field. Approval 22 records it as not queued.
+To post it, run queue_thu19_remix_yt.py 2026-11-19T17:00:00-08:00 (categoryId 23) with direct Buffer access, or add the YouTube Short by hand. IG pinned first comment is also not supported by the tool (add "Follow for more Las Vegas party life." by hand).
