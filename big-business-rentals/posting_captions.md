@@ -3725,3 +3725,23 @@ TT (reel): soup swap rule: you bring the soup, the table has to hold it. 🍲 #s
 YT: "Soup swap hosting tip: the card table taps out 🍲 #Shorts" / Everybody brings a pot to a soup swap. Nobody brings the table. Setup and teardown crews handle that part. #comedy #partyrentals #lasvegas (category 23)
 QUEUED all at 2026-11-20T17:00:00-08:00 (2026-11-21T01:00Z): FB 6b007f06d425f1473afbdca1 (fb_first_comment set), IG 6b007f0744c3619113486e58, TT 6b007f0863ab5fef673e7f48, YT 6b007f086f199ec35b681b16. Approval ids 56, 57, 58, 59.
 Open manual items: IG pinned first comment is not supported by the tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
+
+## FRIDAY NOV 20 · EP. 54 THE SETUP CLOCK (8pm, FB reel + IG reel + TikTok + YouTube Short; 26s, SFX only; built and queued by Hail Nov 20 noon Vegas)
+Episode check: fb_safe held Ep46 to Ep53 (Nov 19) and nothing newer, no EP. 54 in the caption log or approvals, so this is the next number. Season Two record after this one: 9 W · 5 L.
+Story (reelsD REELS[54], build_fri20_episode.py -> fb_safe/BB_Chronicles_Ep54_TheSetupClock.mp4): Dad promises the Dec 19 room (10 tables, 60 chairs) in 20 minutes. Mrs. Never Wrong starts a giant
+stopwatch (sweeping hand, live mm:ss pill, GOAL 20:00) and a 10-cell floor plan strip fills table by table. A red chair (Lil Wobbles) joins the row; Baby charges in and PUNTS it out of the room (freeze frame, PUNT.).
+Tyler pops up (WHERE DID YOU EVEN COME FROM? / ...im the new intern.), Vaeh sighs "...this is SO embarrassing.", one table left and Dad sweats. Vaeh quietly sets the last table without looking up, the clock stops at 17:52,
+Dad: "I DID THAT.", the cat takes the best seat on the new table, Wobbles slides back in ("always returns"). Payoff "10 TABLES. 60 CHAIRS. 17:52. UNDER 20." End card question "HOW LONG WOULD YOUR SETUP TAKE?",
+tagline "WE BEAT THE CLOCK. YOU HOST THE PARTY." Cast by story (Dad, Mrs. Never Wrong, Lil, Baby, Tyler, Vaeh, Wobbles, cat; no Unc or Princess, they rotate back in). No Christmas imagery, no prices, no "free". 20 minutes and 17:52 are comedy beats, not service-time claims.
+Rotation check: not a repeat of Walkthrough (53), Calendar (52), Kids' Table (51), Floor Plan (50), Buffet Line (49), Cocoa Bar (48), Tent (47); Wobbles exits by a punt (new cause); Vaeh's quiet-competence twist used for the first time in Season Two.
+UPGRADE: giant stopwatch HUD with live clock + sweeping hand, Vaeh competence twist, Wobbles punt arc.
+HOST FIX: reelsD.html loads fonts/ and BB_Logo_Purple_2160.png from the repo root, but neither existed there (404s in the render), so earlier reelsD renders from this host (EP. 53 etc.) may have used fallback fonts and no end-card logo.
+Copied assets/fonts -> fonts/ and assets/BB_Logo_Purple_2160.png -> repo root before rendering EP. 54 (console errors now none). Worth an eyeball of EP. 53's end card.
+QA: no image viewer in this run, so numeric: console errors none, 14-frame contact sheet daily-posts/qa_ep54_contact.png, caption widths 493 to 657 px of 1080 (tagline auto-shrinks), Wobbles red-pixel tracking shows it in the row (x 462 to 620), flying out (freeze to x 136 at 7.8s) and back at 20.5s,
+clock pill turns green after 17.0, Dad cloud moved clear of the stopwatch pill, captions hold 1.8 s or more, clouds 1.8 to 3.1 s, video 1080x1920, 30fps, 26.0s, audio mean -17.8 dB, max -1.4 dB. Please eyeball once.
+FB 8pm: the big business chronicles ep. 54: the setup clock. dad promised 20 minutes. vaeh set the last table without looking up. ⏱️ #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 54: Dad promises the Dec 19 room in 20 minutes, Mrs. Never Wrong starts the clock, Baby punts Lil Wobbles out of the room, and Vaeh quietly sets the last table. How long would your party setup take? ⏱️ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 54: she never looked up. ⏱️ #thebigbusinesschronicles #setup #family #comedy
+YT 8pm: "EP. 54: The Setup Clock ⏱️ 17:52 on the clock #Shorts" / The Big Business Chronicles EP. 54: Dad promises the Dec 19 room in 20 minutes, Baby punts Lil Wobbles out of the room, and Vaeh quietly sets the last table. #thebigbusinesschronicles #family #comedy (category 23)
+QUEUED all at 2026-11-20T20:00:00-08:00 (2026-11-21T04:00Z): FB 6b00a90244c36191135b0632 (fb_first_comment set), IG 6b00a90344c36191135b0666, TT 6b00a9036f199ec35b7b787b, YT 6b00a904861298c9b14d1b18. Approval ids 60, 61, 62, 63.
+Open manual items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); confirm the FB pinned comment attached.
