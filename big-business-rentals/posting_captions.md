@@ -3704,3 +3704,24 @@ FB 1pm: Your living room does not hold 40 people. Here is the math. 📐 (10 / 6
 IG 1pm: Will 40 people actually fit? 📐 (same math, save then message) #lasvegas #partyplanning #partymath #hostingtips #partyrentals
 QUEUED 2026-11-20T13:00:00-08:00 (21:00Z): FB 6b0044a27efc64d5e41da698 (fb_first_comment set), IG 6b0044a377e195b72201b3f7. Approval ids filed after queueing.
 Open manual items: IG pinned first comment not supported by the tool; confirm FB pinned comment attached.
+
+## FRIDAY NOV 20 · 5pm TREND REMIX #31 "THE SOUP SWAP" (Hail, 9am Vegas, SOCIAL pool): FB/IG/TT/YT QUEUED
+Trend (Google News search Nov 20 2026): Food & Wine, Nov 14 2026, "The Soup Swap Is TikTok's Coziest Hosting Trend" (each guest brings a pot of soup, everyone swaps);
+a local soup swap event story dated Nov 19 confirms it is still circulating. Other Nov 17 to 20 candidates seen and skipped: "we got X before the big game" meme retiring (brand/game name),
+the before-kids mom trend (controversy framing), Pink Floyd "Time" trend (no business tie). No brand, app, person or place named on screen.
+Remix: Dad's cloud "EVERYONE BRINGS A POT." Mrs. Never Wrong walks in, glances at the card table and sets her pot on the floor (says nothing). Vaeh tosses hers without looking up (phone out),
+Princess tosses hers on top, POTS counter 1 to 4, the pile sags and the card table taps out (pots clang to the floor, counter flips to ON THE TABLE: 0). Vaeh "...this is SO embarrassing."
+A real table with a chair for every pot slides in, pots hop on (Mrs. Never Wrong's first), counter ON THE TABLE: 4, the cat takes the best seat. Payoff "SOUP: BRING YOUR OWN. TABLES AND CHAIRS: US."
+End card "BRING THE SOUP. WE BRING SEATS." Cast: Dad, Mrs. Never Wrong, Vaeh, Princess, cat (new mix vs Push It: Lil, Baby, Unc). Specific "four pots" is a comedy beat, not an inventory claim. No prices on screen.
+reelH REELS[58] (new reelT58 + potT58/cardTableT58/tableSetT58/handT58 helpers appended to halloween/reelH.html), GAGENDS 21.0, 24.2s. build_fri20_remix.py -> halloween/BB_Trend_SoupSwap.mp4.
+Rotation check: Push It 7 Inches (Nov 19), Spy 1/2, Party Physics #3, Answer in One Word, AI Plans the Party, Gavel: none used hosting/soup/pot-pile; the never-aired Turkey Floor Plan was not reused.
+UPGRADE: live counter that flips from POTS to ON THE TABLE, sagging pile before the collapse, thrown pots with arcs, steaming pots, blind toss gag.
+QA: no image viewer in this run, so numeric: no console errors, 22 test frames, pot color bounding boxes checked per frame (carry positions match hand math, pile sags then falls to floor at x 430/540/650,
+hops land at x 360/480/600/720 on the table top y 1330 to 1350, cat sits on the table at x 734 to 788), caption widths 303 to 579 px of 1080, every caption holds 3 s and clouds 3 s,
+video 1080x1920, 30fps, 24.2s, audio mean -15.2 dB, max -1.2 dB. 9-frame contact sheet daily-posts/qa_soupswap_contact.png. Please eyeball once (cat edge overlaps Princess's/Vaeh's last pot handle slightly).
+FB (reel, fb_first_comment): everybody is hosting a soup swap right now. everybody brings a pot. nobody brings a table. four pots on a card table went exactly how Mrs. Never Wrong said it would. 🍲 #lasvegas #partyrentals #comedy #animation #hosting
+IG (reel): The soup swap is the cozy hosting trend right now: everybody brings a pot, then everybody needs somewhere to put it. Four pots on one card table did not end well, and Mrs. Never Wrong said nothing because she already knew. Hosting one this season? Tables and chairs delivered, set up and picked up by our crew. Message us your date and headcount. 🍲 #lasvegas #partyrentals #hostingtips #soupswap #comedy
+TT (reel): soup swap rule: you bring the soup, the table has to hold it. 🍲 #soupswap #hosting #lasvegas #comedy
+YT: "Soup swap hosting tip: the card table taps out 🍲 #Shorts" / Everybody brings a pot to a soup swap. Nobody brings the table. Setup and teardown crews handle that part. #comedy #partyrentals #lasvegas (category 23)
+QUEUED all at 2026-11-20T17:00:00-08:00 (2026-11-21T01:00Z): FB 6b007f06d425f1473afbdca1 (fb_first_comment set), IG 6b007f0744c3619113486e58, TT 6b007f0863ab5fef673e7f48, YT 6b007f086f199ec35b681b16. Approval ids 56, 57, 58, 59.
+Open manual items: IG pinned first comment is not supported by the tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
