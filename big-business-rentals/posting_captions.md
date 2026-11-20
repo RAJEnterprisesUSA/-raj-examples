@@ -3695,3 +3695,12 @@ Tonight's 8pm Las Vegas Chronicles slot is already filled on all four platforms:
 queued Nov 18 for 2026-11-19T20:00:00-08:00: FB 6afe86b959eff0b616e169a4, IG 6afe86ba3802f5b9fc6cb358, TT 6afe86ba46636f319e8cdbe0, YT 6afe86ba3802f5b9fc6cb38e (approvals 23, 24, 25, 26, all approved in the ledger).
 Queueing EP. 54 into the same 8pm slot would double-post two episodes at once. The next new episode is EP. 54 for the next open evening slot (Fri Nov 20 8pm unless it is already queued).
 No new assets, no new approvals. Open manual items carried over: IG pinned first comment is not supported by the queue tool; confirm the FB pinned comment attached.
+
+## FRIDAY NOV 20 · 1pm SAVE-WORTHY PROMO (Hail, 5am Vegas): PARTY MATH "WILL 40 PEOPLE ACTUALLY FIT?" (FB feed + IG feed, single image)
+Rotation check: Fri = Save-Worthy slot. Prior Fridays: Fri30 (how many tables), Fri13 (3 ways to seat 24). New angle: square feet per guest (the old "ten square feet" line was only a Spanish-post aside). No promo already queued for Nov 20 1pm.
+Build: build_fri20_partymath.py -> flyers2026/BB26_PartyMath_Fri20.png (1080x1350, Emerald Night + gold, Flyer 2026). Math: 6 / 10 / 15 sq ft per guest (standing / seated / seated + dance floor), table for 20/40/60/100 guests. No prices, no inventory counts.
+Single image instead of a carousel because buffer_queue_post accepts one image per post. QA: no image viewer, so numeric: measured element boxes in a 1080x1350 render (all inside margins, no overlap with contact bar, h1 not clipped). Please eyeball once.
+FB 1pm: Your living room does not hold 40 people. Here is the math. 📐 (10 / 6 / 15 sq ft, 40 seated = ~400 sq ft; message date, headcount and room size; save for holiday planning) #LasVegasEvents #PartyPlanning #HostingTips #VegasPartyRentals #PartyMath
+IG 1pm: Will 40 people actually fit? 📐 (same math, save then message) #lasvegas #partyplanning #partymath #hostingtips #partyrentals
+QUEUED 2026-11-20T13:00:00-08:00 (21:00Z): FB 6b0044a27efc64d5e41da698 (fb_first_comment set), IG 6b0044a377e195b72201b3f7. Approval ids filed after queueing.
+Open manual items: IG pinned first comment not supported by the tool; confirm FB pinned comment attached.
