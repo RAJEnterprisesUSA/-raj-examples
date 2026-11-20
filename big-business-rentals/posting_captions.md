@@ -3745,3 +3745,9 @@ TT 8pm: The Big Business Chronicles EP. 54: she never looked up. ⏱️ #thebigb
 YT 8pm: "EP. 54: The Setup Clock ⏱️ 17:52 on the clock #Shorts" / The Big Business Chronicles EP. 54: Dad promises the Dec 19 room in 20 minutes, Baby punts Lil Wobbles out of the room, and Vaeh quietly sets the last table. #thebigbusinesschronicles #family #comedy (category 23)
 QUEUED all at 2026-11-20T20:00:00-08:00 (2026-11-21T04:00Z): FB 6b00a90244c36191135b0632 (fb_first_comment set), IG 6b00a90344c36191135b0666, TT 6b00a9036f199ec35b7b787b, YT 6b00a904861298c9b14d1b18. Approval ids 60, 61, 62, 63.
 Open manual items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); confirm the FB pinned comment attached.
+
+## SATURDAY NOV 21 to FRIDAY NOV 27 · OWNER THEME OVERRIDE: GTA6 VIBE REMIX WEEK (saved by Hail, live chat Nov 20 afternoon Vegas)
+Rashad said in chat: "For the next 7 days, the remix theme will be GTA6", then chose option 2 (write it into the repo notes). Wrote THEME_GTA6_REMIX_WEEK.md and added a pointer line at the end of OPERATOR.md so scheduled runs pick it up.
+Window assumed: Sat Nov 21 to Fri Nov 27 (7 five-pm remix slots), because the Nov 20 soup swap remix was already queued. Applies to the 5pm Trend Remix only, not the Chronicles episode or other daily pieces.
+Guardrails written in: no GTA, Rockstar, or Vice City names or marks, no #GTA6 hashtag unless Rashad says so, family-safe game energy only (missions, HUD, loading screens, neon sunsets), no prices, no "free", no em dashes, AI chip rule kept.
+Nothing queued to Buffer and no approval filed (chat run). Open question for Rashad: confirm the dates, and say yes or no to using #GTA6.
