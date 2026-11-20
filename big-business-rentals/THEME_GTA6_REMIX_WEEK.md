@@ -5,14 +5,14 @@ Saved by Hail the same day. Owner instruction overrides the normal remix angle c
 
 ## WINDOW (Las Vegas time)
 - START: Sat Nov 21, 2026 (first 5pm trend remix slot after the request; Fri Nov 20's soup swap remix was already built and queued).
-- END: Fri Nov 27, 2026 (7 remix slots: Nov 21, 22, 23, 24, 25, 26, 27).
-- After Nov 27 this note expires and remixes go back to the normal trending-topic rule. Rashad can extend, shorten, or move the dates by saying so in chat.
+- END: Sat Nov 28, 2026, which is 7 days after the start date, per Rashad's Nov 20 chat clarification ("It will start tomorrow. And end 7 days from the start date."). That is 8 remix slots: Nov 21, 22, 23, 24, 25, 26, 27, 28.
+- After Nov 28 this note expires and remixes go back to the normal trending-topic rule. Rashad can extend, shorten, or move the dates by saying so in chat.
 - Date assumption: "next 7 days" was read as starting tomorrow because today's remix was already queued. Rashad can change this.
 
 ## WHAT THE THEME APPLIES TO
 - The daily 5pm Las Vegas Trend Remix slot (FB reel, IG reel, TikTok, YouTube Short).
 - It does NOT replace the Chronicles episode (8pm), Party Math, services, venue, referral, or the daily "How Much Would You Pay" post. Those keep their normal rotation. Optional: a GTA-vibe cover or end card on the Chronicles episode only if it fits the story, never forced.
-- Each remix still has to be original week to week (OPERATOR.md ORIGINALITY): 7 different hooks, jokes, and visual concepts, no repeats of the Nov 21 flyer layout.
+- Each remix still has to be original week to week (OPERATOR.md ORIGINALITY): 8 different hooks, jokes, and visual concepts, no repeats of the Nov 21 flyer layout.
 
 ## LOOK AND VOICE (the "vibe homage")
 - Hot pink, orange, and purple sunset gradients, palm tree silhouettes, neon glow, a Las Vegas skyline, striped sun.
@@ -35,4 +35,4 @@ Saved by Hail the same day. Owner instruction overrides the normal remix angle c
 - Nov 20 chat build: BB26_SunsetSetup_Flyer (flyers2026/), 1080x1350 plus 2160x2700, headline "YOUR PARTY. OUR SETUP." Do not reuse that headline or layout in the remix week.
 
 ## SCHEDULED-RUN CHECKLIST
-Before building a 5pm remix between Nov 21 and Nov 27, read this file, check today's date, and apply the theme. Log "GTA6 WEEK day N of 7" in the posting_captions.md entry. On Nov 28 or later, ignore this file.
+Before building a 5pm remix between Nov 21 and Nov 28, read this file, check today's date, and apply the theme. Log "GTA6 WEEK day N of 8" in the posting_captions.md entry. On Nov 29 or later, ignore this file.

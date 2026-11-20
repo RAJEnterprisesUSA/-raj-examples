@@ -510,4 +510,4 @@ The goal is not more content.
 The goal is content that makes Big Business bigger.
 
 
-ACTIVE OWNER THEME OVERRIDE (Nov 20, 2026): the 5pm Trend Remix slot follows the GTA6 vibe theme from Sat Nov 21 through Fri Nov 27, 2026. Read THEME_GTA6_REMIX_WEEK.md before building any remix in that window. It expires after Nov 27.
+ACTIVE OWNER THEME OVERRIDE (Nov 20, 2026): the 5pm Trend Remix slot follows the GTA6 vibe theme from Sat Nov 21 through Sat Nov 28, 2026. Read THEME_GTA6_REMIX_WEEK.md before building any remix in that window. It expires after Nov 28.

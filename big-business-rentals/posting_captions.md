@@ -3751,3 +3751,6 @@ Rashad said in chat: "For the next 7 days, the remix theme will be GTA6", then c
 Window assumed: Sat Nov 21 to Fri Nov 27 (7 five-pm remix slots), because the Nov 20 soup swap remix was already queued. Applies to the 5pm Trend Remix only, not the Chronicles episode or other daily pieces.
 Guardrails written in: no GTA, Rockstar, or Vice City names or marks, no #GTA6 hashtag unless Rashad says so, family-safe game energy only (missions, HUD, loading screens, neon sunsets), no prices, no "free", no em dashes, AI chip rule kept.
 Nothing queued to Buffer and no approval filed (chat run). Open question for Rashad: confirm the dates, and say yes or no to using #GTA6.
+
+## DATE CORRECTION · GTA6 VIBE REMIX WEEK (Hail, live chat Nov 20 afternoon Vegas)
+Rashad clarified: "It will start tomorrow. And end 7 days from the start date." Window is now Sat Nov 21 through Sat Nov 28, 2026 (8 five-pm remix slots, log "GTA6 WEEK day N of 8"). Updated THEME_GTA6_REMIX_WEEK.md and the OPERATOR.md pointer line. Supersedes the Nov 27 end date above. Nothing queued, no approval filed (chat run). #GTA6 still off unless Rashad says yes.
