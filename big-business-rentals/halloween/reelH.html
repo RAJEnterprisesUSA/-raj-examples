@@ -6177,6 +6177,120 @@ SHAKES[57]=[4.8,0.35,8];
 TAGLINES[57]='WE SET IT UP. WE MOVE IT.';
 window.GAGENDS[57]=21.0;
 
+// ---------- T58: TREND REMIX · "The Soup Swap" (24.2s, ~3 s holds, speech clouds, cast by story), SOCIAL pool ----------
+// Trend (Food & Wine, Nov 14 2026: "The Soup Swap Is TikTok's Coziest Hosting Trend"; local soup swap events dated Nov 19): guests each bring a pot of soup and swap.
+// Remix: four pots, one card table. Mrs. Never Wrong sets her pot on the floor (says nothing), the pile collapses, a real table with a chair for every pot fixes it.
+// Cast by story: Dad (STYLER2), Mrs. Never Wrong, Vaeh (tosses without looking up), Princess, the cat. No prices on screen.
+function potT58(x,baseY,s,col,t,steam){
+  ctx.save(); ctx.translate(x,baseY); ctx.scale(s,s); ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.lineJoin='round';
+  ctx.fillStyle='#8d949e'; rr(-60,-52,20,13,6); ctx.fill(); ctx.stroke(); rr(40,-52,20,13,6); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#c9ced6'; rr(-44,-60,88,60,10); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=col; ctx.fillRect(-41,-40,82,20); ctx.strokeStyle='rgba(36,26,16,.5)'; ctx.lineWidth=3; ctx.strokeRect(-41,-40,82,20);
+  ctx.lineWidth=6; ctx.strokeStyle=INK; ctx.fillStyle='#9aa1ab'; rr(-49,-73,98,15,7); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0,-80,8,0,7); ctx.fill(); ctx.stroke();
+  if(steam){ for(let i=0;i<3;i++){ const u=((t*0.9+i*0.33)%1), sx=(i-1)*24+Math.sin(t*3+i*2)*7, sy=-96-u*70;
+    ctx.globalAlpha=(1-u)*0.75; ctx.fillStyle='#ffffff'; ctx.beginPath(); ctx.arc(sx,sy,9+u*9,0,7); ctx.fill(); } }
+  ctx.restore(); }
+function cardTableT58(cx,sag,coll,jit){
+  ctx.save(); ctx.translate(cx+jit,FLOOR); ctx.lineCap='round';
+  const topY=-170+sag*14+coll*128, splay=sag*8+coll*80;
+  [-1,1].forEach(s=>{ ctx.strokeStyle=INK; ctx.lineWidth=24; ctx.beginPath(); ctx.moveTo(s*112,topY+14); ctx.lineTo(s*(122+splay),0); ctx.stroke();
+    ctx.strokeStyle='#dfe2e6'; ctx.lineWidth=12; ctx.beginPath(); ctx.moveTo(s*112,topY+14); ctx.lineTo(s*(122+splay),0); ctx.stroke(); });
+  ctx.save(); ctx.translate(0,topY); ctx.rotate(rad(coll*5)); ctx.fillStyle='#c9a46a'; ctx.strokeStyle=INK; ctx.lineWidth=7;
+  rr(-152,0,304,24,8); ctx.fill(); ctx.stroke(); ctx.restore(); ctx.restore(); }
+function tableSetT58(cx){                                // banquet table (scaled 0.8) with FOUR chairs behind it, one per pot
+  ctx.save(); ctx.translate(cx,FLOOR); ctx.scale(0.8,0.8); ctx.translate(-cx,-FLOOR);
+  [-225,-75,75,225].forEach(dx=>drawChair(cx+dx,0,0,0)); drawTable(cx,0,0); ctx.restore(); }
+function handT58(x,face,s,A){                            // screen position of the front hand (same math as drawMan, no lean)
+  const [ex,ey]=seg(30,-198,A.sh,100), [hx,hy]=seg(ex,ey,A.sh+A.el,96);
+  return [x+face*hx*s, FLOOR+(hy-238)*s]; }
+function reelT58(t){
+  const AS=0.78, kP=KIDSCALE.princess, kV=0.74, CARRY={sh:95,el:-4};
+  roomS2(t);
+  const CTX=540, TOPS=FLOOR-170, BAN=540, FLY=FLOOR+8;
+  // ---- cast positions
+  const mx=lerp(-150,250,ease((t-3.0)/1.4)), vx=lerp(-250,130,ease((t-3.2)/1.4)), px=lerp(1300,800,ease((t-4.8)/1.8)), dxx=950;
+  const mWalk=(t>=3.0&&t<4.4), vWalk=(t>=3.2&&t<4.6), pWalk=(t>=4.8&&t<6.6);
+  const mCarry=(t>=3.0&&t<4.6), vCarry=(t>=3.2&&t<4.8), pCarry=(t>=4.8&&t<7.0);
+  // ---- card table (0 to 12.2)
+  const sag=(t<5.0)?0:(t<7.2?0.4*ease((t-5.0)/0.6):0.4+0.6*ease((t-7.2)/0.8)), coll=ease((t-8.4)/0.35);
+  const jit=(t>=7.6&&t<8.4)?Math.sin(t*38)*3.5:0;
+  if(t<12.2) cardTableT58(CTX,sag,coll,jit);
+  if(t>=12.0&&t<12.7) dust(CTX,FLOOR-40,(t-12.0)/0.7);
+  // ---- banquet table (12.3+)
+  const tx=(t<12.3)?-9999:lerp(-420,BAN,ease((t-12.3)/0.8));
+  if(t>=12.3) tableSetT58(tx);
+  // ---- cast
+  const leg=(w)=>w?[{hip:18*Math.sin(t*11),knee:6},{hip:-18*Math.sin(t*11),knee:6}]:[{hip:6,knee:4},{hip:-6,knee:4}];
+  const dadUp=(t>=18.0), pcUp=(t>=18.0);
+  kidWithProp({x:dxx, face:-1, legs:[{hip:6,knee:4},{hip:-6,knee:4}], arm:dadUp?{sh:165,el:-20}:{sh:60,el:24}, arm2:dadUp?{sh:160,el:-30}:undefined, mouth:(t>=8.4&&t<12.3)?'o':'smile', style:STYLER2}, AS);
+  kidWithProp({x:px, face:-1, legs:leg(pWalk), arm:pCarry?CARRY:(pcUp?{sh:150,el:-30}:(t>=7.0&&t<7.4?{sh:140,el:-20}:{sh:60,el:24})), arm2:pCarry?CARRY:undefined, mouth:'smile', style:STYLEPB}, kP);
+  tiaraK(px, kidHeadY(kP)+8, kP*1.3);
+  kidWithProp({x:mx, face:1, legs:leg(mWalk), arm:mCarry?CARRY:{sh:60,el:24}, arm2:mCarry?CARRY:undefined, mouth:(t>=12.3)?'smile':'flat', style:STYLEW}, AS);
+  const vToss=(t>=4.8&&t<5.2);
+  kidWithProp({x:vx, face:1, legs:leg(vWalk), arm:vCarry?CARRY:(vToss?{sh:140,el:-20}:{sh:30,el:110}), arm2:vCarry?CARRY:undefined, mouth:'flat', style:STYLEVAEH}, kV);
+  headphonesK(vx, kidHeadY(kV), kV, 1);
+  if(t>=5.2) phoneK(vx+52*kV, FLOOR-470*kV, kV, true);
+  // ---- pots
+  const COL=['#d9482f','#f2e2b3','#7fbf4b','#f0932b'];   // 0 Dad tomato, 1 Mrs NW chowder, 2 Vaeh pea, 3 Princess butternut
+  const slotX=[CTX-60, 0, CTX+60, CTX], slotY=[TOPS+sag*14, 0, TOPS+sag*14, TOPS+sag*14-72], floorX=[430, 340, 650, 540];
+  const hopX=[BAN-60, BAN-180, BAN+180, BAN+60], hopT=[13.85, 13.4, 14.75, 14.3], BY=FLOOR-190;
+  const fall=(e,x0,y0,x1,y1,d)=>{ const u=Math.min(1,e/d); return [lerp(x0,x1,ease(u)), (u<1)?lerp(y0,y1,u*u):y1-Math.abs(Math.sin((e-d)*9))*30*Math.exp(-(e-d)*6)]; };
+  const hop=(e,x0,y0,x1,y1,d)=>{ const u=Math.min(1,e/d); return [lerp(x0,x1,ease(u)), lerp(y0,y1,ease(u))-4*150*u*(1-u)]; };
+  const draw=(i,x,y,s,steam)=>potT58(x,y,s,COL[i],t+i,steam);
+  // 0 Dad's pot: on the card table from the start, falls at 8.4, hops at 13.85
+  { let p;
+    if(t<8.4) p=[slotX[0]+jit,slotY[0]]; else if(t<hopT[0]) p=fall(t-8.4,slotX[0],slotY[0],floorX[0],FLY,0.55); else p=hop(t-hopT[0],floorX[0],FLY,hopX[0],BY,0.55);
+    draw(0,p[0],p[1],1,t<8.4||t>=hopT[0]+0.55); }
+  // 1 Mrs NW's pot: carried, set on the floor next to her (4.6), hops to the new table first (13.4)
+  if(t>=3.0){ let p,s=0.8;
+    if(t<4.6){ const h=handT58(mx,1,AS,CARRY); p=[h[0],h[1]+14]; }
+    else if(t<hopT[1]){ const u=Math.min(1,(t-4.6)/0.45), h=handT58(250,1,AS,CARRY); p=[lerp(h[0],floorX[1],u), lerp(h[1]+14,FLY,u*u)]; s=lerp(0.8,1,u); }
+    else { p=hop(t-hopT[1],floorX[1],FLY,hopX[1],BY,0.55); s=1; }
+    draw(1,p[0],p[1],s,t<4.6||t>=hopT[1]+0.55||(t>=5.2&&t<8.4)); }
+  // 2 Vaeh's pot: carried, tossed without looking up (4.8 to 5.3) onto the pile, falls (8.4), hops (14.75)
+  if(t>=3.2){ let p,s=1;
+    if(t<4.8){ const h=handT58(vx,1,kV,CARRY); p=[h[0],h[1]+14]; s=0.8; }
+    else if(t<5.3){ const u=(t-4.8)/0.5, h=handT58(130,1,kV,CARRY); p=[lerp(h[0],slotX[2],u), lerp(h[1]+14,slotY[2],u)-4*200*u*(1-u)]; s=lerp(0.8,1,u); }
+    else if(t<8.4) p=[slotX[2]+jit,slotY[2]];
+    else if(t<hopT[2]) p=fall(t-8.4,slotX[2],slotY[2],floorX[2],FLY,0.55);
+    else p=hop(t-hopT[2],floorX[2],FLY,hopX[2],BY,0.55);
+    draw(2,p[0],p[1],s,(t>=5.3&&t<8.4)||t>=hopT[2]+0.55); }
+  // 3 Princess's pot: carried, tossed on top of the pile (7.0 to 7.5), falls (8.4), hops (14.3)
+  if(t>=4.8){ let p,s=1;
+    if(t<7.0){ const h=handT58(px,-1,kP,CARRY); p=[h[0],h[1]+12]; s=0.7; }
+    else if(t<7.5){ const u=(t-7.0)/0.5, h=handT58(800,-1,kP,CARRY); p=[lerp(h[0],slotX[3],u), lerp(h[1]+12,slotY[3],u)-4*160*u*(1-u)]; s=lerp(0.7,1,u); }
+    else if(t<8.4) p=[slotX[3]+jit,slotY[3]];
+    else if(t<hopT[3]) p=fall(t-8.4,slotX[3],slotY[3],floorX[3],FLY,0.6);
+    else p=hop(t-hopT[3],floorX[3],FLY,hopX[3],BY,0.55);
+    draw(3,p[0],p[1],s,(t>=7.5&&t<8.4)||t>=hopT[3]+0.55); }
+  // landing puffs
+  [[8.95,430],[9.0,540],[8.95,650]].forEach(([t0,x])=>{ if(t>=t0&&t<t0+0.6) dust(x,FLOOR+4,(t-t0)/0.6); });
+  // ---- counter chip: POTS arrive (1 to 4), then the new table counts them on (0 to 4)
+  let label;
+  if(t<8.4) label='POTS: '+((t<4.6)?1:(t<5.3)?2:(t<7.5)?3:4);
+  else label='ON THE TABLE: '+hopT.filter(h=>t>=h+0.55).length;
+  ctx.save(); ctx.fillStyle='rgba(26,15,43,.88)'; ctx.strokeStyle=GOLD; ctx.lineWidth=4; rr(540-210,440,420,66,33); ctx.fill(); ctx.stroke();
+  ctx.font='600 40px Oswald'; ctx.textAlign='center'; ctx.fillStyle=(t>=hopT[2]+0.55)?'#ffffff':GOLD; ctx.fillText(label,540,487); ctx.restore();
+  // ---- the cat takes the best seat (16.4+)
+  if(t>=16.4){ const k=Math.min(1,(t-16.4)/1.0); drawCat(lerp(1150,BAN+232,ease(k)), lerp(FLOOR,FLOOR-199,ease(k)), {pose:(k<1)?'trot':'sit', face:-1, t:t, s:lerp(0.7,0.55,ease(k))}); }
+  if(t>=18.0) confettiBurst(t,18.1,540,FLOOR-640,60,2.4);
+  // ---- captions (each holds ~3 s)
+  if(t<3.0) caption(['THE SOUP SWAP IS THE','COZIEST HOSTING TREND.'],300,1,46);
+  else if(t>=6.0&&t<9.0) captionPop(['FOUR POTS.','ONE CARD TABLE.'],300,6.05,t,54);
+  else if(t>=9.0&&t<12.0) captionPop(['THE CARD TABLE','TAPPED OUT.'],300,9.05,t,54);
+  else if(t>=15.0&&t<18.0) captionPop(['A REAL TABLE.','A CHAIR FOR EVERY POT.'],300,15.05,t,46);
+  else if(t>=18.0) captionPop(['SOUP: BRING YOUR OWN.','TABLES AND CHAIRS: US.'],300,18.05,t,46);
+  // ---- speech clouds
+  if(t>=3.0&&t<6.0) speakCloud(dxx, kidHeadY(AS), ['EVERYONE','BRINGS A POT.'], 3.0, t, 44, 1000);
+  if(t>=12.0&&t<15.0) speakCloud(vx, kidHeadY(kV), ['...this is SO','embarrassing.'], 12.0, t, 44, 1000);
+}
+REELS[58]=reelT58;
+SHAKES[58]=[8.4,0.3,10];
+TAGLINES[58]='BRING THE SOUP. WE BRING SEATS.';
+window.GAGENDS[58]=21.0;
+
+
 </script>
 </body></html>
 
