@@ -3601,6 +3601,159 @@ YT: "Turkey snack board vs turkey floor plan 🦃 #Shorts" / Five tables for the
 ## SUN NOV 15: no 5pm remix went out (Turkey Floor Plan built Sat night, not approved in time). Weekly report No. 4 +
 ## GBP pack #3 written: reports/WEEKLY_REPORT_No4_Nov9-15.md, gbp/GBP_Pack_3_week_of_Nov16.txt (services only, no venue).
 
+## THURSDAY NOV 19 · WEEKLY PROMOTION: REFERRAL FLYER FLORISTS (1pm, FB feed + IG Story): BUILT, NOT QUEUED (push blocked)
+Images: flyers2026/BB26_Referral_Thu19.png (4:5) + BB26_Referral_Thu19_Story.png (9:16). build_thu19_referral.py. Deep rose-wine + gold,
+headline "Every centerpiece needs a table.", giant "Up to $100" panel, 3 steps, verbatim fine print. Layout measured in DOM (no overlap,
+no clipped text). Profession run: Barber, NailTech, DJ, Bartender, Photographer, PartyPlanner, Teacher, HairStylist, EventCoordinator,
+Caterer, Florist (next: realtor or wedding officiant). Rotation check: Thu = referral per weekly promotions; GTT answer is owner-approval only.
+BLOCKER: git push returned 403 (token has no write permission on the repo), so the raw GitHub URLs for the images are not live.
+Nothing was queued to Buffer and no approval record filed. Local commit d10eada holds the assets; push it, then queue the draft below.
+Also: flyer2026.py got a chrome path fallback to ~/.cache/ms-playwright; qrcode pip package was missing and was installed.
+Draft FB (due 2026-11-19T13:00:00-08:00, type post, FB pinned comment): Florists in Las Vegas: you hear about the wedding, the quince and the baby shower long before anyone starts counting chairs. Every arrangement ends up on a table, so point your clients to Big Business for tables and chairs delivered and picked up across Las Vegas, tents, and setup and teardown crews. When their event is done, we say thank you with up to $100 for every booking you send. The reward is based on booking size, there is no limit on referrals, and it is paid after the referred event is completed. Message us and we will send you the details. #LasVegasFlorist #VegasWeddings #LasVegasEvents #VegasPartyRentals #EventPros
+Draft IG Story (same time, story, shouldShareToFeed false): image only.
+
+## THURSDAY NOV 19 · REFERRAL FLYER FLORISTS (1pm): ASSETS LIVE, QUEUE BLOCKED (Buffer token invalid), Hail run Nov 18 7:50pm Vegas
+Re-verified the earlier build: git push now works (origin branch == local HEAD, both PNGs tracked), raw GitHub URLs return HTTP 200
+for BB26_Referral_Thu19.png (1080x1350) and BB26_Referral_Thu19_Story.png (1080x1920), QR on both decodes to https://bigbusinesspartyrentals.com.
+No "free", no em dashes, up to $100 fine print verbatim, FB/IG only (no TikTok).
+BLOCKER: buffer_queue_post on fb and ig (3 attempts) returned "Access token is not valid" (UNAUTHENTICATED). NOTHING was queued, no approval
+for a live post exists. The owner must re-add the Buffer secret in the environment network settings, then queue the FB post
+(type post, FB pinned comment, due 2026-11-19T13:00:00-08:00, caption = the draft above) and the IG Story (image only, shouldShareToFeed false).
+Rotation check: Thu = referral per weekly schedule; florists is the next profession in the run; not a repeat of any earlier hook.
+
+## THURSDAY NOV 19 · REFERRAL FLYER FLORISTS (1pm): QUEUED (Hail run Nov 18 ~7:55pm Vegas)
+Buffer token works again. FB feed post id 6afe725259eff0b616da6c10 and IG Story id 6afe725446636f319e85f8d1, both due 2026-11-19T13:00:00-08:00 (21:00Z).
+Media flyers2026/BB26_Referral_Thu19.png and BB26_Referral_Thu19_Story.png, caption as in the draft above. Note: the repo-relative image path needed the big-business-rentals/ prefix.
+Not done: the FB pinned first comment (buffer_queue_post has no firstComment field), add it by hand. Approval records filed for both posts (supersede record 16).
+
+## THURSDAY NOV 19 · TREND REMIX #30 "PUSH IT 7 INCHES" (5pm, fresh build by Hail Nov 18 evening, SOCIAL pool): FB/IG/TT QUEUED, YT BLOCKED
+Trend (Google News search Nov 18 2026, coverage dated Nov 12-18): crowds gather to "push" famous landmarks "7 inches to the left", started with a
+well known Chicago sculpture, then St. Louis, Kansas City, a university campus and London. No landmark, city or person named on screen: a generic
+chrome dome on a stone base labeled LANDMARK. Remix: Dad, Lil and Baby push in a chain (Baby pushes Lil, Lil pushes Dad, Dad pushes), Dad's cloud
+"3, 2, 1, PUSH!", caption "THE LANDMARK MOVED 0 INCHES.", then "UNC WAS PUSHING FROM THE OTHER SIDE." (gold arrow on Unc). Swap: Dad "WRONG TARGET.",
+a banquet table with two chairs slides in, one gentle push moves it exactly 7 inches (floor ruler, dashed target, live MOVED counter), the cat takes
+the table. Payoff "LANDMARK: 0 INCHES. OUR TABLE: 7 INCHES." End card "WE SET IT UP. WE MOVE IT." Cast by story; ~3 s holds; no prices on screen.
+reelH REELS[57], GAGENDS 21.0, 24.2s. build_thu19_remix.py -> halloween/BB_Trend_PushSevenInches.mp4. Rotation check: no repeat of Spy, Answer in One Word, Party Physics
+or the never-posted Turkey Floor Plan. UPGRADE: floor ruler + ghost target, live distance counter, push chain.
+Environment notes: audio/render30.py now falls back to the repo folder, ~/.cache/ms-playwright chromium and /tmp/hail_scratch when the old /home/user paths are
+missing; halloween/fonts is a symlink to assets/fonts (reelH.html loads fonts/ relative to halloween/); pip installed mido and imageio-ffmpeg, apt fluidsynth.
+QA: no image viewer in this run, so QA was numeric (hand positions logged per frame: Unc and Dad touch the dome, Lil/Baby touch backs, Dad's hand meets the table
+edge; every caption and cloud width measured under 900 px; 8 video frames extracted, luminance and ASCII layout checks, audio -14.4 dB mean). Please eyeball once.
+FB (reel, fb_first_comment = FB_PIN): everybody is pushing landmarks 7 inches to the left this week. we tried it. the landmark moved 0 inches, and Unc was pushing from the other side. our tables move exactly 7 inches when you ask. 😄 #lasvegas #partyrentals #comedy #animation #setupcrew
+IG (reel): Everyone is pushing famous landmarks 7 inches to the left this week, so the family gave it a shot. Result: 0 inches, and Unc was pushing from the other side. Our tables are easier. Setup and teardown crews move things 7 inches on request all day. Message us your date and headcount. 😄 #lasvegas #partyrentals #setupcrew #comedy #7inchestotheleft
+TT (reel): 7 inches to the left: the landmark said no, the table said sure. 😄 #7inchestotheleft #pushtrend #lasvegas #comedy
+YT: "Everyone is pushing landmarks 7 inches. We tried a table 😄 #Shorts" / The landmark moved 0 inches. Our table moved 7. Setup and teardown crews move things on request all day. #comedy #partyrentals #lasvegas
+QUEUED all at 2026-11-19T17:00:00-08:00 (2026-11-20T01:00Z): FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708. Approval ids 19, 20, 21.
+BLOCKED: YouTube. buffer_queue_post answered "YouTube posts require a category" (2 attempts) and has no category field. Approval 22 records it as not queued.
+To post it, run queue_thu19_remix_yt.py 2026-11-19T17:00:00-08:00 (categoryId 23) with direct Buffer access, or add the YouTube Short by hand. IG pinned first comment is also not supported by the tool (add "Follow for more Las Vegas party life." by hand).
+
+## THURSDAY NOV 19 · EP. 53 THE WALKTHROUGH (8pm, FB reel + IG reel + TikTok + YouTube Short; 26s, SFX only; built and queued by Hail Nov 18 ~9:15pm Vegas)
+Episode check: fb_safe held Ep46 to Ep52 (Nov 15) and nothing newer, so this is the next number, EP. 53. Season Two record after this one: 8 W · 5 L.
+Story (reelsD REELS[53], build_thu19_episode.py -> fb_safe/BB_Chronicles_Ep53_TheWalkthrough.mp4): Dad walks the Dec 19 room with a tape measure (Lil holds
+the zero end, Unc the far end, a live FT tag rides the tape) and marks 10 numbered table spots on the floor in seconds. Mrs. Never Wrong: "DON'T LET GO."
+Unc lets go, the tape whips back and folds Lil Wobbles (NOPE., freeze frame). Tyler pops up (WHERE DID YOU EVEN COME FROM? / ...im the new intern.), Lil then
+Baby each carry a chair, Vaeh sighs "...this is SO embarrassing.", the cat claims table 7. Payoff: every spot fills with a real table and chairs,
+"10 TABLES. 60 CHAIRS. IT ALL FITS." (Vaeh smiles). End card question "TAPE MEASURE OR EYEBALL IT?", tagline "WE MEASURE THE ROOM. WE SET THE TABLES."
+Cast by story (no Princess). No Christmas imagery, no prices, "Next episode tomorrow" left out (nothing aired Nov 16 to 18). UPGRADE: floor-plan marks on the stage floor + live tape reading.
+Rotation check: not a repeat of Floor Plan (50), Calendar (52), Tent (47), Cocoa Bar (48), Buffet Line (49) or Kids' Table (51); Wobbles fold is a new cause (tape whip), the cat beat is new.
+QA: no image viewer in this run, so numeric: 12-frame contact sheet (daily-posts/qa_ep53_contact.png), caption and cloud bands measured per frame, hold times
+checked (captions 1.8 s or more, clouds 2.1 to 2.3 s), video 1080x1920, 30fps, 26.0s, audio max -1.3 dB. Please eyeball once.
+FB 8pm: the big business chronicles ep. 53: the walkthrough. dad marked 10 tables in seconds. unc let go of the tape. 📏 #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 53: Dad walks the Dec 19 room and marks 10 tables in seconds, Mrs. Never Wrong says do not let go, and Unc lets go. Tape measure or eyeball it? 📏 #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 53: the tape measure won. 📏 #thebigbusinesschronicles #walkthrough #family #comedy
+YT 8pm: "EP. 53: The Walkthrough 📏 10 tables marked #Shorts" / The Big Business Chronicles EP. 53: Dad marks 10 tables in seconds, Mrs. Never Wrong says do not let go, and the tape measure takes out Lil Wobbles. #thebigbusinesschronicles #family #comedy
+QUEUED all at 2026-11-19T20:00:00-08:00 (2026-11-20T04:00Z): FB 6afe86b959eff0b616e169a4 (fb_first_comment set), IG 6afe86ba3802f5b9fc6cb358, TT 6afe86ba46636f319e8cdbe0, YT 6afe86ba3802f5b9fc6cb38e (category 23 worked). Approval ids 23, 24, 25, 26.
+Open items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); pinning the FB comment is manual.
+Also noted: the Thu Nov 19 5pm remix YouTube Short (approval 22) was blocked earlier on the category error; the category field works now, queue_thu19_remix_yt.py can be re-run or the Short queued with yt_category_id 23 before 5pm.
+FOLLOW-UP Nov 18 ~9:20pm Vegas: the blocked YouTube Short for the Thu Nov 19 5pm remix "Push It 7 Inches" is now QUEUED (yt_category_id 23 accepted), due 2026-11-19T17:00:00-08:00, Buffer id 6afe86d646636f319e8ce31d, caption as in the Push It entry. Supersedes approval 22.
+
+## THURSDAY NOV 19 · 1pm PROMO RUN (Hail, 5am Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Today's rotating slot is Thursday = Referral Flyer (OPERATOR.md / CLAUDE.md weekly promotions). That flyer (florists, BB26_Referral_Thu19 + _Story) was already built
+and queued on Nov 18 for 2026-11-19T13:00:00-08:00: FB feed 6afe725259eff0b616da6c10, IG Story 6afe725446636f319e85f8d1 (approvals 17, 18). Queueing another
+promo into the same 1pm slot would double-post or push out a different type of content, and recent days already covered Price List (Sat), Holiday Booking (Sun),
+Services/Labor Crew (Tue), Save-Worthy carousel (Fri). Guess the Theme answer is owner-approval only and no approved package exists. No new assets, no new approvals.
+Open manual item carried over: FB pinned first comment for the florist flyer is not attached by the tool, add by hand.
+
+## CHAT REQUEST (Rashad, live in CRM chat) · SUNSET-POSTER FLYER "YOUR PARTY. OUR SETUP." (Hail; NOT queued, NOT a scheduled slot)
+Request: a GTA 6 looking flyer with tents, tables and chairs in them. Built for Rashad's direct use (Marketplace, past clients). Nothing sent to Buffer, no queue_post approval filed.
+Build: build_sunset_setup_flyer.py -> flyers2026/BB26_SunsetSetup_Flyer.png (1080x1350) and BB26_SunsetSetup_Flyer_2160.png. Hand-built vector scene (not AI imagery, so no AI chip).
+Look: hot pink / orange / purple sunset sky, striped sun, skyline, palms, three lit event tents (white roofs, neon pink edge, string lights) with round linen tables, centerpieces and gold chairs,
+4-panel cast collage (Mr. Big Business, Mrs. Never Wrong, Unc, Tyler) from examples/sp_*.png. Own lettering only: no game name, no studio name, no logo or marks on the flyer.
+Headline: YOUR PARTY. OUR SETUP. (picked option 2; option 1 "Welcome to Party City" skipped because Party City is a real retail chain). Line: TENTS · TABLES · CHAIRS, "Setup and teardown by our crew", 702-706-8287, bigbusinesspartyrentals.com.
+No prices, no counts, no "free", no em dashes.
+QA: no image viewer in this run, so numeric: all text boxes measured inside 1080x1350 and no overlaps, color samples on roof/tables/chairs/sun/sky, sprites loaded. Please eyeball once.
+Suggested caption (for Rashad's own use): Your party, but make it a sunset poster. Tents, tables, and chairs set up and torn down by our crew. Big Business Party Rentals And Events Specialist, Las Vegas. 702-706-8287 or bigbusinesspartyrentals.com
+
+## THURSDAY NOV 19 · 5pm TREND REMIX RUN (Hail, 9am Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Today's 5pm Las Vegas Trend Remix slot is already filled on all four platforms: "Push It 7 Inches" (trend: crowds pushing landmarks 7 inches to the left, coverage dated Nov 12-18 2026),
+queued Nov 18 for 2026-11-19T17:00:00-08:00: FB 6afe7f67f6b6aa0cd4a0c395, IG 6afe7f673802f5b9fc6a302f, TT 6afe7f67749099bdc70eb708, YT 6afe86d646636f319e8ce31d (approvals 19, 20, 21, 27; 22 superseded).
+Queueing another remix into the same 5pm slot would double-post two remixes at once, and a second same-day trend piece would repeat the angle. No new assets, no new approvals.
+Open manual items carried over: IG pinned first comment is not supported by the queue tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
+
+## THURSDAY NOV 19 · 8pm CHRONICLES RUN (Hail, noon Vegas): SKIPPED ON PURPOSE, NOTHING NEW QUEUED
+Tonight's 8pm Las Vegas Chronicles slot is already filled on all four platforms: EP. 53 "The Walkthrough" (fb_safe/BB_Chronicles_Ep53_TheWalkthrough.mp4, committed and pushed),
+queued Nov 18 for 2026-11-19T20:00:00-08:00: FB 6afe86b959eff0b616e169a4, IG 6afe86ba3802f5b9fc6cb358, TT 6afe86ba46636f319e8cdbe0, YT 6afe86ba3802f5b9fc6cb38e (approvals 23, 24, 25, 26, all approved in the ledger).
+Queueing EP. 54 into the same 8pm slot would double-post two episodes at once. The next new episode is EP. 54 for the next open evening slot (Fri Nov 20 8pm unless it is already queued).
+No new assets, no new approvals. Open manual items carried over: IG pinned first comment is not supported by the queue tool; confirm the FB pinned comment attached.
+
+## FRIDAY NOV 20 · 1pm SAVE-WORTHY PROMO (Hail, 5am Vegas): PARTY MATH "WILL 40 PEOPLE ACTUALLY FIT?" (FB feed + IG feed, single image)
+Rotation check: Fri = Save-Worthy slot. Prior Fridays: Fri30 (how many tables), Fri13 (3 ways to seat 24). New angle: square feet per guest (the old "ten square feet" line was only a Spanish-post aside). No promo already queued for Nov 20 1pm.
+Build: build_fri20_partymath.py -> flyers2026/BB26_PartyMath_Fri20.png (1080x1350, Emerald Night + gold, Flyer 2026). Math: 6 / 10 / 15 sq ft per guest (standing / seated / seated + dance floor), table for 20/40/60/100 guests. No prices, no inventory counts.
+Single image instead of a carousel because buffer_queue_post accepts one image per post. QA: no image viewer, so numeric: measured element boxes in a 1080x1350 render (all inside margins, no overlap with contact bar, h1 not clipped). Please eyeball once.
+FB 1pm: Your living room does not hold 40 people. Here is the math. 📐 (10 / 6 / 15 sq ft, 40 seated = ~400 sq ft; message date, headcount and room size; save for holiday planning) #LasVegasEvents #PartyPlanning #HostingTips #VegasPartyRentals #PartyMath
+IG 1pm: Will 40 people actually fit? 📐 (same math, save then message) #lasvegas #partyplanning #partymath #hostingtips #partyrentals
+QUEUED 2026-11-20T13:00:00-08:00 (21:00Z): FB 6b0044a27efc64d5e41da698 (fb_first_comment set), IG 6b0044a377e195b72201b3f7. Approval ids filed after queueing.
+Open manual items: IG pinned first comment not supported by the tool; confirm FB pinned comment attached.
+
+## FRIDAY NOV 20 · 5pm TREND REMIX #31 "THE SOUP SWAP" (Hail, 9am Vegas, SOCIAL pool): FB/IG/TT/YT QUEUED
+Trend (Google News search Nov 20 2026): Food & Wine, Nov 14 2026, "The Soup Swap Is TikTok's Coziest Hosting Trend" (each guest brings a pot of soup, everyone swaps);
+a local soup swap event story dated Nov 19 confirms it is still circulating. Other Nov 17 to 20 candidates seen and skipped: "we got X before the big game" meme retiring (brand/game name),
+the before-kids mom trend (controversy framing), Pink Floyd "Time" trend (no business tie). No brand, app, person or place named on screen.
+Remix: Dad's cloud "EVERYONE BRINGS A POT." Mrs. Never Wrong walks in, glances at the card table and sets her pot on the floor (says nothing). Vaeh tosses hers without looking up (phone out),
+Princess tosses hers on top, POTS counter 1 to 4, the pile sags and the card table taps out (pots clang to the floor, counter flips to ON THE TABLE: 0). Vaeh "...this is SO embarrassing."
+A real table with a chair for every pot slides in, pots hop on (Mrs. Never Wrong's first), counter ON THE TABLE: 4, the cat takes the best seat. Payoff "SOUP: BRING YOUR OWN. TABLES AND CHAIRS: US."
+End card "BRING THE SOUP. WE BRING SEATS." Cast: Dad, Mrs. Never Wrong, Vaeh, Princess, cat (new mix vs Push It: Lil, Baby, Unc). Specific "four pots" is a comedy beat, not an inventory claim. No prices on screen.
+reelH REELS[58] (new reelT58 + potT58/cardTableT58/tableSetT58/handT58 helpers appended to halloween/reelH.html), GAGENDS 21.0, 24.2s. build_fri20_remix.py -> halloween/BB_Trend_SoupSwap.mp4.
+Rotation check: Push It 7 Inches (Nov 19), Spy 1/2, Party Physics #3, Answer in One Word, AI Plans the Party, Gavel: none used hosting/soup/pot-pile; the never-aired Turkey Floor Plan was not reused.
+UPGRADE: live counter that flips from POTS to ON THE TABLE, sagging pile before the collapse, thrown pots with arcs, steaming pots, blind toss gag.
+QA: no image viewer in this run, so numeric: no console errors, 22 test frames, pot color bounding boxes checked per frame (carry positions match hand math, pile sags then falls to floor at x 430/540/650,
+hops land at x 360/480/600/720 on the table top y 1330 to 1350, cat sits on the table at x 734 to 788), caption widths 303 to 579 px of 1080, every caption holds 3 s and clouds 3 s,
+video 1080x1920, 30fps, 24.2s, audio mean -15.2 dB, max -1.2 dB. 9-frame contact sheet daily-posts/qa_soupswap_contact.png. Please eyeball once (cat edge overlaps Princess's/Vaeh's last pot handle slightly).
+FB (reel, fb_first_comment): everybody is hosting a soup swap right now. everybody brings a pot. nobody brings a table. four pots on a card table went exactly how Mrs. Never Wrong said it would. 🍲 #lasvegas #partyrentals #comedy #animation #hosting
+IG (reel): The soup swap is the cozy hosting trend right now: everybody brings a pot, then everybody needs somewhere to put it. Four pots on one card table did not end well, and Mrs. Never Wrong said nothing because she already knew. Hosting one this season? Tables and chairs delivered, set up and picked up by our crew. Message us your date and headcount. 🍲 #lasvegas #partyrentals #hostingtips #soupswap #comedy
+TT (reel): soup swap rule: you bring the soup, the table has to hold it. 🍲 #soupswap #hosting #lasvegas #comedy
+YT: "Soup swap hosting tip: the card table taps out 🍲 #Shorts" / Everybody brings a pot to a soup swap. Nobody brings the table. Setup and teardown crews handle that part. #comedy #partyrentals #lasvegas (category 23)
+QUEUED all at 2026-11-20T17:00:00-08:00 (2026-11-21T01:00Z): FB 6b007f06d425f1473afbdca1 (fb_first_comment set), IG 6b007f0744c3619113486e58, TT 6b007f0863ab5fef673e7f48, YT 6b007f086f199ec35b681b16. Approval ids 56, 57, 58, 59.
+Open manual items: IG pinned first comment is not supported by the tool (add "Follow for more Las Vegas party life." by hand); confirm the FB pinned comment attached.
+
+## FRIDAY NOV 20 · EP. 54 THE SETUP CLOCK (8pm, FB reel + IG reel + TikTok + YouTube Short; 26s, SFX only; built and queued by Hail Nov 20 noon Vegas)
+Episode check: fb_safe held Ep46 to Ep53 (Nov 19) and nothing newer, no EP. 54 in the caption log or approvals, so this is the next number. Season Two record after this one: 9 W · 5 L.
+Story (reelsD REELS[54], build_fri20_episode.py -> fb_safe/BB_Chronicles_Ep54_TheSetupClock.mp4): Dad promises the Dec 19 room (10 tables, 60 chairs) in 20 minutes. Mrs. Never Wrong starts a giant
+stopwatch (sweeping hand, live mm:ss pill, GOAL 20:00) and a 10-cell floor plan strip fills table by table. A red chair (Lil Wobbles) joins the row; Baby charges in and PUNTS it out of the room (freeze frame, PUNT.).
+Tyler pops up (WHERE DID YOU EVEN COME FROM? / ...im the new intern.), Vaeh sighs "...this is SO embarrassing.", one table left and Dad sweats. Vaeh quietly sets the last table without looking up, the clock stops at 17:52,
+Dad: "I DID THAT.", the cat takes the best seat on the new table, Wobbles slides back in ("always returns"). Payoff "10 TABLES. 60 CHAIRS. 17:52. UNDER 20." End card question "HOW LONG WOULD YOUR SETUP TAKE?",
+tagline "WE BEAT THE CLOCK. YOU HOST THE PARTY." Cast by story (Dad, Mrs. Never Wrong, Lil, Baby, Tyler, Vaeh, Wobbles, cat; no Unc or Princess, they rotate back in). No Christmas imagery, no prices, no "free". 20 minutes and 17:52 are comedy beats, not service-time claims.
+Rotation check: not a repeat of Walkthrough (53), Calendar (52), Kids' Table (51), Floor Plan (50), Buffet Line (49), Cocoa Bar (48), Tent (47); Wobbles exits by a punt (new cause); Vaeh's quiet-competence twist used for the first time in Season Two.
+UPGRADE: giant stopwatch HUD with live clock + sweeping hand, Vaeh competence twist, Wobbles punt arc.
+HOST FIX: reelsD.html loads fonts/ and BB_Logo_Purple_2160.png from the repo root, but neither existed there (404s in the render), so earlier reelsD renders from this host (EP. 53 etc.) may have used fallback fonts and no end-card logo.
+Copied assets/fonts -> fonts/ and assets/BB_Logo_Purple_2160.png -> repo root before rendering EP. 54 (console errors now none). Worth an eyeball of EP. 53's end card.
+QA: no image viewer in this run, so numeric: console errors none, 14-frame contact sheet daily-posts/qa_ep54_contact.png, caption widths 493 to 657 px of 1080 (tagline auto-shrinks), Wobbles red-pixel tracking shows it in the row (x 462 to 620), flying out (freeze to x 136 at 7.8s) and back at 20.5s,
+clock pill turns green after 17.0, Dad cloud moved clear of the stopwatch pill, captions hold 1.8 s or more, clouds 1.8 to 3.1 s, video 1080x1920, 30fps, 26.0s, audio mean -17.8 dB, max -1.4 dB. Please eyeball once.
+FB 8pm: the big business chronicles ep. 54: the setup clock. dad promised 20 minutes. vaeh set the last table without looking up. ⏱️ #lasvegas #family #animation #comedy
+IG 8pm: The Big Business Chronicles EP. 54: Dad promises the Dec 19 room in 20 minutes, Mrs. Never Wrong starts the clock, Baby punts Lil Wobbles out of the room, and Vaeh quietly sets the last table. How long would your party setup take? ⏱️ #thebigbusinesschronicles #seasontwo #family #lasvegas #comedy
+TT 8pm: The Big Business Chronicles EP. 54: she never looked up. ⏱️ #thebigbusinesschronicles #setup #family #comedy
+YT 8pm: "EP. 54: The Setup Clock ⏱️ 17:52 on the clock #Shorts" / The Big Business Chronicles EP. 54: Dad promises the Dec 19 room in 20 minutes, Baby punts Lil Wobbles out of the room, and Vaeh quietly sets the last table. #thebigbusinesschronicles #family #comedy (category 23)
+QUEUED all at 2026-11-20T20:00:00-08:00 (2026-11-21T04:00Z): FB 6b00a90244c36191135b0632 (fb_first_comment set), IG 6b00a90344c36191135b0666, TT 6b00a9036f199ec35b7b787b, YT 6b00a904861298c9b14d1b18. Approval ids 60, 61, 62, 63.
+Open manual items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); confirm the FB pinned comment attached.
+
+## SATURDAY NOV 21 to FRIDAY NOV 27 · OWNER THEME OVERRIDE: GTA6 VIBE REMIX WEEK (saved by Hail, live chat Nov 20 afternoon Vegas)
+Rashad said in chat: "For the next 7 days, the remix theme will be GTA6", then chose option 2 (write it into the repo notes). Wrote THEME_GTA6_REMIX_WEEK.md and added a pointer line at the end of OPERATOR.md so scheduled runs pick it up.
+Window assumed: Sat Nov 21 to Fri Nov 27 (7 five-pm remix slots), because the Nov 20 soup swap remix was already queued. Applies to the 5pm Trend Remix only, not the Chronicles episode or other daily pieces.
+Guardrails written in: no GTA, Rockstar, or Vice City names or marks, no #GTA6 hashtag unless Rashad says so, family-safe game energy only (missions, HUD, loading screens, neon sunsets), no prices, no "free", no em dashes, AI chip rule kept.
+Nothing queued to Buffer and no approval filed (chat run). Open question for Rashad: confirm the dates, and say yes or no to using #GTA6.
+
+## DATE CORRECTION · GTA6 VIBE REMIX WEEK (Hail, live chat Nov 20 afternoon Vegas)
+Rashad clarified: "It will start tomorrow. And end 7 days from the start date." Window is now Sat Nov 21 through Sat Nov 28, 2026 (8 five-pm remix slots, log "GTA6 WEEK day N of 8"). Updated THEME_GTA6_REMIX_WEEK.md and the OPERATOR.md pointer line. Supersedes the Nov 27 end date above. Nothing queued, no approval filed (chat run). #GTA6 still off unless Rashad says yes.
 ## GAME-COVER FLYER (owner Fri Nov 20: "Create me. GTA 6 style flyer. Better than the last one using these two photos for chairs and
 ## tables and a generated photo. For the tents but not with the gta format just a regular picture on the gta flyer")
 Built flyers2026/BB26_GameCover.png (1080x1350 feed) + BB26_GameCover_Story.png (1080x1920), build_gta_flyer.py. Look only (black-gutter
