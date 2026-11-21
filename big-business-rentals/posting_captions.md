@@ -3762,3 +3762,12 @@ artwork. Owner's REAL photos (gta/src_chairs.jpg garage chair inventory, gta/src
 illustrated treatment (gta/gta_art.py: stylization + k-means + Canny ink lines + sunset soft-light in the layout). Tent = regular AI photo
 (HF Z-Image seed 376925, gta/tent_photo.png) with a "SETUP INSPO · AI" chip, untreated as asked. Prices from the owner's card only: chairs
 $2, table + 6 chairs $22, 6 ft table $10, full-service from $265; tents + tent setup unpriced. QR verified on both. Not queued (awaiting owner).
+
+## SATURDAY NOV 21 · 1pm PRICE LIST "WHO SETS UP THE TABLES, YOU OR US?" (Hail, 5am Vegas; FB feed + IG Story)
+Rotation check: Sat = Price List per weekly promotions. Prior lists: Oct 31 (plain list), Nov 7 and Nov 14 (Thanksgiving seating by headcount). New angle: drop-off vs full-service, new deep teal palette, question hook. No promo already queued for Nov 21 1pm. The Nov 20 game-cover flyer (BB26_GameCover) is still awaiting the owner and was not used.
+Build: build_sat21_pricelist.py -> flyers2026/BB26_PriceList_Sat21.png (1080x1350) + BB26_PriceList_Sat21_Story.png (1080x1920). Owner-card prices only: chair $2, 6 ft table $10, table + 6 chairs $22 (tag "you set up"), full-service from $265 (tag "we set up"). QA numeric (no image viewer): DOM box check, no overflow, no console errors, note clear of contact bar on both sizes.
+Git: first push rejected (remote had new commits), pulled with rebase, pushed df16da9.
+FB 1pm: Who is carrying the tables on party day, you or us? Two ways to rent: drop-off (delivered and picked up, you set up; $2 chair, $10 6 ft table, $22 table + 6 chairs; delivery quoted with order) or full-service (our crew sets up and breaks down, from $265). Message date and headcount. #LasVegasPartyRentals #TableAndChairRentals #VegasEvents #PartyPlanning #HostingTips
+IG 1pm (story, BB26_PriceList_Sat21_Story.png): image only.
+QUEUED 2026-11-21T13:00:00-08:00 (21:00Z): FB 6b0196390247969092d21b74 (fb_first_comment set), IG Story 6b01963a8bd84d5966ec14cd. Approval ids 64, 65.
+Open manual item: confirm the FB pinned comment attached.
