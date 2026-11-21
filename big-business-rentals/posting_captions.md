@@ -3600,3 +3600,12 @@ YT: "Turkey snack board vs turkey floor plan 🦃 #Shorts" / Five tables for the
 
 ## SUN NOV 15: no 5pm remix went out (Turkey Floor Plan built Sat night, not approved in time). Weekly report No. 4 +
 ## GBP pack #3 written: reports/WEEKLY_REPORT_No4_Nov9-15.md, gbp/GBP_Pack_3_week_of_Nov16.txt (services only, no venue).
+
+## GAME-COVER FLYER (owner Fri Nov 20: "Create me. GTA 6 style flyer. Better than the last one using these two photos for chairs and
+## tables and a generated photo. For the tents but not with the gta format just a regular picture on the gta flyer")
+Built flyers2026/BB26_GameCover.png (1080x1350 feed) + BB26_GameCover_Story.png (1080x1920), build_gta_flyer.py. Look only (black-gutter
+panel grid, sunset title band with palms, slanted stroked title "BIG BUSINESS", sticker tags, price panels); NO game logo, name, font or
+artwork. Owner's REAL photos (gta/src_chairs.jpg garage chair inventory, gta/src_tables.jpg navy covered tables + backdrop) given an
+illustrated treatment (gta/gta_art.py: stylization + k-means + Canny ink lines + sunset soft-light in the layout). Tent = regular AI photo
+(HF Z-Image seed 376925, gta/tent_photo.png) with a "SETUP INSPO · AI" chip, untreated as asked. Prices from the owner's card only: chairs
+$2, table + 6 chairs $22, 6 ft table $10, full-service from $265; tents + tent setup unpriced. QR verified on both. Not queued (awaiting owner).
