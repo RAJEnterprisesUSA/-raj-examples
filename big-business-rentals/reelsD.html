@@ -6502,6 +6502,131 @@ function ep54(t){
 }
 REELS[54]=ep54; SHAKES[54]=[6.6,0.2,8]; TAGLINES[54]='WE BEAT THE CLOCK. YOU HOST THE PARTY.'; window.ENDTIMES[54]=23.5;
 
+// ================= EP. 55 · THE LOAD LIST (Season Two, cast by story; Season Two record 9 W · 6 L) =================
+// Dec 19 load-out. Competence first: 10 tables and 60 chairs fly onto the truck while Dad runs the list. The brand rule
+// "the extra chair is always on the truck" becomes the gag: the extra chair is missing. Mrs. Never Wrong says nothing and looks at
+// Unc, who has been sitting on it the whole time ("I WAS TESTING IT."). Dad loses the credit (Mrs. Never Wrong found it),
+// the cat takes the best seat on the extra chair, Princess says it is her throne.
+const COL55=[0,1,2,3,4,5,6,7,8,9].map(i=>410+i*58);
+const TE55=i=>3.4+i*0.9;
+function slabK55(x,y,k){
+  ctx.save(); ctx.translate(x,y); ctx.scale(k,k); ctx.lineJoin='round';
+  ctx.lineWidth=5; ctx.strokeStyle=INK; ctx.fillStyle='#1d4f8f'; rr(-19,-440,38,440,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; ctx.fillRect(-19,-440,38,14);
+  ctx.lineWidth=3; ctx.fillStyle='#f2f4f6';
+  for(let r=0;r<3;r++) for(let c=0;c<2;c++){ rr(-17+c*19,-500-r*22,15,17,4); ctx.fill(); ctx.stroke(); }
+  ctx.restore();
+}
+function nLoaded55(tt){ let n=0; for(let i=0;i<10;i++) if(tt>=TE55(i)+0.35) n++; return n; }
+function truckK55(tt,t){
+  const k=Math.min(1,tt/0.9), ox=(1-ease(k))*720;
+  ctx.save(); ctx.translate(ox,0); ctx.lineJoin='round';
+  ctx.lineWidth=9; ctx.strokeStyle=INK;
+  [520,940].forEach(x=>{ ctx.fillStyle='#1c1428'; ctx.beginPath(); ctx.arc(x,1480,80,0,7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#c9ccd2'; ctx.beginPath(); ctx.arc(x,1480,34,0,7); ctx.fill(); ctx.stroke(); });
+  ctx.fillStyle='#fbfbf7'; rr(340,700,790,745,26); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#2a1646'; ctx.fillRect(354,714,762,64);
+  ctx.fillStyle='#E5B84B'; ctx.font='30px "Archivo Black"'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('BIG BUSINESS PARTY RENTALS',735,747); ctx.textBaseline='alphabetic';
+  ctx.fillStyle='#3a2362'; ctx.fillRect(370,800,740,600);
+  ctx.lineWidth=5; ctx.strokeStyle='#E5B84B'; ctx.strokeRect(370,800,740,600);
+  ctx.fillStyle='#E5B84B'; ctx.fillRect(370,1400,740,14);
+  ctx.fillStyle='#9aa0a8'; ctx.lineWidth=6; ctx.strokeStyle=INK; rr(290,1426,84,24,6); ctx.fill(); ctx.stroke();
+  // tables with their six chairs, flying in from the left one at a time
+  for(let i=0;i<10;i++){
+    const te=TE55(i); if(tt<te) continue;
+    const k2=Math.min(1,(tt-te)/0.35);
+    if(k2<1){ const x=lerp(120-ox,COL55[i],ease(k2)), y=lerp(1150,1400,ease(k2))-Math.sin(k2*Math.PI)*260; slabK55(x,y,lerp(0.7,1,k2)); }
+    else slabK55(COL55[i],1400,1);
+  }
+  // the extra chair slot
+  if(tt>=12.4&&tt<17.9){ const blink=(Math.floor(t*4)%2===0); ctx.save(); ctx.setLineDash([12,10]); ctx.lineWidth=6; ctx.strokeStyle=blink?'#ff6b6b':'#E5B84B';
+    rr(995,1310,90,90,10); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle=blink?'#ff6b6b':'#E5B84B'; ctx.font='64px "Archivo Black"'; ctx.textAlign='center'; ctx.fillText('?',1040,1380); ctx.restore(); }
+  if(tt>=17.9) drawMiniChair(1040,1400,0.5);
+  ctx.restore();
+}
+function pillK55(x,label,val,col,k){
+  if(k<=0) return;
+  ctx.save(); ctx.translate(x+160,520); ctx.scale(k,k); ctx.translate(-(x+160),-520);
+  ctx.fillStyle='rgba(36,18,67,.95)'; ctx.strokeStyle=col; ctx.lineWidth=5; rr(x,470,320,100,22); ctx.fill(); ctx.stroke();
+  ctx.textAlign='center'; ctx.fillStyle='#f6f1e4'; ctx.font='600 26px Oswald'; ctx.fillText(label,x+160,505);
+  ctx.fillStyle=col; ctx.font='44px "Archivo Black"'; ctx.fillText(val,x+160,553);
+  ctx.restore();
+}
+function hudK55(tt,t){
+  const nT=nLoaded55(tt), GREEN='#7CFC9A', GOLD2='#E5B84B', RED='#ff6b6b';
+  const k=i=>easeOutBack(Math.min(1,Math.max(0,(tt-0.4-i*0.15)/0.3)));
+  pillK55(40,'TABLES',nT+'/10',nT>=10?GREEN:GOLD2,k(0));
+  pillK55(380,'CHAIRS',(nT*6)+'/60',nT>=10?GREEN:GOLD2,k(1));
+  let v='+1', c=GOLD2;
+  if(tt>=17.9){ v='ON TRUCK'; c=GREEN; } else if(tt>=12.4){ v='MISSING'; c=(Math.floor(t*4)%2===0)?RED:'#ffb3b3'; }
+  pillK55(720,'EXTRA CHAIR',v,c,k(2));
+}
+function ep55(t){
+  const fz=freezeOf(t,[[15.0,15.7]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.18*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(810,FLOOR-200); ctx.scale(z,z); ctx.translate(-810,-(FLOOR-200)); }
+  drawRoom(); miniPumpkin(1040, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kV=KIDSCALE.vaeh;
+  truckK55(tt,t); hudK55(tt,t);
+  const panic=(tt>=13.0&&tt<17.9), loading=(tt>=3.4&&tt<12.4), found=(tt>=17.9);
+  // DAD runs the list: pointing sweeps while loading, panics at the missing chair, takes the loss
+  const dadArm = loading?{sh:150+Math.sin(t*10)*25,el:-20}:{sh:60,el:24};
+  kidWithProp({x:190, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:dadArm, mouth:panic?'o':found?'flat':'smile', eyes:panic?'wide':undefined, style:STYLER2}, AS);
+  if(panic) sweat(180, kidHeadY(AS)+40, t);
+  // LIL copies every move, a beat behind and half the size
+  kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:loading?{sh:150+Math.sin(t*10-0.5)*25,el:-20}:{sh:60,el:24}, mouth:panic?'o':'smile', eyes:panic?'wide':undefined, style:STYLELB}, kL);
+  if(panic) sweat(60, kidHeadY(kL)+30, t);
+  // MRS. NEVER WRONG walks in, holds up one finger at the count, then looks straight at Unc
+  if(tt>=2.8){ const x=lerp(-200,350,ease((tt-2.8)/0.5));
+    const arm=(tt>=15.0&&tt<17.9)?{sh:100,el:-6}:(tt>=13.0&&tt<15.0)?{sh:125,el:-20}:{sh:60,el:24};
+    kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:arm, mouth:'flat', style:STYLEW}, AS); }
+  // PRINCESS waits by the truck
+  princessK(500, (tt>=21.0)?{sh:100,el:-10}:{sh:150,el:-30});
+  // TYLER pops up out of nowhere
+  if(tt>=7.6){ const k=easeOutBack(Math.min(1,(tt-7.6)/0.3)); ctx.save(); ctx.translate(650,FLOOR); ctx.scale(k,k); ctx.translate(-650,-FLOOR);
+    kidWithProp({x:650, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=8.8)?'flat':'smile', style:STYLET}, 0.7); ctx.restore(); }
+  // UNC walks in, sits on a chair and leans back; the extra chair flies to the truck at 17.5
+  if(tt>=4.8&&tt<5.6){ const x=lerp(1300,810,(tt-4.8)/0.8); const p=walkPose(x,t,-1,undefined); delete p.style; kidWithProp(p, AS); }
+  else if(tt>=5.6&&tt<17.0){
+    const k=easeOutBack(Math.min(1,(tt-5.6)/0.3)); const a=(tt<15.0)?(3+3*Math.sin(t*2.4)):(tt<15.7?9:(9+Math.sin(t*9)*1.2));
+    ctx.save(); ctx.translate(810,FLOOR); ctx.scale(AS*k,AS*k); ctx.translate(-810,-FLOOR);
+    ctx.translate(905,FLOOR); ctx.rotate(rad(a)); ctx.translate(-905,-FLOOR);
+    drawChair(810,0,0,0); drawMan(sitPose(810-24,null,{mouth:(tt>=15.0)?'o':'smile', eyes:(tt>=15.0)?'wide':undefined}));
+    ctx.restore(); }
+  else if(tt>=17.0){
+    if(tt<17.5){ ctx.save(); ctx.translate(810,FLOOR); ctx.scale(AS,AS); ctx.translate(-810,-FLOOR); drawChair(810,0,0,0); ctx.restore(); }
+    else { const k=Math.min(1,(tt-17.5)/0.45); const x=lerp(810,1040,ease(k)), y=lerp(FLOOR-60,1400,ease(k))-Math.sin(k*Math.PI)*420; if(k<1) drawMiniChair(x,y,lerp(0.9,0.5,k)); }
+    kidWithProp({x:800, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:'smile'}, AS); }
+  // VAEH sighs
+  vaehK(1030, kV*0.85, (tt>=21.0)?'smile':'flat');
+  // THE CAT trots down the truck bed and takes the best seat: the extra chair
+  if(tt>=18.0){ const k=Math.min(1,(tt-18.0)/1.0);
+    if(k<1) drawCatD(lerp(1250,1030,ease(k)), 1396, {pose:'trot', face:-1, t:t, s:0.55});
+    else drawCatD(1030, 1364, {pose:'sit', face:-1, t:t, s:0.55}); }
+  ctx.restore();
+  if(t>=15.05&&t<15.7){ const kk=easeOutBack(Math.min(1,(t-15.05)/0.25)); starburst(540,900,kk*0.75,'THERE.'); }
+  if(t>=17.9) confettiBurst(t,17.9,540,FLOOR-500,60,2.4);
+  showBadge(55);
+  if(t<2.7) caption(['DEC 19 LOAD-OUT.','DAD HAS THE LIST.'],300,1,46);
+  if(t>=2.8&&t<4.7) captionPop(['MRS. NEVER WRONG','HAS THE CHECKLIST.'],300,2.8,t,48);
+  if(t>=4.8&&t<7.5) captionPop(['UNC SUPERVISES.','(SITTING DOWN.)'],300,4.8,t,50);
+  if(t>=7.6&&t<9.9) speakCloud(190, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.6, t, 40, 880);   // Dad asks
+  if(t>=8.8&&t<10.9) speakCloud(650, kidHeadY(0.7), ['...im the new intern.'], 8.8, t, 40);   // Tyler answers
+  if(t>=10.0&&t<12.9) captionPop(['LIL COPIES','EVERY MOVE.'],300,10.0,t,52);
+  if(t>=11.0&&t<12.9) speakCloud(1030, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 11.0, t, 40);   // Vaeh
+  if(t>=13.0&&t<15.0) captionPop(['60 CHAIRS LOADED.','ONE CHAIR MISSING.'],300,13.0,t,46);
+  if(t>=13.0&&t<14.9) speakCloud(190, kidHeadY(0.78), ['WHERE IS THE','EXTRA CHAIR?!'], 13.0, t, 40, 880);   // Dad panics
+  if(t>=15.1&&t<17.0) captionPop(['MRS. NEVER WRONG','LOOKED AT UNC.'],300,15.1,t,48);
+  if(t>=17.1&&t<19.0) captionPop(['UNC WAS SITTING','ON IT.'],300,17.1,t,52);
+  if(t>=17.2&&t<19.1) speakCloud(810, kidHeadY(0.78), ['I WAS','TESTING IT.'], 17.2, t, 42);   // Unc
+  if(t>=19.1&&t<21.4) captionPop(['THE EXTRA CHAIR','IS ALWAYS ON THE TRUCK.'],300,19.1,t,42);
+  if(t>=19.2&&t<21.1) speakCloud(190, kidHeadY(0.78), ['I WAS ABOUT','TO CHECK THERE.'], 19.2, t, 40, 880);   // Dad saves face
+  if(t>=21.1&&t<23.0) speakCloud(500, kidHeadY(KIDSCALE.princess*1.0), ['MY THRONE.'], 21.1, t, 42);   // Princess
+  if(t>=21.5&&t<23.45){ captionPop(['HOW MANY EXTRA','CHAIRS DO YOU PLAN?'],300,21.5,t,52); caption(['SEASON TWO RECORD: 9 W · 6 L'],1500,(t-21.5)/0.35,30); }
+}
+REELS[55]=ep55; SHAKES[55]=[15.0,0.2,8]; TAGLINES[55]='WE LOAD IT. WE DELIVER IT. WE PICK IT UP.'; window.ENDTIMES[55]=23.5;
+
 
 // ================= TIKTOK CUT 1 · THE CHEAP CHAIR (11s seamless loop) =================
 // TikTok charter: punchline frame first, text in second one, ending lands on frame one.
