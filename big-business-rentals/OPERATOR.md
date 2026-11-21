@@ -511,3 +511,6 @@ The goal is content that makes Big Business bigger.
 
 
 ACTIVE OWNER THEME OVERRIDE (Nov 20, 2026): the 5pm Trend Remix slot follows the GTA6 vibe theme from Sat Nov 21 through Sat Nov 28, 2026. Read THEME_GTA6_REMIX_WEEK.md before building any remix in that window. It expires after Nov 28.
+
+
+STANDING AUTHORIZATION (Nov 20 2026, owner chat): routine calendar posts are queued without per-post approval. Ledger is reviewed once a week on Sunday. Read STANDING_AUTHORIZATION.md for limits and what still needs owner sign-off.

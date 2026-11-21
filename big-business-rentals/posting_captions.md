@@ -3807,3 +3807,7 @@ TT 8pm: The Big Business Chronicles EP. 55: Unc was just testing it. 🚚 #thebi
 YT 8pm: "EP. 55: The Load List 🚚 Where is the extra chair? #Shorts" / The Big Business Chronicles EP. 55: Dad loads the truck for the Dec 19 party, the extra chair goes missing, and Mrs. Never Wrong just looks at Unc. #thebigbusinesschronicles #family #comedy (category 23)
 QUEUED all at 2026-11-21T20:00:00-08:00 (2026-11-22T04:00Z): FB 6b01fa850247969092fbf866 (fb_first_comment set), IG 6b01fa860247969092fbf88d, TT 6b01fa86846b0ee907357118, YT 6b01fa870247969092fbf8cb. Approval ids 70, 71, 72, 73.
 Open manual items: IG pinned first comment is not supported by the queue tool (add "Follow so you never miss the next Big Business Chronicles episode." by hand); confirm the FB pinned comment attached.
+
+
+## Nov 20 2026 (chat) STANDING AUTHORIZATION logged
+Owner: post freely, approve only once a week. Saved STANDING_AUTHORIZATION.md, added pointer to OPERATOR.md. Ledger review moves to Sunday weekly. Nothing queued, no queue_post approval filed (chat request).
