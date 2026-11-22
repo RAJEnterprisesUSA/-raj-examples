@@ -3811,3 +3811,12 @@ Open manual items: IG pinned first comment is not supported by the queue tool (a
 
 ## Nov 20 2026 (chat) STANDING AUTHORIZATION logged
 Owner: post freely, approve only once a week. Saved STANDING_AUTHORIZATION.md, added pointer to OPERATOR.md. Ledger review moves to Sunday weekly. Nothing queued, no queue_post approval filed (chat request).
+
+## SUNDAY NOV 22 · 1pm HOLIDAY BOOKING FLYER "YOUR HOLIDAY PARTY IS 13, 20 OR 27 DAYS AWAY" (Hail, 5am Vegas; FB feed + IG Story)
+Rotation check: Sun = Holiday Booking Flyer per weekly promotions. Prior: Nov 1 (November starts today, copper), Nov 15 (only three Saturdays, pine green, set price tiles). New angle: day count from today to Sat Dec 5, 12, 19 (13, 20, 27, computed with python, all verified Saturdays), deep wine palette, real prices as chips. No other promo already queued for Nov 22 1pm.
+Build: build_sun22_holiday.py -> flyers2026/BB26_Holiday_Sun22.png (1080x1350) + BB26_Holiday_Sun22_Story.png (1080x1920). Owner-card prices only ($2 chair, $10 6 ft table, $22 table + 6 chairs, full-service from $265). QA numeric (no image viewer): DOM box check, no overflow, tile subs single-line, no console errors. Pushed 515802b.
+FB 1pm: Quick count from today: Saturday Dec 5 is 13 days away, Dec 12 is 20 days away, and Dec 19, the last Saturday before Christmas, is 27 days away. Pick the one your holiday party belongs to. A chair is $2, a 6 ft table is $10, and a table with 6 chairs is $22, delivered and picked up across Las Vegas (delivery is quoted with your order). Want our crew to set up and break down too? Full-service starts at $265. Message us your date and headcount. #LasVegasHolidayParty #ChristmasParty #VegasEvents #PartyRentals #HolidayHosting
+FB pinned comment (fb_first_comment): Follow the page for more Las Vegas party planning tips. Everything is at bigbusinesspartyrentals.com
+IG 1pm: Story, image only.
+QUEUED both at 2026-11-22T13:00:00-08:00 (21:00Z): FB 6b02e7a9846b0ee907882657, IG Story 6b02e7a9c72676f5e92cc282. Approval ids 74, 75.
+Open manual item: confirm the FB pinned comment attached. The day counts are only true on Nov 22, so do not reuse this image on another day.
