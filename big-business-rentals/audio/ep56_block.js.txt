@@ -1,0 +1,129 @@
+
+// ================= EP. 56 · THE HEADCOUNT (Sun Nov 22, Season Two record 10 W · 6 L) =================
+// Dec 19 guest list. RSVP bubbles fly from Vaeh's phone to a big GUEST LIST board; every bump adds a table icon to the floor-plan strip.
+// Mrs. Never Wrong throws a sticky note onto the board that says 73 before the count starts. Lil and Baby add friends (Baby copies, one more),
+// the group chat bursts, then the last RSVP is the cat. Count hits exactly 73. Dad kept up with every table, so he takes the W.
+const BUB56=[ // launch time, label, source, guests added
+  [4.8,'+6','vaeh',6],[5.5,'+12','vaeh',12],[6.2,'+6','vaeh',6],
+  [9.9,'+1 FRIEND','lil',1],[10.7,'+2 FRIENDS','baby',2],
+  [12.0,'+3','vaeh',3],[12.4,'+3','vaeh',3],[12.8,'+3','vaeh',3],
+  [13.9,'+1','cat',1]];
+const FLY56=0.55;
+const SRC56={vaeh:[988,1190,'#7fd3ff'], lil:[100,1090,'#b8f0a0'], baby:[880,1200,'#ffc2e0'], cat:[988,1190,'#ffffff']};
+function guestsAt56(tt){ let n=36, last=-9; for(const b of BUB56){ if(tt>=b[0]+FLY56){ n+=b[3]; last=b[0]+FLY56; } } return [n,last]; }
+function tablesOf56(n){ return Math.ceil(n/6); }
+function tableTime56(i){ if(i<6) return 0.3+i*0.15; let n=36; for(const b of BUB56){ n+=b[3]; if(tablesOf56(n)>i) return b[0]+FLY56; } return 99; }
+function lastTableChange56(tt){ let n=36, last=-9; for(const b of BUB56){ const before=tablesOf56(n); n+=b[3]; if(tt>=b[0]+FLY56 && tablesOf56(n)>before) last=b[0]+FLY56; } return last; }
+function numK56(txt,cx,base,el,col){
+  const s=1+0.28*Math.max(0,1-el/0.35), flash=(el>=0&&el<0.6);
+  ctx.save(); ctx.translate(cx,base-70); ctx.scale(s,s); ctx.translate(-cx,-(base-70));
+  ctx.font='190px "Archivo Black"'; ctx.textAlign='center'; ctx.fillStyle=flash?'#7CFC9A':col; ctx.fillText(txt,cx,base);
+  ctx.restore();
+}
+function boardK56(tt,t){
+  const [n,last]=guestsAt56(tt), tb=tablesOf56(n), lt=lastTableChange56(tt);
+  const k=easeOutBack(Math.min(1,tt/0.5)); if(k<=0) return;
+  ctx.save(); ctx.translate(540,630); ctx.scale(k,k); ctx.translate(-540,-630); ctx.lineJoin='round';
+  ctx.fillStyle='rgba(36,18,67,.96)'; ctx.strokeStyle='#E5B84B'; ctx.lineWidth=6; rr(100,440,880,380,28); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#E5B84B'; rr(114,454,852,58,16); ctx.fill();
+  ctx.fillStyle='#241a35'; ctx.font='34px "Archivo Black"'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('DEC 19 GUEST LIST',540,484); ctx.textBaseline='alphabetic';
+  ctx.strokeStyle='rgba(229,184,75,.5)'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(540,536); ctx.lineTo(540,712); ctx.stroke();
+  ctx.fillStyle='#f6f1e4'; ctx.font='600 34px Oswald'; ctx.textAlign='center'; ctx.fillText('GUESTS',320,562); ctx.fillText('TABLES',760,562);
+  numK56(String(n),320,712,tt-last,'#E5B84B');
+  numK56(String(tb),760,712,tt-lt,'#E5B84B');
+  // floor-plan strip: one round table icon per table, six chair dots each
+  for(let i=0;i<13;i++){
+    const te=tableTime56(i); if(tt<te) continue; const kk=easeOutBack(Math.min(1,(tt-te)/0.3));
+    const cx=168+i*62, cy=768; ctx.save(); ctx.translate(cx,cy); ctx.scale(kk,kk);
+    ctx.lineWidth=2.5; ctx.strokeStyle=INK; ctx.fillStyle=(i===12)?'#E5B84B':'#f2f4f6';
+    for(let c=0;c<6;c++){ const a=c*Math.PI/3; ctx.beginPath(); ctx.arc(Math.cos(a)*24,Math.sin(a)*24,5.5,0,7); ctx.fill(); ctx.stroke(); }
+    ctx.lineWidth=3; ctx.fillStyle=(i===12)?'#ffe9a8':'#fbfbf7'; ctx.beginPath(); ctx.arc(0,0,15,0,7); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+function noteK56(tt,t){
+  if(tt<3.0) return;
+  const k=Math.min(1,(tt-3.0)/0.7), p=ease(k);
+  const x=lerp(440,985,p), y=lerp(1100,640,p)-Math.sin(p*Math.PI)*200, rot=0.12-(1-p)*Math.PI*2, sc=lerp(0.6,1,p);
+  ctx.save(); ctx.translate(x,y); ctx.rotate(rot); ctx.scale(sc,sc); ctx.lineJoin='round';
+  if(tt>=14.55){ ctx.globalAlpha=0.55+0.35*Math.sin(t*14); ctx.strokeStyle='#7CFC9A'; ctx.lineWidth=10; rr(-66,-66,132,132,14); ctx.stroke(); ctx.globalAlpha=1; }
+  ctx.fillStyle='#ffd94d'; ctx.strokeStyle=INK; ctx.lineWidth=5; rr(-56,-56,112,112,8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#e6b92f'; ctx.beginPath(); ctx.moveTo(56,24); ctx.lineTo(24,56); ctx.lineTo(56,56); ctx.closePath(); ctx.fill();
+  ctx.fillStyle=INK; ctx.font='66px "Archivo Black"'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('73',0,2); ctx.textBaseline='alphabetic';
+  ctx.restore();
+}
+function bubbleK56(b,tt){
+  const k=(tt-b[0])/FLY56; if(k<0||k>=1) return;
+  const [x0,y0,col]=SRC56[b[2]], p=ease(k);
+  const x=lerp(x0,320,p), y=lerp(y0,650,p)-Math.sin(p*Math.PI)*170, sc=lerp(0.55,1,Math.min(1,k*3))*lerp(1,0.8,p);
+  const isCat=(b[2]==='cat'), size=(b[1].length>4)?38:58;
+  ctx.save(); ctx.translate(x,y); ctx.scale(sc,sc); ctx.lineJoin='round';
+  ctx.font=size+'px "Archivo Black"'; const tw=ctx.measureText(b[1]).width, w=tw+56+(isCat?58:0), h=88;
+  ctx.fillStyle=col; ctx.strokeStyle=INK; ctx.lineWidth=7; rr(-w/2,-h/2,w,h,32); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-w/2+30,h/2-2); ctx.lineTo(-w/2+14,h/2+24); ctx.lineTo(-w/2+58,h/2-2); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=col; ctx.fillRect(-w/2+34,h/2-8,22,12);
+  let tx=0;
+  if(isCat){ const cx=-w/2+44; ctx.fillStyle='#0b0613'; ctx.beginPath(); ctx.arc(cx,4,22,0,7); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(cx-20,-6); ctx.lineTo(cx-14,-30); ctx.lineTo(cx-2,-14); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(cx+20,-6); ctx.lineTo(cx+14,-30); ctx.lineTo(cx+2,-14); ctx.closePath(); ctx.fill();
+    ctx.fillStyle='#9fe24f'; ctx.beginPath(); ctx.arc(cx-8,2,4,0,7); ctx.arc(cx+8,2,4,0,7); ctx.fill(); tx=30; }
+  ctx.fillStyle=INK; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(b[1],tx,4); ctx.textBaseline='alphabetic';
+  ctx.restore();
+}
+function ep56(t){
+  const fz=freezeOf(t,[[14.55,15.25]]); const tt=fz?fz[0]:t;
+  ctx.save();
+  if(fz){ const z=1+0.10*easeOutBack(Math.min(1,(t-fz[0])/0.25)); ctx.translate(540,1000); ctx.scale(z,z); ctx.translate(-540,-1000); }
+  drawRoom(); miniPumpkin(1040, FLOOR+88);
+  const AS=0.78, kL=KIDSCALE.lil, kB=KIDSCALE.baby, kV=KIDSCALE.vaeh;
+  boardK56(tt,t); noteK56(tt,t);
+  BUB56.forEach(b=>bubbleK56(b,tt));
+  const sweepOn=(tt>=4.8&&tt<14.5), cheer=(tt>=18.5), shock=(tt>=14.55&&tt<16.4);
+  // the cat's chair: Dad slides it in at 16.4
+  if(tt>=16.4){ const k=easeOutBack(Math.min(1,(tt-16.4)/0.3)); ctx.save(); ctx.translate(720,FLOOR); ctx.scale(AS*k,AS*k); ctx.translate(-720,-FLOOR); drawChair(720,0,0,0); ctx.restore(); }
+  // DAD: sweeps a table into place on every RSVP, freezes at the cat, slides the last chair, then cheers
+  const dadArm = sweepOn?{sh:150+Math.sin(t*10)*25,el:-20}:(tt>=16.4&&tt<17.8)?{sh:120,el:-10}:{sh:60,el:24};
+  kidWithProp({x:220, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:cheer?{sh:165,el:-20}:dadArm, arm2:cheer?{sh:160,el:-30}:undefined,
+    mouth:shock?'o':cheer?'smile':'smile', eyes:shock?'wide':undefined, style:STYLER2}, AS);
+  if(shock) sweat(210, kidHeadY(AS)+40, t);
+  // LIL copies Dad a beat behind, then adds a friend
+  const lilArm=(tt>=9.8&&tt<10.9)?{sh:150,el:-30}:(sweepOn&&tt<9.0)?{sh:150+Math.sin(t*10-0.5)*25,el:-20}:{sh:60,el:24};
+  kidWithProp({x:60, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:lilArm, mouth:shock?'o':'smile', eyes:shock?'wide':undefined, style:STYLELB}, kL);
+  // MRS. NEVER WRONG walks in, throws the note at the board, holds up one finger at the end
+  if(tt>=2.7){ const x=lerp(-200,400,ease((tt-2.7)/0.5));
+    const arm=(tt>=3.0&&tt<3.7)?{sh:150,el:-20}:(tt>=14.0&&tt<18.5)?{sh:100,el:-6}:{sh:60,el:24};
+    kidWithProp({x:x, face:1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:arm, mouth:'flat', style:STYLEW}, AS); }
+  // TYLER pops up out of nowhere
+  if(tt>=7.4){ const k=easeOutBack(Math.min(1,(tt-7.4)/0.3)); ctx.save(); ctx.translate(570,FLOOR); ctx.scale(k,k); ctx.translate(-570,-FLOOR);
+    kidWithProp({x:570, face:-1, legs:[{hip:8,knee:6},{hip:-6,knee:6}], arm:{sh:60,el:24}, mouth:(tt>=9.2)?'flat':'smile', style:STYLET}, 0.7); ctx.restore(); }
+  // BABY copies Lil, one more, jumps higher
+  const hop=(tt>=10.7&&tt<11.5)?Math.abs(Math.sin((tt-10.7)/0.8*Math.PI))*70:0;
+  const babyArm=(tt>=10.6&&tt<11.6)?{sh:165,el:-20}:(sweepOn&&tt<9.0)?{sh:160+Math.sin(t*10-1.0)*30,el:-20}:{sh:60,el:24};
+  kidWithProp({x:880, y:HIP_STAND-hop, face:-1, legs:[{hip:hop?20:8,knee:hop?20:6},{hip:hop?-16:-6,knee:hop?20:6}], arm:babyArm, mouth:shock?'o':'smile', eyes:shock?'wide':undefined, style:STYLEBB}, kB);
+  // VAEH runs the group chat; sighs; smiles at the end
+  vaehK(1030, kV*0.85, cheer?'smile':'flat');
+  // THE CAT trots in and takes seat 73
+  if(tt>=16.5){ const k=Math.min(1,(tt-16.5)/1.0);
+    if(k<1) drawCatD(lerp(1250,705,ease(k)), FLOOR-14, {pose:'trot', face:-1, t:t, s:0.7});
+    else drawCatD(705, FLOOR-171*AS, {pose:'sit', face:-1, t:t, s:0.7}); }
+  ctx.restore();
+  if(t>=14.6&&t<15.25){ const kk=easeOutBack(Math.min(1,(t-14.6)/0.25)); starburst(560,1010,kk*0.75,'EXACT.'); }
+  if(t>=18.5) confettiBurst(t,18.5,540,FLOOR-500,60,2.4);
+  showBadge(56);
+  if(t<2.6) caption(['DEC 19 GUEST LIST.','36 GUESTS. TABLES SET.'],300,1,46);
+  if(t>=2.7&&t<4.5) captionPop(['MRS. NEVER WRONG','LEFT A NOTE.'],300,2.7,t,48);
+  if(t>=4.6&&t<7.3) captionPop(['THE RSVPS','KEEP COMING.'],300,4.6,t,52);
+  if(t>=7.4&&t<9.3) speakCloud(220, kidHeadY(0.78), ['WHERE DID YOU','EVEN COME FROM?'], 7.4, t, 40);   // Dad asks
+  if(t>=9.2&&t<11.0) speakCloud(570, kidHeadY(0.7), ['...im the new intern.'], 9.2, t, 40);   // Tyler answers
+  if(t>=9.8&&t<11.8) captionPop(['LIL INVITED A FRIEND.','BABY INVITED TWO.'],300,9.8,t,46);
+  if(t>=11.0&&t<12.9) speakCloud(1030, kidHeadY(KIDSCALE.vaeh*0.85), ['...this is SO','embarrassing.'], 11.0, t, 40);   // Vaeh
+  if(t>=11.9&&t<13.85) captionPop(['THE GROUP CHAT','FOUND OUT.'],300,11.9,t,52);
+  if(t>=14.0&&t<16.4) captionPop(['MRS. NEVER WRONG','CALLED 73.'],300,14.0,t,50);
+  if(t>=14.6&&t<16.5) speakCloud(220, kidHeadY(0.78), ['THE CAT','RSVP\'D?'], 14.6, t, 42);   // Dad reads the last bubble
+  if(t>=16.5&&t<18.4) captionPop(['THE CAT TOOK','SEAT 73.'],300,16.5,t,52);
+  if(t>=16.7&&t<18.5) speakCloud(220, kidHeadY(0.78), ['FINE. ONE','MORE CHAIR.'], 16.7, t, 40);   // Dad slides the chair
+  if(t>=18.5&&t<21.5) captionPop(['EVERY RSVP','GOT A CHAIR.'],300,18.5,t,54);
+  if(t>=21.6&&t<23.45){ captionPop(['HOW MUCH DID YOUR','GUEST LIST GROW?'],300,21.6,t,52); caption(['SEASON TWO RECORD: 10 W · 6 L'],1500,(t-21.6)/0.35,30); }
+}
+REELS[56]=ep56; SHAKES[56]=[14.55,0.2,8]; TAGLINES[56]='THE LIST GROWS. WE BRING THE CHAIRS.'; window.ENDTIMES[56]=23.5;
